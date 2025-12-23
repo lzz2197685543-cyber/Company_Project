@@ -253,7 +253,7 @@ class TemuLogin:
 
 
 async def main():
-    name_list = ["1104-Temu全托管"]
+    name_list = ["103-Temu全托管"]
     for name in name_list:
         account = get_shop_config(name)
         print(account)

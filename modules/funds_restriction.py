@@ -210,7 +210,11 @@ class Temu_Funds_Restriction:
                     await self.cookie_manager.refresh()
                     await asyncio.sleep(2)
                     continue
-                return
+                else:
+                    self.logger.error(
+                        f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
+                    )
+                    return
 
             self.parse_data(json_data)
             return

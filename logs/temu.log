@@ -2442,3 +2442,983 @@ Call log:
 2025-12-23 15:07:51,079 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | epr_platform_service_fee 金额=4.75-----保存成功
 2025-12-23 15:07:52,115 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | epr_authorization_agent_fee 金额=5.31-----保存成功
 2025-12-23 15:07:53,293 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | order_after_sales_issue_fully 金额=1036.94-----保存成功
+2025-12-23 16:18:09,681 | INFO | Temu-103-Temu全托管 | 开始抓取店铺 103-Temu全托管
+2025-12-23 16:18:09,682 | INFO | Temu-1105-Temu全托管 | 开始抓取店铺 1105-Temu全托管
+2025-12-23 16:18:09,682 | INFO | Temu-2106-Temu全托管 | 开始抓取店铺 2106-Temu全托管
+2025-12-23 16:18:09,684 | INFO | Temu-1105-Temu全托管 | ✅ MySQL 连接池初始化完成
+2025-12-23 16:18:09,684 | INFO | Temu-2106-Temu全托管 | ✅ MySQL 连接池初始化完成
+2025-12-23 16:18:09,684 | INFO | Temu-103-Temu全托管 | ✅ MySQL 连接池初始化完成
+2025-12-23 16:18:09,690 | INFO | Temu-1105-Temu全托管 | 资金限制表检查 / 创建完成
+2025-12-23 16:18:09,691 | INFO | Temu-103-Temu全托管 | 资金限制表检查 / 创建完成
+2025-12-23 16:18:09,691 | INFO | Temu-2106-Temu全托管 | 资金限制表检查 / 创建完成
+2025-12-23 16:18:23,636 | INFO | Temu-103-Temu全托管 | 开始抓取店铺 103-Temu全托管
+2025-12-23 16:18:23,638 | INFO | Temu-103-Temu全托管 | ✅ MySQL 连接池初始化完成
+2025-12-23 16:18:23,643 | INFO | Temu-103-Temu全托管 | 资金限制表检查 / 创建完成
+2025-12-23 16:22:25,132 | INFO | Temu-103-Temu全托管 | 开始抓取店铺 103-Temu全托管
+2025-12-23 16:22:25,133 | INFO | Temu-103-Temu全托管 | ✅ MySQL 连接池初始化完成
+2025-12-23 16:22:25,138 | INFO | Temu-103-Temu全托管 | 资金限制表检查 / 创建完成
+2025-12-23 16:22:54,089 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 16:22:54,092 | INFO | Temu-103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 16:22:56,600 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | goods_refund_cost 无变化
+2025-12-23 16:22:58,027 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | delivery_by_jit 金额=1135.46-----保存成功
+2025-12-23 16:22:59,114 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | france_epr 无变化
+2025-12-23 16:23:00,222 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_logistics_packaging_fee 无变化
+2025-12-23 16:23:01,270 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_platform_service_fee 无变化
+2025-12-23 16:23:03,031 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | quality_assurance_issues 无变化
+2025-12-23 16:23:04,040 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_authorization_agent_fee 无变化
+2025-12-23 16:23:05,843 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | order_after_sales_issue_fully 金额=540.07-----保存成功
+2025-12-23 16:34:54,300 | INFO | Temu-103-Temu全托管 | 正在爬取店铺 --------------- 103-Temu全托管 ---------------
+2025-12-23 16:38:04,582 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:38:11,607 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403
+2025-12-23 16:40:47,504 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:40:48,009 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403
+2025-12-23 16:41:25,516 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:41:25,932 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:42:37,024 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:42:37,454 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:42:43,344 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:42:43,764 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:45:28,177 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:45:28,597 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:45:53,174 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:45:53,617 | ERROR | Temu-103-Temu全托管 | 获取规则异常: unhashable type: 'slice'
+2025-12-23 16:46:20,066 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:46:21,140 | ERROR | Temu-103-Temu全托管 | 获取规则异常: unhashable type: 'slice'
+2025-12-23 16:46:31,485 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:46:31,911 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:47:07,862 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:47:08,405 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:47:18,880 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:47:19,418 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:47:19,418 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:47:23,220 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '49843', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 3207, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:47:23,220 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 49843
+2025-12-23 16:47:24,694 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:47:25,219 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:47:27,981 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:47:35,428 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:47:35,428 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:47:39,447 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:47:39,447 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:47:42,301 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '50080', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2249, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:47:42,301 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 50080
+2025-12-23 16:47:43,680 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:47:44,137 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:47:46,793 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:47:53,162 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:47:53,162 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:47:56,383 | ERROR | Temu-103-Temu全托管 | Cookie 刷新后仍然失效，终止任务
+2025-12-23 16:48:13,303 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '50310', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2502, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:48:13,304 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 50310
+2025-12-23 16:48:14,697 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:48:15,160 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:48:17,871 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:48:25,897 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:48:25,897 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:48:33,561 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:48:34,097 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:48:34,097 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:48:37,113 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '50532', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2512, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:48:37,113 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 50532
+2025-12-23 16:48:38,518 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:48:39,014 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:48:41,773 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:48:47,651 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:48:47,651 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:48:51,504 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:48:51,505 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:48:54,887 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '50743', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2606, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:48:54,887 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 50743
+2025-12-23 16:48:56,284 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:48:56,781 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:48:59,517 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:49:05,457 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:49:05,457 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:49:08,729 | ERROR | Temu-103-Temu全托管 | Cookie 刷新后仍然失效，终止任务
+2025-12-23 16:49:23,964 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 16:49:23,967 | INFO | Temu-103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 16:49:26,416 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | goods_refund_cost 无变化
+2025-12-23 16:49:27,701 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | delivery_by_jit 金额=1135.46-----保存成功
+2025-12-23 16:49:28,758 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | france_epr 无变化
+2025-12-23 16:49:29,914 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_logistics_packaging_fee 无变化
+2025-12-23 16:49:30,980 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_platform_service_fee 无变化
+2025-12-23 16:49:32,025 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | quality_assurance_issues 无变化
+2025-12-23 16:49:33,061 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_authorization_agent_fee 无变化
+2025-12-23 16:49:34,183 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | order_after_sales_issue_fully 无变化
+2025-12-23 16:49:48,724 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 16:49:48,727 | INFO | Temu-103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 16:49:51,032 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | goods_refund_cost 无变化
+2025-12-23 16:49:52,075 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | delivery_by_jit 无变化
+2025-12-23 16:49:53,250 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | france_epr 无变化
+2025-12-23 16:49:54,395 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_logistics_packaging_fee 无变化
+2025-12-23 16:49:55,433 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_platform_service_fee 无变化
+2025-12-23 16:49:56,545 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | quality_assurance_issues 无变化
+2025-12-23 16:49:57,590 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | epr_authorization_agent_fee 无变化
+2025-12-23 16:49:58,611 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | order_after_sales_issue_fully 无变化
+2025-12-23 16:50:10,849 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:50:11,380 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:50:11,380 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:50:14,298 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '50980', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2418, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:50:14,298 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 50980
+2025-12-23 16:50:52,200 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:50:52,745 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:50:52,745 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:50:55,884 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '51074', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2593, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 16:50:55,884 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 浏览器启动成功, 调试端口: 51074
+2025-12-23 16:50:57,266 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 已连接浏览器
+2025-12-23 16:50:57,746 | INFO | Temu-103-Temu全托管 | --------------------103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 16:51:00,459 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 16:51:23,962 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\103-Temu全托管_cookies.json
+2025-12-23 16:51:23,962 | INFO | Temu-103-Temu全托管 | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 16:51:27,660 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:51:27,660 | WARNING | Temu-103-Temu全托管 | Cookie 失效，正在刷新...
+2025-12-23 16:54:04,611 | INFO | Temu-103-Temu全托管 | 开始爬取 103-Temu全托管
+2025-12-23 16:54:05,334 | ERROR | Temu-103-Temu全托管 | 请求失败: HTTP 403 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 16:54:05,334 | ERROR | Temu-103-Temu全托管 | 核心接口仍判定失效，终止
+2025-12-23 16:54:14,263 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 16:54:14,267 | INFO | Temu-103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 16:54:16,829 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | goods_refund_cost 无变化
+2025-12-23 16:54:17,946 | INFO | Temu-103-Temu全托管 | [跳过] 103-Temu全托管 | delivery_by_jit 无变化
+2025-12-23 17:04:34,171 | INFO | Main | 开始爬取店铺------------------------------2106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:04:34,176 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:04:34,218 | INFO | Temu-2106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:04:35,186 | INFO | Temu-2106-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:04:35,186 | ERROR | Temu-2106-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:04:35,187 | WARNING | Temu-2106-Temu全托管 | [2106-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:04:35,857 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - start_api 返回: {'code': '该环境正在被李惠清()使用，暂时无法打开，请稍后再试', 'msg': '该环境正在被李惠清()使用，暂时无法打开，请稍后再试', 'data': {'statusCode': '该环境正在被李惠清()使用，暂时无法打开，请稍后再试', 'err': '该环境正在被李惠清()使用，暂时无法打开，请稍后再试', 'action': 'startBrowserByCode'}}
+2025-12-23 17:04:35,857 | ERROR | Temu-2106-Temu全托管 | 2106-Temu全托管 - 启动失败: 该环境正在被李惠清()使用，暂时无法打开，请稍后再试
+2025-12-23 17:04:56,201 | INFO | Main | 开始爬取店铺------------------------------2106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:04:56,224 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:04:56,236 | INFO | Temu-2106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:04:57,329 | INFO | Temu-2106-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:04:57,330 | ERROR | Temu-2106-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:04:57,331 | WARNING | Temu-2106-Temu全托管 | [2106-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:05:13,250 | INFO | Main | 开始爬取店铺------------------------------2106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:05:13,256 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:05:13,259 | INFO | Temu-2106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:05:14,296 | INFO | Temu-2106-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:05:14,297 | ERROR | Temu-2106-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:05:14,298 | WARNING | Temu-2106-Temu全托管 | [2106-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:05:16,821 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202511031514\\hubstudio', 'debuggingPort': '52375', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2150, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202511031514\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:05:16,821 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 52375
+2025-12-23 17:05:18,197 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - 已连接浏览器
+2025-12-23 17:05:18,557 | INFO | Temu-2106-Temu全托管 | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:05:23,128 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:05:29,717 | INFO | Temu-2106-Temu全托管 | 授权流程完成
+2025-12-23 17:05:32,747 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\2106-Temu全托管_cookies.json
+2025-12-23 17:05:32,747 | INFO | Temu-2106-Temu全托管 | 2106-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:05:37,332 | INFO | Temu-2106-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":1,"size":1,"list":[{"punishSn":"PCNA202512101225579905905","punishTypeDesc":"理化检测类","punishTypeCode":4,"violationStartTime":1765369557288,"countdownTime":-851980657,"punishAmount":"50000","punishAmountCurrency":"CNY","punishStatus":4,"punishStatusDesc":"逾期未申诉，平台处理中","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2210,"punishThirdTypeDesc":"小部件","voucher":null,"qcFlawPictureUrlList":["https://agentseller.temu.com/flash-qc-private-tag/89c4b2b5/22508511-5633-4574-a28e-992b9ba2993d.jpeg?signASM=q-sign-algorithm%3Dsha1%26q-ak%3D4Fqg37QZiP3fPAtR5ohW7vggTVnazAaR%26q-sign-time%3D1766480738%3B1766484338%26q-key-time%3D1766480738%3B1766484338%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Ddeba921566f7e3ab4ad2d3b28aedd08d6fd4691c"],"showVoucher":1,"punishSecondTypeDesc":"合规检测问题","punishFirstTypeDesc":"理化检测类","punishFirstTypeCode":4,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":43686760571}]}}
+2025-12-23 17:05:37,338 | INFO | Temu-2106-Temu全托管 | PCNA202512101225579905905---保存成功
+2025-12-23 17:05:37,338 | INFO | Main | 开始爬取店铺-------------------------------2106-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:05:37,340 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:05:37,362 | INFO | Temu-2106-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:05:39,707 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | goods_refund_cost 金额=29.97-----保存成功
+2025-12-23 17:05:40,855 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | delivery_by_jit 金额=291.31-----保存成功
+2025-12-23 17:05:41,931 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | france_epr 金额=99.57-----保存成功
+2025-12-23 17:05:43,059 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_logistics_packaging_fee 金额=1.15-----保存成功
+2025-12-23 17:05:44,404 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_platform_service_fee 金额=0.34-----保存成功
+2025-12-23 17:05:45,749 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:05:46,857 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_authorization_agent_fee 金额=4.17-----保存成功
+2025-12-23 17:05:48,011 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | order_after_sales_issue_fully 金额=224.52-----保存成功
+2025-12-23 17:05:48,011 | INFO | Main | 开始爬取店铺------------------------------2105-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:05:48,032 | INFO | Temu-2105-Temu全托管 | 正在爬取店铺---------------2105-Temu全托管-------------的数据
+2025-12-23 17:05:48,034 | INFO | Temu-2105-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:05:49,147 | INFO | Temu-2105-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:05:49,147 | ERROR | Temu-2105-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:05:49,147 | WARNING | Temu-2105-Temu全托管 | [2105-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:05:51,963 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hedbcddcbnkifhfapobljhpmnkknmeci', 'browserID': 109977447, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '52633', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1105店', 'duplicate': 2306, 'ip': '218.78.129.86', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109977447, 'containerCode': '1107774478', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:05:51,963 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - 浏览器启动成功, 调试端口: 52633
+2025-12-23 17:05:53,349 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - 已连接浏览器
+2025-12-23 17:05:53,651 | INFO | Temu-2105-Temu全托管 | --------------------2105-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:05:58,443 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:06:04,775 | INFO | Temu-2105-Temu全托管 | 授权流程完成
+2025-12-23 17:06:07,795 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\2105-Temu全托管_cookies.json
+2025-12-23 17:06:07,795 | INFO | Temu-2105-Temu全托管 | 2105-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:06:12,144 | INFO | Temu-2105-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:06:12,145 | INFO | Temu-2105-Temu全托管 | 暂无违规数据
+2025-12-23 17:06:12,145 | INFO | Main | 开始爬取店铺-------------------------------2105-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:06:12,147 | INFO | Temu-2105-Temu全托管 | 正在爬取店铺---------------2105-Temu全托管-------------的数据
+2025-12-23 17:06:12,151 | INFO | Temu-2105-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:06:13,227 | INFO | Temu-2105-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:06:13,227 | INFO | Main | 开始爬取店铺------------------------------2108-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:06:13,230 | INFO | Temu-2108-Temu全托管 | 正在爬取店铺---------------2108-Temu全托管-------------的数据
+2025-12-23 17:06:13,233 | INFO | Temu-2108-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:06:14,270 | INFO | Temu-2108-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:06:14,271 | INFO | Temu-2108-Temu全托管 | 暂无违规数据
+2025-12-23 17:06:14,271 | INFO | Main | 开始爬取店铺-------------------------------2108-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:06:14,285 | INFO | Temu-2108-Temu全托管 | 正在爬取店铺---------------2108-Temu全托管-------------的数据
+2025-12-23 17:06:14,289 | INFO | Temu-2108-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:06:15,557 | INFO | Temu-2108-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:06:15,557 | INFO | Main | 开始爬取店铺------------------------------2107-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:06:15,560 | INFO | Temu-2107-Temu全托管 | 正在爬取店铺---------------2107-Temu全托管-------------的数据
+2025-12-23 17:06:15,563 | INFO | Temu-2107-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:06:16,589 | INFO | Temu-2107-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:06:16,589 | INFO | Temu-2107-Temu全托管 | 暂无违规数据
+2025-12-23 17:06:16,589 | INFO | Main | 开始爬取店铺-------------------------------2107-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:06:16,611 | INFO | Temu-2107-Temu全托管 | 正在爬取店铺---------------2107-Temu全托管-------------的数据
+2025-12-23 17:06:16,613 | INFO | Temu-2107-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:06:17,672 | INFO | Temu-2107-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:06:17,672 | INFO | Main | 开始爬取店铺------------------------------2102-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:06:17,686 | INFO | Temu-2102-Temu全托管 | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2025-12-23 17:06:17,689 | INFO | Temu-2102-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:06:18,801 | INFO | Temu-2102-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:06:18,801 | INFO | Temu-2102-Temu全托管 | 暂无违规数据
+2025-12-23 17:06:18,801 | INFO | Main | 开始爬取店铺-------------------------------2102-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:06:18,827 | INFO | Temu-2102-Temu全托管 | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2025-12-23 17:06:18,829 | INFO | Temu-2102-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:06:20,934 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | goods_refund_cost 金额=5.24-----保存成功
+2025-12-23 17:06:21,975 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | delivery_by_jit 金额=120.54-----保存成功
+2025-12-23 17:06:23,090 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | france_epr 金额=16.31-----保存成功
+2025-12-23 17:06:24,214 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | epr_logistics_packaging_fee 金额=0.32-----保存成功
+2025-12-23 17:06:25,330 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | epr_platform_service_fee 金额=0.06-----保存成功
+2025-12-23 17:06:26,405 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | order_after_sales_issue_fully 金额=149.16-----保存成功
+2025-12-23 17:06:26,406 | INFO | Main | 开始爬取店铺------------------------------1108-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:06:26,412 | INFO | Temu-1108-Temu全托管 | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2025-12-23 17:06:26,414 | INFO | Temu-1108-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:06:27,454 | INFO | Temu-1108-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:06:27,454 | ERROR | Temu-1108-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:06:27,457 | WARNING | Temu-1108-Temu全托管 | [1108-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:06:30,541 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'oielegjolaoigkjpcikbcbepjdojkkja', 'browserID': 122453019, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '52888', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1108号店', 'duplicate': 2677, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122453019, 'containerCode': '1232530196', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:06:30,542 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - 浏览器启动成功, 调试端口: 52888
+2025-12-23 17:06:31,994 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - 已连接浏览器
+2025-12-23 17:06:32,442 | INFO | Temu-1108-Temu全托管 | --------------------1108-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:06:37,432 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:06:43,329 | INFO | Temu-1108-Temu全托管 | 授权流程完成
+2025-12-23 17:06:46,353 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1108-Temu全托管_cookies.json
+2025-12-23 17:06:46,353 | INFO | Temu-1108-Temu全托管 | 1108-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:06:52,063 | INFO | Temu-1108-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":1,"size":1,"list":[{"punishSn":"PCNA202511251312209148034","punishTypeDesc":"理化检测类","punishTypeCode":4,"violationStartTime":1764076340909,"countdownTime":-2145271196,"punishAmount":"50000","punishAmountCurrency":"CNY","punishStatus":5,"punishStatusDesc":"已申诉，平台处理中","viewDetailsStatus":3,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2210,"punishThirdTypeDesc":"小部件","voucher":null,"qcFlawPictureUrlList":["https://agentseller.temu.com/flash-qc-private-tag/474df38e/386c4857-85f7-42fe-85fa-dcc757ec8356.jpeg?signASM=q-sign-algorithm%3Dsha1%26q-ak%3D4Fqg37QZiP3fPAtR5ohW7vggTVnazAaR%26q-sign-time%3D1766480812%3B1766484412%26q-key-time%3D1766480812%3B1766484412%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Daa9c9d049a7a685bacbafc7fdfe6a6386ccbb007"],"showVoucher":1,"punishSecondTypeDesc":"合规检测问题","punishFirstTypeDesc":"理化检测类","punishFirstTypeCode":4,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":20346249115}]}}
+2025-12-23 17:06:52,072 | INFO | Temu-1108-Temu全托管 | PCNA202511251312209148034---保存成功
+2025-12-23 17:06:52,073 | INFO | Main | 开始爬取店铺-------------------------------1108-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:06:52,075 | INFO | Temu-1108-Temu全托管 | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2025-12-23 17:06:52,078 | INFO | Temu-1108-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:06:59,112 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | goods_refund_cost 金额=16.70-----保存成功
+2025-12-23 17:07:01,859 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | delivery_by_jit 金额=291.64-----保存成功
+2025-12-23 17:07:04,765 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | france_epr 金额=0.23-----保存成功
+2025-12-23 17:07:09,226 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | epr_logistics_packaging_fee 金额=0.02-----保存成功
+2025-12-23 17:07:12,226 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:07:16,611 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | order_after_sales_issue_fully 金额=38.43-----保存成功
+2025-12-23 17:07:16,611 | INFO | Main | 开始爬取店铺------------------------------1107-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:07:16,625 | INFO | Temu-1107-Temu全托管 | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2025-12-23 17:07:16,627 | INFO | Temu-1107-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:07:21,633 | ERROR | Temu-1107-Temu全托管 | ❌ 请求异常: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2025-12-23 17:07:21,633 | ERROR | Temu-1107-Temu全托管 | 接口返回为空
+2025-12-23 17:07:21,633 | INFO | Main | 开始爬取店铺-------------------------------1107-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:07:21,636 | INFO | Temu-1107-Temu全托管 | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2025-12-23 17:07:21,638 | INFO | Temu-1107-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:07:23,459 | ERROR | Temu-1107-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:07:26,483 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hmfimlmiknlbeifbaabjgkfnhkaiijaf', 'browserID': 122452738, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '53139', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1107号店', 'duplicate': 2679, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122452738, 'containerCode': '1232527381', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:07:26,483 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 浏览器启动成功, 调试端口: 53139
+2025-12-23 17:07:27,914 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 已连接浏览器
+2025-12-23 17:07:28,251 | INFO | Temu-1107-Temu全托管 | --------------------1107-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:07:32,130 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:07:37,196 | INFO | Temu-1107-Temu全托管 | 授权流程完成
+2025-12-23 17:07:40,213 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1107-Temu全托管_cookies.json
+2025-12-23 17:07:40,213 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:07:43,381 | INFO | Main | 开始爬取店铺------------------------------1106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:07:43,388 | INFO | Temu-1106-Temu全托管 | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2025-12-23 17:07:43,391 | INFO | Temu-1106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:07:46,818 | INFO | Temu-1106-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:07:46,818 | ERROR | Temu-1106-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:07:46,820 | WARNING | Temu-1106-Temu全托管 | [1106-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:07:49,631 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ckmbonbfihibhagclccfhnmbcbfnlbnh', 'browserID': 109978213, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '53380', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1106店', 'duplicate': 2279, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109978213, 'containerCode': '1107782133', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:07:49,631 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - 浏览器启动成功, 调试端口: 53380
+2025-12-23 17:07:51,017 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - 已连接浏览器
+2025-12-23 17:07:51,352 | INFO | Temu-1106-Temu全托管 | --------------------1106-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:07:56,112 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:08:01,345 | INFO | Temu-1106-Temu全托管 | 授权流程完成
+2025-12-23 17:08:04,380 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1106-Temu全托管_cookies.json
+2025-12-23 17:08:04,380 | INFO | Temu-1106-Temu全托管 | 1106-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:08:11,775 | INFO | Temu-1106-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:08:11,776 | INFO | Temu-1106-Temu全托管 | 暂无违规数据
+2025-12-23 17:08:11,776 | INFO | Main | 开始爬取店铺-------------------------------1106-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:08:11,790 | INFO | Temu-1106-Temu全托管 | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2025-12-23 17:08:11,794 | INFO | Temu-1106-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:08:17,283 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | goods_refund_cost 金额=18.39-----保存成功
+2025-12-23 17:08:19,535 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | delivery_by_jit 金额=302.76-----保存成功
+2025-12-23 17:08:21,850 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | france_epr 金额=82.43-----保存成功
+2025-12-23 17:08:24,099 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_logistics_packaging_fee 金额=1.22-----保存成功
+2025-12-23 17:08:28,108 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_platform_service_fee 金额=0.28-----保存成功
+2025-12-23 17:08:32,620 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_authorization_agent_fee 金额=0.92-----保存成功
+2025-12-23 17:08:35,252 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | order_after_sales_issue_fully 金额=124.18-----保存成功
+2025-12-23 17:08:35,253 | INFO | Main | 开始爬取店铺------------------------------1105-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:08:35,257 | INFO | Temu-1105-Temu全托管 | 正在爬取店铺---------------1105-Temu全托管-------------的数据
+2025-12-23 17:08:35,261 | INFO | Temu-1105-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:08:37,083 | INFO | Temu-1105-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:08:37,083 | ERROR | Temu-1105-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:08:37,084 | WARNING | Temu-1105-Temu全托管 | [1105-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:08:40,180 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hedbcddcbnkifhfapobljhpmnkknmeci', 'browserID': 109977447, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '53666', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1105店', 'duplicate': 2642, 'ip': '218.78.129.86', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109977447, 'containerCode': '1107774478', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:08:40,181 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 浏览器启动成功, 调试端口: 53666
+2025-12-23 17:08:41,578 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 已连接浏览器
+2025-12-23 17:08:41,911 | INFO | Temu-1105-Temu全托管 | --------------------1105-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:08:46,512 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:10:48,045 | INFO | Main | 开始爬取店铺------------------------------2106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:10:48,050 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:10:48,070 | INFO | Temu-2106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:10:49,563 | INFO | Temu-2106-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":1,"size":1,"list":[{"punishSn":"PCNA202512101225579905905","punishTypeDesc":"理化检测类","punishTypeCode":4,"violationStartTime":1765369557288,"countdownTime":-852292903,"punishAmount":"50000","punishAmountCurrency":"CNY","punishStatus":4,"punishStatusDesc":"逾期未申诉，平台处理中","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2210,"punishThirdTypeDesc":"小部件","voucher":null,"qcFlawPictureUrlList":["https://agentseller.temu.com/flash-qc-private-tag/89c4b2b5/22508511-5633-4574-a28e-992b9ba2993d.jpeg?signASM=q-sign-algorithm%3Dsha1%26q-ak%3D4Fqg37QZiP3fPAtR5ohW7vggTVnazAaR%26q-sign-time%3D1766481050%3B1766484650%26q-key-time%3D1766481050%3B1766484650%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Dcafc65f6686add6a6560a98df9fe411b96963472"],"showVoucher":1,"punishSecondTypeDesc":"合规检测问题","punishFirstTypeDesc":"理化检测类","punishFirstTypeCode":4,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":43686760571}]}}
+2025-12-23 17:10:49,569 | INFO | Temu-2106-Temu全托管 | PCNA202512101225579905905---保存成功
+2025-12-23 17:10:49,569 | INFO | Main | 开始爬取店铺-------------------------------2106-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:10:49,571 | INFO | Temu-2106-Temu全托管 | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2025-12-23 17:10:49,588 | INFO | Temu-2106-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:10:51,654 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | goods_refund_cost 金额=29.97-----保存成功
+2025-12-23 17:10:52,720 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | delivery_by_jit 金额=291.31-----保存成功
+2025-12-23 17:10:53,788 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | france_epr 金额=99.57-----保存成功
+2025-12-23 17:10:54,854 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_logistics_packaging_fee 金额=1.15-----保存成功
+2025-12-23 17:10:55,901 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_platform_service_fee 金额=0.34-----保存成功
+2025-12-23 17:10:56,940 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:10:57,979 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | epr_authorization_agent_fee 金额=4.17-----保存成功
+2025-12-23 17:10:59,027 | INFO | Temu-2106-Temu全托管 | [保存] 2106-Temu全托管 | order_after_sales_issue_fully 金额=224.52-----保存成功
+2025-12-23 17:10:59,027 | INFO | Main | 开始爬取店铺------------------------------2105-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:10:59,044 | INFO | Temu-2105-Temu全托管 | 正在爬取店铺---------------2105-Temu全托管-------------的数据
+2025-12-23 17:10:59,045 | INFO | Temu-2105-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:00,080 | INFO | Temu-2105-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:00,082 | INFO | Temu-2105-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:00,082 | INFO | Main | 开始爬取店铺-------------------------------2105-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:00,084 | INFO | Temu-2105-Temu全托管 | 正在爬取店铺---------------2105-Temu全托管-------------的数据
+2025-12-23 17:11:00,085 | INFO | Temu-2105-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:01,072 | INFO | Temu-2105-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:11:01,072 | INFO | Main | 开始爬取店铺------------------------------2108-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:01,091 | INFO | Temu-2108-Temu全托管 | 正在爬取店铺---------------2108-Temu全托管-------------的数据
+2025-12-23 17:11:01,094 | INFO | Temu-2108-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:02,136 | INFO | Temu-2108-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:02,136 | INFO | Temu-2108-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:02,136 | INFO | Main | 开始爬取店铺-------------------------------2108-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:02,151 | INFO | Temu-2108-Temu全托管 | 正在爬取店铺---------------2108-Temu全托管-------------的数据
+2025-12-23 17:11:02,156 | INFO | Temu-2108-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:03,144 | INFO | Temu-2108-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:11:03,144 | INFO | Main | 开始爬取店铺------------------------------2107-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:03,146 | INFO | Temu-2107-Temu全托管 | 正在爬取店铺---------------2107-Temu全托管-------------的数据
+2025-12-23 17:11:03,148 | INFO | Temu-2107-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:04,423 | INFO | Temu-2107-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:04,424 | INFO | Temu-2107-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:04,424 | INFO | Main | 开始爬取店铺-------------------------------2107-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:04,443 | INFO | Temu-2107-Temu全托管 | 正在爬取店铺---------------2107-Temu全托管-------------的数据
+2025-12-23 17:11:04,445 | INFO | Temu-2107-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:05,479 | INFO | Temu-2107-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:11:05,480 | INFO | Main | 开始爬取店铺------------------------------2102-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:05,503 | INFO | Temu-2102-Temu全托管 | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2025-12-23 17:11:05,507 | INFO | Temu-2102-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:06,548 | INFO | Temu-2102-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:06,548 | INFO | Temu-2102-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:06,548 | INFO | Main | 开始爬取店铺-------------------------------2102-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:06,550 | INFO | Temu-2102-Temu全托管 | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2025-12-23 17:11:06,553 | INFO | Temu-2102-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:08,669 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | goods_refund_cost 金额=5.24-----保存成功
+2025-12-23 17:11:09,720 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | delivery_by_jit 金额=120.54-----保存成功
+2025-12-23 17:11:10,811 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | france_epr 金额=16.31-----保存成功
+2025-12-23 17:11:11,852 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | epr_logistics_packaging_fee 金额=0.32-----保存成功
+2025-12-23 17:11:12,917 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | epr_platform_service_fee 金额=0.06-----保存成功
+2025-12-23 17:11:13,960 | INFO | Temu-2102-Temu全托管 | [保存] 2102-Temu全托管 | order_after_sales_issue_fully 金额=149.16-----保存成功
+2025-12-23 17:11:13,960 | INFO | Main | 开始爬取店铺------------------------------1108-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:13,981 | INFO | Temu-1108-Temu全托管 | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2025-12-23 17:11:13,983 | INFO | Temu-1108-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:15,232 | INFO | Temu-1108-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":1,"size":1,"list":[{"punishSn":"PCNA202511251312209148034","punishTypeDesc":"理化检测类","punishTypeCode":4,"violationStartTime":1764076340909,"countdownTime":-2145534959,"punishAmount":"50000","punishAmountCurrency":"CNY","punishStatus":5,"punishStatusDesc":"已申诉，平台处理中","viewDetailsStatus":3,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2210,"punishThirdTypeDesc":"小部件","voucher":null,"qcFlawPictureUrlList":["https://agentseller.temu.com/flash-qc-private-tag/474df38e/386c4857-85f7-42fe-85fa-dcc757ec8356.jpeg?signASM=q-sign-algorithm%3Dsha1%26q-ak%3D4Fqg37QZiP3fPAtR5ohW7vggTVnazAaR%26q-sign-time%3D1766481076%3B1766484676%26q-key-time%3D1766481076%3B1766484676%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3D631f2c28e19f7f38c83f5a94c9d9c9988b72594f"],"showVoucher":1,"punishSecondTypeDesc":"合规检测问题","punishFirstTypeDesc":"理化检测类","punishFirstTypeCode":4,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":20346249115}]}}
+2025-12-23 17:11:15,237 | INFO | Temu-1108-Temu全托管 | PCNA202511251312209148034---保存成功
+2025-12-23 17:11:15,237 | INFO | Main | 开始爬取店铺-------------------------------1108-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:15,259 | INFO | Temu-1108-Temu全托管 | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2025-12-23 17:11:15,260 | INFO | Temu-1108-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:17,344 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | goods_refund_cost 金额=16.70-----保存成功
+2025-12-23 17:11:18,393 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | delivery_by_jit 金额=291.64-----保存成功
+2025-12-23 17:11:19,442 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | france_epr 金额=0.23-----保存成功
+2025-12-23 17:11:20,520 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | epr_logistics_packaging_fee 金额=0.02-----保存成功
+2025-12-23 17:11:21,567 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:11:22,638 | INFO | Temu-1108-Temu全托管 | [保存] 1108-Temu全托管 | order_after_sales_issue_fully 金额=38.43-----保存成功
+2025-12-23 17:11:22,638 | INFO | Main | 开始爬取店铺------------------------------1107-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:22,653 | INFO | Temu-1107-Temu全托管 | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2025-12-23 17:11:22,655 | INFO | Temu-1107-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:23,671 | INFO | Temu-1107-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:11:23,672 | ERROR | Temu-1107-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:11:23,672 | WARNING | Temu-1107-Temu全托管 | [1107-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:11:26,826 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hmfimlmiknlbeifbaabjgkfnhkaiijaf', 'browserID': 122452738, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '53990', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1107号店', 'duplicate': 2627, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122452738, 'containerCode': '1232527381', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:11:26,827 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 浏览器启动成功, 调试端口: 53990
+2025-12-23 17:11:28,292 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 已连接浏览器
+2025-12-23 17:11:28,659 | INFO | Temu-1107-Temu全托管 | --------------------1107-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:11:33,116 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:11:36,667 | INFO | Temu-1107-Temu全托管 | 授权流程完成
+2025-12-23 17:11:39,697 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1107-Temu全托管_cookies.json
+2025-12-23 17:11:39,698 | INFO | Temu-1107-Temu全托管 | 1107-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:11:44,516 | INFO | Temu-1107-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:44,518 | INFO | Temu-1107-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:44,518 | INFO | Main | 开始爬取店铺-------------------------------1107-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:44,541 | INFO | Temu-1107-Temu全托管 | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2025-12-23 17:11:44,543 | INFO | Temu-1107-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:11:46,622 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | goods_refund_cost 金额=7.30-----保存成功
+2025-12-23 17:11:47,706 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | delivery_by_jit 金额=125.07-----保存成功
+2025-12-23 17:11:48,780 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | france_epr 金额=31.51-----保存成功
+2025-12-23 17:11:49,836 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | epr_logistics_packaging_fee 金额=0.72-----保存成功
+2025-12-23 17:11:51,072 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | epr_platform_service_fee 金额=0.12-----保存成功
+2025-12-23 17:11:52,110 | INFO | Temu-1107-Temu全托管 | [保存] 1107-Temu全托管 | order_after_sales_issue_fully 金额=51.02-----保存成功
+2025-12-23 17:11:52,110 | INFO | Main | 开始爬取店铺------------------------------1106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:11:52,130 | INFO | Temu-1106-Temu全托管 | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2025-12-23 17:11:52,132 | INFO | Temu-1106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:11:57,117 | INFO | Temu-1106-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:11:57,118 | INFO | Temu-1106-Temu全托管 | 暂无违规数据
+2025-12-23 17:11:57,118 | INFO | Main | 开始爬取店铺-------------------------------1106-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:11:57,142 | INFO | Temu-1106-Temu全托管 | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2025-12-23 17:11:57,144 | INFO | Temu-1106-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:12:03,039 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | goods_refund_cost 金额=18.39-----保存成功
+2025-12-23 17:12:08,042 | ERROR | Temu-1106-Temu全托管 | 获取限制时间失败
+2025-12-23 17:12:08,049 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | delivery_by_jit 金额=322.84-----保存成功
+2025-12-23 17:12:09,180 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | france_epr 金额=82.43-----保存成功
+2025-12-23 17:12:10,211 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_logistics_packaging_fee 金额=1.22-----保存成功
+2025-12-23 17:12:11,247 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_platform_service_fee 金额=0.28-----保存成功
+2025-12-23 17:12:12,264 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | epr_authorization_agent_fee 金额=0.92-----保存成功
+2025-12-23 17:12:13,322 | INFO | Temu-1106-Temu全托管 | [保存] 1106-Temu全托管 | order_after_sales_issue_fully 金额=124.18-----保存成功
+2025-12-23 17:12:13,322 | INFO | Main | 开始爬取店铺------------------------------1105-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:12:13,337 | INFO | Temu-1105-Temu全托管 | 正在爬取店铺---------------1105-Temu全托管-------------的数据
+2025-12-23 17:12:13,338 | INFO | Temu-1105-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:12:14,314 | INFO | Temu-1105-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:12:14,314 | ERROR | Temu-1105-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:12:14,315 | WARNING | Temu-1105-Temu全托管 | [1105-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:12:17,358 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hedbcddcbnkifhfapobljhpmnkknmeci', 'browserID': 109977447, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54306', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1105店', 'duplicate': 2586, 'ip': '218.78.129.86', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109977447, 'containerCode': '1107774478', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:12:17,359 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 浏览器启动成功, 调试端口: 54306
+2025-12-23 17:12:18,795 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 已连接浏览器
+2025-12-23 17:12:19,126 | INFO | Temu-1105-Temu全托管 | --------------------1105-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:12:24,101 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:12:29,408 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1105-Temu全托管_cookies.json
+2025-12-23 17:12:29,408 | INFO | Temu-1105-Temu全托管 | 1105-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:12:33,770 | INFO | Temu-1105-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":1,"size":1,"list":[{"punishSn":"PCNA202509281343336753940","punishTypeDesc":"理化检测类","punishTypeCode":4,"violationStartTime":1759067013594,"countdownTime":-7154941036,"punishAmount":"50000","punishAmountCurrency":"CNY","punishStatus":1,"punishStatusDesc":"已取消违规处理","viewDetailsStatus":6,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2210,"punishThirdTypeDesc":"小部件","voucher":null,"qcFlawPictureUrlList":["https://img.kwcdn.com/product/20ef5f4698/5d769a27-3052-48d3-bcd8-d94dbd484bc1_992x458.jpeg"],"showVoucher":1,"punishSecondTypeDesc":"合规检测问题","punishFirstTypeDesc":"理化检测类","punishFirstTypeCode":4,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":92279490051}]}}
+2025-12-23 17:12:33,776 | INFO | Temu-1105-Temu全托管 | PCNA202509281343336753940---保存成功
+2025-12-23 17:12:33,776 | INFO | Main | 开始爬取店铺-------------------------------1105-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:12:33,778 | INFO | Temu-1105-Temu全托管 | 正在爬取店铺---------------1105-Temu全托管-------------的数据
+2025-12-23 17:12:33,781 | INFO | Temu-1105-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:12:35,888 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | goods_refund_cost 金额=16.11-----保存成功
+2025-12-23 17:12:36,942 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | delivery_by_jit 金额=323.00-----保存成功
+2025-12-23 17:12:37,964 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | france_epr 金额=393.54-----保存成功
+2025-12-23 17:12:39,013 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | epr_logistics_packaging_fee 金额=12.69-----保存成功
+2025-12-23 17:12:40,111 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | epr_platform_service_fee 金额=1.29-----保存成功
+2025-12-23 17:12:41,445 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | epr_authorization_agent_fee 金额=3.91-----保存成功
+2025-12-23 17:12:42,539 | INFO | Temu-1105-Temu全托管 | [保存] 1105-Temu全托管 | order_after_sales_issue_fully 金额=373.21-----保存成功
+2025-12-23 17:12:42,539 | INFO | Main | 开始爬取店铺------------------------------2103-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:12:42,555 | INFO | Temu-2103-Temu全托管 | 正在爬取店铺---------------2103-Temu全托管-------------的数据
+2025-12-23 17:12:42,557 | INFO | Temu-2103-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:12:43,613 | INFO | Temu-2103-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":5,"size":5,"list":[{"punishSn":"PCNA202507171306145036468","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752757574859,"countdownTime":-13464389596,"punishAmount":"100","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB250702196457","punishAmountDiff":null,"punishThirdTypeCode":1510,"punishThirdTypeDesc":"数量不符","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"虚假宣传问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":99493589643},{"punishSn":"PCNA202507161329034999104","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752672543169,"countdownTime":-13549421286,"punishAmount":"850","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506302739045","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":99493589643},{"punishSn":"PCNA202507011409184652545","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1751378958118,"countdownTime":-14843006337,"punishAmount":"3850","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506172299168","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":68399431125},{"punishSn":"PCNA202506290906584609580","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1751188018506,"countdownTime":-15033945949,"punishAmount":"150","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506102203752","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":44721454700},{"punishSn":"PCNA202506180735544350302","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1750232154079,"countdownTime":-15989810376,"punishAmount":"800","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506063432254","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":44721454700}]}}
+2025-12-23 17:12:43,619 | INFO | Temu-2103-Temu全托管 | PCNA202507171306145036468---保存成功
+2025-12-23 17:12:43,622 | INFO | Temu-2103-Temu全托管 | PCNA202507161329034999104---保存成功
+2025-12-23 17:12:43,624 | INFO | Temu-2103-Temu全托管 | PCNA202507011409184652545---保存成功
+2025-12-23 17:12:43,627 | INFO | Temu-2103-Temu全托管 | PCNA202506290906584609580---保存成功
+2025-12-23 17:12:43,629 | INFO | Temu-2103-Temu全托管 | PCNA202506180735544350302---保存成功
+2025-12-23 17:12:43,629 | INFO | Main | 开始爬取店铺-------------------------------2103-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:12:43,643 | INFO | Temu-2103-Temu全托管 | 正在爬取店铺---------------2103-Temu全托管-------------的数据
+2025-12-23 17:12:43,645 | INFO | Temu-2103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:12:45,674 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | goods_refund_cost 金额=7.22-----保存成功
+2025-12-23 17:12:46,707 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | delivery_by_jit 金额=170.24-----保存成功
+2025-12-23 17:12:47,756 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | france_epr 金额=53.49-----保存成功
+2025-12-23 17:12:48,812 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | epr_logistics_packaging_fee 金额=1.61-----保存成功
+2025-12-23 17:12:49,828 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | epr_platform_service_fee 金额=0.19-----保存成功
+2025-12-23 17:12:50,858 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | epr_authorization_agent_fee 金额=0.23-----保存成功
+2025-12-23 17:12:51,881 | INFO | Temu-2103-Temu全托管 | [保存] 2103-Temu全托管 | order_after_sales_issue_fully 金额=64.11-----保存成功
+2025-12-23 17:12:51,881 | INFO | Main | 开始爬取店铺------------------------------112-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:12:51,899 | INFO | Temu-112-Temu全托管 | 正在爬取店铺---------------112-Temu全托管-------------的数据
+2025-12-23 17:12:51,901 | INFO | Temu-112-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:12:53,044 | INFO | Temu-112-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":2,"size":2,"list":[{"punishSn":"PCNA202507160759004984119","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752652740799,"countdownTime":-13569233102,"punishAmount":"10000","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2507053587972","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":70108093995},{"punishSn":"PCNA202507011434154655855","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1751380455814,"countdownTime":-14841518087,"punishAmount":"1000","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506243901835","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":28460457893}]}}
+2025-12-23 17:12:53,050 | INFO | Temu-112-Temu全托管 | PCNA202507160759004984119---保存成功
+2025-12-23 17:12:53,054 | INFO | Temu-112-Temu全托管 | PCNA202507011434154655855---保存成功
+2025-12-23 17:12:53,054 | INFO | Main | 开始爬取店铺-------------------------------112-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:12:53,057 | INFO | Temu-112-Temu全托管 | 正在爬取店铺---------------112-Temu全托管-------------的数据
+2025-12-23 17:12:53,059 | INFO | Temu-112-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:12:55,160 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | goods_refund_cost 金额=36.50-----保存成功
+2025-12-23 17:12:56,250 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | delivery_by_jit 金额=388.69-----保存成功
+2025-12-23 17:12:57,313 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | france_epr 金额=101.41-----保存成功
+2025-12-23 17:12:58,608 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | epr_logistics_packaging_fee 金额=1.11-----保存成功
+2025-12-23 17:12:59,638 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | epr_platform_service_fee 金额=0.19-----保存成功
+2025-12-23 17:13:00,664 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | epr_authorization_agent_fee 金额=0.92-----保存成功
+2025-12-23 17:13:01,734 | INFO | Temu-112-Temu全托管 | [保存] 112-Temu全托管 | order_after_sales_issue_fully 金额=102.56-----保存成功
+2025-12-23 17:13:01,735 | INFO | Main | 开始爬取店铺------------------------------151-Temu全托管家居--------------------------违法资金的数据
+2025-12-23 17:13:01,762 | INFO | Temu-151-Temu全托管家居 | 正在爬取店铺---------------151-Temu全托管家居-------------的数据
+2025-12-23 17:13:01,763 | INFO | Temu-151-Temu全托管家居 | 违规记录表检查 / 创建完成
+2025-12-23 17:13:02,825 | INFO | Temu-151-Temu全托管家居 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":0,"size":0,"list":[]}}
+2025-12-23 17:13:02,825 | INFO | Temu-151-Temu全托管家居 | 暂无违规数据
+2025-12-23 17:13:02,825 | INFO | Main | 开始爬取店铺-------------------------------151-Temu全托管家居---------------------------资金限制的数据
+2025-12-23 17:13:02,839 | INFO | Temu-151-Temu全托管家居 | 正在爬取店铺---------------151-Temu全托管家居-------------的数据
+2025-12-23 17:13:02,840 | INFO | Temu-151-Temu全托管家居 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:13:03,848 | INFO | Temu-151-Temu全托管家居 | 暂无资金限制数据
+2025-12-23 17:13:03,848 | INFO | Main | 开始爬取店铺------------------------------1104-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:13:03,862 | INFO | Temu-1104-Temu全托管 | 正在爬取店铺---------------1104-Temu全托管-------------的数据
+2025-12-23 17:13:03,864 | INFO | Temu-1104-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:13:04,890 | INFO | Temu-1104-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:13:04,890 | ERROR | Temu-1104-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:13:04,891 | WARNING | Temu-1104-Temu全托管 | [1104-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:13:08,244 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ifmneobocilkpmpjmkahbfnpccjajnbm', 'browserID': 100261239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54600', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1104店', 'duplicate': 2757, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261239, 'containerCode': '1010612394', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:13:08,245 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - 浏览器启动成功, 调试端口: 54600
+2025-12-23 17:13:09,613 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - 已连接浏览器
+2025-12-23 17:13:09,925 | INFO | Temu-1104-Temu全托管 | --------------------1104-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:13:15,121 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:13:21,143 | INFO | Temu-1104-Temu全托管 | 授权流程完成
+2025-12-23 17:13:24,170 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1104-Temu全托管_cookies.json
+2025-12-23 17:13:24,170 | INFO | Temu-1104-Temu全托管 | 1104-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:13:28,610 | INFO | Temu-1104-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":9,"size":9,"list":[{"punishSn":"PCNA202507161500235008528","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752678023108,"countdownTime":-13543986356,"punishAmount":"150","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB250710315581","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":72036483339},{"punishSn":"PCNA202507161443485007826","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752677028395,"countdownTime":-13544981069,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB250710717839","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":5440409115},{"punishSn":"PCNA202507160828484986404","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752654528054,"countdownTime":-13567481410,"punishAmount":"4400","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":4,"subPurchaseOrderSn":"WB2506294296772","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":4699615454},{"punishSn":"PCNA202506290647164590717","punishTypeDesc":"资料以及产品外观类","punishTypeCode":5,"violationStartTime":1751179636137,"countdownTime":-15042373327,"punishAmount":"350","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB250616084287","punishAmountDiff":null,"punishThirdTypeCode":2502,"punishThirdTypeDesc":"尺寸不符","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"错码或改码问题","punishFirstTypeDesc":"资料以及产品外观类","punishFirstTypeCode":5,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":8955392745},{"punishSn":"PCNA202506180746044353826","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1750232764302,"countdownTime":-15989245162,"punishAmount":"600","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506042804968","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":1592419454},{"punishSn":"PCNA202506041510173814311","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1749049817496,"countdownTime":-17172191968,"punishAmount":"300","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":6170983347},{"punishSn":"PCNA202505230917053569693","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747991825583,"countdownTime":-18230183881,"punishAmount":"300","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":4699615454},{"punishSn":"PCNA202505151311253430555","punishTypeDesc":"资料以及产品外观类","punishTypeCode":5,"violationStartTime":1747314685099,"countdownTime":-18907324365,"punishAmount":"350","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":2499,"punishThirdTypeDesc":"其它","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"错款问题","punishFirstTypeDesc":"资料以及产品外观类","punishFirstTypeCode":5,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":3539631998},{"punishSn":"PCNA202504241340343106056","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1745502034425,"countdownTime":-20719975039,"punishAmount":"550","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":6170983347}]}}
+2025-12-23 17:13:28,618 | INFO | Temu-1104-Temu全托管 | PCNA202507161500235008528---保存成功
+2025-12-23 17:13:28,621 | INFO | Temu-1104-Temu全托管 | PCNA202507161443485007826---保存成功
+2025-12-23 17:13:28,625 | INFO | Temu-1104-Temu全托管 | PCNA202507160828484986404---保存成功
+2025-12-23 17:13:28,627 | INFO | Temu-1104-Temu全托管 | PCNA202506290647164590717---保存成功
+2025-12-23 17:13:28,629 | INFO | Temu-1104-Temu全托管 | PCNA202506180746044353826---保存成功
+2025-12-23 17:13:28,632 | INFO | Temu-1104-Temu全托管 | PCNA202506041510173814311---保存成功
+2025-12-23 17:13:28,635 | INFO | Temu-1104-Temu全托管 | PCNA202505230917053569693---保存成功
+2025-12-23 17:13:28,636 | INFO | Temu-1104-Temu全托管 | PCNA202505151311253430555---保存成功
+2025-12-23 17:13:28,639 | INFO | Temu-1104-Temu全托管 | PCNA202504241340343106056---保存成功
+2025-12-23 17:13:28,639 | INFO | Main | 开始爬取店铺-------------------------------1104-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:13:28,642 | INFO | Temu-1104-Temu全托管 | 正在爬取店铺---------------1104-Temu全托管-------------的数据
+2025-12-23 17:13:28,643 | INFO | Temu-1104-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:13:31,040 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | goods_refund_cost 金额=46.70-----保存成功
+2025-12-23 17:13:32,096 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | delivery_by_jit 金额=201.09-----保存成功
+2025-12-23 17:13:33,144 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | goods_poor_quality 金额=5500.00-----保存成功
+2025-12-23 17:13:34,203 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | france_epr 金额=397.77-----保存成功
+2025-12-23 17:13:35,248 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | epr_logistics_packaging_fee 金额=6.44-----保存成功
+2025-12-23 17:13:36,257 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | epr_platform_service_fee 金额=1.41-----保存成功
+2025-12-23 17:13:37,846 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | epr_authorization_agent_fee 金额=0.92-----保存成功
+2025-12-23 17:13:38,895 | INFO | Temu-1104-Temu全托管 | [保存] 1104-Temu全托管 | order_after_sales_issue_fully 金额=208.24-----保存成功
+2025-12-23 17:13:38,895 | INFO | Main | 开始爬取店铺------------------------------1102-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:13:38,916 | INFO | Temu-1102-Temu全托管 | 正在爬取店铺---------------1102-Temu全托管-------------的数据
+2025-12-23 17:13:38,918 | INFO | Temu-1102-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:13:39,925 | INFO | Temu-1102-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:13:39,925 | ERROR | Temu-1102-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:13:39,926 | WARNING | Temu-1102-Temu全托管 | [1102-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:13:43,395 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jelnoidfmcaagnefijmbgjihdibffamo', 'browserID': 100123686, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54856', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1102店', 'duplicate': 2956, 'ip': '125.94.230.83', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100123686, 'containerCode': '1009236863', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:13:43,396 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - 浏览器启动成功, 调试端口: 54856
+2025-12-23 17:13:44,808 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - 已连接浏览器
+2025-12-23 17:13:45,106 | INFO | Temu-1102-Temu全托管 | --------------------1102-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:13:50,121 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:13:54,875 | INFO | Temu-1102-Temu全托管 | 授权流程完成
+2025-12-23 17:13:57,890 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1102-Temu全托管_cookies.json
+2025-12-23 17:13:57,890 | INFO | Temu-1102-Temu全托管 | 1102-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:14:02,747 | INFO | Temu-1102-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":7,"size":7,"list":[{"punishSn":"PCNA202507161426115007138","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752675971768,"countdownTime":-13546071844,"punishAmount":"300","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2507076214416","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":9368512016},{"punishSn":"PCNA202507161235344994647","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752669334159,"countdownTime":-13552709453,"punishAmount":"1650","punishAmountCurrency":"CNY","punishStatus":1,"punishStatusDesc":"已取消违规处理","viewDetailsStatus":5,"subPurchaseOrderSn":"WB2507012427783","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":67299737043},{"punishSn":"PCNA202507160832024985512","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752654722178,"countdownTime":-13567321434,"punishAmount":"3350","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":4,"subPurchaseOrderSn":"WB2507012789193","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":2684744469},{"punishSn":"PCNA202506041507193810520","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1749049639809,"countdownTime":-17172403803,"punishAmount":"350","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":7699958928},{"punishSn":"PCNA202505230921423566507","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747992102551,"countdownTime":-18229941061,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":5948767560},{"punishSn":"PCNA202505230921133567809","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747992073778,"countdownTime":-18229969834,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":8115925187},{"punishSn":"PCNA202504250657273111971","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1745564247102,"countdownTime":-20657796510,"punishAmount":"150","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":7699958928}]}}
+2025-12-23 17:14:02,755 | INFO | Temu-1102-Temu全托管 | PCNA202507161426115007138---保存成功
+2025-12-23 17:14:02,758 | INFO | Temu-1102-Temu全托管 | PCNA202507161235344994647---保存成功
+2025-12-23 17:14:02,761 | INFO | Temu-1102-Temu全托管 | PCNA202507160832024985512---保存成功
+2025-12-23 17:14:02,764 | INFO | Temu-1102-Temu全托管 | PCNA202506041507193810520---保存成功
+2025-12-23 17:14:02,766 | INFO | Temu-1102-Temu全托管 | PCNA202505230921423566507---保存成功
+2025-12-23 17:14:02,769 | INFO | Temu-1102-Temu全托管 | PCNA202505230921133567809---保存成功
+2025-12-23 17:14:02,771 | INFO | Temu-1102-Temu全托管 | PCNA202504250657273111971---保存成功
+2025-12-23 17:14:02,772 | INFO | Main | 开始爬取店铺-------------------------------1102-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:14:02,773 | INFO | Temu-1102-Temu全托管 | 正在爬取店铺---------------1102-Temu全托管-------------的数据
+2025-12-23 17:14:02,775 | INFO | Temu-1102-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:14:06,121 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | goods_refund_cost 金额=23.09-----保存成功
+2025-12-23 17:14:07,445 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | delivery_by_jit 金额=332.01-----保存成功
+2025-12-23 17:14:08,625 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | goods_poor_quality 金额=8000.00-----保存成功
+2025-12-23 17:14:09,687 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | france_epr 金额=465.43-----保存成功
+2025-12-23 17:14:11,004 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | epr_logistics_packaging_fee 金额=8.31-----保存成功
+2025-12-23 17:14:12,037 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | epr_platform_service_fee 金额=1.46-----保存成功
+2025-12-23 17:14:13,070 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | epr_authorization_agent_fee 金额=0.46-----保存成功
+2025-12-23 17:14:14,345 | INFO | Temu-1102-Temu全托管 | [保存] 1102-Temu全托管 | order_after_sales_issue_fully 金额=307.68-----保存成功
+2025-12-23 17:14:14,345 | INFO | Main | 开始爬取店铺------------------------------1103-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:14:14,348 | INFO | Temu-1103-Temu全托管 | 正在爬取店铺---------------1103-Temu全托管-------------的数据
+2025-12-23 17:14:14,350 | INFO | Temu-1103-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:14:15,365 | INFO | Temu-1103-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:14:15,365 | ERROR | Temu-1103-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:14:15,365 | WARNING | Temu-1103-Temu全托管 | [1103-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:14:18,716 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jpdodpkjmnaoinfefchdgfomfncffgoc', 'browserID': 100261119, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55148', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1103店-子账号', 'duplicate': 2770, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261119, 'containerCode': '1010611195', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:14:18,716 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - 浏览器启动成功, 调试端口: 55148
+2025-12-23 17:14:20,124 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - 已连接浏览器
+2025-12-23 17:14:20,542 | INFO | Temu-1103-Temu全托管 | --------------------1103-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:14:25,092 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:14:32,307 | INFO | Temu-1103-Temu全托管 | 授权流程完成
+2025-12-23 17:14:35,326 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1103-Temu全托管_cookies.json
+2025-12-23 17:14:35,326 | INFO | Temu-1103-Temu全托管 | 1103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:14:39,866 | INFO | Temu-1103-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":8,"size":8,"list":[{"punishSn":"PCNA202507161225154992966","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752668715140,"countdownTime":-13553365589,"punishAmount":"2600","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506292600906","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":9413714656},{"punishSn":"PCNA202507160802264983090","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752652946126,"countdownTime":-13569134603,"punishAmount":"6350","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":4,"subPurchaseOrderSn":"WB2507073355482","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":81984240027},{"punishSn":"PCNA202506290903514609269","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1751187831829,"countdownTime":-15034248900,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":4,"subPurchaseOrderSn":"WB2506132445575","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":5143978411},{"punishSn":"PCNA202506041500053811222","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1749049205715,"countdownTime":-17172875014,"punishAmount":"500","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":9413714656},{"punishSn":"PCNA202505230825543562197","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747988754929,"countdownTime":-18233325800,"punishAmount":"1700","punishAmountCurrency":"CNY","punishStatus":1,"punishStatusDesc":"已取消违规处理","viewDetailsStatus":5,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":3352721778},{"punishSn":"PCNA202505161233273453832","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747398807668,"countdownTime":-18823273061,"punishAmount":"500","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":6997086869},{"punishSn":"PCNA202505111322183355903","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1746969738048,"countdownTime":-19252342681,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":2302238708},{"punishSn":"PCNA202504210318363039154","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1745205516925,"countdownTime":-21016563804,"punishAmount":"300","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":7918404421}]}}
+2025-12-23 17:14:39,871 | INFO | Temu-1103-Temu全托管 | PCNA202507161225154992966---保存成功
+2025-12-23 17:14:39,873 | INFO | Temu-1103-Temu全托管 | PCNA202507160802264983090---保存成功
+2025-12-23 17:14:39,875 | INFO | Temu-1103-Temu全托管 | PCNA202506290903514609269---保存成功
+2025-12-23 17:14:39,881 | INFO | Temu-1103-Temu全托管 | PCNA202506041500053811222---保存成功
+2025-12-23 17:14:39,884 | INFO | Temu-1103-Temu全托管 | PCNA202505230825543562197---保存成功
+2025-12-23 17:14:39,887 | INFO | Temu-1103-Temu全托管 | PCNA202505161233273453832---保存成功
+2025-12-23 17:14:39,889 | INFO | Temu-1103-Temu全托管 | PCNA202505111322183355903---保存成功
+2025-12-23 17:14:39,892 | INFO | Temu-1103-Temu全托管 | PCNA202504210318363039154---保存成功
+2025-12-23 17:14:39,892 | INFO | Main | 开始爬取店铺-------------------------------1103-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:14:39,894 | INFO | Temu-1103-Temu全托管 | 正在爬取店铺---------------1103-Temu全托管-------------的数据
+2025-12-23 17:14:39,897 | INFO | Temu-1103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:14:41,989 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | goods_refund_cost 金额=28.64-----保存成功
+2025-12-23 17:14:43,119 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | delivery_by_jit 金额=180.66-----保存成功
+2025-12-23 17:14:44,146 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | goods_poor_quality 金额=7500.00-----保存成功
+2025-12-23 17:14:45,456 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | france_epr 金额=197.08-----保存成功
+2025-12-23 17:14:46,478 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | epr_logistics_packaging_fee 金额=4.05-----保存成功
+2025-12-23 17:14:47,494 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | epr_platform_service_fee 金额=0.69-----保存成功
+2025-12-23 17:14:48,828 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | epr_authorization_agent_fee 金额=2.31-----保存成功
+2025-12-23 17:14:49,879 | INFO | Temu-1103-Temu全托管 | [保存] 1103-Temu全托管 | order_after_sales_issue_fully 金额=85.48-----保存成功
+2025-12-23 17:14:49,879 | INFO | Main | 开始爬取店铺------------------------------1101-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:14:49,898 | INFO | Temu-1101-Temu全托管 | 正在爬取店铺---------------1101-Temu全托管-------------的数据
+2025-12-23 17:14:49,899 | INFO | Temu-1101-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:14:50,900 | INFO | Temu-1101-Temu全托管 | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:14:50,900 | ERROR | Temu-1101-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:14:50,901 | WARNING | Temu-1101-Temu全托管 | [1101-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:14:54,272 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ckhldkgdmajoifldkandjekhofbghdfh', 'browserID': 100260927, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55419', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1101店', 'duplicate': 2840, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100260927, 'containerCode': '1010609275', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:14:54,273 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - 浏览器启动成功, 调试端口: 55419
+2025-12-23 17:14:55,647 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - 已连接浏览器
+2025-12-23 17:14:56,006 | INFO | Temu-1101-Temu全托管 | --------------------1101-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:15:00,460 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:15:06,279 | INFO | Temu-1101-Temu全托管 | 授权流程完成
+2025-12-23 17:15:09,291 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\1101-Temu全托管_cookies.json
+2025-12-23 17:15:09,291 | INFO | Temu-1101-Temu全托管 | 1101-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:15:13,687 | INFO | Temu-1101-Temu全托管 | {"success":true,"errorCode":1000000,"errorMsg":null,"result":{"pageNo":1,"pageSize":100,"total":6,"size":6,"list":[{"punishSn":"PCNA202507161349555001901","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1752673795608,"countdownTime":-13548318938,"punishAmount":"500","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":4,"subPurchaseOrderSn":"WB2507052666640","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":81998365117},{"punishSn":"PCNA202507020327484672884","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1751426868923,"countdownTime":-14795245623,"punishAmount":"200","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":"WB2506202825070","punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":47872489259},{"punishSn":"PCNA202506041348593809060","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1749044939068,"countdownTime":-17177175478,"punishAmount":"2950","punishAmountCurrency":"CNY","punishStatus":1,"punishStatusDesc":"已取消违规处理","viewDetailsStatus":5,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":5103535172},{"punishSn":"PCNA202505230922103566573","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747992130302,"countdownTime":-18229984244,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":5103535172},{"punishSn":"PCNA202505230920373567716","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747992037787,"countdownTime":-18230076759,"punishAmount":"250","punishAmountCurrency":"CNY","punishStatus":3,"punishStatusDesc":"已按违规处理","viewDetailsStatus":2,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":9546268948},{"punishSn":"PCNA202505230815173560360","punishTypeDesc":"安全合规类","punishTypeCode":3,"violationStartTime":1747988117839,"countdownTime":-18233996707,"punishAmount":"5050","punishAmountCurrency":"CNY","punishStatus":1,"punishStatusDesc":"已取消违规处理","viewDetailsStatus":5,"subPurchaseOrderSn":null,"punishAmountDiff":null,"punishThirdTypeCode":1303,"punishThirdTypeDesc":"标识标签错误或缺失","voucher":null,"qcFlawPictureUrlList":null,"showVoucher":0,"punishSecondTypeDesc":"标识标签问题","punishFirstTypeDesc":"安全合规类","punishFirstTypeCode":3,"qualityEventPunishDimension":2,"qualityEventPunishDimensionDesc":"货品SKC粒度","productSkcId":3296829801}]}}
+2025-12-23 17:15:13,696 | INFO | Temu-1101-Temu全托管 | PCNA202507161349555001901---保存成功
+2025-12-23 17:15:13,699 | INFO | Temu-1101-Temu全托管 | PCNA202507020327484672884---保存成功
+2025-12-23 17:15:13,702 | INFO | Temu-1101-Temu全托管 | PCNA202506041348593809060---保存成功
+2025-12-23 17:15:13,704 | INFO | Temu-1101-Temu全托管 | PCNA202505230922103566573---保存成功
+2025-12-23 17:15:13,707 | INFO | Temu-1101-Temu全托管 | PCNA202505230920373567716---保存成功
+2025-12-23 17:15:13,709 | INFO | Temu-1101-Temu全托管 | PCNA202505230815173560360---保存成功
+2025-12-23 17:15:13,709 | INFO | Main | 开始爬取店铺-------------------------------1101-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:15:13,736 | INFO | Temu-1101-Temu全托管 | 正在爬取店铺---------------1101-Temu全托管-------------的数据
+2025-12-23 17:15:13,738 | INFO | Temu-1101-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:15:15,851 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | goods_refund_cost 金额=55.12-----保存成功
+2025-12-23 17:15:16,880 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | delivery_by_jit 金额=906.89-----保存成功
+2025-12-23 17:15:17,955 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | goods_poor_quality 金额=6000.00-----保存成功
+2025-12-23 17:15:19,021 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | france_epr 金额=660.95-----保存成功
+2025-12-23 17:15:20,073 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | epr_logistics_packaging_fee 金额=10.00-----保存成功
+2025-12-23 17:15:21,330 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | epr_platform_service_fee 金额=2.11-----保存成功
+2025-12-23 17:15:22,383 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | advertising_expenses 金额=1000.00-----保存成功
+2025-12-23 17:15:23,422 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | epr_authorization_agent_fee 金额=8.10-----保存成功
+2025-12-23 17:15:24,489 | INFO | Temu-1101-Temu全托管 | [保存] 1101-Temu全托管 | order_after_sales_issue_fully 金额=692.44-----保存成功
+2025-12-23 17:15:24,489 | INFO | Main | 开始爬取店铺------------------------------2101-Temu全托管KA--------------------------违法资金的数据
+2025-12-23 17:15:24,515 | INFO | Temu-2101-Temu全托管KA | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2025-12-23 17:15:24,516 | INFO | Temu-2101-Temu全托管KA | 违规记录表检查 / 创建完成
+2025-12-23 17:15:25,538 | INFO | Temu-2101-Temu全托管KA | {"error_code":40001,"error_msg":"Invalid Login State"}
+2025-12-23 17:15:25,538 | ERROR | Temu-2101-Temu全托管KA | ⚠️ HTTP异常: 403
+2025-12-23 17:15:25,539 | WARNING | Temu-2101-Temu全托管KA | [2101-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2025-12-23 17:15:28,971 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55651', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2797, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:15:28,971 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 55651
+2025-12-23 17:15:30,372 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 已连接浏览器
+2025-12-23 17:15:30,799 | INFO | Temu-2101-Temu全托管KA | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2025-12-23 17:15:33,419 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2025-12-23 17:15:55,238 | ERROR | Temu-2101-Temu全托管KA | 授权流程失败: Locator.wait_for: Timeout 15000ms exceeded.
+Call log:
+  - waiting for get_by_text("确认授权并前往", exact=True) to be visible
+
+2025-12-23 17:23:41,242 | INFO | Main | 开始爬取店铺------------------------------2101-Temu全托管KA--------------------------违法资金的数据
+2025-12-23 17:23:41,248 | INFO | Temu-2101-Temu全托管KA | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2025-12-23 17:23:41,251 | INFO | Temu-2101-Temu全托管KA | 违规记录表检查 / 创建完成
+2025-12-23 17:23:42,231 | ERROR | Temu-2101-Temu全托管KA | ⚠️ HTTP异常: 403
+2025-12-23 17:23:42,232 | WARNING | Temu-2101-Temu全托管KA | [2101-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2025-12-23 17:23:45,387 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '56049', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2715, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:23:45,388 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 56049
+2025-12-23 17:23:46,808 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 已连接浏览器
+2025-12-23 17:23:47,241 | INFO | Temu-2101-Temu全托管KA | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2025-12-23 17:23:49,954 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2025-12-23 17:24:01,791 | ERROR | Temu-2101-Temu全托管KA | 授权流程失败: Locator.wait_for: Target page, context or browser has been closed
+Call log:
+  - waiting for get_by_text("确认授权并前往", exact=True) to be visible
+
+2025-12-23 17:24:05,941 | INFO | Main | 开始爬取店铺------------------------------2101-Temu全托管KA--------------------------违法资金的数据
+2025-12-23 17:24:05,948 | INFO | Temu-2101-Temu全托管KA | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2025-12-23 17:24:05,950 | INFO | Temu-2101-Temu全托管KA | 违规记录表检查 / 创建完成
+2025-12-23 17:24:06,940 | ERROR | Temu-2101-Temu全托管KA | ⚠️ HTTP异常: 403
+2025-12-23 17:24:06,941 | WARNING | Temu-2101-Temu全托管KA | [2101-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2025-12-23 17:24:10,129 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '56240', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2808, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:24:10,129 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 56240
+2025-12-23 17:24:11,532 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 已连接浏览器
+2025-12-23 17:24:11,974 | INFO | Temu-2101-Temu全托管KA | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2025-12-23 17:24:14,604 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2025-12-23 17:24:19,312 | INFO | Temu-2101-Temu全托管KA | 授权流程完成
+2025-12-23 17:24:22,321 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - Cookie 已保存: D:\sd14\Temu\data\cookies\2101-Temu全托管KA_cookies.json
+2025-12-23 17:24:22,322 | INFO | Temu-2101-Temu全托管KA | 2101-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:24:26,669 | INFO | Temu-2101-Temu全托管KA | PCNA202507161443485007802---保存成功
+2025-12-23 17:24:26,672 | INFO | Temu-2101-Temu全托管KA | PCNA202507020321224673629---保存成功
+2025-12-23 17:24:26,674 | INFO | Temu-2101-Temu全托管KA | PCNA202506290900164605404---保存成功
+2025-12-23 17:24:26,676 | INFO | Temu-2101-Temu全托管KA | PCNA202506041506483814189---保存成功
+2025-12-23 17:24:26,676 | INFO | Main | 开始爬取店铺-------------------------------2101-Temu全托管KA---------------------------资金限制的数据
+2025-12-23 17:24:26,700 | INFO | Temu-2101-Temu全托管KA | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2025-12-23 17:24:26,701 | INFO | Temu-2101-Temu全托管KA | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:24:31,898 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | goods_refund_cost 金额=33.63-----保存成功
+2025-12-23 17:24:32,952 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | delivery_by_jit 金额=1082.61-----保存成功
+2025-12-23 17:24:37,147 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | france_epr 金额=330.99-----保存成功
+2025-12-23 17:24:38,185 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | epr_logistics_packaging_fee 金额=8.17-----保存成功
+2025-12-23 17:24:39,242 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | epr_platform_service_fee 金额=1.01-----保存成功
+2025-12-23 17:24:40,290 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | advertising_expenses 金额=1000.00-----保存成功
+2025-12-23 17:24:41,323 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | epr_authorization_agent_fee 金额=6.71-----保存成功
+2025-12-23 17:24:42,366 | INFO | Temu-2101-Temu全托管KA | [保存] 2101-Temu全托管KA | order_after_sales_issue_fully 金额=836.81-----保存成功
+2025-12-23 17:24:42,366 | INFO | Main | 开始爬取店铺------------------------------110-Temu全托管KA--------------------------违法资金的数据
+2025-12-23 17:24:42,368 | INFO | Temu-110-Temu全托管KA | 正在爬取店铺---------------110-Temu全托管KA-------------的数据
+2025-12-23 17:24:42,370 | INFO | Temu-110-Temu全托管KA | 违规记录表检查 / 创建完成
+2025-12-23 17:24:43,402 | ERROR | Temu-110-Temu全托管KA | ⚠️ HTTP异常: 403
+2025-12-23 17:24:43,403 | WARNING | Temu-110-Temu全托管KA | [110-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2025-12-23 17:24:47,432 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'komlifcoekddpkbgnlkbhoknnkcniofa', 'browserID': 104353651, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '56468', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托110号店+半托7号店', 'duplicate': 3428, 'ip': '121.14.201.248', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104353651, 'containerCode': '1051536511', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:24:47,433 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - 浏览器启动成功, 调试端口: 56468
+2025-12-23 17:24:48,834 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - 已连接浏览器
+2025-12-23 17:24:49,133 | INFO | Temu-110-Temu全托管KA | --------------------110-Temu全托管KA ------------------------ 开始登录...
+2025-12-23 17:24:54,093 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - 等待 agentseller Cookie 生效
+2025-12-23 17:24:59,598 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - Cookie 已保存: D:\sd14\Temu\data\cookies\110-Temu全托管KA_cookies.json
+2025-12-23 17:24:59,598 | INFO | Temu-110-Temu全托管KA | 110-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:25:03,927 | INFO | Temu-110-Temu全托管KA | 暂无违规数据
+2025-12-23 17:25:03,927 | INFO | Main | 开始爬取店铺-------------------------------110-Temu全托管KA---------------------------资金限制的数据
+2025-12-23 17:25:03,940 | INFO | Temu-110-Temu全托管KA | 正在爬取店铺---------------110-Temu全托管KA-------------的数据
+2025-12-23 17:25:03,942 | INFO | Temu-110-Temu全托管KA | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:25:06,117 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | goods_refund_cost 金额=73.25-----保存成功
+2025-12-23 17:25:07,208 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | delivery_by_jit 金额=940.42-----保存成功
+2025-12-23 17:25:08,250 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | france_epr 金额=1767.38-----保存成功
+2025-12-23 17:25:09,301 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | epr_logistics_packaging_fee 金额=31.67-----保存成功
+2025-12-23 17:25:10,343 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | epr_platform_service_fee 金额=5.97-----保存成功
+2025-12-23 17:25:11,468 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | advertising_expenses 金额=1000.00-----保存成功
+2025-12-23 17:25:12,538 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | epr_authorization_agent_fee 金额=33.55-----保存成功
+2025-12-23 17:25:13,904 | INFO | Temu-110-Temu全托管KA | [保存] 110-Temu全托管KA | order_after_sales_issue_fully 金额=796.84-----保存成功
+2025-12-23 17:25:13,904 | INFO | Main | 开始爬取店铺------------------------------109-Temu全托管KA--------------------------违法资金的数据
+2025-12-23 17:25:13,919 | INFO | Temu-109-Temu全托管KA | 正在爬取店铺---------------109-Temu全托管KA-------------的数据
+2025-12-23 17:25:13,920 | INFO | Temu-109-Temu全托管KA | 违规记录表检查 / 创建完成
+2025-12-23 17:25:15,197 | INFO | Temu-109-Temu全托管KA | PCNA202512110311339925286---保存成功
+2025-12-23 17:25:15,200 | INFO | Temu-109-Temu全托管KA | PCNA202507161350305003026---保存成功
+2025-12-23 17:25:15,201 | INFO | Main | 开始爬取店铺-------------------------------109-Temu全托管KA---------------------------资金限制的数据
+2025-12-23 17:25:15,226 | INFO | Temu-109-Temu全托管KA | 正在爬取店铺---------------109-Temu全托管KA-------------的数据
+2025-12-23 17:25:15,227 | INFO | Temu-109-Temu全托管KA | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:25:17,507 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | goods_refund_cost 金额=28.36-----保存成功
+2025-12-23 17:25:18,551 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | delivery_by_jit 金额=852.98-----保存成功
+2025-12-23 17:25:19,662 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | france_epr 金额=327.73-----保存成功
+2025-12-23 17:25:20,764 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | epr_logistics_packaging_fee 金额=3.03-----保存成功
+2025-12-23 17:25:22,400 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | epr_platform_service_fee 金额=1.00-----保存成功
+2025-12-23 17:25:23,433 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:25:24,470 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | epr_authorization_agent_fee 金额=0.23-----保存成功
+2025-12-23 17:25:25,510 | INFO | Temu-109-Temu全托管KA | [保存] 109-Temu全托管KA | order_after_sales_issue_fully 金额=355.19-----保存成功
+2025-12-23 17:25:25,510 | INFO | Main | 开始爬取店铺------------------------------108-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:25:25,512 | INFO | Temu-108-Temu全托管 | 正在爬取店铺---------------108-Temu全托管-------------的数据
+2025-12-23 17:25:25,515 | INFO | Temu-108-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:25:26,601 | INFO | Temu-108-Temu全托管 | PCNA202507161337324999358---保存成功
+2025-12-23 17:25:26,604 | INFO | Temu-108-Temu全托管 | PCNA202507161238214995571---保存成功
+2025-12-23 17:25:26,606 | INFO | Temu-108-Temu全托管 | PCNA202506290858524605235---保存成功
+2025-12-23 17:25:26,609 | INFO | Temu-108-Temu全托管 | PCNA202506180733234349898---保存成功
+2025-12-23 17:25:26,611 | INFO | Temu-108-Temu全托管 | PCNA202412090612060092774---保存成功
+2025-12-23 17:25:26,614 | INFO | Temu-108-Temu全托管 | PCNA202411271329239890722---保存成功
+2025-12-23 17:25:26,614 | INFO | Main | 开始爬取店铺-------------------------------108-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:25:26,616 | INFO | Temu-108-Temu全托管 | 正在爬取店铺---------------108-Temu全托管-------------的数据
+2025-12-23 17:25:26,618 | INFO | Temu-108-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:25:28,688 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | goods_refund_cost 金额=19.97-----保存成功
+2025-12-23 17:25:30,746 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | delivery_by_jit 金额=298.36-----保存成功
+2025-12-23 17:25:31,780 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | france_epr 金额=93.18-----保存成功
+2025-12-23 17:25:33,088 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | epr_logistics_packaging_fee 金额=4.87-----保存成功
+2025-12-23 17:25:37,471 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | epr_platform_service_fee 金额=0.21-----保存成功
+2025-12-23 17:25:38,502 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | epr_authorization_agent_fee 金额=0.69-----保存成功
+2025-12-23 17:25:39,545 | INFO | Temu-108-Temu全托管 | [保存] 108-Temu全托管 | order_after_sales_issue_fully 金额=161.03-----保存成功
+2025-12-23 17:25:39,545 | INFO | Main | 开始爬取店铺------------------------------107-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:25:39,573 | INFO | Temu-107-Temu全托管 | 正在爬取店铺---------------107-Temu全托管-------------的数据
+2025-12-23 17:25:39,575 | INFO | Temu-107-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:25:40,637 | INFO | Temu-107-Temu全托管 | PCNA202411271335519889565---保存成功
+2025-12-23 17:25:40,639 | INFO | Temu-107-Temu全托管 | PCNA202411141327379691831---保存成功
+2025-12-23 17:25:40,643 | INFO | Temu-107-Temu全托管 | PCNA202411131202029668049---保存成功
+2025-12-23 17:25:40,643 | INFO | Main | 开始爬取店铺-------------------------------107-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:25:40,645 | INFO | Temu-107-Temu全托管 | 正在爬取店铺---------------107-Temu全托管-------------的数据
+2025-12-23 17:25:40,648 | INFO | Temu-107-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:25:41,666 | INFO | Temu-107-Temu全托管 | 暂无资金限制数据
+2025-12-23 17:25:41,666 | INFO | Main | 开始爬取店铺------------------------------106-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:25:41,690 | INFO | Temu-106-Temu全托管 | 正在爬取店铺---------------106-Temu全托管-------------的数据
+2025-12-23 17:25:41,695 | INFO | Temu-106-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:25:42,718 | INFO | Temu-106-Temu全托管 | PCNA202507011428414653962---保存成功
+2025-12-23 17:25:42,720 | INFO | Temu-106-Temu全托管 | PCNA202506290741044594747---保存成功
+2025-12-23 17:25:42,722 | INFO | Temu-106-Temu全托管 | PCNA202506041341023804685---保存成功
+2025-12-23 17:25:42,724 | INFO | Temu-106-Temu全托管 | PCNA202505161211583452989---保存成功
+2025-12-23 17:25:42,727 | INFO | Temu-106-Temu全托管 | PCNA202505110527053325669---保存成功
+2025-12-23 17:25:42,729 | INFO | Temu-106-Temu全托管 | PCNA202503160549212171444---保存成功
+2025-12-23 17:25:42,732 | INFO | Temu-106-Temu全托管 | PCNA202503160534452166648---保存成功
+2025-12-23 17:25:42,734 | INFO | Temu-106-Temu全托管 | PCNA202412270328410458557---保存成功
+2025-12-23 17:25:42,736 | INFO | Temu-106-Temu全托管 | PCNA202410291153119375597---保存成功
+2025-12-23 17:25:42,738 | INFO | Temu-106-Temu全托管 | PCNA202409240607268773470---保存成功
+2025-12-23 17:25:42,740 | INFO | Temu-106-Temu全托管 | PCNA202409240606268774633---保存成功
+2025-12-23 17:25:42,740 | INFO | Main | 开始爬取店铺-------------------------------106-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:25:42,761 | INFO | Temu-106-Temu全托管 | 正在爬取店铺---------------106-Temu全托管-------------的数据
+2025-12-23 17:25:42,762 | INFO | Temu-106-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:25:47,965 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | goods_refund_cost 金额=24.43-----保存成功
+2025-12-23 17:25:49,829 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | delivery_by_jit 金额=417.55-----保存成功
+2025-12-23 17:25:50,899 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | goods_poor_quality 金额=5000.00-----保存成功
+2025-12-23 17:25:51,937 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | france_epr 金额=1110.52-----保存成功
+2025-12-23 17:25:52,982 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | epr_logistics_packaging_fee 金额=37.05-----保存成功
+2025-12-23 17:25:54,033 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | epr_platform_service_fee 金额=1.86-----保存成功
+2025-12-23 17:25:55,079 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | epr_authorization_agent_fee 金额=4.86-----保存成功
+2025-12-23 17:25:56,156 | INFO | Temu-106-Temu全托管 | [保存] 106-Temu全托管 | order_after_sales_issue_fully 金额=208.62-----保存成功
+2025-12-23 17:25:56,156 | INFO | Main | 开始爬取店铺------------------------------105-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:25:56,159 | INFO | Temu-105-Temu全托管 | 正在爬取店铺---------------105-Temu全托管-------------的数据
+2025-12-23 17:25:56,161 | INFO | Temu-105-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:25:57,171 | ERROR | Temu-105-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:25:57,172 | WARNING | Temu-105-Temu全托管 | [105-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:26:00,910 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'egdlpkdlagfommapeejeoihfohgccfih', 'browserID': 104314256, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '56823', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托105店-UNE LUCIOLE', 'duplicate': 3149, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104314256, 'containerCode': '1051142565', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:26:00,910 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - 浏览器启动成功, 调试端口: 56823
+2025-12-23 17:26:02,291 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - 已连接浏览器
+2025-12-23 17:26:02,690 | INFO | Temu-105-Temu全托管 | --------------------105-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:26:07,189 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:26:12,505 | INFO | Temu-105-Temu全托管 | 授权流程完成
+2025-12-23 17:26:15,507 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\105-Temu全托管_cookies.json
+2025-12-23 17:26:15,508 | INFO | Temu-105-Temu全托管 | 105-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:26:20,538 | INFO | Temu-105-Temu全托管 | PCNA202507161459485009205---保存成功
+2025-12-23 17:26:20,543 | INFO | Temu-105-Temu全托管 | PCNA202507161330215001299---保存成功
+2025-12-23 17:26:20,547 | INFO | Temu-105-Temu全托管 | PCNA202507161248094997460---保存成功
+2025-12-23 17:26:20,549 | INFO | Temu-105-Temu全托管 | PCNA202507020312364673063---保存成功
+2025-12-23 17:26:20,552 | INFO | Temu-105-Temu全托管 | PCNA202506180804544355914---保存成功
+2025-12-23 17:26:20,555 | INFO | Temu-105-Temu全托管 | PCNA202506180634594341792---保存成功
+2025-12-23 17:26:20,557 | INFO | Temu-105-Temu全托管 | PCNA202506041516363817140---保存成功
+2025-12-23 17:26:20,560 | INFO | Temu-105-Temu全托管 | PCNA202506041451163812458---保存成功
+2025-12-23 17:26:20,564 | INFO | Temu-105-Temu全托管 | PCNA202506041446003813184---保存成功
+2025-12-23 17:26:20,566 | INFO | Temu-105-Temu全托管 | PCNA202506041444293812425---保存成功
+2025-12-23 17:26:20,568 | INFO | Temu-105-Temu全托管 | PCNA202506041442363806990---保存成功
+2025-12-23 17:26:20,571 | INFO | Temu-105-Temu全托管 | PCNA202506041346583804865---保存成功
+2025-12-23 17:26:20,574 | INFO | Temu-105-Temu全托管 | PCNA202505110527483325735---保存成功
+2025-12-23 17:26:20,577 | INFO | Temu-105-Temu全托管 | PCNA202504210326303040156---保存成功
+2025-12-23 17:26:20,579 | INFO | Temu-105-Temu全托管 | PCNA202504030936382701530---保存成功
+2025-12-23 17:26:20,581 | INFO | Temu-105-Temu全托管 | PCNA202503200850322263205---保存成功
+2025-12-23 17:26:20,584 | INFO | Temu-105-Temu全托管 | PCNA202503160620502174474---保存成功
+2025-12-23 17:26:20,586 | INFO | Temu-105-Temu全托管 | PCNA202503160534452166662---保存成功
+2025-12-23 17:26:20,589 | INFO | Temu-105-Temu全托管 | PCNA202503021441371894755---保存成功
+2025-12-23 17:26:20,589 | INFO | Main | 开始爬取店铺-------------------------------105-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:26:20,591 | INFO | Temu-105-Temu全托管 | 正在爬取店铺---------------105-Temu全托管-------------的数据
+2025-12-23 17:26:20,593 | INFO | Temu-105-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:26:22,711 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | goods_refund_cost 金额=81.87-----保存成功
+2025-12-23 17:26:23,770 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | delivery_by_jit 金额=2932.52-----保存成功
+2025-12-23 17:26:24,835 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | goods_poor_quality 金额=5000.00-----保存成功
+2025-12-23 17:26:26,137 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | france_epr 金额=2175.45-----保存成功
+2025-12-23 17:26:27,401 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | epr_logistics_packaging_fee 金额=148.32-----保存成功
+2025-12-23 17:26:28,920 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | epr_platform_service_fee 金额=6.73-----保存成功
+2025-12-23 17:26:29,931 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | advertising_expenses 金额=1000.00-----保存成功
+2025-12-23 17:26:30,964 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | qualification_subsidy_refund 金额=110.04-----保存成功
+2025-12-23 17:26:31,989 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | epr_authorization_agent_fee 金额=11.36-----保存成功
+2025-12-23 17:26:33,113 | INFO | Temu-105-Temu全托管 | [保存] 105-Temu全托管 | order_after_sales_issue_fully 金额=1379.70-----保存成功
+2025-12-23 17:26:33,113 | INFO | Main | 开始爬取店铺------------------------------104-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:26:33,116 | INFO | Temu-104-Temu全托管 | 正在爬取店铺---------------104-Temu全托管-------------的数据
+2025-12-23 17:26:33,118 | INFO | Temu-104-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:26:34,190 | INFO | Temu-104-Temu全托管 | PCNA202507161426115007163---保存成功
+2025-12-23 17:26:34,193 | INFO | Temu-104-Temu全托管 | PCNA202507161241244998096---保存成功
+2025-12-23 17:26:34,195 | INFO | Temu-104-Temu全托管 | PCNA202507160650514974953---保存成功
+2025-12-23 17:26:34,197 | INFO | Temu-104-Temu全托管 | PCNA202507021317284699373---保存成功
+2025-12-23 17:26:34,199 | INFO | Temu-104-Temu全托管 | PCNA202505230814073560219---保存成功
+2025-12-23 17:26:34,202 | INFO | Temu-104-Temu全托管 | PCNA202505161154533451269---保存成功
+2025-12-23 17:26:34,204 | INFO | Temu-104-Temu全托管 | PCNA202504241309253100405---保存成功
+2025-12-23 17:26:34,206 | INFO | Temu-104-Temu全托管 | PCNA202504200743203023144---保存成功
+2025-12-23 17:26:34,209 | INFO | Temu-104-Temu全托管 | PCNA202503160617532168990---保存成功
+2025-12-23 17:26:34,211 | INFO | Temu-104-Temu全托管 | PCNA202503061129361992930---保存成功
+2025-12-23 17:26:34,213 | INFO | Temu-104-Temu全托管 | PCNA202412241317120421576---保存成功
+2025-12-23 17:26:34,217 | INFO | Temu-104-Temu全托管 | PCNA202411301447419937531---保存成功
+2025-12-23 17:26:34,219 | INFO | Temu-104-Temu全托管 | PCNA202411271330229890845---保存成功
+2025-12-23 17:26:34,222 | INFO | Temu-104-Temu全托管 | PCNA202410291240269375637---保存成功
+2025-12-23 17:26:34,224 | INFO | Temu-104-Temu全托管 | PCNA202410291148429376796---保存成功
+2025-12-23 17:26:34,226 | INFO | Temu-104-Temu全托管 | PCNA202410240630069286065---保存成功
+2025-12-23 17:26:34,229 | INFO | Temu-104-Temu全托管 | PCNA202410240605439277181---保存成功
+2025-12-23 17:26:34,231 | INFO | Temu-104-Temu全托管 | PCNA202410240559419275873---保存成功
+2025-12-23 17:26:34,233 | INFO | Temu-104-Temu全托管 | PCNA202410070835328955121---保存成功
+2025-12-23 17:26:34,236 | INFO | Temu-104-Temu全托管 | PCNA202409231452388772608---保存成功
+2025-12-23 17:26:34,238 | INFO | Temu-104-Temu全托管 | PCNA202409081258188515530---保存成功
+2025-12-23 17:26:34,238 | INFO | Main | 开始爬取店铺-------------------------------104-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:26:34,241 | INFO | Temu-104-Temu全托管 | 正在爬取店铺---------------104-Temu全托管-------------的数据
+2025-12-23 17:26:34,243 | INFO | Temu-104-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:26:36,606 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | goods_refund_cost 金额=13.66-----保存成功
+2025-12-23 17:26:37,683 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | delivery_by_jit 金额=1020.35-----保存成功
+2025-12-23 17:26:38,717 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | france_epr 金额=960.85-----保存成功
+2025-12-23 17:26:39,791 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | epr_logistics_packaging_fee 金额=56.92-----保存成功
+2025-12-23 17:26:41,196 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | epr_platform_service_fee 金额=3.00-----保存成功
+2025-12-23 17:26:42,251 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | epr_authorization_agent_fee 金额=0.23-----保存成功
+2025-12-23 17:26:43,305 | INFO | Temu-104-Temu全托管 | [保存] 104-Temu全托管 | order_after_sales_issue_fully 金额=437.85-----保存成功
+2025-12-23 17:26:43,305 | INFO | Main | 开始爬取店铺------------------------------103-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:26:43,308 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 17:26:43,309 | INFO | Temu-103-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:26:44,368 | INFO | Temu-103-Temu全托管 | PCNA202511171142168759258---保存成功
+2025-12-23 17:26:44,370 | INFO | Temu-103-Temu全托管 | PCNA202507011502064657897---保存成功
+2025-12-23 17:26:44,373 | INFO | Temu-103-Temu全托管 | PCNA202507011456544657499---保存成功
+2025-12-23 17:26:44,375 | INFO | Temu-103-Temu全托管 | PCNA202507011431194654686---保存成功
+2025-12-23 17:26:44,377 | INFO | Temu-103-Temu全托管 | PCNA202507011422324655193---保存成功
+2025-12-23 17:26:44,379 | INFO | Temu-103-Temu全托管 | PCNA202506290857264603730---保存成功
+2025-12-23 17:26:44,381 | INFO | Temu-103-Temu全托管 | PCNA202506041451163812510---保存成功
+2025-12-23 17:26:44,384 | INFO | Temu-103-Temu全托管 | PCNA202505160824253445102---保存成功
+2025-12-23 17:26:44,386 | INFO | Temu-103-Temu全托管 | PCNA202504241303473097559---保存成功
+2025-12-23 17:26:44,388 | INFO | Temu-103-Temu全托管 | PCNA202503160624332172725---保存成功
+2025-12-23 17:26:44,391 | INFO | Temu-103-Temu全托管 | PCNA202503160545562169021---保存成功
+2025-12-23 17:26:44,393 | INFO | Temu-103-Temu全托管 | PCNA202503061113551989562---保存成功
+2025-12-23 17:26:44,395 | INFO | Temu-103-Temu全托管 | PCNA202503050715061942591---保存成功
+2025-12-23 17:26:44,398 | INFO | Temu-103-Temu全托管 | PCNA202503021441371894774---保存成功
+2025-12-23 17:26:44,400 | INFO | Temu-103-Temu全托管 | PCNA202409181152348696240---保存成功
+2025-12-23 17:26:44,402 | INFO | Temu-103-Temu全托管 | PCNA202409090605178527455---保存成功
+2025-12-23 17:26:44,405 | INFO | Temu-103-Temu全托管 | PCNA202406141217017235574---保存成功
+2025-12-23 17:26:44,405 | INFO | Main | 开始爬取店铺-------------------------------103-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:26:44,407 | INFO | Temu-103-Temu全托管 | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2025-12-23 17:26:44,409 | INFO | Temu-103-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:26:46,496 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | goods_refund_cost 金额=24.01-----保存成功
+2025-12-23 17:26:47,544 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | delivery_by_jit 金额=1158.61-----保存成功
+2025-12-23 17:26:48,593 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | france_epr 金额=1893.79-----保存成功
+2025-12-23 17:26:49,610 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | epr_logistics_packaging_fee 金额=83.04-----保存成功
+2025-12-23 17:26:50,644 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | epr_platform_service_fee 金额=6.84-----保存成功
+2025-12-23 17:26:51,682 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | quality_assurance_issues 金额=500.00-----保存成功
+2025-12-23 17:26:52,706 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | epr_authorization_agent_fee 金额=1.16-----保存成功
+2025-12-23 17:26:53,759 | INFO | Temu-103-Temu全托管 | [保存] 103-Temu全托管 | order_after_sales_issue_fully 金额=547.45-----保存成功
+2025-12-23 17:26:53,759 | INFO | Main | 开始爬取店铺------------------------------102-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:26:53,779 | INFO | Temu-102-Temu全托管 | 正在爬取店铺---------------102-Temu全托管-------------的数据
+2025-12-23 17:26:53,780 | INFO | Temu-102-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:26:54,866 | INFO | Temu-102-Temu全托管 | PCNA202507161439215007643---保存成功
+2025-12-23 17:26:54,868 | INFO | Temu-102-Temu全托管 | PCNA202507161438395006456---保存成功
+2025-12-23 17:26:54,871 | INFO | Temu-102-Temu全托管 | PCNA202507161415085003626---保存成功
+2025-12-23 17:26:54,873 | INFO | Temu-102-Temu全托管 | PCNA202507160829284985354---保存成功
+2025-12-23 17:26:54,875 | INFO | Temu-102-Temu全托管 | PCNA202507011505274661118---保存成功
+2025-12-23 17:26:54,878 | INFO | Temu-102-Temu全托管 | PCNA202506290741534596022---保存成功
+2025-12-23 17:26:54,881 | INFO | Temu-102-Temu全托管 | PCNA202506041446003813200---保存成功
+2025-12-23 17:26:54,883 | INFO | Temu-102-Temu全托管 | PCNA202503230535252329427---保存成功
+2025-12-23 17:26:54,885 | INFO | Temu-102-Temu全托管 | PCNA202503160543152171147---保存成功
+2025-12-23 17:26:54,888 | INFO | Temu-102-Temu全托管 | PCNA202503160541482165870---保存成功
+2025-12-23 17:26:54,890 | INFO | Temu-102-Temu全托管 | PCNA202502100754411496689---保存成功
+2025-12-23 17:26:54,893 | INFO | Temu-102-Temu全托管 | PCNA202501060548090584022---保存成功
+2025-12-23 17:26:54,895 | INFO | Temu-102-Temu全托管 | PCNA202412261151010448602---保存成功
+2025-12-23 17:26:54,897 | INFO | Temu-102-Temu全托管 | PCNA202412250923050433242---保存成功
+2025-12-23 17:26:54,899 | INFO | Temu-102-Temu全托管 | PCNA202412151300350236785---保存成功
+2025-12-23 17:26:54,902 | INFO | Temu-102-Temu全托管 | PCNA202412151230280237782---保存成功
+2025-12-23 17:26:54,904 | INFO | Temu-102-Temu全托管 | PCNA202412060717370047685---保存成功
+2025-12-23 17:26:54,904 | INFO | Main | 开始爬取店铺-------------------------------102-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:26:54,906 | INFO | Temu-102-Temu全托管 | 正在爬取店铺---------------102-Temu全托管-------------的数据
+2025-12-23 17:26:54,909 | INFO | Temu-102-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:26:56,958 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | goods_refund_cost 金额=74.40-----保存成功
+2025-12-23 17:26:57,998 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | delivery_by_jit 金额=1453.44-----保存成功
+2025-12-23 17:26:59,072 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | france_epr 金额=1515.12-----保存成功
+2025-12-23 17:27:00,143 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | epr_logistics_packaging_fee 金额=155.74-----保存成功
+2025-12-23 17:27:01,194 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | epr_platform_service_fee 金额=3.54-----保存成功
+2025-12-23 17:27:02,212 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | epr_authorization_agent_fee 金额=20.60-----保存成功
+2025-12-23 17:27:06,448 | INFO | Temu-102-Temu全托管 | [保存] 102-Temu全托管 | order_after_sales_issue_fully 金额=923.99-----保存成功
+2025-12-23 17:27:06,449 | INFO | Main | 开始爬取店铺------------------------------101-Temu全托管--------------------------违法资金的数据
+2025-12-23 17:27:06,451 | INFO | Temu-101-Temu全托管 | 正在爬取店铺---------------101-Temu全托管-------------的数据
+2025-12-23 17:27:06,454 | INFO | Temu-101-Temu全托管 | 违规记录表检查 / 创建完成
+2025-12-23 17:27:07,451 | ERROR | Temu-101-Temu全托管 | ⚠️ HTTP异常: 403
+2025-12-23 17:27:07,452 | WARNING | Temu-101-Temu全托管 | [101-Temu全托管] cookie 失效，开始自动刷新登录态
+2025-12-23 17:27:10,888 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'pmpkofebdgpmilhkkkbfgfflcgpnkihi', 'browserID': 104522087, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57145', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托101店-HQCK', 'duplicate': 3002, 'ip': '118.253.177.190', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522087, 'containerCode': '1053220874', 'statusCode': '0', 'err': '成功(Success)'}}
+2025-12-23 17:27:10,888 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - 浏览器启动成功, 调试端口: 57145
+2025-12-23 17:27:12,290 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - 已连接浏览器
+2025-12-23 17:27:12,644 | INFO | Temu-101-Temu全托管 | --------------------101-Temu全托管 ------------------------ 开始登录...
+2025-12-23 17:27:17,243 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - 等待 agentseller Cookie 生效
+2025-12-23 17:27:24,688 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - Cookie 已保存: D:\sd14\Temu\data\cookies\101-Temu全托管_cookies.json
+2025-12-23 17:27:24,688 | INFO | Temu-101-Temu全托管 | 101-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2025-12-23 17:27:29,115 | INFO | Temu-101-Temu全托管 | PCNA202507161440075008115---保存成功
+2025-12-23 17:27:29,118 | INFO | Temu-101-Temu全托管 | PCNA202507160803454982459---保存成功
+2025-12-23 17:27:29,120 | INFO | Temu-101-Temu全托管 | PCNA202506181201544364850---保存成功
+2025-12-23 17:27:29,123 | INFO | Temu-101-Temu全托管 | PCNA202506041519393817165---保存成功
+2025-12-23 17:27:29,127 | INFO | Temu-101-Temu全托管 | PCNA202505230729143553824---保存成功
+2025-12-23 17:27:29,129 | INFO | Temu-101-Temu全托管 | PCNA202505160825443444755---保存成功
+2025-12-23 17:27:29,131 | INFO | Temu-101-Temu全托管 | PCNA202504251244343123435---保存成功
+2025-12-23 17:27:29,134 | INFO | Temu-101-Temu全托管 | PCNA202504210327533040272---保存成功
+2025-12-23 17:27:29,136 | INFO | Temu-101-Temu全托管 | PCNA202504200750503024358---保存成功
+2025-12-23 17:27:29,138 | INFO | Temu-101-Temu全托管 | PCNA202504130938242883604---保存成功
+2025-12-23 17:27:29,141 | INFO | Temu-101-Temu全托管 | PCNA202503270842322517519---保存成功
+2025-12-23 17:27:29,143 | INFO | Temu-101-Temu全托管 | PCNA202503211316252301667---保存成功
+2025-12-23 17:27:29,145 | INFO | Temu-101-Temu全托管 | PCNA202503211309202299822---保存成功
+2025-12-23 17:27:29,147 | INFO | Temu-101-Temu全托管 | PCNA202503160601442169567---保存成功
+2025-12-23 17:27:29,149 | INFO | Temu-101-Temu全托管 | PCNA202503160548012170134---保存成功
+2025-12-23 17:27:29,152 | INFO | Temu-101-Temu全托管 | PCNA202503160538342167918---保存成功
+2025-12-23 17:27:29,155 | INFO | Temu-101-Temu全托管 | PCNA202503020844031889992---保存成功
+2025-12-23 17:27:29,157 | INFO | Temu-101-Temu全托管 | PCNA202502180855521698367---保存成功
+2025-12-23 17:27:29,159 | INFO | Temu-101-Temu全托管 | PCNA202411241142229841682---保存成功
+2025-12-23 17:27:29,163 | INFO | Temu-101-Temu全托管 | PCNA202411240715029834599---保存成功
+2025-12-23 17:27:29,165 | INFO | Temu-101-Temu全托管 | PCNA202411141324419696638---保存成功
+2025-12-23 17:27:29,176 | INFO | Temu-101-Temu全托管 | PCNA202411141319429696373---保存成功
+2025-12-23 17:27:29,184 | INFO | Temu-101-Temu全托管 | PCNA202411110645579628923---保存成功
+2025-12-23 17:27:29,191 | INFO | Temu-101-Temu全托管 | PCNA202411110644189629549---保存成功
+2025-12-23 17:27:29,198 | INFO | Temu-101-Temu全托管 | PCNA202411110639269630203---保存成功
+2025-12-23 17:27:29,203 | INFO | Temu-101-Temu全托管 | PCNA202411110344489616108---保存成功
+2025-12-23 17:27:29,208 | INFO | Temu-101-Temu全托管 | PCNA202411110340109614190---保存成功
+2025-12-23 17:27:29,212 | INFO | Temu-101-Temu全托管 | PCNA202410070710198951048---保存成功
+2025-12-23 17:27:29,216 | INFO | Temu-101-Temu全托管 | PCNA202409240606258774597---保存成功
+2025-12-23 17:27:29,219 | INFO | Temu-101-Temu全托管 | PCNA202409091532598547716---保存成功
+2025-12-23 17:27:29,223 | INFO | Temu-101-Temu全托管 | PCNA202409081258198515544---保存成功
+2025-12-23 17:27:29,227 | INFO | Temu-101-Temu全托管 | PCNA202407261721367732925---保存成功
+2025-12-23 17:27:29,231 | INFO | Temu-101-Temu全托管 | PCNA202404161639026513280---保存成功
+2025-12-23 17:27:29,234 | INFO | Temu-101-Temu全托管 | PCNA202402250844396026488---保存成功
+2025-12-23 17:27:29,236 | INFO | Temu-101-Temu全托管 | PCNA202401070822275627764---保存成功
+2025-12-23 17:27:29,238 | INFO | Temu-101-Temu全托管 | PCNA202401070820035627763---保存成功
+2025-12-23 17:27:29,238 | INFO | Main | 开始爬取店铺-------------------------------101-Temu全托管---------------------------资金限制的数据
+2025-12-23 17:27:29,241 | INFO | Temu-101-Temu全托管 | 正在爬取店铺---------------101-Temu全托管-------------的数据
+2025-12-23 17:27:29,242 | INFO | Temu-101-Temu全托管 | 资金限制表（中文字段）检查 / 创建完成
+2025-12-23 17:27:31,323 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | goods_refund_cost 金额=32.58-----保存成功
+2025-12-23 17:27:32,360 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | delivery_by_jit 金额=2614.73-----保存成功
+2025-12-23 17:27:33,405 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | goods_poor_quality 金额=3000.00-----保存成功
+2025-12-23 17:27:34,464 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | france_epr 金额=1946.05-----保存成功
+2025-12-23 17:27:35,526 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | epr_logistics_packaging_fee 金额=178.29-----保存成功
+2025-12-23 17:27:36,562 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | mall_compliance_risk 金额=3557.00-----保存成功
+2025-12-23 17:27:38,597 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | epr_platform_service_fee 金额=4.75-----保存成功
+2025-12-23 17:27:39,673 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | epr_authorization_agent_fee 金额=5.31-----保存成功
+2025-12-23 17:27:44,676 | ERROR | Temu-101-Temu全托管 | 获取限制时间失败
+2025-12-23 17:27:44,681 | INFO | Temu-101-Temu全托管 | [保存] 101-Temu全托管 | order_after_sales_issue_fully 金额=1013.62-----保存成功
+2025-12-23 17:27:44,681 | INFO | Main | 🎯 所有店铺处理完成，总耗时：3分38秒
+2025-12-23 17:42:47,440 | WARNING | Temu-Violation-Notify | 发现 119 条新增高额违规，开始通知
+2025-12-23 17:43:25,681 | WARNING | Temu-Violation-Notify | 发现 119 条新增高额违规，开始通知

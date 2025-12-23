@@ -36,19 +36,22 @@ class Temu_ViolationRecored:
         }
         self.url = 'https://agentseller.temu.com/mms/api/andes/punish/seller/listPunishRecord'
 
-    def get_day_range_ms(self,target_date: date | None = None):
+    def get_day_range_ms(target_date: date | None = None):
         """
-        获取某一天的 [00:00:00, 23:59:59.999] 毫秒时间戳
+        获取某一天的 [00:00:00, next_day 00:00:00) 毫秒时间戳（北京时间）
         :param target_date: date 对象，默认今天
         :return: (start_ms, end_ms)
         """
         if target_date is None:
             target_date = date.today()
 
-        start_dt = datetime.combine(target_date, datetime.min.time())
-        end_dt = start_dt + timedelta(days=1) - timedelta(milliseconds=1)
+        start_dt = datetime.combine(target_date, time.min, tzinfo=BEIJING_TZ)
+        end_dt = start_dt + timedelta(days=1)
 
-        return int(start_dt.timestamp() * 1000), int(end_dt.timestamp() * 1000)
+        return (
+            int(start_dt.timestamp() * 1000),
+            int(end_dt.timestamp() * 1000)
+        )
 
     def get_info(self, cookies, shop_id):
         self.headers['mallid'] = str(shop_id)
@@ -72,7 +75,7 @@ class Temu_ViolationRecored:
                 timeout=10,
             )
 
-            self.logger.info(response.text)
+            # self.logger.info(response.text)
 
             # ❗ 不管 status code，先尝试解析 JSON
             try:
@@ -272,6 +275,6 @@ class Temu_ViolationRecored:
             return
 
 
-if __name__ == '__main__':
-    t = Temu_ViolationRecored("103-Temu全托管")
-    asyncio.run(t.run())
+# if __name__ == '__main__':
+#     t = Temu_ViolationRecored("103-Temu全托管")
+#     asyncio.run(t.run())
