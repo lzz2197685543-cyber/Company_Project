@@ -1,0 +1,81 @@
+{
+  "dingding": {
+    "Client ID": "dings13rpbdzmpis6dyo",
+    "Client Secret": "J0gloUMrhko4ca_Esar9jiVtef8vT-Qd5AJq9B3zYeyR7pEdoIHibaUFU8NZfz9o",
+    "corpId": "ding558a601d903f4a5effe93478753d9884"
+  },
+  "bots": {
+    "程序监控群": {
+      "access_token": "2a7021c2bee749e4cef2e697409567ecde957b8c923957e0586fdd33522ef16b",
+      "secret": "SECe325049a821c4b6c701bc0d612d3fd1ab92be9ff752d189369f4e81f28cfcbba"
+    },
+    "国内零售程序运行": {
+      "access_token": "5db499688b646407a8f1b610e685c0a746e9d09cdd6433b5efebf54027be5248",
+      "secret": "SEC7663a69de0658db55a89ec6e7210e47f502ef9329780e810d757febaed8b6511"
+    },
+    "速卖通JIT一组": {
+      "access_token": "2e047b802f59efabdb9445b60d2b291ab03fd2ba10ecf0d8cfcb83840f60cdb4",
+      "secret": "SEC31030e9146d841047a38297f9141236c980908f7a5a76795f82d9b69460ebcb5"
+    },
+    "速卖通JIT二组": {
+      "access_token": "aa49fa3c7cc189538559b570d315453556adb3cddd1f4cb99a2d4ed41687ce40",
+      "secret": "SECf442272c3ab882b85d6ff021519853e72af8c83d4b90c6b149d4dd3ac0c7358c"
+    },
+    "克劳德": {
+      "access_token": "8d8030c0ec6314e094cd421f97a563c3abc39efa61f380f6bf4251159f51b50a",
+      "secret": "SEC08f8cb2ee5d76e289cd1e1d8f8210d967f6be7184c4c3cb51574cc00fb9062e5"
+    }
+  },
+  "userid": {
+    "邹雯雯": "106246005536840537",
+    "赵结贤": "01120945665335843302",
+    "it": "01214029653234363143",
+    "杨均焯": "083966555426161200",
+    "吴晓翠": "285520016321560097",
+    "李惠清": "01154108005726211571"
+  },
+  "shops": {
+    "SMT214": {
+      "account": "kedi014@163.com",
+      "password": "KD014ujd*",
+      "channelId": 864939,
+      "cloud_account_id": "3abb76d2310241aca0cb0d4c2d369d1f"
+    },
+    "SMT212": {
+      "account": "yijia00520210505@163.com",
+      "password": "smt012YJii.",
+      "channelId": 217407,
+      "cloud_account_id": "2cb4968e78694d04abce033012bbf6fb"
+    },
+    "SMT204": {
+      "account": "yijia12138@163.com",
+      "password": "asdfg147258.",
+      "channelId": 868188,
+      "cloud_account_id": "0a3caa2093b44efaac5190c71040b38e"
+    },
+    "SMT203": {
+      "account": "xiyouji6668@163.com",
+      "password": "Dsmt1qwe123668*+",
+      "channelId": 46707,
+      "cloud_account_id": "3970dd2c720748149fa09bdf7e6d946a"
+    },
+    "SMT202": {
+      "account": "qiaowa688@163.com",
+      "password": "Dsmt2qwe123/*",
+      "channelId": 864831,
+      "cloud_account_id": "5ea6aa57cde64c73bd0cc5814d96196e"
+    },
+    "SMT201": {
+      "account": "kedimaoyi8888@163.com",
+      "password": "Dsmt3rty6868",
+      "channelId": 872068,
+      "cloud_account_id": "18bd92b0868448c0a753ffece7142286"
+    },
+    "SMT208": {
+      "account": "zhiligao008@126.com",
+      "password": "qaz951357yy.",
+      "channelId": 874556,
+      "cloud_account_id": "ae1c354ee5f543eba9b93eb17c15f888"
+    }
+  }
+}
