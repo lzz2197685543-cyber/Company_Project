@@ -178,15 +178,44 @@ class TemuLogin:
                     await btn.click()
 
                 auth_page = await popup_info.value
-                await auth_page.wait_for_load_state("domcontentloaded", timeout=15000)
+                await auth_page.wait_for_load_state("load", timeout=15000)
 
-                # 3️⃣ 点击“确认授权并前往”
-                confirm_btn = auth_page.get_by_text("确认授权并前往", exact=True)
-                await confirm_btn.wait_for(state="visible", timeout=15000)
-                await confirm_btn.click()
+                await asyncio.sleep(3)
+
+                # -------- 授权方式一：确认授权并前往 --------
+                confirm_btn_1 = auth_page.get_by_text("确认授权并前往", exact=True)
+
+                if await confirm_btn_1.count() > 0:
+                    self.logger.info("命中授权方式一：确认授权并前往")
+                    await confirm_btn_1.first.click()
+
+                else:
+                    # -------- 授权方式二：勾选复选框 + 授权登录 --------
+                    self.logger.info("命中授权方式二：勾选复选框 + 授权登录")
+
+                    # ① 不点 input，点可视的 checkbox 外壳
+                    checkbox_ui = auth_page.locator('div[class*="CBX_square"]')
+
+                    if await checkbox_ui.count() > 0:
+                        await checkbox_ui.first.click()
+                        self.logger.info("已点击授权复选框（UI 容器）")
+                    else:
+                        self.logger.info("未发现授权复选框 UI，可能已默认勾选")
+
+                    # ② 再点“授权登录”
+                    confirm_btn = auth_page.get_by_text("授权登录", exact=True)
+                    if await confirm_btn.count() > 0:
+                        await confirm_btn.first.click()
+                        self.logger.info("已点击授权登录")
+                        await self.page.wait_for_load_state("load")
+                        await asyncio.sleep(10)
+                    else:
+                        self.logger.info("未发现授权登录按钮")
 
                 self.logger.info("授权流程完成")
                 await self.page.wait_for_load_state("load")
+
+                await asyncio.sleep(3)
 
             except Exception as e:
                 self.logger.error(f"授权流程失败: {e}")
@@ -226,21 +255,52 @@ class TemuLogin:
         self.logger.info(f"{self.name} - Cookie 获取完成，准备关闭浏览器")
         return True
 
-    # ----------- 总流程 -----------
-    async def run(self):
-        try:
-            if not await self.start_browser():
-                return False
-            if not await self.connect():
-                return False
-            if not await self.open_login_page():
-                return False
-            if not await self.login():
-                return False
-            return await self.save_cookies()
+    # -----------失败可以重新登录------------
+    async def run_once(self):
+        if not await self.start_browser():
+            raise Exception("start_browser 失败")
 
-        finally:
-            await self.close()
+        if not await self.connect():
+            raise Exception("connect 失败")
+
+        if not await self.open_login_page():
+            raise Exception("open_login_page 失败")
+
+        if not await self.login():
+            raise Exception("login 失败")
+
+        if not await self.save_cookies():
+            raise Exception("save_cookies 失败")
+
+        return True
+
+
+    # ----------- 总流程 -----------
+    async def run(self, max_retry=3):
+        for attempt in range(1, max_retry + 1):
+            self.logger.info(f"{self.name} - 第 {attempt} 次登录尝试")
+
+            try:
+                result = await self.run_once()
+                if result:
+                    self.logger.info(f"{self.name} - 登录成功（第 {attempt} 次）")
+                    return True
+
+            except Exception as e:
+                self.logger.error(
+                    f"{self.name} - 第 {attempt} 次失败: {e}",
+                    exc_info=True
+                )
+
+            finally:
+                await self.close()
+
+            if attempt < max_retry:
+                self.logger.info(f"{self.name} - 准备重试，等待 3 秒...")
+                await asyncio.sleep(3)
+
+        self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        return False
 
     async def close(self):
         try:
@@ -253,7 +313,7 @@ class TemuLogin:
 
 
 async def main():
-    name_list = ["103-Temu全托管"]
+    name_list = ['103-Temu全托管']
     for name in name_list:
         account = get_shop_config(name)
         print(account)

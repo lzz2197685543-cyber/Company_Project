@@ -6,6 +6,7 @@ import hashlib
 import redis
 import pymysql
 from datetime import datetime
+from utils.dingtalk_bot import ding_bot_send
 
 class Temu_Funds_Restriction:
     def __init__(self,shop_name):
@@ -48,18 +49,22 @@ class Temu_Funds_Restriction:
                 data = response.json()
             except ValueError:
                 self.logger.error(f"❌ 响应不是 JSON: {response.text[:200]}")
+                ding_bot_send('me', f"{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
                 return None
             # 打印非 200 但有业务错误的情况
             if response.status_code != 200:
+                self.logger.error(f'状态不是200：{response.text[:200]}')
                 self.logger.error(f"⚠️ HTTP异常: {response.status_code}")
                 return data
 
             return data
         except requests.exceptions.Timeout:
             self.logger.error("❌ 请求超时")
+            ding_bot_send('me', f"{self.shop_name}❌ 请求超时")
 
         except requests.exceptions.RequestException as e:
             self.logger.error(f"❌ 请求异常: {e}")
+            ding_bot_send('me', f"{self.shop_name}❌ 请求异常: {e}")
         return None
 
     def get_detail_info(self,frozen_type):
@@ -110,7 +115,7 @@ class Temu_Funds_Restriction:
         """
         判断资金冻结记录是否需要更新
         """
-        key = f"temu:funds:{item['店铺']}:{item['冻结类型']}"
+        key = f"temu:funds:{item['店铺']}:{item['冻结类型']}{item['限制时间']}:"
 
         hash_source = f"{item['冻结类型']}|{item['限制总金额']}|{item['限制时间']}"
         new_hash = hashlib.md5(hash_source.encode("utf-8")).hexdigest()
@@ -140,9 +145,9 @@ class Temu_Funds_Restriction:
             `限制原因` VARCHAR(255) COMMENT '限制原因',
             `限制总金额` DECIMAL(12,2) DEFAULT 0 COMMENT '限制总金额',
             `限制时间` DATETIME COMMENT '冻结开始时间',
-            `数据抓取时间` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '抓取时间',
-            UNIQUE KEY uk_shop_frozen (`店铺`, `冻结类型`)
+            `数据抓取时间` DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '抓取时间'
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+        
         """
         try:
 
@@ -207,6 +212,9 @@ class Temu_Funds_Restriction:
 
             if json_data.get("error_msg") == "Invalid Login State":
                 if attempt == 0:
+                    self.logger.warning(
+                        f"[{self.shop_name}] cookie 失效，开始自动刷新登录态"
+                    )
                     await self.cookie_manager.refresh()
                     await asyncio.sleep(2)
                     continue
@@ -214,6 +222,8 @@ class Temu_Funds_Restriction:
                     self.logger.error(
                         f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
                     )
+                    # 将刷新时候cookie还是失败的发送给自己
+                    ding_bot_send('me', f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
                     return
 
             self.parse_data(json_data)

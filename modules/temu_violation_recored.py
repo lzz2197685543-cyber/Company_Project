@@ -6,7 +6,11 @@ import asyncio
 import pymysql
 import hashlib
 import redis
-from datetime import datetime,date,timedelta
+from datetime import date, datetime, time, timedelta
+from zoneinfo import ZoneInfo
+from utils.dingtalk_bot import ding_bot_send
+
+BEIJING_TZ = ZoneInfo("Asia/Shanghai")
 
 
 class Temu_ViolationRecored:
@@ -36,12 +40,7 @@ class Temu_ViolationRecored:
         }
         self.url = 'https://agentseller.temu.com/mms/api/andes/punish/seller/listPunishRecord'
 
-    def get_day_range_ms(target_date: date | None = None):
-        """
-        获取某一天的 [00:00:00, next_day 00:00:00) 毫秒时间戳（北京时间）
-        :param target_date: date 对象，默认今天
-        :return: (start_ms, end_ms)
-        """
+    def get_day_range_ms(self,target_date: date | None = None):
         if target_date is None:
             target_date = date.today()
 
@@ -61,8 +60,8 @@ class Temu_ViolationRecored:
         json_data = {
             'pageSize': 100,
             'pageNo': 1,
-            'startDateFrom': start_ms,
-            'startDateTo': end_ms,
+            # 'startDateFrom': start_ms,
+            # 'startDateTo': end_ms,
             'punishTabCode': 2,
         }
 
@@ -82,10 +81,12 @@ class Temu_ViolationRecored:
                 data = response.json()
             except ValueError:
                 self.logger.error(f"❌ 响应不是 JSON: {response.text[:200]}")
+                ding_bot_send('me', f"{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
                 return None
 
             # 打印非 200 但有业务错误的情况
             if response.status_code != 200:
+                self.logger.error(f'状态不是200：{response.text[:200]}')
                 self.logger.error(f"⚠️ HTTP异常: {response.status_code}")
                 return data
 
@@ -93,9 +94,11 @@ class Temu_ViolationRecored:
 
         except requests.exceptions.Timeout:
             self.logger.error("❌ 请求超时")
+            ding_bot_send('me',f"{self.shop_name}❌ 请求超时")
 
         except requests.exceptions.RequestException as e:
             self.logger.error(f"❌ 请求异常: {e}")
+            ding_bot_send('me', f"{self.shop_name}❌ 请求异常: {e}")
         return None
 
     def safe_datetime_from_ms(self, ts_ms):
@@ -246,7 +249,7 @@ class Temu_ViolationRecored:
         # 创建数据表
         self.create_table()
 
-        for attempt in range(2):  # 最多尝试 2 次
+        for attempt in range(5):  # 最多尝试 5次
             cookies, shop_id = await self.cookie_manager.get_auth()
 
             json_data = self.get_info(cookies, shop_id)
@@ -268,6 +271,8 @@ class Temu_ViolationRecored:
                     self.logger.error(
                         f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
                     )
+                    # 将刷新时候cookie还是失败的发送给自己
+                    ding_bot_send('me',f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
                     return
 
             # ✅ 正常数据

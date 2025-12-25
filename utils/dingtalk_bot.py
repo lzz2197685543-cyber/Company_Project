@@ -6,12 +6,14 @@ import base64
 import urllib.parse
 import requests
 import asyncio
+from utils.config_loader import get_dingtalk_config
 
-
+"""给群发信息"""
 class DingTalkBot:
-    def __init__(self, access_token: str, secret: str, timeout: int = 10):
-        self.access_token = access_token
-        self.secret = secret
+    def __init__(self, group_name,timeout: int = 10):
+        ding_cfg = get_dingtalk_config()
+        self.access_token = ding_cfg['bots'][group_name]['access_token']
+        self.secret = ding_cfg['bots'][group_name]['secret']
         self.timeout = timeout
 
     def _build_signed_url(self):
@@ -60,7 +62,7 @@ class DingTalkBot:
 
         return resp.status_code, data
 
-    async def send_text(self, message: str, at_mobiles=None, is_at_all=False):
+    def send_text(self, message: str, at_mobiles=None, is_at_all=False):
         """
         发送文本消息
         """
@@ -86,18 +88,13 @@ class DingTalkBot:
             raise Exception(f"HTTP {status}: {data}")
 
 
-ACCESS_TOKEN = '630602c35a2f4d8db5081042101eb01f9bd0a84a71bb50c0e528d3ca33d8534f'
-SECRET ='SECeddb89430ef8852bbd6b58a8c40319550bfff049462fdf6f3a083ecebe164b78'
-
-bot = DingTalkBot(ACCESS_TOKEN, SECRET)
-
-
-async def main():
-    await bot.send_text("你好啊")
+def ding_bot_send(group_name,text):
+    bot = DingTalkBot(group_name)
+    bot.send_text(text)
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+# if __name__ == "__main__":
+    # ding_bot_send('me','平安夜快乐')
 
 
 

@@ -3,6 +3,8 @@ import asyncio
 import json
 from typing import Dict, Any
 
+"""获取hub指纹浏览器的环境"""
+
 
 BASE_URL = "http://127.0.0.1:6873"
 

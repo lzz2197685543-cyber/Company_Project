@@ -3,9 +3,16 @@
     "Client ID": "dings13rpbdzmpis6dyo",
     "Client Secret": "J0gloUMrhko4ca_Esar9jiVtef8vT-Qd5AJq9B3zYeyR7pEdoIHibaUFU8NZfz9o",
     "corpId": "ding558a601d903f4a5effe93478753d9884",
-    "agend_id": 4036386083
+    "agend_id": 4036386083,
+    "userid": {
+    "邹雯雯": "106246005536840537",
+    "赵结贤": "01120945665335843302",
+    "it": "01214029653234363143",
+    "杨均焯": "083966555426161200",
+    "吴晓翠": "285520016321560097",
+    "李惠清": "01154108005726211571"
   },
-  "bots": {
+    "bots": {
     "程序监控群": {
       "access_token": "2a7021c2bee749e4cef2e697409567ecde957b8c923957e0586fdd33522ef16b",
       "secret": "SECe325049a821c4b6c701bc0d612d3fd1ab92be9ff752d189369f4e81f28cfcbba"
@@ -25,16 +32,15 @@
     "克劳德": {
       "access_token": "8d8030c0ec6314e094cd421f97a563c3abc39efa61f380f6bf4251159f51b50a",
       "secret": "SEC08f8cb2ee5d76e289cd1e1d8f8210d967f6be7184c4c3cb51574cc00fb9062e5"
+    },
+    "me": {
+      "access_token": "630602c35a2f4d8db5081042101eb01f9bd0a84a71bb50c0e528d3ca33d8534f",
+      "secret": "SECeddb89430ef8852bbd6b58a8c40319550bfff049462fdf6f3a083ecebe164b78"
     }
+  }
   },
-  "userid": {
-    "邹雯雯": "106246005536840537",
-    "赵结贤": "01120945665335843302",
-    "it": "01214029653234363143",
-    "杨均焯": "083966555426161200",
-    "吴晓翠": "285520016321560097",
-    "李惠清": "01154108005726211571"
-  },
+
+
   "shops": {
     "2105-Temu全托管": {
       "id": 421,

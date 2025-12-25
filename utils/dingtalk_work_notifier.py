@@ -1,17 +1,24 @@
 import requests
 import time
+from utils.config_loader import get_dingtalk_config
 
 
 class DingTalkWorkNotifier:
     """
     钉钉工作通知（私聊 / 系统消息）
     """
-    def __init__(self, app_key: str, app_secret: str, agent_id: int, timeout: int = 10):
-        self.app_key = app_key
-        self.app_secret = app_secret
-        self.agent_id = agent_id
-        self.timeout = timeout
 
+    def __init__(self, timeout: int = 10):
+        """
+        初始化时自动读取钉钉配置
+        """
+        ding_cfg = get_dingtalk_config()
+
+        self.app_key = ding_cfg["Client ID"]
+        self.app_secret = ding_cfg["Client Secret"]
+        self.agent_id = ding_cfg["agend_id"]
+
+        self.timeout = timeout
         self._access_token = None
         self._expire_at = 0  # token 过期时间戳
 
@@ -36,22 +43,21 @@ class DingTalkWorkNotifier:
         data = resp.json()
 
         if data.get("errcode") != 0:
-            raise Exception(f"获取 access_token 失败: {data}")
+            raise RuntimeError(f"获取 access_token 失败: {data}")
 
         self._access_token = data["access_token"]
-        # 官方 expires_in = 7200
         self._expire_at = now + int(data.get("expires_in", 7200)) - 60
 
         return self._access_token
 
     # =========================
-    # 核心发送方法
+    # 发送文本消息
     # =========================
     def send_text(self, user_ids, title: str, text: str):
         """
         发送文本工作通知
 
-        :param user_ids: list[str]  钉钉 userid 列表
+        :param user_ids: list[str] | str
         :param title: 消息标题
         :param text: 消息内容
         """
@@ -65,9 +71,7 @@ class DingTalkWorkNotifier:
             "corpconversation/asyncsend_v2"
         )
 
-        params = {
-            "access_token": access_token
-        }
+        params = {"access_token": access_token}
 
         body = {
             "agent_id": self.agent_id,
@@ -88,29 +92,31 @@ class DingTalkWorkNotifier:
         )
 
         data = resp.json()
-        print(data)
+        # print(data)
 
         if data.get("errcode") != 0:
-            raise Exception(f"发送工作通知失败: {data}")
+            raise RuntimeError(f"发送工作通知失败: {data}")
 
         return data
 
-if __name__ == '__main__':
-    APP_KEY = "dings13rpbdzmpis6dyo"
-    APP_SECRET = "J0gloUMrhko4ca_Esar9jiVtef8vT-Qd5AJq9B3zYeyR7pEdoIHibaUFU8NZfz9o"
-    AGENT_ID = 4036386083
-    USER_IDS = ["106246005536840537"]  # 钉钉 userid
 
-    notifier = DingTalkWorkNotifier(
-        app_key=APP_KEY,
-        app_secret=APP_SECRET,
-        agent_id=AGENT_ID
-    )
+"""后面使用的话直接调用这里就可以了"""
+def ding_user_send(username,title,text):
+    ding_cfg = get_dingtalk_config()
+    user_id = ding_cfg["userid"][username]
+
+    notifier = DingTalkWorkNotifier()
 
     notifier.send_text(
-        user_ids=USER_IDS,
-        title="库存异常",
-        text="SKU123 当前库存为 0，请立即处理"
+        user_ids=user_id,
+        title=title,
+        text=text
     )
 
-    print("工作通知发送成功")
+
+
+# =========================
+# 测试
+# =========================
+# if __name__ == "__main__":
+    # ding_user_send()
