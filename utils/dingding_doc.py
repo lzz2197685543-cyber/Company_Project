@@ -980,6 +980,91 @@ class DingTalkSheetDeleter:
 
 
 
+class DingTalkSheetManager:
+    """
+    钉钉多维表 Sheet 管理器
+    - 查询文档中的所有 sheet
+    - sheetName → sheetId 映射
+    """
+
+    def __init__(self, base_id: str, operator_id: str, token_manager: DingTalkTokenManager = None):
+        self.base_id = base_id
+        self.operator_id = operator_id
+
+        self.token_manager = token_manager or DingTalkTokenManager()
+        self.access_token = self.token_manager.get_access_token()
+
+        self.base_url = f"https://api.dingtalk.com/v1.0/notable/bases/{base_id}"
+        self.headers = self._get_headers()
+        self.params = {"operatorId": operator_id}
+
+        self._sheet_cache: Optional[List[Dict[str, Any]]] = None
+
+    def _get_headers(self) -> Dict[str, str]:
+        return {
+            "Content-Type": "application/json",
+            "x-acs-dingtalk-access-token": self.access_token or ""
+        }
+
+    def _refresh_token(self):
+        self.access_token = self.token_manager.get_access_token(force_refresh=True)
+        self.headers = self._get_headers()
+
+    def list_sheets(self, use_cache: bool = False) -> List[Dict[str, Any]]:
+        url = f"{self.base_url}/sheets"
+
+        response = requests.get(
+            url=url,
+            headers=self.headers,
+            params=self.params,
+            timeout=30
+        )
+
+        print("HTTP status:", response.status_code)
+        print("RAW response:", response.text)
+
+        response.raise_for_status()
+        result = response.json()
+
+        print("JSON parsed:", result)
+
+        sheets = result.get("sheets", [])
+        return sheets
+
+    def get_sheet_name_id_map(self) -> Dict[str, str]:
+        """
+        获取 sheetName -> sheetId 的映射
+        """
+        sheets = self.list_sheets()
+        return {sheet["name"]: sheet["id"] for sheet in sheets}
+
+    def get_sheet_id_by_name(self, sheet_name: str) -> Optional[str]:
+        """
+        根据 sheet 名称获取 sheetId
+        """
+        sheet_map = self.get_sheet_name_id_map()
+        return sheet_map.get(sheet_name)
+
+    def sheet_exists(self, sheet_name: str) -> bool:
+        """
+        判断 sheet 是否存在
+        """
+        return self.get_sheet_id_by_name(sheet_name) is not None
+
+
+
+def query_sheet():
+    sheet_manager = DingTalkSheetManager(
+        base_id="XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
+        operator_id="ZiSpuzyA49UNQz7CvPBUvhwiEiE"
+    )
+
+    sheets = sheet_manager.list_sheets()
+
+    for s in sheets:
+        print(f"{s['name']} -> {s['id']}")
+
+
 
 # 示例使用函数
 def upload_multiple_records():
@@ -1144,8 +1229,8 @@ def test_delete_records():
 
 if __name__ == "__main__":
     # 测试Token管理器
-    test_token_manager()
-
+    # test_token_manager()
+    query_sheet()
     # 或者运行批量上传示例
     # upload_multiple_records()
 

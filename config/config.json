@@ -39,8 +39,6 @@
     }
   }
   },
-
-
   "shops": {
     "2105-Temu全托管": {
       "id": 421,
@@ -442,12 +440,12 @@
       }
     },
     "108-Temu全托管": {
-      "id": 76,
-      "name": "temu全托104+108+半托1号-YYDeeK",
-      "hubId": 1051598402,
+      "id": 103,
+      "name": "temu全托108店-YYDeeK BO子账号",
+      "hubId": 1053621692,
       "credentials": {
-        "username": "13376614188",
-        "password": "TEjuyule4188-"
+        "username": "16555701907",
+        "password": "qwe123456."
       },
       "shop": {
         "shopId": 634418218284034,
@@ -526,12 +524,12 @@
       }
     },
     "104-Temu全托管": {
-      "id": 76,
-      "name": "temu全托104+108+半托1号-YYDeeK",
-      "hubId": 1051598402,
+       "id": 95,
+      "name": "temu全托104店-YYDeeK子账号",
+      "hubId": 1053270835,
       "credentials": {
-        "username": "13376614188",
-        "password": "TEjuyule4188-"
+        "username": "16525028044",
+        "password": "qwe123456."
       },
       "shop": {
         "shopId": 634418214797589,
@@ -609,5 +607,6 @@
         "password": "46344650"
       }
     }
+
   }
 }

@@ -10,6 +10,8 @@ from datetime import date, datetime, time, timedelta
 from zoneinfo import ZoneInfo
 from utils.dingtalk_bot import ding_bot_send
 
+"""违规记录——数据获取"""
+
 BEIJING_TZ = ZoneInfo("Asia/Shanghai")
 
 
@@ -17,7 +19,7 @@ class Temu_ViolationRecored:
     def __init__(self, shop_name):
         self.shop_name = shop_name
         self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"Temu-{shop_name}")
+        self.logger = get_logger(f"temu_violation_recored")
 
         self.redis_client = redis.Redis(
             host="127.0.0.1",
@@ -40,6 +42,7 @@ class Temu_ViolationRecored:
         }
         self.url = 'https://agentseller.temu.com/mms/api/andes/punish/seller/listPunishRecord'
 
+    """获取爬取数据当天0点到24点的时间戳"""
     def get_day_range_ms(self,target_date: date | None = None):
         if target_date is None:
             target_date = date.today()
@@ -60,8 +63,8 @@ class Temu_ViolationRecored:
         json_data = {
             'pageSize': 100,
             'pageNo': 1,
-            # 'startDateFrom': start_ms,
-            # 'startDateTo': end_ms,
+            'startDateFrom': start_ms,
+            'startDateTo': end_ms,
             'punishTabCode': 2,
         }
 
@@ -130,7 +133,7 @@ class Temu_ViolationRecored:
                     '备货单号': i.get('subPurchaseOrderSn', ''),
                     'SKU': i.get('productSkcId', ''),
                     '违规发起时间': self.safe_datetime_from_ms(i.get('violationStartTime')),
-                    '违规金额': i.get('punishAmount', 0),
+                    '违规金额': float(i.get('punishAmount', 0))/100,
                     '进度': i.get('punishStatusDesc'),
                     '数据抓取时间': datetime.now(),
                 }
@@ -281,5 +284,5 @@ class Temu_ViolationRecored:
 
 
 # if __name__ == '__main__':
-#     t = Temu_ViolationRecored("103-Temu全托管")
+#     t = Temu_ViolationRecored("106-Temu全托管")
 #     asyncio.run(t.run())

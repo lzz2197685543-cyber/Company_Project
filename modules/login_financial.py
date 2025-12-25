@@ -13,7 +13,7 @@ COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 
-class TemuLogin:
+class TemuLogin_F:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
@@ -193,13 +193,6 @@ class TemuLogin:
                     # -------- 授权方式二：勾选复选框 + 授权登录 --------
                     self.logger.info("命中授权方式二：勾选复选框 + 授权登录")
 
-                    # 再次输入账号和密码，因为有的环境多个账号在使用，所以我们需要再次填写账号跟密码
-                    await auth_page.fill("#usernameId", "")  # 可选：先清一次
-                    await auth_page.fill("#usernameId", self.username)
-
-                    await auth_page.fill("#passwordId", "")
-                    await auth_page.fill("#passwordId", self.password)
-
                     # ① 不点 input，点可视的 checkbox 外壳
                     checkbox_ui = auth_page.locator('div[class*="CBX_square"]')
 
@@ -228,22 +221,35 @@ class TemuLogin:
                 self.logger.error(f"授权流程失败: {e}")
                 raise
 
+        await self.page.goto('https://seller.kuajingmaihuo.com/labor/bill')
+
 
         #  等页面真正“稳定”
         await self.page.wait_for_load_state("load")
 
         await asyncio.sleep(3)
 
+        TARGET_API_KEYWORD = "api/merchant/fund/detail/pageSearch"
 
-        # 获取 Cookie（正确方式）
-        cookies = await self.page.context.cookies(
-            "https://agentseller.temu.com"
-        )
+        # 1️⃣ 准备监听接口
+        async with self.page.expect_response(
+                lambda r: TARGET_API_KEYWORD in r.url and r.status == 200,
+                timeout=15_000
+        ) as resp_info:
 
-        if not cookies:
-            self.logger.error(f"{self.name} - 未获取到 agentseller Cookie")
-            return False
+            # 2️⃣ 点击「查询」按钮
+            query_btn = self.page.get_by_role("button", name="查询")
+            await query_btn.wait_for(state="visible")
+            await query_btn.scroll_into_view_if_needed()
+            await query_btn.click()
 
+        # 3️⃣ 接口已经命中
+        response = await resp_info.value
+        print("接口 URL:", response.url)
+        print("状态码:", response.status)
+
+        # 4️⃣ 此时 cookie 一定是最新的
+        cookies = await self.page.context.cookies()
         cookies_dict = {c["name"]: c["value"] for c in cookies}
 
         cookie_data = {
@@ -252,7 +258,7 @@ class TemuLogin:
             "cookies": cookies_dict,
         }
 
-        path = COOKIE_DIR / f"{self.name}_cookies.json"
+        path = COOKIE_DIR / f"{self.name}_financial_cookies.json"
 
         with open(path, "w", encoding="utf-8") as f:
             json.dump(cookie_data, f, ensure_ascii=False, indent=2)
@@ -321,12 +327,12 @@ class TemuLogin:
 
 
 # async def main():
-#     name_list = ['104-Temu全托管']
+#     name_list = ['102-Temu全托管']
 #     for name in name_list:
 #         account = get_shop_config(name)
 #         print(account)
 #
-#         t = TemuLogin(name, account)
+#         t = TemuLogin_F(name, account)
 #         await t.run()
 #
 #

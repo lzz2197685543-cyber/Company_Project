@@ -8,7 +8,7 @@ import asyncio
 import time
 from utils.logger import get_logger
 
-logger = get_logger("Main")
+logger = get_logger("temu_risk_daily_job")
 
 """跑违规记录与金额限制"""
 
@@ -34,6 +34,7 @@ async def crawl_all_shops():
         "103-Temu全托管", "102-Temu全托管",
         "101-Temu全托管",
     ]
+    shop_name_list=["104-Temu全托管"]
 
     for shop_name in shop_name_list:
         logger.info(f"🚀 开始爬取店铺：{shop_name}")
@@ -57,7 +58,7 @@ async def main():
 
     # ========= ③ 告警 =========
     logger.info("🔔 开始执行违规 & 资金限制告警")
-    # run_send_data()
+    run_send_data()
 
 
 

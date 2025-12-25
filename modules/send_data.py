@@ -3,7 +3,7 @@ from utils.logger import get_logger
 from utils.config_loader import get_dingtalk_config
 from utils.dingtalk_work_notifier import DingTalkWorkNotifier
 
-logger = get_logger("Temu-Daily-Notify")
+logger = get_logger("send_data")
 
 
 # ======================

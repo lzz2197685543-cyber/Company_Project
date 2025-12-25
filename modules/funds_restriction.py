@@ -8,11 +8,13 @@ import pymysql
 from datetime import datetime
 from utils.dingtalk_bot import ding_bot_send
 
+"""金额限制--数据获取"""
+
 class Temu_Funds_Restriction:
     def __init__(self,shop_name):
         self.shop_name = shop_name
         self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"Temu-{shop_name}")
+        self.logger = get_logger(f"funds_restriction")
 
         self.redis_client = redis.Redis(
             host="127.0.0.1",

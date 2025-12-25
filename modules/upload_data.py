@@ -18,7 +18,7 @@ from utils.dingding_doc import (
 from utils.logger import get_logger
 
 
-logger = get_logger("Temu-Data-Upload")
+logger = get_logger("upload_data")
 
 
 # ======================
@@ -280,7 +280,7 @@ def main():
         upload_records(
             config={
                 "base_id": "XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
-                "sheet_id": "temu限制金额-昨天",
+                "sheet_id": "temu资金限制-昨天",
                 "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
             },
             records=funds_yesterday_records
