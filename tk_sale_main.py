@@ -9,7 +9,7 @@ import time
 
 """跑TK销售数据"""
 
-logger = get_logger("tk_sale_main")
+logger = get_logger("tk_sale_data")
 
 
 def format_seconds(seconds: float) -> str:
@@ -58,8 +58,8 @@ def upload_multiple_records(config,records):
 def build_records():
     # 获取当前年月日，格式为 YYYYMMDD
     current_date = datetime.now().strftime("%Y%m%d")
-    out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
-    filename = f"{out_dir}/tk_sale_{current_date}.csv"
+    out_dir = Path(__file__).resolve().parent / "data" / "sale"
+    filename = f"{out_dir}\\tk_sale_{current_date}.csv"
     shein_df=pd.read_csv(filename)
 
     records = []
