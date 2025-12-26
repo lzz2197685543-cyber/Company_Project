@@ -149,10 +149,10 @@ class Temu_Financial_Data:
             page += 1
 
 
-if __name__ == '__main__':
-    start_time='2025-11-01'
-    end_time='2025-11-30'
-    t=Temu_Financial_Data("106-Temu全托管",start_time,end_time)
-    asyncio.run(t.run())
+# if __name__ == '__main__':
+#     start_time='2025-11-01'
+#     end_time='2025-11-30'
+#     t=Temu_Financial_Data("106-Temu全托管",start_time,end_time)
+#     asyncio.run(t.run())
 
 

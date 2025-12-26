@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="SMT" />
     <orderEntry type="module" module-name="TK" />
+    <orderEntry type="module" module-name="Shopee" />
   </component>
 </module>

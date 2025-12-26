@@ -95,7 +95,7 @@ def fetch_today_diff_high_restriction(conn):
           AND t.限制原因 = y.限制原因
           AND y.stat_date = CURDATE() - INTERVAL 1 DAY
     WHERE t.stat_date = CURDATE()
-      AND ABS(t.total_amount - IFNULL(y.total_amount, 0)) >= 500;
+      AND t.total_amount - IFNULL(y.total_amount, 0) >= 500;
     """
     with conn.cursor(pymysql.cursors.DictCursor) as cursor:
         cursor.execute(sql)
