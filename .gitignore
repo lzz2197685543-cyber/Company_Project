@@ -1,0 +1,67 @@
+# ======================
+# Python 相关
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# ======================
+# 日志文件
+# ======================
+logs/
+*.log
+
+# ======================
+# 配置文件（真实配置不上传）
+# ======================
+config/*.json
+config/*.yaml
+config/*.yml
+config/*.ini
+
+# 但允许上传配置模板
+!config/*.example.json
+!config/*.example.yaml
+!config/*.example.yml
+!config/*.example.ini
+
+# ======================
+# 下载的数据 / 爬虫产物
+# ======================
+data/
+downloads/
+output/
+results/
+cookies/
+*.csv
+*.xlsx
+*.xls
+*.jsonl
+
+# ======================
+# Playwright / 浏览器相关
+# ======================
+playwright/.cache/
+playwright/.auth/
+user_data/
+browser_data/
+
+# ======================
+# 系统 & 编辑器
+# ======================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ======================
+# 临时文件
+# ======================
+*.tmp
+*.swp
