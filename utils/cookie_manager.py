@@ -18,7 +18,7 @@ class CookieManager:
     # ---------- cookie ----------
     def load_cookies(self) -> Optional[Dict[str, str]]:
         if not self.cookie_file.exists():
-            print('cookies不存在----------')
+            # print('cookies不存在----------')
             return None
         data = json.loads(self.cookie_file.read_text(encoding="utf-8"))
         return data.get("cookies")
