@@ -3,7 +3,6 @@ import time
 import os
 import csv
 from datetime import datetime
-import json
 from utils.logger import get_logger
 from pathlib import Path
 from utils.cookie_manager import CookieManager
@@ -180,7 +179,6 @@ class Shopee:
                     # ⭐ 核心：统一失效判断
                     if self.is_cookie_invalid(json_data):
                         raise PermissionError("cookie 已失效或接口异常")
-
                     # 成功直接跳出 retry
                     break
 
@@ -221,12 +219,12 @@ class Shopee:
             time.sleep(1)
 
 
-async def run_shopee_sale():
-    name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei","虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
-    for shop_name in name_list:
-        shein = Shopee(shop_name)
-        await shein.get_all_page()
-
-
-if __name__ == '__main__':
-    asyncio.run(run_shopee_sale())
+# async def run_shopee_sale():
+#     name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei","虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
+#     for shop_name in name_list:
+#         shein = Shopee(shop_name)
+#         await shein.get_all_page()
+#
+#
+# if __name__ == '__main__':
+#     asyncio.run(run_shopee_sale())

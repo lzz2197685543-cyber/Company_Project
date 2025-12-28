@@ -1,0 +1,19 @@
+2025-12-27 23:56:58,923 | INFO | shopee_sale_data | 程序开始启动
+2025-12-27 23:56:58,923 | INFO | shopee_sale_data | --------------------------------开始爬取数据------------------------------------
+2025-12-27 23:56:58,924 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托1501店------------------
+2025-12-27 23:56:59,965 | INFO | shopee_sale_data | 解析完成，共找到 14 条有效数据
+2025-12-27 23:56:59,969 | INFO | shopee_sale_data | 已保存到文件: E:\Company_Project\Shopee\data\sale\shopee_sale_20251227.csv
+2025-12-27 23:57:01,265 | INFO | shopee_sale_data | [虾皮全托1501店] 第 2 页无数据，结束爬取
+2025-12-27 23:57:01,266 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托507-lxz------------------
+2025-12-27 23:57:01,514 | INFO | shopee_sale_data | [虾皮全托507-lxz] 第 1 页无数据，结束爬取
+2025-12-27 23:57:01,516 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托506-kedi------------------
+2025-12-27 23:57:02,579 | INFO | shopee_sale_data | 解析完成，共找到 16 条有效数据
+2025-12-27 23:57:02,581 | INFO | shopee_sale_data | 已保存到文件: E:\Company_Project\Shopee\data\sale\shopee_sale_20251227.csv
+2025-12-27 23:57:03,867 | INFO | shopee_sale_data | [虾皮全托506-kedi] 第 2 页无数据，结束爬取
+2025-12-27 23:57:03,867 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托505-qipei------------------
+2025-12-27 23:57:04,897 | INFO | shopee_sale_data | 解析完成，共找到 23 条有效数据
+2025-12-27 23:57:04,899 | INFO | shopee_sale_data | 已保存到文件: E:\Company_Project\Shopee\data\sale\shopee_sale_20251227.csv
+2025-12-27 23:57:06,200 | INFO | shopee_sale_data | [虾皮全托505-qipei] 第 2 页无数据，结束爬取
+2025-12-27 23:57:06,201 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托504-huanchuang------------------
+2025-12-27 23:57:06,420 | INFO | shopee_sale_data | [虾皮全托504-huanchuang] 第 1 页无数据，结束爬取
+2025-12-27 23:57:06,421 | INFO | shopee_sale_data | 开始爬取店铺------------------虾皮全托503-juyule------------------

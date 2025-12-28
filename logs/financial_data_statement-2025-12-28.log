@@ -1,0 +1,65 @@
+2025-12-28 23:05:53,746 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:06:37,818 | ERROR | financial_data_statement | 接口数据结构异常
+2025-12-28 23:06:37,818 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:08:24,491 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:08:25,383 | ERROR | financial_data_statement | 接口数据结构异常
+2025-12-28 23:08:25,384 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:13:17,084 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:13:17,534 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:13:17,534 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:13:17,534 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:13:36,347 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:13:36,623 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:13:36,623 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:13:36,624 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:14:11,653 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:14:11,942 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:14:11,942 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:14:11,943 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:14:55,267 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:14:55,642 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:14:55,643 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:14:55,643 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:18:29,368 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:18:29,705 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:18:29,706 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:18:29,706 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:19:15,511 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:19:15,768 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:19:15,768 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:19:15,769 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:19:15,974 | INFO | financial_data_statement | 店铺-虾皮全托507-lxz-第 1 页保存成功
+2025-12-28 23:19:15,975 | INFO | financial_data_statement | 第1页已经没有数据了,程序结束
+2025-12-28 23:19:15,975 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托506-kedi------------
+2025-12-28 23:19:43,180 | INFO | financial_data_statement | 店铺-虾皮全托506-kedi-第 1 页保存成功
+2025-12-28 23:19:43,180 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:19:43,181 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托505-qipei------------
+2025-12-28 23:21:02,877 | INFO | financial_data_statement | 店铺-虾皮全托505-qipei-第 1 页保存成功
+2025-12-28 23:21:02,877 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:21:02,878 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托504-huanchuang------------
+2025-12-28 23:22:34,426 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:22:34,902 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:22:34,902 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:22:34,902 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:22:35,195 | INFO | financial_data_statement | 店铺-虾皮全托507-lxz-第 1 页保存成功
+2025-12-28 23:22:35,195 | INFO | financial_data_statement | 第1页已经没有数据了,程序结束
+2025-12-28 23:22:35,196 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托506-kedi------------
+2025-12-28 23:22:35,464 | INFO | financial_data_statement | 店铺-虾皮全托506-kedi-第 1 页保存成功
+2025-12-28 23:22:35,465 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:22:35,465 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托505-qipei------------
+2025-12-28 23:22:35,780 | INFO | financial_data_statement | 店铺-虾皮全托505-qipei-第 1 页保存成功
+2025-12-28 23:22:35,780 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:22:35,781 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托504-huanchuang------------
+2025-12-28 23:25:29,870 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托1501店------------
+2025-12-28 23:25:30,250 | INFO | financial_data_statement | 店铺-虾皮全托1501店-第 1 页保存成功
+2025-12-28 23:25:30,251 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:25:30,252 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托507-lxz------------
+2025-12-28 23:25:30,566 | INFO | financial_data_statement | 店铺-虾皮全托507-lxz-第 1 页保存成功
+2025-12-28 23:25:30,566 | INFO | financial_data_statement | 第1页已经没有数据了,程序结束
+2025-12-28 23:25:30,567 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托506-kedi------------
+2025-12-28 23:25:30,965 | INFO | financial_data_statement | 店铺-虾皮全托506-kedi-第 1 页保存成功
+2025-12-28 23:25:30,965 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:25:30,965 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托505-qipei------------
+2025-12-28 23:25:32,780 | INFO | financial_data_statement | 店铺-虾皮全托505-qipei-第 1 页保存成功
+2025-12-28 23:25:32,780 | INFO | financial_data_statement | 已到最后一页
+2025-12-28 23:25:32,781 | INFO | financial_data_statement | 开始爬取店铺-------------虾皮全托504-huanchuang------------

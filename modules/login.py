@@ -203,18 +203,18 @@ class ShopeeLogin:
             await self.stop_browser()
 
 
-async def main():
-    name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei",
-                 "虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
-    for name in name_list:
-        account = get_shop_config(name)
-
-        t = ShopeeLogin(name, account)
-        await t.run()
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+# async def main():
+#     name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei",
+#                  "虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
+#     for name in name_list:
+#         account = get_shop_config(name)
+#
+#         t = ShopeeLogin(name, account)
+#         await t.run()
+#
+#
+# if __name__ == "__main__":
+#     asyncio.run(main())
 
 
 
