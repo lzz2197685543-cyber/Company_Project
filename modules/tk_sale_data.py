@@ -34,6 +34,28 @@ class TK_Sale:
         }
         self.url='https://api16-normal-sg.tiktokshopglobalselling.com/api/plan/supplier/SupplierQueryPlanningV2'
 
+    def is_cookie_invalid(self, json_data):
+        """
+        统一判断 cookie 是否失效
+        """
+        # 请求异常
+        if not json_data:
+            return True
+
+        # get_info 主动标记
+        if json_data.get("base_resp").get("message")=="未登录":
+            return True
+
+        if not isinstance(json_data, dict):
+            return True
+
+        if json_data.get("error_msg") == "登录过期，请重新登录":
+            return True
+        if json_data.get("error_code") in (40001, 401):
+            return True
+
+
+        return False
     """获取指定页面的数据"""
     def get_info(self,page,cookies):
         self.cookies = cookies
@@ -68,6 +90,7 @@ class TK_Sale:
                 timeout=10
             )
             response.raise_for_status()
+            print(response.text[:200])
             return response.json()
 
         except requests.exceptions.RequestException as e:
@@ -162,16 +185,11 @@ class TK_Sale:
                     json_data = self.get_info(page, cookies)
 
                     # ---------- cookie 失效判断 ----------
-                    if not json_data:
-                        raise Exception("接口返回为空")
-
-                    if (
-                            json_data.get("error_code") in (40001, 401)
-                            or json_data.get("error_msg") == "登录过期，请重新登录"
-                    ):
-                        raise PermissionError("cookie 已失效")
-
-                    break  # 成功拿到数据，跳出 retry
+                    # ⭐ 核心：统一失效判断
+                    if self.is_cookie_invalid(json_data):
+                        raise PermissionError("cookie 已失效或接口异常")
+                    # 成功直接跳出 retry
+                    break
 
                 except PermissionError:
                     self.logger.warning(
@@ -184,6 +202,7 @@ class TK_Sale:
                     self.logger.error(
                         f"[{self.shop_name}] 第 {page} 页第 {attempt + 1} 次请求失败: {e}"
                     )
+                    await self.cookie_manager.refresh()
                     await asyncio.sleep(2)
 
             # ---------- retry 全失败 ----------
@@ -208,8 +227,12 @@ class TK_Sale:
             page += 1
 
 
-
+#
 # if __name__ == '__main__':
-#     shop_name="TK全托1401店"
-#     tk = TK_Sale(shop_name)
-#     asyncio.run(tk.get_all_page())
+#     shop_name_list = ["TK全托1401店", "TK全托408-LXZ", "TK全托407-huidan", "TK全托406-yuedongwan",
+#                       "TK全托405-huanchuang", "TK全托404-kedi", "TK全托403-juyule", "TK全托401-xiyue",
+#                       "TK全托402-quzhi", "TK全托1402店"]
+#     for shop_name in shop_name_list:
+#         tk = TK_Sale(shop_name)
+#
+#         asyncio.run(tk.get_all_page())
