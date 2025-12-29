@@ -69,6 +69,7 @@ class Shein_Sale:
                 json=json_data,
                 timeout=15
             )
+            print(response.text[:200])
 
             # 检查响应状态
             response.raise_for_status()
@@ -188,6 +189,7 @@ class Shein_Sale:
                         self.logger.error(
                             f"[{self.shop_name}] 第 {page} 页请求异常（{attempt}/{max_retry}）：{e}"
                         )
+                        await self.cookie_manager.refresh()
                         await asyncio.sleep(2)
 
                 # ---------- retry 全失败 ----------
