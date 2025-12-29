@@ -117,7 +117,7 @@ class SMTGoodsSpiderAsync:
 
     # ---------- 保存 ----------
     def save_items(self, items):
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "result"
+        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
         out_dir.mkdir(parents=True, exist_ok=True)
 
         fname = out_dir / f"{self.shop_name}_goods_{datetime.now():%Y%m%d}.csv"

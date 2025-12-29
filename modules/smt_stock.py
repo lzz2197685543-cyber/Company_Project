@@ -21,6 +21,25 @@ class SMTStockSpider:
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
         }
 
+    def is_cookie_invalid(self, json_data):
+        """
+        统一判断 cookie 是否失效
+        """
+
+        # 请求异常
+        if not json_data:
+            return True
+
+
+        # get_info 主动标记
+        if json_data == "COOKIE_EXPIRED":
+            return True
+
+        if not isinstance(json_data, dict):
+            return True
+
+        return False
+
     # ---------- 请求 ----------
     def fetch_page(self, cookies,page_index: int):
         self.logger.info(f'正在爬取第{page_index}页')
@@ -41,8 +60,10 @@ class SMTStockSpider:
                 json=payload,
                 timeout=30
             )
+            print(response.text[:200])
 
             data=response.json()
+
             return data
 
         except Exception as e:
@@ -51,6 +72,10 @@ class SMTStockSpider:
     # ---------- 解析 ----------
     def parse_page(self,json_data):
         items = []
+
+        if not json_data or 'data' not in json_data:
+            self.logger.info('返回的数据格式不正确')
+            return items
 
         for i in json_data.get('data', []):
             try:
@@ -73,7 +98,7 @@ class SMTStockSpider:
         return items
 
     def save_items(self, items):
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "result"
+        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
         self.logger.info(out_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -81,10 +106,7 @@ class SMTStockSpider:
         exists = fname.exists()
 
         with open(fname, "a", newline="", encoding="utf-8-sig") as f:
-            writer = csv.DictWriter(f, fieldnames= [
-            '平台', '店铺', '货号ID', '商品名称', '抓取数据日期',
-            '今日销量', '近7天销量', '近30天销量', '平台库存', '在途库存'
-        ])
+            writer = csv.DictWriter(f, fieldnames= items[0].keys())
             if not exists:
                 writer.writeheader()
             writer.writerows(items)
@@ -94,36 +116,59 @@ class SMTStockSpider:
         self.logger.info(f'正在爬取店铺-------{self.shop_name}------的数据')
 
         page_index = 1
-        cookies,token= await self.cookie_manager.get_auth()
-        retry = False
+
+        max_retry=3
+
         while True:
-            #请求响应数据
-            json_data = self.fetch_page(cookies,page_index)
+            json_data=None
+            for attempt in range(1, max_retry + 1):
+                try:
+                    cookies, token = await self.cookie_manager.get_auth()
+                    # 请求响应数据
+                    json_data = self.fetch_page(cookies,page_index)
 
-            # ---------- 没有获取到正确的数据我们判断cookie 失效 ----------
-            if not json_data or 'data' not in json_data:
-                if retry:
-                    raise RuntimeError("cookie 刷新后仍然失效")
+                    # ⭐ 核心：统一失效判断
+                    if self.is_cookie_invalid(json_data):
+                        raise PermissionError("cookie 已失效或接口异常")
+                    # 成功直接跳出 retry
+                    break
+                except PermissionError as e:
+                    self.logger.warning(
+                        f"[{self.shop_name}] 第 {page_index} 页 cookie 失效，刷新中（{attempt}/{max_retry}）"
+                    )
+                    await self.cookie_manager.refresh()
+                    await asyncio.sleep(2)
 
-                print(f"[{self.shop_name}] cookie 失效，自动重新登录中...")
-                await self.cookie_manager.refresh()
-                cookies, token = await self.cookie_manager.get_auth()
+                except Exception as e:
+                    self.logger.error(
+                        f"[{self.shop_name}] 第 {page_index} 页请求异常（{attempt}/{max_retry}）：{e}"
+                    )
+                    await asyncio.sleep(2)
 
-                retry=True  # retry为了防止cookie一直失效进入死循环
-                continue  # 👈 用新 cookie 重试当前页，continue 会让程序回到 while True 的开头
 
             # 解析数据
             items=self.parse_page(json_data)
             self.logger.info(f'解析得到{len(items)}条数据')
 
             # 保存数据
-            self.save_items(items)
-            self.logger.info(f'第{page_index}页，数据保存成功')
+            if items:
+                self.save_items(items)
+                self.logger.info(f'第{page_index}页，数据保存成功')
 
             if len(items)<50:
                 self.logger.info('已经达到最后一页了')
                 break
 
             page_index += 1
-            retry = False
+
             await asyncio.sleep(0.8)
+
+# async def main():
+#     shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
+#     for shop_name in shop_name_list:
+#         spider_socket = SMTStockSpider(shop_name)
+#         await spider_socket.run()
+#
+#
+# if __name__ == '__main__':
+#     asyncio.run(main())

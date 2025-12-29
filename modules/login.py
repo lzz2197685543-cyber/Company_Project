@@ -3,8 +3,48 @@ import json
 from pathlib import Path
 from datetime import datetime
 import requests
+import asyncio
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
+
+# ✅ AliExpress / Ali 系 cookies 白名单
+COOKIE_WHITELIST = {
+    'cna',
+    '_ga',
+    '_ga_VED1YSGNC7',
+    '_ga_save',
+    '_uetvid',
+    'ali_apache_id',
+    'lzd_cid',
+    'x_router_us_f',
+    'aep_usuc_f',
+    'tfstk',
+    '_lang',
+    'xman_us_f',
+    'intl_common_forever',
+    'X-XSRF-TOKEN',
+    'SCMLOCALE',
+    'locale',
+    'WDK_SESSID',
+    'isg',
+    'gmp_sid',
+    '_bl_uid',
+    '_tb_token_',
+    'acs_usuc_t',
+    'bx_s_t',
+    'global_seller_sid',
+    'xman_us_t',
+    'xman_t',
+    'xman_f',
+    'sgcookie',
+    'intl_locale',
+    '_m_h5_tk',
+    '_m_h5_tk_enc',
+    '_baxia_sec_cookie_',
+}
+
+
+
 
 
 class SimpleLogin:
@@ -17,6 +57,16 @@ class SimpleLogin:
         self.shop_name = shop_name
         self.channel_id = channel_id
         self.cloud_account_id = cloud_account_id
+
+    def filter_cookies(self,cookies_dict: dict) -> dict:
+        """
+        只保留白名单中的 cookies（供 requests / aiohttp 使用）
+        """
+        return {
+            k: v
+            for k, v in cookies_dict.items()
+            if k in COOKIE_WHITELIST and v
+        }
 
     def start_cloud_browser(self) -> str:
         url = "http://localhost:50213/api/v2/browser/start"
@@ -43,6 +93,7 @@ class SimpleLogin:
             print(f"[{self.shop_name}] 云浏览器已关闭")
         except Exception as e:
             print(f"[{self.shop_name}] 关闭云浏览器失败: {e}")
+
 
     async def login_and_save_cookies(self) -> bool:
         COOKIE_DIR.mkdir(parents=True, exist_ok=True)
@@ -82,9 +133,21 @@ class SimpleLogin:
                 print(f"{self.shop_name} 登录失败")
                 return False
 
+            # 跳转到库存页面
+
+            await asyncio.sleep(3)
+
             # ✅ 获取 cookie
-            cookies = await context.cookies()
-            cookies_dict = {c["name"]: c["value"] for c in cookies}
+            raw_cookies = await context.cookies()
+
+            # 先转 dict
+            cookies_dict = {
+                cookie['name']: cookie['value']
+                for cookie in raw_cookies
+            }
+
+            # ✅ 再做过滤（核心）
+            cookies_dict = self.filter_cookies(cookies_dict)
 
             cookie_data = {
                 "shop_name": self.shop_name,
