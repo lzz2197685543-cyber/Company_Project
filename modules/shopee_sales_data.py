@@ -65,6 +65,7 @@ class Shopee:
             )
 
             text = resp.text
+            print(text[:200])
 
             # ⭐ 关键：直接识别 user not found
             if "user not found" in text.lower():
@@ -193,6 +194,7 @@ class Shopee:
                     self.logger.error(
                         f"[{self.shop_name}] 第 {page} 页请求异常（{attempt}/{max_retry}）：{e}"
                     )
+                    await self.cookie_manager.refresh()
                     await asyncio.sleep(2)
 
             # ---------- retry 全失败 ----------

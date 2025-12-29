@@ -45,14 +45,7 @@ response = requests.post(
 )
 
 import time
-import pandas as pd
 
-data_list = response.json()['data']['list']
-result = []
-
-
-import time
-import pandas as pd
 
 data_list = response.json()['data']['list']
 
@@ -68,10 +61,9 @@ for item in data_list:
         "总计对账金额(USD)": "",  # 需要汇率转换
         "总计调整金额(CNY)": item.get('adjustment_amount', '0.00'),
         "总计调整金额(USD)": "",  # 需要汇率转换
-        # 以下明细字段在JSON中缺失，暂时留空或填0
         "退货退款(CNY)": "",
         "退货退款(USD)": "",
-        "卖家返利(CNY)": "",
+        "卖家返利(CNY)": item.get('adjustment_amount', '0.00'),
         "卖家返利(USD)": "",
         "总打款金额(CNY)": item.get('total_payment_amount', '0.00'),
         "总打款金额(USD)": item.get('total_payment_amount_usd', ''),
