@@ -7,5 +7,6 @@
     <orderEntry type="module" module-name="SMT" />
     <orderEntry type="module" module-name="TK" />
     <orderEntry type="module" module-name="Shopee" />
+    <orderEntry type="module" module-name="Shein" />
   </component>
 </module>

@@ -83,13 +83,13 @@ class Temu_Funds_Restriction:
                 headers=self.headers,
                 json=json_data,
             )
-            freeze_ts=response.json()['result']['detailsRows'][0]['freezeStartTime']
+            freeze_ts=response.json()['sale']['detailsRows'][0]['freezeStartTime']
             return datetime.fromtimestamp(freeze_ts / 1000)
         except Exception as e:
             self.logger.error(f'获取限制时间失败')
 
     def parse_data(self, json_data):
-        rules = json_data.get('result', {}).get('rules', [])
+        rules = json_data.get('sale', {}).get('rules', [])
 
         if not rules:
             self.logger.info("暂无资金限制数据")

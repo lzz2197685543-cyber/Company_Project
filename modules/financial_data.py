@@ -67,7 +67,7 @@ class Temu_Financial_Data:
     # ======================
     def parse_data(self, json_data):
         try:
-            result_list = json_data["result"]["resultList"]
+            result_list = json_data["sale"]["resultList"]
         except (KeyError, TypeError):
             self.logger.error("接口数据结构异常")
             return []

@@ -117,7 +117,7 @@ class Temu_ViolationRecored:
             return None
 
     def parse_data(self, json_data):
-        records = json_data.get("result", {}).get("list", [])
+        records = json_data.get("sale", {}).get("list", [])
 
         if not records:
             self.logger.info("暂无违规数据")
