@@ -7,6 +7,7 @@ from datetime import datetime,timedelta
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
+from utils.dingtalk_bot import ding_bot_send
 import re
 
 FINANCIAL_DIR = (
@@ -540,6 +541,7 @@ class ShopeeLogin_FinancialData:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - financial任务登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
