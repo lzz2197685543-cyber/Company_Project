@@ -7,22 +7,24 @@ from datetime import datetime
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
+from datetime import datetime,timedelta
 import time
+from utils.dingtalk_bot import ding_bot_send
 
 FINANCIAL_DIR = (
     Path(__file__).resolve().parent.parent
     / "data"
     / "financial"
+    / "tk"
 )
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
-
-
+"""tk的财务数据的下载"""
 class TKLoginDownloadData:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
-    def __init__(self, name, account,start_date,end_date):
+    def __init__(self, name, account,month_str):
         self.name = name
         self.hub_id = str(account["hubId"])
         cred = account["credentials"]
@@ -31,13 +33,25 @@ class TKLoginDownloadData:
 
         self.logger = get_logger(f"login")
 
-        self.start_date = start_date
-        self.end_date = end_date
-        self.month_str = end_date[:7]
+
+        self.month_str = month_str
         self.debug_port = None
         self.playwright = None
         self.browser = None
         self.page = None
+    def get_month_date_range(self, month_str: str) -> dict:
+        year, month = map(int, month_str.split("-"))
+
+        start = datetime(year, month, 1)
+        if month == 12:
+            end = datetime(year + 1, 1, 1) - timedelta(seconds=1)
+        else:
+            end = datetime(year, month + 1, 1) - timedelta(seconds=1)
+
+        return {
+            "start_date": start.strftime("%Y-%m-%d"),
+            "end_date": end.strftime("%Y-%m-%d"),
+        }
 
     # ----------- 浏览器 -----------
     async def start_browser(self):
@@ -170,7 +184,26 @@ class TKLoginDownloadData:
             self.logger.error(f"{self.name} - 登录失败: {e}")
             return False
 
+    # 关闭 TikTok 商家中心提示弹框（了解了 / 知道了 / 我知道了）
+    async def close_tips_popup_if_exists(self, frame):
+        """
+        关闭 TikTok 商家中心提示弹框（了解了 / 知道了 / 我知道了）
+        """
+        try:
+            btn = frame.locator(
+                'button:has-text("了解了"),'
+                'button:has-text("知道了"),'
+                'button:has-text("我知道了")'
+            )
 
+            if await btn.count() > 0:
+                await btn.first.click(force=True)
+                await frame.wait_for_timeout(300)
+                self.logger.info("已关闭提示弹框")
+        except Exception:
+            pass
+
+    # 进入frame页面
     async def wait_wallet_frame(self, page, timeout=30_000):
         """
         等待钱包 iframe 出现并返回 frame
@@ -186,6 +219,7 @@ class TKLoginDownloadData:
 
         raise TimeoutError("等待钱包 iframe 超时")
 
+    # 清空日期
     async def clear_arco_range_if_needed(self,frame):
         """
         如果 RangePicker 里已有值，先点击清空叉号
@@ -199,7 +233,11 @@ class TKLoginDownloadData:
             except Exception:
                 pass
 
+    # 输入日期
     async def input_arco_range(self,frame):
+
+        start_date=self.get_month_date_range(month_str=self.month_str)["start_date"]
+        end_date=self.get_month_date_range(month_str=self.month_str)["end_date"]
         # 等 RangePicker 出现
         await frame.wait_for_selector(".arco-picker-range")
 
@@ -209,7 +247,7 @@ class TKLoginDownloadData:
         )
         await start_input.wait_for(state="visible")
         await start_input.click()
-        await start_input.fill(self.start_date)
+        await start_input.fill(start_date)
         await frame.wait_for_timeout(150)
 
         # 结束日期
@@ -217,40 +255,50 @@ class TKLoginDownloadData:
             '.arco-picker-range input[placeholder="结束日期"]'
         )
         await end_input.click()
-        await end_input.fill(self.end_date)
+        await end_input.fill(end_date)
 
         # 触发 Arco 内部校验（关键）
         await end_input.press("Enter")
         await frame.wait_for_timeout(300)
 
+    # 输入交易类型
     async def select_trade_type(self, frame, value: str):
-        """
-        Arco Select - 交易类型选择（稳定版）
-        """
+        select = frame.locator(".arco-select").first
+        input_box = select.locator(".arco-select-view-input")
 
-        select_input = frame.locator(".arco-select-view-input").nth(0)
+        # 1️⃣ 打开 Select
+        await input_box.wait_for(state="visible", timeout=10_000)
+        await input_box.click(force=True)
 
-        # 1️⃣ 等待并点击
-        await select_input.wait_for(state="visible", timeout=10_000)
-        await select_input.click()
+        # 2️⃣ 清空旧值
+        await input_box.press("Control+A")
+        await input_box.press("Backspace")
 
-        # 2️⃣ 清空旧值（非常关键）
-        await select_input.press("Control+A")
-        await select_input.press("Backspace")
+        # 3️⃣ 输入搜索
+        await input_box.type(value, delay=80)
 
-        # 3️⃣ 输入新值
-        await select_input.fill(value)
+        # 4️⃣ 等 option 出现（关键修复点）
+        option = frame.locator(
+            ".arco-select-option",
+            has_text=value
+        ).first
 
-        # 4️⃣ 回车确认（触发真正选中）
-        await select_input.press("Enter")
+        await option.wait_for(state="visible", timeout=10_000)
 
-        self.logger.info(f"交易类型已选择（Enter）：{value}")
+        # 5️⃣ 点击 option
+        await option.click(force=True)
 
+        # 6️⃣ 等内部 state 稳定
+        await frame.wait_for_timeout(200)
+
+        self.logger.info(f"交易类型已选中：{value}")
+
+    # 导出并保存
     async def export_and_save(self, frame, trade_type_name):
         """
         点击导出并保存文件到 data/financial
         """
-        filename = f"{self.name}_{self.month_str}_{trade_type_name}.xlsx"
+        filename = f"{self.name}_{self.month_str.split('-')[1]}_{trade_type_name}.xlsx"
         save_path = FINANCIAL_DIR / filename
 
         self.logger.info(f"准备导出文件：{filename}")
@@ -265,29 +313,57 @@ class TKLoginDownloadData:
 
         self.logger.info(f"文件已保存：{save_path}")
 
+    # 等待点击搜索之后稳定
+    async def wait_arco_loading_done(self,frame, timeout=15_000):
+        try:
+            await frame.wait_for_selector(
+                "div.arco-spin.arco-spin-loading",
+                timeout=2_000
+            )
+        except:
+            pass
+
+        await frame.wait_for_selector(
+            "div.arco-spin.arco-spin-loading",
+            state="hidden",
+            timeout=timeout
+        )
+
     async def search_and_export_by_trade_type(self,frame,trade_type_value):
         """
         选择交易类型 → 搜索 → 导出
         """
         self.logger.info(f"开始处理交易类型：{trade_type_value}")
 
+        await asyncio.sleep(0.5)
+
         # 1️⃣ 选择交易类型
         await self.select_trade_type(frame, trade_type_value)
+        await asyncio.sleep(0.5)
 
         # 2️⃣ 点击搜索
-        await frame.locator('button:has-text("搜索")').click()
+        search_btn= frame.locator('button:has-text("搜索")')
+        await search_btn.wait_for(state="visible", timeout=10_000)
+        await search_btn.click()
+
+        await self.wait_arco_loading_done(frame, timeout=15_000)
+
 
         # 等表格刷新（比 sleep 稳定）
-        await frame.wait_for_selector("tbody", timeout=10_000)
+        await frame.wait_for_selector("tbody tr", timeout=10_000)
 
-        rows = self.page.locator("tbody tr")
+        # 判断是否有数据
+        rows = frame.locator("tbody tr td")
         row_count = await rows.count()
+        self.logger.info(f'检测到有{row_count}条')
 
         if row_count <= 1:
             self.logger.info(
-                f"{self.name} - 无费用明细数据，跳过导出"
+                f"{self.name} - 无{trade_type_value}数据，跳过导出"
             )
             return True  # ⭐ 核心：直接结束
+
+        await self.close_tips_popup_if_exists(frame)
 
         # 3️⃣ 导出
         await self.export_and_save(frame, trade_type_value)
@@ -340,13 +416,16 @@ class TKLoginDownloadData:
 
         inputs = self.page.locator(".arco-picker-range input")
 
+        start_date = self.get_month_date_range(month_str=self.month_str)["start_date"]
+        end_date = self.get_month_date_range(month_str=self.month_str)["end_date"]
+
         # 开始日期
         await inputs.nth(0).click()
-        await inputs.nth(0).fill(self.start_date)
+        await inputs.nth(0).fill(start_date)
 
         # 结束日期
         await inputs.nth(1).click()
-        await inputs.nth(1).fill(self.end_date)
+        await inputs.nth(1).fill(end_date)
 
         # 触发 Arco 内部校验（非常重要）
         await inputs.nth(1).press("Enter")
@@ -383,6 +462,7 @@ class TKLoginDownloadData:
         rows = self.page.locator("tbody tr")
         row_count = await rows.count()
 
+
         if row_count <=1:
             self.logger.info(
                 f"{self.name} - 无费用明细数据，跳过导出"
@@ -394,7 +474,7 @@ class TKLoginDownloadData:
         await export_btn.click(force=True)
 
         self.logger.info(
-            f"{self.name} - 费用明细导出任务已提交（{self.start_date} ~ {self.end_date}）"
+            f"{self.name} - 费用明细导出任务已提交-{self.month_str}"
         )
 
         return True
@@ -453,23 +533,24 @@ class TKLoginDownloadData:
         if not await self.login():
             raise Exception("login 失败")
 
+        if not await self.export_wallet_financial_records():
+            raise Exception("export_wallet_financial_records 失败")
+
         if not await self.fetch_fee_center_details():
             raise Exception('fetch_fee_center_details 失败')
 
         # 2️⃣ 去下载中心，等待并下载最新完成任务
         save_path = (
                 FINANCIAL_DIR
-                / f"{self.name}_{self.month_str}_费用明细.xlsx"
+                / f"{self.name}_{self.month_str.split('-')[1]}_费用明细.xlsx"
         )
 
         if not await self.download_latest_finished_task(save_path):
             raise Exception("download_latest_finished_task 失败")
 
-        if not await self.export_wallet_financial_records():
-            raise Exception("export_wallet_financial_records 失败")
+
 
         return True
-
 
     # ----------- 总流程 -----------
     async def run(self, max_retry=3):
@@ -497,6 +578,7 @@ class TKLoginDownloadData:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - financial任务中登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -510,14 +592,13 @@ class TKLoginDownloadData:
 
 
 # async def main():
-#     start_date = "2025-11-01"
-#     end_date = "2025-12-26"
 #     name_list = ["TK全托1401店", "TK全托408-LXZ", "TK全托407-huidan", "TK全托406-yuedongwan", "TK全托405-huanchuang",
 #                  "TK全托404-kedi", "TK全托403-juyule", "TK全托401-xiyue", "TK全托402-quzhi", "TK全托1402店"]
+#     month_str='2025-12'
 #     for name in name_list:
 #         account = get_shop_config(name)
 #
-#         t = TKLoginDownloadData(name, account,start_date,end_date)
+#         t = TKLoginDownloadData(name, account,month_str)
 #         await t.run()
 #
 #
