@@ -50,7 +50,7 @@ import time
 data_list = response.json()['data']['list']
 
 for item in data_list:
-    print(item)
+    # print(item)
     row = {
         "付款单ID": item.get('payment_request_id', ''),
         "公司名称": item.get('seller_name', ''),
