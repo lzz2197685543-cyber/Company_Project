@@ -4,14 +4,15 @@ from utils.logger import get_logger
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import asyncio
-import csv
+from utils.dingtalk_bot import ding_bot_send
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
 
 """shein费用"""
 
 class Shein_Financial_Data_Feiyong:
-    def __init__(self,shop_name,start_time,end_time):
-        self.start_time=start_time
-        self.end_time=end_time
+    def __init__(self,shop_name,month_str):
+        self.month_str=month_str
         self.shop_name=shop_name
         self.cookie_manager = CookieManager(shop_name)
         self.cookies = None
@@ -26,12 +27,33 @@ class Shein_Financial_Data_Feiyong:
 
         self.logger = get_logger("financial_data_feiyong")
 
+    def get_month_date_range(self, month_str: str) -> dict:
+        year, month = map(int, month_str.split("-"))
+
+        start = datetime(year, month, 1)
+        if month == 12:
+            end = datetime(year + 1, 1, 1) - timedelta(seconds=1)
+        else:
+            end = datetime(year, month + 1, 1) - timedelta(seconds=1)
+
+        return {
+            "start_date": start.strftime("%Y-%m-%d"),
+            "end_date": end.strftime("%Y-%m-%d"),
+
+        }
+
+    # ======================
+    # 时间转换
+    # ======================
+
     def _format_time_range(self):
         """
         将 YYYY-MM-DD 转成接口需要的时间格式
         """
-        start = f"{self.start_time} 00:00:00"
-        end = f"{self.end_time} 23:59:59"
+        start_time = self.get_month_date_range(self.month_str)["start_date"]
+        end_time = self.get_month_date_range(self.month_str)["end_date"]
+        start = f"{start_time} 00:00:00"
+        end = f"{end_time} 23:59:59"
         return start, end
 
     def is_cookie_invalid(self, json_data):
@@ -68,6 +90,7 @@ class Shein_Financial_Data_Feiyong:
                 headers=self.headers,
                 json=json_data,
             )
+            print(response.text[:200])
             return response.json()
         except Exception as e:
             self.logger.error(f'请求响应失败:{e}')
@@ -113,14 +136,27 @@ class Shein_Financial_Data_Feiyong:
         out_dir = Path(__file__).resolve().parent.parent / "data" / "financial" / "shein"
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        fname = out_dir / f"{self.shop_name}_{datetime.now().strftime('%m')}_费用.csv"
-        exists = fname.exists()
+        fname = out_dir / f"{self.shop_name}_{datetime.now().strftime('%m')}_费用.xlsx"
 
-        with open(fname, "a", newline="", encoding="utf-8-sig") as f:
-            writer = csv.DictWriter(f, fieldnames=items[0].keys())
-            if not exists:
-                writer.writeheader()
-            writer.writerows(items)
+        wb = Workbook()
+        ws = wb.active
+
+        headers = list(items[0].keys())
+        ws.append(headers)
+
+        for item in items:
+            ws.append(list(item.values()))
+
+        # ⭐ 自动列宽
+        for col_idx, col_name in enumerate(headers, 1):
+            max_length = len(str(col_name))
+            for row in items:
+                value = str(row.get(col_name, ""))
+                max_length = max(max_length, len(value))
+
+            ws.column_dimensions[get_column_letter(col_idx)].width = max_length + 2
+
+        wb.save(fname)
 
     async def get_all_page(self):
         self.logger.info(f"开始爬取店铺-------------{self.shop_name}------------")
@@ -147,6 +183,7 @@ class Shein_Financial_Data_Feiyong:
                     await asyncio.sleep(2)
             if not json_data:
                 self.logger.error(f"[{self.shop_name}] 重试失败，终止任务")
+                ding_bot_send('me', f"[{self.shop_name}] --financial任务重试失败，终止任务")
                 return
 
             items = self.parse_data(json_data)
@@ -172,10 +209,9 @@ class Shein_Financial_Data_Feiyong:
 
 # async def run_shein_financial():
 #     name_list = ["希音全托301-yijia", "希音全托302-juyule", "希音全托303-kedi", "希音全托304-xiyue"]
-#     start_time = "2025-12-01"
-#     end_time = "2025-12-28"
+#     month_str='2025-12'
 #     for shop_name in name_list:
-#         shein = Shein_Financial_Data_Feiyong(shop_name,start_time,end_time)
+#         shein = Shein_Financial_Data_Feiyong(shop_name,month_str)
 #         await shein.get_all_page()
 #
 #
