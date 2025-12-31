@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import requests
 import asyncio
+from utils.cookie_manager import get_shop_config
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 
@@ -41,6 +42,7 @@ COOKIE_WHITELIST = {
     '_m_h5_tk',
     '_m_h5_tk_enc',
     '_baxia_sec_cookie_',
+    "ALIPAYINTLJSESSIONID"
 }
 
 
@@ -50,13 +52,14 @@ COOKIE_WHITELIST = {
 class SimpleLogin:
     def __init__(
         self,
-        shop_name,
-        channel_id,
-        cloud_account_id,   # 👈 云浏览器环境ID
+        shop_name
     ):
         self.shop_name = shop_name
-        self.channel_id = channel_id
-        self.cloud_account_id = cloud_account_id
+        cfg = get_shop_config(shop_name)
+        self.channel_id = cfg["channelId"]
+        self.cloud_account_id = cfg["cloud_account_id"]
+        self.username = cfg["account"]
+        self.password = cfg["password"]
 
     def filter_cookies(self,cookies_dict: dict) -> dict:
         """
@@ -123,6 +126,16 @@ class SimpleLogin:
             # ⚠️ 如果已经在登录页，可以不跳
             if "login" not in page.url:
                 await page.goto(login_url, wait_until="domcontentloaded")
+
+            # 输入账号
+            user_input=page.locator('#loginName')
+            await user_input.wait_for(state='visible',timeout=15_000)
+            await user_input.fill(self.username)
+
+            # 输入密码
+            password_input=page.locator('#password')
+            await password_input.wait_for(state='visible',timeout=15_000)
+            await password_input.fill(self.password)
 
             await page.click(
                 'button[type="button"]:has-text("登录")')

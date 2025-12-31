@@ -34,7 +34,7 @@ def upload_multiple_records(config,records):
         token_manager=token_manager
     )
 
-    print(f"准备上传 {len(records)} 条记录...")
+    logger.info(f"准备上传 {len(records)} 条记录...")
 
     # 批量上传，每批50条，批次间延迟0.2秒，失败时重试2次
     results = uploader.upload_batch_records(records, batch_size=50, delay=0.2, max_retries=2)
@@ -43,15 +43,15 @@ def upload_multiple_records(config,records):
     successful_batches = [r for r in results if r.get("success")]
     failed_batches = [r for r in results if not r.get("success")]
 
-    print(f"\n上传统计:")
-    print(f"总批次: {len(results)}")
-    print(f"成功批次: {len(successful_batches)}")
-    print(f"失败批次: {len(failed_batches)}")
+    logger.info(f"\n上传统计:")
+    logger.info(f"总批次: {len(results)}")
+    logger.info(f"成功批次: {len(successful_batches)}")
+    logger.info(f"失败批次: {len(failed_batches)}")
 
     if failed_batches:
-        print(f"\n失败详情:")
+        logger.info(f"\n失败详情:")
         for i, failed in enumerate(failed_batches):
-            print(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
+            logger.info(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
 
     return results
 
@@ -144,7 +144,7 @@ async def main():
     test_delete_records(config)
 
     shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
-    shop_name_list=['SMT202']
+    # shop_name_list=['SMT214']
     for shop_name in shop_name_list:
         logger.info(f'---------------------------------开始爬取店铺--{shop_name}--库存数据-----------------------------------')
         spider_socket = SMTStockSpider(shop_name)

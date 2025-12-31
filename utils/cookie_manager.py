@@ -53,10 +53,8 @@ class CookieManager:
     # ---------- 刷新 ----------
     async def refresh(self):
         login = SimpleLogin(
-            shop_name=self.shop_name,
-            channel_id=self.channel_id,
-            cloud_account_id=self.cloud_account_id,
-        )
+            shop_name=self.shop_name)
+
         ok = await login.login_and_save_cookies()
         if not ok:
             raise RuntimeError(f"[{self.shop_name}] 登录失败")

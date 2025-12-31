@@ -214,7 +214,7 @@ class SMTGoodsSpider:
 
 # async def main():
 #     # shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
-#     shop_name_list=['SMT202']
+#     shop_name_list=['SMT208']
 #     for shop_name in shop_name_list:
 #         spider_socket = SMTGoodsSpider(shop_name)
 #         await spider_socket.run()
