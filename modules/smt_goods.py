@@ -43,7 +43,7 @@ class SMTGoodsSpider:
             return True
 
         # get_info 主动标记
-        if 'FAIL_SYS_TOKEN_EXOIRED' in json_data['ret']:
+        if 'FAIL_SYS_TOKEN_EXOIRED' in json_data['ret'][0]:
             return True
 
         if not isinstance(json_data, dict):

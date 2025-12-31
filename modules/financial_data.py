@@ -8,6 +8,7 @@ from utils.logger import get_logger
 from utils.cookie_manager import get_shop_config
 import math
 import re
+from utils.dingtalk_bot import ding_bot_send
 
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" /"smt"
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
@@ -408,6 +409,7 @@ class SMT_FinancialData:
                     await asyncio.sleep(3)
 
         self.logger.error(f"{self.shop_name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.shop_name} - financial任务登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):

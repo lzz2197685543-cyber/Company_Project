@@ -13,3 +13,17 @@ def get_shop_config(shop_name:str):
     if shop_name not in shops:
         raise ValueError(f"未找到店铺配置: {shop_name}")
     return shops[shop_name]
+
+
+def get_dingtalk_config():
+    """
+    获取钉钉全局配置
+    """
+    config = load_config()
+    dingtalk = config.get("dingding")
+
+    if not dingtalk:
+        raise ValueError("config.json 中未配置 dingtalk")
+
+    return dingtalk
+
