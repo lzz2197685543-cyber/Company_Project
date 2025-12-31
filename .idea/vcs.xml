@@ -7,5 +7,6 @@
     <mapping directory="$PROJECT_DIR$/../Shopee" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../TK" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Temu_jst" vcs="Git" />
   </component>
 </project>

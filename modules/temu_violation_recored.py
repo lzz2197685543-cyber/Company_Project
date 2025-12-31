@@ -76,7 +76,7 @@ class Temu_ViolationRecored:
                 json=json_data,
                 timeout=10,
             )
-
+            print(response.text[:200])
             # self.logger.info(response.text)
 
             # ❗ 不管 status code，先尝试解析 JSON
@@ -284,5 +284,5 @@ class Temu_ViolationRecored:
 
 
 # if __name__ == '__main__':
-#     t = Temu_ViolationRecored("106-Temu全托管")
+#     t = Temu_ViolationRecored("102-Temu全托管")
 #     asyncio.run(t.run())

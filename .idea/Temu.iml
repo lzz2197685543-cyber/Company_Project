@@ -8,5 +8,6 @@
     <orderEntry type="module" module-name="TK" />
     <orderEntry type="module" module-name="Shopee" />
     <orderEntry type="module" module-name="Shein" />
+    <orderEntry type="module" module-name="Temu_jst" />
   </component>
 </module>

@@ -4,13 +4,14 @@ from utils.logger import get_logger
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import asyncio
-import csv
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
+from openpyxl import load_workbook
 
 class Temu_Financial_Data:
-    def __init__(self, shop_name, start_time, end_time):
+    def __init__(self, shop_name, month_str):
+        self.month_str = month_str
         self.shop_name = shop_name
-        self.start_time = start_time
-        self.end_time = end_time
 
         self.headers = {
             'origin': 'https://seller.kuajingmaihuo.com',
@@ -22,16 +23,34 @@ class Temu_Financial_Data:
         self.cookie_manager = CookieManager(shop_name)
         self.logger = get_logger("financial_data")
 
+    def get_month_date_range(self, month_str: str) -> dict:
+        year, month = map(int, month_str.split("-"))
+
+        start = datetime(year, month, 1)
+        if month == 12:
+            end = datetime(year + 1, 1, 1) - timedelta(seconds=1)
+        else:
+            end = datetime(year, month + 1, 1) - timedelta(seconds=1)
+
+        return {
+            "start_date": start.strftime("%Y-%m-%d"),
+            "end_date": end.strftime("%Y-%m-%d"),
+
+        }
+
     # ======================
     # 时间转换
     # ======================
     def date_range_to_timestamp_ms(self, tz_offset=8):
+        start_time=self.get_month_date_range(self.month_str)['start_date']
+        end_time=self.get_month_date_range(self.month_str)['end_date']
+
         tz = timezone(timedelta(hours=tz_offset))
 
-        start_dt = datetime.strptime(self.start_time, "%Y-%m-%d").replace(
+        start_dt = datetime.strptime(start_time, "%Y-%m-%d").replace(
             hour=0, minute=0, second=0, tzinfo=tz
         )
-        end_dt = datetime.strptime(self.end_time, "%Y-%m-%d").replace(
+        end_dt = datetime.strptime(end_time, "%Y-%m-%d").replace(
             hour=23, minute=59, second=59, tzinfo=tz
         )
 
@@ -58,6 +77,7 @@ class Temu_Financial_Data:
             json=payload,
             timeout=15
         )
+        print(response.text[:200])
 
         response.raise_for_status()
         return response.json()
@@ -67,25 +87,30 @@ class Temu_Financial_Data:
     # ======================
     def parse_data(self, json_data):
         try:
-            result_list = json_data["sale"]["resultList"]
+            result_list = json_data["result"]["resultList"]
         except (KeyError, TypeError):
             self.logger.error("接口数据结构异常")
             return []
 
+
         items = []
         for i in result_list:
+            amount_data = i.get("amountFormat", {})
+            value = int(amount_data.get("value", 0))
+            sign = amount_data.get("sign", "")
             items.append({
                 "财务时间": i.get("transactionTime"),
                 "财务类型": i.get("fundTypeDesc"),
                 "币种": i.get("currencyType"),
-                "收支金额": i.get("amount"),
+                "收支金额": sign + (str(value / 100) if value != 0 else "0"),
                 "备注": i.get("remark", "")
             })
         return items
 
     # ======================
-    # 保存 CSV
+    # 保存 xlsx
     # ======================
+
     def save_items(self, items):
         if not items:
             return
@@ -93,14 +118,31 @@ class Temu_Financial_Data:
         out_dir = Path(__file__).resolve().parent.parent / "data" / "financial" / "temu"
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        fname = out_dir / f"{self.shop_name}_{datetime.now().strftime('%m')}_对账单.csv"
-        exists = fname.exists()
+        fname = out_dir / f"{self.shop_name}_{self.month_str.split('-')[1]}_对账单.xlsx"
 
-        with open(fname, "a", newline="", encoding="utf-8-sig") as f:
-            writer = csv.DictWriter(f, fieldnames=items[0].keys())
-            if not exists:
-                writer.writeheader()
-            writer.writerows(items)
+        if fname.exists():
+            wb = load_workbook(fname)
+            ws = wb.active
+        else:
+            wb = Workbook()
+            ws = wb.active
+            headers = list(items[0].keys())
+            ws.append(headers)
+
+        headers = [cell.value for cell in ws[1]]
+
+        for item in items:
+            ws.append([item.get(h, "") for h in headers])
+
+        # 自动列宽
+        for col_idx, col_name in enumerate(headers, 1):
+            max_length = len(str(col_name))
+            for row in ws.iter_rows(min_row=2, min_col=col_idx, max_col=col_idx):
+                for cell in row:
+                    max_length = max(max_length, len(str(cell.value)))
+            ws.column_dimensions[get_column_letter(col_idx)].width = max_length + 2
+
+        wb.save(fname)
 
     # ======================
     # 主流程
@@ -138,6 +180,7 @@ class Temu_Financial_Data:
                 return
 
             items = self.parse_data(json_data)
+            print(f"第 {page} 页返回数量: {len(json_data['result']['resultList'])}")
             self.save_items(items)
 
             self.logger.info(f"店铺-{self.shop_name}-第 {page} 页保存成功")
@@ -149,10 +192,9 @@ class Temu_Financial_Data:
             page += 1
 
 
-# if __name__ == '__main__':
-#     start_time='2025-11-01'
-#     end_time='2025-11-30'
-#     t=Temu_Financial_Data("106-Temu全托管",start_time,end_time)
-#     asyncio.run(t.run())
+if __name__ == '__main__':
+    month_str='2025-12'
+    t=Temu_Financial_Data("102-Temu全托管",month_str)
+    asyncio.run(t.run())
 
 

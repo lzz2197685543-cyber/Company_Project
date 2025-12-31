@@ -47,6 +47,7 @@ class Temu_Funds_Restriction:
                 headers=self.headers,
                 json=json_data
             )
+            print(response.text[:200])
             try:
                 data = response.json()
             except ValueError:
@@ -83,13 +84,14 @@ class Temu_Funds_Restriction:
                 headers=self.headers,
                 json=json_data,
             )
-            freeze_ts=response.json()['sale']['detailsRows'][0]['freezeStartTime']
+            print(response.text[:200])
+            freeze_ts=response.json()['result']['detailsRows'][0]['freezeStartTime']
             return datetime.fromtimestamp(freeze_ts / 1000)
         except Exception as e:
             self.logger.error(f'获取限制时间失败')
 
     def parse_data(self, json_data):
-        rules = json_data.get('sale', {}).get('rules', [])
+        rules = json_data.get("result", {}).get('rules', [])
 
         if not rules:
             self.logger.info("暂无资金限制数据")
@@ -105,7 +107,7 @@ class Temu_Funds_Restriction:
                     '限制时间': self.get_detail_info(i['frozenType']),
                     '数据抓取时间': datetime.now(),
                 }
-
+                # print(item)
 
                 self.save_record(item)
 
@@ -208,7 +210,7 @@ class Temu_Funds_Restriction:
 
         self.create_table()   # ✅【必须调用】
 
-        for attempt in range(1):
+        for attempt in range(3):
             cookies, shop_id = await self.cookie_manager.get_auth()
             json_data = self.get_info(cookies, shop_id)
 
@@ -232,7 +234,7 @@ class Temu_Funds_Restriction:
             return
 
 # if __name__ == '__main__':
-#     t = Temu_Funds_Restriction("103-Temu全托管")
+#     t = Temu_Funds_Restriction("102-Temu全托管")
 #     asyncio.run(t.run())
 
 
