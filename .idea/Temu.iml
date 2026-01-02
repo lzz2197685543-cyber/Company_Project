@@ -9,5 +9,10 @@
     <orderEntry type="module" module-name="Shopee" />
     <orderEntry type="module" module-name="Shein" />
     <orderEntry type="module" module-name="Temu_jst" />
+    <orderEntry type="module" module-name="New_Ymx" />
+    <orderEntry type="module" module-name="New_Temu" />
+    <orderEntry type="module" module-name="New_1688" />
+    <orderEntry type="module" module-name="SMT_sale" />
+    <orderEntry type="module" module-name="Temu_jst1" />
   </component>
 </module>
