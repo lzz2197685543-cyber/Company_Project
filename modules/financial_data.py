@@ -452,6 +452,7 @@ class Temu_Financial_Data:
             self.logger.info(f"✅ {self.name} - 所有财务数据下载完成")
         else:
             self.logger.warning(f"⚠️ {self.name} - 部分财务数据下载失败")
+            ding_bot_send('me',f"⚠️ {self.name} - 部分财务数据下载失败")
 
         return all_success
 
