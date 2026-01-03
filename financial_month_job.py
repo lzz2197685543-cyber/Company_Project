@@ -1,8 +1,9 @@
-from modules.financial_data_request import Temu_Financial_Data
+from modules.financial_data import Temu_Financial_Data
 import asyncio
 import time
 from utils.logger import get_logger
 from datetime import datetime
+from utils.config_loader import  get_shop_config
 
 logger = get_logger("financial_data")
 
@@ -38,15 +39,20 @@ if __name__ == '__main__':
     logger.info(f'正在下载{month_str}的数据')
     shop_name_list = [
        "2108-Temu全托管","2107-Temu全托管", "2106-Temu全托管", "2105-Temu全托管",  "2103-Temu全托管","2102-Temu全托管","2101-Temu全托管KA",
-        "112-Temu全托管", "151-Temu全托管家居",
+        "112-Temu全托管",
         "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管","1105-Temu全托管","1104-Temu全托管","1103-Temu全托管", "1102-Temu全托管","1101-Temu全托管",
         "110-Temu全托管KA","109-Temu全托管KA", "108-Temu全托管","107-Temu全托管", "106-Temu全托管","105-Temu全托管", "104-Temu全托管","103-Temu全托管", "102-Temu全托管","101-Temu全托管",
     ]
     for shop_name in shop_name_list:
-        t=Temu_Financial_Data(shop_name,month_str)
+        account = get_shop_config(shop_name)
+        t=Temu_Financial_Data(shop_name,account,month_str)
         asyncio.run(t.run())
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
 
-    # "107-Temu全托管" "2105,2018" "151-Temu全托管家居"
+
+# 未检测到可导出数据
+"""1107\(跳出去了） 1101(跳出去了）"""
+
+#  部分财务数据下载失败

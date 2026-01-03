@@ -7,14 +7,15 @@ from datetime import datetime,timedelta
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
+from utils.dingtalk_bot import ding_bot_send
 import re
 # 文件保存目录
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" / "temu"
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
+"""跑temu财务数据"""
 
-
-class TemuLogin:
+class Temu_Financial_Data:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
@@ -26,7 +27,7 @@ class TemuLogin:
         self.username = cred["username"]
         self.password = cred["password"]
 
-        self.logger = get_logger(f"login")
+        self.logger = get_logger(f"financial_data")
         self.debug_port = None
         self.playwright = None
         self.browser = None
@@ -350,6 +351,110 @@ class TemuLogin:
         )
         await confirm_btn.click()
 
+    # 等待加载出来，并下载
+    async def load_and_download(self):
+        # 等待导出历史列表出现
+        history_list=self.page.locator('.export-history_list__5Eto0').first
+        await history_list.wait_for(state="visible", timeout=80_000)
+
+        # 取第一个导出记录
+        first_item=history_list.locator('.export-history_right__YGHPV div').first
+
+        # ===== 1. 下载卖家中心文件（在当前页面直接下载）=====
+        self.logger.info(f"{self.name} - 准备下载: 下载账务明细(卖家中心)")
+
+        filename = f"{self.name}_{self.month_str.split('-')[1]}_卖家中心.xlsx"
+        final_path = FINANCIAL_DIR / filename
+
+        # ⭐ 已存在直接跳过
+        if final_path.exists():
+            self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
+        else:
+            download_seller_span = first_item.locator(
+                'span:has-text("下载账务明细(卖家中心)")'
+            ).first
+            await download_seller_span.wait_for(state="visible", timeout=80_000)
+
+            async with self.page.expect_download(timeout=50_000) as download_info:
+                await download_seller_span.click()
+
+            download = await download_info.value
+            await download.save_as(final_path)
+            self.logger.info(f"✅ 文件下载完成: {final_path}")
+
+        await asyncio.sleep(1)
+
+        # ===== 2. 下载全球/欧区/美国文件（需要打开新页面）=====
+        async def download_with_new_page(selector_text, file_prefix):
+            """
+            专门处理需要打开新页面的下载
+            """
+            filename = f"{self.name}_{self.month_str.split('-')[1]}_{file_prefix}.xlsx"
+            final_path = FINANCIAL_DIR / filename
+
+            # ⭐ 已存在直接跳过
+            if final_path.exists():
+                self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
+                return True
+
+            self.logger.info(f"{self.name} - 准备下载: {selector_text}")
+
+            download_element = first_item.locator(
+                f'span:has-text("{selector_text}")'
+            ).first
+            await download_element.wait_for(state="visible", timeout=80_000)
+
+            pages_before = len(self.page.context.pages)
+
+            await download_element.click()
+            await asyncio.sleep(2)
+
+            pages = self.page.context.pages
+            new_page = pages[-1]
+            await new_page.bring_to_front()
+
+            try:
+                await new_page.wait_for_load_state("networkidle")
+
+                async with new_page.expect_download(timeout=80_000) as download_info:
+                    pass
+
+                download = await download_info.value
+                await download.save_as(final_path)
+                self.logger.info(f"✅ 文件下载完成: {final_path}")
+                return True
+
+            except Exception as e:
+                self.logger.error(f"新页面下载失败: {str(e)}")
+                return False
+
+            finally:
+                await new_page.close()
+                await self.page.bring_to_front()
+                await asyncio.sleep(1)
+
+        # 下载其他三个文件
+        download_tasks = [
+            ("下载财务明细(全球)", "全球"),
+            ("下载财务明细(欧区)", "欧区"),
+            ("下载财务明细(美国)", "美国")
+        ]
+
+        results = []
+        for selector_text, file_prefix in download_tasks:
+            result = await download_with_new_page(selector_text, file_prefix)
+            results.append(result)
+
+        # 返回总体结果
+        all_success = all(results)
+
+        if all_success:
+            self.logger.info(f"✅ {self.name} - 所有财务数据下载完成")
+        else:
+            self.logger.warning(f"⚠️ {self.name} - 部分财务数据下载失败")
+
+        return all_success
+
     # 查询，导出，下载
     async def search_export_download(self):
         # 1.点击“查询”按钮
@@ -357,6 +462,8 @@ class TemuLogin:
             'div[data-testid="beast-core-grid-col-wrapper"] button[data-testid="beast-core-button"] >> text=查询'
         )
         await query_btn.click()
+
+        await asyncio.sleep(1.2)
 
         # 2.判断是否有数据
         # 定位元素
@@ -400,32 +507,30 @@ class TemuLogin:
         ).nth(0)
         await confirm_btn.click()
 
-        await asyncio.sleep(5)
+        await asyncio.sleep(0.3)
 
-        # 6.等待导出历史列表刷新（确保最新记录出现）
-        await self.page.wait_for_selector(".export-history_list__5Eto0", timeout=30_000)
+        # 检查是否已创建导出任务
+        # 检查是否有可下载的数据
+        toast = self.page.get_by_text(
+            '数据导出成功',
+            exact=False
+        )
 
-        # 7.获取最新生成的报表记录
-        latest_export = self.page.locator(".export-history_list__5Eto0").first
+        try:
+            # 等待 toast 出现，表示有可下载数据
+            await toast.first.wait_for(state="visible", timeout=12000)
+            self.logger.info("检测到导出数据成功，准备下载报表")
 
-        # 8.循环点击所有下载按钮
-        channels = ["卖家中心", "全球", "欧区", "美国"]
-        for ch in channels:
-            btn = latest_export.locator(f"button >> text=下载财务明细({ch})")
-            await btn.wait_for(state="visible", timeout=10_000)
+            # 继续下载所有报表
+            await self.load_and_download()
 
-            # 构建保存文件路径
-            file_name = f"{self.name}_{self.month_str.split('-')[1]}_{ch}.csv"
-            file_path = FINANCIAL_DIR / file_name
+            self.logger.info("全部报表下载完成")
 
-            # 使用 Playwright 的 download API
-            async with self.page.expect_download() as download_info:
-                await btn.click()
-            download = await download_info.value
-            await download.save_as(str(file_path))
-            self.logger.info(f"{ch} 报表已保存到 {file_path}")
-
-        self.logger.info("全部报表下载完成")
+        except Exception:
+            # 没有检测到 toast，说明没有数据
+            self.logger.info("未检测到可导出数据，结束操作，不下载报表")
+            ding_bot_send('me',f"{self.name}---未检测到可导出数据，结束操作，不下载报表")
+            return
 
     ### 下载财务数据
     async def download_financial_data(self):
@@ -453,7 +558,6 @@ class TemuLogin:
 
         return True
 
-
     # -----------失败可以重新登录------------
     async def run_once(self):
         if not await self.start_browser():
@@ -475,7 +579,6 @@ class TemuLogin:
             raise Exception('download_financial_data 失败')
 
         return True
-
 
     # ----------- 总流程 -----------
     async def run(self, max_retry=3):
@@ -502,6 +605,7 @@ class TemuLogin:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - 在financial任务中登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -513,20 +617,19 @@ class TemuLogin:
         finally:
             await self.stop_browser()
 
-
 async def main():
-    name_list = ['106-Temu全托管']
-    month_str='2025-12'
+    name_list = ['102-Temu全托管']
+    month_str='2025-2'
     for name in name_list:
         account = get_shop_config(name)
-        print(account)
+        # print(account)
 
-        t = TemuLogin(name, account,month_str)
+        t = Temu_Financial_Data(name, account,month_str)
         await t.run()
 
 
-if __name__ == "__main__":
-    asyncio.run(main())
+# if __name__ == "__main__":
+#     asyncio.run(main())
 
 
 
