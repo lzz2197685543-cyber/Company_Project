@@ -132,198 +132,165 @@ class DingTalkTokenManager:
             return None
 
 
-class DingTalkSheetUploader:
-    def __init__(self, base_id: str, sheet_id: str, operator_id: str,token_manager: DingTalkTokenManager = None):
-        """
-        初始化钉钉表格上传器
 
-        Args:
-            base_id: 多维表ID
-            sheet_id: 工作表名称
-            operator_id: 操作人ID
-            token_manager: Token管理器实例
-        """
+class DingTalkSheetUploader:
+    def __init__(self, base_id: str, sheet_id: str, operator_id: str,
+                 token_manager: DingTalkTokenManager = None):
         self.base_id = base_id
         self.sheet_id = sheet_id
         self.operator_id = operator_id
 
-        # 初始化token管理器
-        if token_manager is None:
-            self.token_manager = DingTalkTokenManager()
-        else:
-            self.token_manager = token_manager
-
-        # 获取初始token
+        self.token_manager = token_manager or DingTalkTokenManager()
         self.access_token = self.token_manager.get_access_token()
 
-        # 钉钉API地址
         self.url = f"https://api.dingtalk.com/v1.0/notable/bases/{base_id}/sheets/{sheet_id}/records"
 
-        # 请求头（会在每次请求时更新）
         self.headers = self._get_headers()
-
-        # 请求参数
-        self.params = {
-            "operatorId": operator_id
-        }
+        self.params = {"operatorId": operator_id}
 
     def _get_headers(self) -> Dict[str, str]:
-        """获取请求头，包含当前token"""
         return {
             "Content-Type": "application/json",
-            "x-acs-dingtalk-access-token": self.access_token if self.access_token else ""
+            "x-acs-dingtalk-access-token": self.access_token or ""
         }
 
     def _refresh_token_if_needed(self) -> bool:
-        """检查并刷新token，如果需要"""
         if not self.access_token:
-            print("token为空，尝试刷新...")
             self.access_token = self.token_manager.get_access_token(force_refresh=True)
-            if self.access_token:
-                self.headers = self._get_headers()
-                return True
-            return False
+            if not self.access_token:
+                return False
+            self.headers = self._get_headers()
         return True
 
-    def upload_batch_records(self, records_data: List[Dict[str, Any]], batch_size: int = 100, delay: float = 0.1,max_retries: int = 2) -> List[Dict[str, Any]]:
-        """
-        批量上传多条记录
-        Args:
-            records_data: 多条记录数据列表
-            batch_size: 每次批量上传的记录数（钉钉API可能有单次请求数量限制）
-            delay: 批次间的延迟时间（秒），避免请求频率过高
-            max_retries: 失败时的最大重试次数
+    # ================= 新增：HTTP 错误翻译 =================
+    def _parse_http_error(self, response: requests.Response) -> str:
+        try:
+            data = response.json()
+        except Exception:
+            data = {}
 
-        Returns:
-            所有批次的上传结果列表
-        """
+        code = data.get("code")
+        message = data.get("message", "")
+        status = response.status_code
+
+        if status == 404:
+            return (
+                "❌ 钉钉多维表资源不存在（404）\n"
+                "👉 常见原因：\n"
+                "  1️⃣ sheet_id 不属于该 base_id\n"
+                "  2️⃣ sheet 已被删除 / 复制后 ID 变化\n"
+                f"BaseId: {self.base_id}\n"
+                f"SheetId: {self.sheet_id}\n"
+                f"钉钉返回: {message or code}"
+            )
+
+        if status == 401:
+            return (
+                "❌ 鉴权失败（401）\n"
+                "👉 access_token 失效或错误\n"
+                f"钉钉返回: {message or code}"
+            )
+
+        if status == 403:
+            return (
+                "❌ 无权限操作（403）\n"
+                "👉 operator_id 无该多维表权限\n"
+                f"OperatorId: {self.operator_id}\n"
+                f"钉钉返回: {message or code}"
+            )
+
+        return f"❌ HTTP错误 {status}: {message or code}"
+
+    # ================= 批量上传 =================
+    def upload_batch_records(
+        self,
+        records_data: List[Dict[str, Any]],
+        batch_size: int = 100,
+        delay: float = 0.1,
+        max_retries: int = 2
+    ) -> List[Dict[str, Any]]:
+
         results = []
 
-        # 确保有有效的token
         if not self._refresh_token_if_needed():
-            print("无法获取有效token，终止上传")
             return [{
                 "success": False,
-                "message": "无法获取有效token",
+                "message": "无法获取有效 token",
                 "total_records": len(records_data)
             }]
 
-        # 将数据分成多个批次
         for i in range(0, len(records_data), batch_size):
             batch = records_data[i:i + batch_size]
+            result = self._upload_batch_with_retry(batch, max_retries)
+            results.append(result)
 
-            # 尝试上传批次，支持重试
-            batch_result = self._upload_batch_with_retry(batch, max_retries)
-            results.append(batch_result)
+            print(f"已上传 {min(i + batch_size, len(records_data))}/{len(records_data)} 条记录")
 
-            # 添加延迟，避免请求过于频繁
             if i + batch_size < len(records_data):
                 time.sleep(delay)
 
-            # 打印进度
-            print(f"已上传 {min(i + batch_size, len(records_data))}/{len(records_data)} 条记录")
-
         return results
 
-    def _upload_batch_with_retry(self, batch_data: List[Dict[str, Any]],max_retries: int) -> Dict[str, Any]:
-        """
-        带重试机制的上传批次数据
-
-        Args:
-            batch_data: 批次数据
-            max_retries: 最大重试次数
-
-        Returns:
-            上传结果
-        """
+    def _upload_batch_with_retry(self, batch_data, max_retries):
         for retry in range(max_retries + 1):
             result = self._upload_batch(batch_data)
 
-            # 如果成功或者不是token相关错误，直接返回
             if result["success"]:
                 return result
 
-            # 检查是否是token过期或无效的错误
-            error_message = str(result.get("message", ""))
-            if retry < max_retries and any(keyword in error_message.lower() for keyword in
-                                           ["token", "unauthorized", "auth", "401", "403"]):
-                print(f"检测到token相关错误，尝试刷新token并重试 (第{retry + 1}次重试)")
-
-                # 刷新token
+            msg = str(result.get("message", "")).lower()
+            if retry < max_retries and any(k in msg for k in ["401", "403", "token", "auth"]):
                 self.access_token = self.token_manager.get_access_token(force_refresh=True)
                 if self.access_token:
                     self.headers = self._get_headers()
-                    print("token刷新成功，重新尝试上传")
-                    time.sleep(1)  # 等待一下再重试
+                    time.sleep(1)
                 else:
-                    print("token刷新失败")
                     break
             else:
-                # 不是token错误或者已达最大重试次数
                 break
 
         return result
 
+    # ================= 核心上传 =================
     def _upload_batch(self, batch_data: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """
-        上传一个批次的数据
-
-        Args:
-            batch_data: 一个批次的记录数据
-
-        Returns:
-            批次上传结果
-        """
-        data = {
-            "records": [
-                {"fields": record} for record in batch_data
-            ]
+        payload = {
+            "records": [{"fields": record} for record in batch_data]
         }
 
         try:
             response = requests.post(
-                url=self.url,
+                self.url,
                 headers=self.headers,
                 params=self.params,
-                json=data,
+                json=payload,
                 timeout=30
             )
 
-            response.raise_for_status()
+            if not response.ok:
+                error_msg = self._parse_http_error(response)
+                return {
+                    "success": False,
+                    "status_code": response.status_code,
+                    "message": error_msg,
+                    "batch_size": len(batch_data)
+                }
+
             return {
                 "success": True,
                 "status_code": response.status_code,
-                "data": response.json() if response.status_code == 200 else None,
+                "data": response.json(),
                 "message": f"批次上传成功，共 {len(batch_data)} 条记录",
                 "batch_size": len(batch_data)
             }
 
-        except requests.exceptions.HTTPError as e:
-            status_code = e.response.status_code if e.response else None
-            error_msg = f"HTTP错误 {status_code}: {str(e)}"
-            return {
-                "success": False,
-                "status_code": status_code,
-                "data": None,
-                "message": error_msg,
-                "batch_size": len(batch_data)
-            }
         except requests.exceptions.RequestException as e:
             return {
                 "success": False,
                 "status_code": None,
-                "data": None,
                 "message": f"请求异常: {str(e)}",
                 "batch_size": len(batch_data)
             }
-        except Exception as e:
-            return {
-                "success": False,
-                "status_code": None,
-                "data": None,
-                "message": f"其他异常: {str(e)}",
-                "batch_size": len(batch_data)
-            }
+
 
 
 class DingTalkSheetQuery:
@@ -1055,7 +1022,7 @@ class DingTalkSheetManager:
 
 def query_sheet():
     sheet_manager = DingTalkSheetManager(
-        base_id="XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
+        base_id="Gl6Pm2Db8Dn3ePLptjdrxGNYVxLq0Ee4",
         operator_id="ZiSpuzyA49UNQz7CvPBUvhwiEiE"
     )
 
@@ -1063,7 +1030,6 @@ def query_sheet():
 
     for s in sheets:
         print(f"{s['name']} -> {s['id']}")
-
 
 
 # 示例使用函数

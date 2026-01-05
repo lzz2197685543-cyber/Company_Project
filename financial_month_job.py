@@ -4,7 +4,10 @@ import time
 from utils.logger import get_logger
 from datetime import datetime
 from utils.config_loader import  get_shop_config
+from pathlib import Path
+from modules.financial_process_up import financial_process_up
 
+FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial"
 logger = get_logger("financial_data")
 
 """跑temu财务数据"""
@@ -35,8 +38,9 @@ def get_prev_month_from_now() -> str:
 if __name__ == '__main__':
     total_start = time.perf_counter()
 
-    month_str = get_prev_month_from_now()
-    logger.info(f'正在下载{month_str}的数据')
+    # month_str = get_prev_month_from_now()
+    month_str='2025-11'
+    logger.info(f'--------------------------正在下载{month_str}的数据------------------------------')
     shop_name_list = [
        "2108-Temu全托管","2107-Temu全托管", "2106-Temu全托管", "2105-Temu全托管",  "2103-Temu全托管","2102-Temu全托管","2101-Temu全托管KA",
         "112-Temu全托管",
@@ -47,6 +51,11 @@ if __name__ == '__main__':
         account = get_shop_config(shop_name)
         t=Temu_Financial_Data(shop_name,account,month_str)
         asyncio.run(t.run())
+
+
+    logger.info(f'----------------------------开始处理数据---------------------------------')
+    filepath=FINANCIAL_DIR/month_str.split("-")[1]+'月份'
+    financial_process_up(filepath)
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")

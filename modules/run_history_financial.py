@@ -7,15 +7,15 @@ from datetime import datetime,timedelta
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
-from utils.dingtalk_bot import ding_bot_send
 import re
 # 文件保存目录
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial"
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
+import aiohttp
 
-"""跑temu财务数据"""
+"""这个可以通过点击历史中进行下载"""
 
-class Temu_Financial_Data:
+class TemuLogin:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
@@ -241,132 +241,41 @@ class Temu_Financial_Data:
 
         return True
 
-    def get_month_date_range(self, month_str: str) -> dict:
-        year, month = map(int, month_str.split("-"))
+    ### 下载财务数据
+    async def download_financial_data(self):
+        self.logger.info(f"{self.name} - 进入财务页面")
 
-        start = datetime(year, month, 1)
-        if month == 12:
-            end = datetime(year + 1, 1, 1) - timedelta(seconds=1)
-        else:
-            end = datetime(year, month + 1, 1) - timedelta(seconds=1)
-
-        return {
-            "start_date": start.strftime("%Y-%m-%d"),
-            "end_date": end.strftime("%Y-%m-%d"),
-        }
-
-    # 我这个日历只处理一个月的情况
-    async def process_calendar(self):
-        """
-        选择目标年月（self.month_str: 'YYYY-MM'）的日期范围
-        """
-        start_date=self.get_month_date_range(self.month_str)['start_date']
-        end_date=self.get_month_date_range(self.month_str)['end_date']
-
-        target_year, target_month = map(int, self.month_str.split("-"))
-
-        # 等待日历面板出现
-        await self.page.wait_for_selector('div.RPR_outerPickerWrapper_5-117-0', timeout=5000)
-
-        # ------------------ 选择年份 ------------------
-        while True:
-            # 获取当前显示的年份
-            year_text = await self.page.locator(
-                '.IPT_inputBlock_5-117-0 .IPT_mirror_5-117-0'
-            ).nth(1).text_content()
-            current_year = int(year_text.replace("年", "").strip())
-
-            if current_year == target_year:
-                break
-
-            # 点击年份下拉
-            await self.page.locator('.IPT_suffixWrapper_5-117-0 span').nth(1).click()
-            await self.page.wait_for_timeout(200)
-
-            # 点击目标年份
-            year_li_locator = self.page.locator(
-                f'ul[data-testid="beast-core-rangePicker-select-list-0"] li span:text-is("{target_year}年")'
-            )
-            await year_li_locator.click()
-
-            # 等待目标年份被选中
-            selected_li = self.page.locator(
-                f'ul[data-testid="beast-core-rangePicker-select-list-0"] li[data-checked="true"] span:text-is("{target_year}年")'
-            )
-            await selected_li.wait_for(state="visible", timeout=5000)
-
-        # ------------------ 选择月份 ------------------
-        month_locator = self.page.locator('.RPR_dateText_5-117-0:visible').first
-        previous_month = None
-
-        while True:
-            month_text = await month_locator.text_content()
-            current_month = int(month_text.replace("月", "").strip())
-
-            if current_month == target_month:
-                break
-
-            if previous_month == current_month:
-                # 如果上次和本次相同，强制等待 DOM 更新
-                await asyncio.sleep(0.3)
-
-            previous_month = current_month
-
-            if current_month > target_month:
-                await self.page.locator('.RPR_panelHeader_5-117-0 svg').nth(0).click()
-            else:
-                await self.page.locator('.RPR_panelHeader_5-117-0 svg').nth(1).click()
-
-            await month_locator.wait_for(state="visible")
-
-        # ------------------ 选择日期 ------------------
-        start_day=int(start_date.split('-')[-1])
-        end_day=int(end_date.split('-')[-1])
-
-        # 定位日历 tbody
-        tbody_locator = self.page.locator(
-            'div.RPR_tableWrapper_5-117-0 table[data-testid="beast-core-rangePicker-table"] tbody'
-        ).nth(0)
-        await tbody_locator.wait_for(state="visible", timeout=5000)
-
-        # 点击开始日期
-        start_locator = tbody_locator.locator(
-            f'div.RPR_cell_5-117-0[title="{start_day}"]:not(.RPR_outOfMonth_5-117-0):not(.RPR_inRange_5-117-0)'
-        ).first
-        await start_locator.click()
-
-        await asyncio.sleep(0.3)
-
-        # 点击结束日期
-        end_locator = tbody_locator.locator(
-            f'div.RPR_cell_5-117-0[title="{end_day}"]:not(.RPR_outOfMonth_5-117-0):not(.RPR_inRange_5-117-0)'
-        ).first
-        await end_locator.click()
-
-        await asyncio.sleep(0.3)
-
-        # 点击“确认”按钮
-        confirm_btn = self.page.locator(
-            'button[data-testid="beast-core-button"] >> text=确认'
+        await self.page.goto(
+            "https://seller.kuajingmaihuo.com/labor/bill",
+            wait_until="domcontentloaded",
+            timeout=20_000
         )
-        await confirm_btn.click()
+        await self.page.wait_for_load_state("networkidle")
 
-    # 等待加载出来，并下载
-    async def load_and_download(self):
+        # 点击导出历史
+        export_history_btn = self.page.locator(
+            '[data-testid="beast-core-button-link"]:has-text("导出历史")'
+        )
+        await export_history_btn.wait_for(state="visible", timeout=15_000)
+        await export_history_btn.click()
+
         # 等待导出历史列表出现
-        history_list=self.page.locator('.export-history_list__5Eto0').first
+        history_list = self.page.locator('.export-history_list__5Eto0').first
         await history_list.wait_for(state="visible", timeout=80_000)
 
         # 取第一个导出记录
-        first_item=history_list.locator('.export-history_right__YGHPV div').first
+        first_item = history_list.locator('.export-history_right__YGHPV div').first
+
+        # 创建下载目录
+        FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
         # ===== 1. 下载卖家中心文件（在当前页面直接下载）=====
         self.logger.info(f"{self.name} - 准备下载: 下载账务明细(卖家中心)")
 
         filename = f"{self.name}_{self.month_str.split('-')[1]}_卖家中心.xlsx"
-        filepath = FINANCIAL_DIR / f"{self.month_str.split('-')[1]}月份" / 'temu'
+        filepath=FINANCIAL_DIR/f"{self.month_str.split('-')[1]}月份" /'temu'
         filepath.mkdir(parents=True, exist_ok=True)
-        final_path = filepath / filename
+        final_path = filepath/ filename
 
         # ⭐ 已存在直接跳过
         if final_path.exists():
@@ -392,9 +301,9 @@ class Temu_Financial_Data:
             专门处理需要打开新页面的下载
             """
             filename = f"{self.name}_{self.month_str.split('-')[1]}_{file_prefix}.xlsx"
-            filepath = FINANCIAL_DIR / f"{self.month_str.split('-')[1]}月份"
+            filepath=FINANCIAL_DIR/f"{self.month_str.split('-')[1]}月份"
             filepath.mkdir(parents=True, exist_ok=True)
-            final_path = filepath / filename
+            final_path =  filepath/ filename
 
             # ⭐ 已存在直接跳过
             if final_path.exists():
@@ -456,112 +365,8 @@ class Temu_Financial_Data:
             self.logger.info(f"✅ {self.name} - 所有财务数据下载完成")
         else:
             self.logger.warning(f"⚠️ {self.name} - 部分财务数据下载失败")
-            ding_bot_send('me',f"⚠️ {self.name} - 部分财务数据下载失败")
 
         return all_success
-
-    # 查询，导出，下载
-    async def search_export_download(self):
-        # 1.点击“查询”按钮
-        query_btn = self.page.locator(
-            'div[data-testid="beast-core-grid-col-wrapper"] button[data-testid="beast-core-button"] >> text=查询'
-        )
-        await query_btn.click()
-
-        await asyncio.sleep(1.2)
-
-        # 2.判断是否有数据
-        # 定位元素
-        total_text_locator = self.page.locator('li.PGT_totalText_5-117-0')
-        await total_text_locator.wait_for(state="visible", timeout=5000)
-
-        # 获取文本，例如 "共有 43 条"
-        total_text = await total_text_locator.text_content()
-        total_text = total_text.strip()
-
-        # 提取数字
-        match = re.search(r'(\d+)', total_text)
-        total_count = int(match.group(1)) if match else 0
-
-        # 判断是否有数据
-        if total_count > 0:
-            self.logger.info(f"有数据，总共 {total_count} 条")
-        else:
-            self.logger.info("没有数据,直接跳过，不导出了")
-            return True
-
-        # 3.点击“导出”按钮
-        export_btn = self.page.locator(
-            'div[data-testid="beast-core-box"] button[data-testid="beast-core-button"] >> text=导出'
-        )
-        await export_btn.click()
-
-        await asyncio.sleep(0.3)
-
-        # 4.选择“导出列表 + 账务详情”
-        radio = self.page.locator(
-            'div[data-testid="beast-core-grid-col-wrapper"] label >> text=导出列表 + 账务详情'
-        )
-        await radio.click()
-
-        await asyncio.sleep(0.3)
-
-        # 5.点击确认按钮
-        confirm_btn = self.page.locator(
-            'div[style*="text-align: right"] button'
-        ).nth(0)
-        await confirm_btn.click()
-
-        await asyncio.sleep(0.3)
-
-        # 检查是否已创建导出任务
-        # 检查是否有可下载的数据
-        toast = self.page.get_by_text(
-            '数据导出成功',
-            exact=False
-        )
-
-        try:
-            # 等待 toast 出现，表示有可下载数据
-            await toast.first.wait_for(state="visible", timeout=12000)
-            self.logger.info("检测到导出数据成功，准备下载报表")
-
-            # 继续下载所有报表
-            await self.load_and_download()
-
-            self.logger.info("全部报表下载完成")
-
-        except Exception:
-            # 没有检测到 toast，说明没有数据
-            self.logger.info("未检测到可导出数据，结束操作，不下载报表")
-            ding_bot_send('me',f"{self.name}---未检测到可导出数据，结束操作，不下载报表")
-            return
-
-    ### 下载财务数据
-    async def download_financial_data(self):
-        self.logger.info(f"{self.name} - 进入财务页面")
-
-        await self.page.goto(
-            "https://seller.kuajingmaihuo.com/labor/bill",
-            wait_until="domcontentloaded",
-            timeout=20000
-        )
-
-        # 等待页面加载完成
-        await self.page.wait_for_load_state("networkidle")
-
-        date_input = self.page.locator('[data-testid="beast-core-rangePicker-htmlInput"]')
-        await date_input.wait_for(state="visible", timeout=10_000)
-        await date_input.click()
-
-        # 选择日期
-        await self.process_calendar()
-        await asyncio.sleep(0.3)
-
-        # 查询，导出，下载
-        await self.search_export_download()
-
-        return True
 
     # -----------失败可以重新登录------------
     async def run_once(self):
@@ -584,6 +389,7 @@ class Temu_Financial_Data:
             raise Exception('download_financial_data 失败')
 
         return True
+
 
     # ----------- 总流程 -----------
     async def run(self, max_retry=3):
@@ -610,7 +416,6 @@ class Temu_Financial_Data:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
-        ding_bot_send('me',f"{self.name} - 在financial任务中登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -622,19 +427,20 @@ class Temu_Financial_Data:
         finally:
             await self.stop_browser()
 
+
 async def main():
-    name_list = ['102-Temu全托管']
-    month_str='2025-2'
+    name_list = ["104-Temu全托管"]
+    month_str='2025-12'
     for name in name_list:
         account = get_shop_config(name)
         # print(account)
 
-        t = Temu_Financial_Data(name, account,month_str)
+        t = TemuLogin(name, account,month_str)
         await t.run()
 
-
+#
 # if __name__ == "__main__":
 #     asyncio.run(main())
-
+#
 
 
