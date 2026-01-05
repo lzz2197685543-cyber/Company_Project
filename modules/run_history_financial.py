@@ -7,6 +7,7 @@ from datetime import datetime,timedelta
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
+from utils.dingtalk_bot import ding_bot_send
 import re
 # 文件保存目录
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial"
@@ -15,7 +16,7 @@ import aiohttp
 
 """这个可以通过点击历史中进行下载"""
 
-class TemuLogin:
+class Temu_History_Financial():
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
@@ -416,6 +417,7 @@ class TemuLogin:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - 在financial_history任务中登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -429,18 +431,18 @@ class TemuLogin:
 
 
 async def main():
-    name_list = ["104-Temu全托管"]
-    month_str='2025-12'
+    name_list = ["2101-Temu全托管KA"]
+    month_str='2025-11'
     for name in name_list:
         account = get_shop_config(name)
         # print(account)
 
-        t = TemuLogin(name, account,month_str)
+        t = Temu_History_Financial(name, account,month_str)
         await t.run()
 
 #
 # if __name__ == "__main__":
 #     asyncio.run(main())
-#
+
 
 

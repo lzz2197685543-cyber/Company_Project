@@ -84,7 +84,7 @@ class Temu_ViolationRecored:
                 data = response.json()
             except ValueError:
                 self.logger.error(f"❌ 响应不是 JSON: {response.text[:200]}")
-                ding_bot_send('me', f"{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
+                ding_bot_send('me', f"temu资金限制项目--{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
                 return None
 
             # 打印非 200 但有业务错误的情况
@@ -97,11 +97,11 @@ class Temu_ViolationRecored:
 
         except requests.exceptions.Timeout:
             self.logger.error("❌ 请求超时")
-            ding_bot_send('me',f"{self.shop_name}❌ 请求超时")
+            ding_bot_send('me',f"temu资金限制项目--{self.shop_name}❌ 请求超时")
 
         except requests.exceptions.RequestException as e:
             self.logger.error(f"❌ 请求异常: {e}")
-            ding_bot_send('me', f"{self.shop_name}❌ 请求异常: {e}")
+            ding_bot_send('me', f"temu资金限制项目--{self.shop_name}❌ 请求异常: {e}")
         return None
 
     def safe_datetime_from_ms(self, ts_ms):
@@ -146,9 +146,9 @@ class Temu_ViolationRecored:
                     continue
 
                 self.save_record(item)
-                # self.logger.info(
-                #     f"[更新] 违规编号 {item['违规编号']} 状态={item['进度']}"
-                # )
+                self.logger.info(
+                    f"[更新] 违规编号 {item['违规编号']} 状态={item['进度']}"
+                )
 
             except Exception as e:
                 self.logger.error(f"解析/保存数据失败: {e}")
@@ -275,7 +275,7 @@ class Temu_ViolationRecored:
                         f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
                     )
                     # 将刷新时候cookie还是失败的发送给自己
-                    ding_bot_send('me',f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
+                    ding_bot_send('me',f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
                     return
 
             # ✅ 正常数据

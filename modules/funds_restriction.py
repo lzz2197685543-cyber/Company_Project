@@ -52,7 +52,7 @@ class Temu_Funds_Restriction:
                 data = response.json()
             except ValueError:
                 self.logger.error(f"❌ 响应不是 JSON: {response.text[:200]}")
-                ding_bot_send('me', f"{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
+                ding_bot_send('me', f"temu资金限制项目--{self.shop_name}❌ ❌ 响应不是 JSON: {response.text[:100]}")
                 return None
             # 打印非 200 但有业务错误的情况
             if response.status_code != 200:
@@ -63,11 +63,11 @@ class Temu_Funds_Restriction:
             return data
         except requests.exceptions.Timeout:
             self.logger.error("❌ 请求超时")
-            ding_bot_send('me', f"{self.shop_name}❌ 请求超时")
+            ding_bot_send('me', f"temu资金限制项目--{self.shop_name}❌ 请求超时")
 
         except requests.exceptions.RequestException as e:
             self.logger.error(f"❌ 请求异常: {e}")
-            ding_bot_send('me', f"{self.shop_name}❌ 请求异常: {e}")
+            ding_bot_send('me', f"temu资金限制项目--{self.shop_name}❌ 请求异常: {e}")
         return None
 
     def get_detail_info(self,frozen_type):
@@ -227,7 +227,7 @@ class Temu_Funds_Restriction:
                         f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
                     )
                     # 将刷新时候cookie还是失败的发送给自己
-                    ding_bot_send('me', f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
+                    ding_bot_send('me', f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
                     return
 
             self.parse_data(json_data)

@@ -9,6 +9,7 @@ Temu 数据 → 钉钉多维表
 import pymysql
 from datetime import datetime
 from decimal import Decimal
+from utils.dingtalk_bot import ding_bot_send
 
 from utils.dingding_doc import (
     DingTalkTokenManager,
@@ -78,6 +79,7 @@ def upload_records(config, records):
 
     if failed_batches:
         logger.info(f"\n失败详情:")
+        ding_bot_send('me','temu资金限制项目有数据上传失败')
         for i, failed in enumerate(failed_batches):
             logger.info(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
 

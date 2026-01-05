@@ -101,11 +101,13 @@ class TemuSettlementProcessor:
         }
 
     # ========= 各 Sheet 处理器 =========
+    # 交易结算
     def process_trade(self, df, records, shop, region):
-        if "SKU货号" not in df.columns:
+        df_sales = df[df['交易类型'] == '销售回款']  # 只要销售回款这一种
+        if "SKU货号" not in df_sales.columns:
             return
 
-        for _, row in df.iterrows():
+        for _, row in df_sales.iterrows():
             sku = row["SKU货号"]
             if not sku:
                 continue
@@ -123,6 +125,7 @@ class TemuSettlementProcessor:
             if qty > 0:
                 record["核价"].append(amount / qty)
 
+    # 消费者退款
     def process_refund(self, df, records, shop, region):
         if "SKU货号" not in df.columns:
             return
@@ -141,6 +144,7 @@ class TemuSettlementProcessor:
             record["退款数量"] += 1
             record["退款金额-赔付金额"] += refund
 
+    # 售后问题
     def process_after_issue(self, df, records, shop, region):
         if "SKU货号" not in df.columns:
             return
@@ -159,6 +163,7 @@ class TemuSettlementProcessor:
             record["售后问题-数量"] += 1
             record["售后问题-赔付金额"] += amount
 
+    # 售后补寄
     def process_resend(self, df, records, shop, region):
         if "SKU货号" not in df.columns:
             return
@@ -178,6 +183,7 @@ class TemuSettlementProcessor:
             record["售后补寄-数量"] += qty
             record["售后补寄-赔付金额"] += amount
 
+    # 平台补贴
     def process_subsidy(self, df, records, shop, region):
         if "SKU货号" not in df.columns:
             return
@@ -196,21 +202,39 @@ class TemuSettlementProcessor:
             record["售后补贴数量"] += 1
             record["售后补贴-补贴金额"] += amount
 
+    # 补贴调整
     def process_adjust(self, df, records, shop, region):
-        if "SKU货号" not in df.columns:
+        # 定义目标列名
+        target_fields = ['售后单号', 'SKU ID', '货品名称', "SKU货号","SKU属性",'收支金额', '币种', '账务时间']
+
+        # 如果 DataFrame 行数不足，直接返回
+        if df.shape[0] < 2:
             return
 
-        for _, row in df.iterrows():
-            sku = row["SKU货号"]
+        # 从第二行开始处理
+        df_data = df.iloc[1:].copy()
+
+        # 将列名映射为 target_fields，如果列数对不上，则跳过
+        if len(df_data.columns) != len(target_fields):
+            print("警告：表头列数与 target_fields 不匹配")
+            return
+
+        df_data.columns = target_fields
+
+        for _, row in df_data.iterrows():
+            sku = row.get("SKU")
             if not sku:
                 continue
 
             amount = self.to_number(row.get("收支金额"))
 
+            # 初始化记录，如果没有就创建
             record = records.setdefault(
                 sku, self.init_sku_record(sku, shop, region)
             )
+            print('金额为：',amount)
 
+            # 累加售后补贴
             record["售后补贴-补贴金额调整"] += amount
 
     # ========= 单 Excel 入口 =========
@@ -267,15 +291,15 @@ class TemuSettlementProcessor:
             self.logger.info(f"{shop}_总表.xlsx--导出成功")
 
 
-def financial_process_up(CONFIG_DIR):
+def financial_process_up(CONFIG_DIR,month_str):
     processor = TemuSettlementProcessor(
         data_dir=CONFIG_DIR,
         output_dir=CONFIG_DIR / "output",
-        month_str='2025年11月'
+        month_str=month_str
     )
     # 处理 Excel 并导出总表
-    # processor.run()
-    # processor.export()
+    processor.run()
+    processor.export()
 
     # ===== 上传部分 =====
     # 配置参数（请替换为实际的 Base / Sheet / Operator）
@@ -347,6 +371,6 @@ def financial_process_up(CONFIG_DIR):
                 logger.info(f"  批次 {i} 失败原因: {r.get('message', '未知错误')}")
 
 
-# if __name__ == '__main__':
-#     filepath = FINANCIAL_DIR / '11月份'
-#     financial_process_up(filepath)
+if __name__ == '__main__':
+    filepath = FINANCIAL_DIR / '12月份'
+    financial_process_up(filepath,'2025年12月')

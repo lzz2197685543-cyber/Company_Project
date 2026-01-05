@@ -32,6 +32,7 @@ class Temu_Financial_Data:
         self.playwright = None
         self.browser = None
         self.page = None
+        self.history_list=[] # 没有下载完成的店铺，我们用历史的方式进行下载
 
     # ----------- 浏览器 -----------
     async def start_browser(self):
@@ -406,7 +407,7 @@ class Temu_Financial_Data:
             download_element = first_item.locator(
                 f'span:has-text("{selector_text}")'
             ).first
-            await download_element.wait_for(state="visible", timeout=80_000)
+            await download_element.wait_for(state="visible", timeout=40_000)
 
             pages_before = len(self.page.context.pages)
 
@@ -456,7 +457,8 @@ class Temu_Financial_Data:
             self.logger.info(f"✅ {self.name} - 所有财务数据下载完成")
         else:
             self.logger.warning(f"⚠️ {self.name} - 部分财务数据下载失败")
-            ding_bot_send('me',f"⚠️ {self.name} - 部分财务数据下载失败")
+            self.history_list.append(self.name)
+            # ding_bot_send('me',f"⚠️ {self.name} - 部分财务数据下载失败")
 
         return all_success
 
@@ -534,7 +536,8 @@ class Temu_Financial_Data:
         except Exception:
             # 没有检测到 toast，说明没有数据
             self.logger.info("未检测到可导出数据，结束操作，不下载报表")
-            ding_bot_send('me',f"{self.name}---未检测到可导出数据，结束操作，不下载报表")
+            self.history_list.append(self.name)
+            # ding_bot_send('me',f"{self.name}---未检测到可导出数据，结束操作，不下载报表")
             return
 
     ### 下载财务数据
