@@ -6,6 +6,7 @@ import warnings
 from openpyxl.styles.stylesheet import Stylesheet
 from utils.logger import get_logger
 from utils.dingding_doc import  DingTalkTokenManager,DingTalkSheetUploader
+from utils.dingtalk_bot import ding_bot_send
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial"
 
 warnings.filterwarnings(
@@ -52,6 +53,27 @@ class TemuSettlementProcessor:
         except Exception:
             return default
 
+    def notify_extra_sheets(self, file_path: Path, extra_sheets: list):
+        """
+        钉钉通知：发现未配置的子表
+        """
+        if not extra_sheets:
+            return
+
+        content = (
+            f"⚠️ Temu 结算文件发现未配置子表\n\n"
+            f"📄 文件名：{file_path.name}\n"
+            f"📌 未识别子表：{', '.join(extra_sheets)}\n\n"
+            f"请确认是否需要新增处理逻辑"
+        )
+
+        self.logger.warning(content)
+
+        try:
+            ding_bot_send('程序监控群',content)
+        except Exception as e:
+            self.logger.error(f"钉钉通知失败: {e}")
+
     # ========= 文件名解析 =========
     def parse_filename(self, filename: str):
         """
@@ -67,10 +89,21 @@ class TemuSettlementProcessor:
     # ========= Sheet 扫描（性能关键） =========
     def scan_valid_sheets(self, file_path: Path):
         wb = openpyxl.load_workbook(file_path, read_only=True)
-        aa = [name for name in wb.sheetnames
-              if name in self.SHEET_HANDLERS]
-        self.logger.info(aa)
-        return aa
+
+        all_sheets = wb.sheetnames
+        allowed_sheets = set(self.SHEET_HANDLERS.keys())
+
+        # ✅ 可处理的 sheet
+        valid_sheets = [name for name in all_sheets if name in allowed_sheets]
+
+        # ⚠️ 多出来的 sheet
+        extra_sheets = [name for name in all_sheets if name not in allowed_sheets]
+
+        if extra_sheets:
+            self.notify_extra_sheets(file_path, extra_sheets)
+
+        self.logger.info(f"有效子表: {valid_sheets}")
+        return valid_sheets
 
     # ========= SKU 初始化 =========
     def init_sku_record(self, sku, shop, region):
@@ -103,11 +136,15 @@ class TemuSettlementProcessor:
     # ========= 各 Sheet 处理器 =========
     # 交易结算
     def process_trade(self, df, records, shop, region):
-        df_sales = df[df['交易类型'] == '销售回款']  # 只要销售回款这一种
-        if "SKU货号" not in df_sales.columns:
+        if "SKU货号" not in df.columns:
             return
 
-        for _, row in df_sales.iterrows():
+        print(self.month_str.replace('年','-').replace('月',''))
+
+        if str(pd.to_datetime(df['账务时间'][0]).strftime('%Y-%m'))!=self.month_str.replace('年','-').replace('月',''):
+            ding_bot_send('程序监控群',f'门店--{shop}--获取的财务数据不是我们所获取的月份')
+
+        for _, row in df.iterrows():
             sku = row["SKU货号"]
             if not sku:
                 continue
@@ -118,11 +155,12 @@ class TemuSettlementProcessor:
             record = records.setdefault(
                 sku, self.init_sku_record(sku, shop, region)
             )
-
             record["交易收入-销售数量"] += qty
             record["交易收入-收入金额"] += amount
 
-            if qty > 0:
+            trade_type = row.get("交易类型")
+
+            if trade_type == "销售回款" and qty > 0:
                 record["核价"].append(amount / qty)
 
     # 消费者退款
@@ -222,7 +260,7 @@ class TemuSettlementProcessor:
         df_data.columns = target_fields
 
         for _, row in df_data.iterrows():
-            sku = row.get("SKU")
+            sku = row.get("SKU货号")
             if not sku:
                 continue
 
@@ -278,14 +316,14 @@ class TemuSettlementProcessor:
             )
 
             # ===== 实际净收入 =====
-            df["实际净收入"] = (
-                    df.get("交易收入-收入金额", 0)
-                    - df.get("退款金额-赔付金额", 0)
-                    - df.get("售后问题-赔付金额", 0)
-                    - df.get("售后补寄-赔付金额", 0)
-                    + df.get("售后补贴-补贴金额", 0)
-                    + df.get("售后补贴-补贴金额调整", 0)
-            )
+            # df["实际净收入"] = (
+            #         df.get("交易收入-收入金额", 0)
+            #         - df.get("退款金额-赔付金额", 0)
+            #         - df.get("售后问题-赔付金额", 0)
+            #         - df.get("售后补寄-赔付金额", 0)
+            #         + df.get("售后补贴-补贴金额", 0)
+            #         + df.get("售后补贴-补贴金额调整", 0)
+            # )
 
             df.to_excel(self.output_dir / f"{shop}_总表.xlsx", index=False)
             self.logger.info(f"{shop}_总表.xlsx--导出成功")
@@ -339,6 +377,8 @@ def financial_process_up(CONFIG_DIR,month_str):
             "售后补贴数量",
             "售后补贴-补贴金额",
             "售后补贴-补贴金额调整",
+            "最低核价",
+            "平均核价",
             "月份",
             # ⚠️ 注意：这里不要写「核价」「实际净收入」除非你真的在钉钉建了列
         }
@@ -371,6 +411,6 @@ def financial_process_up(CONFIG_DIR,month_str):
                 logger.info(f"  批次 {i} 失败原因: {r.get('message', '未知错误')}")
 
 
-if __name__ == '__main__':
-    filepath = FINANCIAL_DIR / '12月份'
-    financial_process_up(filepath,'2025年12月')
+# if __name__ == '__main__':
+#     filepath = FINANCIAL_DIR / '12月份'
+#     financial_process_up(filepath,'2025年12月')

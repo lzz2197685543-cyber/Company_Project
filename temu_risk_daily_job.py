@@ -34,7 +34,10 @@ async def crawl_all_shops():
         "103-Temu全托管", "102-Temu全托管",
         "101-Temu全托管"
     ]
-    # shop_name_list=[]
+    # shop_name_list=["107-Temu全托管", "106-Temu全托管",
+    #         "105-Temu全托管", "104-Temu全托管",
+    #         "103-Temu全托管", "102-Temu全托管",
+    #         "101-Temu全托管"]
 
     for shop_name in shop_name_list:
         logger.info(f"🚀 开始爬取店铺：{shop_name}")
