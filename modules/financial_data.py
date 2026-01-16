@@ -10,8 +10,7 @@ import math
 import re
 from utils.dingtalk_bot import ding_bot_send
 
-FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" /"smt"
-FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
+
 
 class SMT_FinancialData:
     def __init__(self, shop_name,month_str):
@@ -228,6 +227,10 @@ class SMT_FinancialData:
         download_btn=self.page.locator('.downloadSearchBtn___3NvAY')
         await download_btn.wait_for(state="visible", timeout=20_000)
 
+        FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" /(str(self.month_str.split('-')[
+            1]) + '月份') /"smt"
+        FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
+
         file_name = f"{self.shop_name}_{self.month_str.split('-')[1]}_财务动账.zip"
         save_path = FINANCIAL_DIR / file_name
 
@@ -354,6 +357,10 @@ class SMT_FinancialData:
         # 点击下线
         download_btn=self.page.locator('.first .next-btn-helper')
         await download_btn.wait_for(state="visible", timeout=15_000)
+
+        FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" / (str(self.month_str.split('-')[
+            1]) + '月份') / "smt"
+        FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
         file_name = f"{self.shop_name}_{self.month_str.split('-')[1]}_其他收支结算.xlsx"
         save_path = FINANCIAL_DIR / file_name

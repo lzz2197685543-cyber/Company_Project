@@ -8,10 +8,11 @@ from pathlib import Path
 from utils.logger import get_logger
 import asyncio
 import time
+from utils.dingtalk_bot import ding_bot_send
 
 """跑smt销售数据"""
 
-logger = get_logger("tk_sale_data")
+logger = get_logger("smt_sale_data")
 def format_seconds(seconds: float) -> str:
     m, s = divmod(int(seconds), 60)
     return f"{m}分{s}秒"
@@ -140,19 +141,16 @@ async def main():
         "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"    # 操作人ID
     }
 
-    logger.info('---------------------------------开始删除数据-----------------------------------')
-    test_delete_records(config)
-
     shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
-    # shop_name_list=['SMT214']
     for shop_name in shop_name_list:
-        logger.info(f'---------------------------------开始爬取店铺--{shop_name}--库存数据-----------------------------------')
-        spider_socket = SMTStockSpider(shop_name)
-        await spider_socket.run()
-
         logger.info(f'---------------------------------开始爬取店铺--{shop_name}--商品数据-----------------------------------')
         spider_goods = SMTGoodsSpider(shop_name)
         await spider_goods.run()
+
+        logger.info(
+            f'---------------------------------开始爬取店铺--{shop_name}--库存数据-----------------------------------')
+        spider_socket = SMTStockSpider(shop_name)
+        await spider_socket.run()
 
         await asyncio.sleep(1)
         logger.info('---------------------------------开始匹配sku数据-----------------------------------')
@@ -163,10 +161,10 @@ async def main():
 
         logger.info(f'{shop_name}数据上传成功')
 
+    ding_bot_send('me', 'SMT的销售任务完成')
+
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
-
-
 
 
 

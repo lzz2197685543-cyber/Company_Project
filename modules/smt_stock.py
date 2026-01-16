@@ -35,6 +35,10 @@ class SMTStockSpider:
         if json_data == "COOKIE_EXPIRED":
             return True
 
+        if 401 in json_data:
+            self.logger.info('cookie无效')
+            return True
+
         if not isinstance(json_data, dict):
             return True
 
@@ -111,7 +115,6 @@ class SMTStockSpider:
                 writer.writeheader()
             writer.writerows(items)
 
-
     async def run(self):
         self.logger.info(f'正在爬取店铺-------{self.shop_name}------的数据')
 
@@ -163,12 +166,12 @@ class SMTStockSpider:
 
             await asyncio.sleep(0.8)
 
-# async def main():
-#     shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
-#     for shop_name in shop_name_list:
-#         spider_socket = SMTStockSpider(shop_name)
-#         await spider_socket.run()
-#
-#
+async def main():
+    shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
+    for shop_name in shop_name_list:
+        spider_socket = SMTStockSpider(shop_name)
+        await spider_socket.run()
+
+
 # if __name__ == '__main__':
 #     asyncio.run(main())
