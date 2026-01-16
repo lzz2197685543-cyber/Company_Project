@@ -6,6 +6,7 @@ from pathlib import Path
 from utils.logger import get_logger
 import asyncio
 import time
+from utils.dingtalk_bot import ding_bot_send
 
 """跑Shein销售数据"""
 
@@ -113,6 +114,7 @@ async def main():
     upload_multiple_records(config, records)
     logger.info('数据上传成功')
 
+    ding_bot_send('me', 'Shein的销售任务完成')
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
 

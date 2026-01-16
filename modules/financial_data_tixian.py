@@ -155,7 +155,7 @@ class Shein_Financial_Data_Tixian:
         if not items:
             return
 
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "financial" / "shein"
+        out_dir = Path(__file__).resolve().parent.parent / "data" / "financial" / (str(self.month_str.split('-')[1]) + '月份') / "shein"
         out_dir.mkdir(parents=True, exist_ok=True)
 
 

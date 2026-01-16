@@ -8,6 +8,7 @@ from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
+from utils.dingtalk_bot import ding_bot_send
 # 确保目录存在
 COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -90,30 +91,61 @@ class SheinLogin:
             return False
 
     # ----------- 业务 ----------
+
+    async def is_logged_in(self):
+        try:
+            # 登录成功后才会出现的元素
+            return await self.page.locator(
+                "div.shein-components_soc-fe-sso-sdk_title"
+            ).is_visible(timeout=3000)
+        except:
+            return False
+
     async def login(self):
-        """执行登录"""
         self.logger.info(f"{self.name} - 开始执行登录流程")
 
         try:
-            # 1. 访问登录页面
-            await self.page.goto("https://sso.geiwohuo.com/#/home", timeout=30000)
+            await self.page.goto(
+                "https://sso.geiwohuo.com/#/login",
+                timeout=30_000,
+                wait_until="domcontentloaded"
+            )
+            await asyncio.sleep(5)
+            # ---------- ① 已登录判断（最重要） ----------
+            if await self.is_logged_in():
+                self.logger.info(f"{self.name} - 已是登录状态，跳过登录")
+                return True
 
-            # 判断是否登录成功
+            # ---------- ② 输入用户名（如果存在） ----------
+            username_box = self.page.get_by_role("textbox").first
+            if await username_box.is_visible(timeout=3000):
+                await username_box.click()
+                await username_box.fill(self.username)
+
+            # ---------- ③ 输入密码（关键防超时） ----------
+            password = self.page.locator('input[type="password"]')
+            if await password.is_visible(timeout=3000):
+                await password.click()
+                await password.fill(self.password)
+            else:
+                self.logger.info(f"{self.name} - 未发现密码框，可能已登录或已跳转")
+
+            # ---------- ④ 点击登录（如果存在） ----------
+            login_btn = self.page.get_by_role("button", name="登录")
+            if await login_btn.is_visible(timeout=3000):
+                await login_btn.click()
+
+            # ---------- ⑤ 等登录成功 ----------
             await self.page.wait_for_selector(
                 "div.shein-components_soc-fe-sso-sdk_title",
-                timeout=15000
+                timeout=15_000
             )
-
-            await self.page.goto("https://sso.geiwohuo.com/#/idms/spot-goods-advice", timeout=30000)
-            await self.page.wait_for_selector(
-                'span.shein-components_simple-search-area_label',
-                timeout=15000)
 
             self.logger.info(f"{self.name} - 登录成功")
             return True
 
         except Exception as e:
-            self.logger.error(f"{self.name} - 登录失败: {e}")
+            self.logger.error(f"{self.name} - 登录失败: {e}", exc_info=True)
             return False
 
     def filter_shein_sso_cookies(self,cookies: dict):
@@ -209,6 +241,7 @@ class SheinLogin:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -223,6 +256,7 @@ class SheinLogin:
 
 async def main():
     name_list = ["希音全托301-yijia", "希音全托302-juyule", "希音全托303-kedi", "希音全托304-xiyue"]
+    # name_list=[ "希音全托303-kedi", "希音全托304-xiyue"]
 
     for name in name_list:
         account = get_shop_config(name)
@@ -230,9 +264,9 @@ async def main():
         t = SheinLogin(name, account)
         await t.run()
 
-
-if __name__ == "__main__":
-    asyncio.run(main())
+#
+# if __name__ == "__main__":
+#     asyncio.run(main())
 
 
 

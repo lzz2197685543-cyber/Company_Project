@@ -6,7 +6,7 @@ from utils.logger import get_logger
 import time
 from datetime import datetime
 
-logger = get_logger("financial_month_job")
+logger = get_logger("financial_data")
 
 """跑Shein财务"""
 

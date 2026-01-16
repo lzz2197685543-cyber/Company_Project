@@ -7,6 +7,7 @@ from datetime import datetime
 import json
 from pathlib import Path
 from utils.cookie_manager import CookieManager
+from utils.dingtalk_bot import ding_bot_send
 import asyncio
 
 class Shein_Sale:
@@ -51,7 +52,6 @@ class Shein_Sale:
 
         return False
 
-
     """获取指定页面的数据"""
     def get_info(self, page,cookies):
 
@@ -82,7 +82,6 @@ class Shein_Sale:
                 f"[{self.shop_name}] 第 {page} 页请求异常: {e}"
             )
             return None
-
 
     """解析返回的数据"""
     def parse_data(self, json_data):
