@@ -284,7 +284,7 @@ class TemuLogin:
 
 
     # ----------- 总流程 -----------
-    async def run(self, max_retry=3):
+    async def run(self, max_retry=6):
         for attempt in range(1, max_retry + 1):
             self.logger.info(f"{self.name} - 第 {attempt} 次登录尝试")
 
@@ -318,6 +318,7 @@ class TemuLogin:
                 await self.playwright.stop()
         finally:
             await self.stop_browser()
+
 
 
 # async def main():

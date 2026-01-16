@@ -3,6 +3,7 @@ from modules.funds_restriction import Temu_Funds_Restriction
 
 from modules.send_data import run_send_data
 from modules.upload_data import run_upload_data
+from utils.dingtalk_bot import ding_bot_send
 
 import asyncio
 import time
@@ -34,9 +35,7 @@ async def crawl_all_shops():
         "103-Temu全托管", "102-Temu全托管",
         "101-Temu全托管"
     ]
-    # shop_name_list=["107-Temu全托管", "106-Temu全托管",
-    #         "105-Temu全托管", "104-Temu全托管",
-    #         "103-Temu全托管", "102-Temu全托管",
+    # shop_name_list=[ "102-Temu全托管",
     #         "101-Temu全托管"]
 
     for shop_name in shop_name_list:
@@ -62,6 +61,8 @@ async def main():
     # ========= ③ 告警 =========
     logger.info("🔔 开始执行违规 & 资金限制告警")
     run_send_data()
+
+    ding_bot_send('me','temu的资金限制任务完成')
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")

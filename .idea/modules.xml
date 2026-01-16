@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" filepath="$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../JST/.idea/JST.iml" filepath="$PROJECT_DIR$/../JST/.idea/JST.iml" />
       <module fileurl="file://$PROJECT_DIR$/../New_1688/.idea/New_1688.iml" filepath="$PROJECT_DIR$/../New_1688/.idea/New_1688.iml" />
       <module fileurl="file://$PROJECT_DIR$/../New_Temu/.idea/New_Temu.iml" filepath="$PROJECT_DIR$/../New_Temu/.idea/New_Temu.iml" />
@@ -12,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" filepath="$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" />
       <module fileurl="file://$PROJECT_DIR$/../TK/.idea/TK.iml" filepath="$PROJECT_DIR$/../TK/.idea/TK.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Temu.iml" filepath="$PROJECT_DIR$/.idea/Temu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" filepath="$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Temu_jst/.idea/Temu_jst.iml" filepath="$PROJECT_DIR$/../Temu_jst/.idea/Temu_jst.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Temu_jst1/.idea/Temu_jst1.iml" filepath="$PROJECT_DIR$/../Temu_jst1/.idea/Temu_jst1.iml" />
     </modules>

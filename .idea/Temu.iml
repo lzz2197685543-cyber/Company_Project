@@ -15,5 +15,7 @@
     <orderEntry type="module" module-name="SMT_sale" />
     <orderEntry type="module" module-name="Temu_jst1" />
     <orderEntry type="module" module-name="JST" />
+    <orderEntry type="module" module-name="Temu_horizon" />
+    <orderEntry type="module" module-name="Factory_sourcing" />
   </component>
 </module>
