@@ -221,12 +221,12 @@ class Shopee:
             time.sleep(1)
 
 
-# async def run_shopee_sale():
-#     name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei","虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
-#     for shop_name in name_list:
-#         shein = Shopee(shop_name)
-#         await shein.get_all_page()
-#
-#
-# if __name__ == '__main__':
-#     asyncio.run(run_shopee_sale())
+async def run_shopee_sale():
+    name_list = ["虾皮全托1501店", "虾皮全托507-lxz","虾皮全托506-kedi", "虾皮全托505-qipei","虾皮全托504-huanchuang","虾皮全托503-juyule","虾皮全托502-xiyue","虾皮全托501-quzhi"]
+    for shop_name in name_list:
+        shein = Shopee(shop_name)
+        await shein.get_all_page()
+
+
+if __name__ == '__main__':
+    asyncio.run(run_shopee_sale())

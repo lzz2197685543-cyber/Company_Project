@@ -10,13 +10,7 @@ from pathlib import Path
 from utils.dingtalk_bot import ding_bot_send
 import re
 
-FINANCIAL_DIR = (
-    Path(__file__).resolve().parent.parent
-    / "data"
-    / "financial"
-    / "shopee"
-)
-FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
+
 
 
 class ShopeeLogin_FinancialData:
@@ -394,6 +388,15 @@ class ShopeeLogin_FinancialData:
                 await download_btn.click()
 
         download = await download_info.value
+
+        FINANCIAL_DIR = (
+                Path(__file__).resolve().parent.parent
+                / "data"
+                / "financial"
+                / (str(self.month_str.split("-")[1])+'月份')
+                / "shopee"
+        )
+        FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
         save_path = FINANCIAL_DIR / f"{self.name}_{month_str}_{file_name}.{geshi}"
         await download.save_as(save_path)

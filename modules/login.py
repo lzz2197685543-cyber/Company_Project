@@ -7,6 +7,7 @@ from datetime import datetime
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
+from utils.dingtalk_bot import ding_bot_send
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 # 确保目录存在
 COOKIE_DIR.mkdir(parents=True, exist_ok=True)
@@ -191,6 +192,8 @@ class ShopeeLogin:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me',f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
+
         return False
 
     async def close(self):
