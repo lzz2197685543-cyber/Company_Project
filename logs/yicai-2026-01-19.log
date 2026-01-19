@@ -1,0 +1,65 @@
+2026-01-19 11:42:11,381 | INFO | yicai | YiCai---第 1 次登录尝试
+2026-01-19 11:42:43,528 | ERROR | yicai | 登录异常：Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".category-btn > .flex-item-ver-center") to be visible
+    - waiting for" https://www.essabuy.com/login?" navigation to finish...
+    - navigated to "https://www.essabuy.com/login?"
+    - waiting for" https://www.essabuy.com/toys" navigation to finish...
+    - navigated to "https://www.essabuy.com/toys"
+Traceback (most recent call last):
+  File "D:\sd14\Factory_sourcing\core\yicai_login.py", line 72, in login
+    await locator.wait_for(state="visible")
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 17906, in wait_for
+    await self._impl_obj.wait_for(timeout=timeout, state=state)
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_locator.py", line 692, in wait_for
+    await self._frame.wait_for_selector(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_frame.py", line 369, in wait_for_selector
+    await self._channel.send(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".category-btn > .flex-item-ver-center") to be visible
+    - waiting for" https://www.essabuy.com/login?" navigation to finish...
+    - navigated to "https://www.essabuy.com/login?"
+    - waiting for" https://www.essabuy.com/toys" navigation to finish...
+    - navigated to "https://www.essabuy.com/toys"
+
+2026-01-19 11:42:43,528 | ERROR | yicai | YiCai - 第 1 次失败: Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".category-btn > .flex-item-ver-center") to be visible
+    - waiting for" https://www.essabuy.com/login?" navigation to finish...
+    - navigated to "https://www.essabuy.com/login?"
+    - waiting for" https://www.essabuy.com/toys" navigation to finish...
+    - navigated to "https://www.essabuy.com/toys"
+Traceback (most recent call last):
+  File "D:\sd14\Factory_sourcing\core\yicai_login.py", line 116, in run
+    result = await self.run_once()
+  File "D:\sd14\Factory_sourcing\core\yicai_login.py", line 102, in run_once
+    if not await self.login():
+  File "D:\sd14\Factory_sourcing\core\yicai_login.py", line 72, in login
+    await locator.wait_for(state="visible")
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 17906, in wait_for
+    await self._impl_obj.wait_for(timeout=timeout, state=state)
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_locator.py", line 692, in wait_for
+    await self._frame.wait_for_selector(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_frame.py", line 369, in wait_for_selector
+    await self._channel.send(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.wait_for: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(".category-btn > .flex-item-ver-center") to be visible
+    - waiting for" https://www.essabuy.com/login?" navigation to finish...
+    - navigated to "https://www.essabuy.com/login?"
+    - waiting for" https://www.essabuy.com/toys" navigation to finish...
+    - navigated to "https://www.essabuy.com/toys"
+
+2026-01-19 11:42:43,732 | INFO | yicai | YiCai - 准备重试，等待 3 秒...
+2026-01-19 11:42:46,746 | INFO | yicai | YiCai---第 2 次登录尝试
+2026-01-19 11:42:52,588 | INFO | yicai | ✅ Cookie & storage_state 已保存
+2026-01-19 11:42:52,588 | INFO | yicai | YiCai - 登录成功（第 2 次）

@@ -43,7 +43,7 @@ def send_wechat_message(contact_name, message):
     time.sleep(0.3)
     pyautogui.press('enter')
 
-def webchat_send(name,message):
+def webchat_send(contacts):
     logger.info("正在打开微信...")
     if not open_wechat():
         logger.info("请手动打开微信窗口")
@@ -51,13 +51,9 @@ def webchat_send(name,message):
 
     time.sleep(3)
 
-    contacts = [
-        (name, message),
-    ]
-
     for name1, msg in contacts:
         logger.info(f"正在发送给：{name1}")
-        send_wechat_message(name, msg)
+        send_wechat_message(name1, msg)
         time.sleep(2)
 
     logger.info("全部消息发送完成！")

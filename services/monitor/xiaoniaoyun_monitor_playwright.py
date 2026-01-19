@@ -6,7 +6,7 @@ from services.search.xiaoniaoyun_playwright import ToysAASBot
 from utils.logger import get_logger
 from utils.webchat_send import webchat_send
 
-from datetime import datetime
+from datetime import datetime,timedelta
 
 QUIET_HOURS = (23, 8)
 
@@ -14,7 +14,8 @@ QUIET_HOURS = (23, 8)
 # ================= 配置 =================
 COOKIE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cookies"
 STORAGE_STATE = COOKIE_DIR / "xiaoniaoyun_storage.json"
-CHECK_INTERVAL = 5  # 监控间隔（秒）
+CHECK_INTERVAL = 30 * 60  # 30 分钟
+MONITOR_DAYS = 3         # 监控 3 天
 # =======================================
 
 
@@ -22,7 +23,7 @@ class XiaoniaoyunMonitor:
     def __init__(self, headless=True):
         self.headless = headless
         self.bot = ToysAASBot()
-        self.logger = get_logger("xiaoniaoyun_monitor")
+        self.logger = get_logger("search_factory")
         self.last_count = None
 
     async def ensure_login(self):
@@ -49,7 +50,10 @@ class XiaoniaoyunMonitor:
             "#index-main > div.content > div.home-navBar > div > div > div:nth-child(6) > sup"
         )
 
-        if await badge.count() == 0:
+        try:
+            # 最多等待 5 秒，出现就继续
+            await badge.wait_for(timeout=10000)
+        except:
             return 0
 
         text = await badge.inner_text()
@@ -79,14 +83,20 @@ class XiaoniaoyunMonitor:
 👉 后台地址：
 https://www.toysaas.com/
         """
-        webchat_send("环创-开发曾小姐", msg)
-        webchat_send("环创-开发陈小姐",'有监控到消息变化')
+        contacts = [
+            ("环创-开发曾小姐", msg),
+            ("环创-开发陈小姐", '有监控到消息变化')
+        ]
+        webchat_send(contacts)
 
     async def run(self):
         """
-        实时监控主循环
+        实时监控主循环（30 分钟一次，最多运行 3 天）
         """
         await self.ensure_login()
+
+        start_time = datetime.now()
+        end_time = start_time + timedelta(days=MONITOR_DAYS)
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=self.headless)
@@ -94,33 +104,35 @@ https://www.toysaas.com/
             page = await context.new_page()
 
             await page.goto("https://www.toysaas.com/", timeout=100000)
-            self.logger.info("🚀 开始实时监控宵鸟云消息")
+            self.logger.info(
+                f"🚀 开始监控宵鸟云消息（每 {CHECK_INTERVAL // 60} 分钟一次，截止 {end_time}）"
+            )
 
-            while True:
+            while datetime.now() < end_time:
                 try:
                     count = await self.get_unread_count(page)
-                    self.logger.info(f"当前未读消息：{count}")
+                    self.logger.info(f"【宵鸟云】当前未读消息：{count}")
 
                     # 第一次读取：只记录，不通知
                     if self.last_count is None:
                         self.last_count = count
                         self.logger.info("🔰 初始化未读数，不发送通知")
-                        continue
+                    else:
+                        if count > self.last_count and count > 0:
+                            await self.notify(count)
 
-                    if count > self.last_count and count>0:
-                        await self.notify(count)
-
-                    self.last_count = count
-
-
+                        self.last_count = count
 
                 except PlaywrightTimeoutError:
                     self.logger.warning("⚠️ 页面读取超时，继续监控")
                 except Exception as e:
                     self.logger.exception(f"❌ 监控异常：{e}")
 
+                # 下一次检查
                 await asyncio.sleep(CHECK_INTERVAL)
 
+            self.logger.info("⏹️ 已监控 3 天，自动停止任务")
+            await browser.close()
 
 # ================= 启动入口 =================
 # if __name__ == "__main__":

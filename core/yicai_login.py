@@ -16,7 +16,7 @@ COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
 class YiCaiLogin:
     def __init__(self):
-        self.logger = get_logger('yicai')
+        self.logger = get_logger('search_factory')
         cfg=get_shop_config('yicai')
         self.account=cfg['account']
         self.password=cfg['password']

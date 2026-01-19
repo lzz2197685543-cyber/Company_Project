@@ -3,11 +3,12 @@ from datetime import datetime
 
 from core.base_client import HttpClient
 from utils.webchat_send import webchat_send
-
+from datetime import datetime, timedelta
 
 # ================= 配置 =================
-CHECK_INTERVAL = 5          # 轮询间隔（秒）
-QUIET_HOURS = (23, 8)       # 夜间免打扰：23:00 ~ 08:00
+CHECK_INTERVAL = 30 * 60     # 30 分钟
+MONITOR_DAYS = 3            # 监控 3 天
+QUIET_HOURS = (23, 8)       # 夜间免打扰
 # =======================================
 
 
@@ -48,37 +49,45 @@ class XiaozhuxiongMonitor:
 👉 后台地址：
 https://www.toysbear.com/main
         """
-        webchat_send("环创-开发曾小姐", msg)
-        webchat_send("环创-开发陈小姐", '有监控到消息变化')
+        contacts = [
+            ("环创-开发曾小姐", msg),
+            ("环创-开发陈小姐", '有监控到消息变化')
+        ]
+        webchat_send(contacts)
+
 
     def run(self):
-        self.logger.info("🚀 开始实时监控【小竹熊】消息")
+        self.logger.info("🚀 开始监控【小竹熊】消息（30 分钟一次，运行 3 天）")
 
-        while True:
+        start_time = datetime.now()
+        end_time = start_time + timedelta(days=MONITOR_DAYS)
+
+        self.logger.info(f"⏰ 监控截止时间：{end_time}")
+
+        while datetime.now() < end_time:
             try:
                 count = self.fetch()
-                self.logger.info(f"当前未读消息：{count}")
+                self.logger.info(f"【小竹熊】当前未读消息：{count}")
 
                 # 第一次启动：只记录，不通知
                 if self.last_count is None:
                     self.last_count = count
                     self.logger.info("🔰 初始化未读数，不发送通知")
-                    time.sleep(CHECK_INTERVAL)
-                    continue
+                else:
+                    # 只有新增才通知
+                    if count > self.last_count and count > 0:
+                        self.notify(count)
 
-                # 只有启动后新增才通知
-                if count > self.last_count and count > 0:
-                    self.notify(count)
-
-
-                self.last_count = count
+                    self.last_count = count
 
             except Exception as e:
                 self.logger.exception(f"❌ 小竹熊监控异常：{e}")
 
             time.sleep(CHECK_INTERVAL)
 
+        self.logger.info("⏹️ 已监控 3 天，小竹熊监控任务自动结束")
+
 
 # ================= 启动入口 =================
-# if __name__ == "__main__":
-#     XiaozhuxiongMonitor().run()
+if __name__ == "__main__":
+    XiaozhuxiongMonitor().run()

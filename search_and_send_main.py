@@ -7,8 +7,6 @@ from services.search.xiaozhuxiong import XiaozhuxiongSearch
 from services.messaging.xiaozhuxiong_chat import SupplierChatService
 from services.search.xiaoniaoyun_playwright import ToysAASBot
 from services.search.yicai import YiCaiSearch
-
-
 import os
 
 config = {
@@ -44,7 +42,7 @@ def run_xiaozhuxiong(image_path: str, message: str):
 
         if company_number in sent_companies:
             continue  # 已经发送过，跳过
-        logger.info('正在给--item["供应商"]发送信息')
+        logger.info(f'正在给--{item["供应商"]}发送信息')
         target_id = chat.create_group(company_number)
         chat.send_text(target_id, upload_img_url, 'RC:ImgMsg')
         chat.send_text(target_id, message, 'RC:TxtMsg')
@@ -114,7 +112,7 @@ def prepare_upload_records(items):
 # ================== 主流程 ==================
 async def main():
     img_list = [
-        str(IMG_DIR / "car.jpg"),
+        str(IMG_DIR / "gun.jpg"),
         # str(IMG_DIR / "basketball.png"),
     ]
 

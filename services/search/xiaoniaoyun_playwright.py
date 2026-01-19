@@ -63,46 +63,46 @@ class ToysAASBot:
         #     return True
 
         # 登录方法一：微信扫码登录
-        # self.context = await self.browser.new_context()
-        # self.page = await self.context.new_page()
-        # await self.page.goto("https://www.toysaas.com/home/login", wait_until="domcontentloaded")
-        # input('微信扫码登录，扫完之后输入ok:')
-        # btn = self.page.get_by_role("button", name="我知道了")
-        #
-        # try:
-        #     await btn.wait_for(timeout=2000)
-        #     await btn.click()
-        # except:
-        #     pass
-
-        # 登录方法二：验证码登录
-        # 首次登录
         self.context = await self.browser.new_context()
         self.page = await self.context.new_page()
         await self.page.goto("https://www.toysaas.com/home/login", wait_until="domcontentloaded")
-
-        # 点击图标登录
-        await self.page.get_by_role("img").nth(1).click()
-
-        # 填写手机号
-        await self.page.get_by_role("textbox", name="请输入手机号").fill(self.account)
-        await self.page.get_by_role("link", name="获取验证码").click()
-
-        # 人工输入验证码
-        verification_code = input("请输入手机上收到的验证码: ")
-        await self.page.get_by_role("textbox", name="请输入短信验证码").fill(verification_code)
-        await self.page.get_by_role("checkbox").check()
-        await self.page.get_by_role("button", name="登录").click()
-
-        # ⭐ 等待登录成功
-        await self.page.wait_for_selector(".is-opened .el-menu-item:nth-child(1)", timeout=60000)
+        input('微信扫码登录，扫完之后输入ok:')
         btn = self.page.get_by_role("button", name="我知道了")
 
         try:
-            await btn.wait_for(timeout=3000)
+            await btn.wait_for(timeout=2000)
             await btn.click()
         except:
             pass
+
+        # 登录方法二：验证码登录
+        # 首次登录
+        # self.context = await self.browser.new_context()
+        # self.page = await self.context.new_page()
+        # await self.page.goto("https://www.toysaas.com/home/login", wait_until="domcontentloaded")
+        #
+        # # 点击图标登录
+        # await self.page.get_by_role("img").nth(1).click()
+        #
+        # # 填写手机号
+        # await self.page.get_by_role("textbox", name="请输入手机号").fill(self.account)
+        # await self.page.get_by_role("link", name="获取验证码").click()
+        #
+        # # 人工输入验证码
+        # verification_code = input("请输入手机上收到的验证码: ")
+        # await self.page.get_by_role("textbox", name="请输入短信验证码").fill(verification_code)
+        # await self.page.get_by_role("checkbox").check()
+        # await self.page.get_by_role("button", name="登录").click()
+        #
+        # # ⭐ 等待登录成功
+        # await self.page.wait_for_selector(".is-opened .el-menu-item:nth-child(1)", timeout=60000)
+        # btn = self.page.get_by_role("button", name="我知道了")
+        #
+        # try:
+        #     await btn.wait_for(timeout=3000)
+        #     await btn.click()
+        # except:
+        #     pass
 
         # 保存登录态
         await self.save_storage()
@@ -267,7 +267,7 @@ class ToysAASBot:
                 # === 发送消息：只对“新厂名”发 ===
                 if factory_name and factory_name not in sent_factories:
                     self.logger.info(f"📨 给厂家发送消息：{factory_name}")
-                    await self.send_message(item_id=item['id'], message=upload_img_url)
+                    message = f"[查看图片]({upload_img_url})\n\n{message}"
                     await self.send_message(item_id=item['id'],message=message)
                     sent_factories.add(factory_name)
                 else:

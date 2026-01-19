@@ -1,0 +1,151 @@
+2026-01-19 11:19:00,473 | INFO | search_factory | 🚀 开始实时监控【小竹熊】消息
+2026-01-19 11:19:00,473 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:19:02,229 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:19:02,229 | INFO | search_factory | 🔰 【小竹熊】初始化未读数，不发送通知
+2026-01-19 11:19:07,236 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:19:08,875 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:19:13,884 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:19:15,513 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:19:20,528 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:23:03,284 | INFO | search_factory | 🚀 开始实时监控【小竹熊】消息
+2026-01-19 11:23:03,284 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:23:04,956 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:23:04,956 | INFO | search_factory | 🔰 【小竹熊】初始化未读数，不发送通知
+2026-01-19 11:23:12,259 | INFO | search_factory | ✅ 浏览器初始化成功
+2026-01-19 11:23:28,104 | INFO | search_factory | storage_state 已保存到 D:\sd14\Factory_sourcing\data\cookies\xiaoniaoyun_storage.json
+2026-01-19 11:23:28,104 | INFO | search_factory | ✅ 登录成功并保存 storage_state
+2026-01-19 11:23:28,104 | INFO | search_factory | ✅ 登录态确认完成
+2026-01-19 11:23:32,738 | INFO | search_factory | 🚀 开始实时监控宵鸟云消息
+2026-01-19 11:23:36,247 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:23:36,247 | INFO | search_factory | 🔰 【宵鸟云】初始化未读数，不发送通知
+2026-01-19 11:23:36,262 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:23:41,264 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:23:46,289 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:23:51,305 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:23:56,330 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:24:43,568 | INFO | search_factory | 🚀 开始实时监控【小竹熊】消息
+2026-01-19 11:24:43,568 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:24:44,290 | INFO | search_factory | ✅ 浏览器初始化成功
+2026-01-19 11:24:45,433 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:24:45,433 | INFO | search_factory | 🔰 【小竹熊】初始化未读数，不发送通知
+2026-01-19 11:24:50,449 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:24:52,102 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:24:57,106 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:24:58,902 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:03,912 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:05,695 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:10,699 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:12,425 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:17,394 | INFO | search_factory | storage_state 已保存到 D:\sd14\Factory_sourcing\data\cookies\xiaoniaoyun_storage.json
+2026-01-19 11:25:17,395 | INFO | search_factory | ✅ 登录成功并保存 storage_state
+2026-01-19 11:25:17,395 | INFO | search_factory | ✅ 登录态确认完成
+2026-01-19 11:25:17,427 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:19,371 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:24,386 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:26,147 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:29,691 | INFO | search_factory | 🚀 开始实时监控宵鸟云消息
+2026-01-19 11:25:29,749 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:25:29,749 | INFO | search_factory | 🔰 【宵鸟云】初始化未读数，不发送通知
+2026-01-19 11:25:29,762 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:25:31,162 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:32,892 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:34,783 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:25:37,901 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:25:39,696 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:25:39,806 | INFO | search_factory | 【宵鸟云】当前未读消息：7
+2026-01-19 11:32:34,677 | INFO | search_factory | 🚀 开始监控【小竹熊】消息（30 分钟一次，运行 3 天）
+2026-01-19 11:32:34,677 | INFO | search_factory | ⏰ 监控截止时间：2026-01-22 11:32:34.677655
+2026-01-19 11:32:34,679 | INFO | search_factory | 正在监控---小竹熊---是否有信息
+2026-01-19 11:32:36,351 | INFO | search_factory | 【小竹熊】当前未读消息：0
+2026-01-19 11:32:36,351 | INFO | search_factory | 🔰 初始化未读数，不发送通知
+2026-01-19 11:41:10,281 | INFO | search_factory | 
+📸 处理图片：D:\sd14\Factory_sourcing\data\img\gun.jpg
+2026-01-19 11:41:13,130 | INFO | search_factory | 正在处理我们要发送的图片
+2026-01-19 11:41:15,918 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:22,107 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:41:24,684 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:41:24,684 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:29,692 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:41:32,300 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:41:32,300 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:37,037 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:41:39,630 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:41:39,630 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:44,593 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:41:47,309 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:41:47,309 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:52,204 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:41:54,904 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:41:54,904 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:41:59,741 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:42:02,332 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:42:02,332 | INFO | search_factory | 正在给--item["供应商"]发送信息
+2026-01-19 11:42:07,150 | INFO | search_factory | RC:ImgMsg--已发送
+2026-01-19 11:42:09,740 | INFO | search_factory | RC:TxtMsg--已发送
+2026-01-19 11:42:52,785 | INFO | search_factory | ✅ storage_state 存在
+2026-01-19 11:43:05,454 | INFO | search_factory | 正在处理我们要发送的图片
+2026-01-19 11:43:19,990 | INFO | search_factory | ✅ 宜采抓取完成：10 条
+2026-01-19 11:43:21,666 | INFO | search_factory | ✅ 浏览器初始化成功
+2026-01-19 11:43:49,518 | INFO | search_factory | storage_state 已保存到 D:\sd14\Factory_sourcing\data\cookies\xiaoniaoyun_storage.json
+2026-01-19 11:43:49,519 | INFO | search_factory | ✅ 登录成功并保存 storage_state
+2026-01-19 11:43:50,241 | INFO | search_factory | ✅ 图片 D:\sd14\Factory_sourcing\data\img\gun.jpg 上传完成
+2026-01-19 11:43:53,950 | INFO | search_factory | 正在处理我们要发送的图片
+2026-01-19 11:43:55,888 | INFO | search_factory | ✅ 搜索接口返回 10 条结果
+2026-01-19 11:43:55,889 | INFO | search_factory | ✅ 图片 D:\sd14\Factory_sourcing\data\img\gun.jpg 搜索完成，找到 10 条结果
+2026-01-19 11:43:55,889 | INFO | search_factory | 📨 给厂家发送消息：光学宝
+2026-01-19 11:44:01,525 | WARNING | search_factory | ⚠️ 商品 6049926 未出现「发起聊天」按钮，跳过发送消息
+2026-01-19 11:44:01,596 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:07,234 | WARNING | search_factory | ⚠️ 商品 6049926 未出现「发起聊天」按钮，跳过发送消息
+2026-01-19 11:44:07,276 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:07,276 | INFO | search_factory | 📨 给厂家发送消息：烽裕玩具厂
+2026-01-19 11:44:12,636 | INFO | search_factory | ✅ 商品 5280822 已成功发送消息
+2026-01-19 11:44:12,699 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:12,780 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:18,168 | INFO | search_factory | ✅ 商品 5280822 已成功发送消息
+2026-01-19 11:44:18,216 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:18,280 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:18,280 | INFO | search_factory | ⏭ 已发送过，跳过厂家：烽裕玩具厂
+2026-01-19 11:44:18,280 | INFO | search_factory | 📨 给厂家发送消息：灿城玩具
+2026-01-19 11:44:23,570 | INFO | search_factory | ✅ 商品 4654649 已成功发送消息
+2026-01-19 11:44:23,614 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:23,678 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:28,486 | INFO | search_factory | ✅ 商品 4654649 已成功发送消息
+2026-01-19 11:44:28,513 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:28,592 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:28,592 | INFO | search_factory | 📨 给厂家发送消息：创琪
+2026-01-19 11:44:33,918 | INFO | search_factory | ✅ 商品 3955511 已成功发送消息
+2026-01-19 11:44:33,976 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:34,053 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:38,796 | INFO | search_factory | ✅ 商品 3955511 已成功发送消息
+2026-01-19 11:44:38,834 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:38,916 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:38,917 | INFO | search_factory | ⏭ 已发送过，跳过厂家：创琪
+2026-01-19 11:44:38,917 | INFO | search_factory | 📨 给厂家发送消息：佳成玩具
+2026-01-19 11:44:44,253 | INFO | search_factory | ✅ 商品 5260098 已成功发送消息
+2026-01-19 11:44:44,297 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:44,362 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:49,676 | INFO | search_factory | ✅ 商品 5260098 已成功发送消息
+2026-01-19 11:44:49,731 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:49,812 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:44:49,812 | INFO | search_factory | 📨 给厂家发送消息：嘉迪泓
+2026-01-19 11:44:55,152 | INFO | search_factory | ✅ 商品 2936458 已成功发送消息
+2026-01-19 11:44:55,200 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:44:55,264 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:00,628 | INFO | search_factory | ✅ 商品 2936458 已成功发送消息
+2026-01-19 11:45:00,683 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:45:00,745 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:00,745 | INFO | search_factory | 📨 给厂家发送消息：佳利发
+2026-01-19 11:45:06,062 | INFO | search_factory | ✅ 商品 5214740 已成功发送消息
+2026-01-19 11:45:06,115 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:45:06,180 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:10,960 | INFO | search_factory | ✅ 商品 5214740 已成功发送消息
+2026-01-19 11:45:11,040 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:45:11,119 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:11,119 | INFO | search_factory | 📨 给厂家发送消息：卡乐八八玩具厂
+2026-01-19 11:45:16,496 | INFO | search_factory | ✅ 商品 2914708 已成功发送消息
+2026-01-19 11:45:16,550 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:45:16,617 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:21,950 | INFO | search_factory | ✅ 商品 2914708 已成功发送消息
+2026-01-19 11:45:22,020 | INFO | search_factory | ✅ 第一个聊天框已关闭
+2026-01-19 11:45:22,098 | INFO | search_factory | ✅ 第二个聊天框已关闭
+2026-01-19 11:45:22,792 | INFO | search_factory | 浏览器已关闭
