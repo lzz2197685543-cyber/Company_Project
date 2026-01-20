@@ -112,7 +112,7 @@ def prepare_upload_records(items):
 # ================== 主流程 ==================
 async def main():
     img_list = [
-        str(IMG_DIR / "gun.jpg"),
+        str(IMG_DIR / "people.jpg"),
         # str(IMG_DIR / "basketball.png"),
     ]
 
