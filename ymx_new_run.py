@@ -1,5 +1,5 @@
-from utils.dingding_doc import DingTalkSheetUploader,DingTalkTokenManager
-from utils.logger import get_logger
+from util.dingding_doc import DingTalkSheetUploader,DingTalkTokenManager
+from util.logger import get_logger
 from api.ymx_new_data_multithread import NewYmxNewData
 from datetime import datetime
 import time

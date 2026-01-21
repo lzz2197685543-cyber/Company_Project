@@ -2,9 +2,15 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="spider310" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Factory_sourcing" />
     <orderEntry type="module" module-name="JST_horizon" />
+    <orderEntry type="module" module-name="Temu_horizon" />
+    <orderEntry type="module" module-name="SMT" />
+    <orderEntry type="module" module-name="Shopee" />
+    <orderEntry type="module" module-name="Shein" />
+    <orderEntry type="module" module-name="TK" />
+    <orderEntry type="module" module-name="Temu_jst" />
   </component>
 </module>

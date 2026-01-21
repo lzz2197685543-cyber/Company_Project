@@ -9,7 +9,7 @@ import playwright
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "data"
 CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-# print(CONFIG_DIR)
+
 
 class OfferFilterAutomation:
     def __init__(self, page, logger):

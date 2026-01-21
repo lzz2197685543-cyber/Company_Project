@@ -107,6 +107,18 @@ class YunmaCaptchaProcessor(BaseCaptchaProcessor):
                     captcha_info["local_answer_path"] = str(answer_filename)
                     self.logger.info(f"答案图片已保存: {answer_filename}")
 
+            if captcha_info["type"] == "text_click":
+                captcha = page.locator(
+                    ".tencent-captcha-dy__verify-bg-img"
+                )
+
+                await captcha.wait_for(timeout=30_000)
+
+                # 对该元素截图
+                await captcha.screenshot(path=f"{CONFIG_DIR}/tencent_text_captcha.png")
+                captcha_info["screenshot_path"] = f"{CONFIG_DIR}/tencent_text_captcha.png"
+                self.logger.info('已截图')
+
             return captcha_info
 
         except Exception as e:
@@ -134,7 +146,6 @@ class YunmaCaptchaProcessor(BaseCaptchaProcessor):
             self.logger.info("检测到滑块验证码")
             slider_text = await page.locator(".tencent-captcha-dy__header-text").text_content()
             self.logger.info(f"滑块提示: {slider_text}")
-
 
 
             # 获取背景图片
@@ -172,14 +183,16 @@ class YunmaCaptchaProcessor(BaseCaptchaProcessor):
                     "type": "tencent_text_click",
                     "image": captcha_info.get("local_bg_path"),
                     "words": captcha_info.get("words", []),
-                    "prompt_text": captcha_info.get("prompt_text")
+                    "prompt_text": captcha_info.get("prompt_text"),
+                    "screenshot_path": captcha_info.get("screenshot_path")
                 }
                 # 调用云码，返回结果
-                result=self.jfbym.identify_text_click(payload['image'], payload['words'])
+                result=self.jfbym.identify_text_click(payload['screenshot_path'], payload['words'])
                 # 1️⃣ 点选验证码
                 await self.click_captcha_points(
                     page,
-                    result["data"]["points"]
+                    result["data"]["points"],
+                    img_path='.tencent-captcha-dy__verify-bg-img'
                 )
 
                 # 2️⃣ 稍等（非常重要）
@@ -202,7 +215,8 @@ class YunmaCaptchaProcessor(BaseCaptchaProcessor):
                 # 1️⃣ 点选验证码
                 await self.click_captcha_points(
                     page,
-                    result["data"]["points"]
+                    result["data"]["points"],
+                    img_path=".tencent-captcha-dy__warp.tencent-captcha-dy__click-type-wrap"
                 )
 
                 # 2️⃣ 稍等（非常重要）
@@ -228,12 +242,12 @@ class YunmaCaptchaProcessor(BaseCaptchaProcessor):
             return None
 
     # 文字点击处理
-    async def click_captcha_points(self, page, points):
+    async def click_captcha_points(self, page, points,img_path):
         """
         使用【验证码整体容器】作为坐标基准，100% 对齐云码
         """
         container = page.locator(
-            ".tencent-captcha-dy__warp.tencent-captcha-dy__click-type-wrap"
+            img_path
         )
         await container.wait_for(timeout=10_000)
 

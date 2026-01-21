@@ -2,3 +2,51 @@
 2026-01-21 14:25:07,682 | INFO | GeekBILogin | 检测到滑块验证码
 2026-01-21 14:25:07,685 | INFO | GeekBILogin | 滑块提示: 拖动下方滑块完成拼图
 2026-01-21 14:25:08,248 | INFO | GeekBILogin | 滑块拖动距离: 101px
+2026-01-21 17:56:04,861 | ERROR | GeekBILogin | 等待验证码失败: Page.wait_for_selector: Target page, context or browser has been closed
+2026-01-21 17:56:12,625 | ERROR | GeekBILogin | 等待验证码失败: Page.wait_for_selector: Target page, context or browser has been closed
+2026-01-21 17:56:20,614 | ERROR | GeekBILogin | 等待验证码失败: Page.wait_for_selector: Target page, context or browser has been closed
+2026-01-21 17:56:27,630 | INFO | GeekBILogin | 检测到验证码类型: click
+2026-01-21 17:56:27,637 | INFO | GeekBILogin | 检测到文字点击验证码，需要点击的文字: ['焙', '熬', '般']
+2026-01-21 17:56:28,043 | INFO | GeekBILogin | 背景图片已保存: D:\sd14\Product_Selection\data\img\captcha_text_click_bg.jpg
+2026-01-21 17:56:28,422 | INFO | GeekBILogin | 验证码容器: {'x': 510.5, 'y': 220.7734375, 'width': 330, 'height': 235.703125}, DPR=1
+2026-01-21 17:56:28,422 | INFO | GeekBILogin | 点击第 1 个点: (659.7, 472.1)
+2026-01-21 17:56:29,503 | INFO | GeekBILogin | 点击第 2 个点: (956.7, 571.0)
+2026-01-21 17:56:30,471 | INFO | GeekBILogin | 点击第 3 个点: (677.1, 273.4)
+2026-01-21 17:56:43,012 | INFO | GeekBILogin | 检测到验证码类型: slider
+2026-01-21 17:56:43,013 | INFO | GeekBILogin | 检测到滑块验证码
+2026-01-21 17:56:43,015 | INFO | GeekBILogin | 滑块提示: 拖动下方滑块完成拼图
+2026-01-21 17:56:43,581 | INFO | GeekBILogin | 滑块拖动距离: 241px
+2026-01-21 17:56:43,969 | ERROR | GeekBILogin | 发送到云码API失败: Mouse.move: Target page, context or browser has been closed
+2026-01-21 17:56:51,737 | INFO | GeekBILogin | 检测到验证码类型: click
+2026-01-21 17:56:51,748 | INFO | GeekBILogin | 检测到文字点击验证码，需要点击的文字: ['贝', '衬', '菠']
+2026-01-21 17:56:52,145 | INFO | GeekBILogin | 背景图片已保存: D:\sd14\Product_Selection\data\img\captcha_text_click_bg.jpg
+2026-01-21 17:56:52,624 | INFO | GeekBILogin | 验证码容器: {'x': 510.5, 'y': 220.7734375, 'width': 330, 'height': 235.703125}, DPR=1
+2026-01-21 17:56:52,624 | INFO | GeekBILogin | 点击第 1 个点: (856.8, 475.3)
+2026-01-21 17:56:53,884 | INFO | GeekBILogin | 点击第 2 个点: (1058.6, 368.0)
+2026-01-21 17:56:54,960 | INFO | GeekBILogin | 点击第 3 个点: (654.6, 371.2)
+2026-01-21 17:57:07,291 | INFO | GeekBILogin | 检测到验证码类型: slider
+2026-01-21 17:57:07,292 | INFO | GeekBILogin | 检测到滑块验证码
+2026-01-21 17:57:07,295 | INFO | GeekBILogin | 滑块提示: 拖动下方滑块完成拼图
+2026-01-21 17:57:07,783 | INFO | GeekBILogin | 滑块拖动距离: 238px
+2026-01-21 17:57:08,889 | ERROR | GeekBILogin | 发送到云码API失败: Mouse.move: Target page, context or browser has been closed
+2026-01-21 17:57:16,718 | INFO | GeekBILogin | 检测到验证码类型: click
+2026-01-21 17:57:16,725 | INFO | GeekBILogin | 检测到文字点击验证码，需要点击的文字: ['承', '扒', '凹']
+2026-01-21 17:57:17,126 | INFO | GeekBILogin | 背景图片已保存: D:\sd14\Product_Selection\data\img\captcha_text_click_bg.jpg
+2026-01-21 17:57:17,872 | ERROR | GeekBILogin | 发送到云码API失败: Locator.wait_for: Target page, context or browser has been closed
+2026-01-21 17:57:25,241 | INFO | GeekBILogin | 检测到验证码类型: click
+2026-01-21 17:57:25,250 | INFO | GeekBILogin | 检测到图片点击验证码，答案图片URL: https://turing.captcha.qcloud.com/cap_union_new_getcapbysig?img_index=0&image=02680900004a9e29000000156c5ad1502f13&sess=s0mdbfYp0GeOpYIJzmOX-h-GGWu8ITP-Y-ORWyUzY4GNJsqKSnriXdr52nJLenBUCchak_nRZphfUEzxkQJoTaByOkwuLgI--bJoO2Vy9KfHl12pkF0IvKu6hetz2DxEvpLiTdAaQ96zHzAXKqOJHlkhHpJC4uYAbDimUsKFZgwmTDDHchva3CL1XaX6LILLiNFeD9t4MuXhkpLB-HVTBC0YGslAbn92YXpqSqEFG31_Ut0MwGfSU89EP9YIxyO0jiqvQT6i9SEww7xJDwwWYagveAYQRDxT1yBMRfFNFS819BMxhhQqDCJVBdc7jD2LAXYbKXi-rn7EObQk4vlbqlxFWHgARNYpLanu8OW_AJFSOU99sPZa6kp8Fkd32MPPX4QWtYjem--SVOHyGdoyUN_JKf8YmMptauf4G20ILldbZGFl3ig820QZGcs9rKRswULahAH9g7Emo*
+2026-01-21 17:57:25,637 | INFO | GeekBILogin | 背景图片已保存: D:\sd14\Product_Selection\data\img\captcha_image_click_bg.jpg
+2026-01-21 17:57:25,803 | INFO | GeekBILogin | 已截图
+2026-01-21 17:57:26,168 | INFO | GeekBILogin | 答案图片已保存: D:\sd14\Product_Selection\data\img\captcha_answer.jpg
+2026-01-21 17:57:26,615 | INFO | GeekBILogin | 验证码容器: {'x': 495.5, 'y': 172.875, 'width': 360, 'height': 407.25}, DPR=1
+2026-01-21 17:57:26,615 | INFO | GeekBILogin | 点击第 1 个点: (725.0, 360.5)
+2026-01-21 17:57:27,827 | INFO | GeekBILogin | 点击第 2 个点: (729.0, 402.0)
+2026-01-21 17:57:28,875 | INFO | GeekBILogin | 点击第 3 个点: (531.1, 282.9)
+2026-01-21 18:17:28,531 | INFO | GeekBILogin | 检测到验证码类型: click
+2026-01-21 18:17:28,537 | INFO | GeekBILogin | 检测到文字点击验证码，需要点击的文字: ['播', '尺', '崇']
+2026-01-21 18:17:28,942 | INFO | GeekBILogin | 背景图片已保存: D:\sd14\Product_Selection\data\img\captcha_text_click_bg.jpg
+2026-01-21 18:17:29,164 | INFO | GeekBILogin | 已截图
+2026-01-21 18:17:29,864 | INFO | GeekBILogin | 验证码容器: {'x': 510.5, 'y': 220.7734375, 'width': 330, 'height': 235.703125}, DPR=1
+2026-01-21 18:17:29,864 | INFO | GeekBILogin | 点击第 1 个点: (640.5, 294.6)
+2026-01-21 18:17:30,993 | INFO | GeekBILogin | 点击第 2 个点: (584.2, 395.6)
+2026-01-21 18:17:32,134 | INFO | GeekBILogin | 点击第 3 个点: (730.9, 391.7)

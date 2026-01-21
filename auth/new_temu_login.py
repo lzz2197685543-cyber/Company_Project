@@ -1,10 +1,10 @@
 import asyncio
 import json
 from auth.new_temu_browser import BrowserManager
-from utils.logger import get_logger
-from utils.config_loader import get_shop_config
+from util.logger import get_logger
+from util.config_loader import get_shop_config
 from auth.captcha.detector import YunmaCaptchaProcessor
-from utils.page_helpers import temu_close_popup_if_exists
+from util.page_helpers import temu_close_popup_if_exists
 
 
 class GeekBILogin:

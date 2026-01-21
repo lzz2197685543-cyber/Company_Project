@@ -5,6 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" filepath="$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" filepath="$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/New_1688.iml" filepath="$PROJECT_DIR$/.idea/New_1688.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SMT/.idea/SMT.iml" filepath="$PROJECT_DIR$/../SMT/.idea/SMT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Shein/.idea/Shein.iml" filepath="$PROJECT_DIR$/../Shein/.idea/Shein.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" filepath="$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TK/.idea/TK.iml" filepath="$PROJECT_DIR$/../TK/.idea/TK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" filepath="$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Temu_jst/.idea/Temu_jst.iml" filepath="$PROJECT_DIR$/../Temu_jst/.idea/Temu_jst.iml" />
     </modules>
   </component>
 </project>
