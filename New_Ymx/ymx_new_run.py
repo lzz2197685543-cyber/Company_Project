@@ -13,7 +13,7 @@ from filter_new_data import DataProcessor
 async def main():
     client = MaiJiaLogin(
         phone="BAK2023",
-        password="BAK2023",
+        password="lxz2026",
         headless=False
     )
     await client.login_and_save_cookie_dict("./data/sellersprite_cookie_dict.json")
@@ -190,7 +190,6 @@ def upload_multiple_records(config, records):
 
     # 关键修复：处理NaN值
     import math
-    import copy
 
     def fix_nan(obj):
         if isinstance(obj, float):
@@ -313,7 +312,9 @@ if __name__ == '__main__':
     new_data = processor.filter_new_data()
 
     logger.info('---------------------------------开始构建上传的数据-----------------------------------')
-    records = processor.build_records()
+    records = processor.build_records(new_data)
+
+    processor.import_csv_to_product_monitor(new_data)
 
     logger.info('---------------------------------开始上传数据-----------------------------------')
     upload_multiple_records(config, records)

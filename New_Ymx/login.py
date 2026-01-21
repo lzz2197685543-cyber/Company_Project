@@ -60,7 +60,7 @@ class MaiJiaLogin:
 async def main():
     client = MaiJiaLogin(
         phone="BAK2023",
-        password="BAK2023",
+        password="lxz2026",
         headless=False
     )
     await client.login_and_save_cookie_dict("./data/sellersprite_cookie_dict.json")

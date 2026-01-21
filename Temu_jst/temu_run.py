@@ -81,10 +81,11 @@ def build_records():
     return records
 
 
-def temu_run():
-    temu=Temu()
-    temu.get_all_page()
 
+
+def temu_run():
+    temu = Temu()
+    temu.get_all_page()
 
 
 if __name__ == '__main__':

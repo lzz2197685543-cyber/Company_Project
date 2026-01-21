@@ -16,17 +16,8 @@ class TemuNews:
             2: "半托"
         }
         self.headers = {
-            'accept': 'application/json, text/plain, */*',
-            'accept-language': 'zh-CN,zh;q=0.9',
             'authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnZWVrYmkiLCJpZCI6IjM0Nzg5IiwiaWF0IjoxNzY1ODc3MTc2LCJleHAiOjE3NjcxNzMxNzZ9.V2wvPx4A5jLOOfEiBagnHXKi6B_vMNEMr4svTVRXCcI',
             'origin': 'https://www.geekbi.com',
-            'priority': 'u=1, i',
-            'sec-ch-ua': '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            'sec-fetch-dest': 'empty',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-site': 'same-site',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
         }
         self.url = 'https://api.geekbi.com/api/v1/temu/goods/search'
@@ -72,6 +63,7 @@ class TemuNews:
         self.headers['authorization']=self.get_authorization()
         try:
             response = requests.get(url=self.url, params=params, headers=self.headers)
+            print(response.text)
         except Exception as e:
             print(f'请求响应出错:{e}')
         return response.json()

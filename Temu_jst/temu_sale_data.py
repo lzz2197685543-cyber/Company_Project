@@ -194,7 +194,7 @@ class Temu:
             self.logger.info(f'正在爬取第{page}页的数据')
 
             retry = 0
-            while retry < 2:  # 最多尝试 2 次（第一次失败后 refresh）
+            while retry < 3:  # 最多尝试 2 次（第一次失败后 refresh）
                 try:
                     self.cookies = self.get_cookies()
 

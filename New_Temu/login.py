@@ -51,6 +51,8 @@ class GeekBILogin:
             await page.fill('input[placeholder*="密码"]', self.password)
             await page.click('button[type="submit"]')
 
+            input('请输入ok:')
+
             # 等 token 请求出现
             await asyncio.sleep(5)
 

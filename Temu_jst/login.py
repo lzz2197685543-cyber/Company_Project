@@ -2,6 +2,7 @@ from DrissionPage import ChromiumPage
 import json
 import time
 import os
+from DrissionPage.common import By
 
 
 class JSTlogin:
@@ -34,16 +35,23 @@ class JSTlogin:
         self.page.get('https://ww.erp321.com/epaas')
 
         """登录需要验证码"""
-        # self.page.get(' https://www.erp321.com/login.aspx')
+        # self.page.get('https://www.erp321.com/login.aspx')
         # self.page.ele((By.ID,'login_id')).input(self.username)
         # self.page.ele((By.ID,'password')).input(self.password)
         # # 点击勾选
         # self.page.ele('xpath://*[@id="root"]/div/div[2]/div/div[2]/div/div/div[1]/div[2]/label/span[1]/input').click()
         # # 点击登录
         # self.page.ele('xpath://*[@id="root"]/div/div[2]/div/div[2]/div/div/div[1]/button/span').click()
-        # time.sleep(70)
-
-        # 等页面稳定（确保 cookie 已写入）
+        #
+        # btn = self.page.ele(
+        #     'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button/span',
+        #     timeout=1
+        # )
+        #
+        # if btn:
+        #     btn.click()
+        #
+        # # 等页面稳定（确保 cookie 已写入）
         time.sleep(3)
 
         # 保存 cookie
@@ -56,7 +64,7 @@ def refresh():
     jst = JSTlogin(username='18165643805', password='Aa14789+')
     jst.main()
 
-# if __name__ == '__main__':
-#     refresh()
+if __name__ == '__main__':
+    refresh()
 
 

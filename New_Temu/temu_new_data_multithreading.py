@@ -1,6 +1,6 @@
 import requests
 import time
-from datetime import datetime,timedelta
+from datetime import datetime, timedelta
 from urllib.parse import quote
 
 import os
@@ -13,13 +13,18 @@ from logger_config import SimpleLogger
 import json
 
 
-
 class TemuNews:
     def __init__(self, max_workers=5):
         self.logger = SimpleLogger('TemuNews')
         self.mode_dict = {
             1: "全托",
             2: "半托"
+        }
+        self.cookies = {
+            '_ga': 'GA1.1.1141587834.1764316379',
+            'TDC_itoken': '550572721%3A1764316843',
+            'gaf': 'a62f5a9e9fc6e70e8475229cc9380877',
+            '_ga_KHESEPFY03': 'GS2.1.s1768816187$o14$g1$t1768816454$j60$l0$h0',
         }
         self.headers = {
             'accept': 'application/json, text/plain, */*',
@@ -107,7 +112,8 @@ class TemuNews:
         }
 
         try:
-            response = requests.get(url=self.url, params=params, headers=self.headers, timeout=30)
+            response = requests.get(url=self.url, params=params, headers=self.headers,cookies=self.cookies,timeout=30)
+            print(response.text[:200])
             response.raise_for_status()
             json_data = response.json()
 
@@ -149,7 +155,7 @@ class TemuNews:
                     '月销量': i.get('monthSold', 0),
                     '托管模式': self.mode_dict.get(i.get('hostingMode', 1), '未知'),
                     '在售站点': i.get('site', {}).get('cnName', ''),
-                    '产品链接' : f'https://www.temu.com/search_result.html?search_key={i["goodsId"]}&search_method=user&region={i["regionId"]}&regionCnName={quote(i["site"]["cnName"])}',
+                    '产品链接': f'https://www.temu.com/search_result.html?search_key={i["goodsId"]}&search_method=user&region={i["regionId"]}&regionCnName={quote(i["site"]["cnName"])}',
                     '类目': i.get('catItems', [{}])[1].get('catName', '') if i.get('catItems') else ''
                 }
 
@@ -384,6 +390,7 @@ class TemuNews:
             print(f"平均速度: {self.stats['total_items'] / duration:.2f} 条/秒")
         print("=" * 60)
 
+
 def temu_new_run():
     """主程序入口"""
     try:
@@ -409,6 +416,5 @@ def temu_new_run():
         print(f"程序执行出错: {e}")
         traceback.print_exc()
 
-
-if __name__ == '__main__':
-    temu_new_run()
+# if __name__ == '__main__':
+#     temu_new_run()

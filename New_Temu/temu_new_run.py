@@ -85,9 +85,6 @@ def upload_multiple_records(config,records):
     return results
 
 
-
-
-
 if __name__ == '__main__':
 
     logger = SimpleLogger(name='run')
@@ -104,10 +101,8 @@ if __name__ == '__main__':
     logger.info('---------------------------------先进行登录-----------------------------------')
     asyncio.run(main())
 
-
     logger.info('---------------------------------开始爬取temu_new数据-----------------------------------')
     temu_new_run()
-
 
     logger.info('---------------------------------开始去重数据-----------------------------------')
     # 创建处理器
@@ -117,7 +112,9 @@ if __name__ == '__main__':
     new_data = processor.filter_new_data()
 
     logger.info('---------------------------------开始构建上传的数据-----------------------------------')
-    records = processor.build_records()
+    records = processor.build_records(new_data)
+
+    processor.import_csv_to_product_monitor(new_data)
 
 
     logger.info('---------------------------------开始上传数据-----------------------------------')
@@ -125,10 +122,7 @@ if __name__ == '__main__':
 
     logger.info(f'数据上传成功')
 
-
-
     time.sleep(3)
-
 
     # 计算总时间
     total_time = time.time() - total_start_time
