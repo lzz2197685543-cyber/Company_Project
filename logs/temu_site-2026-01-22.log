@@ -1,0 +1,216 @@
+2026-01-22 12:00:34,704 | INFO | temu_site | 开始清除昨天报表的数据
+2026-01-22 12:00:36,736 | INFO | temu_site | 
+ 删除所有记录
+2026-01-22 12:00:40,832 | INFO | temu_site | 删除所有记录结果: 工作表为空，无需删除
+2026-01-22 12:00:40,832 | INFO | temu_site | 开始清除今天报表的数据
+2026-01-22 12:00:42,853 | INFO | temu_site | 
+ 删除所有记录
+2026-01-22 12:00:46,943 | INFO | temu_site | 删除所有记录结果: 工作表为空，无需删除
+2026-01-22 12:00:46,944 | INFO | temu_site | 正在爬取店铺---2106-Temu全托管---skc_sku_violate数据
+2026-01-22 12:00:48,988 | ERROR | temu_site | [2106-Temu全托管] 请求失败（第 1 次）: HTTPSConnectionPool(host='agentseller.temu.com', port=443): Max retries exceeded with url: /api/kiana/mms/robin/searchForChainSupplier (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=8080): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。")))
+2026-01-22 12:01:06,877 | INFO | temu_site | 开始清除昨天报表的数据
+2026-01-22 12:01:07,323 | INFO | temu_site | 
+ 删除所有记录
+2026-01-22 12:01:21,624 | INFO | temu_site | 删除所有记录结果: None
+2026-01-22 12:01:21,624 | INFO | temu_site | 开始清除今天报表的数据
+2026-01-22 12:01:21,625 | INFO | temu_site | 
+ 删除所有记录
+2026-01-22 12:02:16,039 | INFO | temu_site | 删除所有记录结果: None
+2026-01-22 12:02:16,040 | INFO | temu_site | 正在爬取店铺---2106-Temu全托管---skc_sku_violate数据
+2026-01-22 12:02:31,872 | ERROR | temu_site | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:03:13,885 | INFO | temu_site | 店铺---2106-Temu全托管---没有违规数据
+2026-01-22 12:03:13,888 | INFO | temu_site | 店铺---2106-Temu全托管---没有违规数据，跳过
+2026-01-22 12:03:13,888 | INFO | temu_site | 正在爬取店铺---2105-Temu全托管---skc_sku_violate数据
+2026-01-22 12:03:15,772 | ERROR | temu_site | [2105-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:03:40,124 | INFO | temu_site | 店铺---2105-Temu全托管---没有违规数据
+2026-01-22 12:03:40,125 | INFO | temu_site | 店铺---2105-Temu全托管---没有违规数据，跳过
+2026-01-22 12:03:40,126 | INFO | temu_site | 正在爬取店铺---2108-Temu全托管---skc_sku_violate数据
+2026-01-22 12:03:40,934 | ERROR | temu_site | [2108-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:04:07,550 | INFO | temu_site | 店铺---2108-Temu全托管---没有违规数据
+2026-01-22 12:04:07,552 | INFO | temu_site | 店铺---2108-Temu全托管---没有违规数据，跳过
+2026-01-22 12:04:07,553 | INFO | temu_site | 正在爬取店铺---2107-Temu全托管---skc_sku_violate数据
+2026-01-22 12:04:08,400 | ERROR | temu_site | [2107-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:04:32,431 | INFO | temu_site | 店铺---2107-Temu全托管---没有违规数据
+2026-01-22 12:04:32,432 | INFO | temu_site | 店铺---2107-Temu全托管---没有违规数据，跳过
+2026-01-22 12:04:32,433 | INFO | temu_site | 正在爬取店铺---2102-Temu全托管---skc_sku_violate数据
+2026-01-22 12:04:33,247 | ERROR | temu_site | [2102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:04:53,967 | INFO | temu_site | 正在爬取店铺---2102-Temu全托管---sku_site_status数据
+2026-01-22 12:04:54,865 | INFO | temu_site | 正在爬取店铺---2102-Temu全托管---sku_site_exception数据
+2026-01-22 12:04:56,198 | ERROR | temu_site | 处理店铺 2102-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:04:56,199 | INFO | temu_site | 正在爬取店铺---1108-Temu全托管---skc_sku_violate数据
+2026-01-22 12:04:57,028 | ERROR | temu_site | [1108-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:05:19,181 | INFO | temu_site | 店铺---1108-Temu全托管---没有违规数据
+2026-01-22 12:05:19,182 | INFO | temu_site | 店铺---1108-Temu全托管---没有违规数据，跳过
+2026-01-22 12:05:19,183 | INFO | temu_site | 正在爬取店铺---1107-Temu全托管---skc_sku_violate数据
+2026-01-22 12:05:19,966 | ERROR | temu_site | [1107-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:05:48,249 | INFO | temu_site | 店铺---1107-Temu全托管---没有违规数据
+2026-01-22 12:05:48,249 | INFO | temu_site | 店铺---1107-Temu全托管---没有违规数据，跳过
+2026-01-22 12:05:48,250 | INFO | temu_site | 正在爬取店铺---1106-Temu全托管---skc_sku_violate数据
+2026-01-22 12:05:49,049 | ERROR | temu_site | [1106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:06:25,449 | INFO | temu_site | 正在爬取店铺---1106-Temu全托管---sku_site_status数据
+2026-01-22 12:06:26,287 | INFO | temu_site | 正在爬取店铺---1106-Temu全托管---sku_site_exception数据
+2026-01-22 12:06:27,177 | ERROR | temu_site | 处理店铺 1106-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:06:27,178 | INFO | temu_site | 正在爬取店铺---1105-Temu全托管---skc_sku_violate数据
+2026-01-22 12:06:27,963 | ERROR | temu_site | [1105-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:06:46,607 | INFO | temu_site | 店铺---1105-Temu全托管---没有违规数据
+2026-01-22 12:06:46,608 | INFO | temu_site | 店铺---1105-Temu全托管---没有违规数据，跳过
+2026-01-22 12:06:46,609 | INFO | temu_site | 正在爬取店铺---2103-Temu全托管---skc_sku_violate数据
+2026-01-22 12:06:47,402 | ERROR | temu_site | [2103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:07:06,585 | INFO | temu_site | 店铺---2103-Temu全托管---没有违规数据
+2026-01-22 12:07:06,585 | INFO | temu_site | 店铺---2103-Temu全托管---没有违规数据，跳过
+2026-01-22 12:07:06,586 | INFO | temu_site | 正在爬取店铺---112-Temu全托管---skc_sku_violate数据
+2026-01-22 12:07:07,851 | ERROR | temu_site | [112-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:07:39,185 | INFO | temu_site | 正在爬取店铺---112-Temu全托管---sku_site_status数据
+2026-01-22 12:07:41,738 | INFO | temu_site | 正在爬取店铺---112-Temu全托管---sku_site_exception数据
+2026-01-22 12:07:42,733 | ERROR | temu_site | 处理店铺 112-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:07:42,734 | INFO | temu_site | 正在爬取店铺---151-Temu全托管家居---skc_sku_violate数据
+2026-01-22 12:07:43,557 | ERROR | temu_site | [151-Temu全托管家居] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:08:08,430 | INFO | temu_site | 店铺---151-Temu全托管家居---没有违规数据
+2026-01-22 12:08:08,431 | INFO | temu_site | 店铺---151-Temu全托管家居---没有违规数据，跳过
+2026-01-22 12:08:08,432 | INFO | temu_site | 正在爬取店铺---1104-Temu全托管---skc_sku_violate数据
+2026-01-22 12:08:09,269 | ERROR | temu_site | [1104-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:08:33,851 | INFO | temu_site | 店铺---1104-Temu全托管---没有违规数据
+2026-01-22 12:08:33,851 | INFO | temu_site | 店铺---1104-Temu全托管---没有违规数据，跳过
+2026-01-22 12:08:33,852 | INFO | temu_site | 正在爬取店铺---1102-Temu全托管---skc_sku_violate数据
+2026-01-22 12:08:34,783 | ERROR | temu_site | [1102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:08:56,982 | INFO | temu_site | 店铺---1102-Temu全托管---没有违规数据
+2026-01-22 12:08:56,983 | INFO | temu_site | 店铺---1102-Temu全托管---没有违规数据，跳过
+2026-01-22 12:08:56,984 | INFO | temu_site | 正在爬取店铺---1103-Temu全托管---skc_sku_violate数据
+2026-01-22 12:08:57,862 | ERROR | temu_site | [1103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:09:25,317 | INFO | temu_site | 店铺---1103-Temu全托管---没有违规数据
+2026-01-22 12:09:25,319 | INFO | temu_site | 店铺---1103-Temu全托管---没有违规数据，跳过
+2026-01-22 12:09:25,320 | INFO | temu_site | 正在爬取店铺---1101-Temu全托管---skc_sku_violate数据
+2026-01-22 12:09:26,129 | ERROR | temu_site | [1101-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:09:47,976 | INFO | temu_site | 店铺---1101-Temu全托管---没有违规数据
+2026-01-22 12:09:47,976 | INFO | temu_site | 店铺---1101-Temu全托管---没有违规数据，跳过
+2026-01-22 12:09:47,977 | INFO | temu_site | 正在爬取店铺---2101-Temu全托管KA---skc_sku_violate数据
+2026-01-22 12:09:48,918 | ERROR | temu_site | [2101-Temu全托管KA] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:10:12,138 | INFO | temu_site | 正在爬取店铺---2101-Temu全托管KA---sku_site_status数据
+2026-01-22 12:10:12,993 | INFO | temu_site | 正在爬取店铺---2101-Temu全托管KA---sku_site_exception数据
+2026-01-22 12:10:13,950 | ERROR | temu_site | 处理店铺 2101-Temu全托管KA 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:10:13,950 | INFO | temu_site | 正在爬取店铺---110-Temu全托管KA---skc_sku_violate数据
+2026-01-22 12:10:14,761 | ERROR | temu_site | [110-Temu全托管KA] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:10:37,586 | INFO | temu_site | 正在爬取店铺---110-Temu全托管KA---sku_site_status数据
+2026-01-22 12:10:40,209 | INFO | temu_site | 正在爬取店铺---110-Temu全托管KA---sku_site_exception数据
+2026-01-22 12:10:41,222 | ERROR | temu_site | 处理店铺 110-Temu全托管KA 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:10:41,223 | INFO | temu_site | 正在爬取店铺---109-Temu全托管KA---skc_sku_violate数据
+2026-01-22 12:10:42,030 | ERROR | temu_site | [109-Temu全托管KA] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:11:05,097 | INFO | temu_site | 店铺---109-Temu全托管KA---没有违规数据
+2026-01-22 12:11:05,098 | INFO | temu_site | 店铺---109-Temu全托管KA---没有违规数据，跳过
+2026-01-22 12:11:05,099 | INFO | temu_site | 正在爬取店铺---108-Temu全托管---skc_sku_violate数据
+2026-01-22 12:11:05,925 | ERROR | temu_site | [108-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:11:32,197 | INFO | temu_site | 店铺---108-Temu全托管---没有违规数据
+2026-01-22 12:11:32,198 | INFO | temu_site | 店铺---108-Temu全托管---没有违规数据，跳过
+2026-01-22 12:11:32,199 | INFO | temu_site | 正在爬取店铺---107-Temu全托管---skc_sku_violate数据
+2026-01-22 12:11:33,022 | ERROR | temu_site | [107-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:12:06,028 | INFO | temu_site | 店铺---107-Temu全托管---没有违规数据
+2026-01-22 12:12:06,029 | INFO | temu_site | 店铺---107-Temu全托管---没有违规数据，跳过
+2026-01-22 12:12:06,030 | INFO | temu_site | 正在爬取店铺---106-Temu全托管---skc_sku_violate数据
+2026-01-22 12:12:06,831 | ERROR | temu_site | [106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:12:53,445 | INFO | temu_site | 正在爬取店铺---106-Temu全托管---sku_site_status数据
+2026-01-22 12:13:11,974 | INFO | temu_site | 正在爬取店铺---106-Temu全托管---sku_site_exception数据
+2026-01-22 12:13:13,035 | ERROR | temu_site | 处理店铺 106-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:13:13,036 | INFO | temu_site | 正在爬取店铺---105-Temu全托管---skc_sku_violate数据
+2026-01-22 12:13:13,888 | ERROR | temu_site | [105-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:13:37,118 | INFO | temu_site | 店铺---105-Temu全托管---没有违规数据
+2026-01-22 12:13:37,119 | INFO | temu_site | 店铺---105-Temu全托管---没有违规数据，跳过
+2026-01-22 12:13:37,120 | INFO | temu_site | 正在爬取店铺---104-Temu全托管---skc_sku_violate数据
+2026-01-22 12:13:38,103 | ERROR | temu_site | [104-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:13:59,579 | INFO | temu_site | 正在爬取店铺---104-Temu全托管---sku_site_status数据
+2026-01-22 12:14:00,433 | INFO | temu_site | 正在爬取店铺---104-Temu全托管---sku_site_exception数据
+2026-01-22 12:14:01,367 | ERROR | temu_site | 处理店铺 104-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:14:01,368 | INFO | temu_site | 正在爬取店铺---103-Temu全托管---skc_sku_violate数据
+2026-01-22 12:14:02,184 | ERROR | temu_site | [103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:14:26,825 | INFO | temu_site | 正在爬取店铺---103-Temu全托管---sku_site_status数据
+2026-01-22 12:14:32,264 | INFO | temu_site | 正在爬取店铺---103-Temu全托管---sku_site_exception数据
+2026-01-22 12:14:33,979 | ERROR | temu_site | 处理店铺 103-Temu全托管 时出错: 'NoneType' object has no attribute 'empty'
+2026-01-22 12:14:33,980 | INFO | temu_site | 正在爬取店铺---102-Temu全托管---skc_sku_violate数据
+2026-01-22 12:14:35,783 | ERROR | temu_site | [102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:15:07,334 | INFO | temu_site | 店铺---102-Temu全托管---没有违规数据
+2026-01-22 12:15:07,334 | INFO | temu_site | 店铺---102-Temu全托管---没有违规数据，跳过
+2026-01-22 12:15:07,335 | INFO | temu_site | 正在爬取店铺---101-Temu全托管---skc_sku_violate数据
+2026-01-22 12:15:08,124 | ERROR | temu_site | [101-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-01-22 12:15:30,825 | INFO | temu_site | 店铺---101-Temu全托管---没有违规数据
+2026-01-22 12:15:30,826 | INFO | temu_site | 店铺---101-Temu全托管---没有违规数据，跳过
+2026-01-22 12:15:31,067 | INFO | temu_site | 准备上传 921 条记录...
+2026-01-22 12:16:11,581 | INFO | temu_site | 
+上传统计:
+2026-01-22 12:16:11,581 | INFO | temu_site | 总批次: 19
+2026-01-22 12:16:11,581 | INFO | temu_site | 成功批次: 19
+2026-01-22 12:16:11,581 | INFO | temu_site | 失败批次: 0
+2026-01-22 12:16:11,701 | INFO | temu_site | 准备上传 475 条记录...
+2026-01-22 12:16:35,068 | INFO | temu_site | 
+上传统计:
+2026-01-22 12:16:35,069 | INFO | temu_site | 总批次: 10
+2026-01-22 12:16:35,069 | INFO | temu_site | 成功批次: 10
+2026-01-22 12:16:35,069 | INFO | temu_site | 失败批次: 0
+2026-01-22 12:16:35,069 | INFO | temu_site | 🎯 全流程完成，总耗时：15分28秒
+2026-01-22 14:44:54,781 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 1 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:44:56,828 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 2 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:44:58,877 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 3 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:45:18,895 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 1 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:45:20,938 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 2 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:45:22,985 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 3 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:46:08,082 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 1 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:46:10,131 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 2 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:46:31,322 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 1 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:46:33,371 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 2 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:46:35,415 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 3 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:47:58,382 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 1 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:48:00,426 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 2 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:48:02,479 | ERROR | temu_site | [103-Temu全托管] 网络请求失败（第 3 次）: 403, message='Forbidden', url='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
+2026-01-22 14:51:18,304 | INFO | temu_site | [103-Temu全托管] 第 1 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:51:18,405 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:51:18,405 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:51:18,405 | WARNING | temu_site | [103-Temu全托管] 403 Forbidden, 等待后重试
+2026-01-22 14:51:20,423 | INFO | temu_site | [103-Temu全托管] 第 2 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:51:20,530 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:51:20,530 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:51:20,530 | WARNING | temu_site | [103-Temu全托管] 403 Forbidden, 等待后重试
+2026-01-22 14:51:24,527 | INFO | temu_site | [103-Temu全托管] 第 3 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:51:24,625 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:51:24,625 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:51:24,625 | ERROR | temu_site | [103-Temu全托管] HTTP错误: 403 - {"error_code":40001}
+
+2026-01-22 14:54:45,417 | INFO | temu_site | [103-Temu全托管] 第 1 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:54:45,513 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:54:45,513 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:54:45,513 | WARNING | temu_site | [103-Temu全托管] 403 Forbidden, 等待后重试
+2026-01-22 14:54:47,516 | INFO | temu_site | [103-Temu全托管] 第 2 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:54:47,616 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:54:47,616 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:54:47,616 | WARNING | temu_site | [103-Temu全托管] 403 Forbidden, 等待后重试
+2026-01-22 14:54:51,618 | INFO | temu_site | [103-Temu全托管] 第 3 次尝试请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 14:54:51,715 | INFO | temu_site | [103-Temu全托管] 响应状态: 403
+2026-01-22 14:54:51,715 | ERROR | temu_site | [103-Temu全托管] HTTP 403: {"error_code":40001}
+
+2026-01-22 14:54:51,715 | ERROR | temu_site | [103-Temu全托管] HTTP错误: 403 - {"error_code":40001}
+
+2026-01-22 15:00:49,376 | INFO | temu_site | [103-Temu全托管] 第 1 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:00:49,470 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:01:10,286 | INFO | temu_site | [103-Temu全托管] 第 2 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:01:10,376 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:01:31,128 | INFO | temu_site | [103-Temu全托管] 第 3 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:01:31,253 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:01:31,253 | ERROR | temu_site | 获取到的cookie是无效的，需要重新登录
+2026-01-22 15:01:31,253 | WARNING | temu_site | [103-Temu全托管] Cookie 验证失败
+2026-01-22 15:01:31,253 | INFO | temu_site | [103-Temu全托管] 请求成功
+2026-01-22 15:05:00,283 | ERROR | temu_site | [106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:05:27,055 | ERROR | temu_site | [106-Temu全托管] 请求失败（第 2 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:06:05,126 | ERROR | temu_site | [103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:06:23,870 | ERROR | temu_site | [103-Temu全托管] 请求失败（第 2 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:06:42,734 | ERROR | temu_site | [103-Temu全托管] 请求失败（第 3 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:13:40,805 | INFO | temu_site | [103-Temu全托管] 第 1 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:13:40,903 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:14:00,498 | INFO | temu_site | [103-Temu全托管] 第 2 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:14:00,591 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:14:21,649 | INFO | temu_site | [103-Temu全托管] 第 3 次请求: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-22 15:14:21,742 | WARNING | temu_site | [103-Temu全托管] Cookie 失效 (error_code=40001)
+2026-01-22 15:14:21,743 | ERROR | temu_site | 获取到的cookie是无效的，需要重新登录
+2026-01-22 15:14:21,743 | WARNING | temu_site | [103-Temu全托管] Cookie 验证失败
+2026-01-22 15:14:21,743 | INFO | temu_site | [103-Temu全托管] 请求成功

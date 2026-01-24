@@ -1,0 +1,612 @@
+{
+  "dingding": {
+    "Client ID": "dings13rpbdzmpis6dyo",
+    "Client Secret": "J0gloUMrhko4ca_Esar9jiVtef8vT-Qd5AJq9B3zYeyR7pEdoIHibaUFU8NZfz9o",
+    "corpId": "ding558a601d903f4a5effe93478753d9884",
+    "agend_id": 4036386083,
+    "userid": {
+    "邹雯雯": "106246005536840537",
+    "赵结贤": "01120945665335843302",
+    "it": "01214029653234363143",
+    "杨均焯": "083966555426161200",
+    "吴晓翠": "285520016321560097",
+    "李惠清": "01154108005726211571"
+  },
+    "bots": {
+    "程序监控群": {
+      "access_token": "2a7021c2bee749e4cef2e697409567ecde957b8c923957e0586fdd33522ef16b",
+      "secret": "SECe325049a821c4b6c701bc0d612d3fd1ab92be9ff752d189369f4e81f28cfcbba"
+    },
+    "国内零售程序运行": {
+      "access_token": "5db499688b646407a8f1b610e685c0a746e9d09cdd6433b5efebf54027be5248",
+      "secret": "SEC7663a69de0658db55a89ec6e7210e47f502ef9329780e810d757febaed8b6511"
+    },
+    "速卖通JIT一组": {
+      "access_token": "2e047b802f59efabdb9445b60d2b291ab03fd2ba10ecf0d8cfcb83840f60cdb4",
+      "secret": "SEC31030e9146d841047a38297f9141236c980908f7a5a76795f82d9b69460ebcb5"
+    },
+    "速卖通JIT二组": {
+      "access_token": "aa49fa3c7cc189538559b570d315453556adb3cddd1f4cb99a2d4ed41687ce40",
+      "secret": "SECf442272c3ab882b85d6ff021519853e72af8c83d4b90c6b149d4dd3ac0c7358c"
+    },
+    "克劳德": {
+      "access_token": "8d8030c0ec6314e094cd421f97a563c3abc39efa61f380f6bf4251159f51b50a",
+      "secret": "SEC08f8cb2ee5d76e289cd1e1d8f8210d967f6be7184c4c3cb51574cc00fb9062e5"
+    },
+    "me": {
+      "access_token": "630602c35a2f4d8db5081042101eb01f9bd0a84a71bb50c0e528d3ca33d8534f",
+      "secret": "SECeddb89430ef8852bbd6b58a8c40319550bfff049462fdf6f3a083ecebe164b78"
+    }
+  }
+  },
+  "shops": {
+    "2105-Temu全托管": {
+      "id": 421,
+      "name": "temu全托1105店",
+      "hubId": 1107774478,
+      "credentials": {
+        "username": "16734860635",
+        "password": "T25422eqt**"
+      },
+      "shop": {
+        "shopId": 634418226913144,
+        "shopName": "Sparklekle",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "218.78.129.86",
+        "port": 15837,
+        "type": "socks5",
+        "username": "RHIQLRKF2B",
+        "password": "25682816"
+      }
+    },
+    "2108-Temu全托管": {
+      "id": 15,
+      "name": "temu全托2103店（113店改）+2108店+半托6号店+半托8号店",
+      "hubId": 1006903311,
+      "credentials": {
+        "username": "18022164055",
+        "password": "TEGtengxu4055%"
+      },
+      "proxy": {
+        "host": "1.194.218.235",
+        "port": 12509,
+        "type": "socks5",
+        "username": "PXBHAK1C2C",
+        "password": "80609506"
+      },
+      "shop": {
+        "shopId": 634418226738847,
+        "shopName": "Gizmoo",
+        "storeMode": "全托"
+      }
+    },
+    "2107-Temu全托管": {
+      "id": 55,
+      "name": "temu全托2102店（152店改）",
+      "hubId": 1036581979,
+      "credentials": {
+        "username": "16555701905",
+        "password": "TEHxiatong1905/"
+      },
+      "proxy": {
+        "host": "49.7.135.46",
+        "port": 11730,
+        "type": "socks5",
+        "username": "ILRO9ZV94I",
+        "password": "54813365"
+      },
+      "shop": {
+        "shopId": 634418226736377,
+        "shopName": "Whimzzyy",
+        "storeMode": "全托"
+      }
+    },
+    "2106-Temu全托管": {
+      "id": 56,
+      "name": "temu全托2106店（153店改）+半托代发1",
+      "hubId": 1036583528,
+      "credentials": {
+        "username": "16525028040",
+        "password": "TEjchuanjie8040*"
+      },
+      "proxy": {
+        "host": "111.172.230.181",
+        "port": 18481,
+        "type": "socks5",
+        "username": "ESGLSH9IAS",
+        "password": "92299574"
+      },
+      "shop": {
+        "shopId": 634418222019165,
+        "shopName": "CHUANJIEQT",
+        "storeMode": "全托"
+      }
+    },
+    "2102-Temu全托管": {
+      "id": 55,
+      "name": "temu全托2102店（152店改）",
+      "hubId": 1036581979,
+      "credentials": {
+        "username": "16555701905",
+        "password": "TEHxiatong1905/"
+      },
+      "proxy": {
+        "host": "49.7.135.46",
+        "port": 11730,
+        "type": "socks5",
+        "username": "ILRO9ZV94I",
+        "password": "54813365"
+      },
+      "shop": {
+        "shopId": 634418222017994,
+        "shopName": "XIATONGQT",
+        "storeMode": "全托"
+      }
+    },
+    "1108-Temu全托管": {
+      "id": 444,
+      "name": "temu全托1108号店",
+      "hubId": 1232530196,
+      "credentials": {
+        "username": "16734860597",
+        "password": "qho164552**"
+      },
+      "shop": {
+        "shopId": 634418224728784,
+        "shopName": "Deeriy",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "1.194.218.235",
+        "port": 12509,
+        "type": "socks5",
+        "username": "PXBHAK1C2C",
+        "password": "80609506"
+      }
+    },
+    "1107-Temu全托管": {
+      "id": 443,
+      "name": "temu全托1107号店",
+      "hubId": 1232527381,
+      "credentials": {
+        "username": "16734860631",
+        "password": "hahHGH1644+"
+      },
+      "shop": {
+        "shopId": 634418224726087,
+        "shopName": "QuirkWell",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "36.111.32.150",
+        "port": 19405,
+        "type": "socks5",
+        "username": "DTMDADMV8Q",
+        "password": "69800603"
+      }
+    },
+    "1106-Temu全托管": {
+      "id": 422,
+      "name": "temu全托1106店",
+      "hubId": 1107782133,
+      "credentials": {
+        "username": "16734860639",
+        "password": "Jun815916zhuo++"
+      },
+      "shop": {
+        "shopId": 634418222924399,
+        "shopName": "Solkattxx",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "36.111.32.150",
+        "port": 19405,
+        "type": "socks5",
+        "username": "DTMDADMV8Q",
+        "password": "69800603"
+      }
+    },
+    "1105-Temu全托管": {
+      "id": 421,
+      "name": "temu全托1105店",
+      "hubId": 1107774478,
+      "credentials": {
+        "username": "16734860635",
+        "password": "T25422eqt**"
+      },
+      "shop": {
+        "shopId": 634418222923253,
+        "shopName": "Zanli QT",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "218.78.129.86",
+        "port": 15837,
+        "type": "socks5",
+        "username": "RHIQLRKF2B",
+        "password": "25682816"
+      }
+    },
+    "2103-Temu全托管": {
+      "id": 15,
+      "name": "temu全托2103店（113店改）+2108店+半托6号店+半托8号店",
+      "hubId": 1006903311,
+      "credentials": {
+        "username": "18022164055",
+        "password": "TEGtengxu4055%"
+      },
+      "proxy": {
+        "host": "1.194.218.235",
+        "port": 12509,
+        "type": "socks5",
+        "username": "PXBHAK1C2C",
+        "password": "80609506"
+      },
+      "shop": {
+        "shopId": 634418221565461,
+        "shopName": "TENGXU",
+        "storeMode": "全托"
+      }
+    },
+    "112-Temu全托管": {
+      "id": 112,
+      "name": "temu全托112店",
+      "hubId": 1006486242,
+      "credentials": {
+        "username": "16537241799",
+        "password": "TEFhuidan1799#"
+      },
+      "proxy": {
+        "host": "36.111.32.150",
+        "port": 19405,
+        "type": "socks5",
+        "username": "DTMDADMV8Q",
+        "password": "69800603"
+      },
+      "shop": {
+        "shopId": 634418221557168,
+        "shopName": "HUIDAN QT",
+        "storeMode": "全托"
+      }
+    },
+    "151-Temu全托管家居": {
+      "id": 16,
+      "name": "temu全托151店",
+      "hubId": 1009153364,
+      "credentials": {
+        "username": "15377873527",
+        "password": "TEYhanxu3527*-"
+      },
+      "proxy": {
+        "host": "124.236.76.149",
+        "port": 17745,
+        "type": "socks5",
+        "username": "LLW0BU7VGQ",
+        "password": "39267509"
+      },
+      "shop": {
+        "shopId": 634418221604357,
+        "shopName": "HANXUQT",
+        "storeMode": "全托"
+      }
+    },
+    "1104-Temu全托管": {
+      "id": 20,
+      "name": "temu全托1104店",
+      "hubId": 1010612394,
+      "credentials": {
+        "username": "16541255152",
+        "password": "TEeqiaowa*"
+      },
+      "proxy": {
+        "host": "125.122.156.184",
+        "port": 18684,
+        "type": "socks5",
+        "username": "Y0B8WQORKK",
+        "password": "88967715"
+      },
+      "shop": {
+        "shopId": 634418220872942,
+        "shopName": "QIAOWA QT",
+        "storeMode": "全托"
+      }
+    },
+    "1102-Temu全托管": {
+      "id": 17,
+      "name": "temu全托1102店",
+      "hubId": 1009236863,
+      "credentials": {
+        "username": "13680167979",
+        "password": "TEWyijia7979/"
+      },
+      "proxy": {
+        "host": "125.94.230.83",
+        "port": 18005,
+        "type": "socks5",
+        "username": "FPWTTIK4KO",
+        "password": "49838994"
+      },
+      "shop": {
+        "shopId": 634418220783223,
+        "shopName": "YIJIA QT",
+        "storeMode": "全托"
+      }
+    },
+    "1103-Temu全托管": {
+      "id": 19,
+      "name": "temu全托1103店-子账号",
+      "hubId": 1010611195,
+      "credentials": {
+        "username": "15011987730",
+        "password": "qt987654."
+      },
+      "proxy": {
+        "host": "218.78.129.68",
+        "port": 15654,
+        "type": "socks5",
+        "username": "YKEW9SOB5S",
+        "password": "32342415"
+      },
+      "shop": {
+        "shopId": 634418220790579,
+        "shopName": "XIYOUJI QT",
+        "storeMode": "全托"
+      }
+    },
+    "1101-Temu全托管": {
+      "id": 18,
+      "name": "temu全托1101店",
+      "hubId": 1010609275,
+      "credentials": {
+        "username": "13427223906",
+        "password": "qt987654."
+      },
+      "proxy": {
+        "host": "124.225.4.69",
+        "port": 12533,
+        "type": "socks5",
+        "username": "AIHARVNXPM",
+        "password": "57446815"
+      },
+      "shop": {
+        "shopId": 634418220783399,
+        "shopName": "BECOLI QT",
+        "storeMode": "全托"
+      }
+    },
+    "2101-Temu全托管KA": {
+      "id": 75,
+      "name": "temu全托2101号店（111店改）",
+      "hubId": 1051551049,
+      "credentials": {
+        "username": "18165643805",
+        "password": "TEDquzhi3805*"
+      },
+      "proxy": {
+        "host": "124.236.76.149",
+        "port": 17745,
+        "type": "socks5",
+        "username": "LLW0BU7VGQ",
+        "password": "39267509"
+      },
+      "shop": {
+        "shopId": 634418219819137,
+        "shopName": "QYZHI",
+        "storeMode": "全托"
+      }
+    },
+    "110-Temu全托管KA": {
+      "id": 74,
+      "name": "temu全托110号店+半托7号店",
+      "hubId": 1051536511,
+      "credentials": {
+        "username": "15819762805",
+        "password": "TESlexianzhi2805+"
+      },
+      "proxy": {
+        "host": "121.14.201.248",
+        "port": 11074,
+        "type": "socks5",
+        "username": "WVKYFTS670",
+        "password": "14418351"
+      },
+      "shop": {
+        "shopId": 634418219747033,
+        "shopName": "Kidzbuddy",
+        "storeMode": "全托"
+      }
+    },
+    "109-Temu全托管KA": {
+      "id": 73,
+      "name": "temu全托109+半托3号-Geeray",
+      "hubId": 1051294393,
+      "credentials": {
+        "username": "18127513753",
+        "password": "TEAhuanchuang3753%"
+      },
+      "proxy": {
+        "host": "124.236.76.149",
+        "port": 17745,
+        "type": "socks5",
+        "username": "LLW0BU7VGQ",
+        "password": "39267509"
+      },
+      "shop": {
+        "shopId": 634418219743637,
+        "shopName": "geeray",
+        "storeMode": "全托"
+      }
+    },
+    "108-Temu全托管": {
+      "id": 103,
+      "name": "temu全托108店-YYDeeK BO子账号",
+      "hubId": 1053621692,
+      "credentials": {
+        "username": "16555701907",
+        "password": "qwe123456."
+      },
+      "shop": {
+        "shopId": 634418218284034,
+        "shopName": "YYDeek Bo",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "125.75.68.73",
+        "port": 17894,
+        "type": "socks5",
+        "username": "EJ0WX0RSVB",
+        "password": "02954261"
+      }
+    },
+    "107-Temu全托管": {
+      "id": 76,
+      "name": "temu全托104+108+半托1号-YYDeeK",
+      "hubId": 1051598402,
+      "credentials": {
+        "username": "13376614188",
+        "password": "TEjuyule4188-"
+      },
+      "shop": {
+        "shopId": 634418218280333,
+        "shopName": "YYDeek Ao",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "125.75.68.73",
+        "port": 17894,
+        "type": "socks5",
+        "username": "EJ0WX0RSVB",
+        "password": "02954261"
+      }
+    },
+    "106-Temu全托管": {
+      "id": 70,
+      "name": "temu全托106店-BAKAM",
+      "hubId": 1051159982,
+      "credentials": {
+        "username": "18138009171",
+        "password": "TEkedi9171.."
+      },
+      "proxy": {
+        "host": "121.229.211.102",
+        "port": 15252,
+        "type": "socks5",
+        "username": "XEZQOPMX7M",
+        "password": "53843223"
+      },
+      "shop": {
+        "shopId": 634418216684033,
+        "shopName": "BAKAM",
+        "storeMode": "全托"
+      }
+    },
+    "105-Temu全托管": {
+      "id": 69,
+      "name": "temu全托105店-UNE LUCIOLE",
+      "hubId": 1051142565,
+      "credentials": {
+        "username": "18929089237",
+        "password": "TEyueren9237."
+      },
+      "proxy": {
+        "host": "124.225.4.69",
+        "port": 12533,
+        "type": "socks5",
+        "username": "AIHARVNXPM",
+        "password": "57446815"
+      },
+      "shop": {
+        "shopId": 634418216297854,
+        "shopName": "UNE LUCIOLE",
+        "storeMode": "全托"
+      }
+    },
+    "104-Temu全托管": {
+       "id": 95,
+      "name": "temu全托104店-YYDeeK子账号",
+      "hubId": 1053270835,
+      "credentials": {
+        "username": "16525028044",
+        "password": "qwe123456."
+      },
+      "shop": {
+        "shopId": 634418214797589,
+        "shopName": "YYDeek",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "125.75.68.73",
+        "port": 17894,
+        "type": "socks5",
+        "username": "EJ0WX0RSVB",
+        "password": "02954261"
+      }
+    },
+    "103-Temu全托管": {
+      "id": 93,
+      "name": "temu全托103店-PBee",
+      "hubId": 1053232390,
+      "credentials": {
+        "username": "13342761788",
+        "password": "TEyuedong1788+"
+      },
+      "shop": {
+        "shopId": 634418211686948,
+        "shopName": "Pink Bee",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "125.75.68.73",
+        "port": 17894,
+        "type": "socks5",
+        "username": "EJ0WX0RSVB",
+        "password": "02954261"
+      }
+    },
+    "102-Temu全托管": {
+      "id": 92,
+      "name": "temu全托102店-PBear",
+      "hubId": 1053223369,
+      "credentials": {
+        "username": "18029444775",
+        "password": "TEquzhi4775*"
+      },
+      "shop": {
+        "shopId": 728287620794,
+        "shopName": "PurpleBear",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "218.78.129.68",
+        "port": 15654,
+        "type": "socks5",
+        "username": "YKEW9SOB5S",
+        "password": "32342415"
+      }
+    },
+    "101-Temu全托管": {
+      "id": 91,
+      "name": "temu全托101店-HQCK",
+      "hubId": 1053220874,
+      "credentials": {
+        "username": "13356552400",
+        "password": "TExiyue2400+"
+      },
+      "shop": {
+        "shopId": 134048074945,
+        "shopName": "HappyQueenCleverKing",
+        "storeMode": "全托"
+      },
+      "proxy": {
+        "host": "118.253.177.190",
+        "port": 11193,
+        "type": "socks5",
+        "username": "W9JFIJCY7Z",
+        "password": "46344650"
+      }
+    }
+
+  }
+}
