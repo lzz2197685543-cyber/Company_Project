@@ -13,6 +13,15 @@ import time
 import re
 from typing import Dict, List, Tuple, Any
 
+import sys
+import os
+
+# 添加项目根目录到 Python 路径
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
+from services.site.site_skc_sku_violate import SkcFetcher
+
 SITE_DIR = Path(__file__).resolve().parent.parent / "data" / "site"
 SITE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -238,7 +247,7 @@ async def main():
 
     logger.info('开始清除今天报表的数据')
     # 先清除数据
-    test_delete_records(logger=logger, config=config)
+    # test_delete_records(logger=logger, config=config)
 
     shop_name_list = [
         "2106-Temu全托管", "2105-Temu全托管", "2108-Temu全托管",
@@ -280,14 +289,14 @@ async def main():
             continue
 
     # ========= 3️⃣ 准备上传数据 =========
-    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
-    date = datetime.now().strftime("%Y%m%d")
-
-    yesterday_records = prepare_upload_records(yesterday)
-    upload_multiple_records(logger=logger, config=config_yestody, records=yesterday_records)
-
-    records = prepare_upload_records(date)
-    upload_multiple_records(logger=logger, config=config, records=records)
+    # yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
+    # date = datetime.now().strftime("%Y%m%d")
+    #
+    # yesterday_records = prepare_upload_records(yesterday)
+    # upload_multiple_records(logger=logger, config=config_yestody, records=yesterday_records)
+    #
+    # records = prepare_upload_records(date)
+    # upload_multiple_records(logger=logger, config=config, records=records)
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
