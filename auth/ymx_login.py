@@ -2,7 +2,7 @@ import asyncio
 import json
 from playwright.async_api import async_playwright
 from pathlib import Path
-from utils.config_loader import get_shop_config
+from util.config_loader import get_shop_config
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "data"
 

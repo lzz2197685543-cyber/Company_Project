@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Amazon_Stock_Watcher/.idea/Amazon_Stock_Watcher.iml" filepath="$PROJECT_DIR$/../Amazon_Stock_Watcher/.idea/Amazon_Stock_Watcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" filepath="$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" filepath="$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/New_1688.iml" filepath="$PROJECT_DIR$/.idea/New_1688.iml" />

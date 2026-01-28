@@ -2,8 +2,8 @@ from auth.new_temu_browser import BrowserManager
 from auth.new_temu_login import GeekBILogin
 from api.temu_filter_automation import OfferFilterAutomation
 import asyncio
-from utils.logger import get_logger
-from utils.dingding_doc import DingTalkTokenManager,DingTalkSheetUploader
+from util.logger import get_logger
+from util.dingding_doc import DingTalkTokenManager,DingTalkSheetUploader
 from storage.temu_data_process import TemuDataProcessor
 
 
