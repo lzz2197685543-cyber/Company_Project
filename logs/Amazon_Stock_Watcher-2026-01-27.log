@@ -1,0 +1,403 @@
+2026-01-27 17:51:17,289 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-01-27 17:51:18,736 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-01-27 17:51:18,990 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-01-27 17:51:19,125 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-01-27 17:51:19,200 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-01-27 17:51:19,210 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-01-27 17:51:19,254 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-01-27 17:51:23,650 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-01-27 17:51:23,887 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-01-27 17:51:27,189 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-01-27 17:51:28,162 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-01-27 17:51:28,543 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-01-27 17:51:28,938 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-01-27 17:51:29,349 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-01-27 17:51:29,759 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-01-27 17:51:30,135 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-01-27 17:51:30,506 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-01-27 17:51:30,897 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-01-27 17:51:31,291 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-01-27 17:51:31,673 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-01-27 17:51:31,944 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 📄 已到最后一页
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 断货通知内容:
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/73天
+ZC数字锁/90天
+青蛙天平/84天
+开锁车/78天
+
+【US站点】
+品名/断货时间
+青蛙天平/31天
+ZC字母锁/12天
+苹果锁（10个装）/36天
+苹果锁（5个装）/48天
+棕猴天平/56天
+
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+七彩磁力棒-64根盒装/41天
+七彩磁力棒-42根盒装/42天
+企鹅天平/27天
+
+【US站点】
+品名/断货时间
+冲天气球车-青蛙款/30天
+七彩磁力棒-64根盒装/34天
+
+2026-01-27 17:51:34,689 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+苹果锁（5个装）/18天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/30天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | FBA预警通知内容:
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+
+【US站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+ZC字母锁/12天
+企鹅天平/13天
+苹果锁（10个装）/25天
+苹果锁（5个装）/25天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+七彩磁力棒-64根盒装/12天
+企鹅天平/27天
+
+【US站点】
+品名/可售天数(FBA)天数
+冲天气球车-青蛙款/28天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（10个装）/30天
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/20天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/18天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+Ninigai账号（01月27号）fba即将不可售sku：
+
+【CA站点】
+品名/可售天数(FBA)天数
+整蛊音效机/9天
+
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:51:34,690 | INFO | Amazon_Stock_Watcher | 
+总共爬取 79 条数据
+2026-01-27 17:54:36,141 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-01-27 17:54:36,525 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-01-27 17:54:36,771 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-01-27 17:54:36,907 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-01-27 17:54:36,981 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-01-27 17:54:36,991 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-01-27 17:54:37,038 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-01-27 17:54:41,618 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-01-27 17:54:41,840 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-01-27 17:54:44,061 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-01-27 17:54:44,394 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-01-27 17:54:45,362 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-01-27 17:54:45,742 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-01-27 17:54:46,143 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-01-27 17:54:46,506 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-01-27 17:54:46,890 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-01-27 17:54:47,257 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-01-27 17:54:47,641 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-01-27 17:54:48,007 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-01-27 17:54:48,388 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-01-27 17:54:48,660 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-01-27 17:54:51,346 | INFO | Amazon_Stock_Watcher | 📄 已到最后一页
+2026-01-27 17:54:51,346 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:54:51,346 | INFO | Amazon_Stock_Watcher | 断货通知内容:
+2026-01-27 17:54:51,346 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:54:51,347 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/73天
+ZC数字锁/90天
+青蛙天平/84天
+开锁车/78天
+
+【US站点】
+品名/断货时间
+青蛙天平/31天
+ZC字母锁/12天
+苹果锁（10个装）/36天
+苹果锁（5个装）/48天
+棕猴天平/56天
+
+2026-01-27 17:54:51,347 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+七彩磁力棒-64根盒装/41天
+七彩磁力棒-42根盒装/42天
+企鹅天平/27天
+
+【US站点】
+品名/断货时间
+冲天气球车-青蛙款/30天
+七彩磁力棒-64根盒装/34天
+
+2026-01-27 17:54:51,347 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+苹果锁（5个装）/18天
+
+2026-01-27 17:54:51,347 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/30天
+
+2026-01-27 17:54:51,863 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | FBA预警通知内容:
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+
+【US站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+ZC字母锁/12天
+企鹅天平/13天
+苹果锁（10个装）/25天
+苹果锁（5个装）/25天
+
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+七彩磁力棒-64根盒装/12天
+企鹅天平/27天
+
+【US站点】
+品名/可售天数(FBA)天数
+冲天气球车-青蛙款/28天
+
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（10个装）/30天
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/20天
+
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/18天
+
+2026-01-27 17:54:51,864 | INFO | Amazon_Stock_Watcher | 
+Ninigai账号（01月27号）fba即将不可售sku：
+
+【CA站点】
+品名/可售天数(FBA)天数
+整蛊音效机/9天
+
+2026-01-27 17:54:52,285 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-27 17:54:52,285 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:54:52,285 | INFO | Amazon_Stock_Watcher | 
+总共爬取 79 条数据
+2026-01-27 17:56:06,921 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-01-27 17:56:07,302 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-01-27 17:56:08,756 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-01-27 17:56:08,819 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-01-27 17:56:08,887 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-01-27 17:56:08,899 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-01-27 17:56:08,937 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-01-27 17:56:13,307 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-01-27 17:56:13,541 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-01-27 17:56:16,687 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-01-27 17:56:17,092 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-01-27 17:56:17,773 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-01-27 17:56:18,154 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-01-27 17:56:18,523 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-01-27 17:56:18,905 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-01-27 17:56:19,290 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-01-27 17:56:19,661 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-01-27 17:56:20,043 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-01-27 17:56:20,427 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-01-27 17:56:20,806 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-01-27 17:56:21,147 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-01-27 17:56:27,480 | INFO | Amazon_Stock_Watcher | 📄 已到最后一页
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 断货通知内容:
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/73天
+ZC数字锁/90天
+青蛙天平/84天
+开锁车/78天
+
+【US站点】
+品名/断货时间
+青蛙天平/31天
+ZC字母锁/12天
+苹果锁（10个装）/36天
+苹果锁（5个装）/48天
+棕猴天平/56天
+
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+七彩磁力棒-64根盒装/41天
+七彩磁力棒-42根盒装/42天
+企鹅天平/27天
+
+【US站点】
+品名/断货时间
+冲天气球车-青蛙款/30天
+七彩磁力棒-64根盒装/34天
+
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+苹果锁（5个装）/18天
+
+2026-01-27 17:56:27,481 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）即将断货sku：
+
+【US站点】
+品名/断货时间
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/30天
+
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | FBA预警通知内容:
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+
+【US站点】
+品名/可售天数(FBA)天数
+青蛙天平/12天
+ZC字母锁/12天
+企鹅天平/13天
+苹果锁（10个装）/25天
+苹果锁（5个装）/25天
+
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月27号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+七彩磁力棒-64根盒装/12天
+企鹅天平/27天
+
+【US站点】
+品名/可售天数(FBA)天数
+冲天气球车-青蛙款/28天
+
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（10个装）/30天
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/3天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/20天
+
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月27号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/18天
+
+2026-01-27 17:56:27,924 | INFO | Amazon_Stock_Watcher | 
+Ninigai账号（01月27号）fba即将不可售sku：
+
+【CA站点】
+品名/可售天数(FBA)天数
+整蛊音效机/9天
+
+2026-01-27 17:56:28,356 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-27 17:56:28,356 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-27 17:56:28,356 | INFO | Amazon_Stock_Watcher | 
+总共爬取 79 条数据

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Amazon_Stock_Watcher.iml" filepath="$PROJECT_DIR$/.idea/Amazon_Stock_Watcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sd14/Product_Selection/.idea/New_1688.iml" filepath="$PROJECT_DIR$/../sd14/Product_Selection/.idea/New_1688.iml" />
+    </modules>
+  </component>
+</project>
