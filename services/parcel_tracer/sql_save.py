@@ -66,7 +66,7 @@ class StockInStorage(BaseStorage):
     def filter_new_items(self, items: List[Dict]) -> List[Dict]:
         new_items = []
         for i in items:
-            if not self.redis_is_duplicate(i["备货单号"]):
+            if not self.redis_is_duplicate_permanent(i["备货单号"]):
                 new_items.append(i)
         return new_items
 
@@ -190,9 +190,10 @@ class DeliveryNoteStorage(BaseStorage):
 
         return f"{self.redis_prefix}:{order_sn}:{status}:{trace_hash}"
 
-    def is_new(self, item: dict, expire=7 * 24 * 3600) -> bool:
+    def is_new(self, item: dict) -> bool:
+        """检查是否是新数据（永不过期）"""
         key = self.build_dedup_key(item)
-        return self.redis.set(key, 1, nx=True, ex=expire)
+        return self.redis.set(key, 1, nx=True)  # 移除ex参数
 
     def filter_new_items(self, items: list) -> list:
         new_items = []
@@ -205,6 +206,15 @@ class DeliveryNoteStorage(BaseStorage):
 
     def detect_abnormal(self, items):
         return [i for i in items if i["标记状态"] != "正常"]
+
+    def alarm_abnormal(self, abnormal_items: List[Dict], logger):
+        for i in abnormal_items:
+            logger.warning(
+                f"🚨 入库异常 | 店铺={i['店铺']} "
+                f" 备货单号：{i['备货单号']}\n"
+                f" 状态：{i['标记状态']}\n"
+                f" 异常原因：{i.get('标记原因', '')}"
+            )
 
     def build_delivery_abnormal_message(self, abnormal_items, shop_name):
         if not abnormal_items:

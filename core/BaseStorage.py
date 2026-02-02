@@ -8,7 +8,8 @@ class BaseStorage:
         self,
         mysql_conf: dict,
         redis_conf: dict,
-        redis_prefix: str
+        redis_prefix: str,
+
     ):
         # MySQL
         self.db = pymysql.connect(
@@ -26,10 +27,11 @@ class BaseStorage:
 
         self.redis_prefix = redis_prefix
 
+
     # ---------- Redis 去重 ----------
-    def redis_is_duplicate(self, unique_key: str, expire_days=60) -> bool:
+    def redis_is_duplicate_permanent(self, unique_key: str) -> bool:
+        """永不过期的去重检查"""
         redis_key = f"{self.redis_prefix}:{unique_key}"
-        is_new = self.redis.setnx(redis_key, 1)
-        if is_new:
-            self.redis.expire(redis_key, expire_days * 86400)
-        return not is_new
+        is_new = self.redis.setnx(redis_key, 1)  # 设置成功返回1，失败返回0
+        # 不调用 expire()，键就永远不会过期
+        return not is_new  # True表示重复，False表示新key

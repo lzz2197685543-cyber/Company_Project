@@ -104,3 +104,13 @@
 2026-01-24 11:35:32,569 | INFO | temu_parcel_tracer | 失败批次: 0
 2026-01-24 11:35:32,569 | INFO | temu_parcel_tracer | 入库情况数据爬取完成，共2条记录，已上传
 2026-01-24 11:35:32,569 | INFO | temu_parcel_tracer | 所有数据爬取和上传完成
+2026-01-24 17:51:17,260 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2106-Temu全托管--仓库待收货的数据---------------------
+2026-01-24 17:51:17,314 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-24 17:51:17,701 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-24 18:09:02,984 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2106-Temu全托管--仓库待收货的数据---------------------
+2026-01-24 18:09:02,997 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-24 18:09:03,364 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-24 18:09:47,346 | INFO | temu_parcel_tracer | 第 1 页获取到 16 条数据
+2026-01-24 18:09:47,346 | INFO | temu_parcel_tracer | 已获取最后一页，停止获取
+2026-01-24 18:09:47,346 | INFO | temu_parcel_tracer | ----------------开始上传(temu-发货揽收轨迹及丢件)的数据---------------------
+2026-01-24 18:09:47,776 | INFO | temu_parcel_tracer | 准备上传 16 条记录...

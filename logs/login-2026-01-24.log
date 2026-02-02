@@ -286,3 +286,18 @@ Exception: open_login_page 失败
 2026-01-24 12:09:34,401 | INFO | login | 102-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\102-Temu全托管_cookies.json
 2026-01-24 12:09:34,401 | INFO | login | 102-Temu全托管 - Cookie 获取完成，准备关闭浏览器
 2026-01-24 12:09:34,401 | INFO | login | 102-Temu全托管 - 登录成功（第 2 次）
+2026-01-24 17:51:17,702 | INFO | login | 2106-Temu全托管 - 第 1 次登录尝试
+2026-01-24 17:51:21,703 | INFO | login | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '52578', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 3451, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-01-24 17:51:21,704 | INFO | login | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 52578
+2026-01-24 17:51:23,293 | INFO | login | 2106-Temu全托管 - 已连接浏览器
+2026-01-24 17:51:23,663 | INFO | login | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2026-01-24 17:51:28,229 | INFO | login | 2106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-01-24 18:09:03,365 | INFO | login | 2106-Temu全托管 - 第 1 次登录尝试
+2026-01-24 18:09:06,948 | INFO | login | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '53699', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 3069, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-01-24 18:09:06,949 | INFO | login | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 53699
+2026-01-24 18:09:08,331 | INFO | login | 2106-Temu全托管 - 已连接浏览器
+2026-01-24 18:09:08,673 | INFO | login | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2026-01-24 18:09:13,136 | INFO | login | 2106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-01-24 18:09:18,547 | INFO | login | 2106-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2106-Temu全托管_cookies.json
+2026-01-24 18:09:18,547 | INFO | login | 2106-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-01-24 18:09:18,547 | INFO | login | 2106-Temu全托管 - 登录成功（第 1 次）

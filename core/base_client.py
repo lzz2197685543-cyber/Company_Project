@@ -87,7 +87,7 @@ class TemuBaseClient:
         # ❌ 超过最大重试次数
         ding_bot_send(
             'me',
-            f"[{self.shop_name}] temu_site 请求失败，已超过最大重试次数"
+            f"[{self.shop_name}] 请求失败，已超过最大重试次数"
         )
         raise RuntimeError(
             f"[{self.shop_name}] 请求失败，已超过最大重试次数"

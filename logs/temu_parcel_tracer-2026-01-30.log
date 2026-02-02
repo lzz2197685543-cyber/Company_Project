@@ -1,0 +1,213 @@
+2026-01-30 15:32:03,559 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2106-Temu全托管--仓库待收货的数据---------------------
+2026-01-30 15:32:03,564 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-30 15:32:03,951 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-30 15:32:34,704 | INFO | temu_parcel_tracer | ----------------开始上传(temu-发货揽收轨迹及丢件)的数据---------------------
+2026-01-30 15:32:35,164 | INFO | temu_parcel_tracer | 准备上传 9 条记录...
+2026-01-30 15:32:39,281 | INFO | temu_parcel_tracer | 
+上传统计:
+2026-01-30 15:32:39,281 | INFO | temu_parcel_tracer | 总批次: 1
+2026-01-30 15:32:39,281 | INFO | temu_parcel_tracer | 成功批次: 0
+2026-01-30 15:32:39,281 | INFO | temu_parcel_tracer | 失败批次: 1
+2026-01-30 15:32:39,281 | INFO | temu_parcel_tracer | 
+失败详情:
+2026-01-30 15:32:39,282 | INFO | temu_parcel_tracer |   批次 1: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:5732次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-01-30 15:32:39,282 | INFO | temu_parcel_tracer | 发货揽收轨迹数据爬取完成，共9条记录，已上传
+2026-01-30 15:32:39,282 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2106-Temu全托管--入库的数据---------------------
+2026-01-30 15:32:39,331 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-01-30 15:32:40,151 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:32:58,237 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 2 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:33:15,153 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 3 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:33:32,180 | INFO | temu_parcel_tracer | 获取第 1 页数据时发生异常: [2106-Temu全托管] 请求失败，已超过最大重试次数
+2026-01-30 15:33:32,180 | INFO | temu_parcel_tracer | ----------------开始上传(temu-入库情况)的数据---------------------
+2026-01-30 15:33:32,181 | INFO | temu_parcel_tracer | 准备上传 0 条记录...
+2026-01-30 15:33:32,181 | INFO | temu_parcel_tracer | 
+上传统计:
+2026-01-30 15:33:32,181 | INFO | temu_parcel_tracer | 总批次: 0
+2026-01-30 15:33:32,181 | INFO | temu_parcel_tracer | 成功批次: 0
+2026-01-30 15:33:32,182 | INFO | temu_parcel_tracer | 失败批次: 0
+2026-01-30 15:33:32,182 | INFO | temu_parcel_tracer | 入库情况数据爬取完成，共0条记录，已上传
+2026-01-30 15:33:32,182 | INFO | temu_parcel_tracer | 所有数据爬取和上传完成
+2026-01-30 15:33:32,182 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2105-Temu全托管--仓库待收货的数据---------------------
+2026-01-30 15:33:32,187 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-30 15:33:32,591 | ERROR | temu_parcel_tracer | [2105-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-30 15:33:53,793 | INFO | temu_parcel_tracer | 第 1 页没有数据，停止获取
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | ----------------开始上传(temu-发货揽收轨迹及丢件)的数据---------------------
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 准备上传 0 条记录...
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 
+上传统计:
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 总批次: 0
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 成功批次: 0
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 失败批次: 0
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | 发货揽收轨迹数据爬取完成，共0条记录，已上传
+2026-01-30 15:33:53,794 | INFO | temu_parcel_tracer | ----------------开始爬取店铺2105-Temu全托管--入库的数据---------------------
+2026-01-30 15:33:53,821 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-01-30 15:33:54,612 | ERROR | temu_parcel_tracer | [2105-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:35:54,139 | INFO | temu_parcel_tracer | ----------------开始爬取店铺103-Temu全托管--仓库待收货的数据---------------------
+2026-01-30 15:35:54,142 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-30 15:35:54,522 | ERROR | temu_parcel_tracer | [103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-30 15:36:31,945 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:37:01,357 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:37:06,331 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:37:07,866 | INFO | temu_parcel_tracer | 发货揽收轨迹数据爬取完成，共70条记录，已上传
+2026-01-30 15:37:07,866 | INFO | temu_parcel_tracer | ----------------开始爬取店铺103-Temu全托管--入库的数据---------------------
+2026-01-30 15:37:07,871 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-01-30 15:37:09,065 | ERROR | temu_parcel_tracer | [103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:37:27,030 | ERROR | temu_parcel_tracer | [103-Temu全托管] 请求失败（第 2 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:37:45,141 | ERROR | temu_parcel_tracer | [103-Temu全托管] 请求失败（第 3 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:38:02,704 | INFO | temu_parcel_tracer | 获取第 1 页数据时发生异常: [103-Temu全托管] 请求失败，已超过最大重试次数
+2026-01-30 15:38:02,704 | INFO | temu_parcel_tracer | 入库情况数据爬取完成，共0条记录，已上传
+2026-01-30 15:38:02,704 | INFO | temu_parcel_tracer | 所有数据爬取和上传完成
+2026-01-30 15:38:02,704 | INFO | temu_parcel_tracer | ----------------开始爬取店铺102-Temu全托管--仓库待收货的数据---------------------
+2026-01-30 15:38:02,733 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-30 15:38:03,119 | ERROR | temu_parcel_tracer | [102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-30 15:39:06,421 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:39:10,296 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:39:18,559 | INFO | temu_parcel_tracer | 发货揽收轨迹数据爬取完成，共65条记录，已上传
+2026-01-30 15:39:18,559 | INFO | temu_parcel_tracer | ----------------开始爬取店铺102-Temu全托管--入库的数据---------------------
+2026-01-30 15:39:18,564 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-01-30 15:39:19,207 | ERROR | temu_parcel_tracer | [102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP26012510027057 | 送货=50 | 入库=46
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP2601225823428 | 送货=123 | 入库=122
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP2601256671069 | 送货=29 | 入库=16
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP2601206351820 | 送货=124 | 入库=107
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP26011712348989 | 送货=40 | 入库=38
+2026-01-30 15:39:38,664 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=102-Temu全托管 | 备货单=WP2601172950682 | 送货=46 | 入库=37
+2026-01-30 15:39:38,664 | INFO | temu_parcel_tracer | ✓ 第 1 页获取到异常数据 6 条数据
+2026-01-30 15:39:40,412 | INFO | temu_parcel_tracer | 正在获取第 2 页数据...
+2026-01-30 15:39:42,858 | INFO | temu_parcel_tracer | ✓ 第 2 页获取到异常数据 0 条数据
+2026-01-30 15:39:42,858 | INFO | temu_parcel_tracer | 当前页数据并且数据为当月产生的数据不足100条，可能是最后一页，停止获取
+2026-01-30 15:39:42,858 | INFO | temu_parcel_tracer | 入库情况数据爬取完成，共6条记录，已上传
+2026-01-30 15:39:42,858 | INFO | temu_parcel_tracer | 所有数据爬取和上传完成
+2026-01-30 15:39:42,858 | INFO | temu_parcel_tracer | ----------------开始爬取店铺101-Temu全托管--仓库待收货的数据---------------------
+2026-01-30 15:39:42,865 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-01-30 15:39:43,278 | ERROR | temu_parcel_tracer | [101-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-01-30 15:40:08,901 | INFO | temu_parcel_tracer | 第1次请求被限流，访问人数过多，请稍后重试，等待后重试...
+2026-01-30 15:41:04,985 | INFO | temu_parcel_tracer | 发货揽收轨迹数据爬取完成，共83条记录，已上传
+2026-01-30 15:41:04,985 | INFO | temu_parcel_tracer | ----------------开始爬取店铺101-Temu全托管--入库的数据---------------------
+2026-01-30 15:41:05,003 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-01-30 15:41:05,657 | ERROR | temu_parcel_tracer | [101-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-01-30 15:41:24,945 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP2601226011385 | 送货=379 | 入库=353
+2026-01-30 15:41:24,945 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP26012211245987 | 送货=195 | 入库=83
+2026-01-30 15:41:24,945 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP26011612880620 | 送货=75 | 入库=25
+2026-01-30 15:41:24,945 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP26011614568882 | 送货=44 | 入库=45
+2026-01-30 15:41:24,945 | INFO | temu_parcel_tracer | ✓ 第 1 页获取到异常数据 5 条数据
+2026-01-30 15:41:27,832 | INFO | temu_parcel_tracer | 正在获取第 2 页数据...
+2026-01-30 15:41:30,078 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP2601097138346 | 送货=99 | 入库=98
+2026-01-30 15:41:30,078 | WARNING | temu_parcel_tracer | 🚨 入库异常 | 店铺=101-Temu全托管 | 备货单=WP26011112858690 | 送货=65 | 入库=56
+2026-01-30 15:41:30,079 | INFO | temu_parcel_tracer | ✓ 第 2 页获取到异常数据 2 条数据
+2026-01-30 15:41:30,079 | INFO | temu_parcel_tracer | 当前页数据并且数据为当月产生的数据不足100条，可能是最后一页，停止获取
+2026-01-30 15:41:30,079 | INFO | temu_parcel_tracer | 入库情况数据爬取完成，共6条记录，已上传
+2026-01-30 15:41:30,079 | INFO | temu_parcel_tracer | 所有数据爬取和上传完成
+2026-01-30 15:41:30,079 | INFO | temu_parcel_tracer | 🎯 全流程完成，总耗时：5分35秒
+2026-01-30 15:47:29,678 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：查询异常数据并发送消息
+2026-01-30 15:48:10,662 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：查询异常数据并发送消息
+2026-01-30 15:50:04,989 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：查询异常数据并发送消息
+2026-01-30 15:50:35,323 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：查询异常数据并发送消息
+2026-01-30 15:51:44,580 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：查询异常数据并发送消息
+2026-01-30 15:51:45,104 | INFO | temu_parcel_tracer | 异常消息已发送到钉钉和微信
+2026-01-30 15:51:45,104 | INFO | temu_parcel_tracer | 🎯 全流程完成，总耗时：0分0秒
+2026-01-30 15:55:44,724 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：按门店查询异常数据并发送消息
+2026-01-30 15:55:44,726 | ERROR | temu_parcel_tracer | 处理店铺 2106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,727 | ERROR | temu_parcel_tracer | 处理店铺 2105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,728 | ERROR | temu_parcel_tracer | 处理店铺 2108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,729 | ERROR | temu_parcel_tracer | 处理店铺 2107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,730 | ERROR | temu_parcel_tracer | 处理店铺 2102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,731 | ERROR | temu_parcel_tracer | 处理店铺 1108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,731 | ERROR | temu_parcel_tracer | 处理店铺 1107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,732 | ERROR | temu_parcel_tracer | 处理店铺 1106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,733 | ERROR | temu_parcel_tracer | 处理店铺 1105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,733 | ERROR | temu_parcel_tracer | 处理店铺 2103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,733 | ERROR | temu_parcel_tracer | 处理店铺 112-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,733 | ERROR | temu_parcel_tracer | 处理店铺 151-Temu全托管家居 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,734 | ERROR | temu_parcel_tracer | 处理店铺 1104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,735 | ERROR | temu_parcel_tracer | 处理店铺 1102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,735 | ERROR | temu_parcel_tracer | 处理店铺 1103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,736 | ERROR | temu_parcel_tracer | 处理店铺 1101-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,737 | ERROR | temu_parcel_tracer | 处理店铺 2101-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,738 | ERROR | temu_parcel_tracer | 处理店铺 110-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,739 | ERROR | temu_parcel_tracer | 处理店铺 109-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,740 | ERROR | temu_parcel_tracer | 处理店铺 108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,740 | ERROR | temu_parcel_tracer | 处理店铺 107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,742 | ERROR | temu_parcel_tracer | 处理店铺 106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,743 | ERROR | temu_parcel_tracer | 处理店铺 105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,743 | ERROR | temu_parcel_tracer | 处理店铺 104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:55:44,745 | INFO | temu_parcel_tracer | 已处理 103-Temu全托管: 发货异常30条，入库差异0条
+2026-01-30 15:55:44,747 | INFO | temu_parcel_tracer | 已处理 102-Temu全托管: 发货异常38条，入库差异6条
+2026-01-30 15:55:44,749 | INFO | temu_parcel_tracer | 已处理 101-Temu全托管: 发货异常48条，入库差异6条
+2026-01-30 15:55:44,749 | INFO | temu_parcel_tracer | 🚀 开始第三阶段：发送各门店异常消息
+2026-01-30 15:55:45,197 | INFO | temu_parcel_tracer | 已发送 103-Temu全托管 的异常消息
+2026-01-30 15:55:46,630 | INFO | temu_parcel_tracer | 已发送 102-Temu全托管 的异常消息
+2026-01-30 15:55:48,078 | INFO | temu_parcel_tracer | 已发送 101-Temu全托管 的异常消息
+2026-01-30 15:55:49,514 | INFO | temu_parcel_tracer | 总结消息已发送
+2026-01-30 15:55:49,514 | INFO | temu_parcel_tracer | 🎯 全流程完成，总耗时：0分4秒
+2026-01-30 15:58:01,615 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：按门店查询异常数据并发送消息
+2026-01-30 15:58:01,616 | ERROR | temu_parcel_tracer | 处理店铺 2106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,617 | ERROR | temu_parcel_tracer | 处理店铺 2105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,618 | ERROR | temu_parcel_tracer | 处理店铺 2108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,619 | ERROR | temu_parcel_tracer | 处理店铺 2107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,620 | ERROR | temu_parcel_tracer | 处理店铺 2102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,620 | ERROR | temu_parcel_tracer | 处理店铺 1108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,621 | ERROR | temu_parcel_tracer | 处理店铺 1107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,622 | ERROR | temu_parcel_tracer | 处理店铺 1106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,623 | ERROR | temu_parcel_tracer | 处理店铺 1105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,624 | ERROR | temu_parcel_tracer | 处理店铺 2103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,624 | ERROR | temu_parcel_tracer | 处理店铺 112-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,625 | ERROR | temu_parcel_tracer | 处理店铺 151-Temu全托管家居 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,626 | ERROR | temu_parcel_tracer | 处理店铺 1104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,626 | ERROR | temu_parcel_tracer | 处理店铺 1102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,627 | ERROR | temu_parcel_tracer | 处理店铺 1103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,628 | ERROR | temu_parcel_tracer | 处理店铺 1101-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,629 | ERROR | temu_parcel_tracer | 处理店铺 2101-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,630 | ERROR | temu_parcel_tracer | 处理店铺 110-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,630 | ERROR | temu_parcel_tracer | 处理店铺 109-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,631 | ERROR | temu_parcel_tracer | 处理店铺 108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,632 | ERROR | temu_parcel_tracer | 处理店铺 107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,632 | ERROR | temu_parcel_tracer | 处理店铺 106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,633 | ERROR | temu_parcel_tracer | 处理店铺 105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,634 | ERROR | temu_parcel_tracer | 处理店铺 104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:01,636 | INFO | temu_parcel_tracer | 已处理 103-Temu全托管: 发货异常30条，入库差异0条
+2026-01-30 15:58:01,637 | INFO | temu_parcel_tracer | 已处理 102-Temu全托管: 发货异常38条，入库差异6条
+2026-01-30 15:58:01,639 | INFO | temu_parcel_tracer | 已处理 101-Temu全托管: 发货异常48条，入库差异6条
+2026-01-30 15:58:01,639 | INFO | temu_parcel_tracer | 🚀 开始第三阶段：发送各门店异常消息
+2026-01-30 15:58:02,084 | INFO | temu_parcel_tracer | 已发送 103-Temu全托管 的异常消息
+2026-01-30 15:58:03,539 | INFO | temu_parcel_tracer | 已发送 102-Temu全托管 的异常消息
+2026-01-30 15:58:05,017 | INFO | temu_parcel_tracer | 已发送 101-Temu全托管 的异常消息
+2026-01-30 15:58:06,022 | INFO | temu_parcel_tracer | 总结消息已发送
+2026-01-30 15:58:06,023 | INFO | temu_parcel_tracer | 🎯 全流程完成，总耗时：0分4秒
+2026-01-30 15:58:38,643 | INFO | temu_parcel_tracer | 🚀 开始第二阶段：按门店查询异常数据并发送消息
+2026-01-30 15:58:38,644 | ERROR | temu_parcel_tracer | 处理店铺 2106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,645 | ERROR | temu_parcel_tracer | 处理店铺 2105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,646 | ERROR | temu_parcel_tracer | 处理店铺 2108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,646 | ERROR | temu_parcel_tracer | 处理店铺 2107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,647 | ERROR | temu_parcel_tracer | 处理店铺 2102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,647 | ERROR | temu_parcel_tracer | 处理店铺 1108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,648 | ERROR | temu_parcel_tracer | 处理店铺 1107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,649 | ERROR | temu_parcel_tracer | 处理店铺 1106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,649 | ERROR | temu_parcel_tracer | 处理店铺 1105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,650 | ERROR | temu_parcel_tracer | 处理店铺 2103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,651 | ERROR | temu_parcel_tracer | 处理店铺 112-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,651 | ERROR | temu_parcel_tracer | 处理店铺 151-Temu全托管家居 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,652 | ERROR | temu_parcel_tracer | 处理店铺 1104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,652 | ERROR | temu_parcel_tracer | 处理店铺 1102-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,653 | ERROR | temu_parcel_tracer | 处理店铺 1103-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,653 | ERROR | temu_parcel_tracer | 处理店铺 1101-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,654 | ERROR | temu_parcel_tracer | 处理店铺 2101-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,654 | ERROR | temu_parcel_tracer | 处理店铺 110-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,655 | ERROR | temu_parcel_tracer | 处理店铺 109-Temu全托管KA 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,656 | ERROR | temu_parcel_tracer | 处理店铺 108-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,656 | ERROR | temu_parcel_tracer | 处理店铺 107-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,657 | ERROR | temu_parcel_tracer | 处理店铺 106-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,658 | ERROR | temu_parcel_tracer | 处理店铺 105-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,659 | ERROR | temu_parcel_tracer | 处理店铺 104-Temu全托管 时发生错误: local variable 'stockin_differences' referenced before assignment
+2026-01-30 15:58:38,660 | INFO | temu_parcel_tracer | 已处理 103-Temu全托管: 发货异常30条，入库差异0条
+2026-01-30 15:58:38,661 | INFO | temu_parcel_tracer | 已处理 102-Temu全托管: 发货异常38条，入库差异6条
+2026-01-30 15:58:38,663 | INFO | temu_parcel_tracer | 已处理 101-Temu全托管: 发货异常48条，入库差异6条
+2026-01-30 15:58:38,663 | INFO | temu_parcel_tracer | 🚀 开始第三阶段：发送各门店异常消息
+2026-01-30 15:58:39,087 | INFO | temu_parcel_tracer | 已发送 103-Temu全托管 的异常消息
+2026-01-30 15:58:40,512 | INFO | temu_parcel_tracer | 已发送 102-Temu全托管 的异常消息
+2026-01-30 15:58:41,971 | INFO | temu_parcel_tracer | 已发送 101-Temu全托管 的异常消息
+2026-01-30 15:58:42,981 | INFO | temu_parcel_tracer | 总结消息已发送
+2026-01-30 15:58:42,981 | INFO | temu_parcel_tracer | 🎯 全流程完成，总耗时：0分4秒

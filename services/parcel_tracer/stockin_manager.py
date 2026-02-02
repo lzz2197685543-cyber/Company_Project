@@ -101,19 +101,7 @@ class Stockin_Manager(TemuBaseClient):
                 abnormal = self.storage.detect_abnormal(new_items)
                 self.storage.alarm_abnormal(abnormal, self.logger)
 
-                # 发送到微信中
-                message=self.storage.build_abnormal_message(new_items,self.shop_name)
-
-                if message is not None:
-                    contacts=[
-                        ("环创-开发曾小姐", message),
-                        ("环创-开发陈小姐", f"temu入库异常报警：已经发送"),
-                    ]
-                    webchat_send(contacts)
-
-
                 # 打印当前页信息
-                self.logger.info(f"✓ 第 {page} 页获取到当月数据 {len(list_item)} 条数据")
                 self.logger.info(f"✓ 第 {page} 页获取到异常数据 {len(parsed_items)} 条数据")
 
                 # 检查是否有更多页

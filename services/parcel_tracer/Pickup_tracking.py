@@ -177,16 +177,7 @@ class DeliveryNote(TemuBaseClient):
 
                 # 异常报警
                 abnormal = self.storage.detect_abnormal(new_items)
-
-                # 发送到微信中
-                message = self.storage.build_delivery_abnormal_message(abnormal, self.shop_name)
-
-                if message is not None:
-                    contacts = [
-                        ("环创-开发曾小姐", message),
-                        ("环创-开发陈小姐", f"temu发货异常报警：已经发送"),
-                    ]
-                    webchat_send(contacts)
+                self.storage.alarm_abnormal(abnormal)
 
                 # 打印当前页信息
                 self.logger.info(f"第 {page} 页获取到 {len(parsed_items)} 条数据")
