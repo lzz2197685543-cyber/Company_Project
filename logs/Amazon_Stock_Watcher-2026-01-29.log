@@ -1,0 +1,137 @@
+2026-01-29 15:13:37,496 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-01-29 15:13:37,961 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-01-29 15:13:38,292 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-01-29 15:13:38,441 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-01-29 15:13:38,524 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-01-29 15:13:38,534 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-01-29 15:13:38,579 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-01-29 15:13:43,358 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-01-29 15:13:43,601 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-01-29 15:13:46,003 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-01-29 15:13:46,343 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-01-29 15:13:47,425 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-01-29 15:13:47,809 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-01-29 15:13:48,200 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-01-29 15:13:48,585 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-01-29 15:13:48,987 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-01-29 15:13:49,363 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-01-29 15:13:49,742 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-01-29 15:13:50,115 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-01-29 15:13:50,492 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-01-29 15:13:50,758 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-01-29 15:13:53,591 | INFO | Amazon_Stock_Watcher | 📄 已到最后一页
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 断货通知内容:
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月29号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+ZC数字锁/87天
+苹果锁（5个装）/83天
+开锁车/72天
+
+【US站点】
+品名/断货时间
+青蛙天平/35天
+企鹅天平/51天
+ZC字母锁/10天
+苹果锁（10个装）/34天
+苹果锁（5个装）/46天
+棕猴天平/57天
+
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月29号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+七彩磁力棒-64根盒装/38天
+七彩磁力棒-42根盒装/35天
+企鹅天平/13天
+99乘法练习板/73天
+
+【US站点】
+品名/断货时间
+冲天气球车-青蛙款/30天
+七彩磁力棒-64根盒装/27天
+冲天气球车-黄鸭款/59天
+七彩磁力棒-25根盒装/6天
+
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月29号）即将断货sku：
+
+【US站点】
+品名/断货时间
+苹果锁（5个装）/16天
+
+2026-01-29 15:13:53,592 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月29号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（10个装）/72天
+
+【US站点】
+品名/断货时间
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/6天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/37天
+
+2026-01-29 15:13:54,042 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-29 15:13:54,042 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-29 15:13:54,042 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-01-29 15:13:54,042 | INFO | Amazon_Stock_Watcher | FBA预警通知内容:
+2026-01-29 15:13:54,042 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-29 15:13:54,043 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（01月29号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+青蛙天平/15天
+
+【US站点】
+品名/可售天数(FBA)天数
+青蛙天平/13天
+企鹅天平/4天
+ZC字母锁/10天
+苹果锁（10个装）/23天
+苹果锁（5个装）/24天
+
+2026-01-29 15:13:54,043 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（01月29号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+七彩磁力棒-64根盒装/9天
+企鹅天平/13天
+99乘法练习板/20天
+
+【US站点】
+品名/可售天数(FBA)天数
+冲天气球车-青蛙款/27天
+七彩磁力棒-64根盒装/26天
+
+2026-01-29 15:13:54,043 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（01月29号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（10个装）/26天
+冰淇淋叠叠乐-彩盒对战版/6天
+2X2磁力陀螺4件套-32方块+2大转轴+2uv灯/6天
+2X2磁力陀螺2件套-8+1大转轴+8+1uv灯/25天
+
+2026-01-29 15:13:54,043 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（01月29号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/16天
+
+2026-01-29 15:13:54,503 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-01-29 15:13:54,504 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-01-29 15:13:54,504 | INFO | Amazon_Stock_Watcher | 
+总共爬取 79 条数据
