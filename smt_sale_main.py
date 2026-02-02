@@ -101,6 +101,8 @@ def simple_match(shop_name):
         how='left'
     )
 
+    result_df.to_csv(f'{shop_name}-合并结果.csv', index=False, encoding='utf-8-sig')
+
     records=[]
     # 修复：解包 iterrows() 返回的元组
     for index, row in result_df.iterrows():
@@ -142,6 +144,7 @@ async def main():
     }
 
     shop_name_list = ['SMT202', 'SMT214', 'SMT212', 'SMT204', 'SMT203', 'SMT201', 'SMT208']
+    # shop_name_list=['SMT208']
     for shop_name in shop_name_list:
         logger.info(f'---------------------------------开始爬取店铺--{shop_name}--商品数据-----------------------------------')
         spider_goods = SMTGoodsSpider(shop_name)
