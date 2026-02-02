@@ -1,4 +1,4 @@
-from modules.shein_sale_data import  Shein_Sale
+from servies.sale.shein_sale_data import  Shein_Sale
 from utils.dingding_doc import DingTalkSheetDeleter,DingTalkSheetUploader,DingTalkTokenManager
 import pandas as pd
 from datetime import datetime

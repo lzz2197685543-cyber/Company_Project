@@ -1,6 +1,5 @@
-from modules.financial_data_tixian import Shein_Financial_Data_Tixian
-from modules.financial_data_feiyong import Shein_Financial_Data_Feiyong
-from utils.config_loader import get_shop_config
+from servies.financial.financial_data_tixian import Shein_Financial_Data_Tixian
+from servies.financial.financial_data_feiyong import Shein_Financial_Data_Feiyong
 import asyncio
 from utils.logger import get_logger
 import time

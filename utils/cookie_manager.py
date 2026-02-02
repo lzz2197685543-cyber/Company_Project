@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Dict, Optional
 
 from utils.config_loader import get_shop_config
-from modules.login import SheinLogin
+from core.login import SheinLogin
 
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"

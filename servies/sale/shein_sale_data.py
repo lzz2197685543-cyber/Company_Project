@@ -99,7 +99,7 @@ class Shein_Sale:
                     item['店铺'] = self.shop_name
                     item['商品名称']=i['categoryName']
 
-                    item['抓取数据日期'] = int(time.time())
+                    item['抓取数据日期'] = int(time.time()*1000)
 
                     # 不要合计的
                     if i.get('skuList'):
@@ -131,7 +131,7 @@ class Shein_Sale:
     """批量保存数据到CSV文件"""
     def save_batch(self, items):
         """批量保存数据到CSV文件"""
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "sale"
         if not os.path.exists(out_dir):
             try:
                 os.makedirs(out_dir)
