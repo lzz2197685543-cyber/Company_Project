@@ -7,6 +7,7 @@ from utils.logger import get_logger
 from utils.webchat_send import webchat_send
 
 from datetime import datetime,timedelta
+from utils.dingtalk_bot import ding_bot_send
 
 QUIET_HOURS = (23, 8)
 
@@ -88,6 +89,7 @@ https://www.toysaas.com/
             ("环创-开发陈小姐", '有监控到消息变化')
         ]
         webchat_send(contacts)
+        ding_bot_send('提醒侠', msg)
 
     async def run(self):
         """

@@ -43,6 +43,10 @@
     "me": {
       "access_token": "630602c35a2f4d8db5081042101eb01f9bd0a84a71bb50c0e528d3ca33d8534f",
       "secret": "SECeddb89430ef8852bbd6b58a8c40319550bfff049462fdf6f3a083ecebe164b78"
+    },
+    "提醒侠": {
+        "access_token": "1d1a7a6cb432cd7aaaa876ad22a7805a383514ff8f4215b09b30b7799488de4f",
+        "secret":"SECa4558c276426397a04103529241d175542533a36eea290a00484aa56402d0437"
     }
   }
   }

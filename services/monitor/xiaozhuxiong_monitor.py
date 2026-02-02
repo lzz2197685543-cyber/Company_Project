@@ -4,6 +4,7 @@ from datetime import datetime
 from core.base_client import HttpClient
 from utils.webchat_send import webchat_send
 from datetime import datetime, timedelta
+from utils.dingtalk_bot import ding_bot_send
 
 # ================= 配置 =================
 CHECK_INTERVAL = 30 * 60     # 30 分钟
@@ -54,6 +55,7 @@ https://www.toysbear.com/main
             ("环创-开发陈小姐", '有监控到消息变化')
         ]
         webchat_send(contacts)
+        ding_bot_send('提醒侠', msg)
 
 
     def run(self):
