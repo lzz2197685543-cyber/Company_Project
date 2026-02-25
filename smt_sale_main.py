@@ -101,7 +101,7 @@ def simple_match(shop_name):
         how='left'
     )
 
-    result_df.to_csv(f'{shop_name}-合并结果.csv', index=False, encoding='utf-8-sig')
+    # result_df.to_csv(f'{shop_name}-合并结果.csv', index=False, encoding='utf-8-sig')
 
     records=[]
     # 修复：解包 iterrows() 返回的元组
