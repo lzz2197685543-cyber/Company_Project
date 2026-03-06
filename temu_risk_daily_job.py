@@ -3,6 +3,7 @@ from services.risk.funds_restriction import Temu_Funds_Restriction
 
 from services.risk.send_data import run_send_data
 from services.risk.upload_data import run_upload_data
+from utils.dingtalk_bot import ding_bot_send
 
 import asyncio
 import time
@@ -12,7 +13,6 @@ logger = get_logger("temu_risk_daily_job")
 
 """跑违规记录与金额限制"""
 
-
 def format_seconds(seconds: float) -> str:
     m, s = divmod(int(seconds), 60)
     return f"{m}分{s}秒"
@@ -20,36 +20,24 @@ def format_seconds(seconds: float) -> str:
 
 async def crawl_all_shops():
     shop_name_list = [
-        "2106-Temu全托管", "2105-Temu全托管", "2108-Temu全托管",
-        "2107-Temu全托管", "2102-Temu全托管",
-        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管",
-        "1105-Temu全托管", "2103-Temu全托管",
-        "112-Temu全托管", "151-Temu全托管家居",
-        "1104-Temu全托管", "1102-Temu全托管",
-        "1103-Temu全托管", "1101-Temu全托管",
-        "2101-Temu全托管KA", "110-Temu全托管KA",
-        "109-Temu全托管KA", "108-Temu全托管",
-        "107-Temu全托管", "106-Temu全托管",
-        "105-Temu全托管", "104-Temu全托管",
-        "103-Temu全托管", "102-Temu全托管",
-        "101-Temu全托管"
+        "2106-Temu全托管", "2103-Temu全托管", "2102-Temu全托管", "2101-Temu全托管KA",
+        "112-Temu全托管",
+        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管", "1105-Temu全托管", "1104-Temu全托管",
+        "1103-Temu全托管", "1102-Temu全托管", "1101-Temu全托管",
+        "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管", "106-Temu全托管", "105-Temu全托管",
+        "104-Temu全托管", "103-Temu全托管", "102-Temu全托管", "101-Temu全托管",
     ]
     # shop_name_list=[ "1104-Temu全托管", "1102-Temu全托管",
-    #     "1103-Temu全托管", "1101-Temu全托管",
-    #     "2101-Temu全托管KA", "110-Temu全托管KA",
-    #     "109-Temu全托管KA", "108-Temu全托管",
-    #     "107-Temu全托管", "106-Temu全托管",
-    #     "105-Temu全托管", "104-Temu全托管",
     #     "103-Temu全托管", "102-Temu全托管",
     #     "101-Temu全托管"]
 
     for shop_name in shop_name_list:
         logger.info(f"🚀 开始爬取店铺：{shop_name}")
 
-        t_vio = Temu_ViolationRecored(shop_name)
+        t_vio = Temu_ViolationRecored(shop_name,'temu_risk_daily_job')
         await t_vio.run()
 
-        t_fund = Temu_Funds_Restriction(shop_name)
+        t_fund = Temu_Funds_Restriction(shop_name,'temu_risk_daily_job')
         await t_fund.run()
 
 
@@ -69,6 +57,8 @@ async def main():
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
+    ding_bot_send('me',f'site_daily_job任务结束，总耗时：{format_seconds(total_cost)}')
+
 
 if __name__ == "__main__":
     asyncio.run(main())

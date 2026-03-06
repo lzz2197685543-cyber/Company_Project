@@ -6,9 +6,9 @@ from datetime import datetime
 from utils.config_loader import  get_shop_config
 from pathlib import Path
 from services.financial.financial_process_up import financial_process_up
-from services.financial.run_history_financial import Temu_History_Financial
+FINANCIAL_DIR = Path(__file__).resolve().parent/ "data" / "financial"
 
-FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financial"
+from utils.dingtalk_bot import ding_bot_send
 logger = get_logger("financial_data")
 
 """跑temu财务数据"""
@@ -40,36 +40,25 @@ async def main_all():
     # month_str = '2025-11'
     logger.info(f'--------------------------正在下载{month_str}的数据------------------------------')
     shop_name_list = [
-        "2108-Temu全托管", "2107-Temu全托管", "2106-Temu全托管", "2105-Temu全托管", "2103-Temu全托管",
-        "2102-Temu全托管", "2101-Temu全托管KA",
+         "2106-Temu全托管",  "2103-Temu全托管","2102-Temu全托管", "2101-Temu全托管KA",
         "112-Temu全托管",
         "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管", "1105-Temu全托管", "1104-Temu全托管",
         "1103-Temu全托管", "1102-Temu全托管", "1101-Temu全托管",
-        "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管", "107-Temu全托管", "106-Temu全托管", "105-Temu全托管",
+        "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管",  "106-Temu全托管", "105-Temu全托管",
         "104-Temu全托管", "103-Temu全托管", "102-Temu全托管", "101-Temu全托管",
     ]
-    shop_name_list=["2101-Temu全托管KA"]
+    # shop_name_list=["2101-Temu全托管KA"]
 
-    all_history = []
 
     # 顺序处理
     for shop_name in shop_name_list:
+        logger.info(f'--------------正在爬取店铺{shop_name}----的数据')
         account = get_shop_config(shop_name)
-        t = Temu_Financial_Data(shop_name, account, month_str)
+        t = Temu_Financial_Data(shop_name, account, month_str,'financial_data')
         await t.run()
-        all_history.extend(t.history_list)  # 每次累加失败的店铺
 
+        logger.info(f'--------------正在爬取店铺{shop_name}----卖家中心的数据')
 
-    logger.info(f'--------------------------正在从历史任务中下载{month_str}的数据------------------------------')
-    # 如果有失败店铺，可以继续调用其他爬虫接口
-    if all_history:
-        logger.info(f"⚠️ 以下店铺需要重试或额外处理: {all_history}")
-
-    for name in all_history:
-        account = get_shop_config(name)
-
-        t = Temu_History_Financial(name, account,month_str)
-        await t.run()
 
 
     logger.info(f'--------------------------正在处理数据------------------------------')
@@ -83,6 +72,7 @@ if __name__ == '__main__':
     total_start = time.perf_counter()
     asyncio.run(main_all())
     total_cost = time.perf_counter() - total_start
+    ding_bot_send('me',f'temu_financial任务完成，总耗时：{format_seconds(total_cost)}')
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
 
 

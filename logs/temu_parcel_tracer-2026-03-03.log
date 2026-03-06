@@ -1,0 +1,486 @@
+2026-03-03 18:27:07,573 | INFO | temu_parcel_tracer | ----------------开始删除钉钉表中(temu-发货揽收轨迹及丢件)的数据---------------------
+2026-03-03 18:27:08,050 | INFO | temu_parcel_tracer | 
+ 删除所有记录
+2026-03-03 18:27:55,950 | INFO | temu_parcel_tracer | 删除所有记录结果: None
+2026-03-03 18:27:55,950 | INFO | temu_parcel_tracer | ----------------开始删除钉钉表中(temu-入库情况)的数据---------------------
+2026-03-03 18:27:55,951 | INFO | temu_parcel_tracer | 
+ 删除所有记录
+2026-03-03 18:28:08,745 | INFO | temu_parcel_tracer | 删除所有记录结果: None
+2026-03-03 18:28:10,762 | INFO | temu_parcel_tracer | 🚀 开始第一阶段：并发爬取所有店铺数据（最大并发数: 3）
+2026-03-03 18:28:10,762 | INFO | temu_parcel_tracer | 🔓 开始处理店铺: 2106-Temu全托管 (当前并发数: 2/3)
+2026-03-03 18:28:10,763 | INFO | temu_parcel_tracer | 🔓 开始处理店铺: 2103-Temu全托管 (当前并发数: 3/3)
+2026-03-03 18:28:10,763 | INFO | temu_parcel_tracer | 🔓 开始处理店铺: 2102-Temu全托管 (当前并发数: 4/3)
+2026-03-03 18:28:10,763 | INFO | temu_parcel_tracer | 【2106-Temu全托管】开始爬取发货揽收轨迹数据 (第1次尝试)
+2026-03-03 18:28:10,816 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-03-03 18:28:11,178 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+2026-03-03 18:28:11,179 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:14,805 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '54351', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2963, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:14,805 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 54351
+2026-03-03 18:28:14,805 | INFO | temu_parcel_tracer | 【2106-Temu全托管】开始爬取入库情况数据 (第1次尝试)
+2026-03-03 18:28:14,818 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-03-03 18:28:15,922 | ERROR | temu_parcel_tracer | [2106-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-03-03 18:28:15,922 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:16,331 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '54351', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 4493, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:16,331 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 54351
+2026-03-03 18:28:16,331 | INFO | temu_parcel_tracer | 【2103-Temu全托管】开始爬取发货揽收轨迹数据 (第1次尝试)
+2026-03-03 18:28:16,357 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-03-03 18:28:16,357 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:19,690 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54472', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2929, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:19,690 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 54472
+2026-03-03 18:28:19,691 | INFO | temu_parcel_tracer | 【2103-Temu全托管】开始爬取入库情况数据 (第1次尝试)
+2026-03-03 18:28:19,719 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-03-03 18:28:20,732 | ERROR | temu_parcel_tracer | [2103-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-03-03 18:28:20,732 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:21,175 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54472', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 4415, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:21,175 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 54472
+2026-03-03 18:28:21,175 | INFO | temu_parcel_tracer | 【2102-Temu全托管】开始爬取发货揽收轨迹数据 (第1次尝试)
+2026-03-03 18:28:21,191 | INFO | temu_parcel_tracer | 正在获取第1页数据...
+2026-03-03 18:28:21,192 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:24,364 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54602', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 2815, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:24,364 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 54602
+2026-03-03 18:28:24,365 | INFO | temu_parcel_tracer | 【2102-Temu全托管】开始爬取入库情况数据 (第1次尝试)
+2026-03-03 18:28:24,376 | INFO | temu_parcel_tracer | 正在获取第 1 页数据...
+2026-03-03 18:28:25,688 | ERROR | temu_parcel_tracer | [2102-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-03-03 18:28:25,688 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 1 次登录尝试
+2026-03-03 18:28:26,126 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54602', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 4578, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:26,126 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 54602
+2026-03-03 18:28:26,136 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:26,136 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:26,137 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:27,249 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:27,249 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:27,249 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:27,249 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:27,250 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:27,671 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:27,671 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:27,672 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:27,672 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:27,672 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:28,646 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:28,646 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:28,646 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:28,646 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:28,646 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:28,959 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:28,959 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:28,959 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:28,959 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:28,959 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:30,032 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:30,032 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:30,033 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:30,033 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 1 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:30,033 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:30,446 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:30,446 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:30,446 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:33,244 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '54779', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2489, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:33,244 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 54779
+2026-03-03 18:28:33,245 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:33,752 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '54779', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2998, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:33,752 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 54779
+2026-03-03 18:28:33,752 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:36,952 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54880', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2819, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:36,952 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 54880
+2026-03-03 18:28:36,953 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:37,297 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54880', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 3166, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:37,297 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 54880
+2026-03-03 18:28:37,298 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:40,321 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55022', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 2585, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:40,322 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55022
+2026-03-03 18:28:40,322 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 2 次登录尝试
+2026-03-03 18:28:40,753 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55022', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 3018, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:40,753 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55022
+2026-03-03 18:28:40,755 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:40,755 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:40,756 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:41,723 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:41,723 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:41,723 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:41,723 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:41,723 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:42,165 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:42,166 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:42,166 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:42,166 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:42,166 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:43,044 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:43,044 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:43,044 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:43,044 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:43,045 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:43,459 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:43,460 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:43,461 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:43,461 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:43,461 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:44,398 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:44,398 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:44,398 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:44,398 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 2 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:44,399 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:44,803 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:44,803 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:44,803 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:47,684 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '55168', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2430, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:47,684 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 55168
+2026-03-03 18:28:47,684 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:48,430 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '55168', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 3178, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:48,430 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 55168
+2026-03-03 18:28:48,430 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:51,345 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55270', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2525, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:51,345 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 55270
+2026-03-03 18:28:51,346 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:51,753 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55270', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2935, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:51,753 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 55270
+2026-03-03 18:28:51,753 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:54,516 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55396', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 2366, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:54,517 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55396
+2026-03-03 18:28:54,517 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 3 次登录尝试
+2026-03-03 18:28:54,948 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55396', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 2798, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:28:54,948 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55396
+2026-03-03 18:28:54,952 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:54,952 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:54,952 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:55,871 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:55,871 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:55,871 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:28:55,871 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:55,872 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:56,272 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:56,272 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:56,272 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:56,272 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:56,272 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:57,196 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:57,196 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:57,196 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:28:57,196 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:57,196 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:57,524 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:57,524 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:57,525 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:57,525 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:57,525 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:58,392 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:58,392 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:58,392 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:28:58,392 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 3 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:28:58,393 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:28:58,808 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:28:58,809 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:28:58,884 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:01,343 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '55561', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2055, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:01,343 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 55561
+2026-03-03 18:29:01,343 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:01,785 | INFO | temu_parcel_tracer | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '55561', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2499, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:01,785 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 55561
+2026-03-03 18:29:01,786 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:04,433 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55644', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2359, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:04,433 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 55644
+2026-03-03 18:29:04,433 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:04,840 | INFO | temu_parcel_tracer | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55644', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 2768, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:04,840 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 55644
+2026-03-03 18:29:04,840 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:07,856 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55803', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 2594, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:07,856 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55803
+2026-03-03 18:29:07,856 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 第 4 次登录尝试
+2026-03-03 18:29:08,305 | INFO | temu_parcel_tracer | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55803', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 3044, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 18:29:08,305 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 55803
+2026-03-03 18:29:08,306 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:29:08,306 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 4 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:29:08,307 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:29:09,208 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:29:09,208 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:29:09,208 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 连接失败: 
+2026-03-03 18:29:09,208 | ERROR | temu_parcel_tracer | 2106-Temu全托管 - 第 4 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:29:09,208 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:29:09,483 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:29:09,483 | INFO | temu_parcel_tracer | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:29:09,484 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:29:09,484 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 4 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:29:09,484 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:29:10,374 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:29:10,374 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:29:10,374 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 连接失败: 
+2026-03-03 18:29:10,374 | ERROR | temu_parcel_tracer | 2103-Temu全托管 - 第 4 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\base_client.py", line 62, in post
+    resp.raise_for_status()
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:29:10,374 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已关闭Playwright连接
+2026-03-03 18:29:10,707 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-03-03 18:29:10,707 | INFO | temu_parcel_tracer | 2103-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 18:29:10,709 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 连接失败: 
+2026-03-03 18:29:10,709 | ERROR | temu_parcel_tracer | 2102-Temu全托管 - 第 4 次失败: 启动浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 255, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 235, in run_once
+    raise Exception("启动浏览器失败")
+Exception: 启动浏览器失败
+2026-03-03 18:29:10,709 | INFO | temu_parcel_tracer | 2102-Temu全托管 - 已关闭Playwright连接

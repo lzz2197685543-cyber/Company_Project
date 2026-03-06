@@ -11,13 +11,10 @@ COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 # 确保目录存在
 COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
-
+from core.browser import BrowserManager
 
 class TemuLogin:
-    start_api = "http://127.0.0.1:6873/api/v1/browser/start"
-    stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
-
-    def __init__(self, name, account,cookie_domain="agentseller"):
+    def __init__(self, name, account,job,cookie_domain="agentseller"):
         self.name = name
         self.hub_id = str(account["hubId"])
         cred = account["credentials"]
@@ -26,71 +23,16 @@ class TemuLogin:
 
         self.cookie_domain = cookie_domain
 
-        self.logger = get_logger(f"login")
-        self.debug_port = None
-        self.playwright = None
-        self.browser = None
-        self.page = None
+        self.logger = get_logger(job)
 
-    # ----------- 浏览器 -----------
-    async def start_browser(self):
-        try:
-            res = requests.post(
-                self.start_api,
-                json={"containerCode": self.hub_id},
-                timeout=10
-            ).json()
 
-            self.logger.info(f"{self.name} - start_api 返回: {res}")
+        # 浏览器管理器
+        self.browser_manager = BrowserManager(self.hub_id, self.name, self.logger)
 
-            if res.get("code") != 0:
-                self.logger.error(f'{self.name} - 启动失败: {res.get("msg")}')
-                return False
-
-            self.debug_port = res.get("data", {}).get("debuggingPort")
-            if not self.debug_port:
-                self.logger.error(f"{self.name} - 未获取到 debuggingPort")
-                return False
-
-            self.logger.info(f"{self.name} - 浏览器启动成功, 调试端口: {self.debug_port}")
-            return True
-
-        except Exception as e:
-            self.logger.error(f"{self.name} - 启动异常: {e}")
-            return False
-
-    async def stop_browser(self):
-        try:
-            requests.post(
-                self.stop_api,
-                json={"containerCode": self.hub_id},
-                timeout=10
-            )
-        except Exception:
-            pass
-
-    async def connect(self):
-        try:
-            await asyncio.sleep(1)  # 等浏览器完全启动
-
-            self.playwright = await async_playwright().start()
-            self.browser = await self.playwright.chromium.connect_over_cdp(
-                f"http://127.0.0.1:{self.debug_port}"
-            )
-
-            try:
-                ctx = self.browser.contexts[0]
-                self.page = ctx.pages[0] if ctx.pages else await ctx.new_page()
-            except Exception:
-                ctx = await self.browser.new_context()
-                self.page = await ctx.new_page()
-
-            self.logger.info(f"{self.name} - 已连接浏览器")
-            return True
-
-        except Exception as e:
-            self.logger.error(f"{self.name} - 连接失败: {e}")
-            return False
+    @property
+    def page(self):
+        """便捷访问页面对象"""
+        return self.browser_manager.get_page()
 
     # ----------- 业务 -----------
     async def open_login_page(self):
@@ -130,27 +72,28 @@ class TemuLogin:
             #
             await self.page.wait_for_load_state("networkidle", timeout=20000)
             #
-            # if "seller.kuajingmaihuo.com" not in self.page.url:
-            #     raise Exception("登录后未进入卖家后台")
-            #
-            # try:
-            #     cancel_btn = self.page.get_by_role("button", name="取消")
-            #     await cancel_btn.click(timeout=1000)
-            #
-            #     # 等弹窗从 DOM 中消失
-            #     await cancel_btn.wait_for(state="detached", timeout=1000)
-            #
-            #     self.logger.info(f"{self.name} - 取消弹窗已关闭")
-            # except Exception:
-            #     self.logger.error(f"{self.name} - 未出现取消按钮，跳过")
-            #
-            # try:
-            #     await self.page.locator("text=进入").first.click(timeout=1000)
-            #     self.logger.info(f"{self.name} - 已点击进入")
-            # except Exception:
-            #     self.logger.error(f"{self.name} - 未出现进入按钮，跳过")
-            #
-            # self.logger.info(f"{self.name} - 登录成功")
+            if "seller.kuajingmaihuo.com" not in self.page.url:
+                raise Exception("登录后未进入卖家后台")
+
+            try:
+                cancel_btn = self.page.get_by_role("button", name="取消")
+                await cancel_btn.click(timeout=1000)
+
+                # 等弹窗从 DOM 中消失
+                await cancel_btn.wait_for(state="detached", timeout=1000)
+
+                self.logger.info(f"{self.name} - 取消弹窗已关闭")
+            except Exception:
+                self.logger.error(f"{self.name} - 未出现取消按钮，跳过")
+
+
+            try:
+                await self.page.locator("text=进入").first.click(timeout=1000)
+                self.logger.info(f"{self.name} - 已点击进入")
+            except Exception:
+                self.logger.error(f"{self.name} - 未出现进入按钮，跳过")
+
+            self.logger.info(f"{self.name} - 登录成功")
             return True
 
         except Exception as e:
@@ -168,6 +111,10 @@ class TemuLogin:
         )
 
         await self.page.wait_for_selector('[data-testid="beast-core-icon-down"]',state="visible")
+
+        await self.page.wait_for_load_state("load")
+
+        await asyncio.sleep(3)
 
         if "/authentication?" in self.page.url:
             try:
@@ -187,8 +134,10 @@ class TemuLogin:
                 # -------- 授权方式一：确认授权并前往 --------
                 confirm_btn_1 = auth_page.get_by_text("确认授权并前往", exact=True)
 
+                confirm_check = auth_page.locator('div.CBX_squareInputWrapper_5-116-1 div svg')
                 if await confirm_btn_1.count() > 0:
                     self.logger.info("命中授权方式一：确认授权并前往")
+                    await confirm_check.first.click()
                     await confirm_btn_1.first.click()
 
                 else:
@@ -236,17 +185,27 @@ class TemuLogin:
 
         await asyncio.sleep(3)
 
+        #==========判断用哪一个页面的cookie,不同的项目可能用到的cookie是不一样的================
+
         if self.cookie_domain=='agentseller':
             print('登录cookie_domain',self.cookie_domain)
         # 获取 Cookie（正确方式）
             cookies = await self.page.context.cookies(
                 "https://agentseller.temu.com/"
             )
+
+            path = COOKIE_DIR / f"{self.name}_cookies.json"
         if self.cookie_domain=="kuajingmaihuo":
             print('登录cookie_domain', self.cookie_domain)
             cookies = await self.page.context.cookies(
                 "https://seller.kuajingmaihuo.com/main/order-manager/shipping-list"
             )
+            path = COOKIE_DIR / f"{self.name}_{self.cookie_domain}_cookies.json"
+
+        if self.cookie_domain=="financial":
+            print('登录cookie_domain', self.cookie_domain)
+            cookies=await self.page.context.cookies('https://seller.kuajingmaihuo.com/labor/bill')
+            path = COOKIE_DIR / f"{self.name}_{self.cookie_domain}_cookies.json"
 
         if not cookies:
             self.logger.error(f"{self.name} - 未获取到 agentseller Cookie")
@@ -260,7 +219,6 @@ class TemuLogin:
             "cookies": cookies_dict,
         }
 
-        path = COOKIE_DIR / f"{self.name}_cookies.json"
 
         with open(path, "w", encoding="utf-8") as f:
             json.dump(cookie_data, f, ensure_ascii=False, indent=2)
@@ -273,11 +231,8 @@ class TemuLogin:
 
     # -----------失败可以重新登录------------
     async def run_once(self):
-        if not await self.start_browser():
-            raise Exception("start_browser 失败")
-
-        if not await self.connect():
-            raise Exception("connect 失败")
+        if not await self.browser_manager.start():
+            raise Exception("启动浏览器失败")
 
         if not await self.open_login_page():
             raise Exception("open_login_page 失败")
@@ -319,13 +274,9 @@ class TemuLogin:
         return False
 
     async def close(self):
-        try:
-            if self.browser:
-                await self.browser.close()
-            if self.playwright:
-                await self.playwright.stop()
-        finally:
-            await self.stop_browser()
+        """关闭浏览器管理器"""
+        await self.browser_manager.close()
+        await self.browser_manager.stop()
 
 
 async def main():
@@ -334,12 +285,12 @@ async def main():
         account = get_shop_config(name)
         print(account)
 
-        t = TemuLogin(name, account)
+        t = TemuLogin(name, account,'financial_data')
         await t.run()
 
-
+# #
 # if __name__ == "__main__":
 #     asyncio.run(main())
-
+#
 
 

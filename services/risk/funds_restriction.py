@@ -11,10 +11,10 @@ from utils.dingtalk_bot import ding_bot_send
 """金额限制--数据获取"""
 
 class Temu_Funds_Restriction:
-    def __init__(self,shop_name):
+    def __init__(self,shop_name,job):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"funds_restriction")
+        self.cookie_manager = CookieManager(shop_name,job)
+        self.logger = get_logger(job)
 
         self.redis_client = redis.Redis(
             host="127.0.0.1",
@@ -222,15 +222,11 @@ class Temu_Funds_Restriction:
                     await self.cookie_manager.refresh()
                     await asyncio.sleep(2)
                     continue
-                else:
-                    self.logger.error(
-                        f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
-                    )
-                    # 将刷新时候cookie还是失败的发送给自己
-                    ding_bot_send('me', f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
-                    return
+
 
             self.parse_data(json_data)
+
+            # ding_bot_send('me', f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
             return
 
 # if __name__ == '__main__':

@@ -10,7 +10,7 @@ from pathlib import Path
 """上传/删除/查询钉钉多维表的数据"""
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config" / "config.json"
-token_cache=Path(__file__).resolve().parent.parent / "config" / "token_cache.json"
+token_cache=Path(__file__).resolve().parent.parent.parent / "token_cache.json"
 
 
 class DingTalkTokenManager:

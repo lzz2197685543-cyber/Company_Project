@@ -10,8 +10,10 @@ COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 
 
 class CookieManager:
-    def __init__(self,shop_name):
+    def __init__(self,shop_name,job,cookie_domain:str='agentseller'):
         self.shop_name=shop_name
+        self.cookie_domain=cookie_domain
+        self.job=job
         self.cookie_file = COOKIE_DIR / f"{shop_name}_cookies.json"
         self.cfg = get_shop_config(shop_name)
         self.shop_id=self.cfg["shop"]["shopId"]
@@ -19,6 +21,8 @@ class CookieManager:
 
     # ---------- cookie ----------
     def load_cookies(self) -> Optional[Dict[str, str]]:
+        if self.cookie_domain!="agentseller":
+            self.cookie_file=COOKIE_DIR / f"{self.shop_name}_{self.cookie_domain}_cookies.json"
         if not self.cookie_file.exists():
             print('cookies不存在----------')
             return None
@@ -27,12 +31,13 @@ class CookieManager:
 
 
     # ---------- 刷新 ----------
-    async def refresh(self,cookie_domain:str='agentseller'):
-        print('cookie_domain:',cookie_domain)
+    async def refresh(self):
+        print('cookie_domain:',self.cookie_domain)
         login = TemuLogin(
             name=self.shop_name,
             account=self.cfg,
-            cookie_domain=cookie_domain
+            job=self.job,
+            cookie_domain=self.cookie_domain
         )
         ok = await login.run()
         if not ok:

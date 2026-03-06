@@ -24,7 +24,7 @@ class Stockin_Manager(TemuBaseClient):
                 "port": 6379,
                 "db": 0
             },
-            redis_prefix="temu:purchase"
+            redis_prefix="temu:stockin"
         )
 
         self.storage.create_table()
@@ -166,6 +166,6 @@ class Stockin_Manager(TemuBaseClient):
 async def main():
     s = Stockin_Manager("103-Temu全托管",'temu_parcel_tracer')
     skcs = await s.fetch_all_pages()
-
+#
 # if __name__ == '__main__':
 #     asyncio.run(main())

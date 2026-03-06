@@ -16,10 +16,10 @@ BEIJING_TZ = ZoneInfo("Asia/Shanghai")
 
 
 class Temu_ViolationRecored:
-    def __init__(self, shop_name):
+    def __init__(self, shop_name,job):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"temu_violation_recored")
+        self.cookie_manager = CookieManager(shop_name,job)
+        self.logger = get_logger(job)
 
         self.redis_client = redis.Redis(
             host="127.0.0.1",
@@ -275,7 +275,7 @@ class Temu_ViolationRecored:
                         f"[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务"
                     )
                     # 将刷新时候cookie还是失败的发送给自己
-                    ding_bot_send('me',f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
+                    # ding_bot_send('me',f"temu资金限制项目--[{self.shop_name}] 刷新 cookie 后仍然失效，终止任务")
                     return
 
             # ✅ 正常数据

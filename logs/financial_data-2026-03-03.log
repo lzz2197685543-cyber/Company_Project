@@ -1,0 +1,634 @@
+2026-03-03 11:39:26,379 | INFO | financial_data | 103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 11:39:29,720 | INFO | financial_data | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57971', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2816, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 11:39:29,720 | INFO | financial_data | 103-Temu全托管 - 浏览器启动成功, 调试端口: 57971
+2026-03-03 11:39:31,091 | INFO | financial_data | 103-Temu全托管 - 已连接浏览器
+2026-03-03 11:39:31,588 | INFO | financial_data | --------------------103-Temu全托管 ------------------------ 开始登录...
+2026-03-03 11:39:36,446 | INFO | financial_data | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 11:39:40,556 | INFO | financial_data | 103-Temu全托管 - 进入财务页面
+2026-03-03 11:39:46,201 | INFO | financial_data | 有数据，总共 1539 条
+2026-03-03 11:39:48,307 | INFO | financial_data | 检测到任务已存在，尝试从导出历史中下载
+2026-03-03 11:39:48,307 | INFO | financial_data | 103-Temu全托管 - 尝试从导出历史中下载文件
+2026-03-03 11:39:48,459 | INFO | financial_data | 103-Temu全托管 - 从历史中下载: 下载账务明细(卖家中心)
+2026-03-03 11:39:49,002 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\103-Temu全托管_02_卖家中心.xlsx
+2026-03-03 11:39:50,009 | INFO | financial_data | 103-Temu全托管 - 从历史中下载: 下载财务明细(全球)
+2026-03-03 11:40:20,993 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_全球.xlsx
+2026-03-03 11:40:22,027 | INFO | financial_data | 103-Temu全托管 - 从历史中下载: 下载财务明细(欧区)
+2026-03-03 11:41:24,455 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_欧区.xlsx
+2026-03-03 11:41:25,494 | INFO | financial_data | 103-Temu全托管 - 从历史中下载: 下载财务明细(美国)
+2026-03-03 11:41:50,508 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_美国.xlsx
+2026-03-03 11:41:51,544 | INFO | financial_data | ✅ 103-Temu全托管 - 所有财务数据从历史下载完成
+2026-03-03 11:41:51,545 | INFO | financial_data | 从历史记录下载完成
+2026-03-03 11:41:51,545 | INFO | financial_data | 103-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 11:42:51,965 | INFO | financial_data | 108-Temu全托管 - 第 1 次登录尝试
+2026-03-03 11:42:55,187 | INFO | financial_data | 108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'gobiecapkllflcacpgecmdakhoffglne', 'browserID': 104562169, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '58523', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托108店-YYDeeK BO子账号', 'duplicate': 2655, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104562169, 'containerCode': '1053621692', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 11:42:55,187 | INFO | financial_data | 108-Temu全托管 - 浏览器启动成功, 调试端口: 58523
+2026-03-03 11:42:56,562 | INFO | financial_data | 108-Temu全托管 - 已连接浏览器
+2026-03-03 11:42:57,067 | INFO | financial_data | --------------------108-Temu全托管 ------------------------ 开始登录...
+2026-03-03 11:42:59,731 | INFO | financial_data | 108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 11:43:04,007 | INFO | financial_data | 108-Temu全托管 - 进入财务页面
+2026-03-03 11:43:08,934 | INFO | financial_data | 有数据，总共 607 条
+2026-03-03 11:43:11,029 | INFO | financial_data | 检测到任务已存在，尝试从导出历史中下载
+2026-03-03 11:43:11,029 | INFO | financial_data | 108-Temu全托管 - 尝试从导出历史中下载文件
+2026-03-03 11:43:12,222 | INFO | financial_data | 108-Temu全托管 - 从历史中下载: 下载财务明细(全球)
+2026-03-03 11:51:08,244 | INFO | financial_data | 108-Temu全托管 - 第 1 次登录尝试
+2026-03-03 11:51:12,161 | INFO | financial_data | 108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'gobiecapkllflcacpgecmdakhoffglne', 'browserID': 104562169, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '59733', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托108店-YYDeeK BO子账号', 'duplicate': 3424, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104562169, 'containerCode': '1053621692', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 11:51:12,162 | INFO | financial_data | 108-Temu全托管 - 浏览器启动成功, 调试端口: 59733
+2026-03-03 11:51:13,522 | INFO | financial_data | 108-Temu全托管 - 已连接浏览器
+2026-03-03 11:51:14,036 | INFO | financial_data | --------------------108-Temu全托管 ------------------------ 开始登录...
+2026-03-03 11:51:19,168 | INFO | financial_data | 108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 11:51:23,617 | INFO | financial_data | 108-Temu全托管 - 进入财务页面
+2026-03-03 11:51:29,270 | INFO | financial_data | 有数据，总共 607 条
+2026-03-03 11:51:31,381 | INFO | financial_data | 检测到任务已存在，尝试从导出历史中下载
+2026-03-03 11:51:31,381 | INFO | financial_data | 108-Temu全托管 - 尝试从导出历史中下载文件
+2026-03-03 11:51:32,599 | INFO | financial_data | 108-Temu全托管 - 从历史中下载: 下载财务明细(全球)
+2026-03-03 11:51:35,165 | INFO | financial_data | 确认授权并前往
+2026-03-03 11:51:49,477 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_全球.xlsx
+2026-03-03 11:51:50,520 | INFO | financial_data | 108-Temu全托管 - 从历史中下载: 下载财务明细(欧区)
+2026-03-03 11:51:52,727 | INFO | financial_data | 确认授权并前往
+2026-03-03 11:52:13,645 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_欧区.xlsx
+2026-03-03 11:52:14,672 | INFO | financial_data | 108-Temu全托管 - 从历史中下载: 下载财务明细(美国)
+2026-03-03 11:52:17,183 | INFO | financial_data | 确认授权并前往
+2026-03-03 11:52:29,786 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_美国.xlsx
+2026-03-03 11:52:30,814 | INFO | financial_data | ✅ 108-Temu全托管 - 所有财务数据从历史下载完成
+2026-03-03 11:52:30,815 | INFO | financial_data | 从历史记录下载完成
+2026-03-03 11:52:30,816 | INFO | financial_data | 108-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:20:40,259 | INFO | financial_data | --------------------------正在下载2026-02的数据------------------------------
+2026-03-03 12:20:40,259 | INFO | financial_data | --------------正在爬取店铺2106-Temu全托管----的数据
+2026-03-03 12:20:40,259 | INFO | financial_data | 2106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:20:44,004 | INFO | financial_data | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '63724', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 3200, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:20:44,005 | INFO | financial_data | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 63724
+2026-03-03 12:20:45,373 | INFO | financial_data | 2106-Temu全托管 - 已连接浏览器
+2026-03-03 12:20:46,504 | INFO | financial_data | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:21:39,767 | INFO | financial_data | --------------------------正在下载2026-02的数据------------------------------
+2026-03-03 12:21:39,767 | INFO | financial_data | --------------正在爬取店铺2106-Temu全托管----的数据
+2026-03-03 12:21:39,767 | INFO | financial_data | 2106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:21:40,303 | INFO | financial_data | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '63724', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 59500, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:21:40,303 | INFO | financial_data | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 63724
+2026-03-03 12:21:41,661 | INFO | financial_data | 2106-Temu全托管 - 已连接浏览器
+2026-03-03 12:21:41,792 | INFO | financial_data | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:21:45,089 | INFO | financial_data | 2106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:21:58,381 | INFO | financial_data | 2106-Temu全托管 - 进入财务页面
+2026-03-03 12:22:07,803 | INFO | financial_data | 有数据，总共 536 条
+2026-03-03 12:22:09,850 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:22:10,680 | INFO | financial_data | 2106-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:22:20,588 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\2106-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:22:21,590 | INFO | financial_data | 2106-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:22:24,155 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:22:38,762 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2106-Temu全托管_02_全球.xlsx
+2026-03-03 12:22:39,804 | INFO | financial_data | 2106-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:22:42,183 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:22:59,828 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2106-Temu全托管_02_欧区.xlsx
+2026-03-03 12:23:00,866 | INFO | financial_data | 2106-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:23:03,099 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:23:13,558 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2106-Temu全托管_02_美国.xlsx
+2026-03-03 12:23:14,586 | INFO | financial_data | ✅ 2106-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:23:14,586 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:23:14,586 | INFO | financial_data | 2106-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:23:15,756 | INFO | financial_data | --------------正在爬取店铺2103-Temu全托管----的数据
+2026-03-03 12:23:15,757 | INFO | financial_data | 2103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:23:19,370 | INFO | financial_data | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '64441', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 3142, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:23:19,370 | INFO | financial_data | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 64441
+2026-03-03 12:23:20,717 | INFO | financial_data | 2103-Temu全托管 - 已连接浏览器
+2026-03-03 12:23:21,169 | INFO | financial_data | --------------------2103-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:23:26,118 | INFO | financial_data | 2103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:23:30,351 | INFO | financial_data | 2103-Temu全托管 - 进入财务页面
+2026-03-03 12:23:39,956 | INFO | financial_data | 有数据，总共 250 条
+2026-03-03 12:23:42,031 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:23:42,869 | INFO | financial_data | 2103-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:23:53,315 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\2103-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:23:54,321 | INFO | financial_data | 2103-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:23:56,646 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:24:08,416 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2103-Temu全托管_02_全球.xlsx
+2026-03-03 12:24:09,467 | INFO | financial_data | 2103-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:24:11,618 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:24:25,780 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2103-Temu全托管_02_欧区.xlsx
+2026-03-03 12:24:26,809 | INFO | financial_data | 2103-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:24:29,112 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:24:40,520 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2103-Temu全托管_02_美国.xlsx
+2026-03-03 12:24:41,541 | INFO | financial_data | ✅ 2103-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:24:41,541 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:24:41,542 | INFO | financial_data | 2103-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:24:42,851 | INFO | financial_data | --------------正在爬取店铺2102-Temu全托管----的数据
+2026-03-03 12:24:42,851 | INFO | financial_data | 2102-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:24:46,383 | INFO | financial_data | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '64999', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 3140, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:24:46,383 | INFO | financial_data | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 64999
+2026-03-03 12:24:47,771 | INFO | financial_data | 2102-Temu全托管 - 已连接浏览器
+2026-03-03 12:24:48,244 | INFO | financial_data | --------------------2102-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:24:53,202 | INFO | financial_data | 2102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:25:00,589 | INFO | financial_data | 2102-Temu全托管 - 进入财务页面
+2026-03-03 12:25:10,904 | INFO | financial_data | 有数据，总共 170 条
+2026-03-03 12:25:12,958 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:25:13,800 | INFO | financial_data | 2102-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:25:24,251 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\2102-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:25:25,254 | INFO | financial_data | 2102-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:25:27,631 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:25:38,561 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2102-Temu全托管_02_全球.xlsx
+2026-03-03 12:25:39,592 | INFO | financial_data | 2102-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:25:42,120 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:25:53,987 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2102-Temu全托管_02_欧区.xlsx
+2026-03-03 12:25:55,029 | INFO | financial_data | 2102-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:25:57,216 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:26:08,074 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2102-Temu全托管_02_美国.xlsx
+2026-03-03 12:26:09,097 | INFO | financial_data | ✅ 2102-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:26:09,097 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:26:09,097 | INFO | financial_data | 2102-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:26:10,422 | INFO | financial_data | --------------正在爬取店铺2101-Temu全托管KA----的数据
+2026-03-03 12:26:10,422 | INFO | financial_data | 2101-Temu全托管KA - 第 1 次登录尝试
+2026-03-03 12:26:13,758 | INFO | financial_data | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '49160', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2907, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:26:13,758 | INFO | financial_data | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 49160
+2026-03-03 12:26:15,107 | INFO | financial_data | 2101-Temu全托管KA - 已连接浏览器
+2026-03-03 12:26:16,897 | INFO | financial_data | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2026-03-03 12:26:23,140 | INFO | financial_data | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-03-03 12:26:32,882 | INFO | financial_data | 2101-Temu全托管KA - 进入财务页面
+2026-03-03 12:26:42,208 | INFO | financial_data | 有数据，总共 2276 条
+2026-03-03 12:26:44,277 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:26:45,117 | INFO | financial_data | 2101-Temu全托管KA - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:26:55,121 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\2101-Temu全托管KA_02_卖家中心.xlsx
+2026-03-03 12:26:56,124 | INFO | financial_data | 2101-Temu全托管KA - 准备下载: 下载财务明细(全球)
+2026-03-03 12:26:58,456 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:27:23,079 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2101-Temu全托管KA_02_全球.xlsx
+2026-03-03 12:27:24,121 | INFO | financial_data | 2101-Temu全托管KA - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:27:26,289 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:28:07,580 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2101-Temu全托管KA_02_欧区.xlsx
+2026-03-03 12:28:08,606 | INFO | financial_data | 2101-Temu全托管KA - 准备下载: 下载财务明细(美国)
+2026-03-03 12:28:11,142 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:28:21,477 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\2101-Temu全托管KA_02_美国.xlsx
+2026-03-03 12:28:22,500 | INFO | financial_data | ✅ 2101-Temu全托管KA - 所有财务数据下载完成
+2026-03-03 12:28:22,501 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:28:22,502 | INFO | financial_data | 2101-Temu全托管KA - 登录成功（第 1 次）
+2026-03-03 12:28:23,717 | INFO | financial_data | --------------正在爬取店铺112-Temu全托管----的数据
+2026-03-03 12:28:23,718 | INFO | financial_data | 112-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:28:26,812 | INFO | financial_data | 112-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'deogjmiglmamcbonclpnbppbclfgkgpg', 'browserID': 99848624, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '49760', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托112店', 'duplicate': 2693, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99848624, 'containerCode': '1006486242', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:28:26,812 | INFO | financial_data | 112-Temu全托管 - 浏览器启动成功, 调试端口: 49760
+2026-03-03 12:28:28,157 | INFO | financial_data | 112-Temu全托管 - 已连接浏览器
+2026-03-03 12:28:29,422 | INFO | financial_data | --------------------112-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:28:34,509 | INFO | financial_data | 112-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:28:43,640 | INFO | financial_data | 112-Temu全托管 - 进入财务页面
+2026-03-03 12:28:52,344 | INFO | financial_data | 有数据，总共 332 条
+2026-03-03 12:28:54,402 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:28:55,241 | INFO | financial_data | 112-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:29:05,151 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\112-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:29:06,154 | INFO | financial_data | 112-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:29:08,386 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:29:22,145 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\112-Temu全托管_02_全球.xlsx
+2026-03-03 12:29:23,192 | INFO | financial_data | 112-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:29:25,291 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:29:40,032 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\112-Temu全托管_02_欧区.xlsx
+2026-03-03 12:29:41,070 | INFO | financial_data | 112-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:29:43,154 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:29:52,052 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\112-Temu全托管_02_美国.xlsx
+2026-03-03 12:29:53,071 | INFO | financial_data | ✅ 112-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:29:53,072 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:29:53,072 | INFO | financial_data | 112-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:29:54,379 | INFO | financial_data | --------------正在爬取店铺1108-Temu全托管----的数据
+2026-03-03 12:29:54,379 | INFO | financial_data | 1108-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:29:58,466 | INFO | financial_data | 1108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'oielegjolaoigkjpcikbcbepjdojkkja', 'browserID': 122453019, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '50175', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1108号店', 'duplicate': 3644, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122453019, 'containerCode': '1232530196', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:29:58,466 | INFO | financial_data | 1108-Temu全托管 - 浏览器启动成功, 调试端口: 50175
+2026-03-03 12:29:59,871 | INFO | financial_data | 1108-Temu全托管 - 已连接浏览器
+2026-03-03 12:30:01,004 | INFO | financial_data | --------------------1108-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:30:05,160 | INFO | financial_data | 1108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:30:13,417 | INFO | financial_data | 1108-Temu全托管 - 进入财务页面
+2026-03-03 12:30:24,028 | INFO | financial_data | 有数据，总共 386 条
+2026-03-03 12:30:26,126 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:30:27,466 | INFO | financial_data | 1108-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:30:28,121 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1108-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:30:29,125 | INFO | financial_data | 1108-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:30:31,415 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:30:46,817 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1108-Temu全托管_02_全球.xlsx
+2026-03-03 12:30:47,848 | INFO | financial_data | 1108-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:30:50,125 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:31:06,235 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1108-Temu全托管_02_欧区.xlsx
+2026-03-03 12:31:07,259 | INFO | financial_data | 1108-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:31:09,395 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:31:19,658 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1108-Temu全托管_02_美国.xlsx
+2026-03-03 12:31:20,683 | INFO | financial_data | ✅ 1108-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:31:20,683 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:31:20,683 | INFO | financial_data | 1108-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:31:21,888 | INFO | financial_data | --------------正在爬取店铺1107-Temu全托管----的数据
+2026-03-03 12:31:21,889 | INFO | financial_data | 1107-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:31:25,648 | INFO | financial_data | 1107-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hmfimlmiknlbeifbaabjgkfnhkaiijaf', 'browserID': 122452738, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '50693', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1107号店', 'duplicate': 3313, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122452738, 'containerCode': '1232527381', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:31:25,648 | INFO | financial_data | 1107-Temu全托管 - 浏览器启动成功, 调试端口: 50693
+2026-03-03 12:31:27,072 | INFO | financial_data | 1107-Temu全托管 - 已连接浏览器
+2026-03-03 12:31:28,258 | INFO | financial_data | --------------------1107-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:31:32,116 | INFO | financial_data | 1107-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:31:42,852 | INFO | financial_data | 1107-Temu全托管 - 进入财务页面
+2026-03-03 12:31:55,965 | INFO | financial_data | 有数据，总共 403 条
+2026-03-03 12:31:58,048 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:31:58,869 | INFO | financial_data | 1107-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:32:08,774 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1107-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:32:09,778 | INFO | financial_data | 1107-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:32:12,093 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:32:25,349 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1107-Temu全托管_02_全球.xlsx
+2026-03-03 12:32:26,392 | INFO | financial_data | 1107-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:32:28,525 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:32:45,845 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1107-Temu全托管_02_欧区.xlsx
+2026-03-03 12:32:46,877 | INFO | financial_data | 1107-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:32:49,100 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:32:57,857 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1107-Temu全托管_02_美国.xlsx
+2026-03-03 12:32:58,881 | INFO | financial_data | ✅ 1107-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:32:58,882 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:32:58,883 | INFO | financial_data | 1107-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:33:00,043 | INFO | financial_data | --------------正在爬取店铺1106-Temu全托管----的数据
+2026-03-03 12:33:00,045 | INFO | financial_data | 1106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:33:03,387 | INFO | financial_data | 1106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ckmbonbfihibhagclccfhnmbcbfnlbnh', 'browserID': 109978213, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '51287', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1106店', 'duplicate': 2901, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109978213, 'containerCode': '1107782133', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:33:03,388 | INFO | financial_data | 1106-Temu全托管 - 浏览器启动成功, 调试端口: 51287
+2026-03-03 12:33:04,748 | INFO | financial_data | 1106-Temu全托管 - 已连接浏览器
+2026-03-03 12:33:05,788 | INFO | financial_data | --------------------1106-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:33:11,158 | INFO | financial_data | 1106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:33:19,867 | INFO | financial_data | 1106-Temu全托管 - 进入财务页面
+2026-03-03 12:33:29,060 | INFO | financial_data | 有数据，总共 616 条
+2026-03-03 12:33:31,128 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:33:31,485 | INFO | financial_data | 1106-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:33:41,829 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1106-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:33:42,833 | INFO | financial_data | 1106-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:33:45,118 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:34:02,238 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1106-Temu全托管_02_全球.xlsx
+2026-03-03 12:34:03,315 | INFO | financial_data | 1106-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:34:05,414 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:34:22,311 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1106-Temu全托管_02_欧区.xlsx
+2026-03-03 12:34:23,355 | INFO | financial_data | 1106-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:34:25,473 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:34:34,174 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1106-Temu全托管_02_美国.xlsx
+2026-03-03 12:34:35,203 | INFO | financial_data | ✅ 1106-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:34:35,204 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:34:35,205 | INFO | financial_data | 1106-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:34:36,335 | INFO | financial_data | --------------正在爬取店铺1105-Temu全托管----的数据
+2026-03-03 12:34:36,336 | INFO | financial_data | 1105-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:34:39,570 | INFO | financial_data | 1105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hedbcddcbnkifhfapobljhpmnkknmeci', 'browserID': 109977447, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '51741', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1105店', 'duplicate': 2796, 'ip': '218.78.129.86', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109977447, 'containerCode': '1107774478', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:34:39,570 | INFO | financial_data | 1105-Temu全托管 - 浏览器启动成功, 调试端口: 51741
+2026-03-03 12:34:40,924 | INFO | financial_data | 1105-Temu全托管 - 已连接浏览器
+2026-03-03 12:34:42,279 | INFO | financial_data | --------------------1105-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:34:47,071 | INFO | financial_data | 1105-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:34:56,308 | INFO | financial_data | 1105-Temu全托管 - 进入财务页面
+2026-03-03 12:35:05,990 | INFO | financial_data | 有数据，总共 921 条
+2026-03-03 12:35:08,068 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:35:08,895 | INFO | financial_data | 1105-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:35:18,786 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1105-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:35:19,792 | INFO | financial_data | 1105-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:35:22,089 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:35:37,813 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1105-Temu全托管_02_全球.xlsx
+2026-03-03 12:35:38,853 | INFO | financial_data | 1105-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:35:41,185 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:36:18,831 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1105-Temu全托管_02_欧区.xlsx
+2026-03-03 12:36:19,867 | INFO | financial_data | 1105-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:36:22,250 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:36:34,240 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1105-Temu全托管_02_美国.xlsx
+2026-03-03 12:36:35,281 | INFO | financial_data | ✅ 1105-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:36:35,282 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:36:35,282 | INFO | financial_data | 1105-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:36:36,543 | INFO | financial_data | --------------正在爬取店铺1104-Temu全托管----的数据
+2026-03-03 12:36:36,544 | INFO | financial_data | 1104-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:36:39,711 | INFO | financial_data | 1104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ifmneobocilkpmpjmkahbfnpccjajnbm', 'browserID': 100261239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '52309', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1104店', 'duplicate': 2822, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261239, 'containerCode': '1010612394', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:36:39,712 | INFO | financial_data | 1104-Temu全托管 - 浏览器启动成功, 调试端口: 52309
+2026-03-03 12:36:41,069 | INFO | financial_data | 1104-Temu全托管 - 已连接浏览器
+2026-03-03 12:36:42,095 | INFO | financial_data | --------------------1104-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:36:48,153 | INFO | financial_data | 1104-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:37:08,175 | ERROR | financial_data | 1104-Temu全托管 - 第 1 次失败: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to "https://agentseller.temu.com/", waiting until "domcontentloaded"
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\services\financial\financial_data.py", line 734, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\services\financial\financial_data.py", line 720, in run_once
+    if not await self.login_verify():
+  File "D:\sd14\Temu_horizon\services\financial\financial_data.py", line 146, in login_verify
+    await self.page.goto(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to "https://agentseller.temu.com/", waiting until "domcontentloaded"
+
+2026-03-03 12:37:09,337 | INFO | financial_data | 1104-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 12:37:12,349 | INFO | financial_data | 1104-Temu全托管 - 第 2 次登录尝试
+2026-03-03 12:37:15,052 | INFO | financial_data | 1104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ifmneobocilkpmpjmkahbfnpccjajnbm', 'browserID': 100261239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '52484', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1104店', 'duplicate': 2316, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261239, 'containerCode': '1010612394', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:37:15,052 | INFO | financial_data | 1104-Temu全托管 - 浏览器启动成功, 调试端口: 52484
+2026-03-03 12:37:16,431 | INFO | financial_data | 1104-Temu全托管 - 已连接浏览器
+2026-03-03 12:37:16,765 | INFO | financial_data | --------------------1104-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:37:21,288 | INFO | financial_data | 1104-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:37:52,889 | INFO | financial_data | 1104-Temu全托管 - 进入财务页面
+2026-03-03 12:38:02,229 | INFO | financial_data | 有数据，总共 340 条
+2026-03-03 12:38:04,338 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:38:05,170 | INFO | financial_data | 1104-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:38:15,068 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1104-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:38:16,074 | INFO | financial_data | 1104-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:38:18,282 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:38:29,501 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1104-Temu全托管_02_全球.xlsx
+2026-03-03 12:38:30,545 | INFO | financial_data | 1104-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:38:32,612 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:38:46,744 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1104-Temu全托管_02_欧区.xlsx
+2026-03-03 12:38:47,780 | INFO | financial_data | 1104-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:38:50,158 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:39:00,797 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1104-Temu全托管_02_美国.xlsx
+2026-03-03 12:39:01,819 | INFO | financial_data | ✅ 1104-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:39:01,820 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:39:01,821 | INFO | financial_data | 1104-Temu全托管 - 登录成功（第 2 次）
+2026-03-03 12:39:03,023 | INFO | financial_data | --------------正在爬取店铺1103-Temu全托管----的数据
+2026-03-03 12:39:03,024 | INFO | financial_data | 1103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:39:06,489 | INFO | financial_data | 1103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jpdodpkjmnaoinfefchdgfomfncffgoc', 'browserID': 100261119, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '53055', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1103店-子账号', 'duplicate': 3006, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261119, 'containerCode': '1010611195', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:39:06,489 | INFO | financial_data | 1103-Temu全托管 - 浏览器启动成功, 调试端口: 53055
+2026-03-03 12:39:07,843 | INFO | financial_data | 1103-Temu全托管 - 已连接浏览器
+2026-03-03 12:39:09,274 | INFO | financial_data | --------------------1103-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:39:15,709 | INFO | financial_data | 1103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:39:25,272 | INFO | financial_data | 1103-Temu全托管 - 进入财务页面
+2026-03-03 12:39:33,819 | INFO | financial_data | 有数据，总共 284 条
+2026-03-03 12:39:35,946 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:39:36,277 | INFO | financial_data | 1103-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:39:46,693 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1103-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:39:47,711 | INFO | financial_data | 1103-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:39:50,099 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:40:02,363 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1103-Temu全托管_02_全球.xlsx
+2026-03-03 12:40:03,391 | INFO | financial_data | 1103-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:40:05,496 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:40:26,813 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1103-Temu全托管_02_欧区.xlsx
+2026-03-03 12:40:27,849 | INFO | financial_data | 1103-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:40:30,118 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:40:39,606 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1103-Temu全托管_02_美国.xlsx
+2026-03-03 12:40:40,630 | INFO | financial_data | ✅ 1103-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:40:40,632 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:40:40,632 | INFO | financial_data | 1103-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:40:41,947 | INFO | financial_data | --------------正在爬取店铺1102-Temu全托管----的数据
+2026-03-03 12:40:41,948 | INFO | financial_data | 1102-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:40:45,270 | INFO | financial_data | 1102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jelnoidfmcaagnefijmbgjihdibffamo', 'browserID': 100123686, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '53500', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1102店', 'duplicate': 2931, 'ip': '125.94.230.83', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100123686, 'containerCode': '1009236863', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:40:45,271 | INFO | financial_data | 1102-Temu全托管 - 浏览器启动成功, 调试端口: 53500
+2026-03-03 12:40:46,623 | INFO | financial_data | 1102-Temu全托管 - 已连接浏览器
+2026-03-03 12:40:47,746 | INFO | financial_data | --------------------1102-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:40:54,449 | INFO | financial_data | 1102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:41:04,434 | INFO | financial_data | 1102-Temu全托管 - 进入财务页面
+2026-03-03 12:41:13,097 | INFO | financial_data | 有数据，总共 358 条
+2026-03-03 12:41:15,178 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:41:16,010 | INFO | financial_data | 1102-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:41:25,925 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1102-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:41:26,942 | INFO | financial_data | 1102-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:41:29,205 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:41:40,599 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1102-Temu全托管_02_全球.xlsx
+2026-03-03 12:41:41,641 | INFO | financial_data | 1102-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:41:44,120 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:41:58,184 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1102-Temu全托管_02_欧区.xlsx
+2026-03-03 12:41:59,220 | INFO | financial_data | 1102-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:42:01,308 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:42:11,366 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1102-Temu全托管_02_美国.xlsx
+2026-03-03 12:42:12,396 | INFO | financial_data | ✅ 1102-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:42:12,397 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:42:12,398 | INFO | financial_data | 1102-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:42:13,810 | INFO | financial_data | --------------正在爬取店铺1101-Temu全托管----的数据
+2026-03-03 12:42:13,810 | INFO | financial_data | 1101-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:42:17,445 | INFO | financial_data | 1101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ckhldkgdmajoifldkandjekhofbghdfh', 'browserID': 100260927, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '53938', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1101店', 'duplicate': 3277, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100260927, 'containerCode': '1010609275', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:42:17,445 | INFO | financial_data | 1101-Temu全托管 - 浏览器启动成功, 调试端口: 53938
+2026-03-03 12:42:18,796 | INFO | financial_data | 1101-Temu全托管 - 已连接浏览器
+2026-03-03 12:42:19,974 | INFO | financial_data | --------------------1101-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:42:26,181 | INFO | financial_data | 1101-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:42:36,128 | INFO | financial_data | 1101-Temu全托管 - 进入财务页面
+2026-03-03 12:42:44,862 | INFO | financial_data | 有数据，总共 951 条
+2026-03-03 12:42:46,960 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:42:47,787 | INFO | financial_data | 1101-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:42:57,757 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\1101-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:42:58,758 | INFO | financial_data | 1101-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:43:00,875 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:43:15,067 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1101-Temu全托管_02_全球.xlsx
+2026-03-03 12:43:16,105 | INFO | financial_data | 1101-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:43:18,221 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:43:51,320 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1101-Temu全托管_02_欧区.xlsx
+2026-03-03 12:43:52,364 | INFO | financial_data | 1101-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:43:54,515 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:44:05,372 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\1101-Temu全托管_02_美国.xlsx
+2026-03-03 12:44:06,394 | INFO | financial_data | ✅ 1101-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:44:06,395 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:44:06,396 | INFO | financial_data | 1101-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:44:07,741 | INFO | financial_data | --------------正在爬取店铺110-Temu全托管KA----的数据
+2026-03-03 12:44:07,742 | INFO | financial_data | 110-Temu全托管KA - 第 1 次登录尝试
+2026-03-03 12:44:10,781 | INFO | financial_data | 110-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'komlifcoekddpkbgnlkbhoknnkcniofa', 'browserID': 104353651, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '54402', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托110号店+半托7号店', 'duplicate': 2722, 'ip': '121.14.201.248', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104353651, 'containerCode': '1051536511', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:44:10,782 | INFO | financial_data | 110-Temu全托管KA - 浏览器启动成功, 调试端口: 54402
+2026-03-03 12:44:12,143 | INFO | financial_data | 110-Temu全托管KA - 已连接浏览器
+2026-03-03 12:44:13,175 | INFO | financial_data | --------------------110-Temu全托管KA ------------------------ 开始登录...
+2026-03-03 12:44:20,082 | INFO | financial_data | 110-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-03-03 12:44:31,577 | INFO | financial_data | 110-Temu全托管KA - 进入财务页面
+2026-03-03 12:44:47,902 | INFO | financial_data | 有数据，总共 919 条
+2026-03-03 12:44:50,007 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:44:50,851 | INFO | financial_data | 110-Temu全托管KA - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:45:00,719 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\110-Temu全托管KA_02_卖家中心.xlsx
+2026-03-03 12:45:01,721 | INFO | financial_data | 110-Temu全托管KA - 准备下载: 下载财务明细(全球)
+2026-03-03 12:45:04,102 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:45:24,632 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\110-Temu全托管KA_02_全球.xlsx
+2026-03-03 12:45:25,668 | INFO | financial_data | 110-Temu全托管KA - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:45:28,155 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:45:54,415 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\110-Temu全托管KA_02_欧区.xlsx
+2026-03-03 12:45:55,444 | INFO | financial_data | 110-Temu全托管KA - 准备下载: 下载财务明细(美国)
+2026-03-03 12:45:57,545 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:46:08,636 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\110-Temu全托管KA_02_美国.xlsx
+2026-03-03 12:46:09,661 | INFO | financial_data | ✅ 110-Temu全托管KA - 所有财务数据下载完成
+2026-03-03 12:46:09,662 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:46:09,663 | INFO | financial_data | 110-Temu全托管KA - 登录成功（第 1 次）
+2026-03-03 12:46:10,800 | INFO | financial_data | --------------正在爬取店铺109-Temu全托管KA----的数据
+2026-03-03 12:46:10,801 | INFO | financial_data | 109-Temu全托管KA - 第 1 次登录尝试
+2026-03-03 12:46:14,248 | INFO | financial_data | 109-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ohiahjpnifkljncpockjijkdiohieojm', 'browserID': 104329439, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55068', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托109+半托3号-Geeray', 'duplicate': 3060, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104329439, 'containerCode': '1051294393', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:46:14,248 | INFO | financial_data | 109-Temu全托管KA - 浏览器启动成功, 调试端口: 55068
+2026-03-03 12:46:15,613 | INFO | financial_data | 109-Temu全托管KA - 已连接浏览器
+2026-03-03 12:46:17,191 | INFO | financial_data | --------------------109-Temu全托管KA ------------------------ 开始登录...
+2026-03-03 12:46:24,229 | INFO | financial_data | 109-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-03-03 12:46:32,754 | INFO | financial_data | 109-Temu全托管KA - 进入财务页面
+2026-03-03 12:46:42,083 | INFO | financial_data | 有数据，总共 909 条
+2026-03-03 12:46:44,170 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:46:44,996 | INFO | financial_data | 109-Temu全托管KA - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:46:54,993 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\109-Temu全托管KA_02_卖家中心.xlsx
+2026-03-03 12:46:56,009 | INFO | financial_data | 109-Temu全托管KA - 准备下载: 下载财务明细(全球)
+2026-03-03 12:46:58,353 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:47:19,379 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\109-Temu全托管KA_02_全球.xlsx
+2026-03-03 12:47:20,441 | INFO | financial_data | 109-Temu全托管KA - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:47:22,640 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:47:49,548 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\109-Temu全托管KA_02_欧区.xlsx
+2026-03-03 12:47:50,580 | INFO | financial_data | 109-Temu全托管KA - 准备下载: 下载财务明细(美国)
+2026-03-03 12:47:53,127 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:48:03,498 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\109-Temu全托管KA_02_美国.xlsx
+2026-03-03 12:48:04,522 | INFO | financial_data | ✅ 109-Temu全托管KA - 所有财务数据下载完成
+2026-03-03 12:48:04,522 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:48:04,523 | INFO | financial_data | 109-Temu全托管KA - 登录成功（第 1 次）
+2026-03-03 12:48:05,729 | INFO | financial_data | --------------正在爬取店铺108-Temu全托管----的数据
+2026-03-03 12:48:05,730 | INFO | financial_data | 108-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:48:08,890 | INFO | financial_data | 108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'gobiecapkllflcacpgecmdakhoffglne', 'browserID': 104562169, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55575', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托108店-YYDeeK BO子账号', 'duplicate': 2817, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104562169, 'containerCode': '1053621692', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:48:08,890 | INFO | financial_data | 108-Temu全托管 - 浏览器启动成功, 调试端口: 55575
+2026-03-03 12:48:10,247 | INFO | financial_data | 108-Temu全托管 - 已连接浏览器
+2026-03-03 12:48:10,767 | INFO | financial_data | --------------------108-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:48:15,490 | INFO | financial_data | 108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:48:19,611 | INFO | financial_data | 108-Temu全托管 - 进入财务页面
+2026-03-03 12:48:25,229 | INFO | financial_data | 有数据，总共 607 条
+2026-03-03 12:48:27,298 | INFO | financial_data | 检测到任务已存在，尝试从导出历史中下载
+2026-03-03 12:48:27,298 | INFO | financial_data | 108-Temu全托管 - 尝试从导出历史中下载文件
+2026-03-03 12:48:27,463 | INFO | financial_data | 108-Temu全托管 - 从历史中下载: 下载账务明细(卖家中心)
+2026-03-03 12:48:27,979 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\108-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:48:28,982 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_全球.xlsx
+2026-03-03 12:48:28,984 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_欧区.xlsx
+2026-03-03 12:48:28,986 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\108-Temu全托管_02_美国.xlsx
+2026-03-03 12:48:28,986 | INFO | financial_data | ✅ 108-Temu全托管 - 所有财务数据从历史下载完成
+2026-03-03 12:48:28,986 | INFO | financial_data | 从历史记录下载完成
+2026-03-03 12:48:28,986 | INFO | financial_data | 108-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:48:30,117 | INFO | financial_data | --------------正在爬取店铺106-Temu全托管----的数据
+2026-03-03 12:48:30,117 | INFO | financial_data | 106-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:48:33,479 | INFO | financial_data | 106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'pngnekjgjoanofgpkpnjilfmdnlhikjk', 'browserID': 104315998, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '55780', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托106店-BAKAM', 'duplicate': 2923, 'ip': '121.229.211.102', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104315998, 'containerCode': '1051159982', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:48:33,479 | INFO | financial_data | 106-Temu全托管 - 浏览器启动成功, 调试端口: 55780
+2026-03-03 12:48:34,846 | INFO | financial_data | 106-Temu全托管 - 已连接浏览器
+2026-03-03 12:48:35,953 | INFO | financial_data | --------------------106-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:48:42,640 | INFO | financial_data | 106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:48:52,017 | INFO | financial_data | 106-Temu全托管 - 进入财务页面
+2026-03-03 12:49:04,179 | INFO | financial_data | 有数据，总共 567 条
+2026-03-03 12:49:06,253 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:49:07,082 | INFO | financial_data | 106-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:49:16,986 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\106-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:49:17,996 | INFO | financial_data | 106-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:49:20,253 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:49:36,238 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\106-Temu全托管_02_全球.xlsx
+2026-03-03 12:49:37,281 | INFO | financial_data | 106-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:49:39,389 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:49:58,366 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\106-Temu全托管_02_欧区.xlsx
+2026-03-03 12:49:59,400 | INFO | financial_data | 106-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:50:01,535 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:50:13,682 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\106-Temu全托管_02_美国.xlsx
+2026-03-03 12:50:14,718 | INFO | financial_data | ✅ 106-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:50:14,718 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:50:14,719 | INFO | financial_data | 106-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:50:15,882 | INFO | financial_data | --------------正在爬取店铺105-Temu全托管----的数据
+2026-03-03 12:50:15,883 | INFO | financial_data | 105-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:50:19,364 | INFO | financial_data | 105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'egdlpkdlagfommapeejeoihfohgccfih', 'browserID': 104314256, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '56333', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托105店-UNE LUCIOLE', 'duplicate': 3024, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104314256, 'containerCode': '1051142565', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:50:19,364 | INFO | financial_data | 105-Temu全托管 - 浏览器启动成功, 调试端口: 56333
+2026-03-03 12:50:20,722 | INFO | financial_data | 105-Temu全托管 - 已连接浏览器
+2026-03-03 12:50:22,163 | INFO | financial_data | --------------------105-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:50:28,215 | INFO | financial_data | 105-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:50:39,130 | INFO | financial_data | 105-Temu全托管 - 进入财务页面
+2026-03-03 12:50:48,257 | INFO | financial_data | 有数据，总共 2462 条
+2026-03-03 12:50:50,305 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:50:51,128 | INFO | financial_data | 105-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:51:01,078 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\105-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:51:02,087 | INFO | financial_data | 105-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:51:04,402 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:51:28,465 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\105-Temu全托管_02_全球.xlsx
+2026-03-03 12:51:29,502 | INFO | financial_data | 105-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:51:31,626 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:52:43,579 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\105-Temu全托管_02_欧区.xlsx
+2026-03-03 12:52:44,612 | INFO | financial_data | 105-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:52:47,116 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:53:04,126 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\105-Temu全托管_02_美国.xlsx
+2026-03-03 12:53:05,155 | INFO | financial_data | ✅ 105-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:53:05,155 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:53:05,155 | INFO | financial_data | 105-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:53:06,440 | INFO | financial_data | --------------正在爬取店铺104-Temu全托管----的数据
+2026-03-03 12:53:06,441 | INFO | financial_data | 104-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:53:09,706 | INFO | financial_data | 104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'chlkfnmgfghenbeelpneidfjbkpokonp', 'browserID': 104527083, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57107', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托104店-YYDeeK子账号', 'duplicate': 2872, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104527083, 'containerCode': '1053270835', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:53:09,706 | INFO | financial_data | 104-Temu全托管 - 浏览器启动成功, 调试端口: 57107
+2026-03-03 12:53:11,077 | INFO | financial_data | 104-Temu全托管 - 已连接浏览器
+2026-03-03 12:53:12,472 | INFO | financial_data | --------------------104-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:53:20,121 | INFO | financial_data | 104-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:53:30,956 | INFO | financial_data | 104-Temu全托管 - 进入财务页面
+2026-03-03 12:53:40,057 | INFO | financial_data | 有数据，总共 1076 条
+2026-03-03 12:53:42,157 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:53:42,991 | INFO | financial_data | 104-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:53:53,542 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\104-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:53:54,553 | INFO | financial_data | 104-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:53:57,153 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:54:22,042 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\104-Temu全托管_02_全球.xlsx
+2026-03-03 12:54:23,072 | INFO | financial_data | 104-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:54:25,278 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:54:53,193 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\104-Temu全托管_02_欧区.xlsx
+2026-03-03 12:54:54,223 | INFO | financial_data | 104-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:54:56,458 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:55:08,442 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\104-Temu全托管_02_美国.xlsx
+2026-03-03 12:55:09,478 | INFO | financial_data | ✅ 104-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:55:09,479 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:55:09,479 | INFO | financial_data | 104-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:55:10,688 | INFO | financial_data | --------------正在爬取店铺103-Temu全托管----的数据
+2026-03-03 12:55:10,689 | INFO | financial_data | 103-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:55:13,891 | INFO | financial_data | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57605', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 2839, 'ip': '125.75.68.73', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:55:13,891 | INFO | financial_data | 103-Temu全托管 - 浏览器启动成功, 调试端口: 57605
+2026-03-03 12:55:15,257 | INFO | financial_data | 103-Temu全托管 - 已连接浏览器
+2026-03-03 12:55:15,773 | INFO | financial_data | --------------------103-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:55:20,553 | INFO | financial_data | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:55:24,657 | INFO | financial_data | 103-Temu全托管 - 进入财务页面
+2026-03-03 12:55:31,769 | INFO | financial_data | 有数据，总共 1539 条
+2026-03-03 12:55:33,866 | INFO | financial_data | 检测到任务已存在，尝试从导出历史中下载
+2026-03-03 12:55:33,866 | INFO | financial_data | 103-Temu全托管 - 尝试从导出历史中下载文件
+2026-03-03 12:55:34,125 | INFO | financial_data | 103-Temu全托管 - 从历史中下载: 下载账务明细(卖家中心)
+2026-03-03 12:55:34,661 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\103-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:55:35,676 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_全球.xlsx
+2026-03-03 12:55:35,676 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_欧区.xlsx
+2026-03-03 12:55:35,677 | INFO | financial_data | ⏭️ 文件已存在，跳过下载: D:\sd14\Temu_horizon\data\financial\02月份\103-Temu全托管_02_美国.xlsx
+2026-03-03 12:55:35,677 | INFO | financial_data | ✅ 103-Temu全托管 - 所有财务数据从历史下载完成
+2026-03-03 12:55:35,677 | INFO | financial_data | 从历史记录下载完成
+2026-03-03 12:55:35,677 | INFO | financial_data | 103-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 12:55:36,845 | INFO | financial_data | --------------正在爬取店铺102-Temu全托管----的数据
+2026-03-03 12:55:36,846 | INFO | financial_data | 102-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:55:40,087 | INFO | financial_data | 102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'aiknnnpfbnhmmkmkhfpbofgeoljmaakg', 'browserID': 104522336, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57819', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托102店-PBear', 'duplicate': 2859, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522336, 'containerCode': '1053223369', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:55:40,087 | INFO | financial_data | 102-Temu全托管 - 浏览器启动成功, 调试端口: 57819
+2026-03-03 12:55:41,451 | INFO | financial_data | 102-Temu全托管 - 已连接浏览器
+2026-03-03 12:55:41,464 | ERROR | financial_data | 102-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_ABORTED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-03-03 12:55:41,464 | ERROR | financial_data | 102-Temu全托管 - 第 1 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\services\financial\financial_data.py", line 734, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\services\financial\financial_data.py", line 715, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-03-03 12:55:42,586 | INFO | financial_data | 102-Temu全托管 - 准备重试，等待 3 秒...
+2026-03-03 12:55:45,599 | INFO | financial_data | 102-Temu全托管 - 第 2 次登录尝试
+2026-03-03 12:55:48,375 | INFO | financial_data | 102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'aiknnnpfbnhmmkmkhfpbofgeoljmaakg', 'browserID': 104522336, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '57881', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托102店-PBear', 'duplicate': 2446, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522336, 'containerCode': '1053223369', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:55:48,375 | INFO | financial_data | 102-Temu全托管 - 浏览器启动成功, 调试端口: 57881
+2026-03-03 12:55:49,751 | INFO | financial_data | 102-Temu全托管 - 已连接浏览器
+2026-03-03 12:55:50,097 | INFO | financial_data | --------------------102-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:55:54,431 | INFO | financial_data | 102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:55:58,735 | INFO | financial_data | 102-Temu全托管 - 进入财务页面
+2026-03-03 12:56:03,889 | INFO | financial_data | 有数据，总共 1529 条
+2026-03-03 12:56:05,956 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:56:06,282 | INFO | financial_data | 102-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:56:16,753 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\102-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:56:17,768 | INFO | financial_data | 102-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:56:20,102 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:56:38,803 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\102-Temu全托管_02_全球.xlsx
+2026-03-03 12:56:39,846 | INFO | financial_data | 102-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:56:42,122 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:57:35,291 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\102-Temu全托管_02_欧区.xlsx
+2026-03-03 12:57:36,317 | INFO | financial_data | 102-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 12:57:38,436 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:57:49,592 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\102-Temu全托管_02_美国.xlsx
+2026-03-03 12:57:50,627 | INFO | financial_data | ✅ 102-Temu全托管 - 所有财务数据下载完成
+2026-03-03 12:57:50,629 | INFO | financial_data | 全部报表下载完成
+2026-03-03 12:57:50,630 | INFO | financial_data | 102-Temu全托管 - 登录成功（第 2 次）
+2026-03-03 12:57:51,854 | INFO | financial_data | --------------正在爬取店铺101-Temu全托管----的数据
+2026-03-03 12:57:51,859 | INFO | financial_data | 101-Temu全托管 - 第 1 次登录尝试
+2026-03-03 12:57:54,965 | INFO | financial_data | 101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'pmpkofebdgpmilhkkkbfgfflcgpnkihi', 'browserID': 104522087, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '58504', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托101店-HQCK', 'duplicate': 2714, 'ip': '118.253.177.190', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522087, 'containerCode': '1053220874', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-03-03 12:57:54,965 | INFO | financial_data | 101-Temu全托管 - 浏览器启动成功, 调试端口: 58504
+2026-03-03 12:57:56,314 | INFO | financial_data | 101-Temu全托管 - 已连接浏览器
+2026-03-03 12:57:57,503 | INFO | financial_data | --------------------101-Temu全托管 ------------------------ 开始登录...
+2026-03-03 12:58:02,466 | INFO | financial_data | 101-Temu全托管 - 等待 agentseller Cookie 生效
+2026-03-03 12:58:10,736 | INFO | financial_data | 101-Temu全托管 - 进入财务页面
+2026-03-03 12:58:20,847 | INFO | financial_data | 有数据，总共 2078 条
+2026-03-03 12:58:22,924 | INFO | financial_data | 检测到导出数据成功，准备下载报表
+2026-03-03 12:58:23,756 | INFO | financial_data | 101-Temu全托管 - 准备下载: 下载账务明细(卖家中心)
+2026-03-03 12:58:33,681 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\temu\101-Temu全托管_02_卖家中心.xlsx
+2026-03-03 12:58:34,689 | INFO | financial_data | 101-Temu全托管 - 准备下载: 下载财务明细(全球)
+2026-03-03 12:58:37,135 | INFO | financial_data | 确认授权并前往
+2026-03-03 12:59:01,927 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\101-Temu全托管_02_全球.xlsx
+2026-03-03 12:59:02,979 | INFO | financial_data | 101-Temu全托管 - 准备下载: 下载财务明细(欧区)
+2026-03-03 12:59:05,126 | INFO | financial_data | 确认授权并前往
+2026-03-03 13:00:17,165 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\101-Temu全托管_02_欧区.xlsx
+2026-03-03 13:00:18,198 | INFO | financial_data | 101-Temu全托管 - 准备下载: 下载财务明细(美国)
+2026-03-03 13:00:20,305 | INFO | financial_data | 确认授权并前往
+2026-03-03 13:00:32,078 | INFO | financial_data | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\02月份\101-Temu全托管_02_美国.xlsx
+2026-03-03 13:00:33,115 | INFO | financial_data | ✅ 101-Temu全托管 - 所有财务数据下载完成
+2026-03-03 13:00:33,115 | INFO | financial_data | 全部报表下载完成
+2026-03-03 13:00:33,116 | INFO | financial_data | 101-Temu全托管 - 登录成功（第 1 次）
+2026-03-03 13:00:34,363 | INFO | financial_data | --------------------------正在处理数据------------------------------
+2026-03-03 13:00:34,847 | INFO | financial_data | 🎯 全流程完成，总耗时：38分54秒
+2026-03-03 13:53:44,534 | INFO | financial_data | --------------------------正在下载2026-02的数据------------------------------
+2026-03-03 13:53:44,534 | INFO | financial_data | --------------------------正在处理数据------------------------------
+2026-03-03 13:57:33,744 | INFO | financial_data | --------------------------正在下载2026-02的数据------------------------------
+2026-03-03 13:57:33,744 | INFO | financial_data | --------------------------正在处理数据------------------------------
+2026-03-03 13:58:29,799 | INFO | financial_data | 🎯 全流程完成，总耗时：0分55秒

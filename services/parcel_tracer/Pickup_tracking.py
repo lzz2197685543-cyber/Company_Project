@@ -1,5 +1,3 @@
-
-
 import asyncio
 import time
 from datetime import datetime, timedelta
@@ -18,7 +16,7 @@ class DeliveryNote(TemuBaseClient):
     TRACE_URL='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/delivery/feedback/queryAllFeedbackRecordInfo'
 
     def __init__(self, shop_name, logger_name):
-        super().__init__(shop_name, logger_name)
+        super().__init__(shop_name, logger_name,cookie_domain="kuajingmaihuo")
         self.storage = DeliveryNoteStorage(
             mysql_conf={
                 "host": "localhost",
@@ -127,83 +125,14 @@ class DeliveryNote(TemuBaseClient):
             'onlyTaxWarehouseWaitApply': False,
             'onlyCanceledExpress': False,
         }
-        data = await self.post(self.URL, payload,cookie_domain="kuajingmaihuo")
+        data = await self.post(self.URL, payload)
         return data
-
-    async def fetch_all_pages(self):
-        """获取所有页面的数据"""
-        all_items=[]
-        page=1
-
-        while True:
-            try:
-                self.logger.info(f'正在获取第{page}页数据...')
-                data=await self.fetch_page(page)
-
-                # 检查响应是否成功
-                if not data or 'success' not in data or not data['success']:
-                    self.logger.error(f"第 {page} 页请求失败: {data.get('errorMsg', '未知错误')}")
-                    break
-
-                # 检查是否有结果数据
-                if 'result' not in data:
-                    self.logger.error(f"第 {page} 页没有result字段")
-                    break
-
-                result = data['result']
-
-                # 检查是否有列表数据
-                if 'list' not in result:
-                    self.logger.error(f"第 {page} 页没有list字段")
-                    break
-
-                current_items = result['list']
-
-                # 如果当前页没有数据，则结束循环
-                if not current_items:
-                    self.logger.info(f"第 {page} 页没有数据，停止获取")
-                    break
-
-                # 解析当前页数据
-                parsed_items = await self._parse(data)
-
-                # ==============保存异常数据，并且发送数据=============
-                # Redis 去重
-                new_items = self.storage.filter_new_items(parsed_items)
-                all_items.extend(new_items)
-
-                # 批量入库
-                self.storage.batch_insert(new_items)
-
-                # 异常报警
-                abnormal = self.storage.detect_abnormal(new_items)
-                self.storage.alarm_abnormal(abnormal)
-
-                # 打印当前页信息
-                self.logger.info(f"第 {page} 页获取到 {len(parsed_items)} 条数据")
-
-                # 检查是否为最后一页
-                if len(parsed_items) <= 100:
-                    self.logger.info(f"已获取最后一页，停止获取")
-                    break
-
-                page += 1
-
-                # 添加短暂延迟，避免请求过快
-                await asyncio.sleep(1)
-
-            except Exception as e:
-                print(f"获取第 {page} 页数据时发生异常: {e}")
-                break
-
-            print(f"总共获取到 {len(all_items)} 条数据")
-        return all_items
 
     async def get_tarce_text(self, detail_json_data, max_retries=5):
         """获取物流轨迹，带重试机制"""
         for attempt in range(max_retries):
             try:
-                trace_res = await self.post(self.TRACE_URL, detail_json_data,cookie_domain="kuajingmaihuo")
+                trace_res = await self.post(self.TRACE_URL, detail_json_data)
                 traces = []
 
                 # 检查是否被限流
@@ -290,6 +219,75 @@ class DeliveryNote(TemuBaseClient):
             return items
         except Exception as e:
             self.logger.error("解析数据时发生异常:",e)
+
+    async def fetch_all_pages(self):
+        """获取所有页面的数据"""
+        all_items=[]
+        page=1
+
+        while True:
+            try:
+                self.logger.info(f'正在获取第{page}页数据...')
+                data=await self.fetch_page(page)
+
+                # 检查响应是否成功
+                if not data or 'success' not in data or not data['success']:
+                    self.logger.error(f"第 {page} 页请求失败: {data.get('errorMsg', '未知错误')}")
+                    break
+
+                # 检查是否有结果数据
+                if 'result' not in data:
+                    self.logger.error(f"第 {page} 页没有result字段")
+                    break
+
+                result = data['result']
+
+                # 检查是否有列表数据
+                if 'list' not in result:
+                    self.logger.error(f"第 {page} 页没有list字段")
+                    break
+
+                current_items = result['list']
+
+                # 如果当前页没有数据，则结束循环
+                if not current_items:
+                    self.logger.info(f"第 {page} 页没有数据，停止获取")
+                    break
+
+                # 解析当前页数据
+                parsed_items = await self._parse(data)
+
+                # ==============保存异常数据，并且发送数据=============
+                # Redis 去重
+                new_items = self.storage.filter_new_items(parsed_items)
+                all_items.extend(new_items)
+
+                # 批量入库
+                self.storage.batch_insert(new_items)
+
+                # 异常报警
+                abnormal = self.storage.detect_abnormal(new_items)
+                self.storage.alarm_abnormal(abnormal,self.logger)
+
+                # 打印当前页信息
+                self.logger.info(f"第 {page} 页获取到 {len(parsed_items)} 条数据")
+
+                # 检查是否为最后一页
+                if len(parsed_items) <= 100:
+                    self.logger.info(f"已获取最后一页，停止获取")
+                    break
+
+                page += 1
+
+                # 添加短暂延迟，避免请求过快
+                await asyncio.sleep(1)
+
+            except Exception as e:
+                print(f"获取第 {page} 页数据时发生异常: {e}")
+                break
+
+            print(f"总共获取到 {len(all_items)} 条数据")
+        return all_items
 
 
 async def main():

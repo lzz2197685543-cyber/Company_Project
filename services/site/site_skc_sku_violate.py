@@ -6,8 +6,6 @@ class SkcFetcher(TemuBaseClient):
     URL = "https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier"
 
     async def fetch(self):
-
-
         payload = {
             "pageSize": 100,
             "pageNum": 1,

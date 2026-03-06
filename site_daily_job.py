@@ -22,7 +22,7 @@ sys.path.insert(0, project_root)
 
 from services.site.site_skc_sku_violate import SkcFetcher
 
-SITE_DIR = Path(__file__).resolve().parent.parent / "data" / "site"
+SITE_DIR = Path(__file__).resolve().parent / "data" / "site"
 SITE_DIR.mkdir(parents=True, exist_ok=True)
 
 """temu站点状态"""
@@ -186,6 +186,10 @@ def process_shop_data(
         output_file = SITE_DIR / f"{shop_name}_站点加站最终结果_{datetime.now():%Y%m%d}.xlsx"
         final_df.to_excel(output_file, index=False)
 
+        return final_df  # 👈 添加返回值
+    else:
+        return pd.DataFrame()  # 👈 返回空DataFrame
+
 
 def prepare_upload_records(date) -> List[Dict]:
     """
@@ -199,7 +203,7 @@ def prepare_upload_records(date) -> List[Dict]:
     """
     records = []
 
-    SITE_DIR = Path(__file__).resolve().parent.parent / "data" / "site"
+    SITE_DIR = Path(__file__).resolve().parent / "data" / "site"
     pattern = f"*{date}.xlsx"
     files = list(SITE_DIR.glob(pattern))
 
@@ -246,23 +250,17 @@ async def main():
                "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE" }
 
     logger.info('开始清除今天报表的数据')
+
     # 先清除数据
-    # test_delete_records(logger=logger, config=config)
+    test_delete_records(logger=logger, config=config)
 
     shop_name_list = [
-        "2106-Temu全托管", "2105-Temu全托管", "2108-Temu全托管",
-        "2107-Temu全托管", "2102-Temu全托管",
-        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管",
-        "1105-Temu全托管", "2103-Temu全托管",
-        "112-Temu全托管", "151-Temu全托管家居",
-        "1104-Temu全托管", "1102-Temu全托管",
-        "1103-Temu全托管", "1101-Temu全托管",
-        "2101-Temu全托管KA", "110-Temu全托管KA",
-        "109-Temu全托管KA", "108-Temu全托管",
-        "107-Temu全托管", "106-Temu全托管",
-        "105-Temu全托管", "104-Temu全托管",
-        "103-Temu全托管", "102-Temu全托管",
-        "101-Temu全托管"
+        "2106-Temu全托管", "2103-Temu全托管", "2102-Temu全托管", "2101-Temu全托管KA",
+        "112-Temu全托管",
+        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管", "1105-Temu全托管", "1104-Temu全托管",
+        "1103-Temu全托管", "1102-Temu全托管", "1101-Temu全托管",
+        "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管", "106-Temu全托管", "105-Temu全托管",
+        "104-Temu全托管", "103-Temu全托管", "102-Temu全托管", "101-Temu全托管",
     ]
     # shop_name_list=["103-Temu全托管"]
 
@@ -289,18 +287,18 @@ async def main():
             continue
 
     # ========= 3️⃣ 准备上传数据 =========
-    # yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
-    # date = datetime.now().strftime("%Y%m%d")
-    #
-    # yesterday_records = prepare_upload_records(yesterday)
-    # upload_multiple_records(logger=logger, config=config_yestody, records=yesterday_records)
-    #
-    # records = prepare_upload_records(date)
-    # upload_multiple_records(logger=logger, config=config, records=records)
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y%m%d")
+    date = datetime.now().strftime("%Y%m%d")
+
+    yesterday_records = prepare_upload_records(yesterday)
+    upload_multiple_records(logger=logger, config=config_yestody, records=yesterday_records)
+
+    records = prepare_upload_records(date)
+    upload_multiple_records(logger=logger, config=config, records=records)
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
-    ding_bot_send('me','site_daily_job任务结束')
+    ding_bot_send('me',f'site_daily_job任务结束，总耗时：{format_seconds(total_cost)}')
 
 
 if __name__ == "__main__":

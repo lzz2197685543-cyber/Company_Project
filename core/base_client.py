@@ -6,9 +6,9 @@ import asyncio
 
 
 class TemuBaseClient:
-    def __init__(self, shop_name: str,job:str):
+    def __init__(self, shop_name: str,job:str,cookie_domain:str="agentseller"):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
+        self.cookie_manager = CookieManager(shop_name,job,cookie_domain)
         self.logger = get_logger(job)
 
         self.headers = {
@@ -45,8 +45,7 @@ class TemuBaseClient:
 
         return False
 
-
-    async def post(self, url: str, payload: dict, max_retry: int = 3,cookie_domain:str="agentseller"):
+    async def post(self, url: str, payload: dict, max_retry: int = 3):
         for attempt in range(1, max_retry + 1):
             try:
                 cookies, shop_id = await self.cookie_manager.get_auth()
@@ -74,14 +73,14 @@ class TemuBaseClient:
                 self.logger.warning(
                     f"[{self.shop_name}] 登录失效，刷新 cookie（第 {attempt} 次）"
                 )
-                await self.cookie_manager.refresh(cookie_domain)
+                await self.cookie_manager.refresh()
                 await asyncio.sleep(2)
 
             except Exception as e:
                 self.logger.error(
                     f"[{self.shop_name}] 请求失败（第 {attempt} 次）: {e}"
                 )
-                await self.cookie_manager.refresh(cookie_domain)
+                await self.cookie_manager.refresh()
                 await asyncio.sleep(2)
 
         # ❌ 超过最大重试次数

@@ -31,11 +31,9 @@ config_stockin = {
     "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
 }
 
-
 def format_seconds(seconds: float) -> str:
     m, s = divmod(int(seconds), 60)
     return f"{m}分{s}秒"
-
 
 async def delete_data():
     """删除钉钉表中的数据"""
@@ -44,18 +42,15 @@ async def delete_data():
     logger.info('----------------开始删除钉钉表中(temu-入库情况)的数据---------------------')
     test_delete_records(config_stockin, logger)
 
-
 async def up_delivery_data(table_data):
     """上传发货揽收轨迹及丢件数据"""
     logger.info('----------------开始上传(temu-发货揽收轨迹及丢件)的数据---------------------')
     upload_multiple_records(config_delivery, table_data, logger)
 
-
 async def up_stockin_data(table_data):
     """上传入库情况数据"""
     logger.info('----------------开始上传(temu-入库情况)的数据---------------------')
     upload_multiple_records(config_stockin, table_data, logger)
-
 
 async def fetch_and_upload_delivery_data(shop_name):
     """爬取并上传发货揽收轨迹数据"""
@@ -67,10 +62,9 @@ async def fetch_and_upload_delivery_data(shop_name):
     table_data = prepare_delivery_table_data(delivery_items)
 
     # 立即上传数据
-    # await up_delivery_data(table_data)
+    await up_delivery_data(table_data)
 
     return len(delivery_items)
-
 
 async def fetch_and_upload_stockin_data(shop_name):
     """爬取并上传入库情况数据"""
@@ -82,10 +76,9 @@ async def fetch_and_upload_stockin_data(shop_name):
     table_data = prepare_stockin_table_data(stockin_items)
 
     # 立即上传数据
-    # await up_stockin_data(table_data)
+    await up_stockin_data(table_data)
 
     return len(stockin_items)
-
 
 def prepare_delivery_table_data(delivery_items):
     """构造第一个钉钉表数据（揽收丢件表）"""
@@ -161,6 +154,8 @@ def query_shop_abnormal_data_from_db(shop_name):
 def build_shop_abnormal_message(shop_name, delivery_abnormals, stockin_abnormals):
     """构建单个门店的异常消息"""
     message_parts = []
+
+    stockin_differences = []
 
     # 添加标题
     title = f"🏪 **【{shop_name}】异常数据报告**\n"
@@ -243,19 +238,12 @@ async def main():
     total_start = time.perf_counter()
 
     shop_name_list = [
-        "2106-Temu全托管", "2105-Temu全托管", "2108-Temu全托管",
-        "2107-Temu全托管", "2102-Temu全托管",
-        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管",
-        "1105-Temu全托管", "2103-Temu全托管",
-        "112-Temu全托管", "151-Temu全托管家居",
-        "1104-Temu全托管", "1102-Temu全托管",
-        "1103-Temu全托管", "1101-Temu全托管",
-        "2101-Temu全托管KA", "110-Temu全托管KA",
-        "109-Temu全托管KA", "108-Temu全托管",
-        "107-Temu全托管", "106-Temu全托管",
-        "105-Temu全托管", "104-Temu全托管",
-        "103-Temu全托管", "102-Temu全托管",
-        "101-Temu全托管"
+        "2106-Temu全托管", "2103-Temu全托管", "2102-Temu全托管", "2101-Temu全托管KA",
+        "112-Temu全托管",
+        "1108-Temu全托管", "1107-Temu全托管", "1106-Temu全托管", "1105-Temu全托管", "1104-Temu全托管",
+        "1103-Temu全托管", "1102-Temu全托管", "1101-Temu全托管",
+        "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管", "106-Temu全托管", "105-Temu全托管",
+        "104-Temu全托管", "103-Temu全托管", "102-Temu全托管", "101-Temu全托管",
     ]
 
     # 1. 第一阶段：爬取所有店铺数据并保存到数据库
@@ -279,18 +267,15 @@ async def main():
 
     shop_data = []
     for shop_name in shop_name_list:
-        try:
-            # 查询该门店的异常数据
-            delivery_abnormals, stockin_abnormals = query_shop_abnormal_data_from_db(shop_name)
 
-            # 构建该门店的异常消息
+        try:
+            delivery_abnormals, stockin_abnormals = query_shop_abnormal_data_from_db(shop_name)
             message = build_shop_abnormal_message(shop_name, delivery_abnormals, stockin_abnormals)
 
-            # 统计发货异常数量
             delivery_count = len(delivery_abnormals)
 
             # 统计入库差异数量
-            stockin_differences = []
+            stockin_differences = []  # 可以重置，但已经初始化过了
             for row in stockin_abnormals:
                 deliver_qty = int(row.get('deliver_quantity', 0))
                 receive_qty = int(row.get('receive_quantity', 0))
@@ -299,12 +284,11 @@ async def main():
             stockin_count = len(stockin_differences)
 
             shop_data.append((shop_name, delivery_count, stockin_count, message))
-
             logger.info(f"已处理 {shop_name}: 发货异常{delivery_count}条，入库差异{stockin_count}条")
 
         except Exception as e:
             logger.error(f"处理店铺 {shop_name} 时发生错误: {e}")
-            # 即使某个店铺失败，继续处理其他店铺
+            # 现在即使出错，stockin_differences 也已经定义
             continue
 
     # 3. 发送所有门店的消息
@@ -329,6 +313,8 @@ async def main():
     # ding_bot_send('me', summary_message)
     logger.info("总结消息已发送")
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(time.perf_counter() - total_start)}")
+    ding_bot_send('me', f'temu_parcel_tracer_job任务结束,总耗时:{format_seconds(time.perf_counter() - total_start)}')
+
 
 
 if __name__ == "__main__":

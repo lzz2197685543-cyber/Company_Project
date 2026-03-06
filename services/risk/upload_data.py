@@ -19,7 +19,7 @@ from utils.dingding_doc import (
 from utils.logger import get_logger
 
 
-logger = get_logger("upload_data")
+logger = get_logger("temu_risk_daily_job")
 
 
 # ======================

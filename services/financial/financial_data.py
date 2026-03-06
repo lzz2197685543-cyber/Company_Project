@@ -3,23 +3,25 @@ import asyncio
 import requests
 from playwright.async_api import async_playwright
 import os
-from datetime import datetime,timedelta
+from datetime import datetime, timedelta
 from utils.config_loader import get_shop_config
 from utils.logger import get_logger
 from pathlib import Path
 from utils.dingtalk_bot import ding_bot_send
 import re
+
 # 文件保存目录
 FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financial"
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
 """跑temu财务数据"""
 
+
 class Temu_Financial_Data:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
-    def __init__(self, name, account,month_str):
+    def __init__(self, name, account, month_str, job):
         self.month_str = month_str
         self.name = name
         self.hub_id = str(account["hubId"])
@@ -27,12 +29,12 @@ class Temu_Financial_Data:
         self.username = cred["username"]
         self.password = cred["password"]
 
-        self.logger = get_logger(f"financial_data")
+        self.logger = get_logger(job)
         self.debug_port = None
         self.playwright = None
         self.browser = None
         self.page = None
-        self.history_list=[] # 没有下载完成的店铺，我们用历史的方式进行下载
+        self.history_list = []  # 没有下载完成的店铺，我们用历史的方式进行下载
 
     # ----------- 浏览器 -----------
     async def start_browser(self):
@@ -129,30 +131,8 @@ class Temu_Financial_Data:
                 ).click(timeout=5000)
             except Exception:
                 pass
-            #
+
             await self.page.wait_for_load_state("networkidle", timeout=20000)
-            #
-            # if "seller.kuajingmaihuo.com" not in self.page.url:
-            #     raise Exception("登录后未进入卖家后台")
-            #
-            # try:
-            #     cancel_btn = self.page.get_by_role("button", name="取消")
-            #     await cancel_btn.click(timeout=1000)
-            #
-            #     # 等弹窗从 DOM 中消失
-            #     await cancel_btn.wait_for(state="detached", timeout=1000)
-            #
-            #     self.logger.info(f"{self.name} - 取消弹窗已关闭")
-            # except Exception:
-            #     self.logger.error(f"{self.name} - 未出现取消按钮，跳过")
-            #
-            # try:
-            #     await self.page.locator("text=进入").first.click(timeout=1000)
-            #     self.logger.info(f"{self.name} - 已点击进入")
-            # except Exception:
-            #     self.logger.error(f"{self.name} - 未出现进入按钮，跳过")
-            #
-            # self.logger.info(f"{self.name} - 登录成功")
             return True
 
         except Exception as e:
@@ -169,7 +149,7 @@ class Temu_Financial_Data:
             timeout=20000
         )
 
-        await self.page.wait_for_selector('[data-testid="beast-core-icon-down"]',state="visible")
+        await self.page.wait_for_selector('[data-testid="beast-core-icon-down"]', state="visible")
 
         if "/authentication?" in self.page.url:
             try:
@@ -189,16 +169,18 @@ class Temu_Financial_Data:
                 # -------- 授权方式一：确认授权并前往 --------
                 confirm_btn_1 = auth_page.get_by_text("确认授权并前往", exact=True)
 
+                confirm_check = auth_page.locator('div.CBX_squareInputWrapper_5-116-1 div svg')
                 if await confirm_btn_1.count() > 0:
                     self.logger.info("命中授权方式一：确认授权并前往")
+                    await confirm_check.first.click()
                     await confirm_btn_1.first.click()
 
                 else:
                     # -------- 授权方式二：勾选复选框 + 授权登录 --------
                     self.logger.info("命中授权方式二：勾选复选框 + 授权登录")
 
-                    # 再次输入账号和密码，因为有的环境多个账号在使用，所以我们需要再次填写账号跟密码
-                    await auth_page.fill("#usernameId", "")  # 可选：先清一次
+                    # 再次输入账号和密码
+                    await auth_page.fill("#usernameId", "")
                     await auth_page.fill("#usernameId", self.username)
 
                     await auth_page.fill("#passwordId", "")
@@ -225,17 +207,14 @@ class Temu_Financial_Data:
 
                 self.logger.info("授权流程完成")
                 await self.page.wait_for_load_state("load")
-
                 await asyncio.sleep(3)
 
             except Exception as e:
                 self.logger.error(f"授权流程失败: {e}")
                 raise
 
-
-        #  等页面真正“稳定”
+        # 等页面真正“稳定”
         await self.page.wait_for_load_state("load")
-
         await asyncio.sleep(3)
 
         return True
@@ -259,8 +238,8 @@ class Temu_Financial_Data:
         """
         选择目标年月（self.month_str: 'YYYY-MM'）的日期范围
         """
-        start_date=self.get_month_date_range(self.month_str)['start_date']
-        end_date=self.get_month_date_range(self.month_str)['end_date']
+        start_date = self.get_month_date_range(self.month_str)['start_date']
+        end_date = self.get_month_date_range(self.month_str)['end_date']
 
         target_year, target_month = map(int, self.month_str.split("-"))
 
@@ -319,8 +298,12 @@ class Temu_Financial_Data:
             await month_locator.wait_for(state="visible")
 
         # ------------------ 选择日期 ------------------
-        start_day=int(start_date.split('-')[-1])
-        end_day=int(end_date.split('-')[-1])
+        start_day = int(start_date.split('-')[-1])
+        end_day = int(end_date.split('-')[-1])
+
+        # 获取当前显示的月份（用于判断是否跨月）
+        month_text = await self.page.locator('.RPR_dateText_5-117-0:visible').first.text_content()
+        current_month = int(month_text.replace("月", "").strip())
 
         # 定位日历 tbody
         tbody_locator = self.page.locator(
@@ -328,20 +311,32 @@ class Temu_Financial_Data:
         ).nth(0)
         await tbody_locator.wait_for(state="visible", timeout=5000)
 
-        # 点击开始日期
-        start_locator = tbody_locator.locator(
-            f'div.RPR_cell_5-117-0[title="{start_day}"]:not(.RPR_outOfMonth_5-117-0):not(.RPR_inRange_5-117-0)'
-        ).first
-        await start_locator.click()
+        # 选择开始日期
+        if current_month == target_month:
+            # 如果在目标月份内，排除 outOfMonth
+            start_locator = tbody_locator.locator(
+                f'div.RPR_cell_5-117-0[title="{start_day}"]:not(.RPR_outOfMonth_5-117-0)'
+            ).first
+        else:
+            # 如果跨月（如从1月选到2月），需要包含 outOfMonth 的日期
+            start_locator = tbody_locator.locator(
+                f'div.RPR_cell_5-117-0[title="{start_day}"]'
+            ).first
 
+        await start_locator.click()
         await asyncio.sleep(0.3)
 
-        # 点击结束日期
-        end_locator = tbody_locator.locator(
-            f'div.RPR_cell_5-117-0[title="{end_day}"]:not(.RPR_outOfMonth_5-117-0):not(.RPR_inRange_5-117-0)'
-        ).first
-        await end_locator.click()
+        # 选择结束日期（类似逻辑）
+        if current_month == target_month:
+            end_locator = tbody_locator.locator(
+                f'div.RPR_cell_5-117-0[title="{end_day}"]:not(.RPR_outOfMonth_5-117-0)'
+            ).first
+        else:
+            end_locator = tbody_locator.locator(
+                f'div.RPR_cell_5-117-0[title="{end_day}"]'
+            ).first
 
+        await end_locator.click()
         await asyncio.sleep(0.3)
 
         # 点击“确认”按钮
@@ -350,14 +345,135 @@ class Temu_Financial_Data:
         )
         await confirm_btn.click()
 
-    # 等待加载出来，并下载
-    async def load_and_download(self):
+    # 从历史记录下载的方法
+    async def download_from_history(self):
+        """从导出历史中下载文件"""
+        self.logger.info(f"{self.name} - 尝试从导出历史中下载文件")
+
+        # 点击导出历史
+        export_history_btn = self.page.locator(
+            '[data-testid="beast-core-button-link"]:has-text("导出历史")'
+        )
+        await export_history_btn.wait_for(state="visible", timeout=15_000)
+        await export_history_btn.click()
+
         # 等待导出历史列表出现
-        history_list=self.page.locator('.export-history_list__5Eto0').first
+        history_list = self.page.locator('.export-history_list__5Eto0').first
         await history_list.wait_for(state="visible", timeout=80_000)
 
         # 取第一个导出记录
-        first_item=history_list.locator('.export-history_right__YGHPV div').first
+        first_item = history_list.locator('.export-history_right__YGHPV div').first
+
+        # ===== 1. 下载卖家中心文件 =====
+        self.logger.info(f"{self.name} - 从历史中下载: 下载账务明细(卖家中心)")
+
+        filename = f"{self.name}_{self.month_str.split('-')[1]}_卖家中心.xlsx"
+        filepath = FINANCIAL_DIR / f"{self.month_str.split('-')[1]}月份" / 'temu'
+        filepath.mkdir(parents=True, exist_ok=True)
+        final_path = filepath / filename
+
+        if final_path.exists():
+            self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
+        else:
+            download_seller_span = first_item.locator(
+                'span:has-text("下载账务明细(卖家中心)")'
+            ).first
+            await download_seller_span.wait_for(state="visible", timeout=80_000)
+
+            async with self.page.expect_download(timeout=50_000) as download_info:
+                await download_seller_span.click()
+
+            download = await download_info.value
+            await download.save_as(final_path)
+            self.logger.info(f"✅ 文件下载完成: {final_path}")
+
+        await asyncio.sleep(1)
+
+        # ===== 2. 下载全球/欧区/美国文件 =====
+        async def download_with_new_page(selector_text, file_prefix):
+            filename = f"{self.name}_{self.month_str.split('-')[1]}_{file_prefix}.xlsx"
+            filepath = FINANCIAL_DIR / f"{self.month_str.split('-')[1]}月份"
+            filepath.mkdir(parents=True, exist_ok=True)
+            final_path = filepath / filename
+
+            if final_path.exists():
+                self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
+                return True
+
+            self.logger.info(f"{self.name} - 从历史中下载: {selector_text}")
+
+            download_element = first_item.locator(
+                f'span:has-text("{selector_text}")'
+            ).first
+            await download_element.wait_for(state="visible", timeout=40_000)
+
+            await download_element.click()
+            await asyncio.sleep(2)
+
+            pages = self.page.context.pages
+            new_page = pages[-1]
+            await new_page.bring_to_front()
+
+            try:
+                await new_page.wait_for_load_state("networkidle")
+
+                # ==== 确认授权并前往====
+                confirm_btn_1 = new_page.get_by_text("确认授权并前往", exact=True)
+
+                confirm_check = new_page.locator('div.CBX_squareInputWrapper_5-118-0 div svg')
+                if await confirm_btn_1.count() > 0:
+                    self.logger.info("确认授权并前往")
+                    await confirm_check.first.click()
+                    await confirm_btn_1.first.click()
+
+
+                async with new_page.expect_download(timeout=80_000) as download_info:
+                    pass
+
+                download = await download_info.value
+                await download.save_as(final_path)
+                self.logger.info(f"✅ 文件下载完成: {final_path}")
+                return True
+
+            except Exception as e:
+                self.logger.error(f"新页面下载失败: {str(e)}")
+                return False
+
+            finally:
+                await new_page.close()
+                await self.page.bring_to_front()
+                await asyncio.sleep(1)
+
+        # 下载其他三个文件
+        download_tasks = [
+            ("下载财务明细(全球)", "全球"),
+            ("下载财务明细(欧区)", "欧区"),
+            ("下载财务明细(美国)", "美国")
+        ]
+
+        results = []
+        for selector_text, file_prefix in download_tasks:
+            result = await download_with_new_page(selector_text, file_prefix)
+            results.append(result)
+
+        all_success = all(results)
+
+        if all_success:
+            self.logger.info(f"✅ {self.name} - 所有财务数据从历史下载完成")
+        else:
+            self.logger.warning(f"⚠️ {self.name} - 部分财务数据从历史下载失败")
+            self.history_list.append(self.name)
+
+        return all_success
+
+    # 等待加载出来，并下载
+    async def load_and_download(self):
+        # 等待导出历史列表出现
+        history_list = self.page.locator('.export-history_list__5Eto0').first
+        await history_list.wait_for(state="visible", timeout=80_000)
+
+        # 取第一个导出记录
+        first_item = history_list.locator('.export-history_right__YGHPV div').first
 
         # ===== 1. 下载卖家中心文件（在当前页面直接下载）=====
         self.logger.info(f"{self.name} - 准备下载: 下载账务明细(卖家中心)")
@@ -419,6 +535,15 @@ class Temu_Financial_Data:
             try:
                 await new_page.wait_for_load_state("networkidle")
 
+                # ==== 确认授权并前往====
+                confirm_btn_1 = new_page.get_by_text("确认授权并前往", exact=True)
+
+                confirm_check = new_page.locator('div.CBX_squareInputWrapper_5-118-0 div svg')
+                if await confirm_btn_1.count() > 0:
+                    self.logger.info("确认授权并前往")
+                    await confirm_check.first.click()
+                    await confirm_btn_1.first.click()
+
                 async with new_page.expect_download(timeout=80_000) as download_info:
                     pass
 
@@ -456,7 +581,6 @@ class Temu_Financial_Data:
         else:
             self.logger.warning(f"⚠️ {self.name} - 部分财务数据下载失败")
             self.history_list.append(self.name)
-            # ding_bot_send('me',f"⚠️ {self.name} - 部分财务数据下载失败")
 
         return all_success
 
@@ -471,19 +595,15 @@ class Temu_Financial_Data:
         await asyncio.sleep(1.2)
 
         # 2.判断是否有数据
-        # 定位元素
         total_text_locator = self.page.locator('li.PGT_totalText_5-117-0')
         await total_text_locator.wait_for(state="visible", timeout=5000)
 
-        # 获取文本，例如 "共有 43 条"
         total_text = await total_text_locator.text_content()
         total_text = total_text.strip()
 
-        # 提取数字
         match = re.search(r'(\d+)', total_text)
         total_count = int(match.group(1)) if match else 0
 
-        # 判断是否有数据
         if total_count > 0:
             self.logger.info(f"有数据，总共 {total_count} 条")
         else:
@@ -514,29 +634,48 @@ class Temu_Financial_Data:
 
         await asyncio.sleep(0.3)
 
-        # 检查是否已创建导出任务
-        # 检查是否有可下载的数据
-        toast = self.page.get_by_text(
-            '数据导出成功',
-            exact=False
-        )
+        # 6.检查不同的提示信息
+        # 检查"数据导出成功"的toast
+        success_toast = self.page.get_by_text('数据导出成功', exact=False)
+
+        # 检查"请勿重复创建"的提示
+        duplicate_toast = self.page.get_by_text('请勿重复创建', exact=False)
+        duplicate_message = self.page.get_by_text('当前筛选条件的导出任务已经创建，请勿重复创建', exact=False)
 
         try:
-            # 等待 toast 出现，表示有可下载数据
-            await toast.first.wait_for(state="visible", timeout=12000)
-            self.logger.info("检测到导出数据成功，准备下载报表")
+            # 先等待一小段时间，看会出现什么提示
+            await asyncio.sleep(1)
 
-            # 继续下载所有报表
-            await self.load_and_download()
+            # 情况1：检测到"数据导出成功"
+            if await success_toast.first.count() > 0 and await success_toast.first.is_visible():
+                self.logger.info("检测到导出数据成功，准备下载报表")
+                await self.load_and_download()
+                self.logger.info("全部报表下载完成")
 
-            self.logger.info("全部报表下载完成")
+            # 情况2：检测到"请勿重复创建"的提示
+            elif (await duplicate_toast.first.count() > 0 and await duplicate_toast.first.is_visible()) or \
+                    (await duplicate_message.first.count() > 0 and await duplicate_message.first.is_visible()):
+                self.logger.info("检测到任务已存在，尝试从导出历史中下载")
+                await self.download_from_history()
+                self.logger.info("从历史记录下载完成")
 
-        except Exception:
-            # 没有检测到 toast，说明没有数据
-            self.logger.info("未检测到可导出数据，结束操作，不下载报表")
-            self.history_list.append(self.name)
-            # ding_bot_send('me',f"{self.name}---未检测到可导出数据，结束操作，不下载报表")
-            return
+            else:
+                # 没有检测到任何提示，可能已经存在历史记录，尝试直接从历史下载
+                self.logger.info("未检测到明确提示，尝试从导出历史中下载")
+                try:
+                    await self.download_from_history()
+                except Exception as e:
+                    self.logger.error(f"从历史下载失败: {e}")
+                    self.history_list.append(self.name)
+
+        except Exception as e:
+            self.logger.error(f"处理导出结果时出错: {e}")
+            # 出错时尝试从历史下载
+            try:
+                await self.download_from_history()
+            except:
+                self.logger.info("无法从历史下载，结束操作")
+                self.history_list.append(self.name)
 
     ### 下载财务数据
     async def download_financial_data(self):
@@ -559,7 +698,7 @@ class Temu_Financial_Data:
         await self.process_calendar()
         await asyncio.sleep(0.3)
 
-        # 查询，导出，下载
+        # 查询，导出，下载（会根据提示自动选择路径）
         await self.search_export_download()
 
         return True
@@ -611,7 +750,7 @@ class Temu_Financial_Data:
                 await asyncio.sleep(3)
 
         self.logger.error(f"{self.name} - 登录失败，已达到最大重试次数 {max_retry}")
-        ding_bot_send('me',f"{self.name} - 在financial任务中登录失败，已达到最大重试次数 {max_retry}")
+        ding_bot_send('me', f"{self.name} - 在financial任务中登录失败，已达到最大重试次数 {max_retry}")
         return False
 
     async def close(self):
@@ -623,19 +762,15 @@ class Temu_Financial_Data:
         finally:
             await self.stop_browser()
 
+
 async def main():
     name_list = ['108-Temu全托管']
-    month_str='2025-12'
+    month_str = '2026-02'
     for name in name_list:
         account = get_shop_config(name)
-        # print(account)
-
-        t = Temu_Financial_Data(name, account,month_str)
+        t = Temu_Financial_Data(name, account, month_str, 'financial_data')
         await t.run()
 
-# #
+
 # if __name__ == "__main__":
 #     asyncio.run(main())
-
-
-
