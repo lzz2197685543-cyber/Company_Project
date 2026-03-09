@@ -1,0 +1,66 @@
+{
+  "proxies": [
+    {
+      "host": "1.194.218.235",
+      "port": 12509,
+      "type": "socks5",
+      "username": "PXBHAK1C2C",
+      "password": "80609506"
+    },
+    {
+      "host": "121.14.201.248",
+      "port": 11074,
+      "type": "socks5",
+      "username": "WVKYFTS670",
+      "password": "14418351"
+    },
+    {
+      "host": "125.75.68.73",
+      "port": 17894,
+      "type": "socks5",
+      "username": "EJ0WX0RSVB",
+      "password": "02954261"
+    },
+    {
+      "host": "124.236.76.149",
+      "port": 17745,
+      "type": "socks5",
+      "username": "LLW0BU7VGQ",
+      "password": "39267509"
+    },
+    {
+      "host": "124.225.4.69",
+      "port": 12533,
+      "type": "socks5",
+      "username": "AIHARVNXPM",
+      "password": "57446815"
+    },
+    {
+      "host": "121.229.211.102",
+      "port": 15252,
+      "type": "socks5",
+      "username": "XEZQOPMX7M",
+      "password": "53843223"
+    },
+    {
+      "host": "218.78.129.68",
+      "port": 15654,
+      "type": "socks5",
+      "username": "YKEW9SOB5S",
+      "password": "32342415"
+    },
+    {
+      "host": "118.253.177.190",
+      "port": 11193,
+      "type": "socks5",
+      "username": "W9JFIJCY7Z",
+      "password": "46344650"
+    }
+  ],
+  "metadata": {
+    "total_unique_proxies": 9,
+    "created_at": "2026-03-05",
+    "source": "hubstudio_export",
+    "proxy_type": "socks5"
+  }
+}
