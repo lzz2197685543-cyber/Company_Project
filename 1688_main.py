@@ -1,11 +1,14 @@
 import asyncio
 from playwright.async_api import async_playwright
 import os
-from auth.login import MaiJiaLogin
+from auth.login import DianLeiDaLogin
 from api.filter_automation import OfferFilterAutomation
-from util.page_helpers import close_popup_if_exists
-from util.dingding_doc import DingTalkSheetUploader, DingTalkTokenManager
+from util.page_helpers import close_popup_if_exists,close_btn_if_exists
+from util.dingding_doc import upload_multiple_records
 from storage.data_process import DataProcessor  # 导入 DataProcessor 类
+from util.logger import get_logger
+
+logger = get_logger('1688_main')
 
 async def main():
     async with async_playwright() as p:
@@ -30,7 +33,7 @@ async def main():
         # page.on("download", lambda download: download.save_as(os.path.join(download_path, download.suggested_filename)))
 
         # 1️⃣ 登录
-        login = MaiJiaLogin(
+        login = DianLeiDaLogin(
             phone="18929089237",
             password="lxz2580hh"
         )
@@ -43,12 +46,13 @@ async def main():
         )
 
         # 3️⃣ 先关弹窗
+        await close_btn_if_exists(page)
         await close_popup_if_exists(page)
 
         # 4️⃣ 自动设置筛选条件
         filter_bot = OfferFilterAutomation(page)
         await filter_bot.apply_all(
-            category_name="玩具",
+            search_name="玩具",
             min_price="3",
             min_sale_volume="10000",
             province="广东",
@@ -94,41 +98,8 @@ async def main():
 
         # ---------------------------- 上传数据部分 ---------------------------------
         print('---------------------------------上传数据-----------------------------------')
-        upload_multiple_records(config, recoders)  # 执行上传操作
+        upload_multiple_records(config, recoders,logger)  # 执行上传操作
 
-def upload_multiple_records(config, records):
-    """
-    批量上传多条记录的完整示例
-    """
-    # 配置参数（请替换为实际值）
-    token_manager = DingTalkTokenManager()
-    uploader = DingTalkSheetUploader(
-        base_id=config["base_id"],
-        sheet_id=config["sheet_id"],
-        operator_id=config["operator_id"],
-        token_manager=token_manager
-    )
-
-    print(f"准备上传 {len(records)} 条记录...")
-
-    # 批量上传，每批50条，批次间延迟0.2秒，失败时重试2次
-    results = uploader.upload_batch_records(records, batch_size=50, delay=0.2, max_retries=2)
-
-    # 分析结果
-    successful_batches = [r for r in results if r.get("success")]
-    failed_batches = [r for r in results if not r.get("success")]
-
-    print(f"\n上传统计:")
-    print(f"总批次: {len(results)}")
-    print(f"成功批次: {len(successful_batches)}")
-    print(f"失败批次: {len(failed_batches)}")
-
-    if failed_batches:
-        print(f"\n失败详情:")
-        for i, failed in enumerate(failed_batches):
-            print(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
-
-    return results
 
 if __name__ == "__main__":
     config = {

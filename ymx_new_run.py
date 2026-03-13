@@ -1,4 +1,4 @@
-from util.dingding_doc import DingTalkSheetUploader,DingTalkTokenManager
+from util.dingding_doc import upload_multiple_records
 from util.logger import get_logger
 from api.ymx_new_data_multithread import NewYmxNewData
 from datetime import datetime
@@ -170,86 +170,6 @@ def save_statistics(thread_results, total_items, success_count, error_count):
     print(f"统计信息已保存到: {stats_file}")
 
 
-def upload_multiple_records(config, records):
-    """
-    批量上传多条记录 - 修复NaN问题版
-    """
-    token_manager = DingTalkTokenManager()
-    uploader = DingTalkSheetUploader(
-        base_id=config["base_id"],
-        sheet_id=config["sheet_id"],
-        operator_id=config["operator_id"],
-        token_manager=token_manager
-    )
-
-    logger.info(f"准备上传 {len(records)} 条记录...")
-
-    # 关键修复：处理NaN值
-    import math
-
-    def fix_nan(obj):
-        if isinstance(obj, float):
-            if math.isnan(obj) or math.isinf(obj):
-                return None
-            # 大时间戳转为字符串
-            elif obj > 1e12:
-                from datetime import datetime
-                try:
-                    return datetime.fromtimestamp(obj / 1000).strftime("%Y-%m-%d")
-                except:
-                    return str(obj)
-        return obj
-
-    # 预处理所有记录
-    processed_records = []
-    for record in records:
-        new_record = {}
-        for key, value in record.items():
-            if isinstance(value, dict):
-                new_record[key] = {k: fix_nan(v) for k, v in value.items()}
-            else:
-                new_record[key] = fix_nan(value)
-        processed_records.append(new_record)
-
-    logger.info(f"已完成数据预处理，修复了NaN和Infinity值")
-
-    # 上传
-    results = uploader.upload_batch_records(processed_records, batch_size=50, delay=0.2, max_retries=2)
-
-    # 分析结果
-    successful = [r for r in results if r.get("success")]
-
-    logger.info(f"\n上传统计:")
-    logger.info(f"总批次: {len(results)}")
-    logger.info(f"成功批次: {len(successful)}")
-    logger.info(f"失败批次: {len(results) - len(successful)}")
-
-    # 如果还有失败，保存这些记录
-    if len(successful) < len(results):
-        failed_records = []
-        for i, result in enumerate(results):
-            if not result.get("success"):
-                start_idx = i * 50
-                end_idx = min(start_idx + 50, len(processed_records))
-                failed_records.extend(processed_records[start_idx:end_idx])
-
-        if failed_records:
-            import json
-            import os
-            from datetime import datetime
-
-            os.makedirs("failed_records", exist_ok=True)
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filepath = os.path.join("failed_records", f"final_failed_{timestamp}.json")
-
-            with open(filepath, 'w', encoding='utf-8') as f:
-                json.dump(failed_records, f, ensure_ascii=False, indent=2)
-
-            logger.info(f"仍有 {len(failed_records)} 条记录失败，已保存到: {filepath}")
-
-    return results
-
-
 
 if __name__ == '__main__':
 
@@ -284,7 +204,7 @@ if __name__ == '__main__':
     processor.import_csv_to_product_monitor(new_data)
 
     logger.info('---------------------------------开始上传数据-----------------------------------')
-    upload_multiple_records(config, records)
+    upload_multiple_records(config, records,logger)
 
     logger.info(f'数据上传成功')
 

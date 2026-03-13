@@ -21,7 +21,7 @@ class GeekBILogin:
         """主登录流程"""
         try:
             # 访问网站
-            await self.page.goto("https://www.geekbi.com/")
+            await self.page.goto("https://www.geekbi.com/user/login")
             await self.page.wait_for_load_state("domcontentloaded")
 
             # 选择手机号登录
@@ -100,7 +100,7 @@ async def main_simple():
         logger = get_logger('GeekBILogin')
 
         try:
-            await page.goto("https://www.geekbi.com/", wait_until="domcontentloaded")
+            await page.goto("https://www.geekbi.com/user/login", wait_until="domcontentloaded")
             await page.locator(".arco-tabs-tab-title", has_text="手机号登录").click()
             await page.fill('input[placeholder*="手机号"]', cfg['account'])
             await page.fill('input[placeholder*="密码"]', cfg['password'])
@@ -116,6 +116,6 @@ async def main_simple():
             await page.screenshot(path="login_error.png")
             raise
 
-
+#
 # if __name__ == "__main__":
 #     asyncio.run(main())

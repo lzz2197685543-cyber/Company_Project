@@ -1,4 +1,4 @@
-class MaiJiaLogin:
+class DianLeiDaLogin:
     def __init__(self, phone, password):
         self.phone = phone
         self.password = password

@@ -13,11 +13,20 @@ async def close_popup_if_exists(page: Page):
         if await close_btn.count() > 0:
             await close_btn.first.wait_for(state="visible", timeout=3000)
             await close_btn.first.click()
-            print("❎ 已关闭引导弹窗")
+            print("❎ 已关闭引导弹窗2")
             await page.wait_for_timeout(500)
     except Exception:
         pass
-
+async def close_btn_if_exists(page:Page):
+    try:
+        close_btn = page.locator("#__layout > div > div:nth-child(19) > div > div.el-dialog__body > div > div.close")
+        if await close_btn.count() > 0:
+            await close_btn.first.wait_for(state="visible", timeout=3000)
+            await close_btn.first.click()
+            print("❎ 已关闭引导弹窗1")
+            await page.wait_for_timeout(500)
+    except Exception:
+        pass
 
 async def temu_close_popup_if_exists(page: Page):
     try:

@@ -18,11 +18,14 @@ class OfferFilterAutomation:
         await self.page.click("div.select-category")
 
         # 2️⃣ 定位到类目并等待它可见
-        category_locator = self.page.locator(f'span.el-tree-node__label:has-text("{category_name}")')
+        # 修改：使用正确的选择器定位包含"玩具"文本的自定义标签
+        category_locator = self.page.locator('div.custom-tree-label1 span:has-text("玩具")')
         await category_locator.wait_for(state="visible", timeout=5000)
 
-        # 3️⃣ 定位到与 `span.el-tree-node__label` 同级的复选框 input 元素并点击
-        checkbox_locator = category_locator.locator('xpath=./preceding-sibling::label//span[1]//span')
+        # 3️⃣ 定位到对应的复选框并点击
+        # 修改：从找到的类目标签向上定位到对应的复选框
+        checkbox_locator = category_locator.locator(
+            'xpath=ancestor::div[@class="el-tree-node__content"]//label//span[@class="el-checkbox__inner"]')
         await checkbox_locator.wait_for(state="visible", timeout=5000)
 
         # 4️⃣ 滚动复选框到可见区域并点击

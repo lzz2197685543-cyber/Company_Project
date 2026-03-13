@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 import os
 import pymysql
-from utils.logger import get_logger
+from util.logger import get_logger
 from pathlib import Path
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "data"
 
