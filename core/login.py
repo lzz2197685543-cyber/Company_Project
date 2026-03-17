@@ -20,7 +20,6 @@ class LingXingERPLogin:
 
         self.page = page
 
-
     async def wait_for_element(self, selector, timeout=10000, state="visible"):
         """等待元素出现"""
         try:
@@ -117,5 +116,5 @@ async def main():
         # 关闭浏览器
         await browser_manager.close()
 
-if __name__ == "__main__":
-    asyncio.run(main())
+# if __name__ == "__main__":
+#     asyncio.run(main())

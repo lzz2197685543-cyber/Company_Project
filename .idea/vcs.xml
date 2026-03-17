@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/../sd14/Product_Selection" vcs="Git" />
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Factory_sourcing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Product_Selection" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../SMT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../SellerSprite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Shein" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Shopee" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../TK" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Temu_horizon" vcs="Git" />
   </component>
 </project>

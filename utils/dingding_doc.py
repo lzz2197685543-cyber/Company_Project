@@ -10,7 +10,7 @@ from pathlib import Path
 """上传/删除/查询钉钉多维表的数据"""
 
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "config" / "config.json"
-token_cache=Path(__file__).resolve().parent.parent / "config" / "token_cache.json"
+token_cache=Path(__file__).resolve().parent.parent.parent / "token_cache.json"
 
 
 class DingTalkTokenManager:
@@ -203,33 +203,119 @@ class DingTalkSheetUploader:
 
     # ================= 批量上传 =================
     def upload_batch_records(
-        self,
-        records_data: List[Dict[str, Any]],
-        batch_size: int = 100,
-        delay: float = 0.1,
-        max_retries: int = 2
-    ) -> List[Dict[str, Any]]:
+            self,
+            records_data: List[Dict[str, Any]],
+            batch_size: int = 100,
+            delay: float = 0.1,
+            max_retries: int = 3,
+            retry_failed: bool = True  # 新增：是否重试失败的批次
+    ) -> Dict[str, Any]:
+        """
+        批量上传记录，支持失败重试和失败批次收集
 
-        results = []
+        Args:
+            records_data: 要上传的记录数据列表
+            batch_size: 每批上传的记录数
+            delay: 批次间延迟（秒）
+            max_retries: 每批次最大重试次数
+            retry_failed: 是否在上传完成后重新尝试失败的批次
+
+        Returns:
+            包含上传结果的字典，包括成功和失败的记录
+        """
+        results = {
+            "success": True,
+            "total_records": len(records_data),
+            "successful_records": [],
+            "failed_batches": [],
+            "failed_records": [],
+            "batch_results": []
+        }
 
         if not self._refresh_token_if_needed():
-            return [{
-                "success": False,
-                "message": "无法获取有效 token",
-                "total_records": len(records_data)
-            }]
+            results["success"] = False
+            results["message"] = "无法获取有效 token"
+            return results
 
+        # 分批上传
         for i in range(0, len(records_data), batch_size):
             batch = records_data[i:i + batch_size]
-            result = self._upload_batch_with_retry(batch, max_retries)
-            results.append(result)
+            batch_result = self._upload_batch_with_retry(batch, max_retries)
 
-            print(f"已上传 {min(i + batch_size, len(records_data))}/{len(records_data)} 条记录")
+            # 记录批次结果
+            results["batch_results"].append(batch_result)
+
+            if batch_result["success"]:
+                # 成功批次：记录成功的记录
+                results["successful_records"].extend(batch)
+                print(f"✅ 批次 {i // batch_size + 1} 上传成功，{len(batch)} 条记录")
+            else:
+                # 失败批次：记录失败的批次和记录
+                results["failed_batches"].append({
+                    "batch_index": i // batch_size + 1,
+                    "records": batch,
+                    "error": batch_result.get("message", "未知错误")
+                })
+                results["failed_records"].extend(batch)
+                print(f"❌ 批次 {i // batch_size + 1} 上传失败: {batch_result.get('message')}")
+
+            print(f"进度: {min(i + batch_size, len(records_data))}/{len(records_data)} 条记录")
 
             if i + batch_size < len(records_data):
                 time.sleep(delay)
 
+        # 如果有失败的批次且需要重试
+        if retry_failed and results["failed_batches"]:
+            print(f"\n🔄 发现 {len(results['failed_batches'])} 个失败批次，开始重试...")
+            retry_results = self._retry_failed_batches(results["failed_batches"], max_retries)
+
+            # 更新结果
+            results["retry_results"] = retry_results
+            results["successful_records"].extend(retry_results["successful_records"])
+            results["failed_batches"] = retry_results["failed_batches"]
+            results["failed_records"] = [r for batch in results["failed_batches"] for r in batch["records"]]
+
+        # 更新最终状态
+        results["success"] = len(results["failed_batches"]) == 0
+        results["success_count"] = len(results["successful_records"])
+        results["failed_count"] = len(results["failed_records"])
+        results["message"] = f"上传完成: 成功 {results['success_count']} 条, 失败 {results['failed_count']} 条"
+
         return results
+
+    def _retry_failed_batches(self, failed_batches: List[Dict], max_retries: int) -> Dict[str, Any]:
+        """
+        重试失败的批次
+
+        Args:
+            failed_batches: 失败的批次列表
+            max_retries: 最大重试次数
+
+        Returns:
+            重试结果
+        """
+        retry_results = {
+            "successful_records": [],
+            "failed_batches": []
+        }
+
+        for batch_info in failed_batches:
+            batch = batch_info["records"]
+            print(f"重试批次 {batch_info['batch_index']} ({len(batch)} 条记录)...")
+
+            # 重试上传
+            batch_result = self._upload_batch_with_retry(batch, max_retries)
+
+            if batch_result["success"]:
+                print(f"  ✅ 重试成功")
+                retry_results["successful_records"].extend(batch)
+            else:
+                print(f"  ❌ 重试失败: {batch_result.get('message')}")
+                retry_results["failed_batches"].append(batch_info)
+
+            time.sleep(1)  # 重试批次间延迟
+
+        return retry_results
 
     def _upload_batch_with_retry(self, batch_data, max_retries):
         for retry in range(max_retries + 1):
@@ -1029,17 +1115,14 @@ def query_sheet():
 
 
 # 示例使用函数
-def upload_multiple_records(config,records,logger):
+def upload_multiple_records(config, records, logger):
     """
     批量上传多条记录的完整示例
     """
-    # 配置参数（请替换为实际值）
-
-
     # 创建Token管理器
     token_manager = DingTalkTokenManager()
 
-    # 创建上传器（不再需要手动传入access_token）
+    # 创建上传器
     uploader = DingTalkSheetUploader(
         base_id=config["base_id"],
         sheet_id=config["sheet_id"],
@@ -1047,27 +1130,71 @@ def upload_multiple_records(config,records,logger):
         token_manager=token_manager
     )
 
-    # 生成测试数据（实际使用中从数据库或文件读取）
-
-
     logger.info(f"准备上传 {len(records)} 条记录...")
 
-    # 批量上传，每批50条，批次间延迟0.2秒，失败时重试2次
-    results = uploader.upload_batch_records(records, batch_size=50, delay=0.2, max_retries=2)
+    # 批量上传，使用增强版的上传方法
+    results = uploader.upload_batch_records(
+        records_data=records,
+        batch_size=50,
+        delay=0.2,
+        max_retries=2,
+        retry_failed=True  # 启用失败重试
+    )
 
-    # 分析结果
-    successful_batches = [r for r in results if r.get("success")]
-    failed_batches = [r for r in results if not r.get("success")]
-
+    # 分析结果 - 适配新的返回格式
     logger.info(f"\n上传统计:")
-    logger.info(f"总批次: {len(results)}")
-    logger.info(f"成功批次: {len(successful_batches)}")
-    logger.info(f"失败批次: {len(failed_batches)}")
+    logger.info(f"总记录数: {results.get('total_records', 0)}")
+    logger.info(f"成功数量: {results.get('success_count', 0)}")
+    logger.info(f"失败数量: {results.get('failed_count', 0)}")
+    logger.info(f"成功批次: {len(results.get('batch_results', [])) - len(results.get('failed_batches', []))}")
+    logger.info(f"失败批次: {len(results.get('failed_batches', []))}")
 
-    if failed_batches:
-        logger.info(f"\n失败详情:")
-        for i, failed in enumerate(failed_batches):
-            logger.info(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
+    # 如果有失败的记录，记录详细信息
+    if results.get('failed_count', 0) > 0:
+        logger.warning(f"发现 {results['failed_count']} 条失败记录")
+
+        # 记录失败的具体原因
+        for i, failed_batch in enumerate(results.get('failed_batches', [])):
+            logger.warning(
+                f"  失败批次 {failed_batch.get('batch_index', i + 1)}: {failed_batch.get('error', '未知错误')}")
+
+        # 可以将失败的记录保存到文件，便于后续处理
+        if results.get('failed_records'):
+            failed_file = f"failed_records_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            try:
+                with open(failed_file, 'w', encoding='utf-8') as f:
+                    # 移除临时添加的_upload_id字段（如果有）
+                    clean_records = []
+                    for record in results['failed_records']:
+                        if isinstance(record, dict) and '_upload_id' in record:
+                            record_copy = record.copy()
+                            del record_copy['_upload_id']
+                            clean_records.append(record_copy)
+                        else:
+                            clean_records.append(record)
+                    json.dump(clean_records, f, ensure_ascii=False, indent=2)
+                logger.info(f"失败的记录已保存到: {failed_file}")
+            except Exception as e:
+                logger.error(f"保存失败记录时出错: {e}")
+
+    # 检查是否有数据格式错误（如评论数字段包含非数字）
+    if results.get('failed_count', 0) > 0:
+        # 分析失败原因，找出可能的格式问题
+        format_errors = []
+        for failed_batch in results.get('failed_batches', []):
+            error_msg = failed_batch.get('error', '')
+            if 'invalid' in error_msg.lower() and 'field' in error_msg.lower():
+                # 提取字段名
+                import re
+                field_match = re.search(r"field '([^']+)'", error_msg)
+                if field_match:
+                    field_name = field_match.group(1)
+                    format_errors.append(field_name)
+
+        if format_errors:
+            logger.warning(f"可能的数据格式问题字段: {set(format_errors)}")
+            logger.warning("提示：钉钉多维表的数字字段不能包含'+'等非数字字符")
+
     return results
 
 def test_token_manager():

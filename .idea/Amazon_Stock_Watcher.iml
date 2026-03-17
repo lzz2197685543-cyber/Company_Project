@@ -5,5 +5,16 @@
     <orderEntry type="jdk" jdkName="spider310" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="New_1688" />
+    <orderEntry type="module" module-name="Product_Selection" />
+    <orderEntry type="module" module-name="Factory_sourcing" />
+    <orderEntry type="module" module-name="JST_horizon" />
+    <orderEntry type="module" module-name="SellerSprite" />
+    <orderEntry type="module" module-name="Shein" />
+    <orderEntry type="module" module-name="Shopee" />
+    <orderEntry type="module" module-name="SMT" />
+    <orderEntry type="module" module-name="Temu_horizon" />
+    <orderEntry type="module" module-name="TK" />
+    <orderEntry type="module" module-name="DianLeiDa" />
+    <orderEntry type="module" module-name="AI+Drissionpage过验证码" />
   </component>
 </module>
