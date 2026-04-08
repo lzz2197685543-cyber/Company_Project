@@ -30,11 +30,12 @@ class ProductDAO:
 
         sql = """
         INSERT INTO products_auto 
-        (source, goods_id, name, category, status, shop_id)
-        VALUES (%s, %s, %s, %s, %s, %s)
+        (source, goods_id, name, category,sub_category ,month_sale,status, shop_id)
+        VALUES (%s, %s, %s, %s, %s, %s,%s,%s)
         ON DUPLICATE KEY UPDATE
         name = VALUES(name),
         category = VALUES(category),
+        sub_category = VALUES(sub_category),
         updated_at = CURRENT_TIMESTAMP
         """
 
@@ -44,6 +45,8 @@ class ProductDAO:
                 p.goods_id,
                 p.name,
                 p.category,
+                p.sub_category,
+                p.month_sale,
                 p.status,
                 p.shop_id
             )
@@ -65,9 +68,10 @@ class ProductDAO:
             # 1️⃣ 查
             cursor.execute("""
                 SELECT * FROM products_auto
-                WHERE status = 'pending'
-                LIMIT %s
-                FOR UPDATE
+WHERE status = 'pending'
+ORDER BY created_at DESC
+LIMIT %s
+FOR UPDATE
             """, (limit,))
             rows = cursor.fetchall()
 
@@ -103,6 +107,40 @@ class ProductDAO:
         WHERE goods_id = %s
         """
         db.execute(sql, (status, goods_id))
+
+    @staticmethod
+    def fetch_collected(limit=20):
+        conn = db.get_conn()
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("""
+                SELECT * FROM products_auto
+                WHERE status = 'collected'
+                ORDER BY created_at ASC
+                LIMIT %s
+                FOR UPDATE
+            """, (limit,))
+
+            rows = cursor.fetchall()
+
+            if not rows:
+                return []
+
+            ids = [row['id'] for row in rows]
+
+            format_ids = ','.join(['%s'] * len(ids))
+            cursor.execute(f"""
+                UPDATE products_auto
+                SET status = 'publishing'
+                WHERE id IN ({format_ids})
+            """, ids)
+
+            conn.commit()
+            return rows
+
+        finally:
+            conn.close()
 
     # ---------------- 标记成功 ----------------
     @staticmethod

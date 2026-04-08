@@ -1,13 +1,19 @@
 import asyncio
-from core.new_temu_browser import BrowserManager
+from core.browser import BrowserManager
 from core.new_temu_login import (GeekBILogin)
 from modules.crawler.temu_offer_filter import OfferFilterAutomation
 from storage.product_dao import ProductDAO
 from utils.logger import get_logger
+from storage.db import Database
 
 
 async def main():
-    logger = get_logger('Temu_New')
+    job='auto_listing'
+    db = Database()
+    db.init_db()
+    print("✅ 数据库初始化完成")
+
+    logger = get_logger(job)
     browser_manager = BrowserManager(headless=False)
 
     try:
@@ -17,17 +23,17 @@ async def main():
         )
 
         # 登录极鲸云
-        client = GeekBILogin(page)
+        client = GeekBILogin(page,job)
         await client.login()
 
         # 爬虫---爬取数据
         page_urls = [
             'https://www.geekbi.com/data/goods/hot-sale',
             'https://www.geekbi.com/data/goods/day-sale-rise',
-            'https://www.geekbi.com/data/goods/blue-ocean-hot-sale',
-            'https://www.geekbi.com/data/goods/hot-sale-new',
-            'https://www.geekbi.com/data/goods/new-mall-hot-sale',
-            'https://www.geekbi.com/data/goods/big-sale-new'
+            # 'https://www.geekbi.com/data/goods/blue-ocean-hot-sale',
+            # 'https://www.geekbi.com/data/goods/hot-sale-new',
+            # 'https://www.geekbi.com/data/goods/new-mall-hot-sale',
+            # 'https://www.geekbi.com/data/goods/big-sale-new'
         ]
 
         offer_filter = OfferFilterAutomation(page, logger)

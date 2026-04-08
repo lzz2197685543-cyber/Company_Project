@@ -1,28 +1,20 @@
 import json
 import aiohttp
+import asyncio
 from pathlib import Path
 from typing import Dict, Optional
 
 from utils.config_loader import get_shop_config
-from core.login import SimpleLogin
+from core.miaoshou_login import MiaoShouLogin
+from core.browser import BrowserManager
 
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 
 
 class CookieManager:
-    def __init__(self, shop_name: str,job):
-        self.shop_name = shop_name
-        self.cookie_file = COOKIE_DIR / f"{shop_name}.json"
-
-        cfg = get_shop_config(shop_name)
-        self.channel_id = cfg["channelId"]
-        self.cloud_account_id = cfg["cloud_account_id"]
-
-        self.check_url = (
-            "https://seller-acs.aliexpress.com/"
-            "h5/mtop.ae.scitem.read.pagequery/1.0/"
-        )
+    def __init__(self,job):
+        self.cookie_file = COOKIE_DIR / f"miaoshou_cookies.json"
         self.job=job
 
     # ---------- cookie ----------
@@ -30,33 +22,35 @@ class CookieManager:
         if not self.cookie_file.exists():
             return None
         data = json.loads(self.cookie_file.read_text(encoding="utf-8"))
-        return data.get("cookies_dict")
-
-    def extract_token(self, cookies: Dict[str, str]) -> str:
-        tk = cookies.get("_m_h5_tk", "")
-        return tk.split("_")[0] if "_" in tk else ""
-
-    # ---------- 校验 ----------
-    async def check_cookie_valid(self, cookies: Dict[str, str]) -> bool:
-        try:
-            async with aiohttp.ClientSession(cookies=cookies) as session:
-                async with session.get(
-                    self.check_url,
-                    allow_redirects=False,
-                    timeout=aiohttp.ClientTimeout(total=10),
-                ) as resp:
-                    return resp.status == 200
-        except Exception:
-            return False
+        return data.get("cookies")
 
     # ---------- 刷新 ----------
     async def refresh(self):
-        login = SimpleLogin(
-            shop_name=self.shop_name,job=self.job)
+        """主函数 - 使用方式1：手动管理浏览器"""
+        # 创建浏览器管理器
+        browser_manager = BrowserManager(headless=False)
 
-        ok = await login.login_and_save_cookies()
+        try:
+            # 启动浏览器
+            page = await browser_manager.start(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                viewport={"width": 1366, "height": 768}
+            )
+
+            # 创建登录实例
+            client = MiaoShouLogin(page,self.job)
+            ok=await client.login()
+
+            # 登录成功后可以保持浏览器打开
+            print("登录完成，浏览器将保持打开状态...")
+
+        finally:
+            # 关闭浏览器
+            await browser_manager.close()
+
+
         if not ok:
-            raise RuntimeError(f"[{self.shop_name}] 登录失败")
+            raise RuntimeError(f"[妙手] 登录失败")
 
     # ---------- 对外统一 ----------
     async def get_auth(self):
@@ -66,8 +60,8 @@ class CookieManager:
             await self.refresh()
             cookies = self.load_cookies()
 
-        token = self.extract_token(cookies)
-        if not token:
-            raise RuntimeError("token 解析失败")
+        return cookies
 
-        return cookies, token
+# if __name__ == '__main__':
+#     c=CookieManager("test")
+#     asyncio.run(c.get_auth())

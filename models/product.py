@@ -6,6 +6,8 @@ class Product:
     source: str = "temu"
     name: str = ""
     category: str = ""
+    sub_category:str=""
+    month_sale:str=""
     status: str = "pending"
     shop_id: str = ""
     retry_count: int = 0

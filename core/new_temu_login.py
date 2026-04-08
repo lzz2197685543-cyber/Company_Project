@@ -1,6 +1,6 @@
 import asyncio
 import json
-from core.new_temu_browser import BrowserManager
+from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 from core.captcha.detector import YunmaCaptchaProcessor
@@ -8,11 +8,11 @@ from utils.page_helpers import temu_close_popup_if_exists
 
 
 class GeekBILogin:
-    def __init__(self, page=None):
+    def __init__(self, page=None,job=None):
         cfg = get_shop_config("geekbi")
         self.phone = cfg['account']
         self.password = cfg['password']
-        self.logger = get_logger('GeekBILogin')
+        self.logger = get_logger(job)
         self.captcha_processor = YunmaCaptchaProcessor(self.logger)
         self.page = page
 

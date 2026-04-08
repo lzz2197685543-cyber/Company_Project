@@ -4,6 +4,10 @@ import asyncio
 import playwright
 from models.product import Product
 
+from modules.scheduler.sub_category_scheduler import select_sub_categories,select_categories
+
+
+
 
 class OfferFilterAutomation:
     def __init__(self, page, logger):
@@ -12,7 +16,6 @@ class OfferFilterAutomation:
         self.should_stop = False
 
     # ---------------- 接口监听 + 解析 ----------------
-
     async def wait_and_parse_goods_search(self, action, timeout=5000, retry=3):
         for i in range(retry):
             try:
@@ -90,40 +93,11 @@ class OfferFilterAutomation:
             await close_btn.first.click()
 
         # ---------- 一级类目 ----------
-        category_input = page.get_by_role("textbox", name="请选择品类")
-        await category_input.fill("玩具手办与玩偶套装")
-        await category_input.press("Enter")
-        await page.get_by_text("玩具手办与玩偶套装").nth(1).click()
+        await select_categories(page)
 
         # ---------- 二级类目（优化为循环） ----------
-        sub_category_input = page.locator("#catIds").get_by_role("textbox")
+        await select_sub_categories(page)
 
-        sub_categories = [
-            "新奇玩具", "艺术与工艺品", "拼插类玩具", "娃娃及配件",
-            # "电子类玩具", "游戏及配件", "游戏配件", "卡牌游戏",
-            # "益智、科教玩具", "过家家", "拼图", "婴幼玩具",
-            # "运动户外用品", "玩具车", "收藏玩具", "节日聚会用品",
-            # "遥控和应用程序控制的玩具汽车"
-        ]
-
-        # 👉 只写“不是1”的
-        nth_map = {
-            "游戏及配件": 4,
-            "游戏配件": 7,
-            "拼图": 2,
-            "玩具车": 2,
-        }
-
-
-        for name in sub_categories:
-            nth_index = nth_map.get(name, 1)  # 👈 默认1
-
-            await sub_category_input.fill(name)
-            await sub_category_input.press("Enter")
-
-            await page.get_by_text(name).nth(nth_index).click()
-
-            await asyncio.sleep(0.3)
 
         # ---------- 每页100 ----------
         await page.locator('.arco-select-view-value').nth(4).click()
@@ -195,10 +169,9 @@ class OfferFilterAutomation:
                 product = Product(
                     goods_id=i.get('goodsId', ''),
                     name=i.get('goodsName', ''),
-                    category=(
-                        i.get('catItems', [{}])[0].get('catName', '')
-                        if i.get('catItems') else ''
-                    ),
+                    category=[j.get('catName', '') for j in i.get('catItems', [{}]) if j.get('catLevel') == 1][0],
+                    sub_category=(i.get('catItems', [{}])[0].get('catName', '') if i.get('catItems') else ''),
+                    month_sale=i.get('monthSold', 0),
                     source="temu"
                 )
 

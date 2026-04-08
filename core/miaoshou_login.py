@@ -2,19 +2,25 @@ import asyncio
 import json
 import ddddocr
 from pathlib import Path
-from core.new_temu_browser import BrowserManager
+from datetime import datetime
+from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 
 IMG_DIR = Path(__file__).resolve().parent.parent / "data"
+COOKIE_DIR=Path(__file__).resolve().parent.parent / "data" /"cookies"
+
+# 确保目录存在
+IMG_DIR.mkdir(parents=True, exist_ok=True)
+COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 class MiaoShouLogin:
-    def __init__(self, page=None):
+    def __init__(self, page=None,job=None):
         cfg = get_shop_config("miaoshou")
         self.phone = cfg['account']
         self.password = cfg['password']
-        self.logger = get_logger('GeekBILogin')
+        self.logger = get_logger(job)
         self.page = page
 
     async def captcha(self):
@@ -116,11 +122,36 @@ class MiaoShouLogin:
             elif login_success:
                 print("验证码验证成功，已登录")
 
+            # ============== 保存 Cookie ==============
+            await self._save_cookies()
+
+            return True
+
+
         except Exception as e:
             self.logger.error(f"登录过程异常: {e}")
             import traceback
             traceback.print_exc()
             raise
+
+    async def _save_cookies(self):
+        """保存当前页面的 Cookie 到文件"""
+        # 获取所有 Cookie
+        cookies = await self.page.context.cookies()
+        # 转换为 name: value 字典
+        cookies_dict = {cookie['name']: cookie['value'] for cookie in cookies}
+
+        cookie_data = {
+            "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "cookies": cookies_dict,
+        }
+
+        # 保存到 JSON 文件
+        cookie_file = COOKIE_DIR / "miaoshou_cookies.json"
+        with open(cookie_file, 'w', encoding='utf-8') as f:
+            json.dump(cookie_data, f, ensure_ascii=False, indent=2)
+
+        print(f"Cookie 已保存至 {cookie_file}")
 
 
 async def main():
@@ -146,6 +177,6 @@ async def main():
         # 关闭浏览器
         await browser_manager.close()
 
-
+#
 # if __name__ == "__main__":
 #     asyncio.run(main())
