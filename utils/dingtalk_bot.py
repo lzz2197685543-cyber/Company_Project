@@ -93,8 +93,8 @@ def ding_bot_send(group_name,text):
     bot.send_text(text)
 
 
-# if __name__ == "__main__":
-    # ding_bot_send('me','平安夜快乐')
+if __name__ == "__main__":
+    ding_bot_send('me','平安夜快乐')
 
 
 

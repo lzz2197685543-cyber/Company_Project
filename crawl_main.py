@@ -4,14 +4,12 @@ from core.new_temu_login import (GeekBILogin)
 from modules.crawler.temu_offer_filter import OfferFilterAutomation
 from storage.product_dao import ProductDAO
 from utils.logger import get_logger
-from storage.db import Database
+from storage.db_pool  import DatabasePool
 
 
 async def main():
     job='auto_listing'
-    db = Database()
-    db.init_db()
-    print("✅ 数据库初始化完成")
+    product_dao = ProductDAO(job)
 
     logger = get_logger(job)
     browser_manager = BrowserManager(headless=False)
@@ -43,7 +41,7 @@ async def main():
 
             # 首页
             items = await offer_filter.do_search()
-            ProductDAO.insert_products(items,logger)
+            product_dao.insert_products(items)
 
             # 翻页
             while not offer_filter.should_stop:
@@ -51,7 +49,7 @@ async def main():
                 if not next_items:
                     break
 
-                ProductDAO.insert_products(next_items,logger)
+                product_dao.insert_products(next_items)
 
 
     finally:

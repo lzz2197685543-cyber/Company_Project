@@ -1,0 +1,1552 @@
+{
+    "2732": {
+        "category_name": "MP3、MP4播放器",
+        "attributes": [
+            {
+                "name": "电池属性",
+                "values": [
+                    {
+                        "name": "可充电电池",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "可充电电池",
+                "values": [
+                    {
+                        "name": "锂电池--聚合物",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "支持的标准",
+                "values": [
+                    {
+                        "name": "mp3",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "显示技术",
+                "values": [
+                    {
+                        "name": "led",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "媒体类型",
+                "values": [
+                    {
+                        "name": "sd卡",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+             {
+                "name": "无线属性",
+                "values": [
+                    {
+                        "name": "sd卡",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25477": {
+        "category_name": "磁力玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25480": {
+        "category_name": "弹跳玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25491": {
+        "category_name": "存钱罐",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25495": {
+        "category_name": "办公桌面磁力球拼图",
+        "attributes": [
+            {
+                "name": "技能等级",
+                "values": [
+                    {
+                        "name": "初级",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25496": {
+        "category_name": "办公桌面运动玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25500": {
+        "category_name": "Fidget 指环",
+        "attributes": [
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "不锈钢",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25501": {
+        "category_name": "Fidget 游戏垫",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "硅胶",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25502": {
+        "category_name": "Pop Fidget 玩具",
+        "attributes": [
+            {
+                "name": "材质",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25503": {
+        "category_name": "Simple Dimple Fidget 玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "其它塑料制",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25504": {
+        "category_name": "多物品 Fidget 玩具包",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "类型",
+                "values": [
+                    {
+                        "name": "详见商品详情",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25561": {
+        "category_name": "堆叠积木玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25564": {
+        "category_name": "齿轮联锁拼插玩具套装",
+        "attributes": [
+            {
+                "name": "主要材质",
+                "values": [
+                    {
+                        "name": "ABS",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25565": {
+        "category_name": "堆积和组装玩具公仔",
+        "attributes": [
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25566": {
+        "category_name": "磁性积木玩具套装",
+        "attributes": [
+            {
+                "name": "主要材质",
+                "values": [
+                    {
+                        "name": "ABS",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25596": {
+        "category_name": "电子宠物",
+        "attributes": [
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "电池属性",
+                "values": [
+                    {
+                        "name": "不带电池",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "电源方式",
+                "values": [
+                    {
+                        "name": "电池式",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "工作电压",
+                "values": [
+                    {
+                        "name": "36V及以下",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "无线属性",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25600": {
+        "category_name": "对讲机",
+        "attributes": [
+            {
+                "name": "电源方式",
+                "values": [
+                    {
+                        "name": "电池式",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "工作电压",
+                "values": [
+                    {
+                        "name": "36V及以下",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "电池属性",
+                "values": [
+                    {
+                        "name": "不带电池",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "无线属性",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "对讲机频段(MHZ)",
+                "values": [
+                    {
+                        "name": 2.4,
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25608": {
+        "category_name": "电子宠物、掌上游戏机",
+        "attributes": [
+            {
+                "name": "电源方式",
+                "values": [
+                    {
+                        "name": "电池式",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "工作电压",
+                "values": [
+                    {
+                        "name": "36V及以下",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "电池属性",
+                "values": [
+                    {
+                        "name": "不带电池",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "无线属性",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "游戏类型",
+                "values": [
+                    {
+                        "name": "行动",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25620": {
+        "category_name": "多面骰子",
+        "attributes": [
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25622": {
+        "category_name": "单打卡牌游戏系列",
+        "attributes": [
+            {
+                "name": "游戏类型",
+                "values": [
+                    {
+                        "name": "现实",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "卡片纸",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "年龄范围描述",
+                "values": [
+                    {
+                        "name": "成人",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25627": {
+        "category_name": "标准扑克牌组",
+        "attributes": [
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "年龄范围描述",
+                "values": [
+                    {
+                        "name": "成人",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25629": {
+        "category_name": "多米诺及骨牌游戏",
+        "attributes": [
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25630": {
+        "category_name": "地板游戏",
+        "attributes": [
+            {
+                "name": "游戏类型",
+                "values": [
+                    {
+                        "name": "体育",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25631": {
+        "category_name": "叠叠塔游戏",
+        "attributes": [
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25658": {
+        "category_name": "电子学习系统软件套装",
+        "attributes": [
+            {
+                "name": "电源方式",
+                "values": [
+                    {
+                        "name": "电池式",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "工作电压",
+                "values": [
+                    {
+                        "name": "36V及以下",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "无线属性",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25681": {
+        "category_name": "弹珠轨道玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25721": {
+        "category_name": "磁性和毛毡游戏板",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25725": {
+        "category_name": "扮装戏服",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25734": {
+        "category_name": "儿童服装珠宝套装",
+        "attributes": [
+            {
+                "name": "镀层",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "镶嵌材质",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "金属部件材质类型",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25738": {
+        "category_name": "儿童服装魔杖",
+        "attributes": [
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "镀层",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "镶嵌材质",
+                "values": [
+                    {
+                        "name": "无",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "塑料",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25780": {
+        "category_name": "弹珠",
+        "attributes": [
+            {
+                "name": "材料",
+                "values": [
+                    {
+                        "name": "玻璃",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25788": {
+        "category_name": "豆袋游戏板",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25789": {
+        "category_name": "豆袋游戏套装",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25822": {
+        "category_name": "草地水滑梯",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25832": {
+        "category_name": "充气泳池玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "PVC(聚氯乙烯)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25865": {
+        "category_name": "蹦床",
+        "attributes": [
+            {
+                "name": "框架材质",
+                "values": [
+                    {
+                        "name": "铝",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "黑色",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25869": {
+        "category_name": "蹦床零件",
+        "attributes": [
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25892": {
+        "category_name": "拨浪鼓、摇铃和毛绒抓握玩具",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "25906": {
+        "category_name": "电子早教玩具",
+        "attributes": [
+            {
+                "name": "电源方式",
+                "values": [
+                    {
+                        "name": "电池式",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "电池属性",
+                "values": [
+                    {
+                        "name": "不带电池",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "是否含屏幕",
+                "values": [
+                    {
+                        "name": "否",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "26060": {
+        "category_name": "插槽车轨道",
+        "attributes": [
+            {
+                "name": "主体材质",
+                "values": [
+                    {
+                        "name": "ABS(ABS树脂)",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "颜色",
+                "values": [
+                    {
+                        "name": "混合色",
+                        "valueUnit": ""
+                    }
+                ]
+            },
+            {
+                "name": "适用年龄段",
+                "values": [
+                    {
+                        "name": "3+",
+                        "valueUnit": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

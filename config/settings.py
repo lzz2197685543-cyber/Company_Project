@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+import os
+
 # 店铺分组（后面自动分配用）
 SHOP_GROUPS = [
 ]
@@ -31,11 +34,12 @@ SHOP_IDS = [
     "8248902","8248832","8246006",
     "6665344","6726509","6666485",
     "6726588","7790171","8625842",
-    "8248902","8246209","7822681","9262177"
+    "8248902","8246209","7822681",
+    "9262177"
 ]
 
-# 每店每日上限
-SHOP_DAILY_LIMIT = 10
+# 每店每次采集数量
+SHOP_DAILY_LIMIT =10
 
 # 并发配置
 MAX_WORKERS = 3
@@ -44,13 +48,42 @@ MAX_WORKERS = 3
 # 类目列表
 # 用于品类选择页面（对应 get_today_categories）
 CATEGORIES_FOR_CATEGORY_INPUT = [
-    "新奇玩具", "艺术与工艺品", "拼插类玩具", "娃娃及配件",
-    "遥控和应用程序控制的玩具汽车"
+    # "新奇玩具",
+    # "艺术与工艺品",
+    # "拼插类玩具",
+    # "娃娃及配件",
+    # "遥控和应用程序控制的玩具汽车"
+
+    "磁力玩具"
 ]
 
 # 用于子类目选择页面（对应 get_today_sub_categories）
 CATEGORIES_FOR_SUB_CATEGORY_INPUT = [
-    "电子类玩具", "游戏及配件", "游戏配件", "卡牌游戏",
-    "益智、科教玩具", "过家家", "拼图", "婴幼玩具",
-    "运动户外用品", "玩具车", "收藏玩具", "节日聚会用品",
+    # "电子类玩具",
+    # "游戏及配件",
+    # "游戏配件",
+    # "卡牌游戏",
+    # "益智、科教玩具",
+    # "过家家",
+    # "拼图",
+    # "婴幼玩具",
+    # "运动户外用品",
+    # "玩具车",
+    # "收藏玩具",
+    # "节日聚会用品",
+
+    "MP3、MP4播放器"
 ]
+
+
+
+load_dotenv()
+
+DB_CONFIG = {
+    'host': os.getenv('DB_HOST', '127.0.0.1'),
+    'port': int(os.getenv('DB_PORT', 3306)),
+    'user': os.getenv('DB_USER', 'root'),
+    'password': os.getenv('DB_PASSWORD', '1234'),
+    'database': os.getenv('DB_NAME', 'py_spider'),
+    'charset': 'utf8mb4'
+}

@@ -4,7 +4,7 @@ from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 from core.captcha.detector import YunmaCaptchaProcessor
-from utils.page_helpers import temu_close_popup_if_exists
+from utils.page_helpers import temu_close_popup_if_exists,check_if_exists
 
 
 class GeekBILogin:
@@ -20,8 +20,12 @@ class GeekBILogin:
     async def login(self):
         """主登录流程"""
         try:
+
             # 访问网站
             await self.page.goto("https://www.geekbi.com/user/login")
+            # 检测有没有检测框
+            # await check_if_exists(self.page)
+
             await self.page.wait_for_load_state("domcontentloaded")
 
             # 选择手机号登录

@@ -7,8 +7,6 @@ from models.product import Product
 from modules.scheduler.sub_category_scheduler import select_sub_categories,select_categories
 
 
-
-
 class OfferFilterAutomation:
     def __init__(self, page, logger):
         self.page = page
@@ -76,13 +74,13 @@ class OfferFilterAutomation:
         self.should_stop = True
         return []
 
-
     # ---------------- 条件筛选 ----------------
     async def get_offer_filter(self, page_url: str = None):
         self.should_stop = False
         page = self.page
 
         if page_url:
+
             await page.goto(page_url)
 
         self.logger.info(f'开始筛选页面: {page_url}')

@@ -7,7 +7,7 @@ from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 
-IMG_DIR = Path(__file__).resolve().parent.parent / "data"
+IMG_DIR = Path(__file__).resolve().parent.parent / "data" / "img"
 COOKIE_DIR=Path(__file__).resolve().parent.parent / "data" /"cookies"
 
 # 确保目录存在

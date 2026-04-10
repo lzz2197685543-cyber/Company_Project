@@ -1,6 +1,5 @@
 from playwright.async_api import async_playwright
 
-
 class BrowserManager:
     def __init__(self, headless=False):
         self.headless = headless
@@ -10,17 +9,14 @@ class BrowserManager:
         self.page = None
 
     async def start(self, user_agent=None, viewport=None):
-        """启动浏览器并创建页面"""
+        """启动浏览器并创建主页面"""
         self.playwright = await async_playwright().start()
-
         launch_options = {
             "headless": self.headless,
             "args": ["--disable-blink-features=AutomationControlled"]
         }
-
         self.browser = await self.playwright.chromium.launch(**launch_options)
 
-        # 创建上下文配置
         context_options = {}
         if user_agent:
             context_options["user_agent"] = user_agent
@@ -31,21 +27,22 @@ class BrowserManager:
 
         self.context = await self.browser.new_context(**context_options)
         self.page = await self.context.new_page()
-
         return self.page
 
+    async def new_page(self):
+        """创建新页面（共享同一个上下文，保持登录状态）"""
+        return await self.context.new_page()
+
     async def close(self):
-        """关闭浏览器和Playwright"""
+        """关闭浏览器"""
         if self.browser:
             await self.browser.close()
         if self.playwright:
             await self.playwright.stop()
 
     async def __aenter__(self):
-        """支持异步上下文管理器"""
         await self.start()
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
-        """退出时自动关闭"""
         await self.close()
