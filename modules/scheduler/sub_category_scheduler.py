@@ -105,7 +105,7 @@ async def select_sub_categories(page):
     sub_category_input = page.locator("#catIds").get_by_role("textbox")
 
     # 获取今天要跑的二级类目（每天1个）
-    sub_categories = SubCategoryScheduler.get_today_sub_categories(size=1)
+    sub_categories = SubCategoryScheduler.get_today_sub_categories(size=2)
 
     # 某些类目在页面上有多个匹配项，需要指定索引
     nth_map = {

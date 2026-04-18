@@ -12,9 +12,9 @@ from pathlib import Path
 
 
 class AutoPublish(BaseClient):
-    FAIL_LOG_FILE = Path(__file__).resolve().parent.parent.parent / "data" /"publish_fails.jsonl"
+    FAIL_LOG_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "publish_fails.jsonl"
 
-    def __init__(self,job):
+    def __init__(self, job):
         super().__init__(job)
         self.product_dao = ProductDAO(job)
 
@@ -41,8 +41,9 @@ class AutoPublish(BaseClient):
             self.logger.info(f"✅ 找到类目 {cid} 的配置，包含 {len(config.get('attributes', []))} 个属性")
             return config
         else:
-            self.logger.warning(f"⚠️ 未找到类目 {cid} 的配置，使用默认配置")
-            # return self._get_default_config()
+            self.logger.warning(f"⚠️ 未找到类目 {cid} 的配置，跳过该商品")
+            return None
+
     def _get_default_config(self):
         """获取默认配置"""
         return {
@@ -64,7 +65,6 @@ class AutoPublish(BaseClient):
                     "values": [{"name": "混合色", "valueUnit": ""}]
                 }
             ],
-
         }
 
     def _record_fail_to_json(self, goods_info, response):
@@ -91,7 +91,7 @@ class AutoPublish(BaseClient):
                 "goods_id": goods_info.get('sourceItemId') or goods_info.get('goods_id'),
                 "title": title,
                 "cid": goods_info.get('cid'),
-                "response": response,  # 完整响应
+                "response": response,
                 "reason": reason,
                 "missing_attr": missing_attr
             }
@@ -117,9 +117,8 @@ class AutoPublish(BaseClient):
 
                 if not file_exists:
                     writer.writerow([
-                        "类目ID", "类目名称",  "记录时间"
+                        "类目ID", "类目名称", "记录时间"
                     ])
-
 
                 writer.writerow([
                     cid,
@@ -130,26 +129,16 @@ class AutoPublish(BaseClient):
         except Exception as e:
             self.logger.error(f"保存类目信息到 CSV 时出错: {e}")
 
-    def _count_goods_by_cid(self, cid):
-        """统计指定类目下的商品数量（可选）"""
-        try:
-            # 这里可以查询数据库或实时统计
-            # 暂时返回0，或者你可以从ProductDAO查询
-            return 0
-        except:
-            return 0
-
     def _log_goods_attributes(self, goods_info, attributes):
         """记录商品的属性信息到CSV文件"""
         try:
-            # 1. 确定文件路径并确保目录存在
             goods_attr_file = Path(__file__).resolve().parent.parent.parent / "data" / "goods_attributes.csv"
             goods_attr_file.parent.mkdir(parents=True, exist_ok=True)
 
-            print('goods_info:', goods_info)
-            print('attributes:', attributes)
+            self.logger.debug(f'goods_info: {goods_info}')
+            self.logger.debug(f'attributes: {attributes}')
 
-            # 2. 安全地提取商品基础信息，避免KeyError
+            # 安全地提取商品基础信息
             goods_id = None
             if goods_info:
                 goods_id = goods_info.get('sourceItemId')
@@ -169,7 +158,7 @@ class AutoPublish(BaseClient):
                 self.logger.info(f"商品 {goods_id} 没有属性数据，跳过记录。")
                 return
 
-            # 3. 写入CSV文件
+            # 写入CSV文件
             file_exists = goods_attr_file.exists()
             with open(goods_attr_file, "a", newline='', encoding="utf-8-sig") as f:
                 writer = csv.writer(f)
@@ -179,7 +168,7 @@ class AutoPublish(BaseClient):
                         "商品ID", "商品标题", "类目ID", "属性名称", "属性值", "记录时间"
                     ])
 
-                # 4. 遍历属性并写入
+                # 遍历属性并写入
                 for attr in attributes:
                     attr_name = attr.get('name', '')
                     values = attr.get('values', [])
@@ -202,32 +191,36 @@ class AutoPublish(BaseClient):
             self.logger.error(f"记录商品属性到CSV时发生严重错误: {e}", exc_info=True)
 
     async def get_detial_id(self):
-        """获取detail_id和goods_id，detail_id是给选择店铺，获取商品信息的参数，goods_id我们是为了追踪它的状态，最后更新数据库中商品id的状态信息"""
-
+        """获取detail_id和goods_id"""
         data_json = {
             'claimPublishShopStatus': 'published',
             'titleType': 'multi',
             'remarkType': 'multi',
-            'status': 'notPublished',#
+            'status': 'notPublished',
             'ownerAccountIds[0]': '187908',
             'pageNo': '1',
             'pageSize': '500',
         }
 
-        data= await self.post(
+        data = await self.post(
             'https://erp.91miaoshou.com/api/platform/pddkj/move/collect_box/searchCollectBoxDetail',
             payload=data_json,
         )
 
-        items=[]
-        # 用于记录已经保存过的类目，避免重复保存
-        saved_categories = set()
+        items = []
 
         for i in data['detailList']:
             detail_id = i['collectBoxDetailId']
-            goods_id=i['sourceItemId']
+            goods_id = i['sourceItemId']
+
+            # 跳过没有 goods_id 的商品
+            if not goods_id:
+                self.logger.warning(f"商品 {detail_id} 没有 sourceItemId，跳过")
+                continue
+
             # 获取最小类目
-            sub_category=i.get('siteAndCatMap',{}).get('PDDKJ',{}).get('breadcrumb').split('>')[-1]
+            sub_category = i.get('siteAndCatMap', {}).get('PDDKJ', {}).get('breadcrumb', '').split('>')[-1] if i.get(
+                'siteAndCatMap', {}).get('PDDKJ', {}).get('breadcrumb') else ''
             # 获取类目ID
             cid = i.get('siteAndCatMap', {}).get('PDDKJ', {}).get('cid', '')
 
@@ -241,15 +234,16 @@ class AutoPublish(BaseClient):
 
             items.append(item)
 
-            # 🔥 关键：保存类目信息到CSV（每个类目只保存一次）
-            if cid and cid not in saved_categories:
+            # 如果配置中没有该类目那么就保存
+            # 检查是否有配置
+            config = self.get_category_config(cid)
+            if config is None:
                 self._save_category_info_to_csv(cid, sub_category)
-                saved_categories.add(cid)
-                # self.logger.info(f"已保存类目信息: {cid} - {sub_category}")
+
 
         return items
 
-    async def selectShop(self, detailid,shop_ids):
+    async def selectShop(self, detailid, shop_ids):
         """选择店铺"""
         data_json = {
             'detailIds[0]': f'{detailid}',
@@ -263,11 +257,11 @@ class AutoPublish(BaseClient):
             payload=data_json,
         )
         if data['result'] == 'success':
-            self.logger.info(f'{detailid}:选择店铺成功')
+            self.logger.info(f'{detailid}: 选择店铺成功')
         else:
-            self.logger.info(f'{detailid}:选择店铺失败')
+            self.logger.warning(f'{detailid}: 选择店铺失败 - {data.get("reason", "未知原因")}')
 
-    async def get_goods_info(self, detailId,):
+    async def get_goods_info(self, detailId):
         """获取商品信息"""
         data_json = {
             'detailId': f'{detailId}',
@@ -280,9 +274,63 @@ class AutoPublish(BaseClient):
 
         goods_info = data.get('siteCollectItemInfo') or data.get('shopCollectItemInfo')
 
+        if not goods_info:
+            self.logger.error(f"获取商品信息失败: {data}")
+            return None
 
-        self.logger.info('获取商品信息：' + str(goods_info))
+        self.logger.info(f'成功获取商品信息，商品ID: {goods_info.get("sourceItemId")}')
         return goods_info
+
+    def clean_english_title(self, text):
+        """清理标题，保留中英文、数字和常用标点
+
+        Args:
+            text: 原始标题
+
+        Returns:
+            清理后的标题
+        """
+        if not text:
+            return text
+
+        # 替换全角标点为半角
+        replacements = {
+            '｜': '|',
+            '，': ',',
+            '。': '.',
+            '；': ';',
+            '：': ':',
+            '？': '?',
+            '！': '!',
+            '（': '(',
+            '）': ')',
+            '【': '[',
+            '】': ']',
+            '“': '"',
+            '”': '"',
+            '‘': "'",
+            '’': "'",
+            '　': ' ',
+        }
+
+        for full, half in replacements.items():
+            text = text.replace(full, half)
+
+        # 保留：中文、英文、数字、空格、常用标点符号
+        # \u4e00-\u9fa5: 中文字符范围
+        # a-zA-Z0-9: 英文和数字
+        # \s: 空格
+        # 常用标点：.,!?;:()[]{}|@#$%&*-_=+/\'"
+        allowed_pattern = r'[^\u4e00-\u9fa5a-zA-Z0-9\s\.\,\!\?\;\:\'\"\(\)\[\]\{\}\|\@\#\$\%\&\*\-_\=\+\/\\]'
+        text = re.sub(allowed_pattern, '', text)
+
+        # 合并多个空格为单个空格
+        text = re.sub(r'\s+', ' ', text)
+
+        # 去除首尾空格
+        text = text.strip()
+
+        return text
 
     def modify_goods_info(self, goods_info, add_guide=False):
         """修改商品信息
@@ -290,17 +338,102 @@ class AutoPublish(BaseClient):
         Args:
             goods_info: 原始商品信息
             add_guide: 是否添加说明书URL
+
+        Returns:
+            修改后的商品信息，如果没有配置则返回None
         """
-        # 深拷贝原始数据，避免修改原数据
+        if not goods_info:
+            self.logger.error("goods_info 为空，无法修改")
+            return None
+
+        # 深拷贝原始数据
         modified_info = copy.deepcopy(goods_info)
 
-        # ✅ 获取类目ID
+        # 获取类目ID
         cid = str(goods_info.get('cid', ''))
 
-        # ✅ 根据类目ID获取配置
+        # 根据类目ID获取配置
         config = self.get_category_config(cid)
 
+        # 如果没有配置，直接返回None
+        if config is None:
+            self.logger.warning(f"类目 {cid} 无配置，跳过该商品")
+            return None
+
         self.logger.info(f"商品类目ID: {cid}, 使用配置修改商品信息")
+
+        # 0. 清理和截断标题
+        # 处理中文标题：移除特殊字符
+        if 'title' in modified_info and modified_info['title']:
+            chinese_title = modified_info['title']
+            # 移除中文标题中的非法字符（保留中文、字母、数字、常用标点）
+            chinese_title = re.sub(r'[^\u4e00-\u9fa5a-zA-Z0-9\s\.\,\!?;:()\[\]【】｜·\-]', '', chinese_title)
+            modified_info['title'] = chinese_title
+            if len(chinese_title) > 500:
+                modified_info['title'] = chinese_title[:497] + "..."
+                print(f"⚠️ 中文标题超过500字符，已截断")
+
+        # 处理英文标题：清理非法字符
+        if 'multiLanguageTitleMap' in modified_info and 'en' in modified_info['multiLanguageTitleMap']:
+            en_title = modified_info['multiLanguageTitleMap']['en']
+            original_length = len(en_title)
+
+            # ========== 新增：检测英文标题是否为中文 ==========
+            def is_chinese_title(text):
+                """检测文本是否主要为中文"""
+                if not text:
+                    return False
+                # 统计中文字符数量
+                chinese_chars = re.findall(r'[\u4e00-\u9fa5]', text)
+                chinese_count = len(chinese_chars)
+                # 如果中文字符占比超过30%，认为是中文标题
+                if len(text) > 0:
+                    chinese_ratio = chinese_count / len(text)
+                    return chinese_ratio > 0.3
+                return False
+
+            # 如果是中文标题，设置为空字符串
+            if is_chinese_title(en_title):
+                print(f"⚠️ 英文标题检测到中文内容，将清空英文标题")
+                print(f"   原标题: {en_title[:100]}...")
+                en_title = ""
+            else:
+                # 清理英文标题
+                cleaned_title = self.clean_english_title(en_title)
+
+                if cleaned_title != en_title:
+                    print(
+                        f"⚠️ 英文标题已清理非法字符（原长度：{original_length}，清理后长度：{len(cleaned_title)}）")
+                    print(f"   原标题: {en_title[:100]}...")
+                    print(f"   新标题: {cleaned_title[:100]}...")
+                    en_title = cleaned_title
+
+                # 检查长度并截断
+                if len(en_title) > 500:
+                    en_title = en_title[:497] + "..."
+                    print(f"⚠️ 英文标题超过500字符，已截断（原长度：{original_length}，截断后：{len(en_title)}）")
+
+            modified_info['multiLanguageTitleMap']['en'] = en_title
+
+        # ========== 截断 saleAttributes 中过长的值 ==========
+        if modified_info.get('saleAttributes'):
+            for sale_attr in modified_info['saleAttributes']:
+                if sale_attr.get('values'):
+                    for value in sale_attr['values']:
+                        if value.get('name'):
+                            # 确保 name 是字符串类型
+                            name_value = str(value['name']) if value['name'] is not None else ''
+                            if len(name_value) > 30:
+                                old_name = name_value
+                                value['name'] = old_name[:27] + "..."
+                                print(f"⚠️ 属性值 '{old_name}' 超过30字符，已截断为 '{value['name']}'")
+
+        # ========== 只保留第一个销售属性，删除其他的 ==========
+        if modified_info.get('saleAttributes') and len(modified_info['saleAttributes']) > 1:
+            original_count = len(modified_info['saleAttributes'])
+            first_attr = modified_info['saleAttributes'][0]
+            modified_info['saleAttributes'] = [first_attr]
+            print(f"✅ 销售属性从 {original_count} 个减少到 1 个，保留了: {first_attr.get('name')}")
 
         # 1. 修改 outerPackage 相关字段
         modified_info['outerPackageShape'] = 1
@@ -312,7 +445,7 @@ class AutoPublish(BaseClient):
         else:
             modified_info['outerPackageImgUrls'] = []
 
-        # 3. ✅ 直接使用配置中的属性替换
+        # 3. 直接使用配置中的属性替换
         category_attributes = config.get('attributes', [])
         if category_attributes:
             modified_info['attributes'] = category_attributes
@@ -323,33 +456,38 @@ class AutoPublish(BaseClient):
         # 4. 根据参数决定是否添加说明书URL
         if add_guide:
             modified_info[
-                'productGuideFileUrl'] = "https://earth-rt.chengji-inc.com/app_attach_file/8980547/pddkj/2026-04-10/04673187-e8ff-4761-8054-459512846c78.pdf"
-            print(f"已添加说明书URL: {modified_info['productGuideFileUrl']}")
+                'productGuideFileUrl'] = "https://earth-rt.chengji-inc.com/app_attach_file/8980547/pddkj/2026-04-13/07dd15a1-17e8-490b-8a42-c0732ca784e2.pdf"
+            modified_info['productGuideFileName'] = 'manual.pdf'
+            self.logger.info(f"已添加说明书URL")
         else:
-            # 如果原数据中有说明书URL，可以选择移除或保留
             if 'productGuideFileUrl' in modified_info:
-                print("不添加说明书URL")
+                self.logger.info("不添加说明书URL")
 
         # 5. 修改 skuMap 中的所有 SKU
         if modified_info.get('skuMap'):
             for sku_key, sku_value in modified_info['skuMap'].items():
-                # 设置 itemNum 为空字符串
                 sku_value['itemNum'] = ""
-                # 设置尺寸
                 sku_value['length'] = "10"
                 sku_value['width'] = "10"
                 sku_value['height'] = "10"
-                # 设置重量
                 sku_value['weight'] = "100"
-                # 设置 numberOfPieces
                 sku_value['numberOfPieces'] = 1
 
         return modified_info
 
     async def save(self, goods_info):
         """保存商品信息，失败时自动重试添加说明书"""
+        if not goods_info:
+            self.logger.error("goods_info 为空，无法保存")
+            return {'result': 'fail', 'reason': 'goods_info is None'}
+
         # 先尝试不添加说明书
         modified_goods_info = self.modify_goods_info(goods_info, add_guide=False)
+
+        # 如果没有配置，直接返回
+        if modified_goods_info is None:
+            self.logger.warning("商品类目无配置，跳过保存")
+            return {'result': 'skip', 'reason': 'no category config'}
 
         # 执行保存请求
         result = await self._save_request(modified_goods_info)
@@ -359,17 +497,24 @@ class AutoPublish(BaseClient):
             reason = result.get('reason', '')
 
             # 记录失败信息
-            self._record_fail_to_json(goods_info, result)
+            if '说明书' not in reason:
+                self._record_fail_to_json(goods_info, result)
 
             # 保存失败商品的属性信息
-            existing_attributes = goods_info.get('attributes', [])
-            self._log_goods_attributes(goods_info, existing_attributes)
+            # existing_attributes = goods_info.get('attributes', [])
+            # self._log_goods_attributes(goods_info, existing_attributes)
 
             # 如果是缺少说明书，尝试添加后重试
             if '说明书' in reason:
                 self.logger.info("检测到需要添加说明书，正在添加说明书后重试...")
 
                 modified_goods_info_with_guide = self.modify_goods_info(goods_info, add_guide=True)
+
+                # 再次检查是否有配置
+                if modified_goods_info_with_guide is None:
+                    self.logger.warning("添加说明书后仍无配置，跳过")
+                    return {'result': 'skip', 'reason': 'no category config'}
+
                 result = await self._save_request(modified_goods_info_with_guide)
 
                 if result.get('result') == 'success':
@@ -384,6 +529,10 @@ class AutoPublish(BaseClient):
 
     async def _save_request(self, modified_goods_info):
         """执行保存请求"""
+        if modified_goods_info is None:
+            self.logger.error("modified_goods_info 为 None，无法保存")
+            return {'result': 'fail', 'reason': 'modified_goods_info is None'}
+
         site_collect_item_info = json.dumps(modified_goods_info, ensure_ascii=False)
 
         self.logger.info(f'保存商品信息，类目ID: {modified_goods_info.get("cid")}')
@@ -401,7 +550,7 @@ class AutoPublish(BaseClient):
         self.logger.info(f'修改商品信息响应：{data}')
         return data
 
-    async def publish(self, detailid,shop_ids):
+    async def publish(self, detailid, shop_ids):
         """发布"""
         data_json = {
             'detailIds[0]': f'{detailid}',
@@ -414,102 +563,120 @@ class AutoPublish(BaseClient):
             'https://erp.91miaoshou.com/api/platform/pddkj/move/move_collect/saveMoveCollectTask',
             payload=data_json,
         )
-        print('发布响应：',data)
+
+        self.logger.info(f'发布响应：{data}')
+
         if data['result'] == 'success':
-            self.logger.info(f'{detailid}:发布成功')
+            self.logger.info(f'{detailid}: 发布成功')
             return True
         else:
-            self.logger.info(f"{detailid}:发布失败")
+            self.logger.warning(f"{detailid}: 发布失败 - {data.get('reason', '未知原因')}")
             return False
 
-    async def dispatch_publish(self,group,target_goods_ids):
+    async def dispatch_publish_concurrent(self, group, target_goods_ids, items=None, batch_id=None, max_concurrent=3):
+        """并发发布商品"""
+        self.logger.info(f'当前店铺组: {group}, 并发数: {max_concurrent}')
 
-        self.logger.info(f'当前店铺组:{group}')
+        # 获取已采集数据
+        if items is None:
+            items = await self.get_detial_id()
 
-        # 1️⃣ 取400个已采集数据
-        items=await self.get_detial_id()
-
-        # 过滤，只保留我采集的数据
-        filtered=[]
+        # 过滤，只保留目标商品
+        items_map = {}
         for item in items:
-            gid=list(item.keys())[0]
-            if gid in target_goods_ids:
-                filtered.append(item)
+            gid = list(item.keys())[0]
+            items_map[gid] = item
 
-        self.logger.info(f'实际采集成功：{len(filtered)}')
+        filtered = [items_map[gid] for gid in target_goods_ids if gid in items_map]
 
-        for item in filtered:
-            goods_id=list(item.keys())[0]
-            detail_id = item[goods_id]['detail_id']
+        self.logger.info(f'实际采集成功: {len(filtered)}')
 
-            try:
-                # 2️⃣ 选择店铺（动态）
-                await self.selectShop(detail_id,group)
-                # 3️⃣ 获取商品信息
-                goods_info=await self.get_goods_info(detail_id)
-                # 4️⃣ 修改
-                await self.save(goods_info)
-                # 5️⃣ 发布
-                ok=await self.publish(detail_id, group)
-
-                if ok:
-                    # ✅ 成功
-                    self.product_dao.update_status(goods_id, "success")
-                else:
-                    self.product_dao.update_status(goods_id, "fail")
-
-            except Exception as e:
-                self.product_dao.mark_failed(goods_id)
-                self.logger.info(f'发布失败:{goods_id}',e)
-
-        self.logger.info('当前组完成')
+        if not filtered:
+            self.logger.warning("没有需要发布的商品")
+            return
 
 
-    async def dispath_publish_concurrent(self,group,target_goods_ids,max_concurrent=3):
+        semaphore = asyncio.Semaphore(max_concurrent)
 
-        items=await self.get_detial_id()
+        success_count = 0
+        fail_count = 0
+        skip_count = 0
 
-        # 过滤
-        filtered=[]
-        for item in items:
-            gid=list(item.keys())[0]
-            if gid in target_goods_ids:
-                filtered.append(item)
-
-        print(len(filtered))
-
-        self.logger.info(f'实际采集成功:{len(filtered)}')
-
-        semaphore=asyncio.Semaphore(max_concurrent)
+        goods_ids = [list(item.keys())[0] for item in filtered]
+        if batch_id and goods_ids:
+            self.product_dao.batch_update_worker_id(goods_ids, batch_id)
 
         async def publish_one(item):
+            nonlocal success_count, fail_count, skip_count
+
             async with semaphore:
-                goods_id=list(item.keys())[0]
+                goods_id = list(item.keys())[0]
                 detail_id = item[goods_id]['detail_id']
+                cid = item[goods_id]['cid']
+
                 try:
-                    # 2️⃣ 选择店铺（动态）
-                    await self.selectShop(detail_id,group)
-                    # 3️⃣ 获取商品信息
-                    goods_info=await self.get_goods_info(detail_id)
-                    # 4️⃣ 修改
-                    await self.save(goods_info)
-                    # 5️⃣ 发布
-                    ok=await self.publish(detail_id, group)
+                    # 检查是否有配置
+                    config = self.get_category_config(cid)
+                    if config is None:
+                        self.logger.warning(f"商品 {goods_id} 类目 {cid} 无配置，跳过")
+                        self.product_dao.mark_failed(goods_id)
+                        skip_count += 1
+                        return
+
+                    # 选择店铺
+                    await self.selectShop(detail_id, group)
+
+                    # 获取商品信息
+                    goods_info = await self.get_goods_info(detail_id)
+                    if not goods_info:
+                        self.logger.error(f"获取商品信息失败: {goods_id}")
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        return
+
+                    # 修改并保存
+                    save_result = await self.save(goods_info)
+
+                    if save_result.get('result') == 'skip':
+                        self.logger.warning(f"商品 {goods_id} 跳过保存")
+                        self.product_dao.mark_failed(goods_id)
+                        skip_count += 1
+                        return
+                    elif save_result.get('result') != 'success':
+                        self.logger.error(f"商品 {goods_id} 保存失败")
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        return
+
+                    # 发布
+                    ok = await self.publish(detail_id, group)
 
                     if ok:
-                        self.product_dao.update_status("success",goods_id )
+                        self.product_dao.update_status(goods_id, "published")
+                        success_count += 1
                     else:
-                        self.product_dao.mark_failed(goods_id )
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+
                 except Exception as e:
+                    self.logger.error(f'发布失败：{goods_id} - {e}', exc_info=True)
                     self.product_dao.mark_failed(goods_id)
-                    self.logger.error(f'发布失败：{goods_id}-{e}')
+                    fail_count += 1
+
         # 并发执行所有商品的发布流程
         await asyncio.gather(*[publish_one(item) for item in filtered])
-        self.logger.info('当前组完成')
 
+        self.logger.info(f'当前组完成 - 成功: {success_count}, 失败: {fail_count}, 跳过: {skip_count}')
+
+#
 # if __name__ == '__main__':
-#     a=AutoPublish('auto_listing')
-#     asyncio.run(a.dispath_publish_concurrent())
-
-
-
+#     # 测试代码
+#     async def test():
+#         publisher = AutoPublish('auto_listing')
+#         # 示例：发布指定商品
+#         target_goods = ['601105622411955', '601105512069113']  # 替换为实际的商品ID列表
+#         shop_group = ['4720369', '8249645', '8368031']  # 店铺组
+#         await publisher.dispatch_publish_concurrent(shop_group, target_goods, max_concurrent=2)
+#
+#
+#     asyncio.run(test())

@@ -72,24 +72,26 @@ class DatabasePool:
             # 创建商品表
             cursor.execute("""
             CREATE TABLE IF NOT EXISTS products_auto (
-                id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                source VARCHAR(255),
-                goods_id VARCHAR(50) NOT NULL UNIQUE,
-                name TEXT,
-                category VARCHAR(100),
-                sub_category VARCHAR(100),
-                month_sale VARCHAR(100),
-                status VARCHAR(20) DEFAULT 'pending',
-                shop_id VARCHAR(50),
-                worker_id VARCHAR(50),
-                retry_count INT DEFAULT 0,
-                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-                updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    source VARCHAR(255),
+    goods_id VARCHAR(50) NOT NULL UNIQUE,
+    name TEXT,
+    category VARCHAR(100),
+    sub_category VARCHAR(100),
+    month_sale VARCHAR(100),
+    status VARCHAR(20) DEFAULT 'pending',
+    processing_at DATETIME NULL,                       -- 新增字段，位于 status 之后
+    shop_id VARCHAR(50),
+    worker_id VARCHAR(50),
+    retry_count INT DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-                INDEX idx_status (status),
-                INDEX idx_goods_id (goods_id),
-                INDEX idx_category (category)
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+    INDEX idx_status (status),
+    INDEX idx_goods_id (goods_id),
+    INDEX idx_category (category),
+    INDEX idx_processing_at (processing_at)            -- 新增索引
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
             """)
 
             conn.commit()

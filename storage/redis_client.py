@@ -5,9 +5,10 @@ import redis
 class RedisClient:
     def __init__(self):
         self.client = redis.Redis(
-            host='localhost',
+            host='r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com',
             port=6379,
             db=1,
+            password='Lxz123456',
             decode_responses=True
         )
 

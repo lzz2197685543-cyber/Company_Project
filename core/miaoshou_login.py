@@ -6,6 +6,7 @@ from datetime import datetime
 from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
+from core.base_client import BaseClient
 
 IMG_DIR = Path(__file__).resolve().parent.parent / "data" / "img"
 COOKIE_DIR=Path(__file__).resolve().parent.parent / "data" /"cookies"
@@ -22,117 +23,146 @@ class MiaoShouLogin:
         self.password = cfg['password']
         self.logger = get_logger(job)
         self.page = page
+        self.base_client=BaseClient(job)
 
     async def captcha(self):
-        # 直接截取验证码元素
-        captcha_element = self.page.locator('#J_loginBox > div.recovery-form-item.J_imgCaptcha').locator('img').first
-        await captcha_element.screenshot(path=f'{IMG_DIR}/captcha.png')
-
-        # 初始化OCR对象
-        ocr = ddddocr.DdddOcr()
-
-        # 读取图片
-        with open(f'{IMG_DIR}/captcha.png', "rb") as f:
-            image = f.read()
-
-        # 识别图片
-        result = ocr.classification(image)
-        print(result)  # 输出识别结果
-
-        await asyncio.sleep(1)
-
-        # 输入验证码
+        captcha_img = self.page.locator(
+            '#J_loginBox > div.recovery-form-item.J_imgCaptcha img'
+        ).first
         captcha_input = self.page.locator(
-            '#J_loginBox > div.recovery-form-item.J_imgCaptcha > input.captcha-text.J_inputField')
-        await captcha_input.click()
-        await captcha_input.fill(result)
+            '#J_loginBox > div.recovery-form-item.J_imgCaptcha > input.captcha-text.J_inputField'
+        )
 
-    async def login(self):
-        """主登录流程"""
-        try:
-            # 访问网站
-            await self.page.goto("https://erp.91miaoshou.com/?redirect=%2Fwelcome")
-            await self.page.wait_for_load_state("domcontentloaded")
+        last_err = None
 
-            # ==============输入账号密码=============
-            await self.page.fill('input[placeholder*="手机号/子账号/邮箱"]', self.phone)
-            await self.page.fill('input[placeholder*="密码"]', self.password)
+        for attempt in range(3):
+            try:
+                await captcha_img.wait_for(state="visible", timeout=10000)
+                await captcha_img.scroll_into_view_if_needed()
+                await self.page.wait_for_timeout(800)
 
-            # ==============验证码的处理（循环重试）==============
-            max_retries = 6  # 最大重试次数
-            retry_count = 0
-            login_success = False
+                img_path = IMG_DIR / "captcha.png"
+                await captcha_img.screenshot(path=str(img_path), timeout=10000)
 
-            while retry_count < max_retries:
-                # 输入验证码
-                await self.captcha()
+                if not img_path.exists() or img_path.stat().st_size == 0:
+                    raise ValueError("验证码图片截图为空")
 
-                # 点击登录按钮
-                await self.page.click('#J_loginBtn')
+                ocr = ddddocr.DdddOcr()
+                with open(img_path, "rb") as f:
+                    image = f.read()
 
-                # 等待页面响应，让错误提示出现
-                await self.page.wait_for_timeout(2000)
+                result = ocr.classification(image)
+                result = (result or "").strip().replace(" ", "")
 
-                # 检查是否有错误提示
-                error_element = self.page.locator('.error-msg').first
-                if await error_element.count() > 0:
-                    error_text = await error_element.text_content()
-                    print(f"错误提示: {error_text}")
+                if not result:
+                    raise ValueError("验证码识别结果为空")
 
-                    if "图形验证码不正确" in error_text:
-                        retry_count += 1
-                        print(f"验证码错误，第{retry_count}次重试...")
+                self.logger.info(f"验证码识别结果: {result}")
 
-                        # 刷新验证码（如果需要的话，可以点击验证码图片刷新）
-                        captcha_img = self.page.locator('#J_loginBox > div.recovery-form-item.J_imgCaptcha').locator(
-                            'img').first
-                        if await captcha_img.count() > 0:
-                            await captcha_img.click()  # 点击刷新验证码
+                await captcha_input.click()
+                await captcha_input.fill(result)
+                return True
 
-                        await self.page.wait_for_timeout(1000)
-                        continue
-                    else:
-                        # 其他错误提示
-                        print(f"登录失败: {error_text}")
+            except Exception as e:
+                last_err = e
+                self.logger.warning(f"验证码识别第 {attempt + 1}/3 次失败: {e}")
+
+                try:
+                    await captcha_img.click()
+                except Exception:
+                    pass
+
+                await self.page.wait_for_timeout(1000)
+
+        raise Exception(f"验证码识别失败: {last_err}")
+
+    async def login(self, max_retries=3):
+        """主登录流程：带重试，失败返回 False，不直接抛出中断"""
+        login_url = "https://erp.91miaoshou.com/?redirect=%2Fwelcome"
+
+        for attempt in range(max_retries):
+            try:
+                self.logger.info(f"妙手登录开始，第 {attempt + 1}/{max_retries} 次尝试")
+
+                # 访问登录页：降低因 load 超时导致的失败
+                await self.page.goto(login_url, wait_until="domcontentloaded", timeout=60000)
+                await self.page.wait_for_load_state("domcontentloaded")
+
+                # 输入账号密码
+                await self.page.fill('input[placeholder*="手机号/子账号/邮箱"]', self.phone)
+                await self.page.fill('input[placeholder*="密码"]', self.password)
+
+                max_captcha_retries = 6
+                login_success = False
+
+                for captcha_try in range(max_captcha_retries):
+                    # 识别并输入验证码
+                    await self.captcha()
+
+                    # 点击登录按钮
+                    await self.page.click('#J_loginBtn')
+                    await self.page.wait_for_timeout(2000)
+
+                    # 检查错误提示
+                    error_element = self.page.locator('.error-msg').first
+                    if await error_element.count() > 0:
+                        error_text = await error_element.text_content() or ""
+                        self.logger.warning(f"登录错误提示: {error_text}")
+
+                        if "图形验证码不正确" in error_text:
+                            self.logger.info(f"验证码错误，第 {captcha_try + 1}/{max_captcha_retries} 次重试")
+                            captcha_img = self.page.locator(
+                                '#J_loginBox > div.recovery-form-item.J_imgCaptcha'
+                            ).locator('img').first
+                            if await captcha_img.count() > 0:
+                                await captcha_img.click()
+                            await self.page.wait_for_timeout(1000)
+                            continue
+
+                        self.logger.error(f"登录失败: {error_text}")
                         break
-                else:
-                    # 没有错误提示，可能登录成功
-                    # 检查是否跳转到目标页面
+
+                    # 没有错误提示，检查是否已登录
                     current_url = self.page.url
                     if "welcome" in current_url or "dashboard" in current_url:
-                        print("登录成功！")
                         login_success = True
+                        self.logger.info("妙手登录成功")
                         break
-                    else:
-                        print("等待页面跳转...")
-                        await self.page.wait_for_timeout(2000)
 
-                        # 再次检查是否登录成功
-                        current_url = self.page.url
-                        if "welcome" in current_url or "dashboard" in current_url:
-                            print("登录成功！")
-                            login_success = True
-                            break
-                        else:
-                            print("登录状态未知，继续等待...")
-                            break
+                    await self.page.wait_for_timeout(2000)
+                    current_url = self.page.url
+                    if "welcome" in current_url or "dashboard" in current_url:
+                        login_success = True
+                        self.logger.info("妙手登录成功")
+                        break
 
-            if not login_success and retry_count >= max_retries:
-                print("验证码重试次数已达上限，请检查")
-            elif login_success:
-                print("验证码验证成功，已登录")
+                if login_success:
+                    await self._save_cookies()
+                    await self.autocliam()
+                    return True
 
-            # ============== 保存 Cookie ==============
-            await self._save_cookies()
+                self.logger.warning(f"妙手登录未成功，第 {attempt + 1}/{max_retries} 次尝试结束")
 
-            return True
+            except Exception as e:
+                self.logger.error(f"妙手登录第 {attempt + 1}/{max_retries} 次异常: {e}")
+                try:
+                    await self.page.wait_for_timeout(1000)
+                    await self.page.reload(wait_until="domcontentloaded", timeout=30000)
+                except Exception:
+                    pass
 
+        self.logger.error("妙手登录失败，已达到最大重试次数")
+        return False
 
-        except Exception as e:
-            self.logger.error(f"登录过程异常: {e}")
-            import traceback
-            traceback.print_exc()
-            raise
+    async def autocliam(self):
+        data = {
+            'claimedPlatforms[0]': 'pddkj',
+            'isAutoClaimed': '1',
+        }
+        await self.base_client.post('https://erp.91miaoshou.com/api/move/common_collect_box/saveClaimedPlatforms',
+            payload=data)
+
+        print("自动认领开启",data)
 
     async def _save_cookies(self):
         """保存当前页面的 Cookie 到文件"""
