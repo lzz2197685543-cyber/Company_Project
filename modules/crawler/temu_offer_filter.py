@@ -3,6 +3,7 @@ import json
 import asyncio
 import playwright
 from models.product import Product
+from config.settings import category_list
 
 from modules.scheduler.sub_category_scheduler import select_sub_categories,select_categories
 
@@ -164,16 +165,17 @@ class OfferFilterAutomation:
 
         for i in data_list:
             try:
-                product = Product(
-                    goods_id=i.get('goodsId', ''),
-                    name=i.get('goodsName', ''),
-                    category=[j.get('catName', '') for j in i.get('catItems', [{}]) if j.get('catLevel') == 1][0],
-                    sub_category=(i.get('catItems', [{}])[0].get('catName', '') if i.get('catItems') else ''),
-                    month_sale=i.get('monthSold', 0),
-                    source="temu"
-                )
-
-                items.append(product)
+                sub_category = (i.get('catItems', [{}])[0].get('catName', '') if i.get('catItems') else '')
+                if sub_category in category_list:
+                    product = Product(
+                        goods_id=i.get('goodsId', ''),
+                        name=i.get('goodsName', ''),
+                        category=[j.get('catName', '') for j in i.get('catItems', [{}]) if j.get('catLevel') == 1][0],
+                        sub_category=sub_category,
+                        month_sale=i.get('monthSold', 0),
+                        source="temu"
+                    )
+                    items.append(product)
 
             except Exception as e:
                 self.logger.error(f'解析错误: {e}')

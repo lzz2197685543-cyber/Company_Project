@@ -197,7 +197,7 @@ class AutoPublish(BaseClient):
             'titleType': 'multi',
             'remarkType': 'multi',
             'status': 'notPublished',
-            'ownerAccountIds[0]': '187908',
+            'ownerAccountIds[0]': '187908',  # 187908 是lzzit01的账号   202149是root1  202150是root2
             'pageNo': '1',
             'pageSize': '500',
         }

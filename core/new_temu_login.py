@@ -4,7 +4,7 @@ from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 from core.captcha.detector import YunmaCaptchaProcessor
-from utils.page_helpers import temu_close_popup_if_exists,check_if_exists
+from utils.page_helpers import temu_close_popup_if_exists
 
 
 class GeekBILogin:
@@ -22,13 +22,11 @@ class GeekBILogin:
         try:
 
             # 访问网站
-            await self.page.goto("https://www.geekbi.com/user/login")
-            # 检测有没有检测框
-            # await check_if_exists(self.page)
+            await self.page.goto("https://www.geekbi.com/user/login", wait_until="domcontentloaded", timeout=60000)
 
-            await self.page.wait_for_load_state("domcontentloaded")
 
-            # 选择手机号登录
+            # 验证通过后再找手机号登录标签
+            await self.page.wait_for_selector('.arco-tabs-tab-title', timeout=30000)
             await self.page.locator(".arco-tabs-tab-title", has_text="手机号登录").click()
 
             # 输入账号密码

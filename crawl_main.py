@@ -27,7 +27,7 @@ async def main():
         # 爬虫---爬取数据
         page_urls = [
             'https://www.geekbi.com/data/goods/hot-sale',
-            'https://www.geekbi.com/data/goods/day-sale-rise',
+            # 'https://www.geekbi.com/data/goods/day-sale-rise',
             # 'https://www.geekbi.com/data/goods/blue-ocean-hot-sale',
             # 'https://www.geekbi.com/data/goods/hot-sale-new',
             # 'https://www.geekbi.com/data/goods/new-mall-hot-sale',

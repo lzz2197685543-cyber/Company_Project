@@ -69,5 +69,21 @@
   "miaoshou": {
     "account": "lzzit01",
     "password": "Liang123456.+"
+  },
+  "geekbi1": {
+    "account": "13356552400",
+    "password": "lxz2026jjy"
+  },
+  "miaoshou1": {
+    "account": "robot01",
+    "password": "Robot123456."
+  },
+  "geekbi2": {
+    "account": "13376614188",
+    "password": "lxz2026jjy"
+  },
+  "miaoshou2": {
+    "account": "robot02",
+    "password": "Robot123456."
   }
 }

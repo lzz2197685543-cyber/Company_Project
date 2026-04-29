@@ -54,17 +54,3 @@ async def temu_close1_popup_if_exists(page: Page):
     except Exception:
         pass
 
-# 检测框
-async def check_if_exists(page: Page):
-    try:
-        print('检测框')
-        check=await page.locator('#instructionText').inner_text()
-        print(check)
-        check_btn=page.locator("#verifyCheckbox")
-        if await check_btn.count() > 0:
-            await check_btn.first.wait_for(state="visible", timeout=3000)
-            await check_btn.first.click()
-            print('检测到检测框')
-    except Exception:
-        pass
-

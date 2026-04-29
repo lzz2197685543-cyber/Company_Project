@@ -1,13 +1,37 @@
 import pandas as pd
+import json
 
-df = pd.read_csv('./category_info.csv')
-df1 = pd.read_csv('./goods_attributes.csv')
+# 方法1：逐行读取（每行一个JSON对象）
+data_list = []
 
-# 将叶子类目名称映射到df1中
-df1 = df1.merge(df[['类目ID', '叶子类目名称']], on='类目ID', how='left')
+with open('publish_fails.jsonl', 'r', encoding='utf-8') as f:
+    for line in f:
+        line = line.strip()
+        if line:  # 跳过空行
+            try:
+                data_list.append(json.loads(line))
+            except json.JSONDecodeError as e:
+                print(f"解析错误: {e}")
+                continue
 
-# 保存到新的CSV文件
-df1.to_csv('./goods_attributes_with_category.csv', index=False, encoding='utf-8-sig')
+# 转换为DataFrame
+df = pd.DataFrame(data_list)
 
-print("已保存为: goods_attributes_with_category.csv")
-print(f"保存成功，共 {len(df1)} 行数据")
+# 展开嵌套的response字段
+if 'response' in df.columns:
+    response_df = df['response'].apply(pd.Series).add_prefix('response_')
+    df = pd.concat([df.drop(columns=['response']), response_df], axis=1)
+
+df.drop_duplicates(subset=['cid'],keep='first', inplace=True)
+
+# 保存为CSV
+df.to_csv('output.csv', index=False, encoding='utf-8-sig')
+print(f"✅ 转换完成！共 {len(df)} 行数据")
+print(df.head())
+
+
+# import pandas as pd
+#
+# df=pd.read_csv('category_info.csv')
+# df.drop_duplicates(subset=['类目ID'],keep='first', inplace=True)
+# df.to_csv('output1.csv', index=False, encoding='utf-8-sig')
