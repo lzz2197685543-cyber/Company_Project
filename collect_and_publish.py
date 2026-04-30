@@ -12,7 +12,7 @@ from modules.miaoshou.publish import AutoPublish
 from storage.product_dao import ProductDAO
 from config.settings import SHOP_GROUPS, SHOP_DAILY_LIMIT
 from utils.logger import get_logger
-from modules.miaoshou.full_process import AutoListing
+from utils.page_helpers import temu_close_popup_if_exists,handle_security_verification,wait_for_verification_complete
 
 
 job = "auto_listing"
@@ -40,11 +40,9 @@ def load_plan():
     except Exception:
         return {}
 
-
 def save_plan(plan: dict):
     with open(PLAN_FILE, "w", encoding="utf-8") as f:
         json.dump(plan, f, ensure_ascii=False, indent=2)
-
 
 async def collect_with_retry(goods_id, page, logger, max_retries=MAX_RETRIES):
     """带重试机制的单个商品采集"""
@@ -60,6 +58,7 @@ async def collect_with_retry(goods_id, page, logger, max_retries=MAX_RETRIES):
                 wait_until="domcontentloaded",
                 timeout=60000,
             )
+            await handle_security_verification(page)
             await page.wait_for_timeout(1000)
 
             # 点击“一键上架”
@@ -146,7 +145,6 @@ async def collect_with_retry(goods_id, page, logger, max_retries=MAX_RETRIES):
                     logger.info(f"采集箱新页面已关闭 - {goods_id}")
             except Exception as e:
                 logger.warning(f"关闭采集箱页面失败 - {goods_id}: {e}")
-
 
 async def collect_concurrent(limit, logger, main_page):
     """批量采集商品，带并发控制和重试机制"""
@@ -239,7 +237,6 @@ async def collect_concurrent(limit, logger, main_page):
 
     return successful_goods_ids
 
-
 async def main():
     total_start = time.perf_counter()
     logger = get_logger(job)
@@ -330,9 +327,9 @@ async def main():
                     except Exception as e:
                         logger.warning(f"关闭发布后残留页面失败: {e}")
 
+
         logger.info("主流程执行完毕，开始运行 full_process 补漏")
-        a = AutoListing(job)
-        await a.run()
+        await publisher.full_process()
 
     finally:
         total_cost = time.perf_counter() - total_start

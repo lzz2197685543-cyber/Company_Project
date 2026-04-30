@@ -10,6 +10,9 @@ import re
 import time
 from pathlib import Path
 
+PLAN_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "tmp" / "group_goods_plan.json"
+
+
 
 class AutoPublish(BaseClient):
     FAIL_LOG_FILE = Path(__file__).resolve().parent.parent.parent / "data" / "publish_fails.jsonl"
@@ -31,6 +34,66 @@ class AutoPublish(BaseClient):
         except Exception as e:
             self.logger.error(f"❌ 加载配置文件失败: {e}")
             self.category_config = {}
+
+    def load_group_goods_plan(self):
+        """读取 group_goods_plan.json"""
+        if not PLAN_FILE.exists():
+            self.logger.warning(f"未找到计划文件: {PLAN_FILE}")
+            return {}
+
+        try:
+            with open(PLAN_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            self.logger.error(f"读取计划文件失败: {e}")
+            return {}
+
+    def build_goods_group_map(self, plan: dict):
+        """
+        把 plan 转成:
+        {
+            "goods_id1": {"group_idx": 1, "shop_group": [...]},
+            "goods_id2": {"group_idx": 2, "shop_group": [...]}
+        }
+        """
+        goods_map = {}
+
+        if not plan:
+            return goods_map
+
+        # 兼容两种结构：
+        # 1) {"1": {"group": [...], "goods_ids": [...]}, "2": ...}
+        # 2) {"groups": [{"group_idx": 1, "shop_group": [...], "goods_ids": [...]}, ...]}
+        if isinstance(plan, dict) and "groups" in plan and isinstance(plan["groups"], list):
+            for item in plan["groups"]:
+                group_idx = item.get("group_idx")
+                shop_group = item.get("shop_group", [])
+                goods_ids = item.get("goods_ids", [])
+                for gid in goods_ids:
+                    goods_map[str(gid)] = {
+                        "group_idx": group_idx,
+                        "shop_group": shop_group
+                    }
+            return goods_map
+
+        if isinstance(plan, dict):
+            for k, v in plan.items():
+                if not str(k).isdigit():
+                    continue
+                if not isinstance(v, dict):
+                    continue
+
+                group_idx = int(k)
+                shop_group = v.get("group", [])
+                goods_ids = v.get("goods_ids", [])
+
+                for gid in goods_ids:
+                    goods_map[str(gid)] = {
+                        "group_idx": group_idx,
+                        "shop_group": shop_group
+                    }
+
+        return goods_map
 
     def get_category_config(self, cid):
         """根据类目ID获取属性配置"""
@@ -258,8 +321,10 @@ class AutoPublish(BaseClient):
         )
         if data['result'] == 'success':
             self.logger.info(f'{detailid}: 选择店铺成功')
+            return True
         else:
             self.logger.warning(f'{detailid}: 选择店铺失败 - {data.get("reason", "未知原因")}')
+            return False
 
     async def get_goods_info(self, detailId):
         """获取商品信息"""
@@ -419,14 +484,28 @@ class AutoPublish(BaseClient):
         if modified_info.get('saleAttributes'):
             for sale_attr in modified_info['saleAttributes']:
                 if sale_attr.get('values'):
+                    # 使用字典去重（基于name）
+                    unique_dict = {}
                     for value in sale_attr['values']:
-                        if value.get('name'):
-                            # 确保 name 是字符串类型
-                            name_value = str(value['name']) if value['name'] is not None else ''
-                            if len(name_value) > 30:
-                                old_name = name_value
-                                value['name'] = old_name[:27] + "..."
-                                print(f"⚠️ 属性值 '{old_name}' 超过30字符，已截断为 '{value['name']}'")
+                        name_value = str(value.get('name', '')) if value.get('name') is not None else ''
+
+                        # 截断过长的值
+                        if len(name_value) > 30:
+                            original_name = name_value
+                            name_value = name_value[:27] + "..."
+                            value['name'] = name_value
+                            print(f"⚠️ 属性值 '{original_name}' 超过30字符，已截断为 '{name_value}'")
+
+                        # 如果name不在字典中，添加
+                        if name_value not in unique_dict:
+                            unique_dict[name_value] = value
+
+                    # 替换为去重后的列表
+                    sale_attr['values'] = list(unique_dict.values())
+
+                    if len(sale_attr['values']) != len(unique_dict):
+                        print(
+                            f"✅ 销售属性 '{sale_attr.get('name')}' 已去重，从 {len(sale_attr['values'])} 个减少到 {len(unique_dict)} 个")
 
         # ========== 只保留第一个销售属性，删除其他的 ==========
         if modified_info.get('saleAttributes') and len(modified_info['saleAttributes']) > 1:
@@ -668,15 +747,219 @@ class AutoPublish(BaseClient):
 
         self.logger.info(f'当前组完成 - 成功: {success_count}, 失败: {fail_count}, 跳过: {skip_count}')
 
+    async def full_process(self, max_concurrent=3):
+        """
+        完整的发布流程（支持并发）
+
+        Args:
+            max_concurrent: 最大并发数，默认3
+        """
+        # 1. 读取 plan 文件
+        plan = self.load_group_goods_plan()
+        if not plan:
+            self.logger.warning("没有可用的 group_goods_plan.json，结束")
+            return
+
+        # 2. 建立 goods_id -> 店铺组 的映射
+        goods_group_map = self.build_goods_group_map(plan)
+        if not goods_group_map:
+            self.logger.warning("计划文件里没有 goods_id 映射，结束")
+            return
+
+        self.logger.info(f"计划文件中共有 {len(goods_group_map)} 个 goods_id 待处理")
+
+        # 3. 获取当前采集箱里的 detail_id / goods_id
+        detail_items = await self.get_detial_id()
+        if not detail_items:
+            self.logger.warning("当前没有可处理的采集箱商品")
+            return
+
+        self.logger.info(f"当前采集箱共获取到 {len(detail_items)} 条数据")
+
+        # 4. 构建需要处理的商品列表（过滤掉无配置和无映射的商品）
+        tasks_data = []
+        skipped_no_config = 0  # 无配置跳过的计数
+        skipped_no_mapping = 0  # 无映射跳过的计数
+
+        for item in detail_items:
+            goods_id = list(item.keys())[0]
+            detail_id = item[goods_id]["detail_id"]
+            cid = item[goods_id]['cid']
+
+            # 检查是否有配置
+            config = self.get_category_config(cid)
+            if config is None:
+                self.logger.warning(f"商品 {goods_id} 类目 {cid} 无配置，跳过")
+                self.product_dao.mark_failed(goods_id)
+                skipped_no_config += 1
+                continue
+
+            # 检查是否在计划中
+            group_info = goods_group_map.get(goods_id)
+            if not group_info:
+                self.logger.info(f"goods_id={goods_id} 未匹配到店铺组，跳过")
+                self.product_dao.mark_failed(goods_id)
+                skipped_no_mapping += 1
+                continue
+
+            shop_group = group_info["shop_group"]
+            group_idx = group_info.get("group_idx")
+
+            tasks_data.append({
+                "goods_id": goods_id,
+                "detail_id": detail_id,
+                "cid": cid,
+                "shop_group": shop_group,
+                "group_idx": group_idx
+            })
+
+        self.logger.info(
+            f"准备处理 {len(tasks_data)} 个商品 "
+            f"(无配置跳过: {skipped_no_config}, 无映射跳过: {skipped_no_mapping})"
+        )
+
+        if not tasks_data:
+            self.logger.warning("没有需要处理的商品")
+            return
+
+        # 5. 并发处理所有商品
+        semaphore = asyncio.Semaphore(max_concurrent)
+
+        success_count = 0
+        fail_count = 0
+        skip_count = 0
+
+        async def process_one(task):
+            nonlocal success_count, fail_count, skip_count
+
+            async with semaphore:
+                goods_id = task["goods_id"]
+                detail_id = task["detail_id"]
+                cid = task["cid"]
+                shop_group = task["shop_group"]
+                group_idx = task["group_idx"]
+
+                try:
+                    self.logger.info(
+                        f"开始处理 goods_id={goods_id}, detail_id={detail_id}, "
+                        f"group_idx={group_idx}, shop_group={shop_group}"
+                    )
+
+                    # 1. 选择店铺
+                    select_ok = await self.select_shop_with_result(detail_id, shop_group)
+                    if not select_ok:
+                        self.logger.warning(f"goods_id={goods_id} 选择店铺失败，跳过")
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        return
+
+                    # 2. 获取商品信息
+                    goods_info = await self.get_goods_info(detail_id)
+                    if not goods_info:
+                        self.logger.warning(f"goods_id={goods_id} 获取商品信息失败，跳过")
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        return
+
+                    # 3. 保存商品信息
+                    save_result = await self.save(goods_info)
+
+                    if save_result.get('result') == 'skip':
+                        self.logger.warning(f"商品 {goods_id} 跳过保存（类目无配置）")
+                        self.product_dao.mark_failed(goods_id)
+                        skip_count += 1  # ✅ 修复：跳过计数
+                        return
+                    elif save_result.get('result') != 'success':
+                        self.logger.error(f"商品 {goods_id} 保存失败: {save_result.get('reason', '未知错误')}")
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        return
+
+                    # 4. 发布
+                    publish_ok = await self.publish_with_result(detail_id, shop_group)
+
+                    if publish_ok:
+                        self.product_dao.update_status(goods_id, "published")
+                        success_count += 1
+                        self.logger.info(f"✅ 完成 goods_id={goods_id} 的整套流程")
+                    else:
+                        self.product_dao.mark_failed(goods_id)
+                        fail_count += 1
+                        self.logger.warning(f"❌ goods_id={goods_id} 发布失败")
+
+                except Exception as e:
+                    self.logger.error(f'处理商品 {goods_id} 时发生异常: {e}', exc_info=True)
+                    self.product_dao.mark_failed(goods_id)
+                    fail_count += 1
+
+        # 执行并发任务
+        await asyncio.gather(*[process_one(task) for task in tasks_data])
+
+        # 输出统计信息（包含所有跳过的情况）
+        total_skipped = skipped_no_config + skipped_no_mapping + skip_count
+        self.logger.info(
+            f"发布流程完成 - "
+            f"成功: {success_count}, "
+            f"失败: {fail_count}, "
+            f"跳过: {total_skipped} "
+            f"(预处理无配置: {skipped_no_config}, 预处理无映射: {skipped_no_mapping}, 运行时跳过: {skip_count}), "
+            f"总计: {len(detail_items)}"
+        )
+
+    async def select_shop_with_result(self, detailid, shop_ids):
+        """选择店铺并返回布尔结果"""
+        try:
+            data_json = {'detailIds[0]': f'{detailid}'}
+
+            for i, shop_id in enumerate(shop_ids):
+                data_json[f'shopIds[{i}]'] = shop_id
+
+            data = await self.post(
+                'https://erp.91miaoshou.com/api/platform/pddkj/move/collect_box/claimToShop',
+                payload=data_json,
+            )
+
+            if data.get('result') == 'success':
+                self.logger.info(f'{detailid}: 选择店铺成功')
+                return True
+            else:
+                self.logger.warning(f'{detailid}: 选择店铺失败 - {data.get("reason", "未知原因")}')
+                return False
+        except Exception as e:
+            self.logger.error(f'选择店铺异常: {e}')
+            return False
+
+    async def publish_with_result(self, detailid, shop_ids):
+        """发布并返回布尔结果"""
+        try:
+            data_json = {'detailIds[0]': f'{detailid}'}
+
+            for i, shop_id in enumerate(shop_ids):
+                data_json[f'shopIds[{i}]'] = shop_id
+
+            data = await self.post(
+                'https://erp.91miaoshou.com/api/platform/pddkj/move/move_collect/saveMoveCollectTask',
+                payload=data_json,
+            )
+
+            if data.get('result') == 'success':
+                self.logger.info(f'{detailid}: 发布成功')
+                return True
+            else:
+                self.logger.warning(f"{detailid}: 发布失败 - {data.get('reason', '未知原因')}")
+                return False
+        except Exception as e:
+            self.logger.error(f'发布异常: {e}')
+            return False
+
 #
-# if __name__ == '__main__':
-#     # 测试代码
-#     async def test():
-#         publisher = AutoPublish('auto_listing')
-#         # 示例：发布指定商品
-#         target_goods = ['601105622411955', '601105512069113']  # 替换为实际的商品ID列表
-#         shop_group = ['4720369', '8249645', '8368031']  # 店铺组
-#         await publisher.dispatch_publish_concurrent(shop_group, target_goods, max_concurrent=2)
-#
-#
-#     asyncio.run(test())
+if __name__ == '__main__':
+    # 测试代码
+    async def test():
+        publisher = AutoPublish('auto_listing')
+        # 示例：发布指定商品
+
+        await publisher.full_process()
+
+
+    asyncio.run(test())

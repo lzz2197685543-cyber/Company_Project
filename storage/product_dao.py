@@ -71,6 +71,8 @@ class ProductDAO(BaseDAO):
             LIMIT %s
             FOR UPDATE
             """
+
+
             cursor.execute(select_sql, (limit,))
             rows = cursor.fetchall()
 
@@ -103,6 +105,7 @@ class ProductDAO(BaseDAO):
                 cursor.close()
             if conn:
                 conn.close()
+
 
     # --------------- 将超时的processing 任务恢复为pending ------
     def recover_stale_processing(self, timeout_minutes: int = 30) -> int:

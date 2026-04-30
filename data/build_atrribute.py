@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # 读取 Excel 文件
-df = pd.read_excel('goods_attribute.xlsx')
+df = pd.read_excel('goods_attributes.xlsx')
 
 # 查看列名
 print("列名:", df.columns.tolist())

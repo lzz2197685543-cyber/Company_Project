@@ -4,7 +4,7 @@ from core.browser import BrowserManager
 from utils.logger import get_logger
 from utils.config_loader import get_shop_config
 from core.captcha.detector import YunmaCaptchaProcessor
-from utils.page_helpers import temu_close_popup_if_exists
+from utils.page_helpers import temu_close_popup_if_exists,handle_security_verification,wait_for_verification_complete
 
 
 class GeekBILogin:
@@ -23,6 +23,9 @@ class GeekBILogin:
 
             # 访问网站
             await self.page.goto("https://www.geekbi.com/user/login", wait_until="domcontentloaded", timeout=60000)
+
+
+            await handle_security_verification(self.page)
 
 
             # 验证通过后再找手机号登录标签
