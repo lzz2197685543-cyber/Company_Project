@@ -23,10 +23,28 @@ class AmazonProductCrawler:
 
         product = {
             "asin": asin,
-            "product_name":product_name,
-            'url':url,
-            'date':date.today(),
-            'title_changed':'否'
+            "product_name": product_name,
+            'url': url,
+            'date': date.today(),
+            'title_changed': '否',
+            'subcategorie_changed': '否',
+            "coupon_changed":'否',
+            "price_changed":'否',
+            # 设置默认值，避免后续访问时出现KeyError
+            'title': '',
+            'subcategorie_name': '',
+            "price": '',
+            "sales": 0,
+            "bsr_rank": '',
+            "rating": '',
+            "reviews": 0,
+            "img_url": '',
+            "sub_rank": '',
+            "all_keywords": 0,
+            "natural_keywords": 0,
+            "ads_keywords": 0,
+            "recommend_keywords": 0,
+            "coupon": ''
         }
 
         # ---------------- 价格数据 ----------------
@@ -40,6 +58,10 @@ class AmazonProductCrawler:
             for item in items:
                 if asin == item['asin']:
                     product['title'] = item.get('title')
+                    if item['subcategories'] and len(item['subcategories']) > 0:
+                        product['subcategorie_name'] = item['subcategories'][0]['label']
+                    else:
+                        product['subcategorie_name'] = ''  # 或者设置为 None，或者从其他字段获取默认值
                     product["price"] = item.get("price")
                     product["sales"] = item.get("amzUnit") or item.get("totalUnits")
 
@@ -72,7 +94,7 @@ class AmazonProductCrawler:
                         # 自然搜索词
                         product["natural_keywords"] = item.get("counter", {}).get("NATURAL_SEARCHING", 0)
                         # 广告流量词
-                        product["ads_keywords"] = item.get("counter", {}).get("ADS", 0)+item['counter'].get('SPONSOR_VIDEO',0)+item['counter'].get('HIGHLY_RATED',0)
+                        product["ads_keywords"] = item.get("counter", {}).get("ADS", 0)+item['counter'].get('SPONSOR_VIDEO',0)+item['counter'].get('HIGHLY_RATED',0)+item['counter'].get('SPONSOR_BRAND',0)
                         # 搜索关键词
                         product["recommend_keywords"] = item.get("counter", {}).get("AMAZON_CHOICE", 0)
 
@@ -107,11 +129,11 @@ class AmazonProductCrawler:
         return result
 
 
-# asin_url_list = [
-#     ("配对花-Learning Resources", "https://www.amazon.com/dp/B0DSGL45JX?th=1"),
-#     ("弹珠平衡-Zamtzax", "https://www.amazon.com/dp/B0FQNZNP5P?th=1")
-# ]
-#
+asin_url_list = [
+    {"产品名":"配对花-Learning Resources", "产品链接":"https://www.amazon.com/dp/B0DSGL45JX?th=1"},
+    {"产品名":"弹珠平衡-Zamtzax", "产品链接":"https://www.amazon.com/dp/B0FQNZNP5P?th=1"}
+]
+
 # async def main():
 #
 #     crawler = AmazonProductCrawler("amazon_goods_monitor")

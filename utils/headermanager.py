@@ -57,7 +57,7 @@ class HeaderManager:
             # 'zh-CN,zh;q=0.9,en;q=0.8',
             # 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
             'en-US,en;q=0.9',
-            'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+            # 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
             # 'zh-CN,zh;q=0.9',
             'en-GB,en-US;q=0.9,en;q=0.8',
         ]

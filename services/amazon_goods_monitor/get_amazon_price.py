@@ -7,13 +7,25 @@ class AmazonMonitorPrice(SellerSpriteClient):
         super().__init__(job)
         self.url = 'https://www.sellersprite.com/v3/api/competing-lookup'
 
-    async def fetch(self, asins):
+    async def fetch(self, url):
         self.logger.info('-----------开始爬取商品信息-----------')
+        asin = url.split('/')[-1]
+        if "?" in asin:
+            asin = asin.split('?')[0]
+        else:
+            asin = asin
+
+        market='US'
+        if 'amazon.com' in url:
+            market='US'
+        if 'amazon.co.uk' in url:
+            market='UK'
+
         try:
             json_data = {
-                'market': 'US',
+                'market': market,
                 'monthName': 'bsr_sales_nearly',
-                'asins': [asins],
+                'asins': [asin],
                 'page': 1,
                 'nodeIdPaths': [],
                 'symbolFlag': False,
@@ -22,7 +34,7 @@ class AmazonMonitorPrice(SellerSpriteClient):
                 'lowPrice': 'N'
             }
             return await self.post(self.url, json_data)
-            # return await self.post(self.url, json_data),asins
+            # return await self.post(self.url, json_data),asin
         except Exception as e:
             self.logger.error(f"请求失败: {e}")
             return None
@@ -32,7 +44,12 @@ class AmazonMonitorPrice(SellerSpriteClient):
             if res_data and 'data' in res_data and 'items' in res_data['data']:
                 for item in res_data['data']['items']:
                     if asins==item['asin']:
+                        # 标题
                         title=item['title']
+
+                        # 小类名称
+                        subcategory_name=item['subcategories'][0]['label']
+
                         # 价格
                         price = item['price']
 
@@ -58,6 +75,7 @@ class AmazonMonitorPrice(SellerSpriteClient):
 
                         item_list = {
                             "标题":title,
+                            "小类目":subcategory_name,
                             '价格': price,
                             '销量': total_sales,
                             '图片URL': img_url,
@@ -78,12 +96,12 @@ class AmazonMonitorPrice(SellerSpriteClient):
 #
 async def main():
     monitor = AmazonMonitorPrice('amazon_goods_monitor')
-    data,asins = await monitor.fetch('B0FVMFGM5W')
+    data,asins = await monitor.fetch('https://www.amazon.com/dp/B0DSGL45JX?th=1')
     if data:
         await monitor.parse(data,asins)
 
     else:
         print("请求失败")
 
-# if __name__ == '__main__':
-#     asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())

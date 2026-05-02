@@ -48,6 +48,10 @@
       "Shopee_Logistics_Exception_Monitor": {
         "access_token": "7213ea9ff23c74aa80aee13e9d8e487920ce72be60686ee976965887018bfb13",
         "secret": "SECddc30a1b5b954307f71c81f5b32137ea32bfe693c15322d88db24befe2778362"
+      },
+      "Amazon_StockBo": {
+        "access_token": "7fbf0bd177f4e08649e897f7acebf0882da16ec33c345ef26587c589110d4f09",
+        "secret": "SEC5359157d026c99de33b6c5632f2a25449f69d29de4c0380299e5d879b5b3ccfa"
       }
     }
   },

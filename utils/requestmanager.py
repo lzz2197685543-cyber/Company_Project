@@ -1,9 +1,9 @@
 import time
 import random
 import requests
-from typing import Dict, Optional, List
-from core.headermanager import HeaderManager
-from core.proxy_pool import ProxyPool
+from typing import Optional
+from utils.headermanager import HeaderManager
+from utils.proxy_pool import ProxyPool
 from utils.logger import get_logger
 from utils.dingtalk_bot import ding_bot_send
 from urllib.parse import urlparse
@@ -37,6 +37,8 @@ class RequestManager:
         self.current_proxies = None
 
         self.logger=get_logger(job)
+
+        self._proxy_acquired = False  # 添加标记，是否已获取代理
 
         # 各国家默认邮编
         self.AMAZON_ZIPCODE_MAP = {
@@ -112,6 +114,11 @@ class RequestManager:
             self.set_amazon_zipcode(domain)
             self.amazon_zipcode_set.add(domain)
 
+            # 🔴 设置邮编后，额外添加区域cookies
+            self.session.cookies.set('i18n-prefs', 'USD', domain='.amazon.com')
+            self.session.cookies.set('lc', 'en_US', domain='.amazon.com')
+            self.session.cookies.set('session-id-time', '2082787201l', domain='.amazon.com')
+
         for attempt in range(1, self.max_retries + 1):
             try:
                 # 生成请求头
@@ -129,14 +136,19 @@ class RequestManager:
                 proxy_info = "无代理"
 
                 if self.use_proxy and self.proxy_pool:
-                    result = self.proxy_pool.get_proxy()
-                    if result:
-                        self.current_proxy, self.current_proxies = result
+                    # 如果还没有获取过代理，或者当前代理失效，才获取新代理
+                    if not self._proxy_acquired or not self.current_proxy:
+                        result = self.proxy_pool.get_proxy()
+                        if result:
+                            self.current_proxy, self.current_proxies = result
+                            self._proxy_acquired = True
+                            self.logger.info(f"📡 获取新代理: {self.current_proxies['http']}")
+                    else:
+                        self.logger.info(f"📡 复用当前代理: {self.current_proxies['http']}")
+
+                    if self.current_proxy:
                         proxies = self.current_proxies
                         proxy_info = f"{self.current_proxy['host']}:{self.current_proxy['port']}"
-
-                        # 打印完整的代理URL（调试用，生产环境可以注释掉）
-                        self.logger.info(f"📡 代理URL: {self.current_proxies['http']}")
 
                 self.logger.info(f"使用代理: {proxy_info} (尝试 {attempt}/{self.max_retries})")
 
@@ -217,7 +229,7 @@ class RequestManager:
                 time.sleep(wait_time)
 
         self.logger.info(f"❌ 所有重试失败: {url}")
-        ding_bot_send(f"[获取亚马逊优惠券]--所有重试失败: {url}")
+        ding_bot_send('me',f"[获取亚马逊优惠券]--所有重试失败: {url}")
         return None
 
     def close(self):

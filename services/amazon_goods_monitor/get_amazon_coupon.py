@@ -1,10 +1,8 @@
 from bs4 import BeautifulSoup
-import time
-from core.headermanager import HeaderManager
-from core.requestmanager import RequestManager
+from utils.headermanager import HeaderManager
+from utils.requestmanager import RequestManager
 from utils.logger import get_logger
 from pathlib import Path
-import pandas as pd
 import json
 import re
 
@@ -95,9 +93,6 @@ class AmazonCoupon:
             timeout=15
         )
 
-        print("acrCustomerReviewText:", "acrCustomerReviewText" in response.text)
-        print("total-review-count:", "total-review-count" in response.text)
-        print("aggregateRating:", "aggregateRating" in response.text)
 
         if not response:
             return None
@@ -213,7 +208,7 @@ def main():
     # for url in list(df['产品链接']):
 
     # 测试
-    url = 'https://www.amazon.com/dp/B0FQNZNP5P?th=1'
+    url = 'https://www.amazon.com/dp/B0FX3Q1JS4?th=1'
 
     # 创建爬虫
     crawler = AmazonCoupon(url,'amazon_goods_monitor')

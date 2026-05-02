@@ -8,10 +8,11 @@ class AmazonMonitorStorage:
         self.logger = get_logger(job)
 
         self.conn = pymysql.connect(
-            host="127.0.0.1",
-            user="root",
-            password="1234",
-            database="py_spider",
+            host='rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+            port=3306,
+            user='root_lxz',
+            password='Lxz123456',
+            database='py_spider',
             charset="utf8mb4"
         )
 
@@ -47,8 +48,15 @@ class AmazonMonitorStorage:
             title VARCHAR(1000),
 
             title_changed VARCHAR(10),
+            
+            subcategorie_name VARCHAR(1000),
+            
+            subcategorie_changed VARCHAR(10),
 
             img_url VARCHAR(1000),
+            
+            price_changed VARCHAR(10),
+            coupon_changed VARCHAR(10),
 
             create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
@@ -62,15 +70,21 @@ class AmazonMonitorStorage:
 
         self.conn.commit()
 
-
     def save(self, data):
         sql = """
         INSERT INTO amazon_product_monitor
         (asin,product_name,product_url,crawl_date,price,coupon,sales,
         bsr_rank,sub_rank,all_keywords,natural_keywords,ads_keywords,
-        recommend_keywords,rating,review_count,title,title_changed,img_url)
-        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+        recommend_keywords,rating,review_count,title,title_changed,subcategorie_name,subcategorie_changed,coupon_changed,price_changed,img_url)
+        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
         """
+
+        # 处理可能为空的数值类型字段
+        def clean_value(value):
+            """将空字符串转换为 None，保留0作为有效值"""
+            if value == '' or value == 'None' or value is None:
+                return None
+            return value
 
         with self.conn.cursor() as cursor:
             cursor.execute(sql, (
@@ -78,27 +92,31 @@ class AmazonMonitorStorage:
                 data["product_name"],
                 data["url"],
                 data["date"],
-                data["price"],
-                data["coupon"],
-                data["sales"],
-                data["bsr_rank"],
-                data["sub_rank"],
-                data["all_keywords"],
-                data["natural_keywords"],
-                data["ads_keywords"],
-                data["recommend_keywords"],
-                data["rating"],
-                data["reviews"],
-                data["title"],
-                data["title_changed"],
-                data["img_url"]
+                clean_value(data.get("price")),  # 修改这里
+                data.get("coupon"),  # coupon 是字符串，可以保留空字符串
+                clean_value(data.get("sales")),  # 修改这里
+                clean_value(data.get("bsr_rank")),  # 修改这里
+                clean_value(data.get("sub_rank")),  # 修改这里
+                clean_value(data.get("all_keywords")),  # 修改这里
+                clean_value(data.get("natural_keywords")),  # 修改这里
+                clean_value(data.get("ads_keywords")),  # 修改这里
+                clean_value(data.get("recommend_keywords")),  # 修改这里
+                clean_value(data.get("rating")),  # 修改这里
+                clean_value(data.get("reviews")),  # 修改这里
+                data.get("title"),
+                data.get("title_changed"),
+                data.get("subcategorie_name"),
+                data.get('subcategorie_changed'),
+                data.get('coupon_changed'),
+                data.get("price_changed"),
+                data.get("img_url")
             ))
 
         self.conn.commit()
 
     def get_yesterday_data(self, asin):
         sql = """
-        SELECT price,title
+        SELECT price,title,subcategorie_name,coupon
         FROM amazon_product_monitor
         WHERE asin=%s
         ORDER BY crawl_date DESC

@@ -28,6 +28,7 @@ class AmazonMonitorPopularity(SellerSpriteClient):
         try:
             if res_data and 'data' in res_data and 'pager' in res_data['data']:
                 for i in res_data['data']['pager']['items']:
+                    print(i)
                     if asins == i['asin']:
                         # 全部流量词
                         all_keywords=i['keywords']
@@ -35,7 +36,7 @@ class AmazonMonitorPopularity(SellerSpriteClient):
                         search_key=i['counter'].get('NATURAL_SEARCHING',0)
 
                         # 广告流量词
-                        advertisement_key=i['counter'].get('ADS',0)+i['counter'].get('SPONSOR_VIDEO',0)+i['counter'].get('HIGHLY_RATED',0)
+                        advertisement_key=i['counter'].get('ADS',0)+i['counter'].get('SPONSOR_VIDEO',0)+i['counter'].get('HIGHLY_RATED',0)+i['counter'].get('SPONSOR_BRAND',0)
 
                         # 搜索关键词
                         keywords=i['counter'].get('AMAZON_CHOICE',0)

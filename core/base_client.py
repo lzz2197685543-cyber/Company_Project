@@ -34,7 +34,7 @@ class SellerSpriteClient:
 
         return False
 
-    async def post(self,url:str,payload:dict,max_retry:int=3):
+    async def post(self,url:str,payload:dict,max_retry:int=6):
         for attempt in range(1,max_retry+1):
             try:
                 cookies=await self.cookie_manager.get_auth()
@@ -80,7 +80,7 @@ class SellerSpriteClient:
             f"[卖家精灵---{self.job}] 请求失败，已超过最大重试次数"
         )
 
-    async def get(self,url:str,params:dict,max_retry:int=3):
+    async def get(self,url:str,params:dict,max_retry:int=6):
         for attempt in range(1,max_retry+1):
             try:
                 cookies=await self.cookie_manager.get_auth()

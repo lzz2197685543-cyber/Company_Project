@@ -63,7 +63,11 @@ def test_query_records():
 
 asin_url_list = test_query_records()
 
-print(asin_url_list)
+# asin_url_list = [
+#     {"产品名":"配对花-Learning Resources", "产品链接":"https://www.amazon.com/dp/B0DSGL45JX?th=1"},
+#     {"产品名":"弹珠平衡-Zamtzax", "产品链接":"https://www.amazon.com/dp/B0FQNZNP5P?th=1"}
+# ]
+
 
 def prepare_table_data(items):
     """构造第一个钉钉表数据（揽收丢件表）"""
@@ -72,7 +76,6 @@ def prepare_table_data(items):
 
         # 直接构建fields，不要嵌套两层
         record = {
-            "产品名": item['product_name'],
             "产品链接": {"text": item['url'], "link": item['url']},
             "日期": int(time.time()*1000),
             "页面价": item.get("price", ""),
@@ -88,7 +91,11 @@ def prepare_table_data(items):
             "评分数": item.get('reviews', ''),
             "标题": item.get('title', ''),
             "标题是否发生变化": item.get('title_changed', ''),
+            "小类目":item.get('subcategorie_name', ''),
+            "小类目是否发生变化":item.get('subcategorie_changed',''),
             "图片链接": {"text": item['img_url'], "link": item['img_url']},
+            "页面价是否发生变化":item.get('price_changed',''),
+            "优惠券是否发生变化":item.get('coupon_changed',''),
         }
 
         records.append(record)
@@ -109,6 +116,10 @@ async def main():
 
     message_list1=[]
 
+    message_list2=[]
+
+    message_list3=[]
+
     for product in product_list:
 
         asin = product["asin"]
@@ -119,6 +130,7 @@ async def main():
 
         # ---------------- 价格变化 ----------------
         if change["price_changed"]:
+            product['price_changed']='是'
 
             msg = f"""
 商品: {product['product_name']}
@@ -144,8 +156,37 @@ async def main():
 """
             message_list1.append(msg1)
 
+        # ---------------- 小类目变化 ----------------
+        if change["subcategorie_changed"]:
+            product["subcategorie_changed"] = "是"
+
+            msg2 = f"""
+商品: {product['product_name']}
+
+昨日小类目: {change['old_subcategory']} 
+今日小类目: {product['subcategorie_name']} 
+链接:{product['url']}
+    """
+            message_list2.append(msg2)
+
+
+
+        # ---------------- 优惠券变化 ----------------
+        if change['coupon_changed']:
+            product['coupon_changed']='是'
+
+            msg3 = f"""
+            商品: {product['product_name']}
+
+            昨日优惠券: {change['old_coupon']} 
+            今日优惠券: {product['coupon']} 
+            链接:{product['url']}
+                """
+            message_list3.append(msg3)
+
         # 保存数据库
         storage.save(product)
+
 
     # ---------------- 汇总发送 ----------------
 
@@ -155,7 +196,7 @@ async def main():
 
         final_msg += "\n".join(message_list)
 
-        ding_bot_send('me',final_msg)
+        ding_bot_send('Amazon_StockBo',final_msg)
         print(final_msg)
 
     if message_list1:
@@ -163,7 +204,23 @@ async def main():
 
         final_msg += "\n".join(message_list1)
 
-        ding_bot_send('me', final_msg)
+        ding_bot_send('Amazon_StockBo', final_msg)
+        print(final_msg)
+
+    if message_list2:
+        final_msg = "🚨 Amazon商品小类变化\n"
+
+        final_msg += "\n".join(message_list2)
+
+        ding_bot_send('Amazon_StockBo', final_msg)
+        print(final_msg)
+
+    if message_list3:
+        final_msg = "🚨 Amazon商品优惠券变化\n"
+
+        final_msg += "\n".join(message_list3)
+
+        ding_bot_send('Amazon_StockBo', final_msg)
         print(final_msg)
 
     else:

@@ -1,0 +1,637 @@
+2026-04-30 08:30:43,351 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:30:44,026 | WARNING | amazon_goods_monitor | [卖家精灵] 登录失效，刷新 cookie（第 1 次）
+2026-04-30 08:30:46,130 | INFO | amazon_goods_monitor | 浏览器初始化成功
+2026-04-30 08:30:52,514 | INFO | amazon_goods_monitor | ✅ 登录成功
+2026-04-30 08:30:52,521 | INFO | amazon_goods_monitor | ✅ Cookies已保存到: D:\sd14\SellerSprite\data\cookies\sellersprite_cookie.json
+2026-04-30 08:30:52,806 | INFO | amazon_goods_monitor | 浏览器已关闭
+2026-04-30 08:30:55,499 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:30:56,233 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:30:56,233 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:30:56,234 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DVMKNLY5?psc=1
+2026-04-30 08:30:57,801 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:30:57,809 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:30:57,811 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:30:57,811 | INFO | amazon_goods_monitor | ⏳ 等待 0.3 秒...
+2026-04-30 08:30:58,077 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DVMKNLY5?psc=1
+2026-04-30 08:31:01,349 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:31:02,310 | INFO | amazon_goods_monitor | 标题: Jelly Blox Shepherd Character Set | Shepherd, Dog, Sheep | Toddler & Preschool Building Blocks Kids Can Squeeze, Stretch, Squish | MESH ACCREDITED | Safety Tested, Ouch-Free | Sensory Play Toy Ages 2+
+2026-04-30 08:31:02,350 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:31:02,355 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:31:03,033 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:31:03,800 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:31:03,800 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:31:03,802 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DVHMTQMG?th=1
+2026-04-30 08:31:08,834 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:31:08,840 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:31:08,840 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:31:08,841 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:31:08,951 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DVHMTQMG?th=1
+2026-04-30 08:31:12,899 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:31:13,970 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:31:13,975 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:31:14,730 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:31:15,488 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:31:15,489 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:31:15,489 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0G6ZG554Q?th=1
+2026-04-30 08:31:17,029 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:31:17,037 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://AIHARVNXPM:57446815@124.225.4.69:12533
+2026-04-30 08:31:17,037 | INFO | amazon_goods_monitor | 使用代理: 124.225.4.69:12533 (尝试 1/3)
+2026-04-30 08:31:17,037 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:31:17,893 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0G6ZG554Q?th=1
+2026-04-30 08:31:22,162 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:31:23,186 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:31:23,190 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:31:23,887 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:31:24,659 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:31:24,659 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:31:24,660 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FHVLMDQR?th=1
+2026-04-30 08:31:29,101 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:31:29,109 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:31:29,109 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:31:29,110 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:31:29,794 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FHVLMDQR?th=1
+2026-04-30 08:31:33,686 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:31:34,611 | INFO | amazon_goods_monitor | 标题: Marbles Balance Game for Kids - 60 Colorful Marbles Built-in Storage, Fun Family Party Games,Challenge Board Games for Kids & Adults,1-4 Players, Christmas Birthday Gifts Toys for Kids
+2026-04-30 08:31:34,651 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:31:34,657 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:31:35,410 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:31:36,123 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:31:36,124 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:31:36,124 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FP2LF8ZX?psc=1
+2026-04-30 08:31:47,409 | ERROR | amazon_goods_monitor | 设置邮编失败: HTTPSConnectionPool(host='www.amazon.com', port=443): Read timed out.
+2026-04-30 08:31:47,418 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:31:47,418 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:31:47,419 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:31:48,054 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FP2LF8ZX?psc=1
+2026-04-30 08:31:52,442 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:31:53,263 | INFO | amazon_goods_monitor | 标题: Face Changing Building Block Word Spelling Game Two-Piece Set，Wooden Expression Letter Puzzle Cubes Board Game,for Kids Ages 3+ Boys and Girls Educational Toy Gifts.
+2026-04-30 08:31:53,304 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:31:53,308 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:31:54,003 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:31:54,739 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:31:54,739 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:31:54,740 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DVDZZ2B4
+2026-04-30 08:32:05,984 | ERROR | amazon_goods_monitor | 设置邮编失败: HTTPSConnectionPool(host='www.amazon.com', port=443): Read timed out. (read timeout=10)
+2026-04-30 08:32:05,996 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:32:05,996 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:32:05,997 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:32:06,724 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DVDZZ2B4
+2026-04-30 08:32:11,566 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:32:12,738 | INFO | amazon_goods_monitor | 标题: Fat Brain Toys Magshuto Knockout Rail, Magnetic Trick Shot System, Unique 2 Player Magnet Launching Game for Kids and Tweens Ages 6 and Up
+2026-04-30 08:32:12,799 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:32:12,803 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:32:13,612 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:32:14,373 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:32:14,373 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:32:14,374 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0F9NHN9GW?th=1
+2026-04-30 08:32:15,704 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:32:15,714 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:32:15,714 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:32:15,714 | INFO | amazon_goods_monitor | ⏳ 等待 0.4 秒...
+2026-04-30 08:32:16,091 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0F9NHN9GW?th=1
+2026-04-30 08:32:28,439 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:32:30,951 | INFO | amazon_goods_monitor | 标题: Pixel Art Craft Kits STEM Toys, Brain Teaser Games, Kindergarten Game, Back to School, Encourages Hands-on STEM-Based Play Craft Gifts for Age 5+, Boys & Girls Sensory - Montessori – Autism
+2026-04-30 08:32:30,991 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:32:30,995 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:32:31,680 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:32:32,445 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:32:32,445 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:32:32,446 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0GNB7ZPGT?th=1
+2026-04-30 08:32:34,007 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:32:34,019 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://XEZQOPMX7M:53843223@121.229.211.102:15252
+2026-04-30 08:32:34,019 | INFO | amazon_goods_monitor | 使用代理: 121.229.211.102:15252 (尝试 1/3)
+2026-04-30 08:32:34,021 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:32:34,834 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0GNB7ZPGT?th=1
+2026-04-30 08:32:38,919 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:32:39,903 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:32:39,907 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:32:40,569 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:32:41,218 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:32:41,219 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:32:41,219 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DSGL45JX?th=1
+2026-04-30 08:32:42,827 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:32:42,833 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://XEZQOPMX7M:53843223@121.229.211.102:15252
+2026-04-30 08:32:42,834 | INFO | amazon_goods_monitor | 使用代理: 121.229.211.102:15252 (尝试 1/3)
+2026-04-30 08:32:42,834 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:32:42,976 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DSGL45JX?th=1
+2026-04-30 08:32:46,751 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:32:47,739 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:32:47,745 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:32:48,436 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:32:49,101 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:32:49,102 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:32:49,102 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0G1XCSD8V?th=1
+2026-04-30 08:32:50,530 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:32:50,538 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:32:50,539 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:32:50,539 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:32:50,646 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0G1XCSD8V?th=1
+2026-04-30 08:32:55,818 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:32:56,789 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:32:56,794 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:32:57,594 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:32:58,280 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:32:58,280 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:32:58,282 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B08SJFW6HL?th=1
+2026-04-30 08:32:59,945 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:32:59,952 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:32:59,952 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:32:59,953 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:33:00,048 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B08SJFW6HL?th=1
+2026-04-30 08:33:03,832 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:04,821 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:33:04,826 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:05,426 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:06,189 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:06,190 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:06,191 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0F634LK67?th=1
+2026-04-30 08:33:08,937 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:08,950 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:33:08,950 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:33:08,951 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:33:09,875 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0F634LK67?th=1
+2026-04-30 08:33:13,889 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:14,827 | INFO | amazon_goods_monitor | 优惠券: Apply $6 couponTerms
+2026-04-30 08:33:14,833 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:15,552 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:16,303 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:16,303 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:16,304 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0BVM19YWS?th=1
+2026-04-30 08:33:18,598 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:18,605 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:33:18,605 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:33:18,605 | INFO | amazon_goods_monitor | ⏳ 等待 0.5 秒...
+2026-04-30 08:33:19,076 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0BVM19YWS?th=1
+2026-04-30 08:33:22,981 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:23,999 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:33:24,004 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:24,726 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:25,426 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:25,426 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:25,427 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FLJ8H6B9?th=1
+2026-04-30 08:33:26,645 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:26,654 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:33:26,654 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:33:26,655 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:33:27,297 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FLJ8H6B9?th=1
+2026-04-30 08:33:30,614 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:31,585 | INFO | amazon_goods_monitor | 标题: Wobble Marble Stacking Game for Kids, Marble Balance Board Game with 60 Glass Marbles & Storage Base,Fun Group Play for 1-4 Players,Birthday for Kids Ages 8-12Halloween gifts&Christmas gifts
+2026-04-30 08:33:31,626 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:33:31,630 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:32,363 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:33,105 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:33,105 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:33,106 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/Kaodezhu-Dinosaur-Math-Balance-Toys/dp/B09WN16G4W
+2026-04-30 08:33:34,583 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:34,591 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:33:34,592 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:33:34,593 | INFO | amazon_goods_monitor | ⏳ 等待 0.3 秒...
+2026-04-30 08:33:34,923 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/Kaodezhu-Dinosaur-Math-Balance-Toys/dp/B09WN16G4W
+2026-04-30 08:33:39,601 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:40,758 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:33:40,763 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:41,483 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:42,277 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:42,277 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:42,278 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FGJG2ZHQ
+2026-04-30 08:33:43,499 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:43,507 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:33:43,508 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:33:43,508 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:33:44,345 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FGJG2ZHQ
+2026-04-30 08:33:49,608 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:33:50,625 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:33:50,628 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:33:51,356 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:33:52,086 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:33:52,087 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:33:52,087 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FQP89DCJ
+2026-04-30 08:33:55,040 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:33:55,049 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:33:55,049 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:33:55,050 | INFO | amazon_goods_monitor | ⏳ 等待 0.2 秒...
+2026-04-30 08:33:55,289 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FQP89DCJ
+2026-04-30 08:33:59,219 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:00,327 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:00,331 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:01,063 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:01,808 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:01,808 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:01,809 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DSLNV76D?th=1
+2026-04-30 08:34:03,437 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:03,445 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:34:03,445 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:34:03,446 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:34:04,153 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DSLNV76D?th=1
+2026-04-30 08:34:09,219 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:09,962 | INFO | amazon_goods_monitor | 标题: Pixel Art Creator - STEM Toys - 400 Hard Plastic Cubes, Fine Motor Skills Educational Games & Kindergarten Activities Toy for Kids
+2026-04-30 08:34:09,989 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:09,993 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:10,606 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:11,324 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:11,324 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:11,327 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0F8V6L6XN?th=1
+2026-04-30 08:34:14,057 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:14,065 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:34:14,065 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:34:14,066 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:34:14,898 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0F8V6L6XN?th=1
+2026-04-30 08:34:19,519 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:20,649 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:20,653 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:21,330 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:22,083 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:22,083 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:22,084 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FMRGWVF4?th=1
+2026-04-30 08:34:23,670 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:23,677 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:34:23,677 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:34:23,678 | INFO | amazon_goods_monitor | ⏳ 等待 0.5 秒...
+2026-04-30 08:34:24,226 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FMRGWVF4?th=1
+2026-04-30 08:34:27,527 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:28,324 | INFO | amazon_goods_monitor | 标题: Electronic Sound Maker, Classic Sound Effect Machine with 16 Sound Effects, Portable Novelty Funny Noise Maker Prank Items Gift for Adults
+2026-04-30 08:34:28,363 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:28,368 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:29,084 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:29,865 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:29,866 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:29,868 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0CNSHK9ZM?psc=1
+2026-04-30 08:34:31,311 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:31,319 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:34:31,319 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:34:31,320 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:34:31,960 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0CNSHK9ZM?psc=1
+2026-04-30 08:34:35,687 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:36,686 | INFO | amazon_goods_monitor | 标题: Winning Moves Yahtzee Words Games USA, Family Word Game Version for 2 or More Players, Ages 8+
+2026-04-30 08:34:36,717 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:36,720 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:37,410 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:41,318 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:41,318 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:41,319 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0F2MNGL8D?th=1
+2026-04-30 08:34:42,767 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:42,777 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:34:42,777 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:34:42,778 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:34:43,427 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0F2MNGL8D?th=1
+2026-04-30 08:34:47,228 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:48,223 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:48,227 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:48,828 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:49,573 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:49,574 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:49,575 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FX4YK883?th=1
+2026-04-30 08:34:51,086 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:51,095 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:34:51,095 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:34:51,096 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:34:52,037 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FX4YK883?th=1
+2026-04-30 08:34:54,952 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:34:55,767 | INFO | amazon_goods_monitor | 标题: PIXMIX Pixel Building Art Kit for Kids Ages 5+ – STEM Toy for Boys & Girls, Creative Learning & Sensory Activity – 16x16 Board, 1000 Pieces, 200+ Multi-Level Challenges
+2026-04-30 08:34:55,808 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:34:55,812 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:34:56,497 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:34:57,260 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:34:57,260 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:34:57,262 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0D6BVGBJK?th=1
+2026-04-30 08:34:58,746 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:34:58,761 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:34:58,761 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:34:58,762 | INFO | amazon_goods_monitor | ⏳ 等待 0.4 秒...
+2026-04-30 08:34:59,141 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0D6BVGBJK?th=1
+2026-04-30 08:35:03,868 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:04,781 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:04,784 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:05,463 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:06,197 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:06,197 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:06,198 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0GNCQYTQZ?th=1
+2026-04-30 08:35:08,849 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:08,857 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:35:08,858 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:35:08,858 | INFO | amazon_goods_monitor | ⏳ 等待 1.0 秒...
+2026-04-30 08:35:09,856 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0GNCQYTQZ?th=1
+2026-04-30 08:35:13,431 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:14,402 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:14,408 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:15,133 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:15,856 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:15,856 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:15,857 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FVMFGM5W?th=1
+2026-04-30 08:35:17,292 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:17,308 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:35:17,308 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:35:17,309 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:35:18,242 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FVMFGM5W?th=1
+2026-04-30 08:35:22,029 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:22,957 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:22,960 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:23,804 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:24,541 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:24,542 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:24,543 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FDFZJB9G?th=1
+2026-04-30 08:35:25,853 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:25,863 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://AIHARVNXPM:57446815@124.225.4.69:12533
+2026-04-30 08:35:25,863 | INFO | amazon_goods_monitor | 使用代理: 124.225.4.69:12533 (尝试 1/3)
+2026-04-30 08:35:25,863 | INFO | amazon_goods_monitor | ⏳ 等待 0.3 秒...
+2026-04-30 08:35:26,167 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FDFZJB9G?th=1
+2026-04-30 08:35:31,337 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:32,288 | INFO | amazon_goods_monitor | 优惠券: Apply 10% couponTerms
+2026-04-30 08:35:32,293 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:33,010 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:33,753 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:33,753 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:33,754 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0CP4DMFJ4?th=1
+2026-04-30 08:35:34,975 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:34,982 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:35:34,983 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:35:34,983 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:35:35,871 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0CP4DMFJ4?th=1
+2026-04-30 08:35:39,316 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:40,299 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:40,304 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:41,011 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:41,748 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:41,748 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:41,749 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0CLDY3GJX?th=1
+2026-04-30 08:35:44,466 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:44,473 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://XEZQOPMX7M:53843223@121.229.211.102:15252
+2026-04-30 08:35:44,473 | INFO | amazon_goods_monitor | 使用代理: 121.229.211.102:15252 (尝试 1/3)
+2026-04-30 08:35:44,473 | INFO | amazon_goods_monitor | ⏳ 等待 0.5 秒...
+2026-04-30 08:35:44,950 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0CLDY3GJX?th=1
+2026-04-30 08:35:48,676 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:49,736 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:49,741 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:50,378 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:51,086 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:51,087 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:51,087 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FJ2989DS?th=1
+2026-04-30 08:35:52,530 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:35:52,537 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:35:52,538 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:35:52,538 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:35:53,416 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FJ2989DS?th=1
+2026-04-30 08:35:56,617 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:35:57,479 | INFO | amazon_goods_monitor | 标题: TOSY Magnet Fidget Spinner Mini - 8 Blocks, 3 in 1 Toy: Transformable Fidget Spinner, Infinity Cube, 2x2 Puzzle Cube, Easter Basket Stuffers for Kids/Adults, STEM Sensory Stress Relief Toy
+2026-04-30 08:35:57,512 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:35:57,518 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:35:58,195 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:35:58,973 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:35:58,974 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:35:58,974 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0D93ZWGG4?th=1
+2026-04-30 08:36:00,442 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:00,452 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:36:00,452 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:36:00,453 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:36:01,048 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0D93ZWGG4?th=1
+2026-04-30 08:36:05,104 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:05,959 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:05,964 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:06,655 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:07,286 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:07,287 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:07,287 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B08ZYRTY4G?th=1
+2026-04-30 08:36:10,060 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:10,069 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:36:10,069 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:36:10,069 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:36:10,828 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B08ZYRTY4G?th=1
+2026-04-30 08:36:13,743 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:14,658 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:14,662 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:15,370 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:16,009 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:16,009 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:16,009 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0CQPMY47H?th=1
+2026-04-30 08:36:18,138 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:18,148 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:36:18,149 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:36:18,149 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:36:18,970 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0CQPMY47H?th=1
+2026-04-30 08:36:23,395 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:24,489 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:24,495 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:25,205 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:25,995 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:25,995 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:25,996 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0F3Z1BLF6
+2026-04-30 08:36:28,968 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:28,978 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:36:28,978 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:36:28,979 | INFO | amazon_goods_monitor | ⏳ 等待 0.2 秒...
+2026-04-30 08:36:29,229 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0F3Z1BLF6
+2026-04-30 08:36:33,432 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:34,570 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:34,573 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:35,303 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:36,022 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:36,022 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:36,022 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FCMQLCZD?th=1
+2026-04-30 08:36:37,470 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:37,478 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:36:37,478 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:36:37,479 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:36:38,080 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FCMQLCZD?th=1
+2026-04-30 08:36:41,586 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:42,631 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:42,636 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:43,353 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:44,121 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:44,121 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:44,122 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FRSHK954?th=1
+2026-04-30 08:36:45,934 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:36:45,944 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:36:45,945 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:36:45,945 | INFO | amazon_goods_monitor | ⏳ 等待 0.4 秒...
+2026-04-30 08:36:46,346 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FRSHK954?th=1
+2026-04-30 08:36:50,532 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:36:51,460 | INFO | amazon_goods_monitor | 标题: Soft Train Building Blocks with Wheels, 42 PCS Montessori Sensory Stacking Blocks, Toddler Learning Toy with Station, Squeezable, Stretchable & Stackable Tactile Toys, Preschool Creative Play for Kids
+2026-04-30 08:36:51,501 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:36:51,506 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:36:57,118 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:36:57,857 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:36:57,857 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:36:57,859 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/Effects-Machine-Buzzers-Trivia-Cricket/dp/B0GSC41MT7/ref=pd_rhf_se_s_pd_sbs_rvi_d_sccl_1_5/146-0084930-5201075?pd_rd_w=582PX&content-id=amzn1.sym.6640a844-ab24-4352-ac9b-78899e683a5e&pf_rd_p=6640a844-ab24-4352-ac9b-78899e683a5e&pf_rd_r=EN5WZ73QMC02C8KT8EFS&pd_rd_wg=RJ7Ud&pd_rd_r=f09c9c3b-b898-4cf8-bbdd-0e2893907cee&pd_rd_i=B0GSC41MT7&psc=1
+2026-04-30 08:37:01,441 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:01,449 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://AIHARVNXPM:57446815@124.225.4.69:12533
+2026-04-30 08:37:01,449 | INFO | amazon_goods_monitor | 使用代理: 124.225.4.69:12533 (尝试 1/3)
+2026-04-30 08:37:01,449 | INFO | amazon_goods_monitor | ⏳ 等待 0.0 秒...
+2026-04-30 08:37:01,501 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/Effects-Machine-Buzzers-Trivia-Cricket/dp/B0GSC41MT7/ref=pd_rhf_se_s_pd_sbs_rvi_d_sccl_1_5/146-0084930-5201075?pd_rd_w=582PX&content-id=amzn1.sym.6640a844-ab24-4352-ac9b-78899e683a5e&pf_rd_p=6640a844-ab24-4352-ac9b-78899e683a5e&pf_rd_r=EN5WZ73QMC02C8KT8EFS&pd_rd_wg=RJ7Ud&pd_rd_r=f09c9c3b-b898-4cf8-bbdd-0e2893907cee&pd_rd_i=B0GSC41MT7&psc=1
+2026-04-30 08:37:04,939 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:05,754 | INFO | amazon_goods_monitor | 标题: Sound Effects Machine 67 Meme Gifts Funny Gag Buzzers for Trivia Games Show Party Button Board Night Prank Cricket Fart Noise Maker
+2026-04-30 08:37:05,785 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:05,789 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:06,469 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:07,140 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:07,140 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:07,141 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DHWTPVCZ?th=1
+2026-04-30 08:37:09,639 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:09,648 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:37:09,648 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:37:09,648 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:37:09,806 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DHWTPVCZ?th=1
+2026-04-30 08:37:13,418 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:14,440 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:14,444 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:15,145 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:15,756 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:15,757 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:15,757 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FCY45NFR?th=1
+2026-04-30 08:37:17,053 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:17,061 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://W9JFIJCY7Z:46344650@118.253.177.190:11193
+2026-04-30 08:37:17,062 | INFO | amazon_goods_monitor | 使用代理: 118.253.177.190:11193 (尝试 1/3)
+2026-04-30 08:37:17,062 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:37:17,738 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FCY45NFR?th=1
+2026-04-30 08:37:21,734 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:22,718 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:22,724 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:23,402 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:24,074 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:24,074 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:24,075 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B097QZKFX3?th=1
+2026-04-30 08:37:25,418 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:25,426 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://XEZQOPMX7M:53843223@121.229.211.102:15252
+2026-04-30 08:37:25,426 | INFO | amazon_goods_monitor | 使用代理: 121.229.211.102:15252 (尝试 1/3)
+2026-04-30 08:37:25,427 | INFO | amazon_goods_monitor | ⏳ 等待 0.2 秒...
+2026-04-30 08:37:25,624 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B097QZKFX3?th=1
+2026-04-30 08:37:34,563 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:35,629 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:35,635 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:36,361 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:37,097 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:37,097 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:37,098 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FG894YR7?th=1
+2026-04-30 08:37:38,337 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:38,346 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:37:38,346 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:37:38,346 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:37:39,252 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FG894YR7?th=1
+2026-04-30 08:37:43,350 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:44,271 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:44,277 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:44,975 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:45,733 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:45,733 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:45,734 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FCT3Y7VY?th=1
+2026-04-30 08:37:47,237 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:47,246 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://AIHARVNXPM:57446815@124.225.4.69:12533
+2026-04-30 08:37:47,246 | INFO | amazon_goods_monitor | 使用代理: 124.225.4.69:12533 (尝试 1/3)
+2026-04-30 08:37:47,247 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:37:48,128 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FCT3Y7VY?th=1
+2026-04-30 08:37:51,721 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:37:52,773 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:37:52,778 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:37:53,457 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:37:54,226 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:37:54,227 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:37:54,228 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FVN5C254?th=1
+2026-04-30 08:37:57,760 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:37:57,767 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:37:57,767 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:37:57,767 | INFO | amazon_goods_monitor | ⏳ 等待 0.9 秒...
+2026-04-30 08:37:58,659 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FVN5C254?th=1
+2026-04-30 08:38:01,672 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:02,635 | INFO | amazon_goods_monitor | 标题: Pencil Nose Board Games for Family Night - The Ultimate Drawing Game - Kids Games, Family Game, Multi-Player, Party Game - Ages 8+
+2026-04-30 08:38:02,667 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:02,672 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:03,286 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:04,201 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:04,201 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:04,202 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0DMPKFX57?th=1
+2026-04-30 08:38:05,659 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:05,668 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://EJ0WX0RSVB:02954261@125.75.68.73:17894
+2026-04-30 08:38:05,668 | INFO | amazon_goods_monitor | 使用代理: 125.75.68.73:17894 (尝试 1/3)
+2026-04-30 08:38:05,668 | INFO | amazon_goods_monitor | ⏳ 等待 0.1 秒...
+2026-04-30 08:38:05,789 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0DMPKFX57?th=1
+2026-04-30 08:38:18,104 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:19,252 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:19,258 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:19,987 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:20,739 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:20,740 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:20,741 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/Rechargeable-Separable-Magnetic-Hilarious-Adjustment/dp/B0GQ411T31
+2026-04-30 08:38:23,637 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:23,642 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:38:23,642 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:38:23,644 | INFO | amazon_goods_monitor | ⏳ 等待 0.7 秒...
+2026-04-30 08:38:24,296 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/Rechargeable-Separable-Magnetic-Hilarious-Adjustment/dp/B0GQ411T31
+2026-04-30 08:38:27,719 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:28,688 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:28,693 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:29,397 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:30,130 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:30,130 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:30,131 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B00B2FNHB6?th=1
+2026-04-30 08:38:31,514 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:31,524 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:38:31,524 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:38:31,525 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:38:32,167 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B00B2FNHB6?th=1
+2026-04-30 08:38:37,176 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:38,212 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:38,216 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:38,819 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:39,489 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:39,489 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:39,489 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0CP4BSFB9?th=1
+2026-04-30 08:38:41,345 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:41,357 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://WVKYFTS670:14418351@121.14.201.248:11074
+2026-04-30 08:38:41,358 | INFO | amazon_goods_monitor | 使用代理: 121.14.201.248:11074 (尝试 1/3)
+2026-04-30 08:38:41,358 | INFO | amazon_goods_monitor | ⏳ 等待 0.4 秒...
+2026-04-30 08:38:41,741 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0CP4BSFB9?th=1
+2026-04-30 08:38:45,559 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:46,402 | INFO | amazon_goods_monitor | 标题: Goliath Jelly Blox Creative Kit | Includes 20 Blocks | Toddler & Preschool Building Blocks Kids Can Squeeze, Stretch, Squish | MESH ACCREDITED | Safety Tested & Ouch-Free | Sensory Play Toy Ages 2+
+2026-04-30 08:38:46,433 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:46,437 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:47,141 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:47,917 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:47,917 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:47,917 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FCRTHRMZ?th=1
+2026-04-30 08:38:49,418 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:49,427 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://LLW0BU7VGQ:39267509@124.236.76.149:17745
+2026-04-30 08:38:49,427 | INFO | amazon_goods_monitor | 使用代理: 124.236.76.149:17745 (尝试 1/3)
+2026-04-30 08:38:49,427 | INFO | amazon_goods_monitor | ⏳ 等待 0.8 秒...
+2026-04-30 08:38:50,228 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FCRTHRMZ?th=1
+2026-04-30 08:38:53,659 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:38:54,501 | INFO | amazon_goods_monitor | 标题: Marble Balance Game - 50 Colorful Marbles with Built-in Storage, Fun Family Challenge for 1-4 Players, Educational Toy for Kids & Adults, Perfect for Parties, Travel & Birthday Gifts (Pumpkin Orange)
+2026-04-30 08:38:54,530 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:38:54,534 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:38:55,121 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:38:55,898 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:38:55,898 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:38:55,899 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FX3Q1JS4?th=1
+2026-04-30 08:38:58,941 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:38:58,949 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://YKEW9SOB5S:32342415@218.78.129.68:15654
+2026-04-30 08:38:58,950 | INFO | amazon_goods_monitor | 使用代理: 218.78.129.68:15654 (尝试 1/3)
+2026-04-30 08:38:58,950 | INFO | amazon_goods_monitor | ⏳ 等待 0.6 秒...
+2026-04-30 08:38:59,604 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FX3Q1JS4?th=1
+2026-04-30 08:39:02,793 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:39:03,675 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:39:03,679 | INFO | amazon_goods_monitor | -----------开始爬取商品信息-----------
+2026-04-30 08:39:04,392 | INFO | amazon_goods_monitor | -----------开始爬取商品流量信息-----------
+2026-04-30 08:39:05,120 | INFO | amazon_goods_monitor | ✅ 加载 8 个代理
+2026-04-30 08:39:05,121 | INFO | amazon_goods_monitor | -----------开始爬取优惠券信息-----------
+2026-04-30 08:39:05,121 | INFO | amazon_goods_monitor | 开始抓取: https://www.amazon.com/dp/B0FH4JPV12?th=1
+2026-04-30 08:39:07,022 | INFO | amazon_goods_monitor | ✅ 已设置邮编 90002 (amazon.com)
+2026-04-30 08:39:07,029 | INFO | amazon_goods_monitor | 📡 获取新代理: socks5://PXBHAK1C2C:80609506@1.194.218.235:12509
+2026-04-30 08:39:07,030 | INFO | amazon_goods_monitor | 使用代理: 1.194.218.235:12509 (尝试 1/3)
+2026-04-30 08:39:07,030 | INFO | amazon_goods_monitor | ⏳ 等待 1.0 秒...
+2026-04-30 08:39:08,037 | INFO | amazon_goods_monitor | 请求URL: https://www.amazon.com/dp/B0FH4JPV12?th=1
+2026-04-30 08:39:12,983 | INFO | amazon_goods_monitor | ✅ 请求成功 - 状态码: 200
+2026-04-30 08:39:13,986 | INFO | amazon_goods_monitor | 没有优惠券
+2026-04-30 08:39:19,638 | INFO | amazon_goods_monitor | 今日无价格变化
+2026-04-30 08:39:19,640 | INFO | amazon_goods_monitor | 准备上传 50 条记录...
+2026-04-30 08:39:31,764 | INFO | amazon_goods_monitor | 
+上传统计:
+2026-04-30 08:39:31,764 | INFO | amazon_goods_monitor | 总记录数: 50
+2026-04-30 08:39:31,765 | INFO | amazon_goods_monitor | 成功数量: 0
+2026-04-30 08:39:31,765 | INFO | amazon_goods_monitor | 失败数量: 50
+2026-04-30 08:39:31,765 | INFO | amazon_goods_monitor | 成功批次: 0
+2026-04-30 08:39:31,766 | INFO | amazon_goods_monitor | 失败批次: 1
+2026-04-30 08:39:31,766 | WARNING | amazon_goods_monitor | 发现 50 条失败记录
+2026-04-30 08:39:31,766 | WARNING | amazon_goods_monitor |   失败批次 1: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 08:39:31,770 | INFO | amazon_goods_monitor | 失败的记录已保存到: failed_records_20260430_083931.json
+2026-04-30 08:39:31,771 | INFO | amazon_goods_monitor | 🎯 全流程完成，总耗时：8分48秒

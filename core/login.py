@@ -101,6 +101,7 @@ class SellerSpriteLogin:
                 json.dump(cookies_dict, f, ensure_ascii=False, indent=2)
 
             self.logger.info(f"✅ Cookies已保存到: {self.cookie_file}")
+            # await asyncio.sleep(60)
             return True
         except Exception as e:
             self.logger.error(f"保存cookies失败: {e}")
@@ -109,12 +110,14 @@ class SellerSpriteLogin:
 
 async def main():
     # 手动管理浏览器生命周期
-    login = SellerSpriteLogin('amazon_price_monitor', headless=False)
+    login = SellerSpriteLogin('amazon_goods_monitor', headless=False)
     try:
         # 登录
         if await login.login():
             # 获取cookie
             await login.save_cookies()
+
+            await asyncio.sleep(60)
     finally:
         # 确保关闭浏览器
         await login.close()
