@@ -1,0 +1,12 @@
+2026-03-13 17:38:06,525 | ERROR | GeekBILogin | 等待验证码失败: Page.wait_for_selector: Target page, context or browser has been closed
+Call log:
+  - waiting for locator(".tencent-captcha-dy__click-type-wrap, .tencent-captcha-dy__slider-type-wrap") to be visible
+
+2026-03-13 17:38:11,049 | ERROR | GeekBILogin | 登录过程异常: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://www.geekbi.com/user/login", waiting until "load"
+
+2026-03-13 17:39:04,999 | ERROR | GeekBILogin | 等待验证码失败: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator(".tencent-captcha-dy__click-type-wrap, .tencent-captcha-dy__slider-type-wrap") to be visible
+

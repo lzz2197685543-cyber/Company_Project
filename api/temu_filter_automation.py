@@ -1,4 +1,5 @@
 import time
+import json
 from urllib.parse import quote
 from datetime import datetime, timedelta
 import csv
@@ -22,33 +23,78 @@ class OfferFilterAutomation:
         }
 
     # ---------------- 接口监听 + 解析 ----------------
-    async def wait_and_parse_goods_search(self, action, timeout=5000):
-        """
-        action: 一个 async lambda，里面只做一件事（点搜索 / 点下一页）
-        """
-        try:
-            async with self.page.expect_response(
-                    lambda r: (
-                            "api/v1/temu/goods/search" in r.url
-                            and r.status == 200
-                    ),
-                    timeout=timeout
-            ) as resp_info:
-                await action()
+    async def wait_and_parse_goods_search(self, action, timeout=5000, retry=3):
+        for i in range(retry):
+            try:
+                async with self.page.expect_response(
+                        lambda r: (
+                                "api/v1/temu/goods/search" in r.url
+                                and r.status == 200
+                        ),
+                        timeout=timeout
+                ) as resp_info:
+                    await action()
 
-            response = await resp_info.value
-            json_data = await response.json()
-            return self.parse_data(json_data)
+                response = await resp_info.value
 
-        except playwright._impl._errors.TimeoutError:
-            self.logger.info("接口未触发响应，可能已经到最后一页或没有数据")
-            self.should_stop = True
-            return []
+                text = await response.text()
+
+                print(text[:200])
+
+                if not text:
+                    raise Exception("空响应")
+
+                try:
+                    json_data = json.loads(text)
+                except Exception:
+                    self.logger.error(f"❌ JSON解析失败: {text[:200]}")
+                    raise Exception("JSON解析失败")
+
+                return self.parse_data(json_data)
+
+            except playwright._impl._errors.TimeoutError:
+                self.logger.warning(f"⏱️ 第{i + 1}次超时")
+
+            except Exception as e:
+                self.logger.error(f"❌ 第{i + 1}次失败: {e}")
+
+            # 👉 重试当前页（关键）
+            if i < retry - 1:
+                self.logger.info("🔁 重试当前页")
+
+                try:
+                    # 方法1：点当前页（优先）
+                    active = self.page.locator(".arco-pagination-item-active")
+                    if await active.count() > 0:
+                        await active.click()
+                    else:
+                        pass
+                        # 方法2：兜底刷新
+                        # await self.page.reload()
+
+                except Exception as e:
+                    self.logger.error(f"重试点击失败: {e}")
+                    await self.page.reload()
+
+                await asyncio.sleep(2)
+
+        # 👉 全部失败
+        self.logger.error("🚨 当前页多次失败，停止翻页")
+        self.should_stop = True
+        return []
 
     """条件筛选 + 首次搜索"""
-    async def get_offer_filter(self):
+    async def get_offer_filter(self,page_url:str=None):
+        # ✅ 重置标志位
+        self.should_stop = False
         self.logger.info('开始筛选条件')
         page = self.page
+
+        if page_url:
+            await page.goto(page_url)
+
+        self.logger.info(f'在爬取{page_url}页面')
+
 
         # -------关闭可能存在的弹窗-------
         close_btn = page.locator(".arco-icon.arco-icon-close.close-icon")
@@ -89,6 +135,8 @@ class OfferFilterAutomation:
 
     # ---------- 搜索 ----------
     async def do_search(self):
+        # ✅ 确保搜索前重置翻页状态
+        self.should_stop = False
         page = self.page
 
         search_btn = page.get_by_role("button", name="搜索", exact=True)
@@ -122,7 +170,7 @@ class OfferFilterAutomation:
             action=lambda: next_btn.click()
         )
         # ✅ 等一小段时间，确保页面渲染完成
-        await self.page.wait_for_timeout(300)
+        await self.page.wait_for_timeout(1500)
         return items
 
     def parse_data(self, json_data):

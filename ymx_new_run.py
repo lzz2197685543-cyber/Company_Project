@@ -15,7 +15,6 @@ async def main():
     await client.login_and_save_cookie_dict()
 
 
-
 def crawl_country(country_name, file_lock):
     """线程任务函数：爬取单个国家"""
     thread_name = current_thread().name

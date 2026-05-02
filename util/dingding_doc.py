@@ -9,7 +9,7 @@ from pathlib import Path
 
 """上传/删除/查询钉钉多维表的数据"""
 
-CONFIG_DIR = Path(__file__).resolve().parent.parent / "config" / "config.json"
+CONFIG_DIR = Path(__file__).resolve().parent.parent / "data" / "config.json"
 token_cache=Path(__file__).resolve().parent.parent.parent / "token_cache.json"
 
 
@@ -1279,8 +1279,8 @@ def test_delete_records(config,logger):
 
 if __name__ == "__main__":
     # 测试Token管理器
-    # test_token_manager()
-    query_sheet()
+    test_token_manager()
+    # query_sheet()
     # 或者运行批量上传示例
     # upload_multiple_records()
 

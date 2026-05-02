@@ -9,7 +9,7 @@ async def close_popup_if_exists(page: Page):
     不存在则直接跳过
     """
     try:
-        close_btn = page.locator(".close-btn")
+        close_btn = page.locator(".el-dialog__body .close-btn")
         if await close_btn.count() > 0:
             await close_btn.first.wait_for(state="visible", timeout=3000)
             await close_btn.first.click()

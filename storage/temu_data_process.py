@@ -8,9 +8,9 @@ CONFIG_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 # ---------------- 数据库配置 ----------------
-HOST = "localhost"
-USER = "root"
-PASSWORD = "1234"
+HOST = "rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com"
+USER = "root_lxz"
+PASSWORD = "Lxz123456"
 DB = "py_spider"
 PORT = 3306
 
@@ -29,10 +29,11 @@ class TemuDataProcessor:
         # self.upload_path = os.path.join(data_dir, 'upload.csv')
         self.keys = ['商品ID']
         self.db_conf = dict(
-            host="localhost",
-            user="root",
-            password="1234",
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
             database="py_spider",
+            port=PORT,
             charset="utf8mb4"
         )
 

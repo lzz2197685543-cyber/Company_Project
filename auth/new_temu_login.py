@@ -38,19 +38,19 @@ class GeekBILogin:
             # ===========验证码处理=============
 
             # 检测是什么验证码
-            captcha_type = await self.captcha_processor.wait_and_identify_captcha(self.page)
-
-            if captcha_type:
-                self.logger.info(f"检测到验证码类型: {captcha_type}")
-
-                # 获取验证码详细信息
-                captcha_info = await self.captcha_processor.handle_captcha(self.page, captcha_type)
-                print(captcha_info)
-
-                # 将信息发送到云码平台并且处理验证码
-                await self.captcha_processor.send_to_yunma_api(self.page,captcha_info)
-
-            await asyncio.sleep(3)
+            # captcha_type = await self.captcha_processor.wait_and_identify_captcha(self.page)
+            #
+            # if captcha_type:
+            #     self.logger.info(f"检测到验证码类型: {captcha_type}")
+            #
+            #     # 获取验证码详细信息
+            #     captcha_info = await self.captcha_processor.handle_captcha(self.page, captcha_type)
+            #     print(captcha_info)
+            #
+            #     # 将信息发送到云码平台并且处理验证码
+            #     await self.captcha_processor.send_to_yunma_api(self.page,captcha_info)
+            #
+            # await asyncio.sleep(3)
 
             # 登录进行之后点叉掉弹窗来的页面框
             await temu_close_popup_if_exists(self.page)

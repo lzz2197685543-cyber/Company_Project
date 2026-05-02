@@ -8,6 +8,8 @@ from storage.temu_data_process import TemuDataProcessor
 
 
 
+# 修改后的 main 函数（只输出改动部分）
+
 async def main():
     config = {
         "base_id": "KGZLxjv9VG03dPLZt4B3yZgjJ6EDybno",
@@ -15,66 +17,61 @@ async def main():
         "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
     }
 
-    """主函数 - 使用方式1：手动管理浏览器"""
-    # 创建浏览器管理器
     browser_manager = BrowserManager(headless=False)
-    logger=get_logger('Temu_New')
-
+    logger = get_logger('Temu_New')
 
     try:
-        # 启动浏览器
         page = await browser_manager.start(
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             viewport={"width": 1366, "height": 768}
         )
 
-        # ================创建登录实例================
         client = GeekBILogin(page)
         await client.login()
 
-        # =================数据爬取==================
-        # 条件筛选,监听，处理数据
-        offer_filter = OfferFilterAutomation(page,logger)
-        # 1️⃣ 条件筛选（不监听）
-        await offer_filter.get_offer_filter()
+        page_urls = [
+            'https://www.geekbi.com/data/goods/hot-sale',
+            # 'https://www.geekbi.com/data/goods/day-sale-rise',
+            # 'https://www.geekbi.com/data/goods/blue-ocean-hot-sale',
+            # 'https://www.geekbi.com/data/goods/hot-sale-new',
+            # 'https://www.geekbi.com/data/goods/new-mall-hot-sale',
+            # 'https://www.geekbi.com/data/goods/big-sale-new'
+        ]
+        offer_filter = OfferFilterAutomation(page, logger)
 
-        # 2️⃣ 搜索（监听第 1 页）
-        all_items = []
+        for url in page_urls:
+            await offer_filter.get_offer_filter(url)
 
-        # 首次搜索
-        items = await offer_filter.do_search()
-        all_items.extend(items)
+            # 首次搜索 → 立即保存
+            items = await offer_filter.do_search()
+            if items:
+                offer_filter.save_batch(items)
 
-        # 循环翻页
-        while not offer_filter.should_stop:
-            next_items = await offer_filter.next_page()
-            if not next_items:
-                break
-            all_items.extend(next_items)
+            # 循环翻页 → 每页立即保存
+            while not offer_filter.should_stop:
+                next_items = await offer_filter.next_page()
+                if not next_items:
+                    break
+                if next_items:
+                    offer_filter.save_batch(next_items)
 
-        # 保存所有数据
-        offer_filter.save_batch(all_items)
-
+        # 去重、上传等后续逻辑保持不变
         logger.info('---------------------------------开始去重数据-----------------------------------')
         processor = TemuDataProcessor()
-
-        # 筛选新数据
         new_data = processor.filter_new_data()
 
         logger.info('---------------------------------开始构建上传的数据-----------------------------------')
         records = processor.build_records(new_data)
 
-        # 将上传的数据保存到数据库
         processor.import_csv_to_product_monitor(new_data)
 
         logger.info('---------------------------------开始上传数据-----------------------------------')
-        upload_multiple_records(config, records,logger)
+        upload_multiple_records(config, records, logger)
 
         logger.info(f'数据上传成功')
 
     finally:
-            # 关闭浏览器
-            await browser_manager.close()
+        await browser_manager.close()
 
 if __name__ == '__main__':
     asyncio.run(main())

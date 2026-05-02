@@ -52,7 +52,7 @@ async def main():
         # 4️⃣ 自动设置筛选条件
         filter_bot = OfferFilterAutomation(page)
         await filter_bot.apply_all(
-            search_name="玩具",
+            category_name="玩具",
             min_price="3",
             min_sale_volume="10000",
             province="广东",

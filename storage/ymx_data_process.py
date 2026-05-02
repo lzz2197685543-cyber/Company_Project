@@ -3,14 +3,14 @@ from datetime import datetime
 import os
 import pymysql
 from pathlib import Path
-from utils.logger import get_logger
+from util.logger import get_logger
 CONFIG_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 # ---------------- 数据库配置 ----------------
-HOST = "localhost"
-USER = "root"
-PASSWORD = "1234"
+HOST = "rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com"
+USER = "root_lxz"
+PASSWORD = "Lxz123456"
 DB = "py_spider"
 PORT = 3306
 
@@ -30,10 +30,11 @@ class DataProcessor:
         self.keys = ['商品ID']
 
         self.db_conf = dict(
-            host="localhost",
-            user="root",
-            password="1234",
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
             database="py_spider",
+            port=PORT,
             charset="utf8mb4"
         )
 
@@ -114,10 +115,9 @@ class DataProcessor:
             self.logger.error(f"数据处理错误: {str(e)}")
             return pd.DataFrame()
 
-    def build_records(self,df_new):
+    def build_records(self, df_new):
         """构建上传记录"""
         try:
-
             temu_df = df_new
 
             if temu_df.empty:
@@ -126,6 +126,11 @@ class DataProcessor:
             # 构建记录列表
             records = []
             for _, row in temu_df.iterrows():
+                # 处理上架日期中的NaN值
+                listing_date = row["上架日期"]
+                if pd.isna(listing_date):  # 检查是否为NaN
+                    listing_date = None  # 或者可以设置为 0, 或者当前时间戳
+
                 record = {
                     "发现日期": row['发现日期'],
                     "来源平台": row['来源平台'],
@@ -133,7 +138,7 @@ class DataProcessor:
                     "图片": {"text": row['图片'], "link": row['图片']},
                     "产品名称": row['产品名称'],
                     "产品链接": {"text": row['产品链接'], "link": row['产品链接']},
-                    "上架日期": row["上架日期"],
+                    "上架日期": listing_date,  # 使用处理后的值
                     "月销量": row['月销量'],
                     "在售站点": row['在售站点'],
                     "类目": row['类目'],
