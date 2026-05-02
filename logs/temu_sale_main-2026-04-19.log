@@ -1,0 +1,63 @@
+2026-04-19 11:59:29,680 | INFO | temu_sale_main | 程序开始启动
+2026-04-19 11:59:29,680 | INFO | temu_sale_main | ---------------------------------开始爬取temu数据-----------------------------------
+2026-04-19 11:59:29,683 | INFO | temu_sale_main | 正在爬取第1页的数据
+2026-04-19 11:59:32,106 | INFO | temu_sale_main | 📊 第1页获取到500条数据
+2026-04-19 11:59:32,112 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:34,117 | INFO | temu_sale_main | 正在爬取第2页的数据
+2026-04-19 11:59:37,720 | INFO | temu_sale_main | 📊 第2页获取到500条数据
+2026-04-19 11:59:37,730 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:39,735 | INFO | temu_sale_main | 正在爬取第3页的数据
+2026-04-19 11:59:41,941 | INFO | temu_sale_main | 📊 第3页获取到500条数据
+2026-04-19 11:59:41,945 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:43,951 | INFO | temu_sale_main | 正在爬取第4页的数据
+2026-04-19 11:59:46,337 | INFO | temu_sale_main | 📊 第4页获取到500条数据
+2026-04-19 11:59:46,341 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:48,353 | INFO | temu_sale_main | 正在爬取第5页的数据
+2026-04-19 11:59:50,560 | INFO | temu_sale_main | 📊 第5页获取到500条数据
+2026-04-19 11:59:50,563 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:52,564 | INFO | temu_sale_main | 正在爬取第6页的数据
+2026-04-19 11:59:54,523 | INFO | temu_sale_main | 📊 第6页获取到500条数据
+2026-04-19 11:59:54,528 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 11:59:56,540 | INFO | temu_sale_main | 正在爬取第7页的数据
+2026-04-19 11:59:58,592 | INFO | temu_sale_main | 📊 第7页获取到500条数据
+2026-04-19 11:59:58,595 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:00,601 | INFO | temu_sale_main | 正在爬取第8页的数据
+2026-04-19 12:00:02,549 | INFO | temu_sale_main | 📊 第8页获取到500条数据
+2026-04-19 12:00:02,556 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:04,568 | INFO | temu_sale_main | 正在爬取第9页的数据
+2026-04-19 12:00:06,579 | INFO | temu_sale_main | 📊 第9页获取到500条数据
+2026-04-19 12:00:06,583 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:08,587 | INFO | temu_sale_main | 正在爬取第10页的数据
+2026-04-19 12:00:10,770 | INFO | temu_sale_main | 📊 第10页获取到500条数据
+2026-04-19 12:00:10,774 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:12,780 | INFO | temu_sale_main | 正在爬取第11页的数据
+2026-04-19 12:00:14,799 | INFO | temu_sale_main | 📊 第11页获取到500条数据
+2026-04-19 12:00:14,804 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:16,810 | INFO | temu_sale_main | 正在爬取第12页的数据
+2026-04-19 12:00:18,876 | INFO | temu_sale_main | 📊 第12页获取到500条数据
+2026-04-19 12:00:18,880 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:20,892 | INFO | temu_sale_main | 正在爬取第13页的数据
+2026-04-19 12:00:22,990 | INFO | temu_sale_main | 📊 第13页获取到500条数据
+2026-04-19 12:00:22,994 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:24,998 | INFO | temu_sale_main | 正在爬取第14页的数据
+2026-04-19 12:00:26,901 | INFO | temu_sale_main | 📊 第14页获取到500条数据
+2026-04-19 12:00:26,904 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:28,918 | INFO | temu_sale_main | 正在爬取第15页的数据
+2026-04-19 12:00:30,941 | INFO | temu_sale_main | 📊 第15页获取到500条数据
+2026-04-19 12:00:30,945 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:32,956 | INFO | temu_sale_main | 正在爬取第16页的数据
+2026-04-19 12:00:35,212 | INFO | temu_sale_main | 📊 第16页获取到371条数据
+2026-04-19 12:00:35,216 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260419.csv
+2026-04-19 12:00:35,216 | INFO | temu_sale_main | ✅ 第16页为最后一页，共获取7871条
+2026-04-19 12:00:35,217 | INFO | temu_sale_main | ---------------------------------开始匹配sku数据-----------------------------------
+2026-04-19 12:00:35,926 | INFO | temu_sale_main | ---------------------------------开始上传数据-----------------------------------
+2026-04-19 12:00:35,928 | INFO | temu_sale_main | 准备上传 428 条记录...
+2026-04-19 12:00:55,342 | INFO | temu_sale_main | 
+上传统计:
+2026-04-19 12:00:55,342 | INFO | temu_sale_main | 总记录数: 428
+2026-04-19 12:00:55,343 | INFO | temu_sale_main | 成功数量: 428
+2026-04-19 12:00:55,343 | INFO | temu_sale_main | 失败数量: 0
+2026-04-19 12:00:55,343 | INFO | temu_sale_main | 成功批次: 9
+2026-04-19 12:00:55,343 | INFO | temu_sale_main | 失败批次: 0
+2026-04-19 12:00:55,343 | INFO | temu_sale_main | 数据上传成功
+2026-04-19 12:00:58,350 | INFO | temu_sale_main | ⏱️  总耗时: 88.67 秒

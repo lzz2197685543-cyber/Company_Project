@@ -1,0 +1,7 @@
+2026-04-27 15:18:34,505 | INFO | login | JST---第 1 次登录尝试
+2026-04-27 15:18:37,376 | INFO | login | 会话已过期，重新登录
+2026-04-27 15:18:37,381 | INFO | login | ✅ 已加载保存的Cookie
+2026-04-27 15:18:54,317 | INFO | login | ✅ JST-ERP 手动登录成功
+2026-04-27 15:18:54,322 | INFO | login | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-27 15:18:54,322 | INFO | login | JST - 登录成功（第 1 次）
+2026-04-27 15:18:56,520 | INFO | login | 浏览器已关闭

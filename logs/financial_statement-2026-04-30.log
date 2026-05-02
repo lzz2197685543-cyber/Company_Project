@@ -1,0 +1,78 @@
+2026-04-30 10:55:57,361 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-30 10:56:00,032 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-30 10:56:03,008 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-30 10:56:05,836 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-30 10:56:06,840 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 10:56:07,733 | INFO | financial_statement | 没有下一页了
+2026-04-30 10:56:07,733 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 11:41:44,488 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 11:41:45,405 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 11:41:46,144 | INFO | financial_statement | 没有下一页了
+2026-04-30 11:41:46,144 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 11:42:29,538 | ERROR | financial_statement | [聚水潭] 请求失败（第 1 次）: 
+2026-04-30 11:42:29,540 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-30 11:42:32,411 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-30 11:42:32,418 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-30 11:42:36,564 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-30 11:42:36,575 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-30 11:42:36,575 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-30 11:42:40,493 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 11:42:41,474 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 11:42:42,180 | INFO | financial_statement | 没有下一页了
+2026-04-30 11:42:42,180 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 11:47:04,658 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 11:47:05,628 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 11:47:06,404 | INFO | financial_statement | 没有下一页了
+2026-04-30 11:47:06,405 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 14:37:49,115 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 14:37:50,130 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 14:37:50,878 | INFO | financial_statement | 没有下一页了
+2026-04-30 14:37:50,879 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 14:39:11,915 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 14:39:12,819 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 14:39:13,493 | INFO | financial_statement | 没有下一页了
+2026-04-30 14:39:13,493 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 15:48:29,247 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 15:48:30,326 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 15:48:31,050 | INFO | financial_statement | 没有下一页了
+2026-04-30 15:48:31,051 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 15:51:39,004 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 15:51:39,910 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 15:51:40,874 | INFO | financial_statement | 没有下一页了
+2026-04-30 15:51:40,874 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 15:55:00,231 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 15:55:04,583 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 15:55:08,302 | INFO | financial_statement | 没有下一页了
+2026-04-30 15:55:08,302 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 16:08:25,360 | INFO | financial_statement | 请求参数: shop_id=12421308, start=2026-03-01, end=2026-04-01
+2026-04-30 16:08:27,048 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 16:08:31,314 | INFO | financial_statement | 没有下一页了
+2026-04-30 16:08:31,315 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 16:18:23,709 | INFO | financial_statement | 请求参数: shop_id=15011241, start=2026-03-01, end=2026-04-01
+2026-04-30 16:18:24,726 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 16:18:35,305 | INFO | financial_statement | 没有下一页了
+2026-04-30 16:18:35,305 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 16:30:30,035 | INFO | financial_statement | 请求参数: shop_id=12430122, start=2026-03-01, end=2026-04-01
+2026-04-30 16:30:31,137 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 16:30:35,163 | INFO | financial_statement | 没有下一页了
+2026-04-30 16:30:35,164 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 16:31:27,503 | INFO | financial_statement | 请求参数: shop_id=12430122, start=2026-03-01, end=2026-04-01
+2026-04-30 16:31:28,529 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 16:31:35,121 | INFO | financial_statement | 没有下一页了
+2026-04-30 16:31:35,121 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 16:56:37,909 | INFO | financial_statement | 请求参数: shop_id=14622509, start=2026-03-01, end=2026-04-01
+2026-04-30 16:56:38,862 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 16:56:41,139 | INFO | financial_statement | 没有下一页了
+2026-04-30 16:56:41,139 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 17:03:17,030 | INFO | financial_statement | 请求参数: shop_id=14622509, start=2026-03-01, end=2026-04-01
+2026-04-30 17:03:18,130 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 17:03:20,892 | INFO | financial_statement | 没有下一页了
+2026-04-30 17:03:20,892 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 17:08:02,524 | INFO | financial_statement | 请求参数: shop_id=14622509, start=2026-03-01, end=2026-04-01
+2026-04-30 17:08:03,669 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 17:08:07,933 | INFO | financial_statement | 没有下一页了
+2026-04-30 17:08:07,933 | INFO | financial_statement | 共获取 223 条记录
+2026-04-30 17:11:06,728 | INFO | financial_statement | 请求参数: shop_id=14622509, start=2026-03-01, end=2026-04-01
+2026-04-30 17:11:07,943 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-30 17:11:10,252 | INFO | financial_statement | 没有下一页了
+2026-04-30 17:11:10,252 | INFO | financial_statement | 共获取 223 条记录

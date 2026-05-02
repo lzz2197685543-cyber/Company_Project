@@ -1,0 +1,8 @@
+2026-04-29 15:26:19,971 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-29 15:26:22,362 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-29 15:26:25,204 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-29 15:26:28,028 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-29 15:26:29,235 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-29 15:26:29,948 | INFO | financial_statement | 没有下一页了
+2026-04-29 15:26:29,955 | INFO | financial_statement | 共获取 223 条记录
+2026-04-29 15:26:29,978 | INFO | financial_statement | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260429.csv

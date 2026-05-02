@@ -1,0 +1,67 @@
+2026-04-21 15:17:37,039 | ERROR | after_sale_detail | 解析数据时发生错误: the JSON object must be str, bytes or bytearray, not NoneType
+2026-04-21 15:17:37,039 | WARNING | after_sale_detail | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-21 15:17:37,039 | INFO | after_sale_detail | JST---第 1 次登录尝试
+2026-04-21 15:17:38,017 | INFO | after_sale_detail | 会话已过期，重新登录
+2026-04-21 15:17:38,022 | INFO | after_sale_detail | ✅ 已加载保存的Cookie
+2026-04-21 15:17:42,261 | INFO | after_sale_detail | ✅ JST-ERP 手动登录成功
+2026-04-21 15:17:42,267 | INFO | after_sale_detail | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-21 15:17:42,267 | INFO | after_sale_detail | JST - 登录成功（第 1 次）
+2026-04-21 15:17:44,531 | ERROR | after_sale_detail | 解析数据时发生错误: the JSON object must be str, bytes or bytearray, not NoneType
+2026-04-21 15:17:44,531 | WARNING | after_sale_detail | [聚水潭] 登录失效，刷新 cookie（第 2 次）
+2026-04-21 15:17:44,532 | INFO | after_sale_detail | JST---第 1 次登录尝试
+2026-04-21 15:17:45,068 | ERROR | after_sale_detail | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=25912
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=25912
+  - [pid=25912] <gracefully close start>
+  - [pid=25912] <kill>
+  - [pid=25912] <will force kill>
+  - [pid=25912] taskkill stderr: ����: û���ҵ����� "25912"��
+  - [pid=25912] <process did exit: exitCode=21, signal=null>
+  - [pid=25912] starting temporary directories cleanup
+  - [pid=25912] finished temporary directories cleanup
+  - [pid=25912] <gracefully close end>
+
+2026-04-21 15:17:45,071 | ERROR | after_sale_detail | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 129, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-21 15:17:45,071 | INFO | after_sale_detail | JST - 准备重试，等待 3 秒...
+2026-04-21 15:18:23,913 | ERROR | after_sale_detail | 解析数据时发生错误: the JSON object must be str, bytes or bytearray, not NoneType
+2026-04-21 15:18:23,913 | WARNING | after_sale_detail | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-21 15:18:23,914 | INFO | after_sale_detail | JST---第 1 次登录尝试
+2026-04-21 15:18:24,863 | INFO | after_sale_detail | 会话已过期，重新登录
+2026-04-21 15:18:24,868 | INFO | after_sale_detail | ✅ 已加载保存的Cookie
+2026-04-21 15:18:25,578 | INFO | after_sale_detail | Cookie无效或过期，开始手动登录流程
+2026-04-21 15:19:56,929 | ERROR | after_sale_detail | 解析数据时发生错误: the JSON object must be str, bytes or bytearray, not NoneType
+2026-04-21 15:19:56,930 | WARNING | after_sale_detail | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-21 15:19:56,930 | INFO | after_sale_detail | JST---第 1 次登录尝试
+2026-04-21 15:19:57,873 | INFO | after_sale_detail | 会话已过期，重新登录
+2026-04-21 15:19:57,878 | INFO | after_sale_detail | ✅ 已加载保存的Cookie
+2026-04-21 15:19:59,136 | INFO | after_sale_detail | Cookie无效或过期，开始手动登录流程

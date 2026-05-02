@@ -1,0 +1,14 @@
+2026-04-24 11:58:18,563 | INFO | temu_sale_main | 程序开始启动
+2026-04-24 11:58:18,563 | INFO | temu_sale_main | ---------------------------------开始爬取temu数据-----------------------------------
+2026-04-24 11:58:18,566 | INFO | temu_sale_main | 正在爬取第1页的数据
+2026-04-24 11:58:23,808 | WARNING | temu_sale_main | 第1页第1次失败：res_text 为空
+2026-04-24 11:58:23,808 | INFO | temu_sale_main | 🔄 尝试 refresh 登录态...
+2026-04-24 11:58:23,808 | INFO | temu_sale_main | JST---第 1 次登录尝试
+2026-04-24 11:58:33,498 | INFO | temu_sale_main | 会话已过期，重新登录
+2026-04-24 11:58:33,507 | INFO | temu_sale_main | ✅ 已加载保存的Cookie
+2026-04-24 11:58:39,417 | INFO | temu_sale_main | ✅ JST-ERP 手动登录成功
+2026-04-24 11:58:39,423 | INFO | temu_sale_main | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-24 11:58:39,423 | INFO | temu_sale_main | JST - 登录成功（第 1 次）
+2026-04-24 11:58:49,468 | WARNING | temu_sale_main | 第1页第2次失败：res_text 为空
+2026-04-24 11:58:49,468 | INFO | temu_sale_main | ❌ 第1页重试失败，终止程序
+2026-04-24 11:58:49,469 | INFO | temu_sale_main | ---------------------------------开始匹配sku数据-----------------------------------

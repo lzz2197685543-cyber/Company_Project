@@ -1,0 +1,475 @@
+2026-04-27 14:35:40,766 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:35:41,006 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:35:41,006 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:35:41,007 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-27 14:35:41,007 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:35:42,741 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-27 14:35:42,746 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-27 14:35:47,146 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-27 14:35:47,157 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-27 14:35:47,157 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-27 14:35:49,385 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:35:49,385 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:35:49,385 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 2 次）
+2026-04-27 14:35:49,386 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:35:49,947 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=32820
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=32820
+  - [pid=32820] <gracefully close start>
+  - [pid=32820] <kill>
+  - [pid=32820] <will force kill>
+  - [pid=32820] taskkill stderr: ����: û���ҵ����� "32820"��
+  - [pid=32820] <process did exit: exitCode=21, signal=null>
+  - [pid=32820] starting temporary directories cleanup
+  - [pid=32820] finished temporary directories cleanup
+  - [pid=32820] <gracefully close end>
+
+2026-04-27 14:35:49,949 | ERROR | financial_statement | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:35:49,949 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:35:52,958 | INFO | financial_statement | JST---第 2 次登录尝试
+2026-04-27 14:35:53,538 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=16232
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=16232
+  - [pid=16232] <gracefully close start>
+  - [pid=16232] <kill>
+  - [pid=16232] <will force kill>
+  - [pid=16232] taskkill stderr: ����: û���ҵ����� "16232"��
+  - [pid=16232] <process did exit: exitCode=21, signal=null>
+  - [pid=16232] starting temporary directories cleanup
+  - [pid=16232] finished temporary directories cleanup
+  - [pid=16232] <gracefully close end>
+
+2026-04-27 14:35:53,543 | ERROR | financial_statement | JST - 第 2 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:35:53,543 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:35:56,554 | INFO | financial_statement | JST---第 3 次登录尝试
+2026-04-27 14:35:57,100 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=27548
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=27548
+  - [pid=27548] <gracefully close start>
+  - [pid=27548] <kill>
+  - [pid=27548] <will force kill>
+  - [pid=27548] taskkill stderr: ����: û���ҵ����� "27548"��
+  - [pid=27548] <process did exit: exitCode=21, signal=null>
+  - [pid=27548] starting temporary directories cleanup
+  - [pid=27548] finished temporary directories cleanup
+  - [pid=27548] <gracefully close end>
+
+2026-04-27 14:35:57,107 | ERROR | financial_statement | JST - 第 3 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:35:57,115 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:35:57,116 | ERROR | financial_statement | JST- 登录失败，已达到最大重试次数 3
+2026-04-27 14:36:09,842 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:36:10,063 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:36:10,063 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:36:10,064 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-27 14:36:10,064 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:36:11,312 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-27 14:36:11,318 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-27 14:36:15,366 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-27 14:36:15,371 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-27 14:36:15,371 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-27 14:36:17,614 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:36:17,614 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:36:17,614 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 2 次）
+2026-04-27 14:36:17,614 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:36:18,209 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=25228
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=25228
+  - [pid=25228] <gracefully close start>
+  - [pid=25228] <kill>
+  - [pid=25228] <will force kill>
+  - [pid=25228] taskkill stderr: ����: û���ҵ����� "25228"��
+  - [pid=25228] <process did exit: exitCode=21, signal=null>
+  - [pid=25228] starting temporary directories cleanup
+  - [pid=25228] finished temporary directories cleanup
+  - [pid=25228] <gracefully close end>
+
+2026-04-27 14:36:18,212 | ERROR | financial_statement | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:36:18,212 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:36:21,220 | INFO | financial_statement | JST---第 2 次登录尝试
+2026-04-27 14:36:21,748 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=3936
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=3936
+  - [pid=3936] <gracefully close start>
+  - [pid=3936] <kill>
+  - [pid=3936] <will force kill>
+  - [pid=3936] taskkill stderr: ����: û���ҵ����� "3936"��
+  - [pid=3936] <process did exit: exitCode=21, signal=null>
+  - [pid=3936] starting temporary directories cleanup
+  - [pid=3936] finished temporary directories cleanup
+  - [pid=3936] <gracefully close end>
+
+2026-04-27 14:36:21,749 | ERROR | financial_statement | JST - 第 2 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:36:21,749 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:36:24,761 | INFO | financial_statement | JST---第 3 次登录尝试
+2026-04-27 14:36:25,285 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=33756
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=33756
+  - [pid=33756] <gracefully close start>
+  - [pid=33756] <kill>
+  - [pid=33756] <will force kill>
+  - [pid=33756] taskkill stderr: ����: û���ҵ����� "33756"��
+  - [pid=33756] <process did exit: exitCode=21, signal=null>
+  - [pid=33756] starting temporary directories cleanup
+  - [pid=33756] finished temporary directories cleanup
+  - [pid=33756] <gracefully close end>
+
+2026-04-27 14:36:25,290 | ERROR | financial_statement | JST - 第 3 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:36:25,296 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:36:25,296 | ERROR | financial_statement | JST- 登录失败，已达到最大重试次数 3
+2026-04-27 14:47:32,089 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:47:32,304 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:47:32,304 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:47:32,305 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-27 14:47:32,305 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:47:35,201 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-27 14:47:35,206 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-27 14:47:41,122 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-27 14:47:41,129 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-27 14:47:41,129 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-27 14:47:43,350 | ERROR | financial_statement | JSON解析失败: Expecting value: line 1 column 1 (char 0)
+2026-04-27 14:47:43,350 | ERROR | financial_statement | 修复后仍然解析失败
+2026-04-27 14:47:43,350 | WARNING | financial_statement | [聚水潭] 登录失效，刷新 cookie（第 2 次）
+2026-04-27 14:47:43,350 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 14:47:44,031 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=30604
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=30604
+  - [pid=30604] <gracefully close start>
+  - [pid=30604] <kill>
+  - [pid=30604] <will force kill>
+  - [pid=30604] taskkill stderr: ����: û���ҵ����� "30604"��
+  - [pid=30604] <process did exit: exitCode=21, signal=null>
+  - [pid=30604] starting temporary directories cleanup
+  - [pid=30604] finished temporary directories cleanup
+  - [pid=30604] <gracefully close end>
+
+2026-04-27 14:47:44,035 | ERROR | financial_statement | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:47:44,043 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:47:44,043 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:47:47,037 | INFO | financial_statement | JST---第 2 次登录尝试
+2026-04-27 14:47:47,646 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=29540
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=29540
+  - [pid=29540] <gracefully close start>
+  - [pid=29540] <kill>
+  - [pid=29540] <will force kill>
+  - [pid=29540] taskkill stderr: ����: û���ҵ����� "29540"��
+  - [pid=29540] <process did exit: exitCode=21, signal=null>
+  - [pid=29540] starting temporary directories cleanup
+  - [pid=29540] finished temporary directories cleanup
+  - [pid=29540] <gracefully close end>
+
+2026-04-27 14:47:47,651 | ERROR | financial_statement | JST - 第 2 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:47:47,658 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:47:47,658 | INFO | financial_statement | JST - 准备重试，等待 3 秒...
+2026-04-27 14:47:50,663 | INFO | financial_statement | JST---第 3 次登录尝试
+2026-04-27 14:47:51,226 | ERROR | financial_statement | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=13888
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=13888
+  - [pid=13888] <gracefully close start>
+  - [pid=13888] <kill>
+  - [pid=13888] <will force kill>
+  - [pid=13888] taskkill stderr: ����: û���ҵ����� "13888"��
+  - [pid=13888] <process did exit: exitCode=21, signal=null>
+  - [pid=13888] starting temporary directories cleanup
+  - [pid=13888] finished temporary directories cleanup
+  - [pid=13888] <gracefully close end>
+
+2026-04-27 14:47:51,232 | ERROR | financial_statement | JST - 第 3 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 133, in post
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-27 14:47:51,240 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:47:51,240 | INFO | financial_statement | 浏览器已关闭
+2026-04-27 14:47:51,240 | ERROR | financial_statement | JST- 登录失败，已达到最大重试次数 3
+2026-04-27 14:53:18,700 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:53:20,240 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 14:53:28,073 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 14:53:29,129 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 14:53:29,360 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-27 14:53:34,433 | INFO | financial_statement | 没有下一页了
+2026-04-27 14:53:34,437 | INFO | financial_statement | 共获取 223 条记录
+2026-04-27 14:53:34,474 | INFO | financial_statement | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260427.csv
+2026-04-27 14:55:33,663 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:55:34,960 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:27:17,871 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:27:22,456 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:27:30,862 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:27:47,770 | ERROR | financial_statement | [聚水潭] 请求失败（第 1 次）: 
+2026-04-27 15:27:47,770 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-27 15:27:50,871 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-27 15:27:50,876 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-27 15:28:02,020 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-27 15:28:02,027 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-27 15:28:02,027 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-27 15:28:05,140 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:28:06,122 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-27 15:28:13,639 | INFO | financial_statement | 没有下一页了
+2026-04-27 15:28:13,642 | INFO | financial_statement | 共获取 223 条记录
+2026-04-27 15:28:13,656 | INFO | financial_statement | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260427.csv

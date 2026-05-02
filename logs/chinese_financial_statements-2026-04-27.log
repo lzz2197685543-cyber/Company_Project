@@ -1,0 +1,68 @@
+2026-04-27 14:57:18,557 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 14:57:18,790 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 14:57:19,022 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 14:57:19,261 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:23,339 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:23,529 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:23,771 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:24,006 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:53,298 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:53,548 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:53,776 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:00:54,015 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:02:07,607 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:02:07,841 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:02:08,072 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:02:08,276 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:03:38,932 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:03:39,152 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:03:39,373 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:03:39,606 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:04:24,404 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:04:24,663 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:04:24,889 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:04:25,103 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:06:03,305 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:06:06,112 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:10,623 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:14,839 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 3 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:19,798 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:06:22,535 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:27,660 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:32,990 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 3 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:06:36,790 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:06:40,189 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:13:35,095 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:13:38,457 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:17:13,735 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:17:13,981 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:17:14,273 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:17:14,515 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:03,677 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:03,917 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:04,135 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:04,368 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:17,203 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:19:20,604 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:19:29,992 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:19:40,007 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 3 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:23:17,616 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:17,616 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:17,617 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:17,617 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:36,183 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:37,075 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:38,099 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:23:39,012 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:26:35,708 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:26:45,418 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:26:46,557 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:26:47,580 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-27 15:34:25,120 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:34:31,095 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:34:35,683 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 3 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:34:44,407 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Expecting value: line 1 column 1 (char 0)
+2026-04-27 15:55:42,127 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-27 15:55:49,363 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-27 15:55:54,546 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-27 15:56:01,355 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01

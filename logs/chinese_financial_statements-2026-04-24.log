@@ -1,0 +1,19 @@
+2026-04-24 14:13:10,817 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-24 14:13:11,526 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-24 14:13:11,529 | INFO | chinese_financial_statements | 共获取 223 条记录
+2026-04-24 14:16:24,483 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-24 14:16:25,131 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-24 14:16:25,134 | INFO | chinese_financial_statements | 共获取 223 条记录
+2026-04-24 14:16:25,148 | INFO | chinese_financial_statements | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260424.csv
+2026-04-24 17:32:08,336 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 17:32:09,799 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 17:32:10,808 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 17:32:11,538 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 17:32:56,389 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 17:33:05,746 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 17:33:06,604 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 17:33:07,471 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 17:56:24,304 | INFO | chinese_financial_statements | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 17:56:25,205 | INFO | chinese_financial_statements | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 17:56:26,108 | INFO | chinese_financial_statements | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 17:56:26,999 | INFO | chinese_financial_statements | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01

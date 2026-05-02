@@ -1,0 +1,101 @@
+2026-04-30 11:58:09,171 | INFO | temu_sale_main | 程序开始启动
+2026-04-30 11:58:09,172 | INFO | temu_sale_main | ---------------------------------开始爬取temu数据-----------------------------------
+2026-04-30 11:58:09,174 | INFO | temu_sale_main | 正在爬取第1页的数据
+2026-04-30 11:58:11,709 | INFO | temu_sale_main | 📊 第1页获取到500条数据
+2026-04-30 11:58:11,717 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:13,723 | INFO | temu_sale_main | 正在爬取第2页的数据
+2026-04-30 11:58:16,562 | INFO | temu_sale_main | 📊 第2页获取到500条数据
+2026-04-30 11:58:16,566 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:18,581 | INFO | temu_sale_main | 正在爬取第3页的数据
+2026-04-30 11:58:20,925 | INFO | temu_sale_main | 📊 第3页获取到500条数据
+2026-04-30 11:58:20,930 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:22,937 | INFO | temu_sale_main | 正在爬取第4页的数据
+2026-04-30 11:58:25,511 | INFO | temu_sale_main | 📊 第4页获取到500条数据
+2026-04-30 11:58:25,516 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:27,517 | INFO | temu_sale_main | 正在爬取第5页的数据
+2026-04-30 11:58:29,896 | INFO | temu_sale_main | 📊 第5页获取到500条数据
+2026-04-30 11:58:29,900 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:31,912 | INFO | temu_sale_main | 正在爬取第6页的数据
+2026-04-30 11:58:34,134 | INFO | temu_sale_main | 📊 第6页获取到500条数据
+2026-04-30 11:58:34,140 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:36,147 | INFO | temu_sale_main | 正在爬取第7页的数据
+2026-04-30 11:58:38,228 | INFO | temu_sale_main | 📊 第7页获取到500条数据
+2026-04-30 11:58:38,232 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:40,233 | INFO | temu_sale_main | 正在爬取第8页的数据
+2026-04-30 11:58:42,443 | INFO | temu_sale_main | 📊 第8页获取到500条数据
+2026-04-30 11:58:42,447 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:44,455 | INFO | temu_sale_main | 正在爬取第9页的数据
+2026-04-30 11:58:46,996 | INFO | temu_sale_main | 📊 第9页获取到500条数据
+2026-04-30 11:58:47,000 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:49,016 | INFO | temu_sale_main | 正在爬取第10页的数据
+2026-04-30 11:58:51,643 | INFO | temu_sale_main | 📊 第10页获取到500条数据
+2026-04-30 11:58:51,646 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:53,659 | INFO | temu_sale_main | 正在爬取第11页的数据
+2026-04-30 11:58:56,071 | INFO | temu_sale_main | 📊 第11页获取到500条数据
+2026-04-30 11:58:56,078 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:58:58,091 | INFO | temu_sale_main | 正在爬取第12页的数据
+2026-04-30 11:59:00,436 | INFO | temu_sale_main | 📊 第12页获取到500条数据
+2026-04-30 11:59:00,442 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:59:02,442 | INFO | temu_sale_main | 正在爬取第13页的数据
+2026-04-30 11:59:04,809 | INFO | temu_sale_main | 📊 第13页获取到500条数据
+2026-04-30 11:59:04,813 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:59:06,819 | INFO | temu_sale_main | 正在爬取第14页的数据
+2026-04-30 11:59:08,722 | INFO | temu_sale_main | 📊 第14页获取到500条数据
+2026-04-30 11:59:08,729 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:59:10,730 | INFO | temu_sale_main | 正在爬取第15页的数据
+2026-04-30 11:59:13,015 | INFO | temu_sale_main | 📊 第15页获取到500条数据
+2026-04-30 11:59:13,018 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:59:15,018 | INFO | temu_sale_main | 正在爬取第16页的数据
+2026-04-30 11:59:17,273 | INFO | temu_sale_main | 📊 第16页获取到371条数据
+2026-04-30 11:59:17,276 | INFO | temu_sale_main | 已保存到文件: D:\sd14\JST_horizon\data/sale/temu_sale_20260430.csv
+2026-04-30 11:59:17,277 | INFO | temu_sale_main | ✅ 第16页为最后一页，共获取7871条
+2026-04-30 11:59:17,278 | INFO | temu_sale_main | ---------------------------------开始匹配sku数据-----------------------------------
+2026-04-30 11:59:17,877 | INFO | temu_sale_main | ---------------------------------开始上传数据-----------------------------------
+2026-04-30 11:59:17,878 | INFO | temu_sale_main | 准备上传 422 条记录...
+2026-04-30 12:01:08,768 | INFO | temu_sale_main | 
+上传统计:
+2026-04-30 12:01:08,768 | INFO | temu_sale_main | 总记录数: 422
+2026-04-30 12:01:08,769 | INFO | temu_sale_main | 成功数量: 0
+2026-04-30 12:01:08,769 | INFO | temu_sale_main | 失败数量: 422
+2026-04-30 12:01:08,769 | INFO | temu_sale_main | 成功批次: 0
+2026-04-30 12:01:08,770 | INFO | temu_sale_main | 失败批次: 9
+2026-04-30 12:01:08,770 | WARNING | temu_sale_main | 发现 422 条失败记录
+2026-04-30 12:01:08,770 | WARNING | temu_sale_main |   失败批次 1: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,771 | WARNING | temu_sale_main |   失败批次 2: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,771 | WARNING | temu_sale_main |   失败批次 3: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,771 | WARNING | temu_sale_main |   失败批次 4: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,772 | WARNING | temu_sale_main |   失败批次 5: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,772 | WARNING | temu_sale_main |   失败批次 6: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,772 | WARNING | temu_sale_main |   失败批次 7: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,773 | WARNING | temu_sale_main |   失败批次 8: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,773 | WARNING | temu_sale_main |   失败批次 9: ❌ 无权限操作（403）
+👉 operator_id 无该多维表权限
+OperatorId: ZiSpuzyA49UNQz7CvPBUvhwiEiE
+钉钉返回: 您的企业本月api调用量已超过限制,调用量:10353次,额度:5000次,请登录开发者后台-资源管理-查看用量明细
+2026-04-30 12:01:08,786 | INFO | temu_sale_main | 失败的记录已保存到: failed_records_20260430_120108.json
+2026-04-30 12:01:08,788 | INFO | temu_sale_main | 数据上传成功
+2026-04-30 12:01:11,792 | INFO | temu_sale_main | ⏱️  总耗时: 182.62 秒

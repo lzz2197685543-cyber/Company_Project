@@ -1,0 +1,37 @@
+2026-04-24 14:06:34,843 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 14:06:36,554 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 14:06:38,714 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 14:06:40,952 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 14:06:41,696 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-24 14:06:42,409 | INFO | financial_statement | 没有下一页了
+2026-04-24 14:06:42,412 | INFO | financial_statement | 共获取 223 条记录
+2026-04-24 14:10:44,447 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 14:10:46,132 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 14:10:48,224 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 14:10:49,928 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 14:10:50,737 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-24 14:10:51,444 | INFO | financial_statement | 没有下一页了
+2026-04-24 14:10:51,446 | INFO | financial_statement | 共获取 223 条记录
+2026-04-24 16:49:37,025 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 16:49:39,679 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 16:49:41,698 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 16:49:44,014 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 16:49:44,784 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-24 16:49:45,501 | INFO | financial_statement | 没有下一页了
+2026-04-24 16:49:45,507 | INFO | financial_statement | 共获取 223 条记录
+2026-04-24 16:49:45,529 | INFO | financial_statement | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260424.csv
+2026-04-24 18:10:09,773 | ERROR | financial_statement | [聚水潭] 请求失败（第 1 次）: 
+2026-04-24 18:10:09,775 | INFO | financial_statement | JST---第 1 次登录尝试
+2026-04-24 18:10:11,409 | INFO | financial_statement | 会话已过期，重新登录
+2026-04-24 18:10:11,414 | INFO | financial_statement | ✅ 已加载保存的Cookie
+2026-04-24 18:10:15,317 | INFO | financial_statement | ✅ JST-ERP 手动登录成功
+2026-04-24 18:10:15,330 | INFO | financial_statement | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-24 18:10:15,330 | INFO | financial_statement | JST - 登录成功（第 1 次）
+2026-04-24 18:10:19,825 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-24 18:10:22,016 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-24 18:10:24,985 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-24 18:10:27,131 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-24 18:10:28,098 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-24 18:10:28,831 | INFO | financial_statement | 没有下一页了
+2026-04-24 18:10:28,836 | INFO | financial_statement | 共获取 223 条记录
+2026-04-24 18:10:28,861 | INFO | financial_statement | 费用汇总已保存到: D:\sd14\JST_horizon\data\daily_bookkeeping\fee_summary_20260424.csv

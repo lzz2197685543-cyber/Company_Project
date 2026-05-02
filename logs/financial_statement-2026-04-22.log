@@ -1,0 +1,25 @@
+2026-04-22 18:13:14,644 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-02
+2026-04-22 18:13:14,646 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-02
+2026-04-22 18:13:14,649 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-02
+2026-04-22 18:13:14,651 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-02
+2026-04-22 18:13:16,834 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-22 18:13:20,600 | INFO | financial_statement | 没有下一页了
+2026-04-22 18:13:20,603 | INFO | financial_statement | 共获取 225 条记录
+2026-04-22 18:14:13,261 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-02
+2026-04-22 18:14:13,263 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-02
+2026-04-22 18:14:13,265 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-02
+2026-04-22 18:14:13,268 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-02
+2026-04-22 18:14:15,992 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-22 18:14:19,632 | INFO | financial_statement | 没有下一页了
+2026-04-22 18:14:19,635 | INFO | financial_statement | 共获取 225 条记录
+2026-04-22 18:17:29,897 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-02
+2026-04-22 18:17:29,899 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-02
+2026-04-22 18:17:29,901 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-02
+2026-04-22 18:17:29,904 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-02
+2026-04-22 18:17:45,191 | INFO | financial_statement | 请求参数: shop_id=12430140, start=2026-03-01, end=2026-04-01
+2026-04-22 18:17:45,193 | INFO | financial_statement | 请求参数: shop_id=14836831, start=2026-03-01, end=2026-04-01
+2026-04-22 18:17:45,196 | INFO | financial_statement | 请求参数: shop_id=12426494, start=2026-03-01, end=2026-04-01
+2026-04-22 18:17:45,198 | INFO | financial_statement | 请求参数: shop_id=14836828, start=2026-03-01, end=2026-04-01
+2026-04-22 18:17:47,126 | INFO | financial_statement | 正在爬取第1页的数据
+2026-04-22 18:17:49,586 | INFO | financial_statement | 没有下一页了
+2026-04-22 18:17:49,589 | INFO | financial_statement | 共获取 222 条记录

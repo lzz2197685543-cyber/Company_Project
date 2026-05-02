@@ -1,0 +1,464 @@
+2026-04-22 10:39:30,418 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: 'method' object is not subscriptable
+2026-04-22 10:39:30,418 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:39:31,972 | INFO | chinese_financial_statements | 会话已过期，重新登录
+2026-04-22 10:39:31,978 | INFO | chinese_financial_statements | ✅ 已加载保存的Cookie
+2026-04-22 10:39:36,106 | INFO | chinese_financial_statements | ✅ JST-ERP 手动登录成功
+2026-04-22 10:39:36,117 | INFO | chinese_financial_statements | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-22 10:39:36,117 | INFO | chinese_financial_statements | JST - 登录成功（第 1 次）
+2026-04-22 10:39:38,445 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: 'method' object is not subscriptable
+2026-04-22 10:39:38,445 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:39:38,981 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=3916
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=3916
+  - [pid=3916] <gracefully close start>
+  - [pid=3916] <kill>
+  - [pid=3916] <will force kill>
+  - [pid=3916] taskkill stderr: ����: û���ҵ����� "3916"��
+  - [pid=3916] <process did exit: exitCode=21, signal=null>
+  - [pid=3916] starting temporary directories cleanup
+  - [pid=3916] finished temporary directories cleanup
+  - [pid=3916] <gracefully close end>
+
+2026-04-22 10:39:38,985 | ERROR | chinese_financial_statements | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 172, in post1
+    print('响应信息:', resp.text[:200])
+TypeError: 'method' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:39:38,985 | INFO | chinese_financial_statements | JST - 准备重试，等待 3 秒...
+2026-04-22 10:39:41,995 | INFO | chinese_financial_statements | JST---第 2 次登录尝试
+2026-04-22 10:39:42,518 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=23316
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=23316
+  - [pid=23316] <gracefully close start>
+  - [pid=23316] <kill>
+  - [pid=23316] <will force kill>
+  - [pid=23316] taskkill stderr: ����: û���ҵ����� "23316"��
+  - [pid=23316] <process did exit: exitCode=21, signal=null>
+  - [pid=23316] starting temporary directories cleanup
+  - [pid=23316] finished temporary directories cleanup
+  - [pid=23316] <gracefully close end>
+
+2026-04-22 10:39:42,520 | ERROR | chinese_financial_statements | JST - 第 2 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 172, in post1
+    print('响应信息:', resp.text[:200])
+TypeError: 'method' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:39:42,520 | INFO | chinese_financial_statements | JST - 准备重试，等待 3 秒...
+2026-04-22 10:39:45,521 | INFO | chinese_financial_statements | JST---第 3 次登录尝试
+2026-04-22 10:39:46,045 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=15544
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=15544
+  - [pid=15544] <gracefully close start>
+  - [pid=15544] <kill>
+  - [pid=15544] <will force kill>
+  - [pid=15544] taskkill stderr: ����: û���ҵ����� "15544"��
+  - [pid=15544] <process did exit: exitCode=21, signal=null>
+  - [pid=15544] starting temporary directories cleanup
+  - [pid=15544] finished temporary directories cleanup
+  - [pid=15544] <gracefully close end>
+
+2026-04-22 10:39:46,051 | ERROR | chinese_financial_statements | JST - 第 3 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 172, in post1
+    print('响应信息:', resp.text[:200])
+TypeError: 'method' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:39:46,058 | INFO | chinese_financial_statements | 浏览器已关闭
+2026-04-22 10:39:46,058 | ERROR | chinese_financial_statements | JST- 登录失败，已达到最大重试次数 3
+2026-04-22 10:40:59,307 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: 'method' object is not subscriptable
+2026-04-22 10:40:59,308 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:41:00,404 | INFO | chinese_financial_statements | 会话已过期，重新登录
+2026-04-22 10:41:00,409 | INFO | chinese_financial_statements | ✅ 已加载保存的Cookie
+2026-04-22 10:41:04,308 | INFO | chinese_financial_statements | ✅ JST-ERP 手动登录成功
+2026-04-22 10:41:04,322 | INFO | chinese_financial_statements | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-22 10:41:04,322 | INFO | chinese_financial_statements | JST - 登录成功（第 1 次）
+2026-04-22 10:41:06,559 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: 'method' object is not subscriptable
+2026-04-22 10:41:06,559 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:41:07,148 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=10812
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=10812
+  - [pid=10812] <gracefully close start>
+  - [pid=10812] <kill>
+  - [pid=10812] <will force kill>
+  - [pid=10812] taskkill stderr: ����: û���ҵ����� "10812"��
+  - [pid=10812] <process did exit: exitCode=21, signal=null>
+  - [pid=10812] starting temporary directories cleanup
+  - [pid=10812] finished temporary directories cleanup
+  - [pid=10812] <gracefully close end>
+
+2026-04-22 10:41:07,149 | ERROR | chinese_financial_statements | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 188, in post1
+    print('响应信息:', resp.text[:200])
+TypeError: 'method' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:41:07,149 | INFO | chinese_financial_statements | JST - 准备重试，等待 3 秒...
+2026-04-22 10:45:22,461 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: 'method' object is not subscriptable
+2026-04-22 10:45:22,461 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:56:16,516 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: 'coroutine' object is not subscriptable
+2026-04-22 10:56:16,516 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:56:17,544 | INFO | chinese_financial_statements | 会话已过期，重新登录
+2026-04-22 10:56:17,549 | INFO | chinese_financial_statements | ✅ 已加载保存的Cookie
+2026-04-22 10:56:19,898 | INFO | chinese_financial_statements | Cookie无效或过期，开始手动登录流程
+2026-04-22 10:59:03,320 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-22 10:59:03,320 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:59:04,304 | INFO | chinese_financial_statements | 会话已过期，重新登录
+2026-04-22 10:59:04,309 | INFO | chinese_financial_statements | ✅ 已加载保存的Cookie
+2026-04-22 10:59:08,213 | INFO | chinese_financial_statements | ✅ JST-ERP 手动登录成功
+2026-04-22 10:59:08,221 | INFO | chinese_financial_statements | ✅ Cookie 已保存到 D:\sd14\JST_horizon\data\cookies\jst_cookies.json
+2026-04-22 10:59:08,221 | INFO | chinese_financial_statements | JST - 登录成功（第 1 次）
+2026-04-22 10:59:10,447 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 2 次）
+2026-04-22 10:59:10,448 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 10:59:11,021 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=22580
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=22580
+  - [pid=22580] <gracefully close start>
+  - [pid=22580] <kill>
+  - [pid=22580] <will force kill>
+  - [pid=22580] taskkill stderr: ����: û���ҵ����� "22580"��
+  - [pid=22580] <process did exit: exitCode=21, signal=null>
+  - [pid=22580] starting temporary directories cleanup
+  - [pid=22580] finished temporary directories cleanup
+  - [pid=22580] <gracefully close end>
+
+2026-04-22 10:59:11,023 | ERROR | chinese_financial_statements | JST - 第 1 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 175, in post1
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:59:11,023 | INFO | chinese_financial_statements | JST - 准备重试，等待 3 秒...
+2026-04-22 10:59:14,023 | INFO | chinese_financial_statements | JST---第 2 次登录尝试
+2026-04-22 10:59:14,599 | ERROR | chinese_financial_statements | 初始化浏览器失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 43, in init_browser
+    self.context = await self.playwright.chromium.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\async_api\_generated.py", line 14795, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+  File "C:\ProgramData\anaconda3\envs\spider310\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+<launched> pid=10624
+Call log:
+  - <launching> C:\Users\Administrator\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --no-sandbox --disable-blink-features=AutomationControlled --disable-features=IsolateOrigins,site-per-process --disable-web-security --disable-features=BlockInsecurePrivateNetworkRequests --user-data-dir=D:\sd14\JST_horizon\data\browser_profile\jst --remote-debugging-pipe about:blank
+  - <launched> pid=10624
+  - [pid=10624] <gracefully close start>
+  - [pid=10624] <kill>
+  - [pid=10624] <will force kill>
+  - [pid=10624] taskkill stderr: ����: û���ҵ����� "10624"��
+  - [pid=10624] <process did exit: exitCode=21, signal=null>
+  - [pid=10624] starting temporary directories cleanup
+  - [pid=10624] finished temporary directories cleanup
+  - [pid=10624] <gracefully close end>
+
+2026-04-22 10:59:14,604 | ERROR | chinese_financial_statements | JST - 第 2 次失败: browser 失败
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\base_client.py", line 175, in post1
+    raise PermissionError("cookie 已失效或接口返回异常")
+PermissionError: cookie 已失效或接口返回异常
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\sd14\JST_horizon\core\login.py", line 270, in run
+    result = await self.run_once()
+  File "D:\sd14\JST_horizon\core\login.py", line 257, in run_once
+    raise Exception("browser 失败")
+Exception: browser 失败
+2026-04-22 10:59:14,604 | INFO | chinese_financial_statements | JST - 准备重试，等待 3 秒...
+2026-04-22 11:05:14,513 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-22 11:05:14,513 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 11:05:15,644 | INFO | chinese_financial_statements | 会话已过期，重新登录
+2026-04-22 11:05:15,650 | INFO | chinese_financial_statements | ✅ 已加载保存的Cookie
+2026-04-22 11:05:18,313 | INFO | chinese_financial_statements | Cookie无效或过期，开始手动登录流程
+2026-04-22 11:05:44,560 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-22 11:05:44,560 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 11:07:33,370 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-22 11:07:33,371 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 11:08:05,772 | WARNING | chinese_financial_statements | [聚水潭] 登录失效，刷新 cookie（第 1 次）
+2026-04-22 11:08:05,773 | INFO | chinese_financial_statements | JST---第 1 次登录尝试
+2026-04-22 14:32:58,826 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:32:59,437 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:33:20,890 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:21,518 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:22,115 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:22,681 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:23,221 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:23,789 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:24,395 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:25,043 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:25,619 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:26,210 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:26,843 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:27,436 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:28,030 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:45,554 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:33:46,233 | INFO | chinese_financial_statements | 正在爬取第2页的数据
+2026-04-22 14:33:46,854 | INFO | chinese_financial_statements | 正在爬取第3页的数据
+2026-04-22 14:33:47,471 | INFO | chinese_financial_statements | 正在爬取第4页的数据
+2026-04-22 14:33:48,048 | INFO | chinese_financial_statements | 正在爬取第5页的数据
+2026-04-22 14:33:48,649 | INFO | chinese_financial_statements | 正在爬取第6页的数据
+2026-04-22 14:33:49,244 | INFO | chinese_financial_statements | 正在爬取第7页的数据
+2026-04-22 14:33:49,855 | INFO | chinese_financial_statements | 正在爬取第8页的数据
+2026-04-22 14:33:50,462 | INFO | chinese_financial_statements | 正在爬取第9页的数据
+2026-04-22 14:33:51,061 | INFO | chinese_financial_statements | 正在爬取第10页的数据
+2026-04-22 14:33:51,724 | INFO | chinese_financial_statements | 正在爬取第11页的数据
+2026-04-22 14:33:52,324 | INFO | chinese_financial_statements | 正在爬取第12页的数据
+2026-04-22 14:33:52,937 | INFO | chinese_financial_statements | 正在爬取第13页的数据
+2026-04-22 14:33:53,516 | INFO | chinese_financial_statements | 正在爬取第14页的数据
+2026-04-22 14:33:54,117 | INFO | chinese_financial_statements | 正在爬取第15页的数据
+2026-04-22 14:33:54,753 | INFO | chinese_financial_statements | 正在爬取第16页的数据
+2026-04-22 14:33:55,300 | INFO | chinese_financial_statements | 正在爬取第17页的数据
+2026-04-22 14:33:55,863 | INFO | chinese_financial_statements | 正在爬取第18页的数据
+2026-04-22 14:33:56,423 | INFO | chinese_financial_statements | 正在爬取第19页的数据
+2026-04-22 14:33:57,002 | INFO | chinese_financial_statements | 正在爬取第20页的数据
+2026-04-22 14:33:57,577 | INFO | chinese_financial_statements | 正在爬取第21页的数据
+2026-04-22 14:33:58,129 | INFO | chinese_financial_statements | 正在爬取第22页的数据
+2026-04-22 14:33:58,754 | INFO | chinese_financial_statements | 正在爬取第23页的数据
+2026-04-22 14:33:59,378 | INFO | chinese_financial_statements | 正在爬取第24页的数据
+2026-04-22 14:34:00,022 | INFO | chinese_financial_statements | 正在爬取第25页的数据
+2026-04-22 14:34:00,588 | INFO | chinese_financial_statements | 正在爬取第26页的数据
+2026-04-22 14:34:01,300 | INFO | chinese_financial_statements | 正在爬取第27页的数据
+2026-04-22 14:34:01,907 | INFO | chinese_financial_statements | 正在爬取第28页的数据
+2026-04-22 14:34:02,490 | INFO | chinese_financial_statements | 正在爬取第29页的数据
+2026-04-22 14:34:03,088 | INFO | chinese_financial_statements | 正在爬取第30页的数据
+2026-04-22 14:34:03,822 | INFO | chinese_financial_statements | 正在爬取第31页的数据
+2026-04-22 14:34:04,463 | INFO | chinese_financial_statements | 正在爬取第32页的数据
+2026-04-22 14:34:05,127 | INFO | chinese_financial_statements | 正在爬取第33页的数据
+2026-04-22 14:34:05,733 | INFO | chinese_financial_statements | 正在爬取第34页的数据
+2026-04-22 14:34:06,356 | INFO | chinese_financial_statements | 正在爬取第35页的数据
+2026-04-22 14:34:07,002 | INFO | chinese_financial_statements | 正在爬取第36页的数据
+2026-04-22 14:34:07,597 | INFO | chinese_financial_statements | 正在爬取第37页的数据
+2026-04-22 14:34:08,437 | INFO | chinese_financial_statements | 正在爬取第38页的数据
+2026-04-22 14:34:09,003 | INFO | chinese_financial_statements | 正在爬取第39页的数据
+2026-04-22 14:34:09,607 | INFO | chinese_financial_statements | 正在爬取第40页的数据
+2026-04-22 14:34:10,275 | INFO | chinese_financial_statements | 正在爬取第41页的数据
+2026-04-22 14:34:10,851 | INFO | chinese_financial_statements | 正在爬取第42页的数据
+2026-04-22 14:34:11,476 | INFO | chinese_financial_statements | 正在爬取第43页的数据
+2026-04-22 14:34:12,108 | INFO | chinese_financial_statements | 正在爬取第44页的数据
+2026-04-22 14:34:12,760 | INFO | chinese_financial_statements | 正在爬取第45页的数据
+2026-04-22 14:34:13,363 | INFO | chinese_financial_statements | 正在爬取第46页的数据
+2026-04-22 14:34:14,051 | INFO | chinese_financial_statements | 正在爬取第47页的数据
+2026-04-22 14:34:14,642 | INFO | chinese_financial_statements | 正在爬取第48页的数据
+2026-04-22 14:34:15,515 | INFO | chinese_financial_statements | 正在爬取第49页的数据
+2026-04-22 14:34:16,152 | INFO | chinese_financial_statements | 正在爬取第50页的数据
+2026-04-22 14:34:16,781 | INFO | chinese_financial_statements | 正在爬取第51页的数据
+2026-04-22 14:34:17,419 | INFO | chinese_financial_statements | 正在爬取第52页的数据
+2026-04-22 14:34:18,010 | INFO | chinese_financial_statements | 正在爬取第53页的数据
+2026-04-22 14:34:18,605 | INFO | chinese_financial_statements | 正在爬取第54页的数据
+2026-04-22 14:34:19,247 | INFO | chinese_financial_statements | 正在爬取第55页的数据
+2026-04-22 14:34:19,880 | INFO | chinese_financial_statements | 正在爬取第56页的数据
+2026-04-22 14:34:20,506 | INFO | chinese_financial_statements | 正在爬取第57页的数据
+2026-04-22 14:34:21,145 | INFO | chinese_financial_statements | 正在爬取第58页的数据
+2026-04-22 14:34:21,778 | INFO | chinese_financial_statements | 正在爬取第59页的数据
+2026-04-22 14:34:22,387 | INFO | chinese_financial_statements | 正在爬取第60页的数据
+2026-04-22 14:34:23,002 | INFO | chinese_financial_statements | 正在爬取第61页的数据
+2026-04-22 14:34:23,596 | INFO | chinese_financial_statements | 正在爬取第62页的数据
+2026-04-22 14:34:24,176 | INFO | chinese_financial_statements | 正在爬取第63页的数据
+2026-04-22 14:34:24,769 | INFO | chinese_financial_statements | 正在爬取第64页的数据
+2026-04-22 14:34:25,339 | INFO | chinese_financial_statements | 正在爬取第65页的数据
+2026-04-22 14:34:25,928 | INFO | chinese_financial_statements | 正在爬取第66页的数据
+2026-04-22 14:34:26,535 | INFO | chinese_financial_statements | 正在爬取第67页的数据
+2026-04-22 14:34:27,145 | INFO | chinese_financial_statements | 正在爬取第68页的数据
+2026-04-22 14:34:27,682 | INFO | chinese_financial_statements | 正在爬取第69页的数据
+2026-04-22 14:34:28,325 | INFO | chinese_financial_statements | 正在爬取第70页的数据
+2026-04-22 14:34:29,016 | INFO | chinese_financial_statements | 正在爬取第71页的数据
+2026-04-22 14:34:29,624 | INFO | chinese_financial_statements | 正在爬取第72页的数据
+2026-04-22 14:34:30,201 | INFO | chinese_financial_statements | 正在爬取第73页的数据
+2026-04-22 14:34:30,847 | INFO | chinese_financial_statements | 正在爬取第74页的数据
+2026-04-22 14:34:31,487 | INFO | chinese_financial_statements | 正在爬取第75页的数据
+2026-04-22 14:34:32,098 | INFO | chinese_financial_statements | 正在爬取第76页的数据
+2026-04-22 14:34:32,705 | INFO | chinese_financial_statements | 正在爬取第77页的数据
+2026-04-22 14:34:33,298 | INFO | chinese_financial_statements | 正在爬取第78页的数据
+2026-04-22 14:34:33,971 | INFO | chinese_financial_statements | 正在爬取第79页的数据
+2026-04-22 14:35:56,848 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:35:57,468 | INFO | chinese_financial_statements | 正在爬取第3页的数据
+2026-04-22 14:35:58,061 | INFO | chinese_financial_statements | 正在爬取第5页的数据
+2026-04-22 14:35:58,708 | INFO | chinese_financial_statements | 正在爬取第7页的数据
+2026-04-22 14:35:59,361 | INFO | chinese_financial_statements | 正在爬取第9页的数据
+2026-04-22 14:35:59,953 | INFO | chinese_financial_statements | 正在爬取第11页的数据
+2026-04-22 14:36:00,594 | INFO | chinese_financial_statements | 正在爬取第13页的数据
+2026-04-22 14:36:01,188 | INFO | chinese_financial_statements | 正在爬取第15页的数据
+2026-04-22 14:36:01,799 | INFO | chinese_financial_statements | 正在爬取第17页的数据
+2026-04-22 14:36:19,758 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:36:20,345 | INFO | chinese_financial_statements | 正在爬取第3页的数据
+2026-04-22 14:36:21,054 | INFO | chinese_financial_statements | 正在爬取第5页的数据
+2026-04-22 14:36:21,743 | INFO | chinese_financial_statements | 正在爬取第7页的数据
+2026-04-22 14:36:22,494 | INFO | chinese_financial_statements | 正在爬取第9页的数据
+2026-04-22 14:36:27,724 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:36:42,490 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:36:43,229 | INFO | chinese_financial_statements | 正在爬取第2页的数据
+2026-04-22 14:36:43,946 | INFO | chinese_financial_statements | 正在爬取第3页的数据
+2026-04-22 14:36:44,595 | INFO | chinese_financial_statements | 正在爬取第4页的数据
+2026-04-22 14:36:45,278 | INFO | chinese_financial_statements | 正在爬取第5页的数据
+2026-04-22 14:36:45,964 | INFO | chinese_financial_statements | 正在爬取第6页的数据
+2026-04-22 14:36:46,732 | INFO | chinese_financial_statements | 正在爬取第7页的数据
+2026-04-22 14:36:47,502 | INFO | chinese_financial_statements | 正在爬取第8页的数据
+2026-04-22 14:36:48,389 | INFO | chinese_financial_statements | 正在爬取第9页的数据
+2026-04-22 14:36:53,900 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:37:51,161 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:37:56,382 | INFO | chinese_financial_statements | 正在爬取第2页的数据
+2026-04-22 14:38:01,240 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:38:01,243 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 14:43:08,983 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:43:09,753 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:43:09,756 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 14:45:27,465 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:45:28,164 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:45:28,166 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 14:48:47,205 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:48:47,944 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:48:47,947 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 14:49:37,315 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 14:49:37,979 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 14:49:37,982 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 17:19:48,133 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:19:52,295 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 17:19:52,298 | INFO | chinese_financial_statements | 共获取 222 条记录
+2026-04-22 17:46:20,442 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:46:28,078 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:46:57,281 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:47:00,038 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 17:47:00,041 | INFO | chinese_financial_statements | 共获取 225 条记录
+2026-04-22 17:48:04,122 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:48:34,342 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:48:34,344 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 1 次）: Object of type date is not JSON serializable
+2026-04-22 17:48:36,349 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 2 次）: Object of type date is not JSON serializable
+2026-04-22 17:48:38,353 | ERROR | chinese_financial_statements | [聚水潭] 请求失败（第 3 次）: Object of type date is not JSON serializable
+2026-04-22 17:49:35,971 | INFO | chinese_financial_statements | 正在爬取第1页的数据
+2026-04-22 17:49:38,419 | INFO | chinese_financial_statements | 没有下一页了
+2026-04-22 17:49:38,422 | INFO | chinese_financial_statements | 共获取 222 条记录
