@@ -1,0 +1,7 @@
+2026/04/09-07:39:16.479 3630 Reusing MANIFEST D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_air.1688.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/09-07:39:16.480 3630 Recovering log #3
+2026/04/09-07:39:16.483 3630 Reusing old log D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_air.1688.com_0.indexeddb.leveldb/000003.log 
+2026/04/09-07:39:40.429 6bc4 Level-0 table #5: started
+2026/04/09-07:39:40.431 6bc4 Level-0 table #5: 91667 bytes OK
+2026/04/09-07:39:40.433 6bc4 Delete type=0 #3
+2026/04/09-07:39:40.434 6bc4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

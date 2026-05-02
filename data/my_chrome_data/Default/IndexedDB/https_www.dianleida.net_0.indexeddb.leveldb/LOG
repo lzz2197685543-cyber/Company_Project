@@ -1,0 +1,13 @@
+2026/04/28-09:24:08.061 2110 Reusing MANIFEST D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_www.dianleida.net_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/28-09:24:08.061 2110 Recovering log #38
+2026/04/28-09:24:08.061 2110 Reusing old log D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_www.dianleida.net_0.indexeddb.leveldb/000038.log 
+2026/04/28-09:24:08.077 c6c Level-0 table #43: started
+2026/04/28-09:24:08.080 c6c Level-0 table #43: 2370 bytes OK
+2026/04/28-09:24:08.082 c6c Delete type=0 #38
+2026/04/28-09:24:08.082 170 Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at '\x00\x10\x00\x00\xc8\x04\x00d\x00a\x00t\x00a' @ 980 : 1
+2026/04/28-09:24:08.082 170 Compacting 1@0 + 1@1 files
+2026/04/28-09:24:08.087 170 Generated table #44@0: 33 keys, 866 bytes
+2026/04/28-09:24:08.087 170 Compacted 1@0 + 1@1 files => 866 bytes
+2026/04/28-09:24:08.088 170 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/28-09:24:08.089 170 Delete type=2 #43
+2026/04/28-09:24:08.089 170 Manual compaction at level-0 from '\x00\x10\x00\x00\xc8\x04\x00d\x00a\x00t\x00a' @ 980 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    i {
+        color: #666666;
+        font-size: 16px;
+        margin-right: 3px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    em,
+    i {
+        font-style: normal;
+    }
+
+    .clearfix:after {
+        content: "\200B";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
+    .clearfix {
+        zoom: 1;
+    }
+
+    a,
+    a:hover {
+        color: #333;
+        -webkit-touch-callout: none;
+        text-decoration: none;
+    }
+
+    .ml12 {
+        margin-left: 12px;
+    }
+
+    .blue {
+        color: #266bf8;
+    }
+
+    body, .popup-box {
+        width: 400px;
+        font-size: 12px;
+        overflow: hidden;
+    }
+
+    .popup-box .header {
+        background: linear-gradient(360deg, #F4F4FF 0%, #EAF2FF 100%);
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 19px;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .popup-box .website {
+        position: relative;
+    }
+
+    .popup-box .website::after {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: transparent;
+        border-color: #00C84B;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 5px;;
+    }
+
+    .popup-box .header .dld-button--primary {
+        font-size: 12px;
+        padding: 6px 12px;
+        background: #52c41a !important;
+        border-radius: 4px;
+    }
+
+    .switch-open {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .switch-open .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        margin-left: 5px;
+    }
+
+    .switch-open .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .switch-open .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 24px;
+    }
+
+    .switch-open .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    .switch-open input:checked + .slider {
+        background-color: #00C84B;
+    }
+
+    .switch-open input:checked + .slider:before {
+        transform: translateX(16px);
+    }
+
+    .popup-box .header .dld-button--primary.el-button + .el-button {
+        margin-left: 12px;
+    }
+
+    .tab-box {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .tab-box > div {
+        padding: 7px 22px;
+        font-size: 12px;
+        color: #333333;
+        border: 1px solid #DDDDDD;
+        cursor: pointer;
+    }
+
+    .tab-box .tab-active {
+        color: #00C84B;
+        border-color: #00C84B;
+    }
+
+    .popup-box .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        font-size: 12px;
+    }
+
+    .popup-box .footer > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .popup-box .footer .version {
+        color: #797979;
+        width: 75px;
+    }
+
+    .popup-box .footer .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-box .footer .item2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 16px;
+    }
+
+    .popup-box .footer .item2 .new-version-color {
+        color: #00c84b;
+    }
+
+    .popup-box .footer .item2 .now-new-color {
+        color: #797979;
+    }
+
+    .popup-box .footer .horizontal {
+        margin: 0 20px;
+        height: 20px;
+        width: 1px;
+        display: inline-block;
+        background: #ccc;
+    }
+
+    .popup-box .footer .more {
+        position: relative;
+    }
+
+    .popup-box .footer .more:hover .more-content {
+        display: block;
+    }
+
+    .popup-box .footer .more .more-content {
+        display: none;
+        position: absolute;
+        bottom: 35px;
+        right: 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background: #fff;
+    }
+
+    .popup-box .footer .more .more-content .arrow {
+        position: absolute;
+        bottom: -10px;
+        right: 29px;
+    }
+
+    .ul-link {
+        padding: 0px 0 0px 12px;
+    }
+
+    .ul-link li {
+        float: left;
+        margin: 0 0 30px 10px;
+        width: 80px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .ul-link li img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .ul-link li a:hover .text {
+        color: #388eef;
+    }
+
+    .ul-link li .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .ul-link li .text {
+        line-height: 1;
+        margin-top: 12px;
+        color: #797979;
+    }
+
+    .cut-line {
+        width: 340px;
+        height: 1px;
+        background: #eeeeee;
+        margin: 0 auto;
+    }
+
+    .head-img-area {
+        cursor: pointer;
+    }
+
+    .head-img-area img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .head-img-area span {
+        font-size: 14px;
+        font-family: Microsoft YaHei UI-Regular, Microsoft YaHei UI;
+        font-weight: 400;
+        color: #333333;
+        line-height: 22px;
+    }
+
+    .qr-code-area {
+        width: 180px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qr-code-area > p {
+        font-weight: 600;
+        font-size: 16px;
+        font-family: Microsoft YaHei UI-Regular, Microsoft YaHei UI;
+        color: #333333;
+        line-height: 24px;
+    }
+
+    .qr-code-area > img {
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .qr-code-area > div {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .qr-code-area > div i {
+        color: #52c41a;
+        font-size: 16px !important;
+    }
+
+    .qr-code-area > div span {
+        font-size: 13px;
+        font-family: Microsoft YaHei UI-Regular, Microsoft YaHei UI;
+        font-weight: 400;
+        color: #999999;
+        line-height: 22px;
+    }
+
+    .change-green {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .change-green:hover i {
+        color: #00c84b !important;
+    }
+
+    .change-green:hover > span {
+        color: #00c84b !important;
+    }
+
+    .w40 {
+        width: 40px;
+    }
+
+    .h40 {
+        height: 40px;
+    }
+
+    .qucode-box {
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .qucode-box .user:hover {
+        color: #00c84b;
+        cursor: pointer;
+    }
+
+    .qucode-box .user:hover .user-tooltip {
+        display: block;
+    }
+
+    .qucode-box .wx:hover {
+        color: #00c84b;
+        cursor: pointer;
+    }
+
+    .qucode-box .wx:hover .wx-tooltip {
+        display: block;
+    }
+
+    .user, .wx {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .user, .wx img {
+        margin-right: 3px;
+    }
+
+    .wx-tooltip {
+        top: -205px;
+        left: -115px;
+        width: 180px;
+        position: absolute;
+        transform-origin: center bottom;
+        position: absolute;
+        background: #FFF;
+        min-width: 150px;
+        border-radius: 4px;
+        border: 1px solid #EBEEF5;
+        padding: 12px;
+        z-index: 2000;
+        color: #606266;
+        line-height: 1.4;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        word-break: break-all;
+        display: none;
+    }
+
+    .user-tooltip {
+        top: -205px;
+        left: -52px;
+        width: 180px;
+        position: absolute;
+        transform-origin: center bottom;
+        position: absolute;
+        background: #FFF;
+        min-width: 150px;
+        border-radius: 4px;
+        border: 1px solid #EBEEF5;
+        padding: 12px;
+        z-index: 2000;
+        color: #606266;
+        line-height: 1.4;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        word-break: break-all;
+        display: none;
+    }
+
+    .qr-code {
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .dld-wx-text {
+        font-size: 13px;
+        color: #999999;
+    }
+
+    .dld-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #333333;
+    }
+</style>
+<body>
+<div class='popup-box'>
+  <header class='header'>
+    <img src='https://obs.dianleida.net/images/browser-plug/logo.png' />
+    <!--        <a style="color: #00C84B" class="website" href="https://www.dianleida.net/" target="_blank"-->
+    <!--           data-functionName="导航栏_进入官网"-->
+    <!--           data-source="店雷达右上角导航栏">-->
+    <!--            进入官网-->
+    <!--        </a>-->
+    <!--    <div class='switch-open'>-->
+    <!--      <div>激活/禁用</div>-->
+    <!--      <label class='switch'>-->
+    <!--        <input id='switch-open' type='checkbox'>-->
+    <!--        <span class='slider'></span>-->
+    <!--      </label>-->
+    <!--    </div>-->
+
+  </header>
+  <div class='tab-box'>
+    <div class='tab-active' id='tab-1' data-functionName='导航栏_主流平台TAB切换' data-source='店雷达右上角导航栏'>主流平台</div>
+    <div id='tab-2' data-functionName='导航栏_跨境平台TAB切换' data-source='店雷达右上角导航栏'>跨境平台</div>
+    <div id='tab-3' data-functionName='导航栏_国内平台TAB切换' data-source='店雷达右上角导航栏'>国内平台</div>
+  </div>
+  <ul class='clearfix ul-link'>
+    <li>
+      <a href='https://www.dianleida.net/' target='_blank' data-functionname='导航栏_主流平台【店雷达官网】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/guanwang.png'>
+        <p class='text'>店雷达官网</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.1688.com/' target='_blank' data-functionname='导航栏_主流平台【1688】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/1688.png'>
+        <p class='text'>1688</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.alibaba.com/' target='_blank' data-functionname='导航栏_主流平台【阿里国际】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/alibaba.png'>
+        <p class='text'>阿里国际</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://pifa.pinduoduo.com' target='_blank' data-functionname='导航栏_跨境平台【拼多多批发】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/pinduoduopifa.png'>
+        <p class='text'>拼多多批发</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.amazon.com/' target='_blank' data-functionname='导航栏_主流平台【亚马逊】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/yamaxun.png'>
+        <p class='text'>亚马逊</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.aliexpress.com' target='_blank' data-functionname='导航栏_主流平台【速卖通】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/sumaitong.png'>
+        <p class='text'>速卖通</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.tiktok.com/' target='_blank' data-functionname='导航栏_主流平台【TIKTOK】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/tiktok.png'>
+        <p class='text'>TIKTOK</p>
+      </a>
+    </li>
+    <li>
+      <a href='https://www.temu.com/' target='_blank' data-functionname='导航栏_主流平台【TEMU】' data-source='店雷达右上角导航栏'>
+        <img class='w40 h40' src='https://obs.dianleida.net/public/popup/temu.png'>
+        <p class='text'>TEMU</p>
+      </a>
+    </li>
+  </ul>
+  <div class='cut-line'></div>
+  <div class='footer'>
+    <div>
+      <span class='version'>版本: v1.2.7</span>
+    </div>
+    <div class='qucode-box'>
+      <div class='user'>
+        <img width='18px' src='https://obs.dianleida.net/public/popup/qun.png?v=1'>
+        用户交流群
+        <div class='user-tooltip'>
+          <div class='dld-title'>加入用户交流群</div>
+          <div class='dld-title'>学习沟通运营技巧</div>
+          <img class='qr-code' src='https://obs.dianleida.net/images/browser-plug/qun.png' alt=''>
+          <div class='dld-wx-text'>微信扫一扫</div>
+        </div>
+      </div>
+      <div class='wx'>
+        <img width='18px' src='https://obs.dianleida.net/public/popup/wx.png?v=1'>
+        微信客服
+        <div class='wx-tooltip'>
+          <div class='dld-title'>添加客服</div>
+          <div class='dld-title'>领取运营干货</div>
+          <img class='qr-code' src='https://obs.dianleida.net/images/browser-plug/kefu.png' alt=''>
+          <div class='dld-wx-text'>微信扫一扫</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src='popup.js' type='text/javascript'></script>
+</html>

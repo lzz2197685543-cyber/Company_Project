@@ -1,0 +1,11 @@
+2026-04-25 08:50:02,501 | INFO | ali1688_goods_monitor | ============================================================
+2026-04-25 08:50:02,501 | INFO | ali1688_goods_monitor | 🚀 开始1688竞品监控任务
+2026-04-25 08:50:02,502 | INFO | ali1688_goods_monitor | ============================================================
+2026-04-25 08:50:04,121 | INFO | ali1688_goods_monitor | 浏览器初始化成功
+2026-04-25 08:50:22,530 | ERROR | ali1688_goods_monitor | 登录失败: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.dianleida.net/
+Call log:
+  - navigating to "https://www.dianleida.net/", waiting until "domcontentloaded"
+
+2026-04-25 08:50:22,544 | WARNING | ali1688_goods_monitor | ⚠️ 没有找到商品ID
+2026-04-25 08:50:22,659 | INFO | ali1688_goods_monitor | 浏览器已关闭
+2026-04-25 08:50:22,659 | WARNING | ali1688_goods_monitor | ⚠️ 未获取到任何数据

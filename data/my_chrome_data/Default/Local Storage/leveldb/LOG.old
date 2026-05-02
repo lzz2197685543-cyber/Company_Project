@@ -1,0 +1,60 @@
+2026/04/09-06:35:03.125 5eb8 Reusing MANIFEST D:\sd14\DianLeiDa\data\my_chrome_data\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/09-06:35:03.131 5eb8 Recovering log #33
+2026/04/09-06:35:03.134 5eb8 Reusing old log D:\sd14\DianLeiDa\data\my_chrome_data\Default\Local Storage\leveldb/000033.log 
+2026/04/09-06:44:02.480 614 Level-0 table #37: started
+2026/04/09-06:44:02.485 614 Level-0 table #37: 36063 bytes OK
+2026/04/09-06:44:02.487 614 Delete type=0 #33
+2026/04/09-07:02:28.095 614 Level-0 table #39: started
+2026/04/09-07:02:28.099 614 Level-0 table #39: 35618 bytes OK
+2026/04/09-07:02:28.100 614 Delete type=0 #36
+2026/04/09-07:02:28.100 614 Compacting 4@0 + 1@1 files
+2026/04/09-07:02:28.115 614 Generated table #40@0: 100 keys, 862019 bytes
+2026/04/09-07:02:28.116 614 Compacted 4@0 + 1@1 files => 862019 bytes
+2026/04/09-07:02:28.117 614 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/09-07:02:28.117 614 Delete type=2 #30
+2026/04/09-07:02:28.117 614 Delete type=2 #32
+2026/04/09-07:02:28.117 614 Delete type=2 #34
+2026/04/09-07:02:28.117 614 Delete type=2 #37
+2026/04/09-07:02:28.117 614 Delete type=2 #39
+2026/04/09-07:18:40.913 614 Level-0 table #42: started
+2026/04/09-07:18:40.917 614 Level-0 table #42: 38104 bytes OK
+2026/04/09-07:18:40.919 614 Delete type=0 #38
+2026/04/09-07:33:36.877 614 Level-0 table #44: started
+2026/04/09-07:33:36.879 614 Level-0 table #44: 38659 bytes OK
+2026/04/09-07:33:36.881 614 Delete type=0 #41
+2026/04/09-07:39:49.529 614 Level-0 table #46: started
+2026/04/09-07:39:49.532 614 Level-0 table #46: 46274 bytes OK
+2026/04/09-07:39:49.534 614 Delete type=0 #43
+2026/04/09-07:58:22.159 614 Level-0 table #48: started
+2026/04/09-07:58:22.165 614 Level-0 table #48: 35781 bytes OK
+2026/04/09-07:58:22.166 614 Delete type=0 #45
+2026/04/09-07:58:22.166 614 Compacting 4@0 + 1@1 files
+2026/04/09-07:58:22.180 614 Generated table #49@0: 100 keys, 862729 bytes
+2026/04/09-07:58:22.180 614 Compacted 4@0 + 1@1 files => 862729 bytes
+2026/04/09-07:58:22.181 614 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/09-07:58:22.181 614 Delete type=2 #40
+2026/04/09-07:58:22.181 614 Delete type=2 #42
+2026/04/09-07:58:22.181 614 Delete type=2 #44
+2026/04/09-07:58:22.181 614 Delete type=2 #46
+2026/04/09-07:58:22.181 614 Delete type=2 #48
+2026/04/09-08:16:02.119 614 Level-0 table #51: started
+2026/04/09-08:16:02.125 614 Level-0 table #51: 37253 bytes OK
+2026/04/09-08:16:02.126 614 Delete type=0 #47
+2026/04/09-08:33:37.369 614 Level-0 table #53: started
+2026/04/09-08:33:37.374 614 Level-0 table #53: 37727 bytes OK
+2026/04/09-08:33:37.375 614 Delete type=0 #50
+2026/04/09-08:45:59.127 614 Level-0 table #55: started
+2026/04/09-08:45:59.131 614 Level-0 table #55: 37645 bytes OK
+2026/04/09-08:45:59.132 614 Delete type=0 #52
+2026/04/09-09:02:00.377 614 Level-0 table #57: started
+2026/04/09-09:02:00.381 614 Level-0 table #57: 36239 bytes OK
+2026/04/09-09:02:00.383 614 Delete type=0 #54
+2026/04/09-09:02:00.383 614 Compacting 4@0 + 1@1 files
+2026/04/09-09:02:00.398 614 Generated table #58@0: 100 keys, 862710 bytes
+2026/04/09-09:02:00.398 614 Compacted 4@0 + 1@1 files => 862710 bytes
+2026/04/09-09:02:00.399 614 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/09-09:02:00.400 614 Delete type=2 #49
+2026/04/09-09:02:00.400 614 Delete type=2 #51
+2026/04/09-09:02:00.400 614 Delete type=2 #53
+2026/04/09-09:02:00.400 614 Delete type=2 #55
+2026/04/09-09:02:00.400 614 Delete type=2 #57

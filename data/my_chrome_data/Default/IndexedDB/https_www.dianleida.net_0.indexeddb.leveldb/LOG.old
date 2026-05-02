@@ -1,0 +1,4 @@
+2026/04/09-06:35:19.204 3630 Reusing MANIFEST D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_www.dianleida.net_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/09-06:35:19.204 3630 Recovering log #38
+2026/04/09-06:35:19.205 3630 Reusing old log D:\sd14\DianLeiDa\data\my_chrome_data\Default\IndexedDB\https_www.dianleida.net_0.indexeddb.leveldb/000038.log 
+2026/04/09-06:35:19.209 3244 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
