@@ -402,13 +402,13 @@ def financial_process_up(CONFIG_DIR,month_str):
         results = uploader.upload_batch_records(records, batch_size=50, delay=0.2, max_retries=2)
 
         # 打印上传结果
-        success_count = sum(1 for r in results if r.get("success"))
-        fail_count = len(results) - success_count
-        logger.info(f"{shop_file.name} 上传完成: 成功 {success_count} 批, 失败 {fail_count} 批")
-
-        if fail_count:
-            for i, r in enumerate([r for r in results if not r.get("success")], 1):
-                logger.info(f"  批次 {i} 失败原因: {r.get('message', '未知错误')}")
+        # success_count = sum(1 for r in results if r.get("success"))
+        # fail_count = len(results) - success_count
+        # logger.info(f"{shop_file.name} 上传完成: 成功 {success_count} 批, 失败 {fail_count} 批")
+        #
+        # if fail_count:
+        #     for i, r in enumerate([r for r in results if not r.get("success")], 1):
+        #         logger.info(f"  批次 {i} 失败原因: {r.get('message', '未知错误')}")
 
 
 # if __name__ == '__main__':

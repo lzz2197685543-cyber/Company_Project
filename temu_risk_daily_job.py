@@ -57,7 +57,7 @@ async def main():
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
-    ding_bot_send('me',f'site_daily_job任务结束，总耗时：{format_seconds(total_cost)}')
+    ding_bot_send('me',f'temu_risk_daily_job任务结束，总耗时：{format_seconds(total_cost)}')
 
 
 if __name__ == "__main__":

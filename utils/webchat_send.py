@@ -5,12 +5,11 @@ import subprocess
 import os
 from utils.logger import get_logger
 
-logger=get_logger('webchat_send')
 
 def open_wechat():
     """打开微信"""
     wechat_paths = [
-        "D:\办公软件\Weixin\\Weixin.exe",
+        "C:\Program Files\Tencent\Weixin\\Weixin.exe",
     ]
 
     for path in wechat_paths:
@@ -19,7 +18,7 @@ def open_wechat():
             time.sleep(3)  # 等待微信启动
             return True
 
-    logger.info("未找到微信，请手动打开微信窗口")
+    print("未找到微信，请手动打开微信窗口")
     return False
 
 def send_wechat_message(contact_name, message):
@@ -44,23 +43,23 @@ def send_wechat_message(contact_name, message):
     pyautogui.press('enter')
 
 def webchat_send(contacts):
-    logger.info("正在打开微信...")
+    print("正在打开微信...")
     if not open_wechat():
-        logger.info("请手动打开微信窗口")
+        print("请手动打开微信窗口")
         return
 
     time.sleep(0.5)
 
     for name1, msg in contacts:
-        logger.info(f"正在发送给：{name1}")
+        print(f"正在发送给：{name1}")
         send_wechat_message(name1, msg)
         time.sleep(2)
 
-    logger.info("全部消息发送完成！")
+    print("全部消息发送完成！")
 
     # 👉 发送 ESC 键
     pyautogui.press('esc')
-    logger.info("已按下 ESC 键")
+    print("已按下 ESC 键")
 
 
 if __name__ == "__main__":

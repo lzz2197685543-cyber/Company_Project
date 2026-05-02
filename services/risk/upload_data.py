@@ -14,7 +14,7 @@ from utils.dingtalk_bot import ding_bot_send
 from utils.dingding_doc import (
     DingTalkTokenManager,
     DingTalkSheetUploader,
-    DingTalkSheetDeleter
+    DingTalkSheetDeleter,upload_multiple_records
 )
 from utils.logger import get_logger
 
@@ -44,46 +44,6 @@ def format_decimal(val):
     return val
 
 
-# ======================
-# 钉钉上传通用方法
-# ======================
-
-def upload_records(config, records):
-    """
-    通用钉钉表批量上传
-    """
-    if not records:
-        logger.warning(f"{config['sheet_id']} 无数据，跳过上传")
-        return
-
-    uploader = DingTalkSheetUploader(
-        base_id=config["base_id"],
-        sheet_id=config["sheet_id"],
-        operator_id=config["operator_id"],
-        token_manager=DingTalkTokenManager()
-    )
-
-    logger.info(f"开始上传 {config['sheet_id']}，共 {len(records)} 条")
-
-    # 批量上传，每批50条，批次间延迟0.2秒，失败时重试2次
-    results = uploader.upload_batch_records(records, batch_size=50, delay=0.2, max_retries=2)
-
-    # 分析结果
-    successful_batches = [r for r in results if r.get("success")]
-    failed_batches = [r for r in results if not r.get("success")]
-
-    logger.info(f"\n上传统计:")
-    logger.info(f"总批次: {len(results)}")
-    logger.info(f"成功批次: {len(successful_batches)}")
-    logger.info(f"失败批次: {len(failed_batches)}")
-
-    if failed_batches:
-        logger.info(f"\n失败详情:")
-        ding_bot_send('me','temu资金限制项目有数据上传失败')
-        for i, failed in enumerate(failed_batches):
-            logger.info(f"  批次 {i + 1}: {failed.get('message', '未知错误')}")
-
-    return results
 
 # ======================
 # 钉钉删除通用方法
@@ -228,10 +188,11 @@ def select_yesterday_funds_restriction_records(conn):
 
 def main():
     conn = pymysql.connect(
-        host="localhost",
-        user="root",
-        password="1234",
-        database="py_spider",
+        host='rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+        port=3306,
+        user='root_lxz',
+        password='Lxz123456',
+        database='py_spider',
         charset="utf8mb4"
     )
 
@@ -239,13 +200,14 @@ def main():
         # ========= 违规记录 =========
         violation_records = select_today_violation_records(conn)
         logger.info(f"今日违法记录 {len(violation_records)} 条")
-        upload_records(
+        upload_multiple_records(
             config={
                 "base_id": "XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
                 "sheet_id": "temu违规金额",
                 "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
             },
-            records=violation_records
+            records=violation_records,
+            logger=logger,
         )
 
         # ========= 限制金额 =========
@@ -266,26 +228,29 @@ def main():
         funds_today_records = select_today_funds_restriction_records(conn)
         logger.info(f"今日限制金额 {len(funds_today_records)} 条")
 
-        upload_records(
+        upload_multiple_records(
             config={
                 "base_id": "XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
                 "sheet_id": "temu资金限制-当天",
                 "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
             },
-            records=funds_today_records
+            records=funds_today_records,
+            logger=logger,
+
         )
 
         # 昨日限制金额
         funds_yesterday_records = select_yesterday_funds_restriction_records(conn)
         logger.info(f"昨日限制金额 {len(funds_yesterday_records)} 条")
 
-        upload_records(
+        upload_multiple_records(
             config={
                 "base_id": "XPwkYGxZV3KRy1Gxfyb1E305VAgozOKL",
                 "sheet_id": "temu资金限制-昨天",
                 "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
             },
-            records=funds_yesterday_records
+            records=funds_yesterday_records,
+            logger=logger
         )
 
 

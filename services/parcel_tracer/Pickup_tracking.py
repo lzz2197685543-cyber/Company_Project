@@ -5,12 +5,12 @@ from core.base_client import TemuBaseClient
 import random
 from services.parcel_tracer.sql_save import DeliveryNoteStorage
 from utils.webchat_send import webchat_send
+from utils.dingding_table import DingTalkTokenManager,DingTalkDocClient
 
 """发货单--仓库待收货"""
 
 
 class DeliveryNote(TemuBaseClient):
-
 
     URL='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/deliverGoods/management/pageQueryDeliveryBatch'
     TRACE_URL='https://seller.kuajingmaihuo.com/bgSongbird-api/supplier/delivery/feedback/queryAllFeedbackRecordInfo'
@@ -19,20 +19,34 @@ class DeliveryNote(TemuBaseClient):
         super().__init__(shop_name, logger_name,cookie_domain="kuajingmaihuo")
         self.storage = DeliveryNoteStorage(
             mysql_conf={
-                "host": "localhost",
-                "user": "root",
-                "password": "1234",
-                "database": "py_spider"
+                "host": 'rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+                "port": 3306,
+                "user": 'root_lxz',
+                "password": 'Lxz123456',
+                "database": 'py_spider'
             },
             redis_conf={
-                "host": "localhost",
+                "host": "r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com",
+                "password": 'Lxz123456',
                 "port": 6379,
-                "db": 0
+                "db": 0,
             },
             redis_prefix="temu:delivery"
         )
 
         self.storage.create_table()
+
+        # 添加揽收空包丢件表配置
+        # self.PICKUP_BIG_DIFF_SHEET_CONFIG = {
+        #     "workbook_id": "kDnRL6jAJMO3D450HBM0ogPDWyMoPYe1",  # 你的表格ID
+        #     "sheet_id": "st-514b97fa-74330",  # 工作表ID
+        #     "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
+        # }
+        #
+        # self.token_manager = DingTalkTokenManager()
+        #
+        # # 创建客户端实例
+        # self.client = DingTalkDocClient(self.token_manager)
 
     def _mark_status(self, item):
         """
@@ -50,66 +64,60 @@ class DeliveryNote(TemuBaseClient):
                 try:
                     # 将时间戳（毫秒）转换为datetime对象
                     if isinstance(expect_pick_up_timestamp, (int, float)):
-                        # 如果是毫秒级时间戳，先转换为秒
-                        if expect_pick_up_timestamp > 1e12:  # 判断是否为毫秒级（大于1973年）
+                        if expect_pick_up_timestamp > 1e12:
                             expect_pick_up_time = datetime.fromtimestamp(expect_pick_up_timestamp / 1000)
                         else:
                             expect_pick_up_time = datetime.fromtimestamp(expect_pick_up_timestamp)
                     elif isinstance(expect_pick_up_timestamp, str):
-                        # 尝试解析字符串格式
                         try:
-                            # 尝试毫秒时间戳字符串
                             expect_pick_up_time = datetime.fromtimestamp(int(expect_pick_up_timestamp) / 1000)
                         except:
-                            # 尝试标准时间字符串格式
                             expect_pick_up_time = datetime.strptime(expect_pick_up_timestamp, "%Y-%m-%d %H:%M:%S")
                     else:
                         self.logger.warning(f"无法识别的预约取货时间格式: {expect_pick_up_timestamp}")
                         return "正常", ""
 
-                    # 计算允许的最晚时间（预约时间+1天）
                     allowed_time = expect_pick_up_time + timedelta(days=1)
-
                     if current_date > allowed_time:
-                        # 格式化时间显示
                         formatted_time = expect_pick_up_time.strftime("%Y-%m-%d %H:%M:%S")
                         return "异常", f"已超过预约取货时间({formatted_time})1天以上"
-
                 except Exception as e:
                     self.logger.warning(f"解析预约取货时间失败: {expect_pick_up_timestamp}, 错误: {e}")
 
-        # 规则2: 若[物流轨迹]包含"已签收"或"已代收"且[包裹状态]为"已到仓，待仓库收货"，则标记为"空包/丢件"
+        # 规则2: 若[包裹状态]为"已到仓，待仓库收货"，且[物流轨迹]包含"已签收"或"已代收"，
+        #        并且当前日期距离最新轨迹日期超过3天，则标记为"空包/丢件"
         if plat_express_status_tip == "已到仓，待仓库收货":
             if logistics_traces:
-                # 检查轨迹中是否包含"已签收"或"已代收"
                 trace_text = " ".join(logistics_traces)
                 if "已签收" in trace_text or "已代收" in trace_text:
-                    return "空包/丢件", "轨迹显示已签收但状态仍为待仓库收货"
+                    # 提取最新轨迹的日期
+                    try:
+                        latest_trace = logistics_traces[-1]
+                        trace_datetime_str = latest_trace[:19]  # 取前19个字符 "YYYY-MM-DD HH:MM:SS"
+                        trace_datetime = datetime.strptime(trace_datetime_str, "%Y-%m-%d %H:%M:%S")
+                        days_diff = (current_date - trace_datetime).days
+                        if days_diff > 3:
+                            last_time = trace_datetime.strftime("%Y-%m-%d %H:%M:%S")
+                            return "空包/丢件", f"轨迹显示已签收但状态仍为待仓库收货，且最新轨迹时间({last_time})已超过{days_diff}天"
+                        # 如果天数<=3，则不标记，继续后续规则
+                    except (ValueError, IndexError) as e:
+                        self.logger.warning(f"解析轨迹时间失败: {latest_trace}, 错误: {e}")
+                        # 解析失败时不标记，继续后续规则
 
         # 规则3: 若[包裹状态]为"物流运输中"，且当前日期距离[物流轨迹]中提取的最新日期超过3天或空值，则标记为"丢件"
         if plat_express_status_tip == "物流运输中":
             if not logistics_traces:
-                # 没有轨迹信息
                 return "丢件", "物流运输中但无轨迹信息"
 
-            # 从轨迹中提取最新日期
             latest_trace = logistics_traces[-1] if logistics_traces else ""
-
-            # 尝试从轨迹中提取日期时间
-            # 假设轨迹格式为: "YYYY-MM-DD HH:MM:SS 信息内容"
             try:
-                # 提取前19个字符作为日期时间部分
                 trace_datetime_str = latest_trace[:19]
                 trace_datetime = datetime.strptime(trace_datetime_str, "%Y-%m-%d %H:%M:%S")
-
-                # 计算时间差
                 time_diff = current_date - trace_datetime
-
                 if time_diff.days > 3:
                     last_time = trace_datetime.strftime("%Y-%m-%d %H:%M:%S")
                     return "丢件", f"最新轨迹时间({last_time})已超过{time_diff.days}天"
             except (ValueError, IndexError) as e:
-                # 如果解析日期失败，检查是否没有轨迹或轨迹格式异常
                 self.logger.warning(f"解析轨迹时间失败: {latest_trace}, 错误: {e}")
                 return "丢件", "无法解析最新轨迹时间"
 
@@ -215,6 +223,16 @@ class DeliveryNote(TemuBaseClient):
                 if reason:
                     item["标记原因"] = reason
                 # self.logger.info(item)
+
+                # if '丢件' in item['标记状态']:
+                #     single_row_data = [datetime.now().strftime('%Y-%m-%d'), self.shop_name,
+                #                        "1", item["备货单号"]]
+                #     self.client.insert_data_at_empty_row(
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["workbook_id"],
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["sheet_id"],
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["operator_id"],
+                #         single_row_data
+                #     )
                 items.append(item)
             return items
         except Exception as e:

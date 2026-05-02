@@ -1,0 +1,467 @@
+2026-04-01 11:32:26,975 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:32:27,016 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:27,487 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:32:27,597 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:32:28,929 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:32:28,952 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:29,280 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:32:29,302 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:29,506 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:32:29,538 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:32:29,880 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:32:29,892 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:29,997 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:32:30,013 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:32:30,171 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:32:30,228 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:30,959 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:32:30,966 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:31,020 | INFO | financial_process_up | 104-Temu全托管
+2026-04-01 11:32:31,053 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:32:31,481 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:32:31,507 | WARNING | financial_process_up | ⚠️ Temu 结算文件发现未配置子表
+
+📄 文件名：105-Temu全托管_03_全球.xlsx
+📌 未识别子表：支出-商品事故
+
+请确认是否需要新增处理逻辑
+2026-04-01 11:32:31,947 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:32:32,307 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:32:32,365 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:32:33,246 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:32:33,256 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,330 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:32:33,342 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,446 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:32:33,478 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,570 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:32:33,575 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,598 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:32:33,609 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,699 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:32:33,708 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,761 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:32:33,766 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:33,781 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:32:33,800 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,001 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:32:34,012 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,096 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:32:34,103 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,160 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:32:34,177 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,301 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:32:34,326 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,611 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:32:34,618 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,665 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:32:34,676 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,752 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:32:34,774 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,953 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:32:34,959 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:34,986 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:32:34,995 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,044 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:32:35,052 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,089 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:32:35,093 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:32:35,138 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:32:35,189 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,261 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:32:35,271 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,324 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:32:35,331 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,369 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:32:35,402 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,474 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:32:35,507 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,850 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:32:35,856 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,885 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:32:35,895 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:35,986 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:32:35,993 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,041 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:32:36,046 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:32:36,055 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:32:36,071 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,226 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:32:36,234 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,274 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:32:36,283 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,368 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:32:36,389 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,638 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:32:36,656 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,833 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:32:36,841 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,904 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:32:36,910 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:32:36,952 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:32:36,956 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:32:36,970 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:32:36,973 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:32:36,979 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:32:36,992 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:37,104 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:32:37,113 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:37,165 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:32:37,175 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:32:37,308 | INFO | financial_process_up | 101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,329 | INFO | financial_process_up | 102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,348 | INFO | financial_process_up | 103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,361 | INFO | financial_process_up | 104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,387 | INFO | financial_process_up | 105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,400 | INFO | financial_process_up | 106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,413 | INFO | financial_process_up | 108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,428 | INFO | financial_process_up | 109-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:32:37,449 | INFO | financial_process_up | 110-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:32:37,470 | INFO | financial_process_up | 1101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,488 | INFO | financial_process_up | 1102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,507 | INFO | financial_process_up | 1104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,524 | INFO | financial_process_up | 1105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,539 | INFO | financial_process_up | 1107-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,552 | INFO | financial_process_up | 1108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,569 | INFO | financial_process_up | 2101-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:32:37,579 | INFO | financial_process_up | 2103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:37,594 | INFO | financial_process_up | 2106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:32:38,050 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:32:38,050 | INFO | financial_process_up | 正在上传店铺: 101-Temu全托管_总表.xlsx, 共 62 条记录...
+2026-04-01 11:34:38,847 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:34:38,883 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:39,341 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:34:39,435 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:34:40,747 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:34:40,771 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:41,092 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:34:41,112 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:41,316 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:34:41,347 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:34:41,687 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:34:41,698 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:41,803 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:34:41,820 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:34:41,981 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:34:42,037 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:42,768 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:34:42,775 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:42,831 | INFO | financial_process_up | 104-Temu全托管
+2026-04-01 11:34:42,864 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:34:43,289 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:34:43,317 | WARNING | financial_process_up | ⚠️ Temu 结算文件发现未配置子表
+
+📄 文件名：105-Temu全托管_03_全球.xlsx
+📌 未识别子表：支出-商品事故
+
+请确认是否需要新增处理逻辑
+2026-04-01 11:34:43,763 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:34:44,141 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:34:44,201 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:34:45,003 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:34:45,014 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,088 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:34:45,100 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,203 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:34:45,236 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,326 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:34:45,331 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,353 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:34:45,364 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,455 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:34:45,464 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,519 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:34:45,524 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,541 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:34:45,560 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,750 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:34:45,763 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,847 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:34:45,855 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:45,912 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:34:45,928 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,055 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:34:46,080 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,350 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:34:46,357 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,402 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:34:46,413 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,491 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:34:46,512 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,678 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:34:46,683 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,711 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:34:46,719 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,766 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:34:46,774 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,812 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:34:46,817 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:34:46,830 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:34:46,840 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,901 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:34:46,911 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:46,962 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:34:46,969 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,005 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:34:47,031 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,097 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:34:47,126 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,466 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:34:47,472 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,506 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:34:47,518 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,611 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:34:47,619 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,665 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:34:47,669 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:34:47,679 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:34:47,694 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,854 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:34:47,862 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:47,901 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:34:47,910 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,016 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:34:48,044 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,303 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:34:48,322 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,494 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:34:48,502 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,574 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:34:48,580 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,623 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:34:48,627 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:34:48,641 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:34:48,644 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:34:48,651 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:34:48,662 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,770 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:34:48,779 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,837 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:34:48,848 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:34:48,971 | INFO | financial_process_up | 101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:48,993 | INFO | financial_process_up | 102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,013 | INFO | financial_process_up | 103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,029 | INFO | financial_process_up | 104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,057 | INFO | financial_process_up | 105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,071 | INFO | financial_process_up | 106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,083 | INFO | financial_process_up | 108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,099 | INFO | financial_process_up | 109-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:34:49,120 | INFO | financial_process_up | 110-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:34:49,139 | INFO | financial_process_up | 1101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,154 | INFO | financial_process_up | 1102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,171 | INFO | financial_process_up | 1104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,186 | INFO | financial_process_up | 1105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,199 | INFO | financial_process_up | 1107-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,214 | INFO | financial_process_up | 1108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,231 | INFO | financial_process_up | 2101-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:34:49,244 | INFO | financial_process_up | 2103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,263 | INFO | financial_process_up | 2106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:34:49,280 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:34:49,280 | INFO | financial_process_up | 正在上传店铺: 101-Temu全托管_总表.xlsx, 共 62 条记录...
+2026-04-01 11:34:53,314 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:34:53,314 | INFO | financial_process_up | 正在上传店铺: 102-Temu全托管_总表.xlsx, 共 69 条记录...
+2026-04-01 11:34:56,259 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:34:56,259 | INFO | financial_process_up | 正在上传店铺: 103-Temu全托管_总表.xlsx, 共 52 条记录...
+2026-04-01 11:34:58,733 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:34:58,733 | INFO | financial_process_up | 正在上传店铺: 104-Temu全托管_总表.xlsx, 共 27 条记录...
+2026-04-01 11:35:00,353 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:00,353 | INFO | financial_process_up | 正在上传店铺: 105-Temu全托管_总表.xlsx, 共 89 条记录...
+2026-04-01 11:35:04,446 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:04,446 | INFO | financial_process_up | 正在上传店铺: 106-Temu全托管_总表.xlsx, 共 32 条记录...
+2026-04-01 11:35:06,061 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:06,061 | INFO | financial_process_up | 正在上传店铺: 108-Temu全托管_总表.xlsx, 共 24 条记录...
+2026-04-01 11:35:07,654 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:07,654 | INFO | financial_process_up | 正在上传店铺: 109-Temu全托管KA_总表.xlsx, 共 45 条记录...
+2026-04-01 11:35:09,733 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:09,733 | INFO | financial_process_up | 正在上传店铺: 110-Temu全托管KA_总表.xlsx, 共 72 条记录...
+2026-04-01 11:35:12,642 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:12,642 | INFO | financial_process_up | 正在上传店铺: 1101-Temu全托管_总表.xlsx, 共 68 条记录...
+2026-04-01 11:35:16,563 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:16,563 | INFO | financial_process_up | 正在上传店铺: 1102-Temu全托管_总表.xlsx, 共 40 条记录...
+2026-04-01 11:35:17,994 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:17,994 | INFO | financial_process_up | 正在上传店铺: 1104-Temu全托管_总表.xlsx, 共 53 条记录...
+2026-04-01 11:35:21,983 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:21,983 | INFO | financial_process_up | 正在上传店铺: 1105-Temu全托管_总表.xlsx, 共 38 条记录...
+2026-04-01 11:35:23,215 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:23,215 | INFO | financial_process_up | 正在上传店铺: 1107-Temu全托管_总表.xlsx, 共 34 条记录...
+2026-04-01 11:35:25,494 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:25,494 | INFO | financial_process_up | 正在上传店铺: 1108-Temu全托管_总表.xlsx, 共 33 条记录...
+2026-04-01 11:35:26,797 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:26,797 | INFO | financial_process_up | 正在上传店铺: 2101-Temu全托管KA_总表.xlsx, 共 36 条记录...
+2026-04-01 11:35:28,069 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:28,069 | INFO | financial_process_up | 正在上传店铺: 2103-Temu全托管_总表.xlsx, 共 13 条记录...
+2026-04-01 11:35:29,492 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:35:29,492 | INFO | financial_process_up | 正在上传店铺: 2106-Temu全托管_总表.xlsx, 共 39 条记录...
+2026-04-01 11:37:12,702 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:37:12,739 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:13,205 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:37:13,301 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:37:14,584 | INFO | financial_process_up | 101-Temu全托管
+2026-04-01 11:37:14,610 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:14,929 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:37:14,949 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:15,152 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:37:15,182 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:37:15,528 | INFO | financial_process_up | 102-Temu全托管
+2026-04-01 11:37:15,540 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:15,648 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:37:15,665 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:37:15,825 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:37:15,887 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:16,633 | INFO | financial_process_up | 103-Temu全托管
+2026-04-01 11:37:16,640 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:16,693 | INFO | financial_process_up | 104-Temu全托管
+2026-04-01 11:37:16,725 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:37:17,151 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:37:17,178 | WARNING | financial_process_up | ⚠️ Temu 结算文件发现未配置子表
+
+📄 文件名：105-Temu全托管_03_全球.xlsx
+📌 未识别子表：支出-商品事故
+
+请确认是否需要新增处理逻辑
+2026-04-01 11:37:17,620 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:37:17,978 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:37:18,035 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题', '消费者及履约保障-售后补寄']
+2026-04-01 11:37:18,843 | INFO | financial_process_up | 105-Temu全托管
+2026-04-01 11:37:18,852 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:18,934 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:37:18,946 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,049 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:37:19,080 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,170 | INFO | financial_process_up | 106-Temu全托管
+2026-04-01 11:37:19,174 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,200 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:37:19,211 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,306 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:37:19,314 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,367 | INFO | financial_process_up | 108-Temu全托管
+2026-04-01 11:37:19,371 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,388 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:37:19,406 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,600 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:37:19,612 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,694 | INFO | financial_process_up | 109-Temu全托管KA
+2026-04-01 11:37:19,701 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,759 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:37:19,775 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:19,901 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:37:19,926 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,216 | INFO | financial_process_up | 110-Temu全托管KA
+2026-04-01 11:37:20,223 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,270 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:37:20,281 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,356 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:37:20,377 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,540 | INFO | financial_process_up | 1101-Temu全托管
+2026-04-01 11:37:20,546 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,573 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:37:20,582 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,628 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:37:20,635 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,674 | INFO | financial_process_up | 1102-Temu全托管
+2026-04-01 11:37:20,678 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:37:20,692 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:37:20,701 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,764 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:37:20,774 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,824 | INFO | financial_process_up | 1104-Temu全托管
+2026-04-01 11:37:20,831 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,865 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:37:20,891 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:20,957 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:37:20,987 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,337 | INFO | financial_process_up | 1105-Temu全托管
+2026-04-01 11:37:21,343 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,374 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:37:21,385 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,479 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:37:21,487 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,533 | INFO | financial_process_up | 1107-Temu全托管
+2026-04-01 11:37:21,536 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:37:21,546 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:37:21,562 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,722 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:37:21,730 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,770 | INFO | financial_process_up | 1108-Temu全托管
+2026-04-01 11:37:21,780 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:21,866 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:37:21,887 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,137 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:37:22,156 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,382 | INFO | financial_process_up | 2101-Temu全托管KA
+2026-04-01 11:37:22,391 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,453 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:37:22,459 | INFO | financial_process_up | 有效子表: ['交易结算', '非商责平台售后补贴调整', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,500 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:37:22,505 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:37:22,519 | INFO | financial_process_up | 2103-Temu全托管
+2026-04-01 11:37:22,522 | INFO | financial_process_up | 有效子表: ['交易结算']
+2026-04-01 11:37:22,528 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:37:22,541 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,654 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:37:22,662 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,716 | INFO | financial_process_up | 2106-Temu全托管
+2026-04-01 11:37:22,727 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 11:37:22,856 | INFO | financial_process_up | 101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:22,877 | INFO | financial_process_up | 102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:22,928 | INFO | financial_process_up | 103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:22,958 | INFO | financial_process_up | 104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,000 | INFO | financial_process_up | 105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,015 | INFO | financial_process_up | 106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,028 | INFO | financial_process_up | 108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,045 | INFO | financial_process_up | 109-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:37:23,068 | INFO | financial_process_up | 110-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:37:23,090 | INFO | financial_process_up | 1101-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,104 | INFO | financial_process_up | 1102-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,122 | INFO | financial_process_up | 1104-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,137 | INFO | financial_process_up | 1105-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,152 | INFO | financial_process_up | 1107-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,168 | INFO | financial_process_up | 1108-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,186 | INFO | financial_process_up | 2101-Temu全托管KA_总表.xlsx--导出成功
+2026-04-01 11:37:23,198 | INFO | financial_process_up | 2103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,214 | INFO | financial_process_up | 2106-Temu全托管_总表.xlsx--导出成功
+2026-04-01 11:37:23,233 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:23,233 | INFO | financial_process_up | 正在上传店铺: 101-Temu全托管_总表.xlsx, 共 62 条记录...
+2026-04-01 11:37:26,038 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:26,038 | INFO | financial_process_up | 正在上传店铺: 102-Temu全托管_总表.xlsx, 共 69 条记录...
+2026-04-01 11:37:29,403 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:29,403 | INFO | financial_process_up | 正在上传店铺: 103-Temu全托管_总表.xlsx, 共 52 条记录...
+2026-04-01 11:37:32,144 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:32,145 | INFO | financial_process_up | 正在上传店铺: 104-Temu全托管_总表.xlsx, 共 27 条记录...
+2026-04-01 11:37:33,431 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:33,431 | INFO | financial_process_up | 正在上传店铺: 105-Temu全托管_总表.xlsx, 共 89 条记录...
+2026-04-01 11:37:36,232 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:36,232 | INFO | financial_process_up | 正在上传店铺: 106-Temu全托管_总表.xlsx, 共 32 条记录...
+2026-04-01 11:37:37,391 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:37,391 | INFO | financial_process_up | 正在上传店铺: 108-Temu全托管_总表.xlsx, 共 24 条记录...
+2026-04-01 11:37:38,623 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:38,623 | INFO | financial_process_up | 正在上传店铺: 109-Temu全托管KA_总表.xlsx, 共 45 条记录...
+2026-04-01 11:37:39,962 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:39,962 | INFO | financial_process_up | 正在上传店铺: 110-Temu全托管KA_总表.xlsx, 共 72 条记录...
+2026-04-01 11:37:43,087 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:43,087 | INFO | financial_process_up | 正在上传店铺: 1101-Temu全托管_总表.xlsx, 共 68 条记录...
+2026-04-01 11:37:46,845 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:46,845 | INFO | financial_process_up | 正在上传店铺: 1102-Temu全托管_总表.xlsx, 共 40 条记录...
+2026-04-01 11:37:48,338 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:48,339 | INFO | financial_process_up | 正在上传店铺: 1104-Temu全托管_总表.xlsx, 共 53 条记录...
+2026-04-01 11:37:51,286 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:51,286 | INFO | financial_process_up | 正在上传店铺: 1105-Temu全托管_总表.xlsx, 共 38 条记录...
+2026-04-01 11:37:52,739 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:52,739 | INFO | financial_process_up | 正在上传店铺: 1107-Temu全托管_总表.xlsx, 共 34 条记录...
+2026-04-01 11:37:54,057 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:54,057 | INFO | financial_process_up | 正在上传店铺: 1108-Temu全托管_总表.xlsx, 共 33 条记录...
+2026-04-01 11:37:55,491 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:55,491 | INFO | financial_process_up | 正在上传店铺: 2101-Temu全托管KA_总表.xlsx, 共 36 条记录...
+2026-04-01 11:37:56,941 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:56,941 | INFO | financial_process_up | 正在上传店铺: 2103-Temu全托管_总表.xlsx, 共 13 条记录...
+2026-04-01 11:37:58,134 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 11:37:58,135 | INFO | financial_process_up | 正在上传店铺: 2106-Temu全托管_总表.xlsx, 共 39 条记录...
+2026-04-01 14:21:11,801 | INFO | financial_process_up | 1103-Temu全托管
+2026-04-01 14:21:11,814 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 14:21:11,871 | INFO | financial_process_up | 1103-Temu全托管
+2026-04-01 14:21:11,880 | INFO | financial_process_up | 有效子表: ['消费者及履约保障-售后问题', '交易结算']
+2026-04-01 14:21:11,938 | INFO | financial_process_up | 1103-Temu全托管
+2026-04-01 14:21:11,944 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后问题']
+2026-04-01 14:21:11,997 | INFO | financial_process_up | 1103-Temu全托管_总表.xlsx--导出成功
+2026-04-01 14:21:12,432 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
+2026-04-01 14:21:12,432 | INFO | financial_process_up | 正在上传店铺: 1103-Temu全托管_总表.xlsx, 共 34 条记录...

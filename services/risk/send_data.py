@@ -128,10 +128,11 @@ def notify_funds_restriction(records):
 # ======================
 def main():
     conn = pymysql.connect(
-        host="127.0.0.1",
-        user="root",
-        password="1234",
-        database="py_spider",
+        host='rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+        port=3306,
+        user='root_lxz',
+        password='Lxz123456',
+        database='py_spider',
         charset="utf8mb4"
     )
 

@@ -17,15 +17,17 @@ class Temu_Funds_Restriction:
         self.logger = get_logger(job)
 
         self.redis_client = redis.Redis(
-            host="127.0.0.1",
+            host="r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com",
             port=6379,
             db=0,
+            password='Lxz123456',
             decode_responses=True
         )
 
-        self.db = pymysql.connect(host='localhost',
-                                  user='root',
-                                  password='1234',
+        self.db = pymysql.connect(host='rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+                                  port=3306,
+                                  user='root_lxz',
+                                  password='Lxz123456',
                                   database='py_spider'
                                   )  # 数据库名字
         self.cursor = self.db.cursor()

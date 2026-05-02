@@ -4,9 +4,7 @@ from utils.logger import get_logger
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import asyncio
-from openpyxl import Workbook
-from openpyxl.utils import get_column_letter
-from openpyxl import load_workbook
+import csv
 
 """用request获取temu财务明细"""
 
@@ -115,41 +113,33 @@ class Temu_Financial_Data_Center:
         return items
 
     # ======================
-    # 保存 xlsx
+    # 保存 csv
     # ======================
 
-    def save_items(self, items):
+    def save_batch(self, items):
         if not items:
             return
 
         out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / f"{self.month_str.split('-')[1]}月份" / "temu"
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        fname = out_dir / f"{self.shop_name}_{self.month_str.split('-')[1]}_对账单.xlsx"
+        fname = out_dir / f"{self.shop_name}_{self.month_str.split('-')[1]}_对账单.csv"
 
-        if fname.exists():
-            wb = load_workbook(fname)
-            ws = wb.active
-        else:
-            wb = Workbook()
-            ws = wb.active
-            headers = list(items[0].keys())
-            ws.append(headers)
+        # 检查文件是否存在
+        file_exists = fname.exists()
 
-        headers = [cell.value for cell in ws[1]]
+        # 使用csv追加模式
+        with open(fname, 'a', newline='', encoding='utf-8-sig') as f:
+            writer = csv.DictWriter(f, fieldnames=items[0].keys())
 
-        for item in items:
-            ws.append([item.get(h, "") for h in headers])
+            # 如果文件不存在，先写入表头
+            if not file_exists:
+                writer.writeheader()
 
-        # 自动列宽
-        for col_idx, col_name in enumerate(headers, 1):
-            max_length = len(str(col_name))
-            for row in ws.iter_rows(min_row=2, min_col=col_idx, max_col=col_idx):
-                for cell in row:
-                    max_length = max(max_length, len(str(cell.value)))
-            ws.column_dimensions[get_column_letter(col_idx)].width = max_length + 2
+            # 写入数据
+            for item in items:
+                writer.writerow(item)
 
-        wb.save(fname)
 
     # ======================
     # 主流程

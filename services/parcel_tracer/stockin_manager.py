@@ -2,8 +2,10 @@ import asyncio
 from core.base_client import TemuBaseClient
 import random
 import time
+from datetime import datetime
 from services.parcel_tracer.sql_save import StockInStorage
 from utils.webchat_send import webchat_send
+from utils.dingding_table import DingTalkDocClient,DingTalkTokenManager
 
 """备货单--入库"""
 
@@ -14,20 +16,35 @@ class Stockin_Manager(TemuBaseClient):
         super().__init__(shop_name, logger_name)
         self.storage = StockInStorage(
             mysql_conf={
-                "host": "localhost",
-                "user": "root",
-                "password": "1234",
-                "database": "py_spider"
+                "host": 'rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+                "port": 3306,
+                "user": 'root_lxz',
+                "password": 'Lxz123456',
+                "database": 'py_spider'
             },
             redis_conf={
-                "host": "localhost",
+                "host": "r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com",
+                "password": 'Lxz123456',
                 "port": 6379,
-                "db": 0
+                "db": 0,
             },
             redis_prefix="temu:stockin"
         )
 
         self.storage.create_table()
+
+        # 添加入库大差异表格配置
+        # self.STOCKIN_BIG_DIFF_SHEET_CONFIG = {
+        #     "workbook_id": "kDnRL6jAJMO3D450HBM0ogPDWyMoPYe1",  # 你的表格ID
+        #     "sheet_id": "st-352d4170-19503",  # 工作表ID
+        #     "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
+        # }
+        #
+        # self.token_manager = DingTalkTokenManager()
+        #
+        # # 创建客户端实例
+        # self.client = DingTalkDocClient(self.token_manager)
+
 
     async def fetch_page(self,page):
         payload = {
@@ -135,6 +152,7 @@ class Stockin_Manager(TemuBaseClient):
             one_month_ms = 30 * 24 * 60 * 60 * 1000  # 30天的毫秒数（一个月）
 
             for i in order_list:
+
                 purchase_time = i['purchaseTime']
 
                 # 计算备货单创建时间与当前时间的差值
@@ -145,7 +163,7 @@ class Stockin_Manager(TemuBaseClient):
                     item = {
                         "数据抓取时间": current_time_ms,
                         "店铺": self.shop_name,
-                        "备货单号": i['originalPurchaseOrderSn'],
+                        "备货单号": i['subPurchaseOrderSn'],
                         "备货单创建时间": purchase_time,
                         "送货数": i['skuQuantityTotalInfo']['deliverQuantity'],
                         "入库数": i['skuQuantityTotalInfo']['realReceiveAuthenticQuantity'],
@@ -158,6 +176,16 @@ class Stockin_Manager(TemuBaseClient):
                     # 检查送货数和入库数是否相等
                     if int(item['送货数']) != int(item['入库数']):
                         items.append(item)
+
+                    # if int(item['送货数']) - int(item['入库数'])>=10:
+                    #     single_row_data = [datetime.now().strftime('%Y-%m-%d'), self.shop_name,
+                    #                        str(int(item['送货数']) - int(item['入库数'])), item["备货单号"]]
+                    #     self.client.insert_data_at_empty_row(
+                    #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["workbook_id"],
+                    #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["sheet_id"],
+                    #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["operator_id"],
+                    #         single_row_data
+                    #     )
 
             return items,list_item
         except Exception as e:

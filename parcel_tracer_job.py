@@ -4,18 +4,22 @@ from utils.dingding_doc import DingTalkTokenManager, upload_multiple_records, te
 from utils.logger import get_logger
 from utils.dingtalk_bot import ding_bot_send
 from datetime import datetime
+from utils.webchat_send import webchat_send
 import asyncio
 import time
 import pymysql
 
 logger = get_logger('temu_parcel_tracer')
 
+# 用于记录当天已发送预警的店铺（避免重复发送）
+sent_shops_wechat = set()
+
 db = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="1234",
-    database="py_spider",
-    charset='utf8mb4',
+    host='rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+    port=3306,
+    user='root_lxz',
+    password='Lxz123456',
+    database='py_spider',
     cursorclass=pymysql.cursors.DictCursor
 )
 
@@ -78,7 +82,73 @@ async def fetch_and_upload_stockin_data(shop_name):
     # 立即上传数据
     await up_stockin_data(table_data)
 
+    # 🔥 新增：检查入库差异并发送微信群消息
+    await check_and_send_wechat_for_stockin_differences(shop_name, stockin_items)
+
     return len(stockin_items)
+
+async def check_and_send_wechat_for_stockin_differences(shop_name, stockin_items):
+    """检查入库差异，如果差异数量>=10则发送微信群消息"""
+    differences = []
+    for item in stockin_items:
+        deliver_qty = int(item.get("送货数", 0))
+        receive_qty = int(item.get("入库数", 0))
+        if deliver_qty != receive_qty:
+            diff = deliver_qty - receive_qty
+            differences.append({
+                'purchase_order_sn': item.get("备货单号", ""),
+                'deliver_qty': deliver_qty,
+                'receive_qty': receive_qty,
+                'diff': diff,
+                'handover_time': item.get("交接时间", ""),
+                'receive_time': item.get("收货时间", "")
+            })
+
+    # 如果差异数量大于等于10
+    if len(differences) >= 10:
+        # 检查今天是否已经发送过该店铺的预警
+        today = datetime.now().strftime('%Y-%m-%d')
+        shop_key = f"{shop_name}_{today}"
+        logger.info(f"⚠️ 店铺 {shop_name} 入库差异数量达到 {len(differences)} 条，准备发送微信群消息")
+
+        # 构建微信群消息
+        message = build_wechat_stockin_message(shop_name, differences)
+
+        # 发送到微信群
+        contacts = [("全托部入库异常通知群", message),
+                    ('梁祖珍', f'店铺{shop_name}异常数据已经发送')]
+        try:
+            # webchat_send 是同步函数，在线程池中运行
+            await asyncio.to_thread(webchat_send, contacts)
+            sent_shops_wechat.add(shop_key)
+            logger.info(f"✅ 已发送 {shop_name} 入库差异预警到微信群")
+        except Exception as e:
+            logger.error(f"发送微信群消息失败: {e}")
+
+        logger.info(f"✅ 已发送 {shop_name} 入库差异预警到微信群")
+
+def build_wechat_stockin_message(shop_name, differences):
+    """构建发送到微信群的入库差异消息"""
+    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    message = f"【Temu入库差异预警】\n"
+    message += f"店铺：{shop_name}\n"
+    message += f"时间：{current_time}\n"
+    message += f"差异数量：{len(differences)} 条（≥10条，触发预警）\n"
+    message += f"{'=' * 30}\n\n"
+
+    # 显示前10条差异详情（避免消息过长）
+    show_count = min(100, len(differences))
+    message += f"差异详情（前{show_count}条）：\n"
+
+    for i, diff in enumerate(differences, 1):
+        message += f"\n{i}. 备货单号：{diff['purchase_order_sn']}\n"
+        message += f"   送货数量：{diff['deliver_qty']}  入库数量：{diff['receive_qty']}  差异：{diff['diff']}\n"
+        if diff['handover_time']:
+            message += f"   交接时间：{diff['handover_time']}\n"
+
+
+    return message
 
 def prepare_delivery_table_data(delivery_items):
     """构造第一个钉钉表数据（揽收丢件表）"""
@@ -99,7 +169,6 @@ def prepare_delivery_table_data(delivery_items):
         records.append(record)
     return records
 
-
 def prepare_stockin_table_data(stockin_items):
     """构造第二个钉钉表数据（入库差异表）"""
     records = []
@@ -118,7 +187,6 @@ def prepare_stockin_table_data(stockin_items):
         }
         records.append(record)
     return records
-
 
 def query_shop_abnormal_data_from_db(shop_name):
     """查询单个门店的异常数据"""
@@ -149,7 +217,6 @@ def query_shop_abnormal_data_from_db(shop_name):
     except Exception as e:
         logger.error(f"查询店铺 {shop_name} 异常数据失败: {e}")
         return [], []
-
 
 def build_shop_abnormal_message(shop_name, delivery_abnormals, stockin_abnormals):
     """构建单个门店的异常消息"""
@@ -214,6 +281,8 @@ def build_shop_abnormal_message(shop_name, delivery_abnormals, stockin_abnormals
 
 
 
+
+
             message_parts.append(stockin_summary)
 
     # 如果没有异常数据
@@ -228,7 +297,7 @@ def send_shop_messages(shop_data):
     for shop_name, delivery_count, stockin_count, message in shop_data:
         if "未发现异常数据" not in message:
             # 发送到钉钉群
-            ding_bot_send('me', message)
+            ding_bot_send('Temu_Logistics_Exception_Monitor', message)
             logger.info(f"已发送 {shop_name} 的异常消息")
             # 添加短暂延迟，避免发送过快
             time.sleep(1)
@@ -318,4 +387,5 @@ async def main():
 
 
 if __name__ == "__main__":
+    sent_shops_wechat.clear()
     asyncio.run(main())

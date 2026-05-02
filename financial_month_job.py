@@ -37,7 +37,7 @@ def get_prev_month_from_now() -> str:
 
 async def main_all():
     month_str = get_prev_month_from_now()
-    # month_str = '2025-11'
+
     logger.info(f'--------------------------正在下载{month_str}的数据------------------------------')
     shop_name_list = [
          "2106-Temu全托管",  "2103-Temu全托管","2102-Temu全托管", "2101-Temu全托管KA",
@@ -47,7 +47,7 @@ async def main_all():
         "110-Temu全托管KA", "109-Temu全托管KA", "108-Temu全托管",  "106-Temu全托管", "105-Temu全托管",
         "104-Temu全托管", "103-Temu全托管", "102-Temu全托管", "101-Temu全托管",
     ]
-    # shop_name_list=["2101-Temu全托管KA"]
+    # shop_name_list=["104-Temu全托管"]
 
 
     # 顺序处理
@@ -57,15 +57,11 @@ async def main_all():
         t = Temu_Financial_Data(shop_name, account, month_str,'financial_data')
         await t.run()
 
-        logger.info(f'--------------正在爬取店铺{shop_name}----卖家中心的数据')
 
-
-
-    logger.info(f'--------------------------正在处理数据------------------------------')
-    # 处理数据
-    filepath = FINANCIAL_DIR / f"{month_str.split('-')[1]}月份"
-    financial_process_up(filepath,f"{month_str.split('-')[0]}年{month_str.split('-')[1]}月")
-
+    # logger.info(f'--------------------------正在处理数据------------------------------')
+    # # # 处理数据
+    # filepath = FINANCIAL_DIR / f"{month_str.split('-')[1]}月份"
+    # financial_process_up(filepath,f"{month_str.split('-')[0]}年{month_str.split('-')[1]}月")
 
 
 if __name__ == '__main__':
