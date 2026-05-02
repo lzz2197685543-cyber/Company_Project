@@ -4,6 +4,7 @@ from core.base_client import SheinBaseClient
 import asyncio
 from datetime import datetime
 from servies.parcel_tracer.sql_save import StockInStorage
+from utils.dingding_table import DingTalkDocClient,DingTalkTokenManager
 
 class StockinManager(SheinBaseClient):
     URL = 'https://sso.geiwohuo.com/pfmp/order/list'
@@ -12,21 +13,34 @@ class StockinManager(SheinBaseClient):
         super().__init__(shop_name, logger_name)
         self.storage = StockInStorage(
             mysql_conf={
-                "host": "localhost",
-                "user": "root",
-                "password": "1234",
-                "database": "py_spider"
+                "host": 'rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+                "port": 3306,
+                "user": 'root_lxz',
+                "password": 'Lxz123456',
+                "database": 'py_spider'
             },
             redis_conf={
-                "host": "localhost",
+                "host": "r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com",
+                "password": 'Lxz123456',
                 "port": 6379,
-                "db": 0
+                "db": 0,
             },
-            redis_prefix="shein:purchase",
+            redis_prefix="shein:stockin",
             job='shein_parcel_tracer',
         )
 
         self.storage.create_tables()
+        # 添加入库大差异表格配置
+        # self.STOCKIN_BIG_DIFF_SHEET_CONFIG = {
+        #     "workbook_id": "kDnRL6jAJMO3D450HBM0ogPDWyMoPYe1",  # 你的表格ID
+        #     "sheet_id": "st-352d4170-19503",  # 工作表ID
+        #     "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
+        # }
+        #
+        # self.token_manager = DingTalkTokenManager()
+        #
+        # # 创建客户端实例
+        # self.client = DingTalkDocClient(self.token_manager)
 
     async def fetch(self,page):
         json_data = {
@@ -42,60 +56,6 @@ class StockinManager(SheinBaseClient):
         data=await self.post(self.URL,json_data)
 
         return data
-
-    async def fetch_all_pages(self):
-        """获取所有页面的数据"""
-        all_items=[]
-        page=1
-        while True:
-            try:
-                data = await self.fetch(page)
-
-                # 检查是否有结果数据
-                if 'info' not in data:
-                    self.logger.error(f"第 {page} 页没有info字段")
-                    break
-
-                result = data['info']
-
-                # 检查是否有列表数据
-                if 'data' not in result:
-                    self.logger.error(f"第 {page} 页没有subOrderForSupplierList字段")
-                    break
-
-                current_items = result['data']
-
-                # 如果当前页没有数据，则结束循环
-                if not current_items:
-                    self.logger.info(f"第 {page} 页没有数据，停止获取")
-                    break
-
-                items=self.parse(data)
-
-                # ==============保存异常数据=============
-                # Redis 去重
-                new_items = self.storage.filter_new_items(items)
-
-                # 将去重
-                all_items.extend(new_items)
-
-                # 批量入库
-                self.storage.batch_insert(new_items)
-
-                # 异常报警
-                abnormal = self.storage.detect_abnormal(new_items)
-                self.storage.alarm_abnormal(abnormal, self.logger)
-
-                if len(items) < 200:
-                    self.logger.info(f"当前页数据并且数据为当月产生的数据不足200条，可能是最后一页，停止获取")
-                    break
-
-                page += 1
-
-            except Exception as e:
-                print(e)
-
-        return all_items
 
     def parse_time_string(self, time_str):
         """将时间字符串转换为毫秒时间戳"""
@@ -151,12 +111,78 @@ class StockinManager(SheinBaseClient):
                     "发货时间": deliver_time_ms,
                     "上架时间": receive_time_ms,
                 }
+                # print(item)
                 if int(i['detail'][0]['deliveryQuantity'])!=int(i['detail'][0]['groundingQuantity']):
+                    print('送货数量与上架数量不相等:',item)
                     items.append(item)
+
+                # if int(item['送货数量']) - int(item['上架数量']) >= 10:
+                #     single_row_data = [datetime.now().strftime('%Y-%m-%d'), self.shop_name,
+                #                        str(int(item['送货数量']) - int(item['上架数量'])), item["订单号"]]
+                #     self.client.insert_data_at_empty_row(
+                #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["workbook_id"],
+                #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["sheet_id"],
+                #         self.STOCKIN_BIG_DIFF_SHEET_CONFIG["operator_id"],
+                #         single_row_data
+                #     )
             return items
         except Exception as e:
             self.logger.error(f'数据解析报错: {e}')
             return items
+
+    async def fetch_all_pages(self):
+        """获取所有页面的数据"""
+        all_items=[]
+        page=1
+        while True:
+            try:
+                data = await self.fetch(page)
+
+                # 检查是否有结果数据
+                if 'info' not in data:
+                    self.logger.error(f"第 {page} 页没有info字段")
+                    break
+
+                result = data['info']
+
+                # 检查是否有列表数据
+                if 'data' not in result:
+                    self.logger.error(f"第 {page} 页没有subOrderForSupplierList字段")
+                    break
+
+                current_items = result['data']
+
+                # 如果当前页没有数据，则结束循环
+                if not current_items:
+                    self.logger.info(f"第 {page} 页没有数据，停止获取")
+                    break
+
+                items=self.parse(data)
+
+                # ==============保存异常数据=============
+                # Redis 去重
+                new_items = self.storage.filter_new_items(items)
+
+                # 将去重
+                all_items.extend(new_items)
+
+                # 批量入库
+                self.storage.batch_insert(new_items)
+
+                # 异常报警
+                abnormal = self.storage.detect_abnormal(new_items)
+                self.storage.alarm_abnormal(abnormal, self.logger)
+
+                if len(items) < 200:
+                    self.logger.info(f"当前页数据并且数据为当月产生的数据不足200条，可能是最后一页，停止获取")
+                    break
+
+                page += 1
+
+            except Exception as e:
+                print(e)
+
+        return all_items
 
 
 async def main():

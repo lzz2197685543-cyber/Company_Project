@@ -70,7 +70,6 @@ class StockInStorage(BaseStorage):
         except Exception as e:
             self.logger.error(f"❌ 批量插入失败: {e}")
 
-
     def filter_new_items(self, items: List[Dict]) -> List[Dict]:
         new_items = []
         for i in items:

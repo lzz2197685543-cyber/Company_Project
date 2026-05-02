@@ -13,10 +13,10 @@ from openpyxl.utils import get_column_letter
 
 
 class Shein_Financial_Data_Tixian:
-    def __init__(self, shop_name, month_str):
+    def __init__(self, shop_name, month_str,job):
         self.month_str = month_str
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
+        self.cookie_manager = CookieManager(shop_name,job)
         self.cookies = None
 
         self.headers = {
@@ -29,7 +29,7 @@ class Shein_Financial_Data_Tixian:
 
         self.url = 'https://sso.geiwohuo.com/mws/mwms/sso/withdraw/transferRecordList'
 
-        self.logger = get_logger("financial_data_tixian")
+        self.logger = get_logger(job)
 
     def is_cookie_invalid(self, json_data):
         """
@@ -155,31 +155,26 @@ class Shein_Financial_Data_Tixian:
         if not items:
             return
 
-        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / (str(self.month_str.split('-')[1]) + '月份') / "shein"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / (
+                    str(self.month_str.split('-')[1]) + '月份') / "shein"
         out_dir.mkdir(parents=True, exist_ok=True)
-
 
         fname = out_dir / f"{self.shop_name}_{self.month_str.split('-')[1]}_提现.xlsx"
 
-        wb = Workbook()
-        ws = wb.active
+        # 检查文件是否存在
+        file_exists = fname.exists()
 
-        headers = list(items[0].keys())
-        ws.append(headers)
+        # 使用csv追加模式
+        with open(fname, 'a', newline='', encoding='utf-8-sig') as f:
+            writer = csv.DictWriter(f, fieldnames=items[0].keys())
 
-        for item in items:
-            ws.append(list(item.values()))
+            # 如果文件不存在，先写入表头
+            if not file_exists:
+                writer.writeheader()
 
-        # ⭐ 自动列宽
-        for col_idx, col_name in enumerate(headers, 1):
-            max_length = len(str(col_name))
-            for row in items:
-                value = str(row.get(col_name, ""))
-                max_length = max(max_length, len(value))
-
-            ws.column_dimensions[get_column_letter(col_idx)].width = max_length + 2
-
-        wb.save(fname)
+            # 写入数据
+            for item in items:
+                writer.writerow(item)
 
     async def get_all_page(self):
         self.logger.info(f"开始爬取店铺-------------{self.shop_name}------------")

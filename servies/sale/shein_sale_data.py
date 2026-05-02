@@ -11,9 +11,9 @@ from utils.dingtalk_bot import ding_bot_send
 import asyncio
 
 class Shein_Sale:
-    def __init__(self,shop_name):
+    def __init__(self,shop_name,job):
         self.shop_name=shop_name
-        self.cookie_manager = CookieManager(shop_name)
+        self.cookie_manager = CookieManager(shop_name,job)
         self.cookies=None
         self.headers = {
             'accept': '*/*',
@@ -33,7 +33,7 @@ class Shein_Sale:
 
         self.url = 'https://sso.geiwohuo.com/idms/goods-skc/list'
 
-        self.logger= get_logger('shein_sale_data')
+        self.logger= get_logger(job)
 
     def is_cookie_invalid(self, json_data):
         """

@@ -2,10 +2,12 @@ from servies.financial.financial_data_tixian import Shein_Financial_Data_Tixian
 from servies.financial.financial_data_feiyong import Shein_Financial_Data_Feiyong
 import asyncio
 from utils.logger import get_logger
+from utils.dingtalk_bot import ding_bot_send
 import time
 from datetime import datetime
 
-logger = get_logger("financial_data")
+job="financial_data"
+logger = get_logger(job)
 
 """跑Shein财务"""
 
@@ -39,15 +41,16 @@ async def main():
     name_list = ["希音全托301-yijia", "希音全托302-juyule", "希音全托303-kedi", "希音全托304-xiyue"]
     for shop_name in name_list:
         logger.info('---------------------开始Shein提现数据的爬取-------------------')
-        shein = Shein_Financial_Data_Tixian(shop_name, month_str)
+        shein = Shein_Financial_Data_Tixian(shop_name, month_str,job)
         await shein.get_all_page()
 
         logger.info('---------------------开始Shein费用数据的爬取-------------------')
-        shein = Shein_Financial_Data_Feiyong(shop_name, month_str)
+        shein = Shein_Financial_Data_Feiyong(shop_name, month_str,job)
         await shein.get_all_page()
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
+    ding_bot_send('me', f'Shein的财务任务完成,总耗时：{format_seconds(total_cost)}')
 
 if __name__ == "__main__":
     asyncio.run(main())

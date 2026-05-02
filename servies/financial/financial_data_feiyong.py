@@ -7,25 +7,26 @@ import asyncio
 from utils.dingtalk_bot import ding_bot_send
 from openpyxl import Workbook
 from openpyxl.utils import get_column_letter
+import csv
 
 """shein费用"""
 
 class Shein_Financial_Data_Feiyong:
-    def __init__(self,shop_name,month_str):
+    def __init__(self,shop_name,month_str,job):
         self.month_str=month_str
         self.shop_name=shop_name
-        self.cookie_manager = CookieManager(shop_name)
+        self.cookie_manager = CookieManager(shop_name,job)
         self.cookies = None
         self.headers = {
             'accept-language': 'zh-CN,zh;q=0.9',
-            'build-version': '2025-12-25 15:39',
+            # 'build-version': '2025-12-25 15:39',
             'origin': 'https://sso.geiwohuo.com',
             'referer': 'https://sso.geiwohuo.com/',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
         }
         self.url='https://sso.geiwohuo.com/gsfs/finance/selfReplenish/list'
 
-        self.logger = get_logger("financial_data_feiyong")
+        self.logger = get_logger(job)
 
     def get_month_date_range(self, month_str: str) -> dict:
         year, month = map(int, month_str.split("-"))
@@ -133,30 +134,28 @@ class Shein_Financial_Data_Feiyong:
         if not items:
             return
 
-        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / (str(self.month_str.split('-')[1]) + '月份') / "shein"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / (
+                    str(self.month_str.split('-')[1]) + '月份') / "shein"
         out_dir.mkdir(parents=True, exist_ok=True)
 
         fname = out_dir / f"{self.shop_name}_{datetime.now().strftime('%m')}_费用.xlsx"
 
-        wb = Workbook()
-        ws = wb.active
+        # 检查文件是否存在
+        file_exists = fname.exists()
 
-        headers = list(items[0].keys())
-        ws.append(headers)
+        # 使用csv追加模式
+        with open(fname, 'a', newline='', encoding='utf-8-sig') as f:
+            writer = csv.DictWriter(f, fieldnames=items[0].keys())
 
-        for item in items:
-            ws.append(list(item.values()))
+            # 如果文件不存在，先写入表头
+            if not file_exists:
+                writer.writeheader()
 
-        # ⭐ 自动列宽
-        for col_idx, col_name in enumerate(headers, 1):
-            max_length = len(str(col_name))
-            for row in items:
-                value = str(row.get(col_name, ""))
-                max_length = max(max_length, len(value))
+            # 写入数据
+            for item in items:
+                writer.writerow(item)
 
-            ws.column_dimensions[get_column_letter(col_idx)].width = max_length + 2
 
-        wb.save(fname)
 
     async def get_all_page(self):
         self.logger.info(f"开始爬取店铺-------------{self.shop_name}------------")

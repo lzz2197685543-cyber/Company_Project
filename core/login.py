@@ -18,14 +18,14 @@ class SheinLogin:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
-    def __init__(self, name, account):
+    def __init__(self, name, account,job):
         self.name = name
         self.hub_id = str(account["hubId"])
         cred = account["credentials"]
         self.username = cred["username"]
         self.password = cred["password"]
 
-        self.logger = get_logger(f"login")
+        self.logger = get_logger(job)
         self.debug_port = None
         self.playwright = None
         self.browser = None

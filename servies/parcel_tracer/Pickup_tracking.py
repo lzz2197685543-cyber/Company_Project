@@ -5,6 +5,7 @@ from servies.parcel_tracer.sql_save import DeliveryNoteStorage
 import asyncio
 from datetime import datetime, timedelta
 import re
+from utils.dingding_table import DingTalkDocClient,DingTalkTokenManager
 
 class PickupTrace(SheinBaseClient):
 
@@ -13,21 +14,35 @@ class PickupTrace(SheinBaseClient):
         self._trace_cache = {}  # 实例级别的缓存
         self.storage = DeliveryNoteStorage(
             mysql_conf={
-                "host": "localhost",
-                "user": "root",
-                "password": "1234",
-                "database": "py_spider"
+                "host": 'rm-bp186omby3lautfn0no.mysql.rds.aliyuncs.com',
+                "port": 3306,
+                "user": 'root_lxz',
+                "password": 'Lxz123456',
+                "database": 'py_spider'
             },
             redis_conf={
-                "host": "localhost",
+                "host": "r-bp1ogeji1wtu8f6ed7pd.redis.rds.aliyuncs.com",
+                "password": 'Lxz123456',
                 "port": 6379,
-                "db": 0
+                "db": 0,
             },
             redis_prefix="shein:delivery",
             job='shein_parcel_tracer',
         )
 
         self.storage.create_table()
+
+        # 添加揽收空包丢件表配置
+        # self.PICKUP_BIG_DIFF_SHEET_CONFIG = {
+        #     "workbook_id": "kDnRL6jAJMO3D450HBM0ogPDWyMoPYe1",  # 你的表格ID
+        #     "sheet_id": "st-514b97fa-74330",  # 工作表ID
+        #     "operator_id": "ZiSpuzyA49UNQz7CvPBUvhwiEiE"
+        # }
+        #
+        # self.token_manager = DingTalkTokenManager()
+        #
+        # # 创建客户端实例
+        # self.client = DingTalkDocClient(self.token_manager)
 
     async def fetch(self,page):
         """主流程"""
@@ -67,53 +82,18 @@ class PickupTrace(SheinBaseClient):
                     "标记原因": mark_reason if mark_reason else "无",
                 }
 
+                # if '丢件' in item['标记原因']:
+                #     single_row_data = [datetime.now().strftime('%Y-%m-%d'), self.shop_name,
+                #                        "1", item["订单号"]]
+                #     self.client.insert_data_at_empty_row(
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["workbook_id"],
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["sheet_id"],
+                #         self.PICKUP_BIG_DIFF_SHEET_CONFIG["operator_id"],
+                #         single_row_data
+                #     )
+
                 items.append(item)
         return items
-
-    async def fetch_all_pages(self):
-        """获取所有页面的数据"""
-        all_items=[]
-        page=1
-        while True:
-            try:
-                self.logger.info(f'正在获取第{page}页数据...')
-                items=await self.fetch(page)
-
-
-                # 如果当前页没有数据，则结束循环
-                if not items:
-                    self.logger.info(f"第 {page} 页没有数据，停止获取")
-                    break
-
-
-                # ==============保存异常数据=============
-                # Redis 去重
-                new_items=self.storage.filter_new_items(items)
-                all_items.extend(new_items)
-
-                # 批量入库
-                self.storage.batch_insert(new_items)
-
-                # 异常报警
-                abnormal = self.storage.detect_abnormal(new_items)
-
-                self.logger.info(abnormal)
-
-                if len(items)<200:
-                    self.logger.info('没有下一页了')
-                    break
-
-                page += 1
-
-                # 添加短暂延迟，避免请求过快
-                await asyncio.sleep(1)
-
-            except Exception as e:
-                self.logger.error(f"获取第 {page} 页数据时发生异常: {e}")
-                break
-
-        self.logger.info(f"总共获取到 {len(all_items)} 条数据")
-        return all_items
 
     def _parse_datetime_from_trace(self, trace_str):
         """从物流轨迹字符串中提取日期时间"""
@@ -285,6 +265,52 @@ class PickupTrace(SheinBaseClient):
                 return await self.get_trace(company_code, tracking_number)
 
         return []
+
+
+    async def fetch_all_pages(self):
+        """获取所有页面的数据"""
+        all_items=[]
+        page=1
+        while True:
+            try:
+                self.logger.info(f'正在获取第{page}页数据...')
+                items=await self.fetch(page)
+
+
+                # 如果当前页没有数据，则结束循环
+                if not items:
+                    self.logger.info(f"第 {page} 页没有数据，停止获取")
+                    break
+
+
+                # ==============保存异常数据=============
+                # Redis 去重
+                new_items=self.storage.filter_new_items(items)
+                all_items.extend(new_items)
+
+                # 批量入库
+                self.storage.batch_insert(new_items)
+
+                # 异常报警
+                abnormal = self.storage.detect_abnormal(new_items)
+
+                self.logger.info(abnormal)
+
+                if len(items)<200:
+                    self.logger.info('没有下一页了')
+                    break
+
+                page += 1
+
+                # 添加短暂延迟，避免请求过快
+                await asyncio.sleep(1)
+
+            except Exception as e:
+                self.logger.error(f"获取第 {page} 页数据时发生异常: {e}")
+                break
+
+        self.logger.info(f"总共获取到 {len(all_items)} 条数据")
+        return all_items
 
 
 
