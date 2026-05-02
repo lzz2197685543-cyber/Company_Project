@@ -12,10 +12,10 @@ from utils.logger import get_logger
 
 
 class SMTGoodsSpider:
-    def __init__(self, shop_name: str):
+    def __init__(self, shop_name: str,job):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger("smt_goods")
+        self.cookie_manager = CookieManager(shop_name,job)
+        self.logger = get_logger(job)
 
         self.url = (
             "https://seller-acs.aliexpress.com/"
@@ -144,7 +144,7 @@ class SMTGoodsSpider:
 
     # ---------- 保存 ----------
     def save_items(self, items):
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "sale"
         out_dir.mkdir(parents=True, exist_ok=True)
 
         fname = out_dir / f"{self.shop_name}_goods_{datetime.now():%Y%m%d}.csv"

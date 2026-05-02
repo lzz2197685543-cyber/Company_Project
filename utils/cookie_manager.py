@@ -1,19 +1,17 @@
 import json
-import time
-import hashlib
 import aiohttp
 from pathlib import Path
 from typing import Dict, Optional
 
 from utils.config_loader import get_shop_config
-from modules.login import SimpleLogin
+from core.login import SimpleLogin
 
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 
 
 class CookieManager:
-    def __init__(self, shop_name: str):
+    def __init__(self, shop_name: str,job):
         self.shop_name = shop_name
         self.cookie_file = COOKIE_DIR / f"{shop_name}.json"
 
@@ -25,6 +23,7 @@ class CookieManager:
             "https://seller-acs.aliexpress.com/"
             "h5/mtop.ae.scitem.read.pagequery/1.0/"
         )
+        self.job=job
 
     # ---------- cookie ----------
     def load_cookies(self) -> Optional[Dict[str, str]]:
@@ -53,7 +52,7 @@ class CookieManager:
     # ---------- 刷新 ----------
     async def refresh(self):
         login = SimpleLogin(
-            shop_name=self.shop_name)
+            shop_name=self.shop_name,job=self.job)
 
         ok = await login.login_and_save_cookies()
         if not ok:

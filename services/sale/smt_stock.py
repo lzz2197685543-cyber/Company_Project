@@ -9,10 +9,10 @@ import csv
 from utils.logger import get_logger
 
 class SMTStockSpider:
-    def __init__(self, shop_name: str,):
+    def __init__(self, shop_name: str,job):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"SMTGoods-{shop_name}")
+        self.cookie_manager = CookieManager(shop_name,job)
+        self.logger = get_logger(job)
         self.url = (
             "https://scm-supplier.aliexpress.com/"
             "aidc-aic-console/aic-inventory-manage/getRealTimeInvWithClearanceInfo"
@@ -37,6 +37,9 @@ class SMTStockSpider:
 
         if 401 in json_data:
             self.logger.info('cookie无效')
+            return True
+
+        if json_data.get('status') == 401:
             return True
 
         if not isinstance(json_data, dict):
@@ -102,7 +105,7 @@ class SMTStockSpider:
         return items
 
     def save_items(self, items):
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "sale"
         self.logger.info(out_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
 

@@ -1,9 +1,9 @@
-from modules.financial_data import SMT_FinancialData
+from services.financial.financial_data import SMT_FinancialData
 from utils.logger import get_logger
-from utils.config_loader import get_shop_config
 import asyncio
 import time
 from datetime import datetime
+from utils.dingtalk_bot import ding_bot_send
 
 
 logger = get_logger(f"financial_data")
@@ -45,6 +45,7 @@ async def main():
 
     total_cost = time.perf_counter() - total_start
     logger.info(f"🎯 全流程完成，总耗时：{format_seconds(total_cost)}")
+    ding_bot_send('me', f'SMT的财务任务完成,总耗时：{format_seconds(total_cost)}')
 
 
 if __name__ == "__main__":

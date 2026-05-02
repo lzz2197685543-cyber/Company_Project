@@ -5,9 +5,11 @@ from datetime import datetime
 import requests
 import asyncio
 from utils.cookie_manager import get_shop_config
+from utils.logger import get_logger
 from utils.dingtalk_bot import ding_bot_send
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
+
 
 # ✅ AliExpress / Ali 系 cookies 白名单
 COOKIE_WHITELIST = {
@@ -48,16 +50,15 @@ COOKIE_WHITELIST = {
 
 
 class SimpleLogin:
-    def __init__(
-        self,
-        shop_name
-    ):
+    def __init__(self,shop_name,job):
         self.shop_name = shop_name
         cfg = get_shop_config(shop_name)
         self.channel_id = cfg["channelId"]
         self.cloud_account_id = cfg["cloud_account_id"]
         self.username = cfg["account"]
         self.password = cfg["password"]
+        self.job=job
+        self.logger=get_logger(job)
 
     def filter_cookies(self,cookies_dict: dict) -> dict:
         """
@@ -91,9 +92,9 @@ class SimpleLogin:
                 timeout=10
             )
             resp.raise_for_status()
-            print(f"[{self.shop_name}] 云浏览器已关闭")
+            self.logger.info(f"[{self.shop_name}] 云浏览器已关闭")
         except Exception as e:
-            print(f"[{self.shop_name}] 关闭云浏览器失败: {e}")
+            self.logger.error(f"[{self.shop_name}] 关闭云浏览器失败: {e}")
 
     async def login_and_save_cookies(self) -> bool:
         COOKIE_DIR.mkdir(parents=True, exist_ok=True)
@@ -117,18 +118,26 @@ class SimpleLogin:
 
             user_input = page.locator('#loginName')
             await user_input.wait_for(state='visible', timeout=15_000)
+            await asyncio.sleep(1)
+            await user_input.clear()  # 先清空
             await user_input.fill(self.username)
+
+            await asyncio.sleep(10)
 
             password_input = page.locator('#password')
             await password_input.wait_for(state='visible', timeout=15_000)
+            await asyncio.sleep(1)
+            await password_input.clear()  # 先清空
             await password_input.fill(self.password)
+
+
 
             await page.click('button[type="button"]:has-text("登录")')
 
             try:
                 await page.wait_for_url("**/m_apps/**", timeout=300_000)
             except Exception:
-                print(f"{self.shop_name} 登录失败")
+                self.logger.info(f"{self.shop_name} 登录失败")
                 return False
 
             await page.goto(f'https://csp.aliexpress.com/m_apps/ascp/aechoice.inventory_distribution_details_management?channelId={self.channel_id}',wait_until="domcontentloaded")
@@ -143,7 +152,7 @@ class SimpleLogin:
 
             # ⚠️ 检查 WDK_SESSID 是否存在
             if 'WDK_SESSID' not in cookies_dict:
-                print(f"[{self.shop_name}] 登录成功，但 WDK_SESSID 不存在，cookies 无效")
+                self.logger.info(f"[{self.shop_name}] 登录成功，但 WDK_SESSID 不存在，cookies 无效")
                 self.stop_cloud_browser()
                 return False
 
@@ -163,4 +172,6 @@ class SimpleLogin:
             return True
 
 
-
+if __name__ == '__main__':
+    s=SimpleLogin('SMT202','smt_log')
+    asyncio.run(s.login_and_save_cookies())

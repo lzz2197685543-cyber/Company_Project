@@ -12,10 +12,10 @@ from utils.logger import get_logger
 
 
 class SMTGoodsSpiderAsync:
-    def __init__(self, shop_name: str):
+    def __init__(self, shop_name: str,job):
         self.shop_name = shop_name
-        self.cookie_manager = CookieManager(shop_name)
-        self.logger = get_logger(f"SMTGoods-{shop_name}")
+        self.cookie_manager = CookieManager(shop_name,job)
+        self.logger = get_logger(job)
 
         self.url = (
             "https://seller-acs.aliexpress.com/"

@@ -10,7 +10,8 @@ import math
 import re
 from utils.dingtalk_bot import ding_bot_send
 
-
+FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financial"
+print(FINANCIAL_DIR)
 
 class SMT_FinancialData:
     def __init__(self, shop_name,month_str):
@@ -227,7 +228,7 @@ class SMT_FinancialData:
         download_btn=self.page.locator('.downloadSearchBtn___3NvAY')
         await download_btn.wait_for(state="visible", timeout=20_000)
 
-        FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" /(str(self.month_str.split('-')[
+        FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financial" /(str(self.month_str.split('-')[
             1]) + '月份') /"smt"
         FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -358,7 +359,7 @@ class SMT_FinancialData:
         download_btn=self.page.locator('.first .next-btn-helper')
         await download_btn.wait_for(state="visible", timeout=15_000)
 
-        FINANCIAL_DIR = Path(__file__).resolve().parent.parent / "data" / "financial" / (str(self.month_str.split('-')[
+        FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financial" / (str(self.month_str.split('-')[
             1]) + '月份') / "smt"
         FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -377,7 +378,6 @@ class SMT_FinancialData:
 
         return True
 
-
     # -----------失败可以重新登录------------
     async def run_once(self):
         try:
@@ -387,7 +387,6 @@ class SMT_FinancialData:
             if not await self.login():
                 raise Exception("登录失败")
 
-
             # 其他收支结算
             if not await self.get_other_bill():
                 raise Exception('获取其他收支结算失败')
@@ -395,7 +394,6 @@ class SMT_FinancialData:
             # 历史账单
             if not await self.get_history_bill():
                 raise Exception("获取动账财务数据失败")
-
         finally:
             # ✅ 无论成功失败，统一关
             await self.close()
