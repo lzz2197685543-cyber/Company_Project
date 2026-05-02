@@ -2,6 +2,7 @@ from pathlib import Path
 import asyncio
 import playwright
 import time
+from utils.page_helpers import next_btn,close_btn
 from datetime import datetime, timedelta
 import os
 import csv
@@ -60,11 +61,18 @@ class AmazonFilterAutomation:
             wait_until="domcontentloaded",
             timeout=30000
         )
+        await asyncio.sleep(2)
+        # 看看是否有下一条
+        await next_btn(self.page)
+        await asyncio.sleep(2)
+        await close_btn(self.page)
+
+        await asyncio.sleep(2)
         self.logger.info('开始筛选条件')
 
         # 将每页的数据换成200条/页
         select_count_btn=page.locator(
-            "#supplyApp > div > div.ak-table-section > div.pagination-container > div > span.el-pagination__sizes > div > div > span.el-input__suffix > span > i")
+            "#ak-table-list > div.el-pagination > span.el-pagination__sizes > div > div > span.el-input__suffix > span > i")
         await select_count_btn.wait_for(state="visible", timeout=3000)
         await select_count_btn.click()
 
@@ -119,7 +127,7 @@ class AmazonFilterAutomation:
         if self.should_stop:
             return []
 
-        next_btn=page.locator('#supplyApp > div > div.ak-table-section > div.pagination-container > div > button.btn-next > i:nth-child(1)')
+        next_btn=page.locator('#ak-table-list > div.el-pagination > button.btn-next > i')
 
         # 不可点 = 到最后一页
         if not await next_btn.is_enabled():

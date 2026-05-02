@@ -1,0 +1,246 @@
+2026-03-31 16:06:43,386 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:06:43,937 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:06:44,200 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:06:44,294 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:06:44,374 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:06:44,385 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:06:44,429 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:06:49,629 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:07:30,761 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-03-31 16:07:30,839 | ERROR | Amazon_Stock_Watcher | 程序运行出错: Locator.wait_for: Target page, context or browser has been closed
+Call log:
+  - waiting for locator("#supplyApp > div > div.ak-table-section > div.pagination-container > div > span.el-pagination__sizes > div > div > span.el-input__suffix > span > i") to be visible
+    - waiting for" https://erp.lingxing.com/erp/msupply/replenishmentAdvice" navigation to finish...
+    - navigated to "https://erp.lingxing.com/erp/msupply/replenishmentAdvice"
+
+2026-03-31 16:07:37,287 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:07:37,863 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:07:38,141 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:07:38,245 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:07:38,328 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:07:38,340 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:07:38,392 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:07:43,778 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:11:26,866 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:11:27,300 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:11:27,603 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:11:27,698 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:11:27,770 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:11:27,779 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:11:27,825 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:11:32,693 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:12:15,773 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:12:16,196 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:12:16,474 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:12:16,563 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:12:16,631 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:12:16,642 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:12:16,691 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:12:22,038 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:14:30,882 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:14:31,270 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:14:31,490 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:14:31,652 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:14:31,717 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:14:31,727 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:14:31,773 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:14:37,284 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:14:47,440 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-03-31 16:14:50,455 | ERROR | Amazon_Stock_Watcher | 程序运行出错: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("#supplyApp > div > div.ak-table-section > div.pagination-container > div > span.el-pagination__sizes > div > div > span.el-input__suffix > span > i") to be visible
+
+2026-03-31 16:15:44,460 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:15:46,714 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:15:48,097 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:15:48,164 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:15:48,231 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:15:48,242 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:15:48,276 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:15:53,141 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:15:59,533 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-03-31 16:16:02,541 | ERROR | Amazon_Stock_Watcher | 程序运行出错: Locator.wait_for: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator("#supplyApp > div > div.ak-table-section > div.pagination-container > div > span.el-pagination__sizes > div > div > span.el-input__suffix > span > i") to be visible
+
+2026-03-31 16:16:34,472 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:16:34,915 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:16:35,144 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:16:35,253 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:16:35,335 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:16:35,345 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:16:35,391 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:20:46,808 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:20:47,193 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:20:47,472 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:20:47,572 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:20:47,636 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:20:47,645 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:20:47,693 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:20:52,262 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:20:58,592 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-03-31 16:20:59,954 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-03-31 16:21:00,283 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-03-31 16:21:01,277 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-03-31 16:21:01,660 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-03-31 16:21:02,044 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-03-31 16:21:02,405 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-03-31 16:21:02,793 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-03-31 16:21:03,196 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-03-31 16:21:03,575 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-03-31 16:21:03,988 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-03-31 16:21:04,429 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-03-31 16:21:04,696 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-03-31 16:21:37,603 | ERROR | Amazon_Stock_Watcher | 程序运行出错: Locator.is_enabled: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#supplyApp > div > div.ak-table-section > div.pagination-container > div > button.btn-next > i:nth-child(1)")
+
+2026-03-31 16:22:36,254 | INFO | Amazon_Stock_Watcher | 正在打开登录页面...
+2026-03-31 16:22:36,647 | INFO | Amazon_Stock_Watcher | 等待登录表单加载...
+2026-03-31 16:22:36,891 | INFO | Amazon_Stock_Watcher | 输入用户名...
+2026-03-31 16:22:37,010 | INFO | Amazon_Stock_Watcher | 输入密码...
+2026-03-31 16:22:37,087 | INFO | Amazon_Stock_Watcher | 等待登录按钮...
+2026-03-31 16:22:37,097 | INFO | Amazon_Stock_Watcher | 点击登录按钮...
+2026-03-31 16:22:37,140 | INFO | Amazon_Stock_Watcher | 等待登录成功...
+2026-03-31 16:22:41,792 | INFO | Amazon_Stock_Watcher | 领星ERP-跨境电商管理系统 登录成功
+2026-03-31 16:22:49,214 | INFO | Amazon_Stock_Watcher | 开始筛选条件
+2026-03-31 16:22:50,737 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-UK
+2026-03-31 16:22:51,068 | INFO | Amazon_Stock_Watcher | 选择了店铺: BAKAM账号-US
+2026-03-31 16:22:52,092 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-UK
+2026-03-31 16:22:52,473 | INFO | Amazon_Stock_Watcher | 选择了店铺: Kidzbuddy账号-US
+2026-03-31 16:22:52,842 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-UK
+2026-03-31 16:22:53,207 | INFO | Amazon_Stock_Watcher | 选择了店铺: Meemazi-US
+2026-03-31 16:22:53,574 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-CA
+2026-03-31 16:22:53,956 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-UK
+2026-03-31 16:22:54,323 | INFO | Amazon_Stock_Watcher | 选择了店铺: Ninigai-US
+2026-03-31 16:22:54,709 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-UK
+2026-03-31 16:22:55,122 | INFO | Amazon_Stock_Watcher | 选择了店铺: YYDeek账号-US
+2026-03-31 16:22:55,397 | INFO | Amazon_Stock_Watcher | 🔍 点击确认，监听接口
+2026-03-31 16:22:58,229 | INFO | Amazon_Stock_Watcher | 📄 已到最后一页
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 断货通知内容:
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（03月31号）即将断货sku：
+
+【US站点】
+品名/断货时间
+冲天气球车-青蛙款/36天
+冲天气球车-怪兽款/6天
+100个气球随机颜色/27天
+
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（03月31号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/86天
+苹果锁（10个装）/86天
+开锁车/25天
+
+【US站点】
+品名/断货时间
+ZC字母锁/29天
+苹果锁（10个装）/13天
+形状配对学习锁/56天
+
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（03月31号）即将断货sku：
+
+【US站点】
+品名/断货时间
+配对花盆栽5pcs/20天
+配对花盆栽10pcs/58天
+
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（03月31号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/21天
+
+【US站点】
+品名/断货时间
+苹果锁（10个装）/58天
+
+2026-03-31 16:22:58,230 | INFO | Amazon_Stock_Watcher | 
+Ninigai账号（03月31号）即将断货sku：
+
+【UK站点】
+品名/断货时间
+苹果锁（5个装）/84天
+
+【CA站点】
+品名/断货时间
+弹珠平衡-蓝色/27天
+
+2026-03-31 16:22:58,749 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-03-31 16:22:58,749 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-03-31 16:22:58,749 | INFO | Amazon_Stock_Watcher | 
+==================================================
+2026-03-31 16:22:58,749 | INFO | Amazon_Stock_Watcher | FBA预警通知内容:
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | 
+Meemazi账号（03月31号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+整蛊音效机/28天
+配对花盆栽5pcs/4天
+配对花盆栽10pcs/29天
+
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | 
+BAKAM账号（03月31号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+冲天气球车-青蛙款/4天
+冲天气球车-怪兽款/6天
+七彩磁力棒-64根盒装/29天
+100个气球随机颜色/27天
+冲天气球车-黄鸭款/13天
+
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | 
+YYDeek账号（03月31号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+小象飞碟-绿色/4天
+青蛙天平/18天
+开锁车/25天
+
+【US站点】
+品名/可售天数(FBA)天数
+青蛙天平/30天
+企鹅天平/26天
+ZC字母锁/21天
+苹果锁（10个装）/5天
+
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | 
+Kidzbuddy账号（03月31号）fba即将不可售sku：
+
+【UK站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/21天
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（10个装）/12天
+
+2026-03-31 16:22:58,750 | INFO | Amazon_Stock_Watcher | 
+Ninigai账号（03月31号）fba即将不可售sku：
+
+【US站点】
+品名/可售天数(FBA)天数
+苹果锁（5个装）/13天
+配对花盆栽5pcs/16天
+
+【CA站点】
+品名/可售天数(FBA)天数
+弹珠平衡-蓝色/27天
+
+2026-03-31 16:22:59,184 | INFO | Amazon_Stock_Watcher | ✓ 钉钉消息发送成功
+2026-03-31 16:22:59,184 | INFO | Amazon_Stock_Watcher | ==================================================
+2026-03-31 16:22:59,184 | INFO | Amazon_Stock_Watcher | 
+总共爬取 97 条数据

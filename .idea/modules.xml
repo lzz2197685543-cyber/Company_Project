@@ -3,10 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../AI+Drissionpage过验证码/.idea/AI+Drissionpage过验证码.iml" filepath="$PROJECT_DIR$/../AI+Drissionpage过验证码/.idea/AI+Drissionpage过验证码.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Ali1688/.idea/Ali1688.iml" filepath="$PROJECT_DIR$/../Ali1688/.idea/Ali1688.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Amazon_Stock_Watcher.iml" filepath="$PROJECT_DIR$/.idea/Amazon_Stock_Watcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Auto_Listing/.idea/Auto_Listing.iml" filepath="$PROJECT_DIR$/../Auto_Listing/.idea/Auto_Listing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DianLeiDa/.idea/DianLeiDa.iml" filepath="$PROJECT_DIR$/../DianLeiDa/.idea/DianLeiDa.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" filepath="$PROJECT_DIR$/../Factory_sourcing/.idea/Factory_sourcing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../GeekBi/.idea/GeekBi.iml" filepath="$PROJECT_DIR$/../GeekBi/.idea/GeekBi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HiWayAuto/.idea/HiWayAuto.iml" filepath="$PROJECT_DIR$/../HiWayAuto/.idea/HiWayAuto.iml" />
       <module fileurl="file://$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" filepath="$PROJECT_DIR$/../JST_horizon/.idea/JST_horizon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JS逆向/.idea/JS逆向.iml" filepath="$PROJECT_DIR$/../JS逆向/.idea/JS逆向.iml" />
       <module fileurl="file://$PROJECT_DIR$/../sd14/Product_Selection/.idea/New_1688.iml" filepath="$PROJECT_DIR$/../sd14/Product_Selection/.idea/New_1688.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Product_Selection/.idea/Product_Selection.iml" filepath="$PROJECT_DIR$/../Product_Selection/.idea/Product_Selection.iml" />
       <module fileurl="file://$PROJECT_DIR$/../SMT/.idea/SMT.iml" filepath="$PROJECT_DIR$/../SMT/.idea/SMT.iml" />
@@ -14,7 +19,11 @@
       <module fileurl="file://$PROJECT_DIR$/../Shein/.idea/Shein.iml" filepath="$PROJECT_DIR$/../Shein/.idea/Shein.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" filepath="$PROJECT_DIR$/../Shopee/.idea/Shopee.iml" />
       <module fileurl="file://$PROJECT_DIR$/../TK/.idea/TK.iml" filepath="$PROJECT_DIR$/../TK/.idea/TK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Temu_auto_listing/.idea/Temu_auto_listing.iml" filepath="$PROJECT_DIR$/../Temu_auto_listing/.idea/Temu_auto_listing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" filepath="$PROJECT_DIR$/../Temu_horizon/.idea/Temu_horizon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JS逆向/aaa/.idea/aaa.iml" filepath="$PROJECT_DIR$/../JS逆向/aaa/.idea/aaa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../淘宝/.idea/淘宝.iml" filepath="$PROJECT_DIR$/../淘宝/.idea/淘宝.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JS逆向/14/网易云/.idea/网易云.iml" filepath="$PROJECT_DIR$/../JS逆向/14/网易云/.idea/网易云.iml" />
     </modules>
   </component>
 </project>
