@@ -12,7 +12,6 @@ import re
 
 
 
-
 class ShopeeLogin_FinancialData:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
@@ -371,7 +370,7 @@ class ShopeeLogin_FinancialData:
         if hasattr(self, "wait_export_success_toast"):
             await self.wait_export_success_toast()
 
-        await asyncio.sleep(1)
+        await asyncio.sleep(5)
 
         # ===== 打开导出历史 =====
         history_btn = page.locator(
@@ -390,7 +389,7 @@ class ShopeeLogin_FinancialData:
         download = await download_info.value
 
         FINANCIAL_DIR = (
-                Path(__file__).resolve().parent.parent
+                Path(__file__).resolve().parent.parent.parent
                 / "data"
                 / "financial"
                 / (str(self.month_str.split("-")[1])+'月份')

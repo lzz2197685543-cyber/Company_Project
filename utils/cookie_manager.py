@@ -3,17 +3,18 @@ from pathlib import Path
 from typing import Dict, Optional
 
 from utils.config_loader import get_shop_config
-from modules.login import ShopeeLogin
+from core.login import ShopeeLogin
 
 
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
 
 
 class CookieManager:
-    def __init__(self,shop_name):
+    def __init__(self,shop_name,job):
         self.shop_name=shop_name
         self.cfg = get_shop_config(shop_name)
         self.cookie_file = COOKIE_DIR / f"{shop_name}_cookies.json"
+        self.job=job
 
     # ---------- cookie ----------
     def load_cookies(self) -> Optional[Dict[str, str]]:
@@ -28,7 +29,8 @@ class CookieManager:
     async def refresh(self):
         login = ShopeeLogin(
             name=self.shop_name,
-            account=self.cfg
+            account=self.cfg,
+            job=self.job,
         )
         ok = await login.run()
         if not ok:

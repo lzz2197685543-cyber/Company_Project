@@ -8,8 +8,9 @@ from pathlib import Path
 from utils.cookie_manager import CookieManager
 import asyncio
 
+
 class Shopee:
-    def __init__(self,shop_name):
+    def __init__(self,shop_name,job):
         self.shop_name = shop_name
         self.headers = {
             'accept-language': 'zh-CN,zh;q=0.9',
@@ -22,10 +23,10 @@ class Shopee:
             'x-business-type': 'SCS',
             'x-request-id': 'edd98f73-3306-45fa-8b09-58438e5e9f5a',
         }
-        self.cookie_manager=CookieManager(shop_name)
+        self.cookie_manager=CookieManager(shop_name,job)
         self.cookie=None
         self.url = 'https://seller.scs.shopee.cn/api/v4/srm/sales_inventory/list'
-        self.logger= get_logger('shopee_sale_data')
+        self.logger= get_logger(job)
 
     def is_cookie_invalid(self, json_data):
         """
@@ -133,7 +134,8 @@ class Shopee:
     """批量保存数据到CSV文件"""
     def save_batch(self, items):
         """批量保存数据到CSV文件"""
-        out_dir = Path(__file__).resolve().parent.parent / "data" / "sale"
+        out_dir = Path(__file__).resolve().parent.parent.parent / "data" / "sale"
+
         if not os.path.exists(out_dir):
             try:
                 os.makedirs(out_dir)
@@ -228,5 +230,5 @@ async def run_shopee_sale():
         await shein.get_all_page()
 
 
-if __name__ == '__main__':
-    asyncio.run(run_shopee_sale())
+# if __name__ == '__main__':
+#     asyncio.run(run_shopee_sale())

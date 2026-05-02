@@ -9,6 +9,7 @@ from utils.logger import get_logger
 from pathlib import Path
 from utils.dingtalk_bot import ding_bot_send
 COOKIE_DIR = Path(__file__).resolve().parent.parent / "data" / "cookies"
+
 # 确保目录存在
 COOKIE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -18,14 +19,14 @@ class ShopeeLogin:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
 
-    def __init__(self, name, account):
+    def __init__(self, name, account,job):
         self.name = name
         self.hub_id = str(account["hubId"])
         cred = account["credentials"]
         self.username = cred["username"]
         self.password = cred["password"]
 
-        self.logger = get_logger(f"login")
+        self.logger = get_logger(job)
         self.debug_port = None
         self.playwright = None
         self.browser = None
