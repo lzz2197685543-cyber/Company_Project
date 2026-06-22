@@ -1,9 +1,0 @@
-2026-04-06 11:04:12,313 | INFO | financial_process_up | 104-Temu全托管
-2026-04-06 11:04:12,353 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
-2026-04-06 11:04:12,849 | INFO | financial_process_up | 104-Temu全托管
-2026-04-06 11:04:12,868 | INFO | financial_process_up | 有效子表: ['消费者及履约保障-售后问题', '交易结算']
-2026-04-06 11:04:13,056 | INFO | financial_process_up | 104-Temu全托管
-2026-04-06 11:04:13,067 | INFO | financial_process_up | 有效子表: ['交易结算', '消费者及履约保障-售后补寄', '消费者及履约保障-售后问题']
-2026-04-06 11:04:13,198 | INFO | financial_process_up | 104-Temu全托管_总表.xlsx--导出成功
-2026-04-06 11:04:13,620 | INFO | financial_process_up | ⚠️ 以下字段未上传（钉钉表不存在）: {'核价'}
-2026-04-06 11:04:13,621 | INFO | financial_process_up | 正在上传店铺: 104-Temu全托管_总表.xlsx, 共 32 条记录...

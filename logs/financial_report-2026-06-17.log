@@ -1,0 +1,249 @@
+2026-06-17 16:02:35,184 | INFO | financial_report | 使用上月: 202605, 月份: 05
+2026-06-17 16:02:35,186 | INFO | financial_report | 开始生成 102-Temu全托管 202605 财务报表
+2026-06-17 16:02:35,186 | INFO | financial_report | 
+正在处理 美区 销售收入...
+2026-06-17 16:02:35,486 | INFO | financial_report |   美区 - 订单金额: 4315.33, 非商责补贴: 108.06, 平台退款: -282.39
+2026-06-17 16:02:35,486 | INFO | financial_report | 
+正在处理 欧区 销售收入...
+2026-06-17 16:02:35,983 | INFO | financial_report |   欧区 - 订单金额: 33523.52, 非商责补贴: 1030.69, 平台退款: -2298.76
+2026-06-17 16:02:35,983 | INFO | financial_report | 
+正在处理 全球 销售收入...
+2026-06-17 16:02:36,120 | INFO | financial_report |   全球 - 订单金额: 8864.65, 非商责补贴: 270.86, 平台退款: -368.46
+2026-06-17 16:02:36,121 | INFO | financial_report | 
+销售收入总计: 45163.50
+2026-06-17 16:02:36,121 | INFO | financial_report | 
+正在加载成本映射表...
+2026-06-17 16:02:36,124 | INFO | financial_report | 
+正在处理 美区 订单成本...
+2026-06-17 16:02:36,211 | INFO | financial_report |   匹配成功 487 条，未匹配 0 条
+2026-06-17 16:02:36,211 | INFO | financial_report |   美区 订单成本: 3104.61
+2026-06-17 16:02:36,211 | INFO | financial_report | 
+正在处理 欧区 订单成本...
+2026-06-17 16:02:37,030 | INFO | financial_report |   匹配成功 4479 条，未匹配 0 条
+2026-06-17 16:02:37,031 | INFO | financial_report |   欧区 订单成本: 23355.41
+2026-06-17 16:02:37,031 | INFO | financial_report | 
+正在处理 全球 订单成本...
+2026-06-17 16:02:37,306 | INFO | financial_report |   匹配成功 1304 条，未匹配 0 条
+2026-06-17 16:02:37,306 | INFO | financial_report |   全球 订单成本: 6311.52
+2026-06-17 16:02:37,306 | INFO | financial_report | 
+订单成本总计: 32771.54
+2026-06-17 16:02:37,831 | INFO | financial_report | 
+匹配结果已导出到: D:\sd14\Temu_horizon\data\financial\05月份\temu\match_results\102-Temu全托管_订单成本匹配结果_05.xlsx
+2026-06-17 16:02:37,831 | INFO | financial_report |   总记录数: 6270 条
+2026-06-17 16:02:37,832 | INFO | financial_report |   匹配成功: 6270 条
+2026-06-17 16:02:37,832 | INFO | financial_report |   匹配失败: 0 条
+2026-06-17 16:02:37,833 | INFO | financial_report |   总成本: 32771.54
+2026-06-17 16:02:37,836 | INFO | financial_report | ========== 开始处理店铺 102-Temu全托管 的丢件成本 ==========
+2026-06-17 16:02:37,842 | INFO | financial_report | 共获取 6 个备货单号
+2026-06-17 16:02:50,028 | INFO | financial_report | 店铺 102-Temu全托管 丢件总价：83.83
+2026-06-17 16:02:50,028 | INFO | financial_report | 开始上传 4 条差异数据到钉钉
+2026-06-17 16:02:50,476 | INFO | financial_report | 准备上传 4 条记录...
+2026-06-17 16:02:51,506 | INFO | financial_report | 
+上传统计:
+2026-06-17 16:02:51,506 | INFO | financial_report | 总记录数: 4
+2026-06-17 16:02:51,506 | INFO | financial_report | 成功数量: 4
+2026-06-17 16:02:51,506 | INFO | financial_report | 失败数量: 0
+2026-06-17 16:02:51,506 | INFO | financial_report | 成功批次: 1
+2026-06-17 16:02:51,506 | INFO | financial_report | 失败批次: 0
+2026-06-17 16:02:51,507 | INFO | financial_report | 
+丢件成本: 83.83
+2026-06-17 16:02:51,507 | INFO | financial_report | 
+正在处理卖家中心表: 102-Temu全托管_05_卖家中心.xlsx
+2026-06-17 16:02:51,672 | INFO | financial_report | 
+平台费用计算结果：
+2026-06-17 16:02:51,672 | INFO | financial_report |   平台罚款-售后: 1373.08
+2026-06-17 16:02:51,672 | INFO | financial_report |   平台仓储费: 769.55
+2026-06-17 16:02:51,672 | INFO | financial_report |   EPR环保费: 29.97
+2026-06-17 16:02:51,673 | INFO | financial_report |   平台罚款: 0.00
+2026-06-17 16:02:51,673 | INFO | financial_report |   广告服务费: 0.00
+2026-06-17 16:02:51,676 | WARNING | financial_report | 没有日常记账数据
+2026-06-17 16:02:51,676 | INFO | financial_report | 财务报表生成完成
+2026-06-17 16:02:51,676 | INFO | financial_report | 使用上月: 202605, 月份: 05
+2026-06-17 16:02:51,676 | INFO | financial_report | 开始生成 105-Temu全托管 202605 财务报表
+2026-06-17 16:02:51,676 | INFO | financial_report | 
+正在处理 美区 销售收入...
+2026-06-17 16:02:51,736 | INFO | financial_report |   美区 - 订单金额: 5869.78, 非商责补贴: 180.43, 平台退款: -342.62
+2026-06-17 16:02:51,737 | INFO | financial_report | 
+正在处理 欧区 销售收入...
+2026-06-17 16:02:52,446 | INFO | financial_report |   欧区 - 订单金额: 56230.74, 非商责补贴: 2340.90, 平台退款: -4612.16
+2026-06-17 16:02:52,447 | INFO | financial_report | 
+正在处理 全球 销售收入...
+2026-06-17 16:02:52,744 | INFO | financial_report |   全球 - 订单金额: 20985.23, 非商责补贴: 274.89, 平台退款: -804.81
+2026-06-17 16:02:52,745 | INFO | financial_report | 
+销售收入总计: 80122.38
+2026-06-17 16:02:52,745 | INFO | financial_report | 
+正在加载成本映射表...
+2026-06-17 16:02:52,748 | INFO | financial_report | 
+正在处理 美区 订单成本...
+2026-06-17 16:02:52,837 | INFO | financial_report |   匹配成功 486 条，未匹配 0 条
+2026-06-17 16:02:52,837 | INFO | financial_report |   美区 订单成本: 3869.32
+2026-06-17 16:02:52,837 | INFO | financial_report | 
+正在处理 欧区 订单成本...
+2026-06-17 16:02:53,928 | INFO | financial_report |   匹配成功 6497 条，未匹配 0 条
+2026-06-17 16:02:53,929 | INFO | financial_report |   欧区 订单成本: 37194.02
+2026-06-17 16:02:53,929 | INFO | financial_report | 
+正在处理 全球 订单成本...
+2026-06-17 16:02:54,373 | INFO | financial_report |   匹配成功 2300 条，未匹配 0 条
+2026-06-17 16:02:54,373 | INFO | financial_report |   全球 订单成本: 13890.41
+2026-06-17 16:02:54,374 | INFO | financial_report | 
+订单成本总计: 54953.75
+2026-06-17 16:02:55,037 | INFO | financial_report | 
+匹配结果已导出到: D:\sd14\Temu_horizon\data\financial\05月份\temu\match_results\105-Temu全托管_订单成本匹配结果_05.xlsx
+2026-06-17 16:02:55,037 | INFO | financial_report |   总记录数: 9283 条
+2026-06-17 16:02:55,038 | INFO | financial_report |   匹配成功: 9283 条
+2026-06-17 16:02:55,039 | INFO | financial_report |   匹配失败: 0 条
+2026-06-17 16:02:55,039 | INFO | financial_report |   总成本: 54953.75
+2026-06-17 16:02:55,041 | INFO | financial_report | ========== 开始处理店铺 105-Temu全托管 的丢件成本 ==========
+2026-06-17 16:02:55,044 | INFO | financial_report | 共获取 21 个备货单号
+2026-06-17 16:03:35,836 | INFO | financial_report | 店铺 105-Temu全托管 丢件总价：1496.80
+2026-06-17 16:03:35,836 | INFO | financial_report | 开始上传 17 条差异数据到钉钉
+2026-06-17 16:03:35,837 | INFO | financial_report | 准备上传 17 条记录...
+2026-06-17 16:03:36,705 | INFO | financial_report | 
+上传统计:
+2026-06-17 16:03:36,705 | INFO | financial_report | 总记录数: 17
+2026-06-17 16:03:36,705 | INFO | financial_report | 成功数量: 17
+2026-06-17 16:03:36,705 | INFO | financial_report | 失败数量: 0
+2026-06-17 16:03:36,705 | INFO | financial_report | 成功批次: 1
+2026-06-17 16:03:36,705 | INFO | financial_report | 失败批次: 0
+2026-06-17 16:03:36,705 | INFO | financial_report | 
+丢件成本: 1496.80
+2026-06-17 16:03:36,705 | INFO | financial_report | 
+正在处理卖家中心表: 105-Temu全托管_05_卖家中心.xlsx
+2026-06-17 16:03:36,884 | INFO | financial_report | 
+平台费用计算结果：
+2026-06-17 16:03:36,884 | INFO | financial_report |   平台罚款-售后: 2408.01
+2026-06-17 16:03:36,884 | INFO | financial_report |   平台仓储费: 2916.62
+2026-06-17 16:03:36,884 | INFO | financial_report |   EPR环保费: 106.14
+2026-06-17 16:03:36,885 | INFO | financial_report |   平台罚款: 0.00
+2026-06-17 16:03:36,885 | INFO | financial_report |   广告服务费: 2431.52
+2026-06-17 16:03:36,887 | WARNING | financial_report | 没有日常记账数据
+2026-06-17 16:03:36,887 | INFO | financial_report | 财务报表生成完成
+2026-06-17 16:03:36,887 | INFO | financial_report | 使用上月: 202605, 月份: 05
+2026-06-17 16:03:36,887 | INFO | financial_report | 开始生成 1101-Temu全托管 202605 财务报表
+2026-06-17 16:03:36,888 | INFO | financial_report | 
+正在处理 美区 销售收入...
+2026-06-17 16:03:36,904 | INFO | financial_report |   美区 - 订单金额: 681.85, 非商责补贴: 35.05, 平台退款: -109.56
+2026-06-17 16:03:36,905 | INFO | financial_report | 
+正在处理 欧区 销售收入...
+2026-06-17 16:03:37,067 | INFO | financial_report |   欧区 - 订单金额: 8368.25, 非商责补贴: 435.05, 平台退款: -755.50
+2026-06-17 16:03:37,067 | INFO | financial_report | 
+正在处理 全球 销售收入...
+2026-06-17 16:03:37,130 | INFO | financial_report |   全球 - 订单金额: 4342.74, 非商责补贴: 137.36, 平台退款: -320.32
+2026-06-17 16:03:37,130 | INFO | financial_report | 
+销售收入总计: 12814.92
+2026-06-17 16:03:37,130 | INFO | financial_report | 
+正在加载成本映射表...
+2026-06-17 16:03:37,132 | INFO | financial_report | 
+正在处理 美区 订单成本...
+2026-06-17 16:03:37,156 | INFO | financial_report |   匹配成功 86 条，未匹配 0 条
+2026-06-17 16:03:37,156 | INFO | financial_report |   美区 订单成本: 467.89
+2026-06-17 16:03:37,156 | INFO | financial_report | 
+正在处理 欧区 订单成本...
+2026-06-17 16:03:37,424 | INFO | financial_report |   匹配成功 1485 条，未匹配 0 条
+2026-06-17 16:03:37,424 | INFO | financial_report |   欧区 订单成本: 5032.06
+2026-06-17 16:03:37,424 | INFO | financial_report | 
+正在处理 全球 订单成本...
+2026-06-17 16:03:37,518 | INFO | financial_report |   匹配成功 515 条，未匹配 0 条
+2026-06-17 16:03:37,518 | INFO | financial_report |   全球 订单成本: 3118.94
+2026-06-17 16:03:37,519 | INFO | financial_report | 
+订单成本总计: 8618.90
+2026-06-17 16:03:37,679 | INFO | financial_report | 
+匹配结果已导出到: D:\sd14\Temu_horizon\data\financial\05月份\temu\match_results\1101-Temu全托管_订单成本匹配结果_05.xlsx
+2026-06-17 16:03:37,680 | INFO | financial_report |   总记录数: 2086 条
+2026-06-17 16:03:37,680 | INFO | financial_report |   匹配成功: 2086 条
+2026-06-17 16:03:37,680 | INFO | financial_report |   匹配失败: 0 条
+2026-06-17 16:03:37,681 | INFO | financial_report |   总成本: 8618.90
+2026-06-17 16:03:37,682 | INFO | financial_report | ========== 开始处理店铺 1101-Temu全托管 的丢件成本 ==========
+2026-06-17 16:03:37,685 | INFO | financial_report | 店铺 1101-Temu全托管 无待处理备货单
+2026-06-17 16:03:37,685 | INFO | financial_report | 
+丢件成本: 0.00
+2026-06-17 16:03:37,685 | INFO | financial_report | 
+正在处理卖家中心表: 1101-Temu全托管_05_卖家中心.xlsx
+2026-06-17 16:03:37,766 | INFO | financial_report | 
+平台费用计算结果：
+2026-06-17 16:03:37,766 | INFO | financial_report |   平台罚款-售后: 471.46
+2026-06-17 16:03:37,766 | INFO | financial_report |   平台仓储费: 400.09
+2026-06-17 16:03:37,766 | INFO | financial_report |   EPR环保费: 9.07
+2026-06-17 16:03:37,766 | INFO | financial_report |   平台罚款: 0.00
+2026-06-17 16:03:37,766 | INFO | financial_report |   广告服务费: 0.00
+2026-06-17 16:03:37,768 | WARNING | financial_report | 没有日常记账数据
+2026-06-17 16:03:37,769 | INFO | financial_report | 财务报表生成完成
+2026-06-17 16:03:37,769 | INFO | financial_report | 使用上月: 202605, 月份: 05
+2026-06-17 16:03:37,769 | INFO | financial_report | 开始生成 2101-Temu全托管KA 202605 财务报表
+2026-06-17 16:03:37,769 | INFO | financial_report | 
+正在处理 美区 销售收入...
+2026-06-17 16:03:37,800 | INFO | financial_report |   美区 - 订单金额: 2386.11, 非商责补贴: 92.06, 平台退款: -118.64
+2026-06-17 16:03:37,800 | INFO | financial_report | 
+正在处理 欧区 销售收入...
+2026-06-17 16:03:38,004 | INFO | financial_report |   欧区 - 订单金额: 11087.50, 非商责补贴: 587.07, 平台退款: -671.77
+2026-06-17 16:03:38,004 | INFO | financial_report | 
+正在处理 全球 销售收入...
+2026-06-17 16:03:38,144 | INFO | financial_report |   全球 - 订单金额: 19834.46, 非商责补贴: 453.65, 平台退款: -938.91
+2026-06-17 16:03:38,145 | INFO | financial_report | 
+销售收入总计: 32711.53
+2026-06-17 16:03:38,145 | INFO | financial_report | 
+正在加载成本映射表...
+2026-06-17 16:03:38,146 | INFO | financial_report | 
+正在处理 美区 订单成本...
+2026-06-17 16:03:38,185 | INFO | financial_report |   匹配成功 212 条，未匹配 0 条
+2026-06-17 16:03:38,185 | INFO | financial_report |   美区 订单成本: 1876.02
+2026-06-17 16:03:38,185 | INFO | financial_report | 
+正在处理 欧区 订单成本...
+2026-06-17 16:03:38,461 | INFO | financial_report |   匹配成功 1637 条，未匹配 0 条
+2026-06-17 16:03:38,461 | INFO | financial_report |   欧区 订单成本: 7464.73
+2026-06-17 16:03:38,461 | INFO | financial_report | 
+正在处理 全球 订单成本...
+2026-06-17 16:03:38,686 | INFO | financial_report |   匹配成功 1310 条，未匹配 0 条
+2026-06-17 16:03:38,687 | INFO | financial_report |   全球 订单成本: 14212.05
+2026-06-17 16:03:38,687 | INFO | financial_report | 
+订单成本总计: 23552.81
+2026-06-17 16:03:38,912 | INFO | financial_report | 
+匹配结果已导出到: D:\sd14\Temu_horizon\data\financial\05月份\temu\match_results\2101-Temu全托管KA_订单成本匹配结果_05.xlsx
+2026-06-17 16:03:38,912 | INFO | financial_report |   总记录数: 3159 条
+2026-06-17 16:03:38,912 | INFO | financial_report |   匹配成功: 3159 条
+2026-06-17 16:03:38,913 | INFO | financial_report |   匹配失败: 0 条
+2026-06-17 16:03:38,913 | INFO | financial_report |   总成本: 23552.81
+2026-06-17 16:03:38,914 | INFO | financial_report | ========== 开始处理店铺 2101-Temu全托管KA 的丢件成本 ==========
+2026-06-17 16:03:38,919 | INFO | financial_report | 共获取 6 个备货单号
+2026-06-17 16:03:39,852 | ERROR | financial_report | [2101-Temu全托管KA] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/mms/venom/api/supplier/purchase/manager/querySubOrderList
+2026-06-17 16:03:39,852 | INFO | financial_report | 2101-Temu全托管KA - 第 1 次登录尝试
+2026-06-17 16:03:43,457 | INFO | financial_report | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '58796', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2865, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 16:03:43,458 | INFO | financial_report | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 58796
+2026-06-17 16:03:44,869 | INFO | financial_report | 2101-Temu全托管KA - 已连接浏览器
+2026-06-17 16:03:45,498 | INFO | financial_report | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2026-06-17 16:03:50,594 | ERROR | financial_report | 2101-Temu全托管KA - 未出现取消按钮，跳过
+2026-06-17 16:03:51,599 | ERROR | financial_report | 2101-Temu全托管KA - 未出现进入按钮，跳过
+2026-06-17 16:03:51,599 | INFO | financial_report | 2101-Temu全托管KA - 登录成功
+2026-06-17 16:03:51,599 | INFO | financial_report | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-06-17 16:03:59,770 | INFO | financial_report | 命中授权方式二：勾选复选框 + 授权登录
+2026-06-17 16:03:59,908 | INFO | financial_report | 已点击授权复选框（UI 容器）
+2026-06-17 16:03:59,948 | INFO | financial_report | 已点击授权登录
+2026-06-17 16:04:09,973 | INFO | financial_report | 授权流程完成
+2026-06-17 16:04:16,002 | INFO | financial_report | 2101-Temu全托管KA - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2101-Temu全托管KA_cookies.json
+2026-06-17 16:04:16,002 | INFO | financial_report | 2101-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2026-06-17 16:04:16,002 | INFO | financial_report | 2101-Temu全托管KA - 登录成功（第 1 次）
+2026-06-17 16:04:16,015 | INFO | financial_report | 2101-Temu全托管KA - 已关闭Playwright连接
+2026-06-17 16:04:17,046 | INFO | financial_report | 2101-Temu全托管KA - 已发送停止浏览器请求
+2026-06-17 16:04:31,018 | INFO | financial_report | 店铺 2101-Temu全托管KA 丢件总价：171.77
+2026-06-17 16:04:31,018 | INFO | financial_report | 开始上传 1 条差异数据到钉钉
+2026-06-17 16:04:31,019 | INFO | financial_report | 准备上传 1 条记录...
+2026-06-17 16:04:31,928 | INFO | financial_report | 
+上传统计:
+2026-06-17 16:04:31,928 | INFO | financial_report | 总记录数: 1
+2026-06-17 16:04:31,928 | INFO | financial_report | 成功数量: 1
+2026-06-17 16:04:31,928 | INFO | financial_report | 失败数量: 0
+2026-06-17 16:04:31,928 | INFO | financial_report | 成功批次: 1
+2026-06-17 16:04:31,928 | INFO | financial_report | 失败批次: 0
+2026-06-17 16:04:31,928 | INFO | financial_report | 
+丢件成本: 171.77
+2026-06-17 16:04:31,929 | INFO | financial_report | 
+正在处理卖家中心表: 2101-Temu全托管KA_05_卖家中心.xlsx
+2026-06-17 16:04:32,025 | INFO | financial_report | 
+平台费用计算结果：
+2026-06-17 16:04:32,025 | INFO | financial_report |   平台罚款-售后: 968.12
+2026-06-17 16:04:32,025 | INFO | financial_report |   平台仓储费: 512.35
+2026-06-17 16:04:32,025 | INFO | financial_report |   EPR环保费: 12.69
+2026-06-17 16:04:32,025 | INFO | financial_report |   平台罚款: 0.00
+2026-06-17 16:04:32,025 | INFO | financial_report |   广告服务费: 413.56
+2026-06-17 16:04:32,027 | WARNING | financial_report | 没有日常记账数据
+2026-06-17 16:04:32,027 | INFO | financial_report | 财务报表生成完成

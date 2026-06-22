@@ -1,0 +1,708 @@
+2026-06-17 12:11:32,520 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：2106-Temu全托管
+2026-06-17 12:11:32,681 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2026-06-17 12:11:32,737 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:11:34,748 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:11:34,748 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:11:34,749 | WARNING | temu_risk_daily_job | [2106-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:11:34,750 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:11:38,926 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '60402', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 3717, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:11:38,927 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 60402
+2026-06-17 12:11:41,013 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-17 12:11:41,894 | INFO | temu_risk_daily_job | --------------------2106-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:11:48,120 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:11:48,151 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已点击进入
+2026-06-17 12:11:48,151 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 登录成功
+2026-06-17 12:11:48,152 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:11:57,692 | INFO | temu_risk_daily_job | 2106-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2106-Temu全托管_cookies.json
+2026-06-17 12:11:57,692 | INFO | temu_risk_daily_job | 2106-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:11:57,692 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:11:57,714 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:11:58,897 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:12:01,922 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:12:02,039 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2026-06-17 12:12:02,089 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:12:05,978 | INFO | temu_risk_daily_job | [保存] 2106-Temu全托管 | goods_refund_cost 金额=31.81-----保存成功
+2026-06-17 12:12:07,576 | INFO | temu_risk_daily_job | [保存] 2106-Temu全托管 | delivery_by_jit 金额=129.01-----保存成功
+2026-06-17 12:12:08,759 | INFO | temu_risk_daily_job | [保存] 2106-Temu全托管 | france_epr 金额=20.00-----保存成功
+2026-06-17 12:12:09,922 | INFO | temu_risk_daily_job | [保存] 2106-Temu全托管 | epr_logistics_packaging_fee 金额=19.38-----保存成功
+2026-06-17 12:12:10,984 | INFO | temu_risk_daily_job | [跳过] 2106-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:12:12,207 | INFO | temu_risk_daily_job | [保存] 2106-Temu全托管 | order_after_sales_issue_fully 金额=270.05-----保存成功
+2026-06-17 12:12:12,207 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：2103-Temu全托管
+2026-06-17 12:12:12,333 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2103-Temu全托管-------------的数据
+2026-06-17 12:12:12,387 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:12:13,362 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:12:13,362 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:12:13,363 | WARNING | temu_risk_daily_job | [2103-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:12:13,363 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:12:17,029 | INFO | temu_risk_daily_job | 2103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cdgoddilnfionjljedagnobpdkhcnpii', 'browserID': 99890331, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '60567', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2103店（113店改）+2108店+半托6号店+半托8号店', 'duplicate': 3290, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99890331, 'containerCode': '1006903311', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:12:17,030 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 浏览器启动成功, 调试端口: 60567
+2026-06-17 12:12:18,706 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 已连接浏览器
+2026-06-17 12:12:19,306 | INFO | temu_risk_daily_job | --------------------2103-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:12:25,220 | ERROR | temu_risk_daily_job | 2103-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:12:25,251 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 已点击进入
+2026-06-17 12:12:25,251 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 登录成功
+2026-06-17 12:12:25,251 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:12:35,296 | INFO | temu_risk_daily_job | 2103-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2103-Temu全托管_cookies.json
+2026-06-17 12:12:35,296 | INFO | temu_risk_daily_job | 2103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:12:35,296 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:12:35,309 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:12:36,366 | INFO | temu_risk_daily_job | 2103-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:12:39,409 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:12:39,525 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2103-Temu全托管-------------的数据
+2026-06-17 12:12:39,574 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:12:41,874 | INFO | temu_risk_daily_job | [保存] 2103-Temu全托管 | goods_refund_cost 金额=5.10-----保存成功
+2026-06-17 12:12:43,374 | INFO | temu_risk_daily_job | [跳过] 2103-Temu全托管 | france_epr 无变化
+2026-06-17 12:12:44,425 | INFO | temu_risk_daily_job | [跳过] 2103-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:12:45,636 | INFO | temu_risk_daily_job | [跳过] 2103-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:12:46,838 | INFO | temu_risk_daily_job | [保存] 2103-Temu全托管 | order_after_sales_issue_fully 金额=24.72-----保存成功
+2026-06-17 12:12:46,838 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：2102-Temu全托管
+2026-06-17 12:12:46,968 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2026-06-17 12:12:47,023 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:12:48,034 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:12:48,034 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:12:48,035 | WARNING | temu_risk_daily_job | [2102-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:12:48,035 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:12:51,528 | INFO | temu_risk_daily_job | 2102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'eeakakjccihhgkahpdohdfhkoheehanb', 'browserID': 102858197, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '60750', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2102店（152店改）', 'duplicate': 3109, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 102858197, 'containerCode': '1036581979', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:12:51,528 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 浏览器启动成功, 调试端口: 60750
+2026-06-17 12:12:53,194 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 已连接浏览器
+2026-06-17 12:12:53,909 | INFO | temu_risk_daily_job | --------------------2102-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:12:58,989 | ERROR | temu_risk_daily_job | 2102-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:12:59,996 | ERROR | temu_risk_daily_job | 2102-Temu全托管 - 未出现进入按钮，跳过
+2026-06-17 12:12:59,996 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 登录成功
+2026-06-17 12:12:59,996 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:13:10,427 | INFO | temu_risk_daily_job | 2102-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2102-Temu全托管_cookies.json
+2026-06-17 12:13:10,428 | INFO | temu_risk_daily_job | 2102-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:13:10,428 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:13:10,447 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:13:11,484 | INFO | temu_risk_daily_job | 2102-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:13:14,499 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:13:14,642 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2102-Temu全托管-------------的数据
+2026-06-17 12:13:14,694 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:13:17,975 | INFO | temu_risk_daily_job | [跳过] 2102-Temu全托管 | france_epr 无变化
+2026-06-17 12:13:19,418 | INFO | temu_risk_daily_job | [跳过] 2102-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:13:20,471 | INFO | temu_risk_daily_job | [跳过] 2102-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:13:21,621 | INFO | temu_risk_daily_job | [跳过] 2102-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:13:22,675 | INFO | temu_risk_daily_job | [跳过] 2102-Temu全托管 | order_after_sales_issue_fully 无变化
+2026-06-17 12:13:22,675 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：2101-Temu全托管KA
+2026-06-17 12:13:22,807 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2026-06-17 12:13:22,862 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:13:23,830 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:13:23,831 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:13:23,832 | WARNING | temu_risk_daily_job | [2101-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2026-06-17 12:13:23,832 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 第 1 次登录尝试
+2026-06-17 12:13:27,155 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'akgomnfmbbjjcajjhhilppefdmokndpj', 'browserID': 104355104, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '60936', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2101号店（111店改）', 'duplicate': 2898, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104355104, 'containerCode': '1051551049', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:13:27,156 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 浏览器启动成功, 调试端口: 60936
+2026-06-17 12:13:28,930 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 已连接浏览器
+2026-06-17 12:13:29,884 | INFO | temu_risk_daily_job | --------------------2101-Temu全托管KA ------------------------ 开始登录...
+2026-06-17 12:13:36,259 | ERROR | temu_risk_daily_job | 2101-Temu全托管KA - 未出现取消按钮，跳过
+2026-06-17 12:13:36,284 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 已点击进入
+2026-06-17 12:13:36,284 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 登录成功
+2026-06-17 12:13:36,284 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-06-17 12:13:48,773 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\2101-Temu全托管KA_cookies.json
+2026-06-17 12:13:48,773 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:13:48,773 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 登录成功（第 1 次）
+2026-06-17 12:13:48,787 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 已关闭Playwright连接
+2026-06-17 12:13:49,879 | INFO | temu_risk_daily_job | 2101-Temu全托管KA - 已发送停止浏览器请求
+2026-06-17 12:13:52,919 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:13:53,050 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2101-Temu全托管KA-------------的数据
+2026-06-17 12:13:53,097 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:13:55,536 | INFO | temu_risk_daily_job | [保存] 2101-Temu全托管KA | goods_refund_cost 金额=87.57-----保存成功
+2026-06-17 12:13:56,677 | INFO | temu_risk_daily_job | [保存] 2101-Temu全托管KA | delivery_by_jit 金额=462.66-----保存成功
+2026-06-17 12:13:57,843 | INFO | temu_risk_daily_job | [保存] 2101-Temu全托管KA | france_epr 金额=468.64-----保存成功
+2026-06-17 12:13:59,407 | INFO | temu_risk_daily_job | [跳过] 2101-Temu全托管KA | epr_logistics_packaging_fee 无变化
+2026-06-17 12:14:00,569 | INFO | temu_risk_daily_job | [跳过] 2101-Temu全托管KA | epr_platform_service_fee 无变化
+2026-06-17 12:14:02,078 | INFO | temu_risk_daily_job | [跳过] 2101-Temu全托管KA | advertising_expenses 无变化
+2026-06-17 12:14:03,562 | INFO | temu_risk_daily_job | [跳过] 2101-Temu全托管KA | quality_assurance_issues 无变化
+2026-06-17 12:14:04,633 | INFO | temu_risk_daily_job | [跳过] 2101-Temu全托管KA | epr_authorization_agent_fee 无变化
+2026-06-17 12:14:05,858 | INFO | temu_risk_daily_job | [保存] 2101-Temu全托管KA | order_after_sales_issue_fully 金额=637.62-----保存成功
+2026-06-17 12:14:05,858 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：112-Temu全托管
+2026-06-17 12:14:05,972 | INFO | temu_risk_daily_job | 正在爬取店铺---------------112-Temu全托管-------------的数据
+2026-06-17 12:14:06,019 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:14:07,004 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:14:07,004 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:14:07,005 | WARNING | temu_risk_daily_job | [112-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:14:07,005 | INFO | temu_risk_daily_job | 112-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:14:10,425 | INFO | temu_risk_daily_job | 112-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'deogjmiglmamcbonclpnbppbclfgkgpg', 'browserID': 99848624, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '61137', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托112店', 'duplicate': 2999, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 99848624, 'containerCode': '1006486242', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:14:10,426 | INFO | temu_risk_daily_job | 112-Temu全托管 - 浏览器启动成功, 调试端口: 61137
+2026-06-17 12:14:12,121 | INFO | temu_risk_daily_job | 112-Temu全托管 - 已连接浏览器
+2026-06-17 12:14:12,687 | INFO | temu_risk_daily_job | --------------------112-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:14:19,079 | ERROR | temu_risk_daily_job | 112-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:14:19,103 | INFO | temu_risk_daily_job | 112-Temu全托管 - 已点击进入
+2026-06-17 12:14:19,103 | INFO | temu_risk_daily_job | 112-Temu全托管 - 登录成功
+2026-06-17 12:14:19,104 | INFO | temu_risk_daily_job | 112-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:14:31,223 | INFO | temu_risk_daily_job | 112-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\112-Temu全托管_cookies.json
+2026-06-17 12:14:31,224 | INFO | temu_risk_daily_job | 112-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:14:31,224 | INFO | temu_risk_daily_job | 112-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:14:31,244 | INFO | temu_risk_daily_job | 112-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:14:32,252 | INFO | temu_risk_daily_job | 112-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:14:35,282 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:14:35,414 | INFO | temu_risk_daily_job | 正在爬取店铺---------------112-Temu全托管-------------的数据
+2026-06-17 12:14:35,469 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:14:37,863 | INFO | temu_risk_daily_job | [跳过] 112-Temu全托管 | france_epr 无变化
+2026-06-17 12:14:38,922 | INFO | temu_risk_daily_job | [跳过] 112-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:14:40,377 | INFO | temu_risk_daily_job | [跳过] 112-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:14:41,437 | INFO | temu_risk_daily_job | [跳过] 112-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:14:42,539 | INFO | temu_risk_daily_job | [跳过] 112-Temu全托管 | order_after_sales_issue_fully 无变化
+2026-06-17 12:14:42,540 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1108-Temu全托管
+2026-06-17 12:14:42,670 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2026-06-17 12:14:42,725 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:14:43,694 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:14:43,694 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:14:43,695 | WARNING | temu_risk_daily_job | [1108-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:14:43,695 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:14:47,066 | INFO | temu_risk_daily_job | 1108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'oielegjolaoigkjpcikbcbepjdojkkja', 'browserID': 122453019, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '61325', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1108号店', 'duplicate': 2993, 'ip': '1.194.218.235', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122453019, 'containerCode': '1232530196', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:14:47,067 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 浏览器启动成功, 调试端口: 61325
+2026-06-17 12:14:48,816 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 已连接浏览器
+2026-06-17 12:14:49,631 | INFO | temu_risk_daily_job | --------------------1108-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:14:54,175 | ERROR | temu_risk_daily_job | 1108-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:14:54,202 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 已点击进入
+2026-06-17 12:14:54,202 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 登录成功
+2026-06-17 12:14:54,202 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:15:04,935 | INFO | temu_risk_daily_job | 1108-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1108-Temu全托管_cookies.json
+2026-06-17 12:15:04,935 | INFO | temu_risk_daily_job | 1108-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:15:04,936 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:15:04,956 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:15:05,980 | INFO | temu_risk_daily_job | 1108-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:15:09,143 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:15:09,267 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1108-Temu全托管-------------的数据
+2026-06-17 12:15:09,319 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:15:11,568 | INFO | temu_risk_daily_job | [保存] 1108-Temu全托管 | delivery_by_jit 金额=169.65-----保存成功
+2026-06-17 12:15:12,638 | INFO | temu_risk_daily_job | [跳过] 1108-Temu全托管 | goods_poor_quality 无变化
+2026-06-17 12:15:13,729 | INFO | temu_risk_daily_job | [跳过] 1108-Temu全托管 | france_epr 无变化
+2026-06-17 12:15:15,202 | INFO | temu_risk_daily_job | [跳过] 1108-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:15:16,693 | INFO | temu_risk_daily_job | [保存] 1108-Temu全托管 | order_after_sales_issue_fully 金额=80.04-----保存成功
+2026-06-17 12:15:16,693 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1107-Temu全托管
+2026-06-17 12:15:16,829 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2026-06-17 12:15:16,887 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:15:17,857 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:15:17,858 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:15:17,859 | WARNING | temu_risk_daily_job | [1107-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:15:17,859 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:15:21,160 | INFO | temu_risk_daily_job | 1107-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hmfimlmiknlbeifbaabjgkfnhkaiijaf', 'browserID': 122452738, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '61524', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1107号店', 'duplicate': 2917, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122452738, 'containerCode': '1232527381', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:15:21,161 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 浏览器启动成功, 调试端口: 61524
+2026-06-17 12:15:22,907 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 已连接浏览器
+2026-06-17 12:15:23,554 | INFO | temu_risk_daily_job | --------------------1107-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:15:28,154 | ERROR | temu_risk_daily_job | 1107-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:15:28,202 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 已点击进入
+2026-06-17 12:15:28,202 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 登录成功
+2026-06-17 12:15:28,202 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:15:37,050 | INFO | temu_risk_daily_job | 1107-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1107-Temu全托管_cookies.json
+2026-06-17 12:15:37,050 | INFO | temu_risk_daily_job | 1107-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:15:37,050 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:15:37,063 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:15:38,225 | INFO | temu_risk_daily_job | 1107-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:15:41,234 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:15:41,359 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1107-Temu全托管-------------的数据
+2026-06-17 12:15:41,411 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:15:43,635 | INFO | temu_risk_daily_job | [跳过] 1107-Temu全托管 | goods_refund_cost 无变化
+2026-06-17 12:15:44,776 | INFO | temu_risk_daily_job | [保存] 1107-Temu全托管 | delivery_by_jit 金额=121.49-----保存成功
+2026-06-17 12:15:46,092 | INFO | temu_risk_daily_job | [跳过] 1107-Temu全托管 | france_epr 无变化
+2026-06-17 12:15:47,148 | INFO | temu_risk_daily_job | [跳过] 1107-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:15:48,641 | INFO | temu_risk_daily_job | [跳过] 1107-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:15:49,845 | INFO | temu_risk_daily_job | [保存] 1107-Temu全托管 | order_after_sales_issue_fully 金额=126.82-----保存成功
+2026-06-17 12:15:49,845 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1106-Temu全托管
+2026-06-17 12:15:49,967 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2026-06-17 12:15:50,018 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:15:51,134 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:15:51,250 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1106-Temu全托管-------------的数据
+2026-06-17 12:15:51,298 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:15:53,649 | INFO | temu_risk_daily_job | [跳过] 1106-Temu全托管 | france_epr 无变化
+2026-06-17 12:15:55,096 | INFO | temu_risk_daily_job | [跳过] 1106-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:15:56,157 | INFO | temu_risk_daily_job | [跳过] 1106-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:15:57,219 | INFO | temu_risk_daily_job | [跳过] 1106-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:15:58,403 | INFO | temu_risk_daily_job | [保存] 1106-Temu全托管 | order_after_sales_issue_fully 金额=6.07-----保存成功
+2026-06-17 12:15:58,404 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1105-Temu全托管
+2026-06-17 12:15:58,528 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1105-Temu全托管-------------的数据
+2026-06-17 12:15:58,579 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:15:59,558 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:15:59,559 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:15:59,560 | WARNING | temu_risk_daily_job | [1105-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:15:59,560 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:16:03,498 | INFO | temu_risk_daily_job | 1105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hedbcddcbnkifhfapobljhpmnkknmeci', 'browserID': 109977447, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '61742', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1105店', 'duplicate': 3390, 'ip': '218.78.129.86', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 109977447, 'containerCode': '1107774478', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:16:03,499 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 浏览器启动成功, 调试端口: 61742
+2026-06-17 12:16:05,166 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 已连接浏览器
+2026-06-17 12:16:05,699 | INFO | temu_risk_daily_job | --------------------1105-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:16:11,489 | ERROR | temu_risk_daily_job | 1105-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:16:11,525 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 已点击进入
+2026-06-17 12:16:11,525 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 登录成功
+2026-06-17 12:16:11,527 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:16:19,832 | INFO | temu_risk_daily_job | 1105-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1105-Temu全托管_cookies.json
+2026-06-17 12:16:19,833 | INFO | temu_risk_daily_job | 1105-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:16:19,833 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:16:19,850 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:16:20,973 | INFO | temu_risk_daily_job | 1105-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:16:24,010 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:16:24,160 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1105-Temu全托管-------------的数据
+2026-06-17 12:16:24,217 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:16:26,531 | INFO | temu_risk_daily_job | [保存] 1105-Temu全托管 | goods_refund_cost 金额=18.54-----保存成功
+2026-06-17 12:16:27,684 | INFO | temu_risk_daily_job | [保存] 1105-Temu全托管 | delivery_by_jit 金额=121.97-----保存成功
+2026-06-17 12:16:28,850 | INFO | temu_risk_daily_job | [保存] 1105-Temu全托管 | france_epr 金额=547.33-----保存成功
+2026-06-17 12:16:30,023 | INFO | temu_risk_daily_job | [保存] 1105-Temu全托管 | epr_logistics_packaging_fee 金额=148.33-----保存成功
+2026-06-17 12:16:31,331 | INFO | temu_risk_daily_job | [跳过] 1105-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:16:32,386 | INFO | temu_risk_daily_job | [跳过] 1105-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:16:33,550 | INFO | temu_risk_daily_job | [保存] 1105-Temu全托管 | order_after_sales_issue_fully 金额=272.55-----保存成功
+2026-06-17 12:16:33,551 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1104-Temu全托管
+2026-06-17 12:16:33,678 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1104-Temu全托管-------------的数据
+2026-06-17 12:16:33,730 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:16:34,709 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:16:34,709 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:16:34,710 | WARNING | temu_risk_daily_job | [1104-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:16:34,711 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:16:38,236 | INFO | temu_risk_daily_job | 1104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ifmneobocilkpmpjmkahbfnpccjajnbm', 'browserID': 100261239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '61920', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1104店', 'duplicate': 3082, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261239, 'containerCode': '1010612394', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:16:38,236 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 浏览器启动成功, 调试端口: 61920
+2026-06-17 12:16:39,816 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 已连接浏览器
+2026-06-17 12:16:40,352 | INFO | temu_risk_daily_job | --------------------1104-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:16:46,180 | ERROR | temu_risk_daily_job | 1104-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:16:47,194 | ERROR | temu_risk_daily_job | 1104-Temu全托管 - 未出现进入按钮，跳过
+2026-06-17 12:16:47,194 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 登录成功
+2026-06-17 12:16:47,195 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:16:58,178 | INFO | temu_risk_daily_job | 1104-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1104-Temu全托管_cookies.json
+2026-06-17 12:16:58,179 | INFO | temu_risk_daily_job | 1104-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:16:58,179 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:16:58,197 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:16:59,325 | INFO | temu_risk_daily_job | 1104-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:17:02,464 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:17:02,589 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1104-Temu全托管-------------的数据
+2026-06-17 12:17:02,640 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:17:04,901 | INFO | temu_risk_daily_job | [保存] 1104-Temu全托管 | goods_refund_cost 金额=32.44-----保存成功
+2026-06-17 12:17:06,048 | INFO | temu_risk_daily_job | [保存] 1104-Temu全托管 | delivery_by_jit 金额=91.22-----保存成功
+2026-06-17 12:17:07,124 | INFO | temu_risk_daily_job | [跳过] 1104-Temu全托管 | france_epr 无变化
+2026-06-17 12:17:08,211 | INFO | temu_risk_daily_job | [跳过] 1104-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:17:09,258 | INFO | temu_risk_daily_job | [跳过] 1104-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:17:10,587 | INFO | temu_risk_daily_job | [跳过] 1104-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:17:11,800 | INFO | temu_risk_daily_job | [保存] 1104-Temu全托管 | order_after_sales_issue_fully 金额=176.47-----保存成功
+2026-06-17 12:17:11,801 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1103-Temu全托管
+2026-06-17 12:17:11,931 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1103-Temu全托管-------------的数据
+2026-06-17 12:17:11,985 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:17:12,979 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:17:12,980 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:17:12,981 | WARNING | temu_risk_daily_job | [1103-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:17:12,981 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:17:16,212 | INFO | temu_risk_daily_job | 1103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jpdodpkjmnaoinfefchdgfomfncffgoc', 'browserID': 100261119, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62100', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1103店-子账号', 'duplicate': 2773, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261119, 'containerCode': '1010611195', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:17:16,213 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 浏览器启动成功, 调试端口: 62100
+2026-06-17 12:17:17,793 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 已连接浏览器
+2026-06-17 12:17:18,465 | INFO | temu_risk_daily_job | --------------------1103-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:17:23,439 | ERROR | temu_risk_daily_job | 1103-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:17:24,453 | ERROR | temu_risk_daily_job | 1103-Temu全托管 - 未出现进入按钮，跳过
+2026-06-17 12:17:24,454 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 登录成功
+2026-06-17 12:17:24,454 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:17:34,483 | INFO | temu_risk_daily_job | 1103-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1103-Temu全托管_cookies.json
+2026-06-17 12:17:34,483 | INFO | temu_risk_daily_job | 1103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:17:34,483 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:17:34,496 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:17:35,647 | INFO | temu_risk_daily_job | 1103-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:17:38,568 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:17:38,693 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1103-Temu全托管-------------的数据
+2026-06-17 12:17:38,745 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:17:40,836 | INFO | temu_risk_daily_job | [保存] 1103-Temu全托管 | delivery_by_jit 金额=32.58-----保存成功
+2026-06-17 12:17:41,803 | INFO | temu_risk_daily_job | [跳过] 1103-Temu全托管 | france_epr 无变化
+2026-06-17 12:17:42,778 | INFO | temu_risk_daily_job | [跳过] 1103-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:17:44,135 | INFO | temu_risk_daily_job | [跳过] 1103-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:17:45,094 | INFO | temu_risk_daily_job | [跳过] 1103-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:17:47,522 | INFO | temu_risk_daily_job | [保存] 1103-Temu全托管 | order_after_sales_issue_fully 金额=217.49-----保存成功
+2026-06-17 12:17:47,522 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1102-Temu全托管
+2026-06-17 12:17:47,662 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1102-Temu全托管-------------的数据
+2026-06-17 12:17:47,715 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:17:48,582 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:17:48,582 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:17:48,583 | WARNING | temu_risk_daily_job | [1102-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:17:48,584 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:17:52,084 | INFO | temu_risk_daily_job | 1102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jelnoidfmcaagnefijmbgjihdibffamo', 'browserID': 100123686, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62284', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1102店', 'duplicate': 3021, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100123686, 'containerCode': '1009236863', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:17:52,084 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 浏览器启动成功, 调试端口: 62284
+2026-06-17 12:17:53,668 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 已连接浏览器
+2026-06-17 12:17:54,245 | INFO | temu_risk_daily_job | --------------------1102-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:18:00,098 | ERROR | temu_risk_daily_job | 1102-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:18:00,118 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 已点击进入
+2026-06-17 12:18:00,118 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 登录成功
+2026-06-17 12:18:00,119 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:18:09,843 | INFO | temu_risk_daily_job | 1102-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1102-Temu全托管_cookies.json
+2026-06-17 12:18:09,843 | INFO | temu_risk_daily_job | 1102-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:18:09,844 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:18:09,860 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:18:10,982 | INFO | temu_risk_daily_job | 1102-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:18:13,888 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:18:14,024 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1102-Temu全托管-------------的数据
+2026-06-17 12:18:14,081 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:18:16,466 | INFO | temu_risk_daily_job | [保存] 1102-Temu全托管 | goods_refund_cost 金额=21.00-----保存成功
+2026-06-17 12:18:17,397 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | goods_poor_quality 无变化
+2026-06-17 12:18:18,420 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | after_sales_5x_fine 无变化
+2026-06-17 12:18:19,407 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | france_epr 无变化
+2026-06-17 12:18:20,451 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:18:21,402 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:18:22,374 | INFO | temu_risk_daily_job | [跳过] 1102-Temu全托管 | order_after_sales_issue_fully 无变化
+2026-06-17 12:18:22,374 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：1101-Temu全托管
+2026-06-17 12:18:22,511 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1101-Temu全托管-------------的数据
+2026-06-17 12:18:22,568 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:18:23,531 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:18:23,531 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:18:23,532 | WARNING | temu_risk_daily_job | [1101-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:18:23,532 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:18:26,902 | INFO | temu_risk_daily_job | 1101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ckhldkgdmajoifldkandjekhofbghdfh', 'browserID': 100260927, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62466', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1101店', 'duplicate': 2878, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100260927, 'containerCode': '1010609275', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:18:26,903 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 浏览器启动成功, 调试端口: 62466
+2026-06-17 12:18:28,470 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 已连接浏览器
+2026-06-17 12:18:29,100 | INFO | temu_risk_daily_job | --------------------1101-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:18:35,175 | ERROR | temu_risk_daily_job | 1101-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:18:35,205 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 已点击进入
+2026-06-17 12:18:35,205 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 登录成功
+2026-06-17 12:18:35,206 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:18:43,269 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:18:43,335 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:18:49,496 | INFO | temu_risk_daily_job | 1101-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1101-Temu全托管_cookies.json
+2026-06-17 12:18:49,496 | INFO | temu_risk_daily_job | 1101-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:18:49,496 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:18:49,509 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:18:50,663 | INFO | temu_risk_daily_job | 1101-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:18:53,682 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:18:53,813 | INFO | temu_risk_daily_job | 正在爬取店铺---------------1101-Temu全托管-------------的数据
+2026-06-17 12:18:53,868 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:18:56,188 | INFO | temu_risk_daily_job | [跳过] 1101-Temu全托管 | goods_refund_cost 无变化
+2026-06-17 12:18:57,331 | INFO | temu_risk_daily_job | [保存] 1101-Temu全托管 | delivery_by_jit 金额=84.13-----保存成功
+2026-06-17 12:18:58,883 | INFO | temu_risk_daily_job | [保存] 1101-Temu全托管 | france_epr 金额=376.76-----保存成功
+2026-06-17 12:19:00,078 | INFO | temu_risk_daily_job | [保存] 1101-Temu全托管 | epr_logistics_packaging_fee 金额=91.17-----保存成功
+2026-06-17 12:19:01,410 | INFO | temu_risk_daily_job | [跳过] 1101-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:19:02,458 | INFO | temu_risk_daily_job | [跳过] 1101-Temu全托管 | advertising_expenses 无变化
+2026-06-17 12:19:03,814 | INFO | temu_risk_daily_job | [跳过] 1101-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:19:05,085 | INFO | temu_risk_daily_job | [保存] 1101-Temu全托管 | order_after_sales_issue_fully 金额=148.17-----保存成功
+2026-06-17 12:19:05,085 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：110-Temu全托管KA
+2026-06-17 12:19:05,217 | INFO | temu_risk_daily_job | 正在爬取店铺---------------110-Temu全托管KA-------------的数据
+2026-06-17 12:19:05,273 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:19:06,252 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:19:06,252 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:19:06,253 | WARNING | temu_risk_daily_job | [110-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2026-06-17 12:19:06,254 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 第 1 次登录尝试
+2026-06-17 12:19:09,862 | INFO | temu_risk_daily_job | 110-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'komlifcoekddpkbgnlkbhoknnkcniofa', 'browserID': 104353651, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62671', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托110号店+半托7号店', 'duplicate': 3150, 'ip': '121.14.201.248', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104353651, 'containerCode': '1051536511', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:19:09,863 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 浏览器启动成功, 调试端口: 62671
+2026-06-17 12:19:11,448 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 已连接浏览器
+2026-06-17 12:19:12,024 | INFO | temu_risk_daily_job | --------------------110-Temu全托管KA ------------------------ 开始登录...
+2026-06-17 12:19:18,099 | ERROR | temu_risk_daily_job | 110-Temu全托管KA - 未出现取消按钮，跳过
+2026-06-17 12:19:18,161 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 已点击进入
+2026-06-17 12:19:18,162 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 登录成功
+2026-06-17 12:19:18,163 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-06-17 12:19:26,522 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:19:26,602 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:19:33,461 | INFO | temu_risk_daily_job | 110-Temu全托管KA - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\110-Temu全托管KA_cookies.json
+2026-06-17 12:19:33,461 | INFO | temu_risk_daily_job | 110-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:19:33,461 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 登录成功（第 1 次）
+2026-06-17 12:19:33,475 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 已关闭Playwright连接
+2026-06-17 12:19:34,564 | INFO | temu_risk_daily_job | 110-Temu全托管KA - 已发送停止浏览器请求
+2026-06-17 12:19:37,597 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:19:37,739 | INFO | temu_risk_daily_job | 正在爬取店铺---------------110-Temu全托管KA-------------的数据
+2026-06-17 12:19:37,799 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:19:40,167 | INFO | temu_risk_daily_job | [保存] 110-Temu全托管KA | goods_refund_cost 金额=120.48-----保存成功
+2026-06-17 12:19:41,419 | INFO | temu_risk_daily_job | [保存] 110-Temu全托管KA | delivery_by_jit 金额=459.42-----保存成功
+2026-06-17 12:19:42,459 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | goods_poor_quality 无变化
+2026-06-17 12:19:43,630 | INFO | temu_risk_daily_job | [保存] 110-Temu全托管KA | france_epr 金额=1271.43-----保存成功
+2026-06-17 12:19:44,686 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | epr_logistics_packaging_fee 无变化
+2026-06-17 12:19:46,825 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | mall_compliance_risk 无变化
+2026-06-17 12:19:47,875 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | epr_platform_service_fee 无变化
+2026-06-17 12:19:48,918 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | advertising_expenses 无变化
+2026-06-17 12:19:49,955 | INFO | temu_risk_daily_job | [跳过] 110-Temu全托管KA | epr_authorization_agent_fee 无变化
+2026-06-17 12:19:51,242 | INFO | temu_risk_daily_job | [保存] 110-Temu全托管KA | order_after_sales_issue_fully 金额=322.23-----保存成功
+2026-06-17 12:19:51,242 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：109-Temu全托管KA
+2026-06-17 12:19:51,371 | INFO | temu_risk_daily_job | 正在爬取店铺---------------109-Temu全托管KA-------------的数据
+2026-06-17 12:19:51,424 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:19:53,422 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:19:53,422 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:19:53,423 | WARNING | temu_risk_daily_job | [109-Temu全托管KA] cookie 失效，开始自动刷新登录态
+2026-06-17 12:19:53,423 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 第 1 次登录尝试
+2026-06-17 12:19:57,098 | INFO | temu_risk_daily_job | 109-Temu全托管KA - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ohiahjpnifkljncpockjijkdiohieojm', 'browserID': 104329439, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62882', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托109+半托3号-Geeray', 'duplicate': 3168, 'ip': '124.236.76.149', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104329439, 'containerCode': '1051294393', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:19:57,098 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 浏览器启动成功, 调试端口: 62882
+2026-06-17 12:19:58,681 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 已连接浏览器
+2026-06-17 12:19:59,529 | INFO | temu_risk_daily_job | --------------------109-Temu全托管KA ------------------------ 开始登录...
+2026-06-17 12:20:05,334 | ERROR | temu_risk_daily_job | 109-Temu全托管KA - 未出现取消按钮，跳过
+2026-06-17 12:20:06,346 | ERROR | temu_risk_daily_job | 109-Temu全托管KA - 未出现进入按钮，跳过
+2026-06-17 12:20:06,347 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 登录成功
+2026-06-17 12:20:06,347 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 等待 agentseller Cookie 生效
+2026-06-17 12:20:18,926 | INFO | temu_risk_daily_job | 109-Temu全托管KA - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\109-Temu全托管KA_cookies.json
+2026-06-17 12:20:18,926 | INFO | temu_risk_daily_job | 109-Temu全托管KA - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:20:18,927 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 登录成功（第 1 次）
+2026-06-17 12:20:18,944 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 已关闭Playwright连接
+2026-06-17 12:20:20,194 | INFO | temu_risk_daily_job | 109-Temu全托管KA - 已发送停止浏览器请求
+2026-06-17 12:20:23,244 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:20:23,396 | INFO | temu_risk_daily_job | 正在爬取店铺---------------109-Temu全托管KA-------------的数据
+2026-06-17 12:20:23,454 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:20:25,800 | INFO | temu_risk_daily_job | [保存] 109-Temu全托管KA | goods_refund_cost 金额=20.79-----保存成功
+2026-06-17 12:20:26,933 | INFO | temu_risk_daily_job | [保存] 109-Temu全托管KA | delivery_by_jit 金额=314.19-----保存成功
+2026-06-17 12:20:27,999 | INFO | temu_risk_daily_job | [跳过] 109-Temu全托管KA | goods_poor_quality 无变化
+2026-06-17 12:20:29,279 | INFO | temu_risk_daily_job | [跳过] 109-Temu全托管KA | france_epr 无变化
+2026-06-17 12:20:30,347 | INFO | temu_risk_daily_job | [跳过] 109-Temu全托管KA | epr_logistics_packaging_fee 无变化
+2026-06-17 12:20:31,848 | INFO | temu_risk_daily_job | [跳过] 109-Temu全托管KA | epr_platform_service_fee 无变化
+2026-06-17 12:20:32,913 | INFO | temu_risk_daily_job | [跳过] 109-Temu全托管KA | review_subsidy_reserve 无变化
+2026-06-17 12:20:34,164 | INFO | temu_risk_daily_job | [保存] 109-Temu全托管KA | order_after_sales_issue_fully 金额=220.11-----保存成功
+2026-06-17 12:20:34,164 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：108-Temu全托管
+2026-06-17 12:20:34,295 | INFO | temu_risk_daily_job | 正在爬取店铺---------------108-Temu全托管-------------的数据
+2026-06-17 12:20:34,349 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:20:35,344 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:20:35,344 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:20:35,345 | WARNING | temu_risk_daily_job | [108-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:20:35,345 | INFO | temu_risk_daily_job | 108-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:20:39,312 | INFO | temu_risk_daily_job | 108-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'gobiecapkllflcacpgecmdakhoffglne', 'browserID': 104562169, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '63070', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托108店-YYDeeK BO子账号', 'duplicate': 3183, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104562169, 'containerCode': '1053621692', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:20:39,313 | INFO | temu_risk_daily_job | 108-Temu全托管 - 浏览器启动成功, 调试端口: 63070
+2026-06-17 12:20:40,895 | INFO | temu_risk_daily_job | 108-Temu全托管 - 已连接浏览器
+2026-06-17 12:20:41,437 | INFO | temu_risk_daily_job | --------------------108-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:20:47,151 | ERROR | temu_risk_daily_job | 108-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:20:47,186 | INFO | temu_risk_daily_job | 108-Temu全托管 - 已点击进入
+2026-06-17 12:20:47,186 | INFO | temu_risk_daily_job | 108-Temu全托管 - 登录成功
+2026-06-17 12:20:47,187 | INFO | temu_risk_daily_job | 108-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:20:55,082 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:20:55,166 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:21:01,888 | INFO | temu_risk_daily_job | 108-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\108-Temu全托管_cookies.json
+2026-06-17 12:21:01,888 | INFO | temu_risk_daily_job | 108-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:21:01,888 | INFO | temu_risk_daily_job | 108-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:21:01,904 | INFO | temu_risk_daily_job | 108-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:21:03,045 | INFO | temu_risk_daily_job | 108-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:21:06,103 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:21:06,222 | INFO | temu_risk_daily_job | 正在爬取店铺---------------108-Temu全托管-------------的数据
+2026-06-17 12:21:06,270 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:21:08,585 | INFO | temu_risk_daily_job | [跳过] 108-Temu全托管 | goods_refund_cost 无变化
+2026-06-17 12:21:09,664 | INFO | temu_risk_daily_job | [跳过] 108-Temu全托管 | france_epr 无变化
+2026-06-17 12:21:10,753 | INFO | temu_risk_daily_job | [跳过] 108-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:21:11,830 | INFO | temu_risk_daily_job | [跳过] 108-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:21:12,890 | INFO | temu_risk_daily_job | [跳过] 108-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:21:14,225 | INFO | temu_risk_daily_job | [保存] 108-Temu全托管 | order_after_sales_issue_fully 金额=74.36-----保存成功
+2026-06-17 12:21:14,225 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：106-Temu全托管
+2026-06-17 12:21:14,339 | INFO | temu_risk_daily_job | 正在爬取店铺---------------106-Temu全托管-------------的数据
+2026-06-17 12:21:14,386 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:21:15,378 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:21:15,379 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:21:15,380 | WARNING | temu_risk_daily_job | [106-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:21:15,380 | INFO | temu_risk_daily_job | 106-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:21:19,090 | INFO | temu_risk_daily_job | 106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'pngnekjgjoanofgpkpnjilfmdnlhikjk', 'browserID': 104315998, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '63284', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托106店-BAKAM', 'duplicate': 3227, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104315998, 'containerCode': '1051159982', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:21:19,090 | INFO | temu_risk_daily_job | 106-Temu全托管 - 浏览器启动成功, 调试端口: 63284
+2026-06-17 12:21:20,789 | INFO | temu_risk_daily_job | 106-Temu全托管 - 已连接浏览器
+2026-06-17 12:21:21,315 | INFO | temu_risk_daily_job | --------------------106-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:21:27,171 | ERROR | temu_risk_daily_job | 106-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:21:27,205 | INFO | temu_risk_daily_job | 106-Temu全托管 - 已点击进入
+2026-06-17 12:21:27,205 | INFO | temu_risk_daily_job | 106-Temu全托管 - 登录成功
+2026-06-17 12:21:27,206 | INFO | temu_risk_daily_job | 106-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:21:37,320 | INFO | temu_risk_daily_job | 106-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\106-Temu全托管_cookies.json
+2026-06-17 12:21:37,320 | INFO | temu_risk_daily_job | 106-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:21:37,320 | INFO | temu_risk_daily_job | 106-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:21:37,341 | INFO | temu_risk_daily_job | 106-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:21:38,489 | INFO | temu_risk_daily_job | 106-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:21:41,524 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:21:41,653 | INFO | temu_risk_daily_job | 正在爬取店铺---------------106-Temu全托管-------------的数据
+2026-06-17 12:21:41,707 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:21:43,978 | INFO | temu_risk_daily_job | [保存] 106-Temu全托管 | goods_refund_cost 金额=23.93-----保存成功
+2026-06-17 12:21:45,046 | INFO | temu_risk_daily_job | [跳过] 106-Temu全托管 | delivery_by_jit 无变化
+2026-06-17 12:21:46,388 | INFO | temu_risk_daily_job | [跳过] 106-Temu全托管 | france_epr 无变化
+2026-06-17 12:21:47,491 | INFO | temu_risk_daily_job | [跳过] 106-Temu全托管 | epr_logistics_packaging_fee 无变化
+2026-06-17 12:21:48,689 | INFO | temu_risk_daily_job | [跳过] 106-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:21:50,767 | INFO | temu_risk_daily_job | [跳过] 106-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:21:51,988 | INFO | temu_risk_daily_job | [保存] 106-Temu全托管 | order_after_sales_issue_fully 金额=53.74-----保存成功
+2026-06-17 12:21:51,988 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：105-Temu全托管
+2026-06-17 12:21:52,120 | INFO | temu_risk_daily_job | 正在爬取店铺---------------105-Temu全托管-------------的数据
+2026-06-17 12:21:52,175 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:21:53,156 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:21:53,156 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:21:53,157 | WARNING | temu_risk_daily_job | [105-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:21:53,157 | INFO | temu_risk_daily_job | 105-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:21:56,950 | INFO | temu_risk_daily_job | 105-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'egdlpkdlagfommapeejeoihfohgccfih', 'browserID': 104314256, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '63480', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托105店-UNE LUCIOLE', 'duplicate': 3295, 'ip': '124.225.4.69', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104314256, 'containerCode': '1051142565', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:21:56,950 | INFO | temu_risk_daily_job | 105-Temu全托管 - 浏览器启动成功, 调试端口: 63480
+2026-06-17 12:21:58,624 | INFO | temu_risk_daily_job | 105-Temu全托管 - 已连接浏览器
+2026-06-17 12:21:59,154 | INFO | temu_risk_daily_job | --------------------105-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:22:05,238 | ERROR | temu_risk_daily_job | 105-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:22:05,272 | INFO | temu_risk_daily_job | 105-Temu全托管 - 已点击进入
+2026-06-17 12:22:05,272 | INFO | temu_risk_daily_job | 105-Temu全托管 - 登录成功
+2026-06-17 12:22:05,273 | INFO | temu_risk_daily_job | 105-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:22:13,139 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:22:13,203 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:22:19,533 | INFO | temu_risk_daily_job | 105-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\105-Temu全托管_cookies.json
+2026-06-17 12:22:19,533 | INFO | temu_risk_daily_job | 105-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:22:19,533 | INFO | temu_risk_daily_job | 105-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:22:19,550 | INFO | temu_risk_daily_job | 105-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:22:20,715 | INFO | temu_risk_daily_job | 105-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:22:23,766 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:22:23,905 | INFO | temu_risk_daily_job | 正在爬取店铺---------------105-Temu全托管-------------的数据
+2026-06-17 12:22:23,963 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:22:26,336 | INFO | temu_risk_daily_job | [保存] 105-Temu全托管 | goods_refund_cost 金额=194.07-----保存成功
+2026-06-17 12:22:27,541 | INFO | temu_risk_daily_job | [保存] 105-Temu全托管 | delivery_by_jit 金额=1114.68-----保存成功
+2026-06-17 12:22:28,599 | INFO | temu_risk_daily_job | [跳过] 105-Temu全托管 | goods_poor_quality 无变化
+2026-06-17 12:22:29,786 | INFO | temu_risk_daily_job | [保存] 105-Temu全托管 | france_epr 金额=2276.20-----保存成功
+2026-06-17 12:22:30,991 | INFO | temu_risk_daily_job | [保存] 105-Temu全托管 | epr_logistics_packaging_fee 金额=502.69-----保存成功
+2026-06-17 12:22:34,234 | INFO | temu_risk_daily_job | [跳过] 105-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:22:35,284 | INFO | temu_risk_daily_job | [跳过] 105-Temu全托管 | advertising_expenses 无变化
+2026-06-17 12:22:36,331 | INFO | temu_risk_daily_job | [跳过] 105-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:22:37,800 | INFO | temu_risk_daily_job | [保存] 105-Temu全托管 | order_after_sales_issue_fully 金额=1907.45-----保存成功
+2026-06-17 12:22:37,801 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：104-Temu全托管
+2026-06-17 12:22:37,934 | INFO | temu_risk_daily_job | 正在爬取店铺---------------104-Temu全托管-------------的数据
+2026-06-17 12:22:37,990 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:22:38,966 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:22:38,967 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:22:38,968 | WARNING | temu_risk_daily_job | [104-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:22:38,968 | INFO | temu_risk_daily_job | 104-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:22:42,633 | INFO | temu_risk_daily_job | 104-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'chlkfnmgfghenbeelpneidfjbkpokonp', 'browserID': 104527083, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '63668', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托104店-YYDeeK子账号', 'duplicate': 3175, 'ip': '125.122.156.184', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104527083, 'containerCode': '1053270835', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:22:42,634 | INFO | temu_risk_daily_job | 104-Temu全托管 - 浏览器启动成功, 调试端口: 63668
+2026-06-17 12:22:44,330 | INFO | temu_risk_daily_job | 104-Temu全托管 - 已连接浏览器
+2026-06-17 12:22:44,862 | INFO | temu_risk_daily_job | --------------------104-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:22:51,116 | ERROR | temu_risk_daily_job | 104-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:22:51,152 | INFO | temu_risk_daily_job | 104-Temu全托管 - 已点击进入
+2026-06-17 12:22:51,152 | INFO | temu_risk_daily_job | 104-Temu全托管 - 登录成功
+2026-06-17 12:22:51,153 | INFO | temu_risk_daily_job | 104-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:23:02,211 | INFO | temu_risk_daily_job | 104-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\104-Temu全托管_cookies.json
+2026-06-17 12:23:02,211 | INFO | temu_risk_daily_job | 104-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:23:02,211 | INFO | temu_risk_daily_job | 104-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:23:02,225 | INFO | temu_risk_daily_job | 104-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:23:03,369 | INFO | temu_risk_daily_job | 104-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:23:06,405 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:23:06,532 | INFO | temu_risk_daily_job | 正在爬取店铺---------------104-Temu全托管-------------的数据
+2026-06-17 12:23:06,586 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:23:08,894 | INFO | temu_risk_daily_job | [跳过] 104-Temu全托管 | goods_refund_cost 无变化
+2026-06-17 12:23:10,080 | INFO | temu_risk_daily_job | [保存] 104-Temu全托管 | delivery_by_jit 金额=1158.20-----保存成功
+2026-06-17 12:23:11,261 | INFO | temu_risk_daily_job | [保存] 104-Temu全托管 | france_epr 金额=366.13-----保存成功
+2026-06-17 12:23:12,426 | INFO | temu_risk_daily_job | [保存] 104-Temu全托管 | epr_logistics_packaging_fee 金额=132.45-----保存成功
+2026-06-17 12:23:13,495 | INFO | temu_risk_daily_job | [跳过] 104-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:23:14,540 | INFO | temu_risk_daily_job | [跳过] 104-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:23:15,736 | INFO | temu_risk_daily_job | [保存] 104-Temu全托管 | order_after_sales_issue_fully 金额=405.05-----保存成功
+2026-06-17 12:23:15,736 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：103-Temu全托管
+2026-06-17 12:23:15,858 | INFO | temu_risk_daily_job | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2026-06-17 12:23:16,011 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:23:17,427 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:23:17,427 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:23:17,428 | WARNING | temu_risk_daily_job | [103-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:23:17,429 | INFO | temu_risk_daily_job | 103-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:23:21,171 | INFO | temu_risk_daily_job | 103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'cjlkadfgnhnogfgajjoffajniklimcmh', 'browserID': 104523239, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '63867', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托103店-PBee', 'duplicate': 3262, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104523239, 'containerCode': '1053232390', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:23:21,171 | INFO | temu_risk_daily_job | 103-Temu全托管 - 浏览器启动成功, 调试端口: 63867
+2026-06-17 12:23:22,744 | INFO | temu_risk_daily_job | 103-Temu全托管 - 已连接浏览器
+2026-06-17 12:23:23,276 | INFO | temu_risk_daily_job | --------------------103-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:23:29,127 | ERROR | temu_risk_daily_job | 103-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:23:29,153 | INFO | temu_risk_daily_job | 103-Temu全托管 - 已点击进入
+2026-06-17 12:23:29,154 | INFO | temu_risk_daily_job | 103-Temu全托管 - 登录成功
+2026-06-17 12:23:29,154 | INFO | temu_risk_daily_job | 103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:23:36,947 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:23:37,010 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:23:43,048 | INFO | temu_risk_daily_job | 103-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\103-Temu全托管_cookies.json
+2026-06-17 12:23:43,048 | INFO | temu_risk_daily_job | 103-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:23:43,048 | INFO | temu_risk_daily_job | 103-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:23:43,067 | INFO | temu_risk_daily_job | 103-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:23:44,258 | INFO | temu_risk_daily_job | 103-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:23:47,297 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:23:47,432 | INFO | temu_risk_daily_job | 正在爬取店铺---------------103-Temu全托管-------------的数据
+2026-06-17 12:23:47,488 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:23:50,422 | INFO | temu_risk_daily_job | [保存] 103-Temu全托管 | goods_refund_cost 金额=26.68-----保存成功
+2026-06-17 12:23:51,573 | INFO | temu_risk_daily_job | [保存] 103-Temu全托管 | delivery_by_jit 金额=957.55-----保存成功
+2026-06-17 12:23:52,889 | INFO | temu_risk_daily_job | [保存] 103-Temu全托管 | france_epr 金额=2210.28-----保存成功
+2026-06-17 12:23:54,075 | INFO | temu_risk_daily_job | [保存] 103-Temu全托管 | epr_logistics_packaging_fee 金额=368.16-----保存成功
+2026-06-17 12:23:56,264 | INFO | temu_risk_daily_job | [跳过] 103-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:23:57,313 | INFO | temu_risk_daily_job | [跳过] 103-Temu全托管 | advertising_expenses 无变化
+2026-06-17 12:23:58,374 | INFO | temu_risk_daily_job | [跳过] 103-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:23:59,726 | INFO | temu_risk_daily_job | [保存] 103-Temu全托管 | order_after_sales_issue_fully 金额=1074.01-----保存成功
+2026-06-17 12:23:59,726 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：102-Temu全托管
+2026-06-17 12:23:59,852 | INFO | temu_risk_daily_job | 正在爬取店铺---------------102-Temu全托管-------------的数据
+2026-06-17 12:23:59,906 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:24:00,881 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:24:00,881 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:24:00,882 | WARNING | temu_risk_daily_job | [102-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:24:00,882 | INFO | temu_risk_daily_job | 102-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:24:04,630 | INFO | temu_risk_daily_job | 102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'aiknnnpfbnhmmkmkhfpbofgeoljmaakg', 'browserID': 104522336, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '64065', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托102店-PBear', 'duplicate': 3250, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522336, 'containerCode': '1053223369', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:24:04,630 | INFO | temu_risk_daily_job | 102-Temu全托管 - 浏览器启动成功, 调试端口: 64065
+2026-06-17 12:24:06,320 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已连接浏览器
+2026-06-17 12:24:06,338 | ERROR | temu_risk_daily_job | 102-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_ABORTED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-17 12:24:06,340 | ERROR | temu_risk_daily_job | 102-Temu全托管 - 第 1 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-17 12:24:06,363 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:24:07,487 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:24:07,487 | INFO | temu_risk_daily_job | 102-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-17 12:24:10,500 | INFO | temu_risk_daily_job | 102-Temu全托管 - 第 2 次登录尝试
+2026-06-17 12:24:13,250 | INFO | temu_risk_daily_job | 102-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'aiknnnpfbnhmmkmkhfpbofgeoljmaakg', 'browserID': 104522336, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '64152', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托102店-PBear', 'duplicate': 2345, 'ip': '218.78.129.68', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522336, 'containerCode': '1053223369', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:24:13,251 | INFO | temu_risk_daily_job | 102-Temu全托管 - 浏览器启动成功, 调试端口: 64152
+2026-06-17 12:24:14,842 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已连接浏览器
+2026-06-17 12:24:15,387 | INFO | temu_risk_daily_job | --------------------102-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:24:21,151 | ERROR | temu_risk_daily_job | 102-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:24:21,187 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已点击进入
+2026-06-17 12:24:21,187 | INFO | temu_risk_daily_job | 102-Temu全托管 - 登录成功
+2026-06-17 12:24:21,188 | INFO | temu_risk_daily_job | 102-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:24:29,797 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:24:29,863 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:24:35,885 | INFO | temu_risk_daily_job | 102-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\102-Temu全托管_cookies.json
+2026-06-17 12:24:35,885 | INFO | temu_risk_daily_job | 102-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:24:35,885 | INFO | temu_risk_daily_job | 102-Temu全托管 - 登录成功（第 2 次）
+2026-06-17 12:24:35,902 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:24:37,064 | INFO | temu_risk_daily_job | 102-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:24:40,100 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:24:40,224 | INFO | temu_risk_daily_job | 正在爬取店铺---------------102-Temu全托管-------------的数据
+2026-06-17 12:24:40,276 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:24:42,647 | INFO | temu_risk_daily_job | [保存] 102-Temu全托管 | goods_refund_cost 金额=101.17-----保存成功
+2026-06-17 12:24:43,820 | INFO | temu_risk_daily_job | [保存] 102-Temu全托管 | delivery_by_jit 金额=704.47-----保存成功
+2026-06-17 12:24:44,904 | INFO | temu_risk_daily_job | [跳过] 102-Temu全托管 | goods_poor_quality 无变化
+2026-06-17 12:24:46,157 | INFO | temu_risk_daily_job | [保存] 102-Temu全托管 | france_epr 金额=1473.34-----保存成功
+2026-06-17 12:24:47,316 | INFO | temu_risk_daily_job | [保存] 102-Temu全托管 | epr_logistics_packaging_fee 金额=283.79-----保存成功
+2026-06-17 12:24:48,375 | INFO | temu_risk_daily_job | [跳过] 102-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:24:49,645 | INFO | temu_risk_daily_job | [跳过] 102-Temu全托管 | epr_authorization_agent_fee 无变化
+2026-06-17 12:24:50,905 | INFO | temu_risk_daily_job | [保存] 102-Temu全托管 | order_after_sales_issue_fully 金额=546.61-----保存成功
+2026-06-17 12:24:50,906 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：101-Temu全托管
+2026-06-17 12:24:51,034 | INFO | temu_risk_daily_job | 正在爬取店铺---------------101-Temu全托管-------------的数据
+2026-06-17 12:24:51,088 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-17 12:24:52,059 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-17 12:24:52,059 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-17 12:24:52,060 | WARNING | temu_risk_daily_job | [101-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-17 12:24:52,060 | INFO | temu_risk_daily_job | 101-Temu全托管 - 第 1 次登录尝试
+2026-06-17 12:24:55,853 | INFO | temu_risk_daily_job | 101-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'pmpkofebdgpmilhkkkbfgfflcgpnkihi', 'browserID': 104522087, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '64376', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托101店-HQCK', 'duplicate': 3257, 'ip': '118.253.177.190', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 104522087, 'containerCode': '1053220874', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-17 12:24:55,854 | INFO | temu_risk_daily_job | 101-Temu全托管 - 浏览器启动成功, 调试端口: 64376
+2026-06-17 12:24:57,437 | INFO | temu_risk_daily_job | 101-Temu全托管 - 已连接浏览器
+2026-06-17 12:24:58,019 | INFO | temu_risk_daily_job | --------------------101-Temu全托管 ------------------------ 开始登录...
+2026-06-17 12:25:04,140 | ERROR | temu_risk_daily_job | 101-Temu全托管 - 未出现取消按钮，跳过
+2026-06-17 12:25:04,174 | INFO | temu_risk_daily_job | 101-Temu全托管 - 已点击进入
+2026-06-17 12:25:04,175 | INFO | temu_risk_daily_job | 101-Temu全托管 - 登录成功
+2026-06-17 12:25:04,175 | INFO | temu_risk_daily_job | 101-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-17 12:25:13,205 | INFO | temu_risk_daily_job | 命中授权方式一：确认授权并前往
+2026-06-17 12:25:13,279 | INFO | temu_risk_daily_job | 授权流程完成
+2026-06-17 12:25:19,825 | INFO | temu_risk_daily_job | 101-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\101-Temu全托管_cookies.json
+2026-06-17 12:25:19,826 | INFO | temu_risk_daily_job | 101-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-17 12:25:19,826 | INFO | temu_risk_daily_job | 101-Temu全托管 - 登录成功（第 1 次）
+2026-06-17 12:25:19,850 | INFO | temu_risk_daily_job | 101-Temu全托管 - 已关闭Playwright连接
+2026-06-17 12:25:20,993 | INFO | temu_risk_daily_job | 101-Temu全托管 - 已发送停止浏览器请求
+2026-06-17 12:25:24,026 | INFO | temu_risk_daily_job | 暂无违规数据
+2026-06-17 12:25:24,163 | INFO | temu_risk_daily_job | 正在爬取店铺---------------101-Temu全托管-------------的数据
+2026-06-17 12:25:24,220 | INFO | temu_risk_daily_job | 资金限制表（中文字段）检查 / 创建完成
+2026-06-17 12:25:26,574 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | goods_refund_cost 金额=58.61-----保存成功
+2026-06-17 12:25:27,739 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | delivery_by_jit 金额=922.99-----保存成功
+2026-06-17 12:25:28,773 | INFO | temu_risk_daily_job | [跳过] 101-Temu全托管 | goods_poor_quality 无变化
+2026-06-17 12:25:29,934 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | france_epr 金额=8419.55-----保存成功
+2026-06-17 12:25:31,094 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | epr_logistics_packaging_fee 金额=680.76-----保存成功
+2026-06-17 12:25:33,155 | INFO | temu_risk_daily_job | [跳过] 101-Temu全托管 | epr_platform_service_fee 无变化
+2026-06-17 12:25:34,297 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | epr_authorization_agent_fee 金额=227.89-----保存成功
+2026-06-17 12:25:35,617 | INFO | temu_risk_daily_job | [保存] 101-Temu全托管 | order_after_sales_issue_fully 金额=1384.21-----保存成功
+2026-06-17 12:25:35,617 | INFO | temu_risk_daily_job | 📊 开始上传钉钉多维表
+2026-06-17 12:25:35,777 | INFO | temu_risk_daily_job | 违规记录查询成功：0 条
+2026-06-17 12:25:35,777 | INFO | temu_risk_daily_job | 今日违法记录 0 条
+2026-06-17 12:25:35,778 | INFO | temu_risk_daily_job | 准备上传 0 条记录...
+2026-06-17 12:25:35,778 | INFO | temu_risk_daily_job | 
+上传统计:
+2026-06-17 12:25:35,778 | INFO | temu_risk_daily_job | 总记录数: 0
+2026-06-17 12:25:35,778 | INFO | temu_risk_daily_job | 成功数量: 0
+2026-06-17 12:25:35,778 | INFO | temu_risk_daily_job | 失败数量: 0
+2026-06-17 12:25:35,779 | INFO | temu_risk_daily_job | 成功批次: 0
+2026-06-17 12:25:35,779 | INFO | temu_risk_daily_job | 失败批次: 0
+2026-06-17 12:25:46,508 | INFO | temu_risk_daily_job | 查询限制金额成功（day_offset=0），共 66 条
+2026-06-17 12:25:46,508 | INFO | temu_risk_daily_job | 今日限制金额 66 条
+2026-06-17 12:25:46,509 | INFO | temu_risk_daily_job | 准备上传 66 条记录...
+2026-06-17 12:25:49,058 | INFO | temu_risk_daily_job | 
+上传统计:
+2026-06-17 12:25:49,058 | INFO | temu_risk_daily_job | 总记录数: 66
+2026-06-17 12:25:49,058 | INFO | temu_risk_daily_job | 成功数量: 66
+2026-06-17 12:25:49,058 | INFO | temu_risk_daily_job | 失败数量: 0
+2026-06-17 12:25:49,058 | INFO | temu_risk_daily_job | 成功批次: 2
+2026-06-17 12:25:49,059 | INFO | temu_risk_daily_job | 失败批次: 0
+2026-06-17 12:25:49,090 | INFO | temu_risk_daily_job | 查询限制金额成功（day_offset=1），共 78 条
+2026-06-17 12:25:49,091 | INFO | temu_risk_daily_job | 昨日限制金额 78 条
+2026-06-17 12:25:49,091 | INFO | temu_risk_daily_job | 准备上传 78 条记录...
+2026-06-17 12:25:52,687 | INFO | temu_risk_daily_job | 
+上传统计:
+2026-06-17 12:25:52,688 | INFO | temu_risk_daily_job | 总记录数: 78
+2026-06-17 12:25:52,688 | INFO | temu_risk_daily_job | 成功数量: 78
+2026-06-17 12:25:52,688 | INFO | temu_risk_daily_job | 失败数量: 0
+2026-06-17 12:25:52,688 | INFO | temu_risk_daily_job | 成功批次: 2
+2026-06-17 12:25:52,688 | INFO | temu_risk_daily_job | 失败批次: 0
+2026-06-17 12:25:52,689 | INFO | temu_risk_daily_job | 🔔 开始执行违规 & 资金限制告警
+2026-06-17 12:25:52,841 | INFO | temu_risk_daily_job | 今日无新增违规
+2026-06-17 12:25:52,870 | INFO | temu_risk_daily_job | 今日无资金限制异常
+2026-06-17 12:25:52,870 | INFO | temu_risk_daily_job | 🎯 全流程完成，总耗时：14分20秒

@@ -15,8 +15,6 @@ FINANCIAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "financ
 FINANCIAL_DIR.mkdir(parents=True, exist_ok=True)
 
 """跑temu财务数据"""
-
-
 class Temu_Financial_Data:
     start_api = "http://127.0.0.1:6873/api/v1/browser/start"
     stop_api = "http://127.0.0.1:6873/api/v1/browser/stop"
@@ -113,8 +111,8 @@ class Temu_Financial_Data:
         self.logger.info(f"--------------------{self.name} ------------------------ 开始登录...")
 
         try:
-            await self.page.get_by_text("账号登录", exact=True).wait_for(timeout=10000)
-            await self.page.get_by_text("账号登录", exact=True).click()
+            await self.page.get_by_text("手机号登录", exact=True).wait_for(timeout=10000)
+            await self.page.get_by_text("手机号登录", exact=True).click()
 
             await self.page.wait_for_selector("#usernameId", timeout=10000)
             await self.page.wait_for_selector("#passwordId", timeout=10000)
@@ -358,11 +356,45 @@ class Temu_Financial_Data:
         await export_history_btn.click()
 
         # 等待导出历史列表出现
-        history_list = self.page.locator('.export-history_list__5Eto0').first
-        await history_list.wait_for(state="visible", timeout=80_000)
+        await self.page.wait_for_selector('.export-history_list__5Eto0', timeout=80_000)
 
-        # 取第一个导出记录
-        first_item = history_list.locator('.export-history_right__YGHPV div').first
+        # 获取所有历史记录
+        history_items = self.page.locator('.export-history_list__5Eto0')
+        count = await history_items.count()
+
+        target_date_range = self.get_month_date_range(self.month_str)
+        target_start = target_date_range['start_date']
+        target_end = target_date_range['end_date']
+
+        found_item = None
+
+        # 遍历历史记录，找到匹配时间范围的
+        for i in range(count):
+            item = history_items.nth(i)
+
+            # 获取查询时间范围
+            time_range_text = await item.locator('.export-history_middle__9m348').nth(0).text_content()
+            # 格式：账务明细查询时间：2026-05-01 00:00:00 ~ 2026-05-31 23:59:59
+            match = re.search(r'(\d{4}-\d{2}-\d{2})[\s\d:]+~[\s\d:]+(\d{4}-\d{2}-\d{2})', time_range_text)
+
+            if match:
+                record_start = match.group(1)
+                record_end = match.group(2)
+
+                self.logger.info(f"历史记录 {i + 1}: 查询时间范围 {record_start} ~ {record_end}")
+
+                # 检查是否匹配目标时间范围
+                if record_start == target_start and record_end == target_end:
+                    found_item = item
+                    self.logger.info(f"找到匹配的历史记录: {target_start} ~ {target_end}")
+                    break
+
+        if not found_item:
+            self.logger.warning(f"未找到匹配 {target_start} ~ {target_end} 的历史记录")
+            return False
+
+        # 获取右侧按钮区域
+        right_area = found_item.locator('.export-history_right__YGHPV div').first
 
         # ===== 1. 下载卖家中心文件 =====
         self.logger.info(f"{self.name} - 从历史中下载: 下载账务明细(卖家中心)")
@@ -375,7 +407,7 @@ class Temu_Financial_Data:
         if final_path.exists():
             self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
         else:
-            download_seller_span = first_item.locator(
+            download_seller_span = right_area.locator(
                 'span:has-text("下载账务明细(卖家中心)")'
             ).first
             await download_seller_span.wait_for(state="visible", timeout=80_000)
@@ -402,7 +434,7 @@ class Temu_Financial_Data:
 
             self.logger.info(f"{self.name} - 从历史中下载: {selector_text}")
 
-            download_element = first_item.locator(
+            download_element = right_area.locator(
                 f'span:has-text("{selector_text}")'
             ).first
             await download_element.wait_for(state="visible", timeout=40_000)
@@ -425,7 +457,6 @@ class Temu_Financial_Data:
                     self.logger.info("确认授权并前往")
                     await confirm_check.first.click()
                     await confirm_btn_1.first.click()
-
 
                 async with new_page.expect_download(timeout=80_000) as download_info:
                     pass
@@ -468,12 +499,43 @@ class Temu_Financial_Data:
 
     # 等待加载出来，并下载
     async def load_and_download(self):
+        """从当前导出的记录中下载（刚导出的第一条）"""
         # 等待导出历史列表出现
-        history_list = self.page.locator('.export-history_list__5Eto0').first
-        await history_list.wait_for(state="visible", timeout=80_000)
+        await self.page.wait_for_selector('.export-history_list__5Eto0', timeout=80_000)
 
-        # 取第一个导出记录
-        first_item = history_list.locator('.export-history_right__YGHPV div').first
+        # 获取所有历史记录
+        history_items = self.page.locator('.export-history_list__5Eto0')
+        count = await history_items.count()
+
+        if count == 0:
+            self.logger.warning("没有找到历史记录")
+            return False
+
+        # 取第一条（最新导出）
+        first_item = history_items.first
+
+        # 验证第一条记录的时间范围是否匹配
+        time_range_text = await first_item.locator('.export-history_middle__9m348').nth(0).text_content()
+        match = re.search(r'(\d{4}-\d{2}-\d{2})[\s\d:]+~[\s\d:]+(\d{4}-\d{2}-\d{2})', time_range_text)
+
+        target_date_range = self.get_month_date_range(self.month_str)
+        target_start = target_date_range['start_date']
+        target_end = target_date_range['end_date']
+
+        if match:
+            record_start = match.group(1)
+            record_end = match.group(2)
+
+            self.logger.info(f"最新记录时间范围: {record_start} ~ {record_end}")
+            self.logger.info(f"目标时间范围: {target_start} ~ {target_end}")
+
+            if record_start != target_start or record_end != target_end:
+                self.logger.warning(f"最新记录的时间范围不匹配目标月份，可能导出的是其他月份的数据")
+                # 可以选择继续或返回False
+                return False
+
+        # 获取右侧按钮区域
+        right_area = first_item.locator('.export-history_right__YGHPV div').first
 
         # ===== 1. 下载卖家中心文件（在当前页面直接下载）=====
         self.logger.info(f"{self.name} - 准备下载: 下载账务明细(卖家中心)")
@@ -487,7 +549,7 @@ class Temu_Financial_Data:
         if final_path.exists():
             self.logger.info(f"⏭️ 文件已存在，跳过下载: {final_path}")
         else:
-            download_seller_span = first_item.locator(
+            download_seller_span = right_area.locator(
                 'span:has-text("下载账务明细(卖家中心)")'
             ).first
             await download_seller_span.wait_for(state="visible", timeout=80_000)
@@ -518,12 +580,10 @@ class Temu_Financial_Data:
 
             self.logger.info(f"{self.name} - 准备下载: {selector_text}")
 
-            download_element = first_item.locator(
+            download_element = right_area.locator(
                 f'span:has-text("{selector_text}")'
             ).first
             await download_element.wait_for(state="visible", timeout=40_000)
-
-            pages_before = len(self.page.context.pages)
 
             await download_element.click()
             await asyncio.sleep(2)
@@ -698,6 +758,8 @@ class Temu_Financial_Data:
         await self.process_calendar()
         await asyncio.sleep(0.3)
 
+        # input('请手动输入日期：')
+
         # 查询，导出，下载（会根据提示自动选择路径）
         await self.search_export_download()
 
@@ -764,7 +826,7 @@ class Temu_Financial_Data:
 
 
 async def main():
-    name_list = ['108-Temu全托管']
+    name_list = ["103-Temu全托管"]
     month_str = '2026-02'
     for name in name_list:
         account = get_shop_config(name)
@@ -772,5 +834,5 @@ async def main():
         await t.run()
 
 
-# if __name__ == "__main__":
-#     asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -198,6 +198,6 @@ def test_single_proxy():
         print("❌ 无法获取代理")
 
 
-#
-# if __name__ == '__main__':
-#     test_single_proxy()
+
+if __name__ == '__main__':
+    test_single_proxy()

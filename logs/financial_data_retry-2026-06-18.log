@@ -1,0 +1,28 @@
+2026-06-18 11:28:01,245 | INFO | financial_data_retry | 1103-Temu全托管 - 第 1 次登录尝试
+2026-06-18 11:28:04,076 | INFO | financial_data_retry | 1103-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'jpdodpkjmnaoinfefchdgfomfncffgoc', 'browserID': 100261119, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\hubstudio', 'debuggingPort': '62323', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1103店-子账号', 'duplicate': 2428, 'ip': '49.7.135.46', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_131_202501091017\\webdriver.exe', 'containerId': 100261119, 'containerCode': '1010611195', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-18 11:28:04,076 | INFO | financial_data_retry | 1103-Temu全托管 - 浏览器启动成功, 调试端口: 62323
+2026-06-18 11:28:05,435 | INFO | financial_data_retry | 1103-Temu全托管 - 已连接浏览器
+2026-06-18 11:28:06,115 | INFO | financial_data_retry | --------------------1103-Temu全托管 ------------------------ 开始登录...
+2026-06-18 11:28:11,098 | INFO | financial_data_retry | 1103-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-18 11:28:16,396 | INFO | financial_data_retry | 命中授权方式一：确认授权并前往
+2026-06-18 11:28:16,457 | INFO | financial_data_retry | 授权流程完成
+2026-06-18 11:28:22,488 | INFO | financial_data_retry | 1103-Temu全托管 - 进入财务页面
+2026-06-18 11:28:28,015 | INFO | financial_data_retry | 有数据，总共 340 条
+2026-06-18 11:28:30,061 | INFO | financial_data_retry | 检测到任务已存在，尝试从导出历史中下载
+2026-06-18 11:28:30,062 | INFO | financial_data_retry | 1103-Temu全托管 - 尝试从导出历史中下载文件
+2026-06-18 11:28:30,256 | INFO | financial_data_retry | 历史记录 1: 查询时间范围 2026-01-01 ~ 2026-01-31
+2026-06-18 11:28:30,256 | INFO | financial_data_retry | 找到匹配的历史记录: 2026-01-01 ~ 2026-01-31
+2026-06-18 11:28:30,257 | INFO | financial_data_retry | 1103-Temu全托管 - 从历史中下载: 下载账务明细(卖家中心)
+2026-06-18 11:28:30,763 | INFO | financial_data_retry | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\01月份\temu\1103-Temu全托管_01_卖家中心.xlsx
+2026-06-18 11:28:31,767 | INFO | financial_data_retry | 1103-Temu全托管 - 从历史中下载: 下载财务明细(全球)
+2026-06-18 11:28:34,113 | INFO | financial_data_retry | 确认授权并前往
+2026-06-18 11:28:45,305 | INFO | financial_data_retry | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\01月份\1103-Temu全托管_01_全球.xlsx
+2026-06-18 11:28:46,325 | INFO | financial_data_retry | 1103-Temu全托管 - 从历史中下载: 下载财务明细(欧区)
+2026-06-18 11:28:48,458 | INFO | financial_data_retry | 确认授权并前往
+2026-06-18 11:28:58,467 | INFO | financial_data_retry | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\01月份\1103-Temu全托管_01_欧区.xlsx
+2026-06-18 11:28:59,505 | INFO | financial_data_retry | 1103-Temu全托管 - 从历史中下载: 下载财务明细(美国)
+2026-06-18 11:29:01,676 | INFO | financial_data_retry | 确认授权并前往
+2026-06-18 11:29:10,514 | INFO | financial_data_retry | ✅ 文件下载完成: D:\sd14\Temu_horizon\data\financial\01月份\1103-Temu全托管_01_美国.xlsx
+2026-06-18 11:29:11,547 | INFO | financial_data_retry | ✅ 1103-Temu全托管 - 所有财务数据从历史下载完成
+2026-06-18 11:29:11,548 | INFO | financial_data_retry | 从历史记录下载完成
+2026-06-18 11:29:11,548 | INFO | financial_data_retry | 1103-Temu全托管 - 登录成功（第 1 次）

@@ -1,0 +1,114 @@
+2026-06-21 12:07:38,145 | INFO | temu_risk_daily_job | 🚀 开始爬取店铺：2106-Temu全托管
+2026-06-21 12:07:38,296 | INFO | temu_risk_daily_job | 正在爬取店铺---------------2106-Temu全托管-------------的数据
+2026-06-21 12:07:38,347 | INFO | temu_risk_daily_job | 违规记录表检查 / 创建完成
+2026-06-21 12:07:39,679 | ERROR | temu_risk_daily_job | 状态不是200：{"error_code":40001,"error_msg":"Invalid Login State"}
+2026-06-21 12:07:39,679 | ERROR | temu_risk_daily_job | ⚠️ HTTP异常: 403
+2026-06-21 12:07:39,680 | WARNING | temu_risk_daily_job | [2106-Temu全托管] cookie 失效，开始自动刷新登录态
+2026-06-21 12:07:39,681 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 1 次登录尝试
+2026-06-21 12:07:44,257 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '63997', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 4092, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:07:44,258 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 63997
+2026-06-21 12:07:49,200 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:07:49,483 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:07:49,483 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 1 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:07:49,546 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:07:50,611 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:07:50,612 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-21 12:07:53,626 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 2 次登录尝试
+2026-06-21 12:07:56,617 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '64142', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2613, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:07:56,617 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 64142
+2026-06-21 12:07:58,495 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:07:58,765 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:07:58,766 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 2 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:07:58,849 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:07:59,803 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:07:59,803 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-21 12:08:02,816 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 3 次登录尝试
+2026-06-21 12:08:05,857 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '64269', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2541, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:08:05,858 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 64269
+2026-06-21 12:08:07,576 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:08:07,847 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:08:07,848 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 3 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:08:07,873 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:08:08,756 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:08:08,756 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-21 12:08:11,758 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 4 次登录尝试
+2026-06-21 12:08:14,827 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '64366', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2653, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:08:14,827 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 64366
+2026-06-21 12:08:16,475 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:08:16,752 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:08:16,752 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 4 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:08:16,774 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:08:17,612 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:08:17,612 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-21 12:08:20,620 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 5 次登录尝试
+2026-06-21 12:08:23,434 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '64483', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2373, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:08:23,434 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 64483
+2026-06-21 12:08:25,187 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:08:25,467 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:08:25,468 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 5 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:08:25,496 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:08:26,367 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:08:26,367 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 准备重试，等待 3 秒...
+2026-06-21 12:08:29,372 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 第 6 次登录尝试
+2026-06-21 12:08:32,216 | INFO | temu_risk_daily_job | 2106-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'ibecnpjmgcbdlgojmlfebfkmlaoeojgm', 'browserID': 102858352, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\hubstudio', 'debuggingPort': '64606', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托2106店（153店改）+半托代发1', 'duplicate': 2404, 'ip': '111.172.230.181', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_140_202512152142\\webdriver.exe', 'containerId': 102858352, 'containerCode': '1036583528', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-21 12:08:32,217 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 浏览器启动成功, 调试端口: 64606
+2026-06-21 12:08:34,052 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已连接浏览器
+2026-06-21 12:08:34,317 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 打开登录页失败: Page.goto: net::ERR_CONNECTION_CLOSED at https://seller.kuajingmaihuo.com/login
+Call log:
+  - navigating to "https://seller.kuajingmaihuo.com/login", waiting until "domcontentloaded"
+
+2026-06-21 12:08:34,317 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 第 6 次失败: open_login_page 失败
+Traceback (most recent call last):
+  File "D:\sd14\Temu_horizon\core\login.py", line 256, in run
+    result = await self.run_once()
+  File "D:\sd14\Temu_horizon\core\login.py", line 239, in run_once
+    raise Exception("open_login_page 失败")
+Exception: open_login_page 失败
+2026-06-21 12:08:34,343 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已关闭Playwright连接
+2026-06-21 12:08:35,342 | INFO | temu_risk_daily_job | 2106-Temu全托管 - 已发送停止浏览器请求
+2026-06-21 12:08:35,343 | ERROR | temu_risk_daily_job | 2106-Temu全托管 - 登录失败，已达到最大重试次数 6

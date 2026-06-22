@@ -1,0 +1,108 @@
+2026-06-18 12:17:08,170 | INFO | temu_site | 开始清除昨天报表的数据
+2026-06-18 12:17:08,171 | INFO | temu_site | 
+ 删除所有记录
+2026-06-18 12:17:16,120 | INFO | temu_site | 删除所有记录结果: None
+2026-06-18 12:17:16,121 | INFO | temu_site | 开始清除今天报表的数据
+2026-06-18 12:17:16,121 | INFO | temu_site | 
+ 删除所有记录
+2026-06-18 12:17:23,969 | INFO | temu_site | 删除所有记录结果: None
+2026-06-18 12:17:23,971 | INFO | temu_site | 正在爬取店铺---2106-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:25,032 | INFO | temu_site | 店铺---2106-Temu全托管---没有违规数据
+2026-06-18 12:17:25,036 | INFO | temu_site | 店铺---2106-Temu全托管---没有违规数据，跳过
+2026-06-18 12:17:25,036 | INFO | temu_site | 正在爬取店铺---2103-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:26,051 | INFO | temu_site | 店铺---2103-Temu全托管---没有违规数据
+2026-06-18 12:17:26,052 | INFO | temu_site | 店铺---2103-Temu全托管---没有违规数据，跳过
+2026-06-18 12:17:26,054 | INFO | temu_site | 正在爬取店铺---2102-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:27,092 | INFO | temu_site | 店铺---2102-Temu全托管---没有违规数据
+2026-06-18 12:17:27,093 | INFO | temu_site | 店铺---2102-Temu全托管---没有违规数据，跳过
+2026-06-18 12:17:27,094 | INFO | temu_site | 正在爬取店铺---2101-Temu全托管KA---skc_sku_violate数据
+2026-06-18 12:17:28,137 | INFO | temu_site | 店铺---2101-Temu全托管KA---没有违规数据
+2026-06-18 12:17:28,138 | INFO | temu_site | 店铺---2101-Temu全托管KA---没有违规数据，跳过
+2026-06-18 12:17:28,138 | INFO | temu_site | 正在爬取店铺---112-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:29,181 | INFO | temu_site | 店铺---112-Temu全托管---没有违规数据
+2026-06-18 12:17:29,182 | INFO | temu_site | 店铺---112-Temu全托管---没有违规数据，跳过
+2026-06-18 12:17:29,183 | INFO | temu_site | 正在爬取店铺---1108-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:30,223 | INFO | temu_site | 店铺---1108-Temu全托管---没有违规数据
+2026-06-18 12:17:30,225 | INFO | temu_site | 店铺---1108-Temu全托管---没有违规数据，跳过
+2026-06-18 12:17:30,226 | INFO | temu_site | 正在爬取店铺---1107-Temu全托管---skc_sku_violate数据
+2026-06-18 12:17:31,200 | ERROR | temu_site | [1107-Temu全托管] 请求失败（第 1 次）: 403 Client Error: Forbidden for url: https://agentseller.temu.com/api/kiana/mms/robin/searchForChainSupplier
+2026-06-18 12:17:31,201 | INFO | temu_site | 1107-Temu全托管 - 第 1 次登录尝试
+2026-06-18 12:17:34,729 | INFO | temu_site | 1107-Temu全托管 - start_api 返回: {'code': 0, 'msg': 'Success', 'data': {'action': 'startBrowserByCode', 'backgroundPluginId': 'hmfimlmiknlbeifbaabjgkfnhkaiijaf', 'browserID': 122452738, 'browserPath': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\hubstudio', 'debuggingPort': '52527', 'downloadPath': 'C:\\Users\\Administrator\\Desktop\\Hubstudio\\temu全托1107号店', 'duplicate': 3083, 'ip': '36.111.32.150', 'isDynamicIp': False, 'launcherPage': 'about:blank', 'proxyType': 'socks5', 'runMode': 2, 'webdriver': 'C:\\Users\\Administrator\\AppData\\Local\\env-kit\\Core\\chrome_64_133_202505210948\\webdriver.exe', 'containerId': 122452738, 'containerCode': '1232527381', 'statusCode': '0', 'err': '成功(Success)'}}
+2026-06-18 12:17:34,729 | INFO | temu_site | 1107-Temu全托管 - 浏览器启动成功, 调试端口: 52527
+2026-06-18 12:17:36,373 | INFO | temu_site | 1107-Temu全托管 - 已连接浏览器
+2026-06-18 12:17:37,004 | INFO | temu_site | --------------------1107-Temu全托管 ------------------------ 开始登录...
+2026-06-18 12:17:42,145 | ERROR | temu_site | 1107-Temu全托管 - 未出现取消按钮，跳过
+2026-06-18 12:17:42,210 | INFO | temu_site | 1107-Temu全托管 - 已点击进入
+2026-06-18 12:17:42,211 | INFO | temu_site | 1107-Temu全托管 - 登录成功
+2026-06-18 12:17:42,212 | INFO | temu_site | 1107-Temu全托管 - 等待 agentseller Cookie 生效
+2026-06-18 12:17:50,383 | INFO | temu_site | 命中授权方式一：确认授权并前往
+2026-06-18 12:17:50,446 | INFO | temu_site | 授权流程完成
+2026-06-18 12:17:56,465 | INFO | temu_site | 1107-Temu全托管 - Cookie 已保存: D:\sd14\Temu_horizon\data\cookies\1107-Temu全托管_cookies.json
+2026-06-18 12:17:56,465 | INFO | temu_site | 1107-Temu全托管 - Cookie 获取完成，准备关闭浏览器
+2026-06-18 12:17:56,465 | INFO | temu_site | 1107-Temu全托管 - 登录成功（第 1 次）
+2026-06-18 12:17:56,479 | INFO | temu_site | 1107-Temu全托管 - 已关闭Playwright连接
+2026-06-18 12:17:57,560 | INFO | temu_site | 1107-Temu全托管 - 已发送停止浏览器请求
+2026-06-18 12:18:00,628 | INFO | temu_site | 店铺---1107-Temu全托管---没有违规数据
+2026-06-18 12:18:00,629 | INFO | temu_site | 店铺---1107-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:00,631 | INFO | temu_site | 正在爬取店铺---1106-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:02,015 | INFO | temu_site | 店铺---1106-Temu全托管---没有违规数据
+2026-06-18 12:18:02,016 | INFO | temu_site | 店铺---1106-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:02,017 | INFO | temu_site | 正在爬取店铺---1105-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:03,497 | INFO | temu_site | 正在爬取店铺---1105-Temu全托管---sku_site_status数据
+2026-06-18 12:18:04,513 | INFO | temu_site | 正在爬取店铺---1105-Temu全托管---sku_site_exception数据
+2026-06-18 12:18:05,976 | INFO | temu_site | 正在爬取店铺---1104-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:08,151 | INFO | temu_site | 店铺---1104-Temu全托管---没有违规数据
+2026-06-18 12:18:08,152 | INFO | temu_site | 店铺---1104-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:08,153 | INFO | temu_site | 正在爬取店铺---1103-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:09,178 | INFO | temu_site | 店铺---1103-Temu全托管---没有违规数据
+2026-06-18 12:18:09,179 | INFO | temu_site | 店铺---1103-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:09,179 | INFO | temu_site | 正在爬取店铺---1102-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:10,281 | INFO | temu_site | 店铺---1102-Temu全托管---没有违规数据
+2026-06-18 12:18:10,282 | INFO | temu_site | 店铺---1102-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:10,284 | INFO | temu_site | 正在爬取店铺---1101-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:11,477 | INFO | temu_site | 店铺---1101-Temu全托管---没有违规数据
+2026-06-18 12:18:11,477 | INFO | temu_site | 店铺---1101-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:11,479 | INFO | temu_site | 正在爬取店铺---110-Temu全托管KA---skc_sku_violate数据
+2026-06-18 12:18:12,652 | INFO | temu_site | 店铺---110-Temu全托管KA---没有违规数据
+2026-06-18 12:18:12,653 | INFO | temu_site | 店铺---110-Temu全托管KA---没有违规数据，跳过
+2026-06-18 12:18:12,654 | INFO | temu_site | 正在爬取店铺---109-Temu全托管KA---skc_sku_violate数据
+2026-06-18 12:18:14,082 | INFO | temu_site | 店铺---109-Temu全托管KA---没有违规数据
+2026-06-18 12:18:14,083 | INFO | temu_site | 店铺---109-Temu全托管KA---没有违规数据，跳过
+2026-06-18 12:18:14,084 | INFO | temu_site | 正在爬取店铺---108-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:15,271 | INFO | temu_site | 店铺---108-Temu全托管---没有违规数据
+2026-06-18 12:18:15,272 | INFO | temu_site | 店铺---108-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:15,275 | INFO | temu_site | 正在爬取店铺---106-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:16,420 | INFO | temu_site | 店铺---106-Temu全托管---没有违规数据
+2026-06-18 12:18:16,420 | INFO | temu_site | 店铺---106-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:16,422 | INFO | temu_site | 正在爬取店铺---105-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:17,450 | INFO | temu_site | 店铺---105-Temu全托管---没有违规数据
+2026-06-18 12:18:17,453 | INFO | temu_site | 店铺---105-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:17,454 | INFO | temu_site | 正在爬取店铺---104-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:18,488 | INFO | temu_site | 店铺---104-Temu全托管---没有违规数据
+2026-06-18 12:18:18,488 | INFO | temu_site | 店铺---104-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:18,489 | INFO | temu_site | 正在爬取店铺---103-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:19,523 | INFO | temu_site | 店铺---103-Temu全托管---没有违规数据
+2026-06-18 12:18:19,524 | INFO | temu_site | 店铺---103-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:19,524 | INFO | temu_site | 正在爬取店铺---102-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:21,118 | INFO | temu_site | 正在爬取店铺---102-Temu全托管---sku_site_status数据
+2026-06-18 12:18:22,137 | INFO | temu_site | 正在爬取店铺---102-Temu全托管---sku_site_exception数据
+2026-06-18 12:18:23,259 | INFO | temu_site | 正在爬取店铺---101-Temu全托管---skc_sku_violate数据
+2026-06-18 12:18:24,303 | INFO | temu_site | 店铺---101-Temu全托管---没有违规数据
+2026-06-18 12:18:24,304 | INFO | temu_site | 店铺---101-Temu全托管---没有违规数据，跳过
+2026-06-18 12:18:24,408 | INFO | temu_site | 准备上传 141 条记录...
+2026-06-18 12:18:28,591 | INFO | temu_site | 
+上传统计:
+2026-06-18 12:18:28,591 | INFO | temu_site | 总记录数: 141
+2026-06-18 12:18:28,592 | INFO | temu_site | 成功数量: 141
+2026-06-18 12:18:28,592 | INFO | temu_site | 失败数量: 0
+2026-06-18 12:18:28,592 | INFO | temu_site | 成功批次: 3
+2026-06-18 12:18:28,592 | INFO | temu_site | 失败批次: 0
+2026-06-18 12:18:28,650 | INFO | temu_site | 准备上传 85 条记录...
+2026-06-18 12:18:31,446 | INFO | temu_site | 
+上传统计:
+2026-06-18 12:18:31,446 | INFO | temu_site | 总记录数: 85
+2026-06-18 12:18:31,446 | INFO | temu_site | 成功数量: 85
+2026-06-18 12:18:31,447 | INFO | temu_site | 失败数量: 0
+2026-06-18 12:18:31,447 | INFO | temu_site | 成功批次: 2
+2026-06-18 12:18:31,447 | INFO | temu_site | 失败批次: 0
+2026-06-18 12:18:31,447 | INFO | temu_site | 🎯 全流程完成，总耗时：1分23秒

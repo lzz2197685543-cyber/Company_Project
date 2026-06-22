@@ -1,18 +1,19 @@
 {
   "shop_name": "2101-Temu全托管KA",
-  "created_at": "2026-04-17 14:08:31",
+  "created_at": "2026-06-20 12:08:10",
   "cookies": {
     "api_uid": "CuC0zGfmBCg8pABFOLf4Ag==",
     "_nano_fp": "XpmYXqgxnqEoXqXyno_kU3~P8IVJuI7Zc3EP9pYv",
     "hfsc": "L3yOe4gy7jvx1JXIcA==",
-    "dilx": "lcp3hLjrwzIURpbHwz4X1",
-    "njrpl": "Mk4pJv7D1yMVPN0GMwcssiVUHuSHnapZ",
     "_bee": "Mk4pJv7D1yMVPN0GMwcssiVUHuSHnapZ",
-    "mallid": "634418219819137",
+    "njrpl": "Mk4pJv7D1yMVPN0GMwcssiVUHuSHnapZ",
+    "dilx": "lcp3hLjrwzIURpbHwz4X1",
     "gmp_temu_token": "jMSG2mHSm2nSaS14FFQ3WJqaUroTR3DdUtdnTzeNYJjGBkpm3RAFCX+5m0KTup5K/FsxAIam/BrmTfjuFc4jCjchcZIbqEdDAbMsjLHB+KENxn5faw0uMhUGiAfwOStxavqDgM3wjGqsDrKUQjBSRvwHYlxZsTwJyZcFgwDA3Gw",
-    "timezone": "Asia%2FShanghai",
     "webp": "1",
+    "timezone": "Asia%2FShanghai",
+    "img_sup": "avif%2Cwebp",
     "region": "0",
-    "seller_temp": "N_eyJ0IjoiSzcxU0NEeDlnckZKZVZtdjBCU0xqT1gyQURVTFFEalBWRkIyMlJKeFUrc1Q4THJxbnJkNGZOQk55OWpuOWovL3pRL1FqTzBWaWtkVkhwUXNKem80aGc9PSIsInYiOjEsInMiOjEwMDAxLCJ1IjoyMzM1MDk0NTMyMDEwMX0="
+    "mallid": "634418219819137",
+    "seller_temp": "N_eyJ0IjoiMHVIMXg5bnRKampRbHRIMEVUdkhoalZFNHllQXZBZG9UcGduaUZQMkJnMHVNMnhsbUY4eTVuMHdRYTZCMmJ4dlJPc2VoZkh4ZXU4QjJ5M2xUVkViRGc9PSIsInYiOjEsInMiOjEwMDAxLCJ1IjoyMzM1MDk0NTMyMDEwMX0="
   }
 }

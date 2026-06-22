@@ -21,6 +21,7 @@ class TemuLogin:
         self.username = cred["username"]
         self.password = cred["password"]
 
+
         self.cookie_domain = cookie_domain
 
         self.logger = get_logger(job)
@@ -51,8 +52,8 @@ class TemuLogin:
         self.logger.info(f"--------------------{self.name} ------------------------ 开始登录...")
 
         try:
-            await self.page.get_by_text("账号登录", exact=True).wait_for(timeout=10000)
-            await self.page.get_by_text("账号登录", exact=True).click()
+            await self.page.get_by_text("手机号登录", exact=True).wait_for(timeout=10000)
+            await self.page.get_by_text("手机号登录", exact=True).click()
 
             await self.page.wait_for_selector("#usernameId", timeout=10000)
             await self.page.wait_for_selector("#passwordId", timeout=10000)
@@ -288,9 +289,9 @@ async def main():
         t = TemuLogin(name, account,'financial_data')
         await t.run()
 
-# #
+#
 # if __name__ == "__main__":
 #     asyncio.run(main())
-#
+
 
 

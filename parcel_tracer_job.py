@@ -87,6 +87,7 @@ async def fetch_and_upload_stockin_data(shop_name):
 
     return len(stockin_items)
 
+
 async def check_and_send_wechat_for_stockin_differences(shop_name, stockin_items):
     """检查入库差异，如果差异数量>=10则发送微信群消息"""
     differences = []
@@ -104,49 +105,64 @@ async def check_and_send_wechat_for_stockin_differences(shop_name, stockin_items
                 'receive_time': item.get("收货时间", "")
             })
 
-    # 如果差异数量大于等于10
-    if len(differences) >= 10:
+    # 🔥 修复：筛选出差异数量 >= 10 的记录
+    serious_differences = [d for d in differences if abs(d['diff']) >= 10]
+
+    if serious_differences:
         # 检查今天是否已经发送过该店铺的预警
         today = datetime.now().strftime('%Y-%m-%d')
         shop_key = f"{shop_name}_{today}"
-        logger.info(f"⚠️ 店铺 {shop_name} 入库差异数量达到 {len(differences)} 条，准备发送微信群消息")
 
-        # 构建微信群消息
-        message = build_wechat_stockin_message(shop_name, differences)
+        if shop_key not in sent_shops_wechat:
+            logger.info(f"⚠️ 店铺 {shop_name} 有 {len(serious_differences)} 条差异≥10的记录，准备发送微信群消息")
 
-        # 发送到微信群
-        contacts = [("全托部入库异常通知群", message),
-                    ('梁祖珍', f'店铺{shop_name}异常数据已经发送')]
-        try:
-            # webchat_send 是同步函数，在线程池中运行
-            await asyncio.to_thread(webchat_send, contacts)
-            sent_shops_wechat.add(shop_key)
-            logger.info(f"✅ 已发送 {shop_name} 入库差异预警到微信群")
-        except Exception as e:
-            logger.error(f"发送微信群消息失败: {e}")
+            # 构建微信群消息（汇总所有差异）
+            message = build_wechat_stockin_message(shop_name, serious_differences)
 
-        logger.info(f"✅ 已发送 {shop_name} 入库差异预警到微信群")
+            # 发送到微信群
+            contacts = [("全托部入库异常通知群", message), ('梁祖珍', f'店铺{shop_name}异常数据已经发送')]
+            try:
+                await asyncio.to_thread(webchat_send, contacts)
+                sent_shops_wechat.add(shop_key)
+                logger.info(f"✅ 已发送 {shop_name} 入库差异预警到微信群")
+            except Exception as e:
+                logger.error(f"发送微信群消息失败: {e}")
+        else:
+            logger.info(f"⏭️ 店铺 {shop_name} 今日已发送过预警，跳过")
+    else:
+        logger.info(f"✅ 店铺 {shop_name} 无严重差异记录（差异≥10）")
 
 def build_wechat_stockin_message(shop_name, differences):
     """构建发送到微信群的入库差异消息"""
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+    # 统计差异方向
+    positive_diffs = [d for d in differences if d['diff'] > 0]
+    negative_diffs = [d for d in differences if d['diff'] < 0]
+
     message = f"【Temu入库差异预警】\n"
     message += f"店铺：{shop_name}\n"
     message += f"时间：{current_time}\n"
-    message += f"差异数量：{len(differences)} 条（≥10条，触发预警）\n"
+    message += f"差异数量：{len(differences)} 条（差异≥10条，触发预警）\n"
+    if positive_diffs:
+        message += f"⚠️ 送货>入库：{len(positive_diffs)}条\n"
+    if negative_diffs:
+        message += f"⚠️ 入库>送货：{len(negative_diffs)}条\n"
     message += f"{'=' * 30}\n\n"
 
-    # 显示前10条差异详情（避免消息过长）
-    show_count = min(100, len(differences))
+    # 显示前10条差异详情
+    show_count = min(10, len(differences))
     message += f"差异详情（前{show_count}条）：\n"
 
-    for i, diff in enumerate(differences, 1):
+    for i, diff in enumerate(differences[:show_count], 1):
+        diff_type = "送货＞入库" if diff['diff'] > 0 else "入库＞送货"
         message += f"\n{i}. 备货单号：{diff['purchase_order_sn']}\n"
-        message += f"   送货数量：{diff['deliver_qty']}  入库数量：{diff['receive_qty']}  差异：{diff['diff']}\n"
+        message += f"   送货数量：{diff['deliver_qty']}  入库数量：{diff['receive_qty']}  差异：{abs(diff['diff'])} ({diff_type})\n"
         if diff['handover_time']:
             message += f"   交接时间：{diff['handover_time']}\n"
 
+    if len(differences) > 10:
+        message += f"\n... 共{len(differences)}条差异，以上为前10条"
 
     return message
 
@@ -178,6 +194,7 @@ def prepare_stockin_table_data(stockin_items):
 
         record = {
             "数据爬取日期": item['数据抓取时间'],
+            "平台":"temu",
             "店铺": item.get("店铺", ""),
             "备货单号": item.get("备货单号", ""),
             "送货数量": item.get("送货数", 0),
