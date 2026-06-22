@@ -242,6 +242,7 @@ class TKLogin:
             await self.stop_browser()
 
 
+
 # async def main():
 #     name_list = ["TK全托1401店", "TK全托408-LXZ", "TK全托407-huidan", "TK全托406-yuedongwan", "TK全托405-huanchuang",
 #                  "TK全托404-kedi", "TK全托403-juyule", "TK全托401-xiyue", "TK全托402-quzhi", "TK全托1402店"]
@@ -255,5 +256,20 @@ class TKLogin:
 # if __name__ == "__main__":
 #     asyncio.run(main())
 #
+
+async def main():
+    name_list = ["TK全托1401店", "TK全托408-LXZ", "TK全托407-huidan", "TK全托406-yuedongwan", "TK全托405-huanchuang",
+                 "TK全托404-kedi", "TK全托403-juyule", "TK全托401-xiyue", "TK全托402-quzhi", "TK全托1402店"]
+    for name in name_list:
+        account = get_shop_config(name)
+
+        t = TKLogin(name, account)
+        await t.run()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
 
 
